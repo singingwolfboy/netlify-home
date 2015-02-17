@@ -13,7 +13,7 @@ var messages = {
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+    return cp.spawn('bin/jekyll', ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -39,6 +39,15 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
+  gulp.src('./_scss/*.scss')
+          .pipe(sass({
+            onError: browserSync.notify
+          }))
+          .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+          .pipe(gulp.dest('_site/css'))
+          .pipe(browserSync.reload({stream:true}))
+          .pipe(gulp.dest('./css'));
+  /*
     return gulp.src('_scss/main.scss')
         .pipe(sass({
             includePaths: ['scss'],
@@ -48,6 +57,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('css'));
+  */
 });
 
 /**
