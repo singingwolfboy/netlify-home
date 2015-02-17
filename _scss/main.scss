@@ -1,6 +1,8 @@
-@import "reset";
-@import "syntax";
+@charset "utf-8";
 
-body {
-    background: white;
-}
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "lib/normalize",
+        "lib/main"
+;
+
