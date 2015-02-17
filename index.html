@@ -21,9 +21,241 @@ title: "Home"
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is Netlify.</p>
+        <!-- SVG definition for Netlify logo -->
+        <svg display="none">
+          <defs>
+            <symbol id="netlify-logo" viewBox="0 0 321 109">
+              <title>Netlify Logo</title>
+              <g id="logo-image"> 
+                <path fill="#9BDA56" d="M65.257,95.553l20.69-20.689l0,0l-14.418-3.101c-0.63,0.768-1.497,1.333-2.49,1.585 L65.257,95.553z M60.414,100.168L35.884,64.303c0.042-0.059,0.082-0.119,0.121-0.18l27.306,5.872 c0.285,1.062,0.931,1.977,1.798,2.604L60.414,100.168z M73.438,47.521c1.189-0.279,2.222-0.962,2.946-1.896l27.094,11.707l0,0 L89.314,71.496l0,0l-16.797-3.612c-0.24-1.271-0.989-2.362-2.027-3.053L73.438,47.521z M69.49,46.884 c-0.203-0.125-0.397-0.264-0.581-0.415L37.191,60.287l26.815,5.766c0.606-0.861,1.493-1.513,2.528-1.818L69.49,46.884z M73.819,21.464l-9.12-9.121l0,0L53.74,29.501c0.393,0.675,0.634,1.449,0.679,2.275l14.76,6.378 c0.573-0.412,1.232-0.711,1.945-0.865L73.819,21.464z M77.286,24.931l9.421,9.421l-10.54,4.591 c-0.322-0.364-0.694-0.684-1.106-0.947L77.286,24.931z M25.395,57.75c0.168-0.301,0.362-0.587,0.577-0.854l0,0L13.785,39.077 L0.473,52.39L25.395,57.75L25.395,57.75z M24.198,61.584l-12.682,5.524l0,0L1.003,56.596L24.198,61.584z M29.351,54.75 c0.465-0.111,0.95-0.17,1.45-0.17c0.688,0,1.351,0.112,1.97,0.32l0,0l12.576-19.688c-0.687-0.868-1.097-1.964-1.097-3.156 c0-0.105,0.003-0.209,0.009-0.312l-16.157-6.981l0,0L16.663,36.2L29.351,54.75L29.351,54.75z M57.629,103.182l-5.02,5.02 L22.623,78.216l0,0l7.234-11.326c0.308,0.047,0.622,0.071,0.943,0.071c0.648,0,1.273-0.1,1.861-0.285L57.629,103.182 L57.629,103.182z M36.736,56.121L67.018,42.93c-0.017-0.169-0.025-0.341-0.025-0.514c0-0.279,0.021-0.554,0.063-0.821 l-14.01-6.054c-0.928,0.987-2.247,1.604-3.708,1.604c-0.157,0-0.312-0.007-0.466-0.021L36.736,56.121L36.736,56.121z M61.803,9.448l-9.194-9.194L31.144,21.719l0,0l14.915,6.445c0.886-0.747,2.03-1.197,3.279-1.197c0.409,0,0.806,0.048,1.186,0.139 L61.803,9.448L61.803,9.448z M19.727,75.319l-5.171-5.172l0,0l11.743-5.115L19.727,75.319L19.727,75.319z M106.521,54.29 l0.062-0.062L89.746,37.391l-11.121,4.845L106.521,54.29L106.521,54.29z"/>
+              </g>
+              <g id="logo-text">
+                <path fill="#464C4D" d="M159.365,37.772l0.417,4.646c1.052-1.648,2.378-2.934,3.977-3.857 c1.599-0.923,3.4-1.385,5.405-1.385c3.356,0,5.973,1.018,7.849,3.053c1.877,2.036,2.815,5.208,2.815,9.517V70h-7.238V49.806 c0-2.422-0.502-4.145-1.504-5.168c-1.003-1.022-2.527-1.534-4.572-1.534c-1.41,0-2.671,0.313-3.783,0.938 c-1.111,0.626-2.025,1.484-2.74,2.577V70h-7.238V37.772H159.365z M201.184,70.625c-4.566,0-8.205-1.494-10.916-4.482 s-4.066-6.826-4.066-11.512v-1.191c0-4.686,1.346-8.573,4.036-11.661c2.69-3.087,6.062-4.622,10.112-4.602 c4.349,0,7.68,1.315,9.993,3.946c2.313,2.631,3.47,6.161,3.47,10.589v4.259h-20.105l-0.059,0.149 c0.119,2.562,0.868,4.656,2.248,6.284c1.381,1.629,3.291,2.443,5.734,2.443c1.945,0,3.613-0.238,5.004-0.715 c1.39-0.477,2.73-1.162,4.021-2.056l2.323,4.735c-1.211,1.072-2.82,1.977-4.825,2.711S203.824,70.625,201.184,70.625L201.184,70.625 z M200.35,42.985c-1.787,0-3.256,0.71-4.408,2.129c-1.152,1.42-1.867,3.222-2.145,5.406l0.06,0.149h12.778v-0.745 c0-2.045-0.521-3.713-1.564-5.004C204.028,43.63,202.455,42.985,200.35,42.985L200.35,42.985z M228.646,29.939v7.833h5.778v5.361 h-5.778v17.812c0,1.33,0.288,2.278,0.864,2.845c0.575,0.565,1.34,0.849,2.293,0.849c0.396,0,0.784-0.035,1.162-0.104 c0.377-0.069,0.734-0.163,1.072-0.282l0.773,5.301c-0.615,0.338-1.35,0.602-2.203,0.79c-0.854,0.188-1.738,0.282-2.651,0.282 c-2.661,0-4.745-0.779-6.255-2.338s-2.264-4.006-2.264-7.342V43.134h-4.914v-5.361h4.914v-7.833H228.646z M248.572,70h-7.238V23.535 h7.238V70z M264.388,70h-7.237V37.772h7.237V70z M264.388,29.879h-7.237v-6.344h7.237V29.879z M274.842,70V43.134h-4.914v-5.361 h4.914V34.02c0-3.554,0.969-6.294,2.904-8.221c1.937-1.926,4.652-2.889,8.146-2.889c0.695,0,1.4,0.055,2.115,0.164 c0.715,0.109,1.519,0.263,2.412,0.462l-0.744,5.6c-0.397-0.08-0.84-0.149-1.326-0.208s-1.008-0.089-1.563-0.089 c-1.569,0-2.745,0.447-3.529,1.34s-1.177,2.174-1.177,3.842v3.753h6.553v5.361h-6.553V70H274.842z M304.598,57.073l0.715,3.217 h0.179l7.06-22.518h7.922l-13.344,37.112c-0.854,2.244-2.055,4.16-3.604,5.748c-1.549,1.589-3.743,2.383-6.582,2.383 c-0.596,0-1.236-0.059-1.922-0.178c-0.685-0.119-1.346-0.259-1.98-0.418l0.805-5.6c0.258,0.021,0.625,0.051,1.102,0.09 s0.834,0.06,1.072,0.06c1.311,0,2.357-0.446,3.143-1.341c0.784-0.893,1.424-1.926,1.921-3.098l1.191-2.918l-11.706-31.841h7.894 L304.598,57.073z"/>
+              </g>
+            </symbol>
+          </defs>
+        </svg>
 
+        
+        <header class="site-header">
+          <a href="#navigation" class="nav-button">Skip to navigation</a>
+          <div class="brand">
+            <svg class="logo">
+              <use xlink:href="#netlify-logo"></use>
+              <foreignObject>
+                <span>netlify</span>
+              </foreignObject>
+            </svg>
+            <p class="claim">Because static sites are safer, faster, cheaper &amp; simpler</p>
+          </div>
+        </header>
+        
+        <section>
+          <div class="media">
+            <div class="media-img">
+              <!-- Video -->
+            </div>
+            <div class="media-bd">
+              <h1>Netlify <small>builds, deploys, &amp; hosts your static site or app</h1>
+              <p class="cta"><a href="button">Start here</a></p>
+              <p>Basic packages <strong>free forever</strong> – no credit card required</p>
+              <p class="pullquote">Made for developers <strong>netlify</strong> is the default entry point to the world of static</p>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h1>Choose between</h1>
+          <ul>
+            <li>
+              <h3>Full Monty</h3>
+              <p class="intro">Builds, deploys, configuration, hosting and maintenance
+              rolled into one</p>
+              <p>This is a short descriptive text about the Full Monty Package. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus.</p>
+              <p class="cta"><a href="#" class="button">Get Started Now</a></p>
+            </li>
+            <li>
+              <h3>Hosting only</h3>
+              <p class="intro">The market’s most fully-featured static site CDN hosting</p>
+              <p>This is a short descriptive text about the Hosting only Package. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus.</p>
+              <p class="cta"><a href="#" class="button">Get Started Now</a></p>
+            </li>
+          </ul>
+        </section>
+        
+        <section>
+          <h1>Sign up for newsletter and stay tuned on all that’s static</h1>
+          <p>Sign up for our awesome newsletter, if you want to hear about exciting things happening in the world of static websites, and of new Netlify features that are around the corner.</p>
+          <form>
+            <p><label for="input-email">your@email.com</label><input type="email" id="input-email"/></p>
+            <p><label for="input-name">Name</label><input type="text" id="input-name"/></p>
+            <p class="submit"><button type="submit">Sign up</button></p>
+            <p>We send out aprox. twice a month. Go ahead, we won’t give away your address or anything, and each email is handwritten (on a keyboard).</p>
+          </form>
+        </section>
+        
+        <section>
+          <h1>What our clients say</h1>
+          <blockquote>
+            <p>“Netlify is absolutely amazing. Before I believed in God and Humanity. Now only Netlify.
+            All Hail Netlify. Amen.” <cite>Shane Shaw CEO, Vice Media Network Ltmd.</cite></p>
+          </blockquote>
+          <blockquote>
+            <p>“Netlify is absolutely amazing. Before I believed in God and Humanity. Now only Netlify.
+            All Hail Netlify. Amen.” <cite>Shane Shaw CEO, Vice Media Network Ltmd.</cite></p>
+          </blockquote>
+          <blockquote>
+            <p>“Netlify is absolutely amazing. Before I believed in God and Humanity. Now only Netlify.
+            All Hail Netlify. Amen.” <cite>Shane Shaw CEO, Vice Media Network Ltmd.</cite></p>
+          </blockquote>
+        
+          <h2>A selection of our clients</h2>
+        </section>
+        
+        <section>
+          <h1>Visit our static blog</h1>
+          <p class="intro">This is a short copy about the netlify blog and what kind of topics and tricks you can learn from it.
+          Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum.</p>
+          <article>
+            <h1>5 reasons to go static</h1>
+            <p class="byline">by Mathias Biilmann</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Nulla vitae </p>
+          </article>
+          <article>
+            <h1>5 reasons to go static</h1>
+            <p class="byline">by Mathias Biilmann</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Nulla vitae </p>
+          </article>
+          <article>
+            <h1>5 reasons to go static</h1>
+            <p class="byline">by Mathias Biilmann</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Nulla vitae </p>
+          </article>
+        </section>
+        
+        <section> 
+          <h1>Socialize @</h1>
+          <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">G+</a></li>
+          </ul>  
+        </section>
+        
+        <section>
+          <h1>Pricing</h1>
+
+          <h2>Static Hosting</h2>
+          <p>Pay for the sites you host, or let your client pay</p>
+          <div class="table">
+            <h3 class="table-title">Free</h3>
+            <ul>
+              <li class="table-item">Custom Domain</li>
+              <li class="table-item">Netlify Badge</li>
+              <li class="table-item">100 MB Storage</li>
+              <li class="table-item">1 GB Bandwidth</li>
+              <li class="table-item">Free</li>
+            </ul>
+          </div>
+          <div class="table">
+            <h3 class="table-title">Basic</h3>
+            <ul>
+              <li class="table-item">Custom Domain, Basic SSL</li>
+              <li class="table-item">No Netlify Branding</li>
+              <li class="table-item">1 GB Storage</li>
+              <li class="table-item">1 GB Bandwidth</li>
+              <li class="table-item">$9/month</li>
+            </ul>
+          </div>
+          <div class="table">
+            <h3 class="table-title">Pro</h3>
+            <ul class="table-items">
+              <li class="table-item">Custom Domain, Full SSL</li>
+              <li class="table-item">No Netlify Branding</li>
+              <li class="table-item">100 GB Storage</li>
+              <li class="table-item">1 TB Bandwidth</li>
+              <li class="table-item">$29/month</li>
+            </ul>
+          </div>
+          
+          <h2>Continuous Deployment</h2>
+          <p>Run your builds on our servers for a flat fee every month</p>
+          <div class="table">
+            <h3 class="table-title">Free</h3>
+            <ul class="table-items">
+              <li class="table-item">Open Source Projects</li>
+              <li class="table-item">50 Monthly Builds</li>
+              <li class="table-item">1 Concurrent Build</li>
+              <li class="table-item">Free</li>
+            </ul>
+          </div>
+          <div class="table">
+            <h3 class="table-title">Basic</h3>
+            <ul class="table-items">
+              <li class="table-item">Private Repositories</li>
+              <li class="table-item">200 Monthly Builds</li>
+              <li class="table-item">2 Concurrent Builds</li>
+              <li class="table-item">$29/month</li>
+            </ul>
+          </div>
+          <div class="table">
+            <h3 class="table-title">Pro</h3>
+            <ul class="table-items">
+              <li class="table-item">Private Repositories</li>
+              <li class="table-item">500 Monthly Builds</li>
+              <li class="table-item">5 Concurrent Builds</li>
+              <li class="table-item">$49/month</li>
+            </ul>
+          </div>
+          
+          <h2>Support</h2>
+          <p>Support is available to all Netlify users through our in-app support widget. Support tickets are prioritized based on both severity (i.e. application outages vs bug reports) as well as overall account spend. We're fanatical about giving extraordinary support, but for guaranteed response within 1-hour, 1-on-1 technical consulting, or your own dedicated account manager, please upgrade to a premium support plan.</p>
+          <div class="table">
+            <h3 class="table-title">Standard</h3>
+            <ul class="table-items">
+              <li class="table-item">Support within business hours</li>
+              <li class="table-item">9am–5pm PST</li>
+              <li class="table-item">Free</li>
+            </ul>
+          </div>
+          <div class="table">
+            <h3 class="table-title">Premium</h3>
+            <ul class="table-items">
+              <li class="table-item">24/7 support</li>
+              <li class="table-item">1 hour response SLA</li>
+              <li class="table-item">$1,000/month</li>
+            </ul>
+          </div>
+          <div class="table">
+            <h3 class="table-title">Account Manager</h3>
+            <ul class="table-items">
+              <li class="table-item">Includes Premium Support</li>
+              <li class="table-item">Dedicated Technical Consulting</li>
+              <li class="table-item">$2,000/month</li>
+            </ul>
+          </div>
+        </section>
+        
+        <footer class="site-footer">
+          <svg class="logo">
+            <use xlink:href="#netlify-logo"></use>
+            <foreignObject>
+              <span>netlify</span>
+            </foreignObject>
+          </svg>
+          <div class="vcard" itemscope itemtype="http://schema.org/Organization">
+            <strong class="fn org" itemprop="brand">Netlify</strong> 
+            <span class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <span class="street-address" itemprop="streetAddress">610 22nd Street, Suite 315</span>, 
+              <span class="locality" itemprop="addressLocality">San Francisco</span>,
+              <span class="region" itemprop="addressRegion">CA</span>
+              <span class="postal-code" itemprop="postalCode">94107</span>
+            </span>
+          </div>
+        </footer>        
+        
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="/js/plugins.js"></script>
