@@ -390,6 +390,708 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* Global 
+------------------------------*/
+html {
+  background-color: #F4F6F6;
+  color: #596362;
+  font: 300 normal 16px/1.5625 Roboto, sans-serif;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+/* Typography based on classic typographic scale 
+ * tweaked to try to match font sizes in comp
+ * 
+ * http://spencermortensen.com/articles/typographic-scale/
+------------------------------*/
+h1, h2, h3, h4, h5, p, ul, ol, dl, blockquote {
+  margin: 20px 0; }
+
+/* Font sizes */
+.tera {
+  font-size: 125px;
+  /* Not in scale */
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  line-height: 1; }
+
+.mega {
+  font-size: 60px;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 1; }
+
+.kilo {
+  font-size: 50px;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 1; }
+
+.alpha, h1 {
+  font-size: 37px;
+  font-weight: 100;
+  letter-spacing: -0.03em;
+  line-height: 45px; }
+
+.beta, h2 {
+  font-size: 33px;
+  font-weight: 100;
+  letter-spacing: -0.01em;
+  line-height: 40px; }
+
+.gamma, h3 {
+  font-size: 28px;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 35px; }
+
+.delta, h4 {
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: normal;
+  line-height: 30px; }
+
+.epsilon, h5 {
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 30px; }
+
+.zeta, h6 {
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  line-height: 25px; }
+
+.small {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em; }
+
+.small-2 {
+  font-size: 15px;
+  /* Not in scale. one-off size to get small text in hero to justify */
+  letter-spacing: normal;
+  line-height: 20px; }
+
+.x-small {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.03em; }
+
+.xx-small {
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 0.03em; }
+
+strong, b, .semibold {
+  font-weight: 400;
+  letter-spacing: normal; }
+
+.bold {
+  font-weight: 500;
+  letter-spacing: normal; }
+
+.loose {
+  line-height: 1.8; }
+
+cite {
+  font-style: normal;
+  font-weight: 500; }
+
+/* Layout 
+------------------------------*/
+.container {
+  position: relative;
+  max-width: 1016px;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+.container--wide {
+  max-width: 1176px; }
+
+.container--narrow {
+  max-width: 936px; }
+
+/* Utility classes for layout flow */
+.block {
+  display: block; }
+
+.inline-block {
+  display: inline-block; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.center {
+  text-align: center; }
+
+.centered {
+  margin-left: auto;
+  margin-right: auto; }
+
+.v-top {
+  vertical-align: top; }
+
+.v-middle {
+  vertical-align: middle; }
+
+.v-bottom {
+  vertical-align: bottom; }
+
+/* Layouts */
+.l-third {
+  float: left;
+  width: 33.33333%; }
+
+/* Widths */
+.w-740 {
+  max-width: 740px; }
+
+.w-350 {
+  max-width: 350px; }
+
+.w-245 {
+  max-width: 245px; }
+
+.w-240 {
+  max-width: 240px; }
+
+.w-215 {
+  max-width: 215px; }
+
+.w-0 {
+  width: 0; }
+
+.w-half {
+  width: 50%; }
+
+/* Heights */
+.h-75 {
+  min-height: 75px; }
+
+/* Margins */
+.mt-120 {
+  margin-top: 120px; }
+
+.mt-115 {
+  margin-top: 115px; }
+
+.mt-95 {
+  margin-top: 95px; }
+
+.mt-90 {
+  margin-top: 90px; }
+
+.mt-80 {
+  margin-top: 80px; }
+
+.mt-70 {
+  margin-top: 70px; }
+
+.mt-65 {
+  margin-top: 65px; }
+
+.mt-60 {
+  margin-top: 60px; }
+
+.mt-50 {
+  margin-top: 50px; }
+
+.mt-45 {
+  margin-top: 45px; }
+
+.mt-40 {
+  margin-top: 40px; }
+
+.mt-35 {
+  margin-top: 35px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mt-15 {
+  margin-top: 15px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mt-3 {
+  margin-top: 3px; }
+
+.mt-0 {
+  margin-top: 0; }
+
+.mt-n3 {
+  margin-top: -3px; }
+
+.mt-n5 {
+  margin-top: -5px; }
+
+.mt-n40 {
+  margin-top: -40px; }
+
+.mt-n60 {
+  margin-top: -60px; }
+
+.mb-100 {
+  margin-bottom: 100px; }
+
+.mb-85 {
+  margin-bottom: 85px; }
+
+.mb-70 {
+  margin-bottom: 70px; }
+
+.mb-60 {
+  margin-bottom: 60px; }
+
+.mb-50 {
+  margin-bottom: 50px; }
+
+.mb-45 {
+  margin-bottom: 45px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
+
+.mb-35 {
+  margin-bottom: 35px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.mb-25 {
+  margin-bottom: 25px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.mb-15 {
+  margin-bottom: 15px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-0 {
+  margin-bottom: 0; }
+
+.ml-30 {
+  margin-left: 30px; }
+
+.ml-25 {
+  margin-left: 25px; }
+
+.ml-20 {
+  margin-left: 20px; }
+
+.ml-n3 {
+  margin-left: -3px; }
+
+.ml-n5 {
+  margin-left: -5px; }
+
+.ml-n7 {
+  margin-left: -7px; }
+
+.ml-n10 {
+  margin-left: -10px; }
+
+.ml-n40 {
+  margin-left: -40px; }
+
+.ml-n50 {
+  margin-left: -50px; }
+
+.ml-n50 {
+  margin-left: -55px; }
+
+.ml-n80 {
+  margin-left: -80px; }
+
+.mr-120 {
+  margin-right: 120px; }
+
+.mr-110 {
+  margin-right: 110px; }
+
+.mr-40 {
+  margin-right: 40px; }
+
+.mr-30 {
+  margin-right: 30px; }
+
+.mr-25 {
+  margin-right: 25px; }
+
+.mr-20 {
+  margin-right: 20px; }
+
+.mr-15 {
+  margin-right: 15px; }
+
+.mr-n5 {
+  margin-right: -5px; }
+
+.mr-n80 {
+  margin-right: -80px; }
+
+/* Borders */
+.bb {
+  position: relative; }
+
+.bb:after {
+  width: 100%;
+  height: 2px;
+  background-color: #00c7b7;
+  content: " ";
+  display: table;
+  clear: both; }
+
+.bb--medium:after, .bb--large:after {
+  position: absolute;
+  bottom: 0; }
+
+.bb--medium:after {
+  height: 3px; }
+
+.bb--large:after {
+  height: 4px; }
+
+.bb--muted:after {
+  background-color: #cae0de; }
+
+/* General coloromponents */
+.media, .media-bd {
+  overflow: hidden; }
+
+.media-img {
+  float: left;
+  margin-right: 15px; }
+
+.media-img img, .media-img svg {
+  display: block; }
+
+.media-imgExt {
+  float: right;
+  margin-left: 15px; }
+
+/* Tweaks */
+.brand-claim {
+  position: relative;
+  top: 3px;
+  /* to align with logo text */ }
+
+/* Colors and imagery
+------------------------------*/
+/* Colors */
+a {
+  color: #00c7b7; }
+
+svg {
+  fill: currentColor; }
+
+.highlight {
+  color: #00c7b7;
+  fill: #00c7b7; }
+
+.muted {
+  color: #7e8383;
+  fill: #7e8383; }
+
+.loud {
+  color: #333d3d;
+  fill: #333d3d; }
+
+.overloud {
+  color: #313d3e;
+  fill: #313d3e; }
+
+.inverse {
+  background-color: #313d3e;
+  color: #FFF;
+  font-weight: 100; }
+  .inverse .loud {
+    color: #FFF; }
+  .inverse .muted {
+    font-weight: 300;
+    /* light text in dark background gets too light */ }
+  .inverse .semibold {
+    font-weight: 400; }
+  .inverse .bold {
+    font-weight: 500; }
+
+.logo {
+  fill: #313d3e; }
+
+.logo--inverse {
+  fill: #FFF; }
+
+.icon {
+  fill: #FFF; }
+
+.icon--inverse {
+  fill: #313d3e; }
+
+.icon--inverse--muted {
+  fill: #596362; }
+
+/* Backgrounds */
+.bg-white {
+  background-color: #FFF; }
+
+.bg-light-1 {
+  background: #F4F6F6 url(/img/bg-light-1.svg) no-repeat -345px -370px; }
+
+.bg-light-2 {
+  background: #F4F6F6 url(/img/bg-light-2.svg) no-repeat 430px -190px; }
+
+.bg-light-3 {
+  background: #F4F6F6 url(/img/bg-light-3.svg) no-repeat -25px -90px; }
+
+.bg-dark-1 {
+  background: #313d3e url(/img/bg-dark-1.svg) no-repeat;
+  background-size: cover; }
+
+.bg-dark-2 {
+  background: #313d3e url(/img/bg-dark-2.svg) no-repeat;
+  background-size: cover; }
+
+/* Buttons 
+------------------------------*/
+.button {
+  display: block;
+  overflow: hidden;
+  box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.24);
+  height: 60px;
+  line-height: 60px;
+  border-radius: 60px 4px 4px 60px;
+  text-align: center;
+  text-indent: -10px;
+  font-size: 21px;
+  font-weight: 400;
+  color: #7e8383;
+  margin-left: -5px; }
+
+.button-icon {
+  float: left;
+  margin: 5px; }
+
+.button-label {
+  display: block;
+  overflow: hidden;
+  padding: 1px 20px 0 20px; }
+
+.button--inverse {
+  color: #FFF; }
+
+.button--inverse--muted {
+  color: #596362;
+  fill: #596362; }
+
+.button--large {
+  height: 80px;
+  line-height: 80px;
+  border-radius: 80px 4px 4px 80px;
+  font-size: 27px;
+  margin-left: 0; }
+  .button--large .button-icon {
+    margin: 6px; }
+  .button--large .button-label {
+    padding-left: 0;
+    padding-right: 30px; }
+
+.button--small {
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px 2px 2px 40px;
+  font-size: 16px; }
+  .button--small .button-label {
+    padding: 0 15px; }
+
+.button--inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  min-width: 120px; }
+
+/* Badges
+------------------------------*/
+/* To center the text vertically in the badge: 
+ * http://css-tricks.com/centering-in-the-unknown/
+ */
+.badge {
+  background: #00c7b7;
+  color: #FFF;
+  border-radius: 100%;
+  position: relative; }
+
+.badge:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */ }
+
+.badge-text {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1% 10% 0; }
+
+.badge--small {
+  width: 127px;
+  height: 127px;
+  position: absolute;
+  top: 45px;
+  left: -33px; }
+
+.badge--large {
+  width: 276px;
+  height: 276px;
+  font-weight: 100; }
+
+.badge--stitch:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  border-radius: 100%;
+  border: 1px dashed white;
+  opacity: 0.5; }
+
+/* Forms
+------------------------------*/
+.form--fancy {
+  position: relative;
+  overflow: hidden;
+  padding: 6px 180px 6px 6px;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 55px 55px 10px;
+  background: #F4F6F6; }
+  .form--fancy .form-group {
+    float: left;
+    margin: 0;
+    width: 50%;
+    padding-right: 6px; }
+  .form--fancy input, .form--fancy button {
+    display: block;
+    border: none;
+    height: 42px;
+    line-height: 42px;
+    text-align: center; }
+  .form--fancy input {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #F9FAFA; }
+  .form--fancy button {
+    width: 174px;
+    position: absolute;
+    right: 6px;
+    border-radius: 0 42px 42px 0px;
+    background: #00c7b7;
+    color: #FFF;
+    font-size: 13.62px;
+    line-height: 37px;
+    /* magic number to get the button text to align with the input placeholder */ }
+
+/* To style placeholders
+ * http://css-tricks.com/snippets/css/style-placeholder-text/
+ */
+::-webkit-input-placeholder {
+  color: rgba(126, 131, 131, 0.5);
+  font-size: 13.62px; }
+
+::-moz-placeholder {
+  color: rgba(126, 131, 131, 0.5);
+  font-size: 13.62px; }
+
+:-ms-input-placeholder {
+  color: rgba(126, 131, 131, 0.5);
+  font-size: 13.62px; }
+
+/* Tables
+------------------------------*/
+table {
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin-left: -6px; }
+
+.table {
+  margin: 15px 0 30px; }
+
+th, .th, td, .td {
+  margin: 6px 3px;
+  padding: 10px; }
+
+th, .th {
+  background-color: #cae0de;
+  color: #333d3d;
+  font-size: 20px;
+  font-weight: 400; }
+
+td, .td {
+  background-color: #e6efee; }
+
+tbody, .tbody {
+  margin: 0; }
+
+thead th, .th--highlight {
+  background-color: #00c7b7;
+  color: #FFF;
+  padding-bottom: 5px; }
+
+/* Specific components
+------------------------------*/
+/* Social icons */
+.social-icon {
+  display: inline-block;
+  margin-right: 25px; }
+  .social-icon:nth-child(3n+1) svg {
+    fill: #7d7d7d; }
+  .social-icon:nth-child(3n+2) svg {
+    fill: #5a5a5a; }
+  .social-icon:nth-child(3n+0) svg {
+    fill: #646464; }
+
+/*
+body {
+  width: 1280px;
+  margin: 0 auto;
+}
+*/
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -445,13 +1147,13 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .clearfix:after {
+.clearfix:before, .container:before, .l-thirds:before, .clearfix:after, .container:after, .l-thirds:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after {
+.clearfix:after, .container:after, .l-thirds:after {
   clear: both; }
 
 /* ==========================================================================
