@@ -49,12 +49,12 @@
 }
 
 
-.l-third:nth-child(1) > .blurb {
-  @extend .left;
-}
-.l-third:nth-child(2) > .blurb {
+.l-third > .blurb {
   @extend .center;
 }
-.l-third:nth-child(3) > .blurb {
-  @extend .right;
+.l-third:first-child > .blurb {
+  margin-left: 0;
+}
+.l-third:last-child > .blurb {
+  margin-right: 0;
 }
