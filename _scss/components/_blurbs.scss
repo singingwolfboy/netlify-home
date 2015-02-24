@@ -19,6 +19,10 @@
 .blurb-meta {
   @extend .x-small;
   margin: 10px 0;
+  &.right {
+    position: relative;
+    top: 3px;
+  }
 }
 
 .blurb-bd {
@@ -36,10 +40,21 @@
   }
 }
 
-cite {
+.blurb cite {
   display: block;
   @extend .xx-small;
   @extend .bold;
   @extend .loud;
   margin-top: -5px;
+}
+
+
+.l-third:nth-child(1) > .blurb {
+  @extend .left;
+}
+.l-third:nth-child(2) > .blurb {
+  @extend .center;
+}
+.l-third:nth-child(3) > .blurb {
+  @extend .right;
 }
