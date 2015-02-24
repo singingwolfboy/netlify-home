@@ -1195,8 +1195,14 @@ audio, canvas, iframe, img, svg, video {
 .mt-n10 {
   margin-top: -10px; }
 
+/*
+ * Defaults
+ */
 html {
   background-color: #F4F6F6;
+  color: #596262; }
+
+h1, h2, h3, h4, h5, h6 {
   color: #596262; }
 
 a {
@@ -1218,16 +1224,22 @@ svg {
 .overloud {
   color: #313d3e; }
 
+/* Dark background */
 .inverse {
   background-color: #313d3e;
   color: #FFF;
   font-weight: 100;
   /* restore font weight for muted bold or semibold */ }
+  .inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse h6 {
+    color: #FFF; }
+  .inverse .highlight {
+    color: #00c7b7; }
   .inverse .loud, .inverse cite {
     color: #FFF; }
   .inverse .muted {
+    color: #7e8383;
     font-weight: 300;
-    /* light text in dark background gets too light */ }
+    /* light gray text on dark background gets too hard to read */ }
 
 /* Icons */
 .icon {

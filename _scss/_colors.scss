@@ -18,9 +18,15 @@
   $color-highlight-lighter: rgb(202,224,222);
   $color-highlight-lightest: rgb(230,239,238);
 
-
+/*
+ * Defaults
+ */
 html {
   background-color: $color-light;
+  color: $color-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
   color: $color-dark;
 }
 
@@ -46,18 +52,27 @@ svg {
   color: $color-darkest;
 }
 
-
+/* Dark background */
 .inverse {
   background-color: $color-darkest;
   color: $color-lightest;
   font-weight: 100;
 
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-lightest;
+  }
+  
+  .highlight {
+    color: $color-highlight;
+  }
   .loud {
     color: $color-lightest;
   }
   .muted {
-    font-weight: 300; /* light text in dark background gets too light */
+    color: $color-muted;
+    font-weight: 300; /* light gray text on dark background gets too hard to read */
   }
+  
   /* restore font weight for muted bold or semibold */
   .semibold {
     @extend .semibold;
