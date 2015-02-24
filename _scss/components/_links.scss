@@ -1,0 +1,105 @@
+/* Links 
+------------------------------*/
+
+a { 
+  text-decoration: none;
+}
+
+
+/*
+ * Links that look like buttons
+ */
+ 
+.button {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-shadow: inset 0 0 7px 0 rgba(0,0,0,0.24);
+  height: 60px;
+  line-height: 60px;
+  border-radius: 60px 4px 4px 60px;
+  text-align: center;
+  text-indent: -10px;
+  font-size: 21px;
+  font-weight: 400;
+  margin-left: -5px;
+  color: $color-lightest;
+}
+.button-icon {
+  float: left;
+  margin: 5px;
+}
+.button-label {
+  display: block;
+  overflow: hidden;
+  padding: 1px 20px 0 20px;
+  color: $color-muted;
+}
+
+
+/* Button colors on inverse background */
+.inverse {
+  .button {
+    color: $color-darkest;
+  }
+  .button-label {
+    color: $color-lightest;
+  }
+  .button--muted, 
+  .button--muted .button-label {
+    color: $color-dark;
+  }
+}
+
+
+/* Button size variations */
+.button--large {
+  height: 80px;
+  line-height: 80px;
+  border-radius: 80px 4px 4px 80px;
+  font-size: 27px;
+  margin-left: 0;
+  .button-icon {
+    margin: 6px;
+  }
+  .button-label {
+    padding-left: 0;
+    padding-right: 30px;
+  }
+}
+
+.button--small {
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px 2px 2px 40px;
+  font-size: 15px;
+}
+
+
+/* Button layout variations */
+.button--inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  min-width: 120px;
+  top: 1px;
+}
+
+
+/*
+ * Social links
+ */
+.social-icon {
+  display: inline-block;
+  margin-right: 25px;
+
+  &:nth-child(3n+1) svg {
+    fill: rgb(125,125,125);
+  }
+  &:nth-child(3n+2) svg {
+    fill: rgb(90,90,90);
+  }
+  &:nth-child(3n+0) svg {
+    fill: rgb(100,100,100);
+  }
+}

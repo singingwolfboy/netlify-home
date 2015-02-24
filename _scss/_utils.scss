@@ -1,0 +1,41 @@
+@import "lib/clearfix";
+
+
+//---------------------------------------------------
+//  
+//  Wraps code in a media query
+//   
+//  # Usage:
+//          $on-palm: 600px;
+//          $spacing-unit: 20px;
+//
+//          @include breakpoint($on-palm) {
+//              .wrapper {
+//                  padding-right: $spacing-unit / 2;
+//                  padding-left: $spacing-unit / 2;
+//              }
+//          }
+//
+//  # Output:
+//          @media screen and (max-width: 600px) {
+//            .wrapper {
+//                padding-right: 10px;
+//                padding-left: 10px;
+//            }
+//          }
+//---------------------------------------------------
+
+@mixin breakpoint($bp) {
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
+
+//---------------------------------------------------
+//
+//  Converts px to rem
+//
+//---------------------------------------------------
+@function px2rem($px, $base: 16px) {
+  @return $px/$base + rem;
+}

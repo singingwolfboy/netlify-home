@@ -1,0 +1,292 @@
+$page-width: 1280px;
+$content-width: 976px;
+$base-spacing: 20px;
+
+
+/* 
+ * Global layouts and 
+ * utilities to control flow
+ *
+------------------------------*/
+
+/* 
+ * HTML Elements
+ */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-width: $page-width;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+audio, canvas, iframe, img, svg, video {
+  max-width: 100%;
+}
+
+
+/* 
+ * Content containers 
+ */
+.content {
+  @extend .clearfix;
+  position: relative;
+  max-width: $content-width + 4*$base-spacing;
+  padding: 0 2*$base-spacing;
+  margin: 0 auto;
+}
+.content--wide {
+  max-width: $page-width;
+  padding: 0 2.5*$base-spacing 0 4*$base-spacing;
+}
+.content--narrow {
+  max-width: $content-width;
+}
+
+/* 
+ * Utility classes for layout flow 
+ */
+.cf {
+  @extend .clearfix;
+}
+.abs {
+  position: absolute;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.v-top {
+  vertical-align: top;
+}
+.v-middle {
+  vertical-align: middle;
+}
+.v-bottom {
+  vertical-align: bottom;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+/* 
+ * Centering blocks vertically 
+ * http://css-tricks.com/centering-in-the-unknown/
+ */
+
+%container {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+  }
+}
+%middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* 
+ * Layouts 
+ */
+
+/* Media */
+.media {
+  @include clearfix-me(micro);
+}
+.media-img {
+  float: left;
+  margin-right: 15px;
+}
+.media-bd {
+  @include clearfix-me(facebook);
+}
+
+.media--bleed {
+  margin-left: -1px;
+  .media-img {
+    margin-left: -6px;
+    margin-right: 20px;
+  }
+}
+
+.media--wide {
+  margin: 60px 80px 30px 80px;
+  .media-img {
+    margin-top: 20px;
+    margin-right: 80px;
+  }
+}
+
+
+/* 3-column layout without gutters */
+.l-thirds {
+  @extend .clearfix;
+}
+.l-third {
+  float: left;
+  width: 33.3333333%;
+}
+
+
+/* 2-column layout with gutter defining columns in the mark-up */
+.l-2-col {
+  @extend .cf;
+  .l-col {
+    width: 50%;
+    padding: 0 30px;
+    float: left;
+  }
+  .l-col:first-child {
+    padding-left: 0;
+  }
+  .l-col:last-child {
+    padding-right: 0;
+  }
+}
+
+/* 2-column layout with gutter using CSS multiple columns */
+.l-2-col-auto {
+  column-count: 2;
+  column-gap: 50px;
+  > p:first-child {
+    margin-top: 0;
+  }
+}
+
+
+
+
+/* 
+ * Widths, heights and margins.
+ *
+ * ## TODO: Most of these need to be removed
+ * ## when components are normalized
+ */
+
+/* Widths */
+.w-0 {
+  width: 0;
+}
+.w-half {
+  width: 50%;
+}
+.w-third {
+  width: 33.33333333%;
+}
+
+.w-740 {
+  max-width: 740px;
+}
+.w-355 {
+  max-width: 355px;
+}
+.w-245 {
+  max-width: 245px;
+}
+.w-240 {
+  max-width: 240px;
+}
+.w-215 {
+  max-width: 215px;
+}
+
+
+
+/* Heights */
+.h-75 {
+  min-height: 75px;
+}
+
+
+
+/* Margins */
+
+@for $i from 0 through 25 { // top & bottom margins
+  .mt-#{$i*5} { 
+    margin-top: $i * 5px;
+  }
+  .mb-#{$i*5} { 
+    margin-bottom: $i * 5px;
+  }
+  .ml-#{$i*5} { 
+    margin-left: $i * 5px;
+  }
+  .mr-#{$i*5} {
+    margin-right: $i * 5px;
+  }
+}
+
+@for $i from 1 through 7 { // margins for bleeds and adjustments
+  .mt-#{$i} { 
+    margin-top: $i * 1px;
+  }
+  .mb-#{$i} { 
+    margin-bottom: $i * 1px;
+  }
+  .ml-#{$i} { 
+    margin-left: $i * 1px;
+  }
+  .mr-#{$i} { 
+    margin-right: $i * 1px;
+  }
+  
+  .ml-n#{$i} {
+    margin-left: $i * -1px;
+  }
+  .mr-n#{$i} {
+    margin-right: $i * -1px;
+  }
+}
+
+@for $i from 1 through 5 { // Margins for pull-outs
+  .ml-n#{$i*10} {
+    margin-left: $i * -10px;
+  }
+}
+
+// TODO: Need to fix svgs for continuous deployment and hosting so they don't have
+// so much space around them. Until then, add a negative margin top
+// for the text under it
+.mt-n10 {
+  margin-top: -10px;
+}
+

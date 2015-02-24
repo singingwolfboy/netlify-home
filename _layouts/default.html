@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
     
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,600'>
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -23,8 +23,13 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
+  {% include svg-defs.html %}
+  
+  {% include site-header.html %}
+  
   {{ content }}
   
+  {% include site-footer.html %}
       
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

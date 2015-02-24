@@ -411,13 +411,160 @@ textarea {
   .media:after {
     clear: both; }
 
-/* Global 
+/* Typography loosely based on classic typographic scale, 
+ * tweaked to try to match font sizes in comp
+ * 
+ * http://spencermortensen.com/articles/typographic-scale/
 ------------------------------*/
 html {
-  background-color: #F4F6F6;
-  color: #596262;
   font: 300 normal 16px/1.5625 Roboto, sans-serif;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility; }
+
+/* Basic spacing */
+h1, h2, h3, h4, h5, p, ul, ol, dl, blockquote {
+  margin: 20px 0; }
+
+p {
+  max-width: 30em;
+  margin: 20px auto; }
+
+.p--wide {
+  max-width: 55em; }
+
+.p--full-w {
+  max-width: none; }
+
+/* Font sizes */
+.huge {
+  font-size: 125px;
+  font-size: 7.8125rem;
+  /* Not in scale */
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1;
+  margin: 40px 0 45px; }
+
+.tera {
+  font-size: 63px;
+  font-size: 3.9375rem;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 1; }
+
+.mega {
+  font-size: 55px;
+  font-size: 3.4375rem;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 1; }
+
+.kilo {
+  font-size: 50px;
+  font-size: 3.125rem;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 1; }
+
+.alpha, h1 {
+  font-size: 37px;
+  font-size: 2.3125rem;
+  font-weight: 100;
+  letter-spacing: -0.03em;
+  line-height: 45px;
+  margin: 25px 0; }
+
+.beta, h2 {
+  font-size: 33px;
+  font-size: 2.0625rem;
+  font-weight: 100;
+  letter-spacing: -0.01em;
+  line-height: 40px;
+  margin: 25px 0; }
+
+.gamma, h3 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 35px; }
+
+.delta, h4 {
+  font-size: 25px;
+  font-size: 1.5625rem;
+  font-weight: 100;
+  letter-spacing: normal;
+  line-height: 30px; }
+
+.epsilon, .blurb-title, h5 {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 100;
+  line-height: 30px; }
+
+.zeta, h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  line-height: 25px; }
+
+.medium {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 25px;
+  letter-spacing: normal; }
+
+.small {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.02em; }
+
+.small-2 {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  /* Not in scale. one-off size to get small text in hero to justify */
+  letter-spacing: normal;
+  line-height: 20px; }
+
+.x-small, .blurb-meta {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 20px;
+  letter-spacing: 0.03em; }
+
+.xx-small, cite {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  line-height: 20px;
+  letter-spacing: 0.03em; }
+
+/* Weights */
+strong, b, .semibold, .inverse .semibold, .blurb-title {
+  font-weight: 400;
+  letter-spacing: normal; }
+
+.bold, .inverse .bold, cite {
+  font-weight: 500;
+  letter-spacing: 0.01em; }
+
+/* Line heights */
+.loose {
+  line-height: 1.8; }
+
+/* No italics */
+em, cite {
+  font-style: normal; }
+
+/* 
+ * Global layouts and 
+ * utilities to control flow
+ *
+------------------------------*/
+/* 
+ * HTML Elements
+ */
+html {
   height: 100%;
   box-sizing: border-box; }
 
@@ -431,9 +578,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto; }
 
-a {
-  text-decoration: none; }
-
 ul {
   list-style: none;
   padding: 0; }
@@ -441,117 +585,9 @@ ul {
 audio, canvas, iframe, img, svg, video {
   max-width: 100%; }
 
-/* Typography loosely based on classic typographic scale, 
- * tweaked to try to match font sizes in comp
- * 
- * http://spencermortensen.com/articles/typographic-scale/
-------------------------------*/
-h1, h2, h3, h4, h5, p, ul, ol, dl, blockquote {
-  margin: 20px 0; }
-
-/* Font sizes */
-.tera {
-  font-size: 125px;
-  /* Not in scale */
-  font-weight: bold;
-  letter-spacing: -0.01em;
-  line-height: 1;
-  margin: 40px 0 45px; }
-
-.mega {
-  font-size: 60px;
-  font-weight: 100;
-  letter-spacing: -0.02em;
-  line-height: 1; }
-
-.kilo {
-  font-size: 50px;
-  font-weight: 100;
-  letter-spacing: -0.02em;
-  line-height: 1; }
-
-.alpha, h1 {
-  font-size: 37px;
-  font-weight: 100;
-  letter-spacing: -0.03em;
-  line-height: 45px;
-  margin: 25px 0; }
-
-.beta, h2 {
-  font-size: 33px;
-  font-weight: 100;
-  letter-spacing: -0.01em;
-  line-height: 40px;
-  margin: 25px 0; }
-
-.gamma, h3 {
-  font-size: 28px;
-  font-weight: 100;
-  letter-spacing: -0.02em;
-  line-height: 35px; }
-
-.delta, h4 {
-  font-size: 25px;
-  font-weight: 100;
-  letter-spacing: normal;
-  line-height: 30px; }
-
-.epsilon, h5 {
-  font-size: 22px;
-  font-weight: 100;
-  line-height: 30px; }
-
-.zeta, h6 {
-  font-size: 18px;
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  line-height: 25px; }
-
-.medium {
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: normal; }
-
-.small {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.02em; }
-
-.small-2 {
-  font-size: 15px;
-  /* Not in scale. one-off size to get small text in hero to justify */
-  letter-spacing: normal;
-  line-height: 20px; }
-
-.x-small {
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 0.03em; }
-
-.xx-small {
-  font-size: 11px;
-  line-height: 20px;
-  letter-spacing: 0.03em; }
-
-/* Weights */
-strong, b, .semibold {
-  font-weight: 400;
-  letter-spacing: normal; }
-
-.bold {
-  font-weight: 500;
-  letter-spacing: 0.01em; }
-
-/* Line heights */
-.loose {
-  line-height: 1.8; }
-
-/* No italics */
-em, cite {
-  font-style: normal; }
-
-/* Layout 
-------------------------------*/
+/* 
+ * Content containers 
+ */
 .content {
   position: relative;
   max-width: 1056px;
@@ -565,9 +601,11 @@ em, cite {
 .content--narrow {
   max-width: 976px; }
 
-/* Utility classes for layout flow */
-.block {
-  display: block; }
+/* 
+ * Utility classes for layout flow 
+ */
+.abs {
+  position: absolute; }
 
 .left {
   float: left; }
@@ -578,6 +616,9 @@ em, cite {
 .center {
   margin-left: auto;
   margin-right: auto; }
+
+.block {
+  display: block; }
 
 .inline-block {
   display: inline-block; }
@@ -600,79 +641,26 @@ em, cite {
 .text-center {
   text-align: center; }
 
-.pull-left {
-  position: relative;
-  left: -10px; }
-
-/* Layouts */
-/* 3-columns */
-.l-third {
-  float: left;
-  width: 33.33333%; }
-
-/* Fullscreen
- *
- * http://css-tricks.com/centering-in-the-unknown/ 
+/* 
+ * Centering blocks vertically 
+ * http://css-tricks.com/centering-in-the-unknown/
  */
-.l-fs {
-  position: relative;
-  width: 100%;
-  height: 735px;
-  text-align: center; }
-  .l-fs:before {
-    /* to center elements vertically */
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em;
-    /* Adjusts for spacing */ }
-  .l-fs > .l-fs-top {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    text-align: left; }
-  .l-fs > .l-fs-bottom {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: left; }
-  .l-fs > .l-fs-middle {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    text-align: left; }
+.callout:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */ }
 
-/* Borders */
-.bb {
-  position: relative; }
+.callout-text {
+  display: inline-block;
+  vertical-align: middle; }
 
-.bb:after {
-  width: 100%;
-  height: 2px;
-  background-color: #00c7b7;
-  content: " ";
-  display: table;
-  clear: both; }
-
-.bb--medium:after, .bb--large:after {
-  position: absolute;
-  bottom: 0; }
-
-.bb--medium:after {
-  height: 3px; }
-
-.bb--large:after {
-  height: 4px; }
-
-.bb--muted:after {
-  background-color: #cae0de; }
-
-/* Global components */
+/* 
+ * Layouts 
+ */
+/* Media */
 .media-img {
   float: left;
   margin-right: 15px; }
@@ -683,21 +671,534 @@ em, cite {
     margin-left: -6px;
     margin-right: 20px; }
 
-/* Tweaks */
-.brand {
+.media--wide {
+  margin: 60px 80px 30px 80px; }
+  .media--wide .media-img {
+    margin-top: 20px;
+    margin-right: 80px; }
+
+/* 3-column layout without gutters */
+.l-third {
+  float: left;
+  width: 33.33333%; }
+
+/* 2-column layout with gutter defining columns in the mark-up */
+.l-2-col .l-col {
+  width: 50%;
+  padding: 0 30px;
+  float: left; }
+.l-2-col .l-col:first-child {
+  padding-left: 0; }
+.l-2-col .l-col:last-child {
+  padding-right: 0; }
+
+/* 2-column layout with gutter using CSS multiple columns */
+.l-2-col-auto {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px; }
+  .l-2-col-auto > p:first-child {
+    margin-top: 0; }
+
+/* 
+ * Widths, heights and margins.
+ *
+ * ## TODO: Most of these need to be removed
+ * ## when components are normalized
+ */
+/* Widths */
+.w-0 {
+  width: 0; }
+
+.w-half {
+  width: 50%; }
+
+.w-third {
+  width: 33.33333%; }
+
+.w-740 {
+  max-width: 740px; }
+
+.w-355 {
+  max-width: 355px; }
+
+.w-245 {
+  max-width: 245px; }
+
+.w-240 {
+  max-width: 240px; }
+
+.w-215 {
+  max-width: 215px; }
+
+/* Heights */
+.h-75 {
+  min-height: 75px; }
+
+/* Margins */
+.mt-0 {
+  margin-top: 0px; }
+
+.mb-0 {
+  margin-bottom: 0px; }
+
+.ml-0 {
+  margin-left: 0px; }
+
+.mr-0 {
+  margin-right: 0px; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mb-5 {
+  margin-bottom: 5px; }
+
+.ml-5 {
+  margin-left: 5px; }
+
+.mr-5 {
+  margin-right: 5px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.ml-10 {
+  margin-left: 10px; }
+
+.mr-10 {
+  margin-right: 10px; }
+
+.mt-15 {
+  margin-top: 15px; }
+
+.mb-15 {
+  margin-bottom: 15px; }
+
+.ml-15 {
+  margin-left: 15px; }
+
+.mr-15 {
+  margin-right: 15px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.ml-20 {
+  margin-left: 20px; }
+
+.mr-20 {
+  margin-right: 20px; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+.mb-25 {
+  margin-bottom: 25px; }
+
+.ml-25 {
+  margin-left: 25px; }
+
+.mr-25 {
+  margin-right: 25px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.ml-30 {
+  margin-left: 30px; }
+
+.mr-30 {
+  margin-right: 30px; }
+
+.mt-35 {
+  margin-top: 35px; }
+
+.mb-35 {
+  margin-bottom: 35px; }
+
+.ml-35 {
+  margin-left: 35px; }
+
+.mr-35 {
+  margin-right: 35px; }
+
+.mt-40 {
+  margin-top: 40px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
+
+.ml-40 {
+  margin-left: 40px; }
+
+.mr-40 {
+  margin-right: 40px; }
+
+.mt-45 {
+  margin-top: 45px; }
+
+.mb-45 {
+  margin-bottom: 45px; }
+
+.ml-45 {
+  margin-left: 45px; }
+
+.mr-45 {
+  margin-right: 45px; }
+
+.mt-50 {
+  margin-top: 50px; }
+
+.mb-50 {
+  margin-bottom: 50px; }
+
+.ml-50 {
+  margin-left: 50px; }
+
+.mr-50 {
+  margin-right: 50px; }
+
+.mt-55 {
+  margin-top: 55px; }
+
+.mb-55 {
+  margin-bottom: 55px; }
+
+.ml-55 {
+  margin-left: 55px; }
+
+.mr-55 {
+  margin-right: 55px; }
+
+.mt-60 {
+  margin-top: 60px; }
+
+.mb-60 {
+  margin-bottom: 60px; }
+
+.ml-60 {
+  margin-left: 60px; }
+
+.mr-60 {
+  margin-right: 60px; }
+
+.mt-65 {
+  margin-top: 65px; }
+
+.mb-65 {
+  margin-bottom: 65px; }
+
+.ml-65 {
+  margin-left: 65px; }
+
+.mr-65 {
+  margin-right: 65px; }
+
+.mt-70 {
+  margin-top: 70px; }
+
+.mb-70 {
+  margin-bottom: 70px; }
+
+.ml-70 {
+  margin-left: 70px; }
+
+.mr-70 {
+  margin-right: 70px; }
+
+.mt-75 {
+  margin-top: 75px; }
+
+.mb-75 {
+  margin-bottom: 75px; }
+
+.ml-75 {
+  margin-left: 75px; }
+
+.mr-75 {
+  margin-right: 75px; }
+
+.mt-80 {
+  margin-top: 80px; }
+
+.mb-80 {
+  margin-bottom: 80px; }
+
+.ml-80 {
+  margin-left: 80px; }
+
+.mr-80 {
+  margin-right: 80px; }
+
+.mt-85 {
+  margin-top: 85px; }
+
+.mb-85 {
+  margin-bottom: 85px; }
+
+.ml-85 {
+  margin-left: 85px; }
+
+.mr-85 {
+  margin-right: 85px; }
+
+.mt-90 {
+  margin-top: 90px; }
+
+.mb-90 {
+  margin-bottom: 90px; }
+
+.ml-90 {
+  margin-left: 90px; }
+
+.mr-90 {
+  margin-right: 90px; }
+
+.mt-95 {
+  margin-top: 95px; }
+
+.mb-95 {
+  margin-bottom: 95px; }
+
+.ml-95 {
+  margin-left: 95px; }
+
+.mr-95 {
+  margin-right: 95px; }
+
+.mt-100 {
+  margin-top: 100px; }
+
+.mb-100 {
+  margin-bottom: 100px; }
+
+.ml-100 {
+  margin-left: 100px; }
+
+.mr-100 {
+  margin-right: 100px; }
+
+.mt-105 {
+  margin-top: 105px; }
+
+.mb-105 {
+  margin-bottom: 105px; }
+
+.ml-105 {
+  margin-left: 105px; }
+
+.mr-105 {
+  margin-right: 105px; }
+
+.mt-110 {
+  margin-top: 110px; }
+
+.mb-110 {
+  margin-bottom: 110px; }
+
+.ml-110 {
+  margin-left: 110px; }
+
+.mr-110 {
+  margin-right: 110px; }
+
+.mt-115 {
+  margin-top: 115px; }
+
+.mb-115 {
+  margin-bottom: 115px; }
+
+.ml-115 {
+  margin-left: 115px; }
+
+.mr-115 {
+  margin-right: 115px; }
+
+.mt-120 {
+  margin-top: 120px; }
+
+.mb-120 {
+  margin-bottom: 120px; }
+
+.ml-120 {
+  margin-left: 120px; }
+
+.mr-120 {
+  margin-right: 120px; }
+
+.mt-125 {
+  margin-top: 125px; }
+
+.mb-125 {
+  margin-bottom: 125px; }
+
+.ml-125 {
+  margin-left: 125px; }
+
+.mr-125 {
+  margin-right: 125px; }
+
+.mt-1 {
+  margin-top: 1px; }
+
+.mb-1 {
+  margin-bottom: 1px; }
+
+.ml-1 {
+  margin-left: 1px; }
+
+.mr-1 {
+  margin-right: 1px; }
+
+.ml-n1 {
+  margin-left: -1px; }
+
+.mr-n1 {
+  margin-right: -1px; }
+
+.mt-2 {
+  margin-top: 2px; }
+
+.mb-2 {
+  margin-bottom: 2px; }
+
+.ml-2 {
+  margin-left: 2px; }
+
+.mr-2 {
+  margin-right: 2px; }
+
+.ml-n2 {
+  margin-left: -2px; }
+
+.mr-n2 {
+  margin-right: -2px; }
+
+.mt-3 {
+  margin-top: 3px; }
+
+.mb-3 {
+  margin-bottom: 3px; }
+
+.ml-3 {
+  margin-left: 3px; }
+
+.mr-3 {
+  margin-right: 3px; }
+
+.ml-n3 {
   margin-left: -3px; }
 
-.brand-claim {
-  position: relative;
-  top: 4px;
-  /* to align with logo text */ }
-
-.top-nav {
+.mr-n3 {
   margin-right: -3px; }
 
-/* Colors and imagery
-------------------------------*/
-/* Colors */
+.mt-4 {
+  margin-top: 4px; }
+
+.mb-4 {
+  margin-bottom: 4px; }
+
+.ml-4 {
+  margin-left: 4px; }
+
+.mr-4 {
+  margin-right: 4px; }
+
+.ml-n4 {
+  margin-left: -4px; }
+
+.mr-n4 {
+  margin-right: -4px; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mb-5 {
+  margin-bottom: 5px; }
+
+.ml-5 {
+  margin-left: 5px; }
+
+.mr-5 {
+  margin-right: 5px; }
+
+.ml-n5 {
+  margin-left: -5px; }
+
+.mr-n5 {
+  margin-right: -5px; }
+
+.mt-6 {
+  margin-top: 6px; }
+
+.mb-6 {
+  margin-bottom: 6px; }
+
+.ml-6 {
+  margin-left: 6px; }
+
+.mr-6 {
+  margin-right: 6px; }
+
+.ml-n6 {
+  margin-left: -6px; }
+
+.mr-n6 {
+  margin-right: -6px; }
+
+.mt-7 {
+  margin-top: 7px; }
+
+.mb-7 {
+  margin-bottom: 7px; }
+
+.ml-7 {
+  margin-left: 7px; }
+
+.mr-7 {
+  margin-right: 7px; }
+
+.ml-n7 {
+  margin-left: -7px; }
+
+.mr-n7 {
+  margin-right: -7px; }
+
+.ml-n10 {
+  margin-left: -10px; }
+
+.ml-n20 {
+  margin-left: -20px; }
+
+.ml-n30 {
+  margin-left: -30px; }
+
+.ml-n40 {
+  margin-left: -40px; }
+
+.ml-n50 {
+  margin-left: -50px; }
+
+.mt-n10 {
+  margin-top: -10px; }
+
+html {
+  background-color: #F4F6F6;
+  color: #596262; }
+
 a {
   color: #00c7b7; }
 
@@ -709,44 +1210,83 @@ svg {
   fill: #00c7b7; }
 
 .muted {
-  color: #7e8383;
-  fill: #7e8383; }
+  color: #7e8383; }
 
-.loud {
-  color: #333d3d;
-  fill: #333d3d; }
+.loud, cite {
+  color: #333d3d; }
 
 .overloud {
-  color: #313d3e;
-  fill: #313d3e; }
+  color: #313d3e; }
 
 .inverse {
   background-color: #313d3e;
   color: #FFF;
-  /* consider if by default inverse text should be gray */
-  font-weight: 100; }
-  .inverse .loud {
+  font-weight: 100;
+  /* restore font weight for muted bold or semibold */ }
+  .inverse .loud, .inverse cite {
     color: #FFF; }
   .inverse .muted {
     font-weight: 300;
     /* light text in dark background gets too light */ }
-  .inverse .semibold {
-    font-weight: 400; }
-  .inverse .bold {
-    font-weight: 500; }
 
+/* Icons */
 .icon {
-  fill: #FFF; }
+  color: #FFF; }
 
-.icon--inverse {
-  fill: #313d3e; }
+.inverse .icon {
+  color: #313d3e; }
 
-.icon--inverse--muted {
-  fill: #596262; }
+/* Backgrounds */
+.bg-white {
+  background-color: #FFF; }
 
-/* Buttons 
+.bg-light {
+  background: #F4F6F6 url(/img/bg-light-1.svg) no-repeat -345px -250px; }
+
+.bg-light-muted {
+  background: #F4F6F6 url(/img/bg-light-2.svg) no-repeat 430px -190px; }
+
+.bg-light-muted-2 {
+  background: #F4F6F6 url(/img/bg-light-3.svg) no-repeat -25px -90px; }
+
+.bg-dark {
+  background: #313d3e url(/img/bg-dark-1.svg) no-repeat;
+  background-size: cover; }
+
+.bg-dark-muted {
+  background: #313d3e url(/img/bg-dark-2.svg) no-repeat;
+  background-size: cover; }
+
+/* Borders */
+.bb:after, .blurb-hd:after {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #00c7b7;
+  margin-bottom: -2px;
+  content: " ";
+  display: table;
+  clear: both; }
+
+.bb--medium:after {
+  height: 3px;
+  margin-top: -3px; }
+
+.bb--large:after {
+  height: 4px;
+  margin-top: -4px; }
+
+.bb--muted:after {
+  background-color: #cae0de; }
+
+/* Links 
 ------------------------------*/
-/* Default button */
+a {
+  text-decoration: none; }
+
+/*
+ * Links that look like buttons
+ */
 .button {
   position: relative;
   display: block;
@@ -807,51 +1347,42 @@ svg {
   min-width: 120px;
   top: 1px; }
 
-/* Badges
-------------------------------*/
-/* To center the text vertically in the badge: 
- * http://css-tricks.com/centering-in-the-unknown/
+/*
+ * Social links
  */
-.badge {
-  background: #00c7b7;
-  color: #FFF;
-  border-radius: 100%;
-  position: relative; }
-
-.badge:before {
-  content: '';
+.social-icon {
   display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em;
-  /* Adjusts for spacing */ }
+  margin-right: 25px; }
+  .social-icon:nth-child(3n+1) svg {
+    fill: #7d7d7d; }
+  .social-icon:nth-child(3n+2) svg {
+    fill: #5a5a5a; }
+  .social-icon:nth-child(3n+0) svg {
+    fill: #646464; }
 
-.badge-text {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  padding: 1% 10% 0; }
+.blurb-hd .media-img {
+  margin-top: 10px; }
+.blurb-hd .media--bleed .media-img {
+  margin-top: 0; }
 
-.badge--small {
-  width: 127px;
-  height: 127px; }
+.blurb-title {
+  margin: 5px 0; }
 
-.badge--large {
-  width: 276px;
-  height: 276px;
-  font-weight: 100; }
+.blurb-meta {
+  margin: 10px 0; }
 
-.badge--stitch:after {
-  content: "";
+.blurb-bd p:first-child {
+  margin-top: 15px; }
+.blurb-bd .media {
+  margin: 10px 0; }
+.blurb-bd .media-img {
+  margin: 20px 30px 0 0; }
+.blurb-bd .cta {
+  margin-top: 25px; }
+
+cite {
   display: block;
-  position: absolute;
-  width: 90%;
-  height: 90%;
-  left: 5%;
-  top: 5%;
-  border-radius: 100%;
-  border: 1px dashed white;
-  opacity: 0.5; }
+  margin-top: -5px; }
 
 /* Forms
 ------------------------------*/
@@ -911,7 +1442,7 @@ table {
   margin-left: -6px; }
 
 .table {
-  margin: 30px 0px; }
+  margin: 15px 0px 45px; }
 
 th, .th, td, .td {
   margin: 6px 3px;
@@ -934,310 +1465,66 @@ thead th, .th--highlight {
   color: #FFF;
   padding-bottom: 5px; }
 
-/*------------------------------
- * 
- * Specific page components
- *
- * Could go on a separate stylesheet
- *
- *------------------------------*/
-/* Home page
+/* Call outs
 ------------------------------*/
-/* Backgrounds */
-.bg-white {
-  background-color: #FFF; }
-
-.bg-light-1 {
-  background: #F4F6F6 url(/img/bg-light-1.svg) no-repeat -345px -250px; }
-
-.bg-light-2 {
-  background: #F4F6F6 url(/img/bg-light-2.svg) no-repeat 430px -190px; }
-
-.bg-light-3 {
-  background: #F4F6F6 url(/img/bg-light-3.svg) no-repeat -25px -90px; }
-
-.bg-dark-1 {
-  background: #313d3e url(/img/bg-dark-1.svg) no-repeat;
-  background-size: cover; }
-
-.bg-dark-2 {
-  background: #313d3e url(/img/bg-dark-2.svg) no-repeat;
-  background-size: cover; }
-
-/* 
- * Hero 
+/* To center the text vertically in the callout: 
+ * http://css-tricks.com/centering-in-the-unknown/
  */
-.hero {
-  margin-left: 80px;
-  position: relative; }
+.callout {
+  background: #00c7b7;
+  color: #FFF;
+  border-radius: 100%; }
 
-.hero-video {
-  margin-top: 55px;
-  margin-right: 20px; }
+.callout-text {
+  text-align: center;
+  padding: 1% 10% 0; }
 
-.hero-blurb {
-  width: 365px;
-  padding: 0 10px 0 0px;
-  margin: 0 auto; }
+.callout--small {
+  width: 127px;
+  height: 127px; }
 
-.hero-badge {
+.callout--large {
+  width: 276px;
+  height: 276px;
+  font-weight: 100; }
+
+.callout--stitch:after {
+  content: "";
+  display: block;
   position: absolute;
-  top: 20px;
-  left: -55px; }
-
-/* 
- * Products  
- */
-.product-callout {
-  margin-left: -30px;
-  margin-top: 70px; }
-
-/* Social icons */
-.social-icon {
-  display: inline-block;
-  margin-right: 25px; }
-  .social-icon:nth-child(3n+1) svg {
-    fill: #7d7d7d; }
-  .social-icon:nth-child(3n+2) svg {
-    fill: #5a5a5a; }
-  .social-icon:nth-child(3n+0) svg {
-    fill: #646464; }
-
-/* Widths, heights and margins. Some basic ones should
- * stay under the utility classes section but most of
- * these need to go when components are normalized
- */
-/* Widths */
-.w-740 {
-  max-width: 740px; }
-
-.w-350 {
-  max-width: 350px; }
-
-.w-245 {
-  max-width: 245px; }
-
-.w-240 {
-  max-width: 240px; }
-
-.w-215 {
-  max-width: 215px; }
-
-.w-0 {
-  width: 0; }
-
-.w-half {
-  width: 50%; }
-
-/* Heights */
-.h-75 {
-  min-height: 75px; }
-
-/* Margins */
-.mt-120 {
-  margin-top: 120px; }
-
-.mt-115 {
-  margin-top: 115px; }
-
-.mt-95 {
-  margin-top: 95px; }
-
-.mt-90 {
-  margin-top: 90px; }
-
-.mt-80 {
-  margin-top: 80px; }
-
-.mt-70 {
-  margin-top: 70px; }
-
-.mt-65 {
-  margin-top: 65px; }
-
-.mt-60 {
-  margin-top: 60px; }
-
-.mt-50 {
-  margin-top: 50px; }
-
-.mt-45 {
-  margin-top: 45px; }
-
-.mt-40 {
-  margin-top: 40px; }
-
-.mt-35 {
-  margin-top: 35px; }
-
-.mt-30 {
-  margin-top: 30px; }
-
-.mt-25 {
-  margin-top: 25px; }
-
-.mt-20 {
-  margin-top: 20px; }
-
-.mt-15 {
-  margin-top: 15px; }
-
-.mt-10 {
-  margin-top: 10px; }
-
-.mt-5 {
-  margin-top: 5px; }
-
-.mt-3 {
-  margin-top: 3px; }
-
-.mt-0 {
-  margin-top: 0; }
-
-.mt-n3 {
-  margin-top: -3px; }
-
-.mt-n5 {
-  margin-top: -5px; }
-
-.mt-n40 {
-  margin-top: -40px; }
-
-.mt-n60 {
-  margin-top: -60px; }
-
-.mb-100 {
-  margin-bottom: 100px; }
-
-.mb-85 {
-  margin-bottom: 85px; }
-
-.mb-80 {
-  margin-bottom: 80px; }
-
-.mb-70 {
-  margin-bottom: 70px; }
-
-.mb-60 {
-  margin-bottom: 60px; }
-
-.mb-50 {
-  margin-bottom: 50px; }
-
-.mb-45 {
-  margin-bottom: 45px; }
-
-.mb-40 {
-  margin-bottom: 40px; }
-
-.mb-35 {
-  margin-bottom: 35px; }
-
-.mb-30 {
-  margin-bottom: 30px; }
-
-.mb-25 {
-  margin-bottom: 25px; }
-
-.mb-20 {
-  margin-bottom: 20px; }
-
-.mb-15 {
-  margin-bottom: 15px; }
-
-.mb-10 {
-  margin-bottom: 10px; }
-
-.mb-0 {
-  margin-bottom: 0; }
-
-.ml-40 {
-  margin-left: 40px; }
-
-.ml-30 {
-  margin-left: 30px; }
-
-.ml-25 {
-  margin-left: 25px; }
-
-.ml-20 {
-  margin-left: 20px; }
-
-.ml-15 {
-  margin-left: 15px; }
-
-.ml-10 {
-  margin-left: 10px; }
-
-.ml-5 {
-  margin-left: 5px; }
-
-.ml-n2 {
-  margin-left: -2px; }
-
-.ml-n3 {
-  margin-left: -3px; }
-
-.ml-n4 {
-  margin-left: -4px; }
-
-.ml-n5 {
-  margin-left: -5px; }
-
-.ml-n7 {
-  margin-left: -7px; }
-
-.ml-n10 {
-  margin-left: -10px; }
-
-.ml-n40 {
-  margin-left: -40px; }
-
-.ml-n50 {
-  margin-left: -50px; }
-
-.ml-n50 {
-  margin-left: -55px; }
-
-.ml-n80 {
-  margin-left: -80px; }
-
-.mr-120 {
-  margin-right: 120px; }
-
-.mr-110 {
-  margin-right: 110px; }
-
-.mr-40 {
-  margin-right: 40px; }
-
-.mr-30 {
-  margin-right: 30px; }
-
-.mr-25 {
-  margin-right: 25px; }
-
-.mr-20 {
-  margin-right: 20px; }
-
-.mr-15 {
-  margin-right: 15px; }
-
-.mr-10 {
-  margin-right: 10px; }
-
-.mr-n5 {
-  margin-right: -5px; }
-
-.mr-n35 {
-  margin-right: -35px; }
-
-.mr-n80 {
-  margin-right: -80px; }
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  border-radius: 100%;
+  border: 1px dashed white;
+  opacity: 0.5; }
+
+.callout--abs {
+  position: absolute;
+  top: 45px;
+  left: 105px; }
 
 body {
-  min-width: 1280px;
+  width: 1280px;
   margin: 0 auto; }
+
+/*------------------------------
+ * 
+ * Common page components (header, footer, navigation)
+ *
+ *------------------------------*/
+/* Tweaks for header and footer */
+.brand {
+  margin-left: -3px; }
+
+.brand-claim {
+  position: relative;
+  top: 4px;
+  /* to align with logo text */ }
+
+.top-nav {
+  margin-right: -3px; }
 
 /* ==========================================================================
    Helper classes
@@ -1294,13 +1581,13 @@ body {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .content:before, .cf:before, .l-thirds:before, .clearfix:after, .content:after, .cf:after, .l-thirds:after {
+.clearfix:before, .content:before, .cf:before, .l-2-col:before, .l-thirds:before, .clearfix:after, .content:after, .cf:after, .l-2-col:after, .l-thirds:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .content:after, .cf:after, .l-thirds:after {
+.clearfix:after, .content:after, .cf:after, .l-2-col:after, .l-thirds:after {
   clear: both; }
 
 /* ==========================================================================

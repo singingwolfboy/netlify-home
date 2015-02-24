@@ -1,0 +1,101 @@
+//== Colors
+//
+//## Grays, whites and highlight colors
+
+  //** Grays
+  $color-muted: rgb(126,131,131); 
+  $color-dark: rgb(89,98,98);
+  $color-darker: rgb(51,61,61);
+  $color-darkest: rgb(49,61,62);
+
+  //** Whites
+  $color-light: #F4F6F6;
+  $color-lighter: #F9FAFA;
+  $color-lightest: #FFF;
+
+  //** Blue-greens
+  $color-highlight: rgb(0,199,183);
+  $color-highlight-lighter: rgb(202,224,222);
+  $color-highlight-lightest: rgb(230,239,238);
+
+
+html {
+  background-color: $color-light;
+  color: $color-dark;
+}
+
+a {
+  color: $color-highlight;
+}
+
+svg {
+  fill: currentColor;
+}
+
+.highlight {
+  color: $color-highlight;
+  fill: $color-highlight;
+}
+.muted {
+  color: $color-muted;
+}
+.loud {
+  color: $color-darker;
+}
+.overloud {
+  color: $color-darkest;
+}
+
+
+.inverse {
+  background-color: $color-darkest;
+  color: $color-lightest;
+  font-weight: 100;
+
+  .loud {
+    color: $color-lightest;
+  }
+  .muted {
+    font-weight: 300; /* light text in dark background gets too light */
+  }
+  /* restore font weight for muted bold or semibold */
+  .semibold {
+    @extend .semibold;
+  }
+  .bold {
+    @extend .bold;
+  }
+}
+
+
+/* Icons */
+.icon {
+  color: $color-lightest;
+}
+.inverse .icon {
+  color: $color-darkest;
+}
+
+
+/* Backgrounds */
+.bg-white {
+  background-color: $color-lightest;
+}
+.bg-light {
+  background: $color-light url(/img/bg-light-1.svg) no-repeat -345px -250px;
+}
+.bg-light-muted {
+  background: $color-light url(/img/bg-light-2.svg) no-repeat 430px -190px;
+}
+.bg-light-muted-2 {
+  background: $color-light url(/img/bg-light-3.svg) no-repeat -25px -90px;
+}
+.bg-dark {
+  background: $color-darkest url(/img/bg-dark-1.svg) no-repeat;
+  background-size: cover;
+}
+.bg-dark-muted {
+  background: $color-darkest url(/img/bg-dark-2.svg) no-repeat;
+  background-size: cover;
+}
+

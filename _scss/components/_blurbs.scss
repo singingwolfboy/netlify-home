@@ -1,0 +1,45 @@
+.blurb-hd {
+  @extend .bb;
+  .media-img {
+    margin-top: 10px;
+  }
+  .media--bleed {
+    .media-img {
+      margin-top: 0;
+    }
+  }
+}
+
+.blurb-title {
+  @extend .epsilon;
+  @extend .semibold;
+  margin: 5px 0;
+}
+
+.blurb-meta {
+  @extend .x-small;
+  margin: 10px 0;
+}
+
+.blurb-bd {
+  p:first-child {
+    margin-top: 15px;
+  }
+  .media {
+    margin: 10px 0;
+  }
+  .media-img {
+    margin: 20px 30px 0 0;
+  }
+  .cta {
+    margin-top: 25px;
+  }
+}
+
+cite {
+  display: block;
+  @extend .xx-small;
+  @extend .bold;
+  @extend .loud;
+  margin-top: -5px;
+}

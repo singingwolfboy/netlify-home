@@ -1,0 +1,39 @@
+// ------------------------------------------
+// 
+// This file gets imported in lib/_main.scss
+//
+// ------------------------------------------
+
+
+@import "utils";
+@import "typography";
+@import "layout";
+@import "colors";
+@import "borders";
+@import "components/links";
+@import "components/blurbs";
+@import "components/forms";
+@import "components/tables";
+@import "components/callouts";
+
+@import "development";
+
+
+/*------------------------------
+ * 
+ * Common page components (header, footer, navigation)
+ *
+ *------------------------------*/
+
+/* Tweaks for header and footer */
+.brand {
+  margin-left: -3px;
+}
+.brand-claim {
+  position: relative;
+  top: 4px; /* to align with logo text */
+}
+.top-nav {
+  margin-right: -3px;
+}
+

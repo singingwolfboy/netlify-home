@@ -1,0 +1,27 @@
+.media {
+  @include clearfix-me(micro);
+}
+.media-img {
+  float: left;
+  margin-right: 15px;
+}
+.media-bd {
+  @include clearfix-me(facebook);
+}
+
+.media--bleed {
+  margin-left: -1px;
+  .media-img {
+    margin-left: -6px;
+    margin-right: 20px;
+  }
+}
+
+.media--wide {
+  margin: 60px 80px 30px 80px;
+  .media-img {
+    margin-top: 20px;
+    margin-right: 80px;
+  }
+}
+

@@ -1,66 +1,29 @@
 ---
 layout: default
+social-links: ['twitter', 'facebook', 'github', 'linkedin', 'googleplus']
 ---
 
-{% include svg-defs.html %}
-
-<!-- Header, hero and pull-quote on first screen -->
-<div class="l-fs bg-light-1">
-  <!-- Site Header -->
-  <header class="bb bb--medium inverse l-fs-top cf">
-    <div class="content content--wide">
-  
-      <!-- Branding: logo & claim -->
-      <section class="brand left mt-20 mb-20">
-        <svg class="brand-logo" width="180" height="70">
-          <use xlink:href="#netlify-logo" />
-          <foreignObject>
-            <span>netlify</span>
-          </foreignObject>
-        </svg>
-        <p class="brand-claim x-small inline-block ml-25 optional">Because static sites are safer, faster, cheaper &amp; simpler</p>
-      </section>
-
-      <!-- Quick links: login & menu icon -->
-      <nav class="top-nav right mt-35">
-
-        <a href="#" class="button button--inline button--small button--muted mr-40">
-          <svg class="button-icon" width="30" height="30">
-            <use xlink:href="#icon-keyhole" />
-          </svg>
-          <span class="button-label">your@mail.com</span>
-        </a>
-
-        <!-- Menu icon -->
-        <a href="#navigation" class="button-nav">
-          <svg class="button-nav-icon" width="37" height="26">
-            <use xlink:href="#hamburguer" />
-          </svg>
-        </a>
-      </nav>
-    </div>
-  </header>
-  <!-- end Site Header -->
-
-  <!-- Hero -->
-  <section class="l-fs-middle">
-    <div class="content content--wide">
-      <div class="media hero">
+<!-- Hero -->
+<section class="bg-light">
+  <div class="content content--wide">
+    <div class="media media--wide">
+      
       <!-- Video -->
-      <div class="media-img hero-video">
+      <div class="media-img">
         <img src="http://placehold.it/505x345" width="505" height="345">
-        <div class="badge badge--small badge--stitch hero-badge">
-          <p class="badge-text">
+        <div class="callout callout--small callout--stitch callout--abs">
+          <p class="callout-text">
             <span class="zeta">It’s pretty</span>
             <strong class="delta semibold">Simple</strong>
           </p>
         </div>
-      </div>
+      </div> <!-- end media-img -->
+      
       <!-- Blurb -->
       <div class="media-bd">
-        <div class="hero-blurb">
-          <h1 class="tera overloud">
-            <span class="block ml-n7">netlify</span>
+        <div class="w-355 center">
+          <h1 class="huge overloud mt-0">
+            <span class="block ml-n5">netlify</span>
             <small class="alpha highlight block">Builds, deploys &amp; hosts your static site or app</small>
           </h1>
           <p>
@@ -73,82 +36,91 @@ layout: default
           </p>
           <p class="small-2 overloud text-right">Basic packages <strong class="highlight">free forever</strong> – no credit card required</p>
         </div>
-      </div>
-    </div><!-- end content -->
-  </section>
-  <!-- end Hero -->
+      </div> <!-- end media-bd -->
+      
+    </div><!-- end media -->
+  </div><!-- end content -->
+</section>
+<!-- end Hero -->
 
-  <!-- Pull Quote -->
-  <section class="bb bb--large bg-white text-center l-fs-bottom">
-    <div class="content">
-      <p class="delta muted mt-40 mb-40">Made for web developers <strong class="highlight">netlify</strong> is the default entry point to the world of static</p>
-    </div><!-- end content -->
-  </section>
-  <!-- end Pull Quote-->
-</div>
+<!-- Pull Quote -->
+<section class="bb bb--large bg-white text-center">
+  <div class="content">
+    <p class="delta muted p--wide mt-40 mb-40">Made for web developers <strong class="highlight">Netlify</strong> is the default entry point to the world of static</p>
+  </div><!-- end content -->
+</section>
+<!-- end Pull Quote-->
 
 <!-- Products -->
-<section class="bb bb--large bg-dark-1 inverse">
+<section class="bb bb--large bg-dark inverse">
   <div class="content">
 
-    <div class="l-thirds mt-115 mb-100 pull-left">
+    <div class="l-thirds mt-115 mb-100 ml-n10">
 
       <!-- Callout -->
       <div class="l-third">
-        <div class="badge badge--large product-callout">
-          <p class="badge-text"><span class="beta">Choose between</span></p>
+        <div class="callout callout--large mt-70 ml-n20">
+          <p class="callout-text"><span class="beta">Choose between</span></p>
         </div>
       </div><!-- end -third -->
     
       <!-- Full Monty -->
       <div class="l-third">
-        <section class="w-245 center">
-          <header class="media media--bleed bb">
-            <div class="media-img">
-              <svg width="108" height="108">
-                <use xlink:href="#icon-polyhedron" />
-              </svg>
-            </div>
-            <div class="media-bd">
-              <h1 class="alpha bold w-0 mt-15 mb-20">Full Monty</h1>
+        <section class="blurb w-245 center">
+          <header class="blurb-hd">
+            <div class="media media--bleed">
+              <div class="media-img">
+                <svg width="108" height="108">
+                  <use xlink:href="#icon-polyhedron" />
+                </svg>
+              </div>
+              <div class="media-bd">
+                <h1 class="alpha bold w-0 mt-15 mb-20">Full Monty</h1>
+              </div>
             </div>
           </header>
-          <p class="zeta mt-15 h-75">Builds, deploys, configuration, hosting and maintenance rolled into one</p>
-          <p class="small">This is a short descriptive text about the Full Monty Package. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus.</p>
-          <p class="cta mt-25">
-            <a href="#" class="button">
-              <svg class="button-icon" width="50" height="50">
-                <use xlink:href="#icon-arrow" />
-              </svg>
-              <span class="button-label">Get started now</span>
-            </a>
-          </p>
+          <div class="blurb-bd">
+            <p class="zeta">Builds, deploys, configuration, hosting and maintenance rolled into one</p>
+            <p class="small">This is a short descriptive text about the Full Monty Package. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus.</p>
+            <p class="cta">
+              <a href="#" class="button">
+                <svg class="button-icon" width="50" height="50">
+                  <use xlink:href="#icon-arrow" />
+                </svg>
+                <span class="button-label">Get started now</span>
+              </a>
+            </p>
+          </div>
         </section>
       </div><!-- end l-third -->
 
       <!-- Hosting only -->
       <div class="l-third">
-        <section class="w-245 right">
-          <header class="media media--bleed bb">
-            <div class="media-img">
-              <svg width="108" height="108">
-                <use xlink:href="#icon-cube" />
-              </svg>
-            </div>
-            <div class="media-bd">
-              <h1 class="beta bold w-0 mt-25 mb-20">Hosting only</h1>
+        <section class="blurb w-245 right">
+          <header class="blurb-hd">
+            <div class="media media--bleed">
+              <div class="media-img">
+                <svg width="108" height="108">
+                  <use xlink:href="#icon-cube" />
+                </svg>
+              </div>
+              <div class="media-bd">
+                <h1 class="beta bold w-0 mt-25 mb-20">Hosting only</h1>
+              </div>
             </div>
           </header>
-          <p class="zeta mt-15 h-75">The market’s most fully-featured static site CDN hosting</p>
-          <p class="small">This is a short descriptive text about the Hosting only Package. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus.</p>
-          <p class="cta mt-25">
-            <a href="#" class="button">
-              <svg class="button-icon" width="50" height="50">
-                <use xlink:href="#icon-arrow" />
-              </svg>
-              <span class="button-label">Get started now</span>
-            </a>
-          </p>
+          <div class="blurb-bd">
+            <p class="zeta">The market’s most fully-featured static site CDN hosting</p>
+            <p class="small">This is a short descriptive text about the Hosting only Package. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus.</p>
+            <p class="cta">
+              <a href="#" class="button">
+                <svg class="button-icon" width="50" height="50">
+                  <use xlink:href="#icon-arrow" />
+                </svg>
+                <span class="button-label">Get started now</span>
+              </a>
+            </p>
+          </div>
         </section>
       </div><!-- end l-third -->
     </div><!-- end l-thirds -->
@@ -157,14 +129,14 @@ layout: default
 </div><!-- end fullscreen -->
 
 <!-- Newsletter, Testimonials and Client Logos -->
-<section class="bg-light-2 bb bb--large text-center">
+<section class="bg-light-muted bb bb--large text-center">
   <div class="content content--narrow">
     
     <!-- Newsletter -->
-    <section class="bb bb--muted mt-95 mb-40">
+    <section class="bb bb--muted mt-90 mb-40">
       <header>
         <h1 class="alpha mb-30">Sign up for our newsletter and stay tuned on all that’s static</h1>
-        <p class="zeta muted">Sign up for our awesome newsletter, if you want to hear about exciting things happening in the world of static websites, and of new netlify features that are around the corner.</p>
+        <p class="zeta muted p--wide">Sign up for our awesome newsletter, if you want to hear about exciting things happening in the world of static websites, and of new Netlify features that are around the corner.</p>
       </header>
       <form class="form--fancy mt-25">
         <p class="form-group">
@@ -177,131 +149,90 @@ layout: default
         </p>
         <button type="submit" class="form-button">Sign up</button>
       </form>
-      <p class="x-small muted mt-30 mb-30">We send out aprox. twice a month. Go ahead, we won’t give away your address or anything, and each email is handwritten (on a keyboard).</p>
+      <p class="x-small muted mt-30 mb-30 p--full-w">We send out aprox. twice a month. Go ahead, we won’t give away your address or anything, and each email is handwritten (on a keyboard).</p>
     </section>
 
     <!-- Testimonials -->
     <section class="bb bb--muted mt-40 mb-40">
       <h1 class="alpha">What our clients say</h1>
-      <ul class="l-thirds mt-40 mb-40">
-        <li class="l-third">
-          <div class="w-215 left">
-            <div class="img bb">
-              <img src="http://placehold.it/120x90" srcset="http://placehold.it/120x90 1x, http://placehold.it/240x180 2x, http://placehold.it/360x270 3x" class="bb">
+      <div class="l-thirds mt-40 mb-40">
+        {% for i in (1..3) %}
+        <div class="l-third">
+          <section class="blurb w-215 left">
+            <header class="blurb-hd">
+              <img src="http://placehold.it/120x90" srcset="http://placehold.it/120x90 1x, http://placehold.it/240x180 2x, http://placehold.it/360x270 3x" height="90">
+            </header>
+            <div class="blurb-bd">
+              <blockquote>
+                <p class="muted">“Netlify is absolutely amazing. Before I believed in God and Humanity. Now only Netlify. All Hail Netlify. Amen.”</p>
+                <cite>Shane Shaw CEO, Vice Media Network Ltmd.</cite>
+              </blockquote>
             </div>
-            <blockquote class="ml-n5 mr-n5">
-              <p class="muted mb-15">“Netlify is absolutely amazing. Before I believed in God and Humanity. Now only netlify. All Hail netlify. Amen.”</p>
-              <cite class="block xx-small bold loud">Shane Shaw CEO, Vice Media Network Ltmd.</cite>
-            </blockquote>
-          </div>
-        </li>
-        <li class="l-third">
-          <div class="w-215 center">
-            <div class="img bb">
-              <img src="http://placehold.it/120x90" srcset="http://placehold.it/120x90 1x, http://placehold.it/240x180 2x, http://placehold.it/360x270 3x">
-            </div>
-            <blockquote class="ml-n5 mr-n5">
-              <p class="muted mb-15">“Netlify is absolutely amazing. Before I believed in God and Humanity. Now only netlify. All Hail netlify. Amen.”</p>
-              <cite class="block xx-small bold loud">Shane Shaw CEO, Vice Media Network Ltmd.</cite>
-            </blockquote>
-          </div>
-        </li>
-        <li class="l-third">
-          <div class="w-215 right">
-            <div class="img bb">
-              <img src="http://placehold.it/120x90" srcset="http://placehold.it/120x90 1x, http://placehold.it/240x180 2x, http://placehold.it/360x270 3x">
-            </div>
-            <blockquote class="ml-n5 mr-n5">
-              <p class="muted mb-15">“Netlify is absolutely amazing. Before I believed in God and Humanity. Now only netlify. All Hail netlify. Amen.”</p>
-              <cite class="block xx-small bold loud">Shane Shaw CEO, Vice Media Network Ltmd.</cite>
-            </blockquote>
-          </div>
-        </li>
-      </ul>
+          </section>
+        </div>
+        {% endfor %}
+      </div>
     </section>
 
     <!-- Client logos -->
-    <section class="mt-50 mb-85">
+    <section class="mt-55 mb-85">
       <h1 class="alpha">A selection of our clients</h1>
-      <p class="mt-40">
+      <div class="mt-40">
         <img src="http://placehold.it/80x40" width="80" height="40" class="mr-40">
         <img src="http://placehold.it/110x45" width="110" height="45" class="mr-40">
         <img src="http://placehold.it/50x50" width="50" height="50" class="mr-40">
         <img src="http://placehold.it/55x50" width="55" height="50" class="mr-40">
         <img src="http://placehold.it/55x40" width="55" height="40" class="mr-40">
         <img src="http://placehold.it/55x35" width="55" height="35" class="mr-40">
-      </p>
+      </div>
     </section>
     
   </div><!-- end content -->
 </section>
 
 <!-- Blog and Social Links -->
-<section class="bg-dark-2 inverse bb bb--large">
+<section class="bg-dark-muted inverse bb bb--large">
   <div class="content">
 
     <!-- Blog -->
     <section>
-      <header class="mt-90 mb-60 text-center">
+      <header class="mt-90 mb-50 text-center">
         <h1 class="kilo highlight mb-35">Visit our static blog</h1>
-        <p class="zeta muted">This is a short copy about the netlify blog and what kind of topics and tricks you can learn from it.
+        <p class="zeta muted p--wide">This is a short copy about the Netlify blog and what kind of topics and tricks you can learn from it.
       Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum.</p>
       </header>
       <div class="l-thirds">
+        {% for i in (1..3) %}
         <div class="l-third">
-          <article class="w-240 left">
-            <header class="media bb">
-              <div class="media-img">
-                <img src="http://placehold.it/80x80" srcset="http://placehold.it/80x80 1x, http://placehold.it/160x160 2x, http://placehold.it/240x240" alt="Mathias Biilmann" width="80" height="80">
-              </div>
-              <div class="media-bd">
-                <h1 class="epsilon semibold mt-n3 mb-10">5 reasons to go static</h1>
-                <p class="byline x-small highlight mt-10 mb-10">by Mathias Biilmann <svg class="icon icon--inverse right mt-3" width="13" height="13"><use xlink:href="#icon-arrow"></svg></p>
+          <article class="blurb w-240 left">
+            <header class="blurb-hd">
+              <div class="media">
+                <div class="media-img">
+                  <img src="http://placehold.it/80x80" srcset="http://placehold.it/80x80 1x, http://placehold.it/160x160 2x, http://placehold.it/240x240" alt="Mathias Biilmann" width="80" height="80">
+                </div>
+                <div class="media-bd">
+                  <h1 class="blurb-title">5 reasons to go static</h1>
+                  <p class="blurb-meta"><a href="#" class="link">by Mathias Biilmann</a></p>
+                </div>
               </div>
             </header>
-            <p class="x-small muted mt-15">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            <div class="blurb-bd">
+              <p class="muted small">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            </div>
           </article>
         </div>
-        <div class="l-third">
-          <article class="w-240 center">
-            <header class="media bb">
-              <div class="media-img">
-                <img src="http://placehold.it/80x80" srcset="http://placehold.it/80x80 1x, http://placehold.it/160x160 2x, http://placehold.it/240x240" alt="Mathias Biilmann" width="80" height="80">
-              </div>
-              <div class="media-bd">
-                <h1 class="epsilon semibold mt-n3 mb-10">5 reasons to go static</h1>
-                <p class="byline x-small highlight mt-10 mb-10">by Mathias Biilmann <svg class="icon icon--inverse right mt-3" width="13" height="13"><use xlink:href="#icon-arrow"></svg></p>
-              </div>
-            </header>
-            <p class="x-small muted mt-15">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-          </article>
-        </div>
-        <div class="l-third">
-          <article class="w-240 right">
-            <header class="media bb">
-              <div class="media-img">
-                <img src="http://placehold.it/80x80" srcset="http://placehold.it/80x80 1x, http://placehold.it/160x160 2x, http://placehold.it/240x240" alt="Mathias Biilmann" width="80" height="80">
-              </div>
-              <div class="media-bd">
-                <h1 class="epsilon semibold mt-n3 mb-10">5 reasons to go static</h1>
-                <p class="byline x-small highlight mt-10 mb-10">by Mathias Biilmann <svg class="icon icon--inverse right mt-3" width="13" height="13"><use xlink:href="#icon-arrow"></svg></p>
-              </div>
-            </header>
-            <p class="x-small muted mt-15">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-          </article>
-        </div>
+        {% endfor %}
       </div>
     </section>
     
     <!-- Social links -->
     <section class="text-center mt-30 mb-80">
       <h1 class="gamma highlight inline-block v-middle mr-40">Socialize @</h1>
+      
       <p class="inline-block v-middle">
-        <a href="#" class="social-icon"><svg width="36" height="36" class="icon-twitter"><use xlink:href="#icon-twitter"></svg></a>
-        <a href="#" class="social-icon"><svg width="36" height="36" class="icon-facebook"><use xlink:href="#icon-facebook"></svg></a>
-        <a href="#" class="social-icon"><svg width="36" height="36" class="icon-github"><use xlink:href="#icon-github"></svg></a>
-        <a href="#" class="social-icon"><svg width="36" height="36" class="icon-linkedin"><use xlink:href="#icon-linkedin"></svg></a>
-        <a href="#" class="social-icon"><svg width="36" height="36" class="icon-googleplus"><use xlink:href="#icon-googleplus"></svg></a>
+        {% for icon in page.social-links %}
+        <a href="#" class="social-icon"><svg width="36" height="36" class="icon-{{icon}}"><use xlink:href="#icon-{{icon}}"></svg></a>
+        {% endfor %}
       </p>
     </section>
     
@@ -309,9 +240,9 @@ layout: default
 </section>
 
 <!-- Pricing -->
-<section class="bg-light-3 text-center">
+<section class="bg-light-muted-2 text-center">
   <div class="content">
-    <h1 class="mega mt-120">Pricing</h1>
+    <h1 class="tera mt-120">Pricing</h1>
 
     <!-- Hosting -->
     <section class="mt-20">
@@ -319,7 +250,7 @@ layout: default
         <svg width="100" height="100" class="highlight">
           <use xlink:href="#cube" />
         </svg>
-        <h1 class="gamma highlight mt-0 mb-0">Static Hosting</h1>
+        <h1 class="gamma highlight mt-n10 mb-20">Static Hosting</h1>
       </header>
       <div class="l-thirds">
         <div class="l-third">
@@ -327,7 +258,7 @@ layout: default
             <h3 class="th th--highlight">Free</h3>
             <ul class="tbody">
               <li class="td">Custom Domain</li>
-              <li class="td">netlify Badge</li>
+              <li class="td">Netlify callout</li>
               <li class="td">100 MB Storage</li>
               <li class="td">1 GB Bandwidth</li>
               <li class="th">Free</li>
@@ -339,7 +270,7 @@ layout: default
             <h3 class="th th--highlight">Basic</h3>
             <ul class="tbody">
               <li class="td">Custom Domain, Basic SSL</li>
-              <li class="td">No netlify Branding</li>
+              <li class="td">No Netlify Branding</li>
               <li class="td">1 GB Storage</li>
               <li class="td">1 GB Bandwidth</li>
               <li class="th">$9/month</li>
@@ -351,7 +282,7 @@ layout: default
             <h3 class="th th--highlight">Pro</h3>
             <ul class="tbody">
               <li class="td">Custom Domain, Full SSL</li>
-              <li class="td">No netlify Branding</li>
+              <li class="td">No Netlify Branding</li>
               <li class="td">100 GB Storage</li>
               <li class="td">1 TB Bandwidth</li>
               <li class="th">$29/month</li>
@@ -367,8 +298,8 @@ layout: default
         <svg width="110" height="110" class="highlight">
           <use xlink:href="#polyhedron" />
         </svg>
-        <h1 class="gamma highlight mt-0 mb-0">Continuous Deployment</h1>
-        <p class="small-2 mt-10 mb-15 muted">Run your builds on our servers for a flat fee every month</p>
+        <h1 class="gamma highlight mt-n10 mb-0">Continuous Deployment</h1>
+        <p class="small-2 mt-10 mb-30 muted">Run your builds on our servers for a flat fee every month</p>
       </header>
       <div class="l-thirds">
         <div class="l-third">
@@ -411,7 +342,7 @@ layout: default
     <section class="mt-40 mb-100">
       <header>
         <h1 class="gamma highlight mt-0 mb-0">Support</h2>
-        <p class="small mt-10 mb-15 muted w-740 center loose">Support is available to all netlify users through our in-app support widget. Support tickets are prioritized based on both severity (i.e. application outages vs bug reports) as well as overall account spend. We're fanatical about giving extraordinary support, but for guaranteed response within 1-hour, 1-on-1 technical consulting, or your own dedicated account manager, please upgrade to a premium support plan.</p>
+        <p class="small muted p--wide loose mt-10 mb-30">Support is available to all Netlify users through our in-app support widget. Support tickets are prioritized based on both severity (i.e. application outages vs bug reports) as well as overall account spend. We're fanatical about giving extraordinary support, but for guaranteed response within 1-hour, 1-on-1 technical consulting, or your own dedicated account manager, please upgrade to a premium support plan.</p>
       </header>
       <div class="l-thirds">
         <div class="l-third">
@@ -449,26 +380,3 @@ layout: default
   </div>
 </section>
 
-<footer class="bg-white">
-  <div class="content">
-    <div class="mt-50 mb-50 clearfix">
-      <!-- Logo -->
-      <svg class="brand-logo left" width="224" height="80">
-        <use xlink:href="#netlify-logo" />
-        <foreignObject>
-          <span>netlify</span>
-        </foreignObject>
-      </svg>
-      <!-- Address -->
-      <div class="vcard right x-small mt-35" itemscope itemtype="http://schema.org/Organization">
-        <strong class="fn org" itemprop="brand">netlify</strong> 
-        <span class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-          <span class="street-address" itemprop="streetAddress">610 22nd Street, Suite 315</span>, 
-          <span class="locality" itemprop="addressLocality">San Francisco</span>,
-          <span class="region" itemprop="addressRegion">CA</span>
-          <span class="postal-code" itemprop="postalCode">94107</span>
-        </span>
-      </div>
-    </div>
-  </div>
-</footer>        
