@@ -5,6 +5,13 @@ a {
   text-decoration: none;
 }
 
+/*
+ * Links with a small arrow button to the right 
+ */
+.link {
+  padding-right: 22px;
+  background: url(/img/icon-arrow.svg) no-repeat right center;
+}
 
 /*
  * Links that look like buttons
@@ -101,5 +108,28 @@ a {
   }
   &:nth-child(3n+0) svg {
     fill: rgb(100,100,100);
+  }
+}
+
+
+/* 
+ * Button with image of video
+ */
+.button-video {
+  display: inline-block;
+  background: url(/img/video.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  img {
+    //width: 100%;
+  }
+  .callout {
+    @extend .callout--small;
+    @extend .callout--stitch;
+    position: absolute;
+    top: -25px;
+    left: -35px;
+    margin-top: -10px; //* makes it easier to just 0 out the margins when going responsive than to change top and left
+    margin-left: -20px;
   }
 }

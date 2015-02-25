@@ -68,20 +68,7 @@ svg {
   .loud {
     color: $color-lightest;
   }
-  .muted {
-    color: $color-muted;
-    font-weight: 300; /* light gray text on dark background gets too hard to read */
-  }
-  
-  /* restore font weight for muted bold or semibold */
-  .semibold {
-    @extend .semibold;
-  }
-  .bold {
-    @extend .bold;
-  }
 }
-
 
 /* Icons */
 .icon {

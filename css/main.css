@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -403,24 +404,26 @@ textarea {
   *zoom: 1;
   *width: auto !important; }
 
-.media {
+.cf, .content, .l-container, .l-2-col, .media {
   zoom: 1; }
-  .media:before, .media:after {
+  .cf:before, .content:before, .l-container:before, .l-2-col:before, .media:before, .cf:after, .content:after, .l-container:after, .l-2-col:after, .media:after {
     content: " ";
     display: table; }
-  .media:after {
+  .cf:after, .content:after, .l-container:after, .l-2-col:after, .media:after {
     clear: both; }
 
-/* Typography loosely based on classic typographic scale, 
- * tweaked to try to match font sizes in comp
- * 
- * http://spencermortensen.com/articles/typographic-scale/
-------------------------------*/
+/*---------------------------------------------
+ *
+ * TYPOGRAPHY
+ *
+ *--------------------------------------------*/
 html {
-  font: 300 normal 16px/1.5625 Roboto, sans-serif;
+  font: 300 normal 16px/25px Roboto, sans-serif;
   text-rendering: optimizeLegibility; }
 
-/* Basic spacing */
+/* 
+ * Basic spacing 
+ */
 h1, h2, h3, h4, h5, p, ul, ol, dl, blockquote {
   margin: 20px 0; }
 
@@ -434,13 +437,15 @@ p {
 .p--full-w {
   max-width: none; }
 
-/* Font sizes */
+/*
+ * Headings and paragraphs
+ */
 .huge {
   font-size: 125px;
   font-size: 7.8125rem;
   /* Not in scale */
-  font-weight: 600;
-  letter-spacing: normal;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   line-height: 1;
   margin: 40px 0 45px; }
 
@@ -469,7 +474,7 @@ p {
   font-size: 37px;
   font-size: 2.3125rem;
   font-weight: 100;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   line-height: 45px;
   margin: 25px 0; }
 
@@ -477,83 +482,98 @@ p {
   font-size: 33px;
   font-size: 2.0625rem;
   font-weight: 100;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   line-height: 40px;
   margin: 25px 0; }
 
 .gamma, h3 {
   font-size: 28px;
   font-size: 1.75rem;
-  font-weight: 100;
-  letter-spacing: -0.02em;
+  font-weight: 300;
+  letter-spacing: normal;
   line-height: 35px; }
 
 .delta, h4 {
   font-size: 25px;
   font-size: 1.5625rem;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: normal;
   line-height: 30px; }
 
 .epsilon, .blurb-title, h5 {
   font-size: 22px;
   font-size: 1.375rem;
-  font-weight: 100;
+  font-weight: 300;
+  letter-spacing: normal;
   line-height: 30px; }
 
 .zeta, h6 {
   font-size: 18px;
   font-size: 1.125rem;
-  font-weight: 100;
-  letter-spacing: 0.01em;
+  font-weight: 300;
+  letter-spacing: normal;
   line-height: 25px; }
 
 .medium {
   font-size: 16px;
   font-size: 1rem;
-  line-height: 25px;
-  letter-spacing: normal; }
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 25px; }
 
 .small {
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 20px;
-  letter-spacing: 0.02em; }
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 20px; }
 
 .small-2 {
   font-size: 15px;
   font-size: 0.9375rem;
   /* Not in scale. one-off size to get small text in hero to justify */
+  font-weight: 300;
   letter-spacing: normal;
   line-height: 20px; }
 
 .x-small, .blurb-meta {
   font-size: 13px;
   font-size: 0.8125rem;
-  line-height: 20px;
-  letter-spacing: 0.03em; }
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  line-height: 20px; }
 
-.xx-small, cite {
+.xx-small, .blurb cite {
   font-size: 11px;
   font-size: 0.6875rem;
-  line-height: 20px;
-  letter-spacing: 0.03em; }
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  line-height: 20px; }
 
-/* Weights */
-strong, b, .semibold, .inverse .semibold, .blurb-title {
-  font-weight: 400;
+/* 
+ * Weights
+ */
+.thin {
+  font-weight: 100; }
+
+strong, b, .semibold, .blurb-title {
+  font-weight: 500;
   letter-spacing: normal; }
 
-.bold, .inverse .bold, cite {
-  font-weight: 500;
+.bold, .blurb cite {
+  font-weight: 700;
   letter-spacing: 0.01em; }
 
-/* Line heights */
+/* 
+ * Line heights
+ */
 .loose {
   line-height: 1.8; }
 
-/* No italics */
-em, cite {
+/* 
+ * No italics 
+ */
+em, i, cite {
   font-style: normal; }
 
 /* 
@@ -581,9 +601,6 @@ body {
 ul {
   list-style: none;
   padding: 0; }
-
-audio, canvas, iframe, img, svg, video {
-  max-width: 100%; }
 
 /* 
  * Content containers 
@@ -613,7 +630,7 @@ audio, canvas, iframe, img, svg, video {
 .right {
   float: right; }
 
-.center {
+.center, .l-third > .blurb {
   margin-left: auto;
   margin-right: auto; }
 
@@ -641,10 +658,13 @@ audio, canvas, iframe, img, svg, video {
 .text-center {
   text-align: center; }
 
+.nowrap {
+  white-space: nowrap; }
+
 /* 
- * Centering blocks vertically 
- * http://css-tricks.com/centering-in-the-unknown/
- */
+* Mixin for centering blocks vertically 
+* http://css-tricks.com/centering-in-the-unknown/
+*/
 .callout:before {
   content: '';
   display: inline-block;
@@ -658,12 +678,16 @@ audio, canvas, iframe, img, svg, video {
   vertical-align: middle; }
 
 /* 
- * Layouts 
+ * Media component
  */
-/* Media */
 .media-img {
   float: left;
   margin-right: 15px; }
+
+.media-img-ext {
+  float: right;
+  margin-left: 15px;
+  margin-right: 0; }
 
 .media--bleed {
   margin-left: -1px; }
@@ -677,7 +701,14 @@ audio, canvas, iframe, img, svg, video {
     margin-top: 20px;
     margin-right: 80px; }
 
-/* 3-column layout without gutters */
+/* 
+ * Layouts
+ */
+/* Layouts without gutters */
+.l-half {
+  float: left;
+  width: 50%; }
+
 .l-third {
   float: left;
   width: 33.33333%; }
@@ -713,30 +744,17 @@ audio, canvas, iframe, img, svg, video {
 .w-0 {
   width: 0; }
 
-.w-half {
-  width: 50%; }
-
-.w-third {
-  width: 33.33333%; }
-
-.w-740 {
-  max-width: 740px; }
-
 .w-355 {
-  max-width: 355px; }
+  width: 355px; }
 
 .w-245 {
-  max-width: 245px; }
+  width: 245px; }
 
 .w-240 {
-  max-width: 240px; }
+  width: 240px; }
 
 .w-215 {
-  max-width: 215px; }
-
-/* Heights */
-.h-75 {
-  min-height: 75px; }
+  width: 215px; }
 
 /* Margins */
 .mt-0 {
@@ -1218,7 +1236,7 @@ svg {
 .muted {
   color: #7e8383; }
 
-.loud, cite {
+.loud, .blurb cite {
   color: #333d3d; }
 
 .overloud {
@@ -1228,18 +1246,13 @@ svg {
 .inverse {
   background-color: #313d3e;
   color: #FFF;
-  font-weight: 100;
-  /* restore font weight for muted bold or semibold */ }
+  font-weight: 100; }
   .inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse h6 {
     color: #FFF; }
   .inverse .highlight {
     color: #00c7b7; }
-  .inverse .loud, .inverse cite {
+  .inverse .loud, .inverse .blurb cite, .blurb .inverse cite {
     color: #FFF; }
-  .inverse .muted {
-    color: #7e8383;
-    font-weight: 300;
-    /* light gray text on dark background gets too hard to read */ }
 
 /* Icons */
 .icon {
@@ -1272,6 +1285,7 @@ svg {
 /* Borders */
 .bb:after, .blurb-hd:after {
   position: relative;
+  z-index: 1;
   width: 100%;
   height: 2px;
   background-color: #00c7b7;
@@ -1295,6 +1309,13 @@ svg {
 ------------------------------*/
 a {
   text-decoration: none; }
+
+/*
+ * Links with a small arrow button to the right 
+ */
+.link {
+  padding-right: 22px;
+  background: url(/img/icon-arrow.svg) no-repeat right center; }
 
 /*
  * Links that look like buttons
@@ -1372,6 +1393,21 @@ a {
   .social-icon:nth-child(3n+0) svg {
     fill: #646464; }
 
+/* 
+ * Button with image of video
+ */
+.button-video {
+  display: inline-block;
+  background: url(/img/video.png) no-repeat center center;
+  background-size: cover;
+  position: relative; }
+  .button-video .callout {
+    position: absolute;
+    top: -25px;
+    left: -35px;
+    margin-top: -10px;
+    margin-left: -20px; }
+
 .blurb-hd .media-img {
   margin-top: 10px; }
 .blurb-hd .media--bleed .media-img {
@@ -1381,7 +1417,14 @@ a {
   margin: 5px 0; }
 
 .blurb-meta {
-  margin: 10px 0; }
+  margin: 10px 0;
+  max-width: none; }
+  .blurb-meta .link {
+    display: block;
+    margin-right: 1px; }
+  .blurb-meta.right {
+    position: relative;
+    top: 3px; }
 
 .blurb-bd p:first-child {
   margin-top: 15px; }
@@ -1392,9 +1435,18 @@ a {
 .blurb-bd .cta {
   margin-top: 25px; }
 
-cite {
+.blurb cite {
   display: block;
   margin-top: -5px; }
+
+.l-third > .blurb {
+  width: 245px; }
+
+.l-third:first-child > .blurb {
+  margin-left: 0; }
+
+.l-third:last-child > .blurb {
+  margin-right: 0; }
 
 /* Forms
 ------------------------------*/
@@ -1483,6 +1535,7 @@ thead th, .th--highlight {
  * http://css-tricks.com/centering-in-the-unknown/
  */
 .callout {
+  position: relative;
   background: #00c7b7;
   color: #FFF;
   border-radius: 100%; }
@@ -1491,7 +1544,7 @@ thead th, .th--highlight {
   text-align: center;
   padding: 1% 10% 0; }
 
-.callout--small {
+.callout--small, .button-video .callout {
   width: 127px;
   height: 127px; }
 
@@ -1500,7 +1553,7 @@ thead th, .th--highlight {
   height: 276px;
   font-weight: 100; }
 
-.callout--stitch:after {
+.callout--stitch:after, .button-video .callout:after {
   content: "";
   display: block;
   position: absolute;
@@ -1511,15 +1564,6 @@ thead th, .th--highlight {
   border-radius: 100%;
   border: 1px dashed white;
   opacity: 0.5; }
-
-.callout--abs {
-  position: absolute;
-  top: 45px;
-  left: 105px; }
-
-body {
-  width: 1280px;
-  margin: 0 auto; }
 
 /*------------------------------
  * 
@@ -1537,6 +1581,428 @@ body {
 
 .top-nav {
   margin-right: -3px; }
+
+.vcard br {
+  display: none; }
+.vcard .address:before {
+  content: " – "; }
+
+.show-med {
+  display: none; }
+
+@media screen and (max-width: 1270px) {
+  body {
+    min-width: 0; }
+  /* 
+   * Media hero becomes fluid 
+   */
+  .media--wide {
+    margin-right: 40px;
+    /* Show the background of the container instead of the image so 
+     * it scales well instead of getting squished, since the height
+     * needs to remain constant
+     */ }
+    .media--wide .media-img {
+      width: 52%;
+      margin-right: 60px; }
+    .media--wide .button-video {
+      width: 100%; }
+      .media--wide .button-video img {
+        visibility: hidden; } }
+
+@media screen and (max-width: 1176px) {
+  /* Reduce padding around the header and hero to 
+   * leave more space for the content.
+   */
+  .content--wide {
+    padding: 0 25px; }
+  /* Adjust media hero margins to align with header */
+  .media--wide {
+    margin-left: 25px;
+    margin-right: 25px; }
+  /* Large callouts shouldn't bleed */
+  .media--wide .callout {
+    margin: 0; }
+  .callout--large {
+    margin-left: 0; } }
+
+@media screen and (max-width: 960px) {
+  /* Reduce margins between video and blurb. Hide callout */
+  .media--wide {
+    margin-left: 0; }
+    .media--wide .media-img {
+      width: 50%;
+      margin-right: 5%; }
+    .media--wide .callout {
+      visibility: hidden; } }
+
+@media screen and (max-width: 860px) {
+  /* Hide optional elements */
+  .optional {
+    display: none; }
+  /* Show alternate elements for medium size */
+  .show-med {
+    display: block; }
+  /* 
+   * BLURBS in columns get fluid width and some padding instead for separation
+   */
+  .l-third .blurb {
+    width: auto;
+    padding: 0 15px;
+    position: relative; }
+  .l-third:first-child .blurb {
+    left: -15px; }
+  .l-third:last-child .blurb {
+    right: -15px; }
+  .l-half-med {
+    width: 50%; }
+  .l-half-med .blurb {
+    padding-right: 25px; }
+  .l-half-med:last-child .blurb {
+    right: -25px; }
+  /* 
+   * HERO goes in 1 column. Video appears at the botton 
+   */
+  .media--wide {
+    margin-right: 0; }
+    .media--wide .media-img {
+      display: none; }
+  .button-video {
+    /* video buttons appear full width */
+    margin-left: 10px;
+    margin-right: 10px; }
+    .button-video img {
+      width: 100%; }
+    .button-video .callout {
+      display: none; }
+  .bg-light {
+    /* Better pattern for the hero */
+    background-position: center top;
+    /* this shows a sphere behind the "...deploys..." – kindda fitting */ }
+  .button-video.show-med + .pullquote {
+    /* add some air to pullquotes after video */
+    margin-bottom: 50px; }
+  /* TABLES: reduce font size, paddings and margins so lines don't wrap */
+  .table {
+    font-size: 14px;
+    font-size: 0.875rem; }
+  .th {
+    font-size: 18px;
+    font-size: 1.125rem; }
+  .th, .td {
+    padding: 10px 0px;
+    margin: 4px 2px; }
+  .th--highlight {
+    padding: 8px 0 4px; } }
+
+/* If the device height is big (eg. ipad portrait), the hero will look really bare. 
+ * Increase the font size.
+ */
+@media screen and (max-width: 860px) and (min-height: 800px) {
+  .media--wide .blurb {
+    width: 30em; }
+    .media--wide .blurb .huge {
+      font-size: 175px;
+      letter-spacing: -0.02em; }
+    .media--wide .blurb .alpha {
+      font-size: 50px;
+      line-height: 55px; }
+    .media--wide .blurb .small-2 {
+      font-size: 16px;
+      text-align: center;
+      margin: 30px 0; }
+    .media--wide .blurb .button {
+      font-size: 32px;
+      line-height: 100px;
+      height: 100px; }
+    .media--wide .blurb .button-icon {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      margin: 16px 0 0 16px; } }
+
+@media screen and (max-width: 740px) {
+  /* Reduce content padding to leave more room for content */
+  .content {
+    padding: 0 20px; }
+  /* Reduce bleed so it doesn't touch edge of screen */
+  .l-container {
+    margin-left: 0; }
+  .l-half-med:last-child .blurb {
+    right: -15px; }
+  .media--bleed .media-img {
+    margin-left: -4px; } }
+
+@media screen and (max-width: 680px) {
+  .content {
+    max-width: 28em;
+    padding: 0 20px; }
+  .site-header .content, .site-footer .content {
+    max-width: 40em; }
+  .site-footer .vcard {
+    margin: 10px; }
+    .site-footer .vcard br {
+      display: block; }
+    .site-footer .vcard .address:before {
+      display: none; }
+  /* 
+   * Stack layouts 
+   */
+  .l-container, .l-container .l-third, .l-container .l-half, .l-2-col .l-col, .l-3-col .l-col {
+    float: none;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0; }
+    .l-container .blurb, .l-container .l-third .blurb, .l-container .l-half .blurb, .l-2-col .l-col .blurb, .l-3-col .l-col .blurb {
+      position: static;
+      margin: 0 0 30px; }
+  .l-2-col-auto {
+    -webkit-columns: 1;
+       -moz-columns: 1;
+            columns: 1;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0; }
+  /* Stack inline blocks */
+  .inline-block:not(.optional) {
+    display: block;
+    margin-left: 0;
+    margin-right: 0; }
+  /* 
+   * Fix stacked blurbs
+   */
+  .blurb-meta:not(.right) {
+    margin-top: 0; }
+  .blurb .cta {
+    margin-bottom: 80px; }
+  .blurb-hd .media--bleed {
+    margin-bottom: 10px; }
+  /*
+   * Fix links
+   */
+  .button-label {
+    padding-left: 0; }
+  .button--small {
+    min-width: 0px;
+    border-radius: 40px; }
+    .button--small .button-label {
+      display: none; }
+  .button--inline {
+    margin-right: 20px; }
+  .button-video {
+    margin-left: 0;
+    margin-right: 0; }
+  .social-icon {
+    margin: 0 10px; }
+  /* Stack Forms */
+  .form--fancy {
+    padding: 6px;
+    border-radius: 10px; }
+    .form--fancy .form-group {
+      float: none;
+      width: 100%;
+      padding: 3px; }
+    .form--fancy .form-button {
+      margin-top: 3px;
+      position: static;
+      width: 100%;
+      border-radius: 0 0 5px 5px; }
+  /* 
+   * Adjust table margins to align with left and right margins
+   */
+  .table {
+    margin-left: -4px;
+    margin-right: -4px; }
+  /*
+   * Reduce spacing between sections
+   */
+  .cf:after, .content:after, .l-container:after, .l-2-col:after {
+    display: block; }
+  .site-footer .content:after {
+    display: table; }
+  .mt-110, .mt-115, .mt-120, .mt-90 {
+    margin-top: 70px; }
+  /* 
+   * Reduce font sizes
+   */
+  .huge {
+    font-size: 115px;
+    font-size: 7.1875rem;
+    line-height: 1; }
+  .tera {
+    font-size: 55px;
+    font-size: 3.4375rem;
+    line-height: 1; }
+  .mega {
+    font-size: 50px;
+    font-size: 3.125rem;
+    line-height: 1; }
+  .kilo {
+    font-size: 37px;
+    font-size: 2.3125rem;
+    line-height: 45px; }
+  .alpha, h1 {
+    font-size: 33px;
+    font-size: 2.0625rem;
+    line-height: 40px; }
+  .beta, h2 {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 35px; }
+  .gamma, h3 {
+    font-size: 25px;
+    font-size: 1.5625rem;
+    line-height: 30px; }
+  .delta, h4, .epsilon, .blurb-title, h5 {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 30px; }
+  .zeta, h6 {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 25px; }
+  .small-2 {
+    font-size: 13px;
+    font-size: 0.8125rem; }
+  /* Adjust blurb in hero to compensate for smaller font sizes */
+  .media--wide .blurb {
+    width: auto;
+    max-width: 315px; }
+  /* 
+   * Thin text on very small devices gets too thin
+   */
+  .thin {
+    font-weight: 300; }
+  /*
+   * Bold paragraphs look too bold
+   */
+  p.bold {
+    font-weight: 500; }
+  /* Extra small text the blurb body gets too
+   * hard to read and looks uncompensated with 
+   * normal text
+   */
+  .blurb-bd .x-small, .blurb-bd .blurb-meta {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 25px; } }
+
+@media screen and (max-width: 460px) {
+  /* 
+   * Fix footer aligning address under logo
+   */
+  .site-footer .left, .site-footer .right {
+    float: none; }
+  .site-footer .brand-logo {
+    margin-left: -10px; }
+  .site-footer .vcard {
+    margin: -35px 0 0 95px; }
+    .site-footer .vcard .org {
+      display: none; } }
+
+@media screen and (max-width: 360px) {
+  /* 
+   * More space for content 
+   */
+  .content {
+    padding: 0 15px; }
+  .l-third .blurb, .l-half .blurb {
+    padding: 0; }
+  /* 
+   * Links can be closer together
+   */
+  .social-icon {
+    margin: 0 5px; }
+  /* 
+   * Reduce big hero text and button
+   */
+  .media--wide .blurb {
+    max-width: 240px;
+    text-align: center; }
+  .media--wide .huge {
+    font-size: 85px;
+    font-size: 5.3125rem;
+    line-height: 1;
+    margin: 0 0 20px; }
+  .media--wide .alpha {
+    margin: 5px 0;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 35px; }
+  .media--wide .small-2 {
+    text-align: center;
+    margin-top: -5px; }
+  /*
+   * Make large buttons smaller
+   */
+  .button--large {
+    font-size: 21px;
+    height: 60px;
+    line-height: 60px; }
+    .button--large .button-icon {
+      -webkit-transform: scale(0.7);
+          -ms-transform: scale(0.7);
+              transform: scale(0.7);
+      margin: -4px; }
+  /* 
+   * Reduce header
+   */
+  .site-header .brand-logo {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+    position: relative;
+    top: 3px;
+    left: -30px; }
+  .site-header .brand {
+    margin: 0; }
+  .top-nav {
+    margin: 15px 0; } }
+
+body {
+  margin: 0 auto; }
+
+body:before {
+  content: "comp size";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 5px;
+  font: bold normal 12px/1 monospace;
+  background: yellow; }
+
+@media screen and (max-width: 1270px) {
+  body:before {
+    content: "bp-large 1270px"; } }
+
+@media screen and (max-width: 1176px) {
+  body:before {
+    content: "bp-med-large 1176px"; } }
+
+@media screen and (max-width: 960px) {
+  body:before {
+    content: "bp-med-large-2 960px"; } }
+
+@media screen and (max-width: 860px) {
+  body:before {
+    content: "bp-med 860px"; } }
+
+@media screen and (max-width: 740px) {
+  body:before {
+    content: "bp-med-small 740px"; } }
+
+@media screen and (max-width: 680px) {
+  body:before {
+    content: "bp-small 680px"; } }
+
+@media screen and (max-width: 360px) {
+  body:before {
+    content: "bp-xsmall 360px"; } }
 
 /* ==========================================================================
    Helper classes
@@ -1593,13 +2059,13 @@ body {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .content:before, .cf:before, .l-2-col:before, .l-thirds:before, .clearfix:after, .content:after, .cf:after, .l-2-col:after, .l-thirds:after {
+.clearfix:before, .clearfix:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .content:after, .cf:after, .l-2-col:after, .l-thirds:after {
+.clearfix:after {
   clear: both; }
 
 /* ==========================================================================
@@ -1607,24 +2073,12 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) { }
-
-@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) { }
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 @media print {
-  /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
   *, *:before, *:after {
     background: transparent !important;
     color: #000 !important;
@@ -1638,11 +2092,19 @@ body {
     content: " (" attr(href) ")"; }
   abbr[title]:after {
     content: " (" attr(title) ")"; }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
   a[href^="#"]:after, a[href^="javascript:"]:after {
     content: ""; }
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
   thead {
     display: table-header-group; }
   tr, img {

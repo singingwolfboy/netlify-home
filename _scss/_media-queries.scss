@@ -1,0 +1,517 @@
+$bp-large:       1270px;   //* Major breakpoint – Comp width
+$bp-med-large:   1176px;      //* Tweak point – Hero breaks
+$bp-med-large-2:  960px;      //* Tweak point – Hero breaks (ipad landscape is in this range)
+$bp-med:          860px;   //* Major breakpoint – Layout changes (ipad portrait is in this range)
+$bp-med-small:    740px;      //* Tweak point – Things start looking too squished
+$bp-small:        680px;   //* Major breakpoint – Every thing gets linearized
+$bp-small-xsmall: 460px;      //* Tweak point – Footer wraps
+$bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large buttons)
+
+.show-med {
+  display: none;
+}
+
+@include breakpoint($bp-large) { //* Screen is smaller than comp – start making things responsive
+  body {
+    min-width: 0; // We're going responsive, baby
+  }
+  
+  /* 
+   * Media hero becomes fluid 
+   */
+  .media--wide {
+    margin-right: 40px;
+    .media-img {
+      width: 52%;
+      margin-right: 60px;
+    }
+    /* Show the background of the container instead of the image so 
+     * it scales well instead of getting squished, since the height
+     * needs to remain constant
+     */
+    .button-video {
+      width: 100%;
+      img {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+@include breakpoint($bp-med-large) { //* Tweak point to leave more room for hero
+  
+  /* Reduce padding around the header and hero to 
+   * leave more space for the content.
+   */
+  .content--wide {
+    padding: 0 25px;
+  }
+  
+  /* Adjust media hero margins to align with header */
+  .media--wide {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  
+  /* Large callouts shouldn't bleed */
+  .media--wide .callout {
+    margin: 0;
+  }
+  .callout--large {
+    margin-left: 0;
+  }
+}
+
+@include breakpoint($bp-med-large-2) { //* Tweak point to fix broken hero
+  
+  /* Reduce margins between video and blurb. Hide callout */
+  .media--wide {
+    margin-left: 0;
+    .media-img {
+      width: 50%;
+      margin-right: 5%;
+    }
+    .callout {
+      visibility: hidden;
+    }
+  }
+}
+
+@include breakpoint($bp-med) { //* Major breakpoint
+  
+  /* Hide optional elements */
+  .optional {
+    display: none;
+  }
+ 
+  /* Show alternate elements for medium size */
+  .show-med {
+    display: block;
+  }
+  
+    
+  /* 
+   * BLURBS in columns get fluid width and some padding instead for separation
+   */ 
+  .l-third .blurb {
+    width: auto;
+    padding: 0 15px;
+    position: relative;
+  }
+  
+  .l-third:first-child .blurb {
+    left: -15px;
+  }
+  .l-third:last-child .blurb {
+    right: -15px;
+  }
+
+  .l-half-med {
+    width: 50%;
+  }
+  .l-half-med .blurb {
+    padding-right: 25px;
+  }
+  .l-half-med:last-child .blurb {
+    right: -25px;
+  }
+
+  
+  /* 
+   * HERO goes in 1 column. Video appears at the botton 
+   */
+
+  .media--wide {
+    margin-right: 0;
+    .media-img {
+      display: none;
+    }
+  }
+
+  .button-video {  /* video buttons appear full width */
+    margin-left: 10px;
+    margin-right: 10px;
+    img {
+      width: 100%;
+    }
+    .callout {
+      display: none;
+    }
+  }
+
+  .bg-light { /* Better pattern for the hero */
+    background-position: center top; /* this shows a sphere behind the "...deploys..." – kindda fitting */
+  }
+
+  .button-video.show-med + .pullquote {  /* add some air to pullquotes after video */
+    margin-bottom: 50px;
+  }
+  
+  
+  /* TABLES: reduce font size, paddings and margins so lines don't wrap */
+  .table {
+    @include font-size(14px);
+  }
+  .th {
+    @include font-size(18px); 
+  }
+  .th, .td {
+    padding: 10px 0px;
+    margin: 4px 2px;
+  }
+  .th--highlight {
+    padding: 8px 0 4px;
+  }
+}
+
+/* If the device height is big (eg. ipad portrait), the hero will look really bare. 
+ * Increase the font size.
+ */
+@media screen and (max-width: $bp-med) and (min-height: 800px) {
+  
+  .media--wide {
+    .blurb {
+      width: 30em;
+      .huge {
+        font-size: 175px;
+        letter-spacing: -0.02em;
+      }
+      .alpha {
+        font-size: 50px;
+        line-height: 55px;
+      }
+      .small-2 {
+        font-size: 16px;
+        text-align: center;
+        margin: 30px 0;
+      }
+      .button {
+        font-size: 32px;
+        line-height: 100px;
+        height: 100px;
+      }
+      .button-icon {
+        transform: scale(1.2);
+        margin: 16px 0 0 16px;
+      }
+    }
+  }
+}
+
+@include breakpoint($bp-med-small) { //* Tweak point to leave more room for content
+  /* Reduce content padding to leave more room for content */
+  .content {
+    padding: 0 20px;
+  }
+  
+  /* Reduce bleed so it doesn't touch edge of screen */
+  .l-container {
+    margin-left: 0;
+  }
+  .l-half-med:last-child .blurb {
+    right: -15px;
+  }
+  .media--bleed {
+    .media-img {
+      margin-left: -4px;
+    }
+  }
+}
+
+
+@include breakpoint($bp-small) { //* Major breakpoint. Stack all the things (almost)
+  .content {
+    max-width: 28em;
+    padding: 0 20px;
+  }
+  .site-header, .site-footer {
+    .content {
+      max-width: 40em;
+    }
+  }
+  .site-footer {
+    .vcard {
+      margin: 10px;
+      br { 
+        display: block;
+      }
+      .address:before { 
+        display: none;
+      }
+    }
+  }
+  
+  /* 
+   * Stack layouts 
+   */
+  .l-container,
+  .l-container .l-third, 
+  .l-container .l-half,
+  .l-2-col .l-col,
+  .l-3-col .l-col {
+    float:none;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    .blurb {
+      position: static;
+      margin: 0 0 30px;
+    }
+  }
+  .l-2-col-auto {
+    columns: 1;
+    column-gap: 0;
+  }
+  
+  /* Stack inline blocks */
+  .inline-block:not(.optional) {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* 
+   * Fix stacked blurbs
+   */
+  .blurb-meta:not(.right) {
+    margin-top: 0;
+  }
+  .blurb .cta {
+    margin-bottom: 80px;
+  }
+  .blurb-hd .media--bleed {
+    margin-bottom: 10px;
+  }
+  
+  /*
+   * Fix links
+   */
+  .button-label {
+    padding-left: 0;
+  }
+  .button--small {
+    min-width: 0px;
+    border-radius: 40px;
+    .button-label {
+      display: none;
+    }
+  }
+  .button--inline {
+    margin-right: 20px;
+  }
+  .button-video {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .social-icon {
+    margin: 0 10px;
+  }
+  
+  /* Stack Forms */
+  .form--fancy  {
+    padding: 6px;
+    border-radius: 10px;
+    .form-group {
+      float: none;
+      width: 100%;
+      padding: 3px;
+    }
+    .form-button {
+      margin-top: 3px;
+      position: static;
+      width: 100%;
+      border-radius: 0 0 5px 5px;
+    }
+  }
+  
+  /* 
+   * Adjust table margins to align with left and right margins
+   */
+  .table {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+  
+  /*
+   * Reduce spacing between sections
+   */
+  .cf:after {
+    display:block; // collapse margin bottom
+  }
+  .site-footer .content:after { // don't collapse margin botton in site footer
+    display: table;
+  }
+  .mt-110, .mt-115, .mt-120, .mt-90 {
+    margin-top: 70px; // this is a hack – need to normalize these margins
+  }
+  
+  /* 
+   * Reduce font sizes
+   */
+  .huge {
+    @include font-size(115px);
+    line-height: 1;
+  }
+  .tera {
+     @include font-size(55px);
+     line-height: 1;
+  }
+  .mega {
+     @include font-size(50px); //48px;
+     line-height: 1;
+  }
+  .kilo {
+     @include font-size(37px); //36px;
+     line-height: 45px;
+  }
+  .alpha, h1 {
+     @include font-size(33px); //32px
+     line-height: 40px;
+  }
+  .beta, h2 {
+     @include font-size(28px);
+     line-height: 35px;
+  }
+  .gamma, h3 {
+     @include font-size(25px); //24px;
+     line-height: 30px;
+  }
+  .delta, h4,
+  .epsilon, h5 {
+     @include font-size(22px);
+     line-height: 30px;
+  }
+  .zeta, h6 {
+     @include font-size(18px);
+     line-height: 25px;
+  }
+  .small-2 {
+    @include font-size(13px);
+  }
+  
+  /* Adjust blurb in hero to compensate for smaller font sizes */
+  .media--wide .blurb {
+    width: auto;
+    max-width: 315px;
+  }
+  
+  /* 
+   * Thin text on very small devices gets too thin
+   */
+  .thin {
+    @include font-weight(light);
+  }
+  
+  /*
+   * Bold paragraphs look too bold
+   */
+  p.bold {
+    @include font-weight(medium);
+  }
+  
+  /* Extra small text the blurb body gets too
+   * hard to read and looks uncompensated with 
+   * normal text
+   */
+  .blurb-bd .x-small {
+    @include font-size(14px);
+    line-height: 25px;
+  }
+}
+
+@include breakpoint($bp-small-xsmall) {
+  /* 
+   * Fix footer aligning address under logo
+   */
+  .site-footer {
+    .left, .right {
+      float: none;
+    }
+    .brand-logo {
+      margin-left: -10px;
+    }
+    .vcard {
+      margin: -35px 0 0 95px;
+      .org {
+        display: none;
+      }
+    } 
+  }
+}
+
+@include breakpoint($bp-xsmall) {
+  /* 
+   * More space for content 
+   */
+  .content {
+    padding: 0 15px;
+  }
+  .l-third, .l-half {
+    .blurb {
+      padding: 0;
+    }
+  }
+  
+  /* 
+   * Links can be closer together
+   */
+  .social-icon {
+    margin: 0 5px;
+  }
+  
+  /* 
+   * Reduce big hero text and button
+   */
+  .media--wide {
+    .blurb {
+      max-width: 240px;
+      text-align: center;
+    }
+    .huge {
+      @include font-size(85px);
+      line-height: 1;
+      margin: 0 0 20px;
+    }
+    .alpha {
+      margin: 5px 0;
+      @include font-size(24px);
+      @include font-weight(light);
+      line-height: 35px;
+    }
+    .small-2 {
+      text-align: center;
+      margin-top: -5px;
+    }
+  }
+  
+  /*
+   * Make large buttons smaller
+   */
+  .button--large {
+    font-size: 21px;
+    height: 60px;
+    line-height: 60px;
+    .button-icon {
+      transform: scale(0.7);
+      margin: -4px;
+    }
+  }
+  
+  /* 
+   * Reduce header
+   */
+  .site-header .brand-logo {
+    transform: scale(0.7);
+    position: relative;
+    top: 3px;
+    left: -30px;
+  }
+  .site-header .brand {
+    margin: 0;
+  }
+  .top-nav {
+    margin: 15px 0;
+  }
+}

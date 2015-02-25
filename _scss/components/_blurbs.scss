@@ -19,6 +19,11 @@
 .blurb-meta {
   @extend .x-small;
   margin: 10px 0;
+  max-width: none;
+  .link {
+    display: block;
+    margin-right: 1px;
+  }
   &.right {
     position: relative;
     top: 3px;
@@ -49,6 +54,9 @@
 }
 
 
+.l-third > .blurb {
+  width: 245px;
+}
 .l-third > .blurb {
   @extend .center;
 }

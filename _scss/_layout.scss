@@ -34,16 +34,16 @@ ul {
   padding: 0;
 }
 
-audio, canvas, iframe, img, svg, video {
-  max-width: 100%;
-}
-
 
 /* 
  * Content containers 
  */
+.cf {
+  @include clearfix-me(micro);
+}
+ 
 .content {
-  @extend .clearfix;
+  @extend .cf;
   position: relative;
   max-width: $content-width + 4*$base-spacing;
   padding: 0 2*$base-spacing;
@@ -57,12 +57,11 @@ audio, canvas, iframe, img, svg, video {
   max-width: $content-width;
 }
 
+
 /* 
  * Utility classes for layout flow 
  */
-.cf {
-  @extend .clearfix;
-}
+ 
 .abs {
   position: absolute;
 }
@@ -103,38 +102,44 @@ audio, canvas, iframe, img, svg, video {
 .text-center {
   text-align: center;
 }
-
-/* 
- * Centering blocks vertically 
- * http://css-tricks.com/centering-in-the-unknown/
- */
-
-%container {
-  &:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em; /* Adjusts for spacing */
-  }
-}
-%middle {
-  display: inline-block;
-  vertical-align: middle;
+.nowrap {
+  white-space: nowrap;
 }
 
+/* 
+* Mixin for centering blocks vertically 
+* http://css-tricks.com/centering-in-the-unknown/
+*/
+%middle-container { //* this should be applied to the parent of the element we want to center vertically
+ &:before {
+   content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+   margin-right: -0.25em; /* Adjusts for spacing */
+ }
+}
+%middle-element { //* this should be applied to the element we want to center vertically
+ display: inline-block;
+ vertical-align: middle;
+}
+
+
 
 /* 
- * Layouts 
+ * Media component
  */
-
-/* Media */
 .media {
   @include clearfix-me(micro);
 }
 .media-img {
   float: left;
   margin-right: 15px;
+}
+.media-img-ext {
+  float: right;
+  margin-left: 15px;
+  margin-right: 0;
 }
 .media-bd {
   @include clearfix-me(facebook);
@@ -157,9 +162,19 @@ audio, canvas, iframe, img, svg, video {
 }
 
 
-/* 3-column layout without gutters */
-.l-thirds {
-  @extend .clearfix;
+
+/* 
+ * Layouts
+ */
+
+.l-container {
+  @extend .cf;
+}
+
+/* Layouts without gutters */
+.l-half {
+  float: left;
+  width: 50%;
 }
 .l-third {
   float: left;
@@ -206,34 +221,18 @@ audio, canvas, iframe, img, svg, video {
 .w-0 {
   width: 0;
 }
-.w-half {
-  width: 50%;
-}
-.w-third {
-  width: 33.33333333%;
-}
 
-.w-740 {
-  max-width: 740px;
-}
 .w-355 {
-  max-width: 355px;
+  width: 355px; // large blurb width (hero)
 }
 .w-245 {
-  max-width: 245px;
+  width: 245px;
 }
 .w-240 {
-  max-width: 240px;
+  width: 240px;
 }
 .w-215 {
-  max-width: 215px;
-}
-
-
-
-/* Heights */
-.h-75 {
-  min-height: 75px;
+  width: 215px;
 }
 
 

@@ -1,3 +1,20 @@
+//*---------------------------------------------------------
+//* 
+//* Typography loosely based on classic typographic scale, 
+//* tweaked to try to match font sizes in comp
+//* 
+//* http://spencermortensen.com/articles/typographic-scale/
+//*
+//*---------------------------------------------------------
+
+$font-weights: ( //* keep getting them wrong, so mapping them to their names to see if it helps
+  thin: 100,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  bold: 700
+);
+
 @mixin font-size($px) {
   font-size: $px;
   font-size: px2rem($px);
@@ -8,20 +25,25 @@
   line-height: px2rem($px);
 }
 
+@mixin font-weight($name) {
+  font-weight: if(map-has-key($font-weights, $name), map-get($font-weights, $name), $name);
+}
 
-/* Typography loosely based on classic typographic scale, 
- * tweaked to try to match font sizes in comp
- * 
- * http://spencermortensen.com/articles/typographic-scale/
-------------------------------*/
 
+/*---------------------------------------------
+ *
+ * TYPOGRAPHY
+ *
+ *--------------------------------------------*/
 
 html {
-  font: 300 normal 16px/1.5625 Roboto, sans-serif;
+  font: 300 normal 16px/25px Roboto, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
-/* Basic spacing */
+/* 
+ * Basic spacing 
+ */
 h1, h2, h3, h4, h5, p, ul, ol, dl, blockquote {
   margin: 20px 0;
 }
@@ -37,127 +59,150 @@ p {
 }
 
 
-/* Font sizes */
+/*
+ * Headings and paragraphs
+ */
 .huge {
-  @include font-size(125px); /* Not in scale */
-  font-weight: 600;
-  letter-spacing: normal;
-  line-height: 1;
-  margin: 40px 0 45px;
+   @include font-size(125px); /* Not in scale */
+   @include font-weight(bold);
+   letter-spacing: -0.01em;
+   line-height: 1;
+   margin: 40px 0 45px;
 }
 
 .tera {
-  @include font-size(63px);
-  font-weight: 100;
-  letter-spacing: -0.02em;
-  line-height: 1;
+   @include font-size(63px);
+   @include font-weight(thin);
+   letter-spacing: -0.02em;
+   line-height: 1;
 }
 
 .mega {
-  @include font-size(55px);
-  font-weight: 100;
-  letter-spacing: -0.02em;
-  line-height: 1;
+   @include font-size(55px);
+   @include font-weight(thin);
+   letter-spacing: -0.02em;
+   line-height: 1;
 }
 
 .kilo {
-  @include font-size(50px); //48px;
-  font-weight: 100;
-  letter-spacing: -0.02em;
-  line-height: 1;
+   @include font-size(50px); //48px;
+   @include font-weight(thin);
+   letter-spacing: -0.02em;
+   line-height: 1;
 }
 
 .alpha, h1 {
-  @include font-size(37px); //36px;
-  font-weight: 100;
-  letter-spacing: -0.03em;
-  line-height: 45px;
-  margin: 25px 0;
+   @include font-size(37px); //36px;
+   @include font-weight(thin);
+   letter-spacing: -0.02em;
+   line-height: 45px;
+   margin: 25px 0;
 }
 
 .beta, h2 {
-  @include font-size(33px); //32px
-  font-weight: 100;
-  letter-spacing: -0.01em;
-  line-height: 40px;
-  margin: 25px 0;
+   @include font-size(33px); //32px
+   @include font-weight(thin);
+   letter-spacing: -0.02em;
+   line-height: 40px;
+   margin: 25px 0;
 }
 
 .gamma, h3 {
-  @include font-size(28px);
-  font-weight: 100;
-  letter-spacing: -0.02em;
-  line-height: 35px;
+   @include font-size(28px);
+   @include font-weight(light);
+   letter-spacing: normal;
+   line-height: 35px;
 }
 
 .delta, h4 {
-  @include font-size(25px); //24px;
-  font-weight: 100;
-  letter-spacing: normal;
-  line-height: 30px;
+   @include font-size(25px); //24px;
+   @include font-weight(light);
+   letter-spacing: normal;
+   line-height: 30px;
 }
 
 .epsilon, h5 {
-  @include font-size(22px); //21px;
-  font-weight: 100;
-  line-height: 30px;
+   @include font-size(22px); //21px;
+   @include font-weight(light);
+   letter-spacing: normal;
+   line-height: 30px;
 }
 
 .zeta, h6 {
-  @include font-size(18px);
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  line-height: 25px;
+   @include font-size(18px);
+   @include font-weight(light);
+   letter-spacing: normal;
+   line-height: 25px;
 }
 
 .medium {
-  @include font-size(16px);
-  line-height: 25px;
-  letter-spacing: normal;
-}
+   @include font-size(16px);
+   @include font-weight(light);
+   letter-spacing: normal;
+   line-height: 25px;
+ }
+
 .small {
-  @include font-size(14px);
-  line-height: 20px;
-  letter-spacing: 0.02em;
+   @include font-size(14px);
+   @include font-weight(light);
+   letter-spacing: 0.02em;
+   line-height: 20px;
 }
+
 .small-2 {
-  @include font-size(15px); /* Not in scale. one-off size to get small text in hero to justify */
-  letter-spacing: normal;
-  line-height: 20px;
+   @include font-size(15px); /* Not in scale. one-off size to get small text in hero to justify */
+   @include font-weight(light);
+   letter-spacing: normal;
+   line-height: 20px;
 }
 
 .x-small {
-  @include font-size(13px);
-  line-height: 20px;
-  letter-spacing: 0.03em;
-}
-.xx-small {
-  @include font-size(11px);
-  line-height: 20px;
-  letter-spacing: 0.03em;
+   @include font-size(13px);
+   @include font-weight(light);
+   letter-spacing: 0.03em;
+   line-height: 20px;
 }
 
-/* Weights */
+.xx-small {
+   @include font-size(11px);
+   @include font-weight(light);
+   letter-spacing: 0.03em;
+   line-height: 20px;
+}
+
+
+/* 
+ * Weights
+ */
+.thin {
+  @include font-weight(thin);
+}
+
 strong, 
 b,
 .semibold {
-  font-weight: 400;
+  @include font-weight(medium);
   letter-spacing: normal;
 }
 
 .bold {
-  font-weight: 500;
+  @include font-weight(bold);
   letter-spacing: 0.01em;
 }
 
 
-/* Line heights */
+/* 
+ * Line heights
+ */
 .loose {
   line-height: 1.8;
 }
 
-/* No italics */
-em, cite {
+
+/* 
+ * No italics 
+ */
+em, i, cite{
   font-style: normal;
 }
 

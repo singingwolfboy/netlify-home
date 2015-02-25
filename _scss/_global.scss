@@ -4,7 +4,6 @@
 //
 // ------------------------------------------
 
-
 @import "utils";
 @import "typography";
 @import "layout";
@@ -15,8 +14,6 @@
 @import "components/forms";
 @import "components/tables";
 @import "components/callouts";
-
-@import "development";
 
 
 /*------------------------------
@@ -37,3 +34,14 @@
   margin-right: -3px;
 }
 
+.vcard {
+  br { 
+    display: none;
+  }
+  .address:before {
+    content: " – ";
+  }
+}
+
+@import "media-queries";
+@import "development";

@@ -4,13 +4,14 @@
  * http://css-tricks.com/centering-in-the-unknown/
  */
 .callout {
+  position: relative;
   background: $color-highlight;
   color: $color-lightest;
   border-radius: 100%;
-  @extend %container;
+  @extend %middle-container;
 }
 .callout-text {
-  @extend %middle;
+  @extend %middle-element;
   text-align: center;
   padding: 1% 10% 0;
 }
@@ -38,11 +39,3 @@
   border: 1px dashed white;
   opacity: 0.5;
 }
-
-.callout--abs {
-  position: absolute;
-  top: 45px;
-  left: 105px;
-}
-
-
