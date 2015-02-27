@@ -442,7 +442,6 @@ p {
  */
 .huge {
   font-size: 125px;
-  font-size: 7.8125rem;
   /* Not in scale */
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -451,28 +450,24 @@ p {
 
 .tera {
   font-size: 63px;
-  font-size: 3.9375rem;
   font-weight: 100;
   letter-spacing: -0.02em;
   line-height: 1; }
 
 .mega {
   font-size: 55px;
-  font-size: 3.4375rem;
   font-weight: 100;
   letter-spacing: -0.02em;
   line-height: 1; }
 
 .kilo {
   font-size: 50px;
-  font-size: 3.125rem;
   font-weight: 100;
   letter-spacing: -0.02em;
   line-height: 1; }
 
 .alpha, h1 {
   font-size: 37px;
-  font-size: 2.3125rem;
   font-weight: 100;
   letter-spacing: -0.02em;
   line-height: 45px;
@@ -480,7 +475,6 @@ p {
 
 .beta, h2 {
   font-size: 33px;
-  font-size: 2.0625rem;
   font-weight: 100;
   letter-spacing: -0.02em;
   line-height: 40px;
@@ -488,49 +482,42 @@ p {
 
 .gamma, h3 {
   font-size: 28px;
-  font-size: 1.75rem;
   font-weight: 300;
   letter-spacing: normal;
   line-height: 35px; }
 
 .delta, h4 {
   font-size: 25px;
-  font-size: 1.5625rem;
   font-weight: 300;
   letter-spacing: normal;
   line-height: 30px; }
 
 .epsilon, .blurb-title, h5 {
   font-size: 22px;
-  font-size: 1.375rem;
   font-weight: 300;
   letter-spacing: normal;
   line-height: 30px; }
 
 .zeta, h6 {
   font-size: 18px;
-  font-size: 1.125rem;
   font-weight: 300;
   letter-spacing: normal;
   line-height: 25px; }
 
 .medium {
   font-size: 16px;
-  font-size: 1rem;
   font-weight: 300;
   letter-spacing: normal;
   line-height: 25px; }
 
 .small {
   font-size: 14px;
-  font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.02em;
   line-height: 20px; }
 
 .small-2 {
   font-size: 15px;
-  font-size: 0.9375rem;
   /* Not in scale. one-off size to get small text in hero to justify */
   font-weight: 300;
   letter-spacing: normal;
@@ -538,14 +525,12 @@ p {
 
 .x-small, .blurb-meta {
   font-size: 13px;
-  font-size: 0.8125rem;
   font-weight: 300;
   letter-spacing: 0.03em;
   line-height: 20px; }
 
 .xx-small, .blurb cite {
   font-size: 11px;
-  font-size: 0.6875rem;
   font-weight: 300;
   letter-spacing: 0.03em;
   line-height: 20px; }
@@ -1684,11 +1669,9 @@ thead th, .th--highlight {
     margin-bottom: 50px; }
   /* TABLES: reduce font size, paddings and margins so lines don't wrap */
   .table {
-    font-size: 14px;
-    font-size: 0.875rem; }
+    font-size: 14px; }
   .th {
-    font-size: 18px;
-    font-size: 1.125rem; }
+    font-size: 18px; }
   .th, .td {
     padding: 10px 0px;
     margin: 4px 2px; }
@@ -1851,43 +1834,39 @@ thead th, .th--highlight {
    */
   .huge {
     font-size: 115px;
-    font-size: 7.1875rem;
     line-height: 1; }
   .tera {
     font-size: 55px;
-    font-size: 3.4375rem;
     line-height: 1; }
   .mega {
     font-size: 50px;
-    font-size: 3.125rem;
     line-height: 1; }
   .kilo {
     font-size: 37px;
-    font-size: 2.3125rem;
     line-height: 45px; }
   .alpha, h1 {
     font-size: 33px;
-    font-size: 2.0625rem;
     line-height: 40px; }
   .beta, h2 {
     font-size: 28px;
-    font-size: 1.75rem;
     line-height: 35px; }
   .gamma, h3 {
     font-size: 25px;
-    font-size: 1.5625rem;
     line-height: 30px; }
   .delta, h4, .epsilon, .blurb-title, h5 {
     font-size: 22px;
-    font-size: 1.375rem;
     line-height: 30px; }
   .zeta, h6 {
     font-size: 18px;
-    font-size: 1.125rem;
     line-height: 25px; }
+  .small {
+    font-size: 15px; }
   .small-2 {
-    font-size: 14px;
-    font-size: 0.875rem; }
+    font-size: 14px; }
+  .table {
+    font-size: 16px; }
+  .th {
+    font-size: 20px; }
   /* Adjust blurb in hero to compensate for smaller font sizes */
   .media--wide .blurb {
     width: auto;
@@ -1910,7 +1889,6 @@ thead th, .th--highlight {
    */
   .blurb-bd .x-small, .blurb-bd .blurb-meta {
     font-size: 14px;
-    font-size: 0.875rem;
     line-height: 25px; } }
 
 @media screen and (max-width: 460px) {
@@ -1948,18 +1926,15 @@ thead th, .th--highlight {
       max-width: 270px; }
     .media--wide .huge {
       font-size: 98px;
-      font-size: 6.125rem;
       line-height: 100px;
       margin: 0 0 20px; }
     .media--wide .alpha {
       margin: 5px 0;
       font-size: 28px;
-      font-size: 1.75rem;
       font-weight: 300;
       line-height: 35px; }
     .media--wide .small-2 {
       font-size: 14px;
-      font-size: 0.875rem;
       text-align: center;
       margin-top: -5px; }
   /*

@@ -150,10 +150,10 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   
   /* TABLES: reduce font size, paddings and margins so lines don't wrap */
   .table {
-    @include font-size(14px);
+    font-size: 14px;
   }
   .th {
-    @include font-size(18px); 
+    font-size: 18px; 
   }
   .th, .td {
     padding: 10px 0px;
@@ -377,44 +377,53 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
    * Reduce font sizes
    */
   .huge {
-    @include font-size(115px);
+    font-size: 115px;
     line-height: 1;
   }
   .tera {
-     @include font-size(55px);
-     line-height: 1;
+    font-size: 55px;
+    line-height: 1;
   }
   .mega {
-     @include font-size(50px); //48px;
-     line-height: 1;
+    font-size: 50px; //48px;
+    line-height: 1;
   }
   .kilo {
-     @include font-size(37px); //36px;
+     font-size: 37px; //36px;
      line-height: 45px;
   }
   .alpha, h1 {
-     @include font-size(33px); //32px
+     font-size: 33px; //32px
      line-height: 40px;
   }
   .beta, h2 {
-     @include font-size(28px);
+     font-size: 28px;
      line-height: 35px;
   }
   .gamma, h3 {
-     @include font-size(25px); //24px;
+     font-size: 25px; //24px;
      line-height: 30px;
   }
   .delta, h4,
   .epsilon, h5 {
-     @include font-size(22px);
+     font-size: 22px;
      line-height: 30px;
   }
   .zeta, h6 {
-     @include font-size(18px);
+     font-size: 18px;
      line-height: 25px;
   }
+  .small {
+    font-size: 15px;
+  }
   .small-2 {
-    @include font-size(14px);
+    font-size: 14px;
+  }
+  .table {
+    font-size: 16px;
+  }
+  .th {
+    font-size: 20px;
   }
   
   /* Adjust blurb in hero to compensate for smaller font sizes */
@@ -445,7 +454,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
    * normal text
    */
   .blurb-bd .x-small {
-    @include font-size(14px);
+    font-size: 14px;
     line-height: 25px;
   }
 }
@@ -498,21 +507,20 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     margin-top: 50px;
     .blurb {
       max-width: 270px;
-      //text-align: center;
     }
     .huge {
-      @include font-size(98px);
+      font-size: 98px;
       line-height: 100px;
       margin: 0 0 20px;
     }
     .alpha {
       margin: 5px 0;
-      @include font-size(28px);
+      font-size: 28px;
       @include font-weight(light);
       line-height: 35px;
     }
     .small-2 {
-      @include font-size(14px);
+      font-size: 14px;;
       text-align: center;
       margin-top: -5px;
     }
