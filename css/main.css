@@ -404,12 +404,12 @@ textarea {
   *zoom: 1;
   *width: auto !important; }
 
-.cf, .content, .l-container, .l-2-col, .media {
+.content, .l-container, .l-2-col, .media {
   zoom: 1; }
-  .cf:before, .content:before, .l-container:before, .l-2-col:before, .media:before, .cf:after, .content:after, .l-container:after, .l-2-col:after, .media:after {
+  .content:before, .l-container:before, .l-2-col:before, .media:before, .content:after, .l-container:after, .l-2-col:after, .media:after {
     content: " ";
     display: table; }
-  .cf:after, .content:after, .l-container:after, .l-2-col:after, .media:after {
+  .content:after, .l-container:after, .l-2-col:after, .media:after {
     clear: both; }
 
 /*---------------------------------------------
@@ -576,11 +576,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  height: 100%;
-  width: 100%;
-  min-width: 1280px;
-  overflow-x: hidden;
-  overflow-y: auto; }
+  min-width: 1280px; }
 
 ul {
   list-style: none;
@@ -1200,7 +1196,7 @@ ul {
 /*
  * Defaults
  */
-html {
+body {
   background-color: #F4F6F6;
   color: #596262; }
 
@@ -1292,41 +1288,83 @@ svg {
 html {
   background: #404b4c; }
 
-.site-nav {
-  width: 280px;
-  height: 100%;
-  background: #404b4c;
-  padding-top: 60px;
+/*
+ * Based on Foundation Off-Canvas
+ *
+ * http://foundation.zurb.com/docs/components/offcanvas.html
+ */
+.off-canvas-menu {
+  width: 270px;
+  top: 0;
+  bottom: 0;
+  right: -270px;
   position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
-  top: 0;
-  right: -280px;
-  z-index: 100; }
+  background: #404b4c;
+  z-index: 1001;
+  transition: -webkit-transform 500ms ease 0s;
+  transition: transform 500ms ease 0s; }
 
-.no-js .site-nav:target {
-  right: 0; }
+.off-canvas-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+.off-canvas-inner-wrap {
+  position: relative;
+  width: 100%;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease; }
+
+.open-menu .off-canvas-inner-wrap {
+  -webkit-transform: translate3d(-270px, 0, 0);
+          transform: translate3d(-270px, 0, 0); }
+
+.exit-off-canvas {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: #7e8383; }
+
+/* Fallback in case javascript is not enabled
+ * (won't get smooth sliding effect but
+ * at least it will be usable)
+ */
+.off-canvas-menu:target {
+  right: 0;
+  z-index: 100; }
+  .off-canvas-menu:target + .page {
+    position: relative;
+    left: -270px; }
 
 .nav {
   text-transform: uppercase;
-  margin: 5px 0 5px 70px;
-  position: relative; }
+  margin: 5px 0 5px 70px; }
+  .nav a {
+    display: block;
+    position: relative; }
+  .nav .current {
+    color: #00c7b7; }
+    .nav .current:before {
+      content: " ";
+      display: inline-block;
+      vertical-align: middle;
+      width: 15px;
+      height: 15px;
+      background: url(/img/icon-arrow.svg) no-repeat center center;
+      background-size: cover;
+      margin: -2px 15px 0 -30px;
+      margin-right: 15px; }
 
 .nav--primary {
   font-size: 16px;
-  line-height: 32px; }
-  .nav--primary:before {
-    content: " ";
-    width: 15px;
-    height: 15px;
-    display: block;
-    background: url(/img/icon-arrow.svg) no-repeat center center;
-    background-size: cover;
-    position: absolute;
-    left: -30px;
-    top: 7px; }
+  line-height: 32px;
+  margin-top: 45px; }
   .nav--primary a {
-    color: #FFF; }
+    color: white; }
+  .no-touch .nav--primary a:hover {
+    color: #00c7b7; }
 
 .nav--secondary {
   font-size: 13px;
@@ -1334,15 +1372,18 @@ html {
   .nav--secondary a {
     color: #7e8383; }
 
+.nav--inline li, .nav--social li {
+  float: left;
+  margin-right: 6px; }
+
 .nav--social {
   margin-top: 25px; }
   .nav--social .social-icon--square {
     color: #657676;
-    padding: 1px 4px 3px;
-    background: #4f5c5d; }
-  .nav--social li {
-    float: left;
-    margin-right: 6px; }
+    padding: 0 4px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px; }
   .nav--social li:nth-child(1) .social-icon--square {
     background: #4f5c5d; }
   .nav--social li:nth-child(2) .social-icon--square {
@@ -1354,20 +1395,14 @@ html {
   .nav--social li:nth-child(5) .social-icon--square {
     background: #2a3233; }
 
-.off-canvas-wrap {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  transition: -webkit-transform 500ms ease;
-  transition: transform 500ms ease; }
-
-.off-canvas-wrap.open-nav {
-  -webkit-transform: translate3d(-280px, 0, 0);
-          transform: translate3d(-280px, 0, 0); }
-
 /* Links 
 ------------------------------*/
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 300ms ease; }
+
+.inverse a:hover {
+  color: #FFF; }
 
 /*
  * Links with a small arrow button to the right 
@@ -1445,12 +1480,14 @@ a {
 .social-icon--round {
   display: inline-block;
   margin-right: 25px; }
-  .social-icon--round:nth-child(3n+1) svg {
-    fill: #7d7d7d; }
-  .social-icon--round:nth-child(3n+2) svg {
-    fill: #5a5a5a; }
-  .social-icon--round:nth-child(3n+0) svg {
-    fill: #646464; }
+  .social-icon--round:nth-child(3n+1) {
+    color: #7d7d7d; }
+  .social-icon--round:nth-child(3n+2) {
+    color: #5a5a5a; }
+  .social-icon--round:nth-child(3n+0) {
+    color: #646464; }
+  .no-touch .social-icon--round:hover {
+    color: #00c7b7; }
 
 /* 
  * Button with image of video
@@ -1905,7 +1942,7 @@ thead th, .th--highlight {
   /*
    * Reduce spacing between sections
    */
-  .cf:after, .content:after, .l-container:after, .l-2-col:after {
+  .cf:after {
     display: block; }
   .site-footer .content:after {
     display: table; }

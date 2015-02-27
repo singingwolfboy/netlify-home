@@ -1,6 +1,12 @@
-<nav id="navigation" class="site-nav inverse" >
+
+<nav id="navigation" class="site-nav inverse off-canvas-menu">
+  
+  <a href="#page" class="exit-off-canvas">
+    <svg class="icon-close" width="10" height="10"><use xlink:href="#icon-close"></use></svg>
+  </a>
+
   <ul class="nav nav--primary">
-    <li><a href="/">Home</a></li>
+    <li><a href="/" {% if page.url == '/index.html' %} class="current"{% endif %}>Home</a></li>
     <li><a href="/pricing.html">Pricing</a></li>
     <li><a href="/blog.html">Blog</a></li>
     <li><a href="/documentation.html">Documentation</a></li>
@@ -8,8 +14,9 @@
     <li><a href="/why.html">Why Static</a></li>
     <li><a href="/social.html">Social</a></li>
   </ul>
+  
   <ul class="nav nav--secondary">
-    <li><a href="/about.html">About</a></li>
+    <li><a href="/about.html"{% if page.url == '/about.html' %} class="current"{% endif %}>About</a></li>
     <li><a href="/careers.html">Careers</a></li>
     <li><a href="/press.html">Press</a></li>
     <li><a href="/meetups.html">Meetups</a></li>
@@ -17,9 +24,17 @@
     <li><a href="/terms.html">Terms &amp; Conditions</a></li>
     <li><a href="/contact.html">Contact</a></li>
   </ul>
+  
   <ul class="nav nav--social">
-    {% for icon in page.social-links %}
-    <li><a href="#" class="social-icon--square"><svg width="16" height="16" class="icon-{{icon}}--square"><use xlink:href="#icon-{{icon}}"></svg></a></li>
+    {% for social in site.social-links %}
+    <li>
+      <a href="{{social.link}}" class="social-icon--square">
+        <svg width="16" height="16" class="icon-{{social.name}}--square">
+          <use xlink:href="#icon-{{social.name}}"/>
+        </svg>
+      </a>
+    </li>
     {% endfor %}
   </ul>
+
 </nav>

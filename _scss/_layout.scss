@@ -21,11 +21,7 @@ html {
 }
 
 body {
-  height: 100%;
-  width: 100%;
   min-width: $page-width;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 ul {
@@ -37,12 +33,8 @@ ul {
 /* 
  * Content containers 
  */
-.cf {
-  @include clearfix-me(micro);
-}
- 
 .content {
-  @extend .cf;
+  @extend %cf;
   position: relative;
   max-width: $content-width + 4*$base-spacing;
   padding: 0 2*$base-spacing;
@@ -124,7 +116,6 @@ ul {
 }
 
 
-
 /* 
  * Media component
  */
@@ -167,7 +158,7 @@ ul {
  */
 
 .l-container {
-  @extend .cf;
+  @extend %cf;
 }
 
 /* Layouts without gutters */
@@ -183,7 +174,7 @@ ul {
 
 /* 2-column layout with gutter defining columns in the mark-up */
 .l-2-col {
-  @extend .cf;
+  @extend %cf;
   .l-col {
     width: 50%;
     padding: 0 30px;

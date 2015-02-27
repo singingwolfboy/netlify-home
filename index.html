@@ -1,6 +1,5 @@
 ---
 layout: default
-social-links: ['twitter', 'facebook', 'github', 'linkedin', 'googleplus']
 ---
 
 <!-- Hero -->
@@ -241,8 +240,12 @@ social-links: ['twitter', 'facebook', 'github', 'linkedin', 'googleplus']
       <h1 class="gamma highlight inline-block v-middle mr-40">Socialize @</h1>
       
       <p class="inline-block v-middle">
-        {% for icon in page.social-links %}
-        <a href="#" class="social-icon--round"><svg width="36" height="36" class="icon-{{icon}}--round"><use xlink:href="#icon-{{icon}}-round"></svg></a>
+        {% for social in site.social-links %}
+        <a href="{{social.link}}" class="social-icon--round">
+          <svg width="36" height="36" class="icon-{{social.name}}--round">
+            <use xlink:href="#icon-{{social.name}}-round">
+          </svg>
+        </a>
         {% endfor %}
       </p>
     </section>

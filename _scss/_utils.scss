@@ -52,10 +52,17 @@
 
 
 //*---------------------------------------------------------
-//
-//  Converts px to rem
-//
+//*
+//* Utility placeholders
+//*
 //*---------------------------------------------------------
-@function px2rem($px, $base: 16px) {
-  @return $px/$base + rem;
+
+%ir, %hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%cf {
+  @include clearfix-me(micro);
 }
