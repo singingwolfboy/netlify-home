@@ -197,6 +197,41 @@ ul {
   }
 }
 
+/* Layout with main and sidebar */
+.l-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.l-wrap:before,
+.l-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+}
+.l-wrap:before {
+  left: 0;
+}
+.l-wrap:after {
+  right: 0;
+}
+.l-wrap-inner {
+  @extend .content;
+  @extend .content--wide;
+  position: relative;
+  z-index: 1;
+}
+.l-main {
+  width: 70%;
+  float: left;
+  padding-right: 50px;
+}
+.l-aside {
+  width: 30%;
+  float: right;
+  padding-left: 50px;
+}
 
 
 

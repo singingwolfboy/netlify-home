@@ -101,3 +101,13 @@ svg {
   background-size: cover;
 }
 
+/* Main and sidebar */
+
+.l-wrap:before, 
+.l-main {
+  background: $color-light;
+}
+.l-wrap:after, 
+.l-aside {
+  background: $color-darkest;
+}
