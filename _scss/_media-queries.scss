@@ -329,7 +329,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     margin-left: 0;
     margin-right: 0;
   }
-  .social-icon {
+  .social-icon--round {
     margin: 0 10px;
   }
   
@@ -441,16 +441,6 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .media--wide .blurb {
     width: auto;
     max-width: 330px;
-    .alpha {
-      @include font-weight(light);
-    }
-  }
-  
-  /* 
-   * Thin text on very small devices gets too thin
-   */
-  .thin {
-    @include font-weight(light);
   }
   
   /*
@@ -507,7 +497,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   /* 
    * Links can be closer together
    */
-  .social-icon {
+  .social-icon--round {
     margin: 0 5px;
   }
   
@@ -527,7 +517,6 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     .alpha {
       margin: 5px 0;
       font-size: 28px;
-      @include font-weight(light);
       line-height: 35px;
     }
     .small-2 {

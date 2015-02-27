@@ -1,0 +1,95 @@
+$nav-width: 280px;
+
+html {
+  background: rgb(64, 75, 76);
+}
+
+.site-nav {
+  width: $nav-width;
+  height: 100%;
+  background: rgb(64, 75, 76);
+  padding-top: 60px;
+  position: absolute;
+  overflow-x:hidden;
+  overflow-y:auto;
+  top: 0;
+  right: -$nav-width; // off-canvas
+  z-index: 100;
+}
+
+.no-js .site-nav:target {
+  right: 0; // Fallback in case javascript is not enabled
+}
+
+.nav {
+  text-transform: uppercase;
+  margin: 5px 0 5px 70px;
+  position: relative;
+}
+
+.nav--primary {
+  font-size: 16px;
+  line-height: 32px;
+  
+  &:before {
+    content: " ";
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: url(/img/icon-arrow.svg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    left: -30px;
+    top: 7px;
+  }
+  a {
+    color: $color-lightest;
+  }
+}
+
+.nav--secondary {
+  font-size: 13px;
+  line-height: 30px;
+  a {
+    color: $color-muted;
+  }
+}
+
+.nav--social {
+  margin-top: 25px;
+
+  .social-icon--square {
+    color: rgb(101,118, 118);
+    padding: 1px 4px 3px;
+    background: rgb(79,92,93);
+  }
+
+  li {
+    float: left;
+    margin-right: 6px;
+  }
+  li:nth-child(1) .social-icon--square {
+    background: rgb(79,92,93);
+  }
+  li:nth-child(2) .social-icon--square {
+    background: rgb(62,74,74);
+  }
+  li:nth-child(3) .social-icon--square {
+    background: rgb(57, 67, 67);
+  }
+  li:nth-child(4) .social-icon--square {
+    background: rgb(52, 62, 63);
+  }
+  li:nth-child(5) .social-icon--square {
+    background: rgb(42, 50, 51);
+  }
+}
+
+.off-canvas-wrap {
+  transform: translate3d(0, 0, 0);
+  transition: transform 500ms ease;
+}
+
+.off-canvas-wrap.open-nav {
+  transform: translate3d(-$nav-width, 0, 0);
+}

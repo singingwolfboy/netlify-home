@@ -1,0 +1,25 @@
+<nav id="navigation" class="site-nav inverse" >
+  <ul class="nav nav--primary">
+    <li><a href="/">Home</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/documentation.html">Documentation</a></li>
+    <li><a href="/faq.html">FAQ</a></li>
+    <li><a href="/why.html">Why Static</a></li>
+    <li><a href="/social.html">Social</a></li>
+  </ul>
+  <ul class="nav nav--secondary">
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/careers.html">Careers</a></li>
+    <li><a href="/press.html">Press</a></li>
+    <li><a href="/meetups.html">Meetups</a></li>
+    <li><a href="/privacy.html">Privacy</a></li>
+    <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+  <ul class="nav nav--social">
+    {% for icon in page.social-links %}
+    <li><a href="#" class="social-icon--square"><svg width="16" height="16" class="icon-{{icon}}--square"><use xlink:href="#icon-{{icon}}"></svg></a></li>
+    {% endfor %}
+  </ul>
+</nav>

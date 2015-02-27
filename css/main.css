@@ -570,7 +570,6 @@ em, i, cite {
  * HTML Elements
  */
 html {
-  height: 100%;
   box-sizing: border-box; }
 
 *, *:before, *:after {
@@ -1290,6 +1289,81 @@ svg {
 .bb--muted:after {
   background-color: #cae0de; }
 
+html {
+  background: #404b4c; }
+
+.site-nav {
+  width: 280px;
+  height: 100%;
+  background: #404b4c;
+  padding-top: 60px;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  right: -280px;
+  z-index: 100; }
+
+.no-js .site-nav:target {
+  right: 0; }
+
+.nav {
+  text-transform: uppercase;
+  margin: 5px 0 5px 70px;
+  position: relative; }
+
+.nav--primary {
+  font-size: 16px;
+  line-height: 32px; }
+  .nav--primary:before {
+    content: " ";
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: url(/img/icon-arrow.svg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    left: -30px;
+    top: 7px; }
+  .nav--primary a {
+    color: #FFF; }
+
+.nav--secondary {
+  font-size: 13px;
+  line-height: 30px; }
+  .nav--secondary a {
+    color: #7e8383; }
+
+.nav--social {
+  margin-top: 25px; }
+  .nav--social .social-icon--square {
+    color: #657676;
+    padding: 1px 4px 3px;
+    background: #4f5c5d; }
+  .nav--social li {
+    float: left;
+    margin-right: 6px; }
+  .nav--social li:nth-child(1) .social-icon--square {
+    background: #4f5c5d; }
+  .nav--social li:nth-child(2) .social-icon--square {
+    background: #3e4a4a; }
+  .nav--social li:nth-child(3) .social-icon--square {
+    background: #394343; }
+  .nav--social li:nth-child(4) .social-icon--square {
+    background: #343e3f; }
+  .nav--social li:nth-child(5) .social-icon--square {
+    background: #2a3233; }
+
+.off-canvas-wrap {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease; }
+
+.off-canvas-wrap.open-nav {
+  -webkit-transform: translate3d(-280px, 0, 0);
+          transform: translate3d(-280px, 0, 0); }
+
 /* Links 
 ------------------------------*/
 a {
@@ -1368,14 +1442,14 @@ a {
 /*
  * Social links
  */
-.social-icon {
+.social-icon--round {
   display: inline-block;
   margin-right: 25px; }
-  .social-icon:nth-child(3n+1) svg {
+  .social-icon--round:nth-child(3n+1) svg {
     fill: #7d7d7d; }
-  .social-icon:nth-child(3n+2) svg {
+  .social-icon--round:nth-child(3n+2) svg {
     fill: #5a5a5a; }
-  .social-icon:nth-child(3n+0) svg {
+  .social-icon--round:nth-child(3n+0) svg {
     fill: #646464; }
 
 /* 
@@ -1797,7 +1871,7 @@ thead th, .th--highlight {
   .button-video {
     margin-left: 0;
     margin-right: 0; }
-  .social-icon {
+  .social-icon--round {
     margin: 0 10px; }
   /* 
    * Stack Forms
@@ -1879,13 +1953,6 @@ thead th, .th--highlight {
   .media--wide .blurb {
     width: auto;
     max-width: 330px; }
-    .media--wide .blurb .alpha {
-      font-weight: 300; }
-  /* 
-   * Thin text on very small devices gets too thin
-   */
-  .thin {
-    font-weight: 300; }
   /*
    * Bold paragraphs look too bold
    */
@@ -1923,7 +1990,7 @@ thead th, .th--highlight {
   /* 
    * Links can be closer together
    */
-  .social-icon {
+  .social-icon--round {
     margin: 0 5px; }
   /* 
    * Reduce big hero text and button
@@ -1939,7 +2006,6 @@ thead th, .th--highlight {
     .media--wide .alpha {
       margin: 5px 0;
       font-size: 28px;
-      font-weight: 300;
       line-height: 35px; }
     .media--wide .small-2 {
       font-size: 14px;
