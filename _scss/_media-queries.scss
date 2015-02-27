@@ -339,17 +339,28 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .form--fancy  {
     padding: 6px;
     border-radius: 10px;
+    margin: 40px 0 20px;
     .form-group {
       float: none;
       width: 100%;
       padding: 3px;
     }
     .form-button {
+      font-size: 16px;
       margin-top: 3px;
       position: static;
       width: 100%;
       border-radius: 0 0 5px 5px;
     }
+  }
+  ::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  ::-moz-placeholder {
+    font-size: 16px;
+  }
+  :-ms-input-placeholder {
+    font-size: 16px;
   }
   
   /* 
