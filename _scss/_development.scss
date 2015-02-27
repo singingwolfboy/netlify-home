@@ -53,9 +53,14 @@ body:before {
     content: "bp-small #{$bp-small}";
   }
 }
-@include breakpoint($bp-xsmall) {
+@include breakpoint($bp-small-2) {
   body:before {
-    content: "bp-xsmall #{$bp-xsmall}";
+    content: "bp-small-2 #{$bp-small-2}";
+  }
+}
+@include breakpoint($bp-small-3) {
+  body:before {
+    content: "bp-small-3 #{$bp-small-3}";
   }
 }
 

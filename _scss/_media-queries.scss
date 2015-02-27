@@ -4,8 +4,8 @@ $bp-med-large-2:  960px;      //* Tweak point – Hero breaks (ipad landscape is
 $bp-med:          860px;   //* Major breakpoint – Layout changes (ipad portrait is in this range)
 $bp-med-small:    740px;      //* Tweak point – Things start looking too squished
 $bp-small:        680px;   //* Major breakpoint – Every thing gets linearized
-$bp-small-xsmall: 460px;      //* Tweak point – Footer wraps
-$bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large buttons)
+$bp-small-2:      460px;      //* Tweak point – Footer wraps
+$bp-small-3:      360px;      //* Tweak point – try to reduce things further (header, hero, large buttons)
 
 .show-med {
   display: none;
@@ -220,6 +220,9 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
 
 
 @include breakpoint($bp-small) { //* Major breakpoint. Stack all the things (almost)
+  /* 
+   * Reduce content width to readable line length 
+   */
   .content {
     max-width: 28em;
     padding: 0 20px;
@@ -229,6 +232,10 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
       max-width: 40em;
     }
   }
+  
+  /* 
+   * Stack address in footer
+   */
   .site-footer {
     .vcard {
       margin: 10px;
@@ -240,6 +247,23 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
       }
     }
   }
+  
+  /* 
+   * Reduce header
+   */
+  .site-header .brand-logo {
+    transform: scale(0.7);
+    position: relative;
+    top: 3px;
+    left: -30px;
+  }
+  .site-header .brand {
+    margin: 0;
+  }
+  .top-nav {
+    margin: 15px 0;
+  }
+  
   
   /* 
    * Stack layouts 
@@ -309,7 +333,9 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
     margin: 0 10px;
   }
   
-  /* Stack Forms */
+  /* 
+   * Stack Forms
+   */
   .form--fancy  {
     padding: 6px;
     border-radius: 10px;
@@ -388,13 +414,16 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
      line-height: 25px;
   }
   .small-2 {
-    @include font-size(13px);
+    @include font-size(14px);
   }
   
   /* Adjust blurb in hero to compensate for smaller font sizes */
   .media--wide .blurb {
     width: auto;
-    max-width: 315px;
+    max-width: 330px;
+    .alpha {
+      @include font-weight(light);
+    }
   }
   
   /* 
@@ -421,7 +450,7 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
   }
 }
 
-@include breakpoint($bp-small-xsmall) {
+@include breakpoint($bp-small-2) {
   /* 
    * Fix footer aligning address under logo
    */
@@ -441,7 +470,7 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
   }
 }
 
-@include breakpoint($bp-xsmall) {
+@include breakpoint($bp-small-3) {
   /* 
    * More space for content 
    */
@@ -454,6 +483,7 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
     }
   }
   
+  
   /* 
    * Links can be closer together
    */
@@ -465,22 +495,24 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
    * Reduce big hero text and button
    */
   .media--wide {
+    margin-top: 50px;
     .blurb {
-      max-width: 240px;
-      text-align: center;
+      max-width: 270px;
+      //text-align: center;
     }
     .huge {
-      @include font-size(85px);
-      line-height: 1;
+      @include font-size(98px);
+      line-height: 100px;
       margin: 0 0 20px;
     }
     .alpha {
       margin: 5px 0;
-      @include font-size(24px);
+      @include font-size(28px);
       @include font-weight(light);
       line-height: 35px;
     }
     .small-2 {
+      @include font-size(14px);
       text-align: center;
       margin-top: -5px;
     }
@@ -497,21 +529,5 @@ $bp-xsmall:       360px;   //* Try to reduce things further (header, hero, large
       transform: scale(0.7);
       margin: -4px;
     }
-  }
-  
-  /* 
-   * Reduce header
-   */
-  .site-header .brand-logo {
-    transform: scale(0.7);
-    position: relative;
-    top: 3px;
-    left: -30px;
-  }
-  .site-header .brand {
-    margin: 0;
-  }
-  .top-nav {
-    margin: 15px 0;
   }
 }

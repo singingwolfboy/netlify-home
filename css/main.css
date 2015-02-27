@@ -1734,17 +1734,37 @@ thead th, .th--highlight {
     margin-left: -4px; } }
 
 @media screen and (max-width: 680px) {
+  /* 
+   * Reduce content width to readable line length 
+   */
   .content {
     max-width: 28em;
     padding: 0 20px; }
   .site-header .content, .site-footer .content {
     max-width: 40em; }
+  /* 
+   * Stack address in footer
+   */
   .site-footer .vcard {
     margin: 10px; }
     .site-footer .vcard br {
       display: block; }
     .site-footer .vcard .address:before {
       display: none; }
+  /* 
+   * Reduce header
+   */
+  .site-header .brand-logo {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+    position: relative;
+    top: 3px;
+    left: -30px; }
+  .site-header .brand {
+    margin: 0; }
+  .top-nav {
+    margin: 15px 0; }
   /* 
    * Stack layouts 
    */
@@ -1796,7 +1816,9 @@ thead th, .th--highlight {
     margin-right: 0; }
   .social-icon {
     margin: 0 10px; }
-  /* Stack Forms */
+  /* 
+   * Stack Forms
+   */
   .form--fancy {
     padding: 6px;
     border-radius: 10px; }
@@ -1864,12 +1886,14 @@ thead th, .th--highlight {
     font-size: 1.125rem;
     line-height: 25px; }
   .small-2 {
-    font-size: 13px;
-    font-size: 0.8125rem; }
+    font-size: 14px;
+    font-size: 0.875rem; }
   /* Adjust blurb in hero to compensate for smaller font sizes */
   .media--wide .blurb {
     width: auto;
-    max-width: 315px; }
+    max-width: 330px; }
+    .media--wide .blurb .alpha {
+      font-weight: 300; }
   /* 
    * Thin text on very small devices gets too thin
    */
@@ -1918,23 +1942,26 @@ thead th, .th--highlight {
   /* 
    * Reduce big hero text and button
    */
-  .media--wide .blurb {
-    max-width: 240px;
-    text-align: center; }
-  .media--wide .huge {
-    font-size: 85px;
-    font-size: 5.3125rem;
-    line-height: 1;
-    margin: 0 0 20px; }
-  .media--wide .alpha {
-    margin: 5px 0;
-    font-size: 24px;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 35px; }
-  .media--wide .small-2 {
-    text-align: center;
-    margin-top: -5px; }
+  .media--wide {
+    margin-top: 50px; }
+    .media--wide .blurb {
+      max-width: 270px; }
+    .media--wide .huge {
+      font-size: 98px;
+      font-size: 6.125rem;
+      line-height: 100px;
+      margin: 0 0 20px; }
+    .media--wide .alpha {
+      margin: 5px 0;
+      font-size: 28px;
+      font-size: 1.75rem;
+      font-weight: 300;
+      line-height: 35px; }
+    .media--wide .small-2 {
+      font-size: 14px;
+      font-size: 0.875rem;
+      text-align: center;
+      margin-top: -5px; }
   /*
    * Make large buttons smaller
    */
@@ -1946,63 +1973,7 @@ thead th, .th--highlight {
       -webkit-transform: scale(0.7);
           -ms-transform: scale(0.7);
               transform: scale(0.7);
-      margin: -4px; }
-  /* 
-   * Reduce header
-   */
-  .site-header .brand-logo {
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7);
-    position: relative;
-    top: 3px;
-    left: -30px; }
-  .site-header .brand {
-    margin: 0; }
-  .top-nav {
-    margin: 15px 0; } }
-
-body {
-  margin: 0 auto; }
-
-body:before {
-  content: "comp size";
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding: 5px;
-  font: bold normal 12px/1 monospace;
-  background: yellow; }
-
-@media screen and (max-width: 1270px) {
-  body:before {
-    content: "bp-large 1270px"; } }
-
-@media screen and (max-width: 1176px) {
-  body:before {
-    content: "bp-med-large 1176px"; } }
-
-@media screen and (max-width: 960px) {
-  body:before {
-    content: "bp-med-large-2 960px"; } }
-
-@media screen and (max-width: 860px) {
-  body:before {
-    content: "bp-med 860px"; } }
-
-@media screen and (max-width: 740px) {
-  body:before {
-    content: "bp-med-small 740px"; } }
-
-@media screen and (max-width: 680px) {
-  body:before {
-    content: "bp-small 680px"; } }
-
-@media screen and (max-width: 360px) {
-  body:before {
-    content: "bp-xsmall 360px"; } }
+      margin: -4px; } }
 
 /* ==========================================================================
    Helper classes
