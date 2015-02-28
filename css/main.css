@@ -719,20 +719,10 @@ ul {
   overflow: hidden;
   position: relative; }
 
-.l-wrap:before, .l-wrap:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%; }
-
-.l-wrap:before {
-  left: 0; }
-
-.l-wrap:after {
-  right: 0; }
-
 .l-wrap-inner {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   z-index: 1; }
 
@@ -745,6 +735,13 @@ ul {
   width: 30%;
   float: right;
   padding-left: 50px; }
+  .l-aside:after {
+    content: '';
+    position: absolute;
+    height: 100000px;
+    width: 10000px;
+    top: 0px;
+    left: 96%; }
 
 /* 
  * Widths, heights and margins.
@@ -1295,10 +1292,7 @@ svg {
   background-size: cover; }
 
 /* Main and sidebar */
-.l-wrap:before, .l-main {
-  background: #F4F6F6; }
-
-.l-wrap:after, .l-aside {
+.l-aside, .l-aside:after {
   background: #313d3e; }
 
 /* Borders */
@@ -1699,13 +1693,6 @@ thead th, .th--highlight {
   border-radius: 100%;
   border: 1px dashed white;
   opacity: 0.5; }
-
-.l-main p {
-  max-width: none; }
-
-.aside-title {
-  font-size: 51.65px;
-  line-height: 1; }
 
 /*------------------------------
  * 

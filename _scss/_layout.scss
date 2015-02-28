@@ -202,23 +202,11 @@ ul {
   overflow: hidden;
   position: relative;
 }
-.l-wrap:before,
-.l-wrap:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-}
-.l-wrap:before {
-  left: 0;
-}
-.l-wrap:after {
-  right: 0;
-}
+
 .l-wrap-inner {
   @extend .content;
   @extend .content--wide;
+  display: flex;
   position: relative;
   z-index: 1;
 }
@@ -231,6 +219,14 @@ ul {
   width: 30%;
   float: right;
   padding-left: 50px;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100000px;
+    width: 10000px;
+    top: 0px;
+    left: 96%;
+  }
 }
 
 
