@@ -1,0 +1,79 @@
+/* 
+ * Aside
+ */
+.blog-aside-title {
+  @extend .kilo;
+  margin-top: 170px;
+  margin-bottom: 105px;
+}
+.blog-aside {
+  .blurb {
+    margin: 50px 50px 50px 0;
+  }
+}
+
+/*
+ * Post
+ */
+.post {
+  margin: 40px 0 20px;
+}
+
+.post-hd {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.post-title {
+  @extend .mega;
+  color: $color-dark;
+  margin: 90px 40px 40px;
+}
+
+.post-meta {
+  @extend .zeta;
+  color: $color-highlight;
+}
+
+.post-img {
+  margin: 50px 0;
+  border-bottom: 7px solid $color-highlight-lighter;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.post-bd {
+  margin: 50px 0 30px;
+  color: $color-muted;
+  p {
+    max-width: none;
+  }
+}
+
+.post-intro {
+  @extend .epsilon;
+  @extend .semibold;
+  color: $color-dark;
+}
+
+.post-jumpline {
+  font-size: 14px;
+  margin: 30px 0;
+  padding: 0 0 40px;
+  border-bottom: 1px dashed $color-highlight;
+}
+
+.banner {
+  @extend %cf;
+  background: rgb(233, 233, 233);
+  padding: 20px;
+  margin: 30px 0;
+  text-align: center;
+  @extend .zeta;
+  @extend .thin;
+  p {
+    max-width: none;
+  }
+}

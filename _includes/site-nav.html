@@ -1,14 +1,13 @@
-
-<nav id="navigation" class="site-nav inverse off-canvas-menu">
+<nav id="navigation" class="site-nav inverse off-canvas-menu" role="navigation">
   
   <a href="#page" class="exit-off-canvas">
     <svg class="icon-close" width="10" height="10"><use xlink:href="#icon-close"></use></svg>
   </a>
 
   <ul class="nav nav--primary">
-    <li><a href="/" {% if page.url == '/index.html' %} class="current"{% endif %}>Home</a></li>
+    <li><a href="/"{% if page.url == '/index.html' %} class="current"{% endif %}>Home</a></li>
     <li><a href="/pricing.html">Pricing</a></li>
-    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/blog.html"{% if page.url == '/blog.html' %} class="current"{% endif %}>Blog</a></li>
     <li><a href="/documentation.html">Documentation</a></li>
     <li><a href="/faq.html">FAQ</a></li>
     <li><a href="/why.html">Why Static</a></li>

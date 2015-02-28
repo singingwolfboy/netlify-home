@@ -404,12 +404,12 @@ textarea {
   *zoom: 1;
   *width: auto !important; }
 
-.content, .l-wrap-inner, .l-container, .l-2-col, .media {
+.content, .l-wrap-inner, .l-container, .l-2-col, .banner, .media {
   zoom: 1; }
-  .content:before, .l-wrap-inner:before, .l-container:before, .l-2-col:before, .media:before, .content:after, .l-wrap-inner:after, .l-container:after, .l-2-col:after, .media:after {
+  .content:before, .l-wrap-inner:before, .l-container:before, .l-2-col:before, .banner:before, .media:before, .content:after, .l-wrap-inner:after, .l-container:after, .l-2-col:after, .banner:after, .media:after {
     content: " ";
     display: table; }
-  .content:after, .l-wrap-inner:after, .l-container:after, .l-2-col:after, .media:after {
+  .content:after, .l-wrap-inner:after, .l-container:after, .l-2-col:after, .banner:after, .media:after {
     clear: both; }
 
 /*---------------------------------------------
@@ -454,17 +454,17 @@ p {
   letter-spacing: -0.02em;
   line-height: 1; }
 
-.mega {
+.mega, .post-title {
   font-size: 55px;
   font-weight: 100;
   letter-spacing: -0.02em;
-  line-height: 1; }
+  line-height: 70px; }
 
-.kilo {
+.kilo, .blog-aside-title {
   font-size: 50px;
   font-weight: 100;
   letter-spacing: -0.02em;
-  line-height: 1; }
+  line-height: 60px; }
 
 .alpha, h1 {
   font-size: 37px;
@@ -492,13 +492,13 @@ p {
   letter-spacing: normal;
   line-height: 30px; }
 
-.epsilon, .blurb-title, h5 {
+.epsilon, .blurb-title, .post-intro, h5 {
   font-size: 22px;
   font-weight: 300;
   letter-spacing: normal;
   line-height: 30px; }
 
-.zeta, h6 {
+.zeta, .post-meta, .banner, h6 {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: normal;
@@ -538,10 +538,10 @@ p {
 /* 
  * Weights
  */
-.thin {
+.thin, .banner {
   font-weight: 100; }
 
-strong, b, .semibold, .blurb-title {
+strong, b, .semibold, .blurb-title, .post-intro {
   font-weight: 500;
   letter-spacing: normal; }
 
@@ -739,7 +739,7 @@ ul {
 .l-main {
   width: 70%;
   float: left;
-  padding-right: 50px; }
+  padding-right: 60px; }
 
 .l-aside {
   width: 30%;
@@ -1260,7 +1260,7 @@ svg {
   color: #FFF;
   font-weight: 100; }
   .inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse h6 {
-    color: #FFF; }
+    color: inherit; }
   .inverse .highlight {
     color: #00c7b7; }
   .inverse .loud, .inverse .blurb cite, .blurb .inverse cite {
@@ -1299,7 +1299,8 @@ svg {
   background: #F4F6F6; }
 
 .l-wrap:after, .l-aside {
-  background: #313d3e; }
+  background: #313d3e;
+  color: #F4F6F6; }
 
 /* Borders */
 .bb:after, .blurb-hd:after {
@@ -1449,6 +1450,14 @@ a {
 .link {
   padding-right: 22px;
   background: url(/img/icon-arrow.svg) no-repeat right center; }
+
+/*
+ * Links with a small plus button to the left 
+ */
+.link-more {
+  display: inline-block;
+  padding-left: 30px;
+  background: url(/img/icon-plus.svg) no-repeat 2px 45%; }
 
 /*
  * Links that look like buttons
@@ -1700,12 +1709,62 @@ thead th, .th--highlight {
   border: 1px dashed white;
   opacity: 0.5; }
 
-.l-main p {
-  max-width: none; }
+/* 
+ * Aside
+ */
+.blog-aside-title {
+  margin-top: 170px;
+  margin-bottom: 105px; }
 
-.aside-title {
-  font-size: 51.65px;
-  line-height: 1; }
+.blog-aside .blurb {
+  margin: 50px 50px 50px 0; }
+
+/*
+ * Post
+ */
+.post {
+  margin: 40px 0 20px; }
+
+.post-hd {
+  text-align: center;
+  margin: 50px 0; }
+
+.post-title {
+  color: #596262;
+  margin: 90px 40px 40px; }
+
+.post-meta {
+  color: #00c7b7; }
+
+.post-img {
+  margin: 50px 0;
+  border-bottom: 7px solid #cae0de; }
+  .post-img img {
+    display: block;
+    width: 100%; }
+
+.post-bd {
+  margin: 50px 0 30px;
+  color: #7e8383; }
+  .post-bd p {
+    max-width: none; }
+
+.post-intro {
+  color: #596262; }
+
+.post-jumpline {
+  font-size: 14px;
+  margin: 30px 0;
+  padding: 0 0 40px;
+  border-bottom: 1px dashed #00c7b7; }
+
+.banner {
+  background: #e9e9e9;
+  padding: 20px;
+  margin: 30px 0;
+  text-align: center; }
+  .banner p {
+    max-width: none; }
 
 /*------------------------------
  * 
@@ -2003,10 +2062,10 @@ thead th, .th--highlight {
   .tera {
     font-size: 55px;
     line-height: 1; }
-  .mega {
+  .mega, .post-title {
     font-size: 50px;
     line-height: 1; }
-  .kilo {
+  .kilo, .blog-aside-title {
     font-size: 37px;
     line-height: 45px; }
   .alpha, h1 {
@@ -2018,10 +2077,10 @@ thead th, .th--highlight {
   .gamma, h3 {
     font-size: 25px;
     line-height: 30px; }
-  .delta, h4, .epsilon, .blurb-title, h5 {
+  .delta, h4, .epsilon, .blurb-title, .post-intro, h5 {
     font-size: 22px;
     line-height: 30px; }
-  .zeta, h6 {
+  .zeta, .post-meta, .banner, h6 {
     font-size: 18px;
     line-height: 25px; }
   .small {
