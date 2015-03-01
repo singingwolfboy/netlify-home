@@ -217,23 +217,25 @@ ul {
   right: 0;
 }
 .l-wrap-inner {
-  @extend .content;
-  @extend .content--wide;
+  max-width: $page-width;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 .l-main {
-  width: 70%;
-  float: left;
+  @extend %cf;
+  padding-left: 80px;
   padding-right: 60px;
+  margin-right: 395px;
 }
 .l-aside {
-  width: 30%;
-  float: right;
+  @extend %cf;
+  width: 395px;
   padding-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-
-
 
 /* 
  * Widths, heights and margins.

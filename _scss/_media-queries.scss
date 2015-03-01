@@ -38,7 +38,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   }
 }
 
-@include breakpoint($bp-med-large) { //* Tweak point to leave more room for hero
+@include breakpoint($bp-med-large) { //* Tweak point to leave more room for hero and main
   
   /* Reduce padding around the header and hero to 
    * leave more space for the content.
@@ -60,6 +60,27 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .callout--large {
     margin-left: 0;
   }
+  
+  /* Reduce size of aside and increase size of main */
+  .l-aside {
+    width: 310px;
+    padding-left: 40px;
+  }
+  .l-main {
+    margin-right: 310px;
+    padding: 0 50px;
+  }
+  .post-title {
+    font-size: 50px; /* Kilo */
+    line-height: 65px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .blog-aside-title {
+    font-size: 42px;
+    line-height: 45px;
+    margin-bottom: 110px;
+  }
 }
 
 @include breakpoint($bp-med-large-2) { //* Tweak point to fix broken hero
@@ -74,6 +95,15 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     .callout {
       visibility: hidden;
     }
+  }
+  
+  .l-main {
+    padding: 0 30px;
+    margin-right: 300px;
+  }
+  .l-aside {
+    padding-left: 30px;
+    width: 300px;
   }
 }
 
@@ -162,12 +192,74 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .th--highlight {
     padding: 8px 0 4px;
   }
+  
+  /* 
+   * Main/aside layout goes in one column
+   */
+  .l-wrap-inner {
+    max-width: 745px + 2*40px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+  .l-main,
+  .l-aside {
+    position: relative;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 20px 0;
+  }
+  .l-main {
+    border-bottom: 3px solid $color-highlight;
+  }
+  .l-wrap:before,
+  .l-wrap:after,
+  .l-aside {
+    background: transparent;
+  }
+  .l-aside.inverse {
+    color: inherit;
+    .no-touch & a:hover {
+      color: $color-highlight;
+    }
+  }
+  .l-aside .blurb {
+    width: auto;
+    max-width: 50%;
+    padding: 0 30px;
+    margin: 0 0 30px;
+    .media .blurb-meta {
+      margin-top: 0;
+    }
+  }
+  .l-aside .blurb:nth-child(odd) {
+    float: left;
+    padding-left: 0;
+  }
+  .l-aside .blurb:nth-child(even) {
+    float: right;
+    padding-right: 0;
+  }
+  
+  /* Reduce font sizes */
+  .post-title {
+    font-size: 50px;
+    line-height: 65px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .blog-aside-title {
+    font-size: 37px;
+    line-height: 45px;
+    margin: 70px 0 40px;
+    text-align: center;
+  }
 }
 
 /* If the device height is big (eg. ipad portrait), the hero will look really bare. 
  * Increase the font size.
  */
-@media screen and (max-width: $bp-med) and (min-height: 800px) {
+@media screen and (min-width: $bp-small + 1px) and (max-width: $bp-med) and (min-height: 800px) {
   
   .media--wide {
     .blurb {
@@ -397,7 +489,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   }
   .mega {
     font-size: 50px; //48px;
-    line-height: 1;
+    line-height: 65px;
   }
   .kilo {
      font-size: 37px; //36px;
@@ -457,6 +549,35 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .blurb-bd .x-small {
     font-size: 14px;
     line-height: 25px;
+  }
+  
+  /*
+   * Blurbs aside get stacked
+   */
+  .l-aside .blurb:nth-child(n) {
+    float: none;
+    max-width: none;
+    padding: 0;
+  }
+  
+  /* Reduce l-wrap-inner width to adapt to stacked blurbs */
+  .l-wrap-inner {
+    max-width: 30em;
+    padding: 0 20px;
+  }
+  
+  /*Reduce post title font size */
+  .post-title {
+    font-size: 33px;
+    line-height: 45px;
+    margin: 70px 0 20px;
+  }
+  .post-meta {
+    font-size: 14px;
+  }
+  .blog-aside-title {
+    font-size: 28px;
+    line-height: 35px;
   }
 }
 

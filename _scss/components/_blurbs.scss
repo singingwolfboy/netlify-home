@@ -54,15 +54,22 @@
 }
 
 
-.l-third > .blurb {
-  width: 245px;
+.l-aside,
+.l-third {
+  .blurb {
+    width: 245px;
+  }
 }
-.l-third > .blurb {
+.l-third .blurb {
   @extend .center;
 }
-.l-third:first-child > .blurb {
+.l-third:first-child .blurb {
   margin-left: 0;
 }
-.l-third:last-child > .blurb {
+.l-third:last-child .blurb {
   margin-right: 0;
+}
+
+.l-aside .blurb {
+  margin: 50px 0;
 }
