@@ -1841,7 +1841,7 @@ thead th, .th--highlight {
     padding-left: 40px; }
   .l-main {
     margin-right: 310px;
-    padding: 0 50px; }
+    padding: 0 60px; }
   .post-title {
     font-size: 50px;
     /* Kilo */
@@ -1863,11 +1863,20 @@ thead th, .th--highlight {
     .media--wide .callout {
       visibility: hidden; }
   .l-main {
-    padding: 0 30px;
     margin-right: 300px; }
   .l-aside {
     padding-left: 30px;
-    width: 300px; } }
+    width: 300px; }
+  .post-title {
+    font-size: 42px;
+    line-height: 55px;
+    margin-bottom: 30px; }
+  .post-meta {
+    font-size: 16px; }
+  .blog-aside-title {
+    font-size: 37px;
+    line-height: 55px;
+    margin: 150px 0 90px; } }
 
 @media screen and (max-width: 860px) {
   /* Hide optional elements */
@@ -1959,15 +1968,7 @@ thead th, .th--highlight {
   .l-aside .blurb:nth-child(even) {
     float: right;
     padding-right: 0; }
-  /* Reduce font sizes */
-  .post-title {
-    font-size: 50px;
-    line-height: 65px;
-    margin-left: 0;
-    margin-right: 0; }
   .blog-aside-title {
-    font-size: 37px;
-    line-height: 45px;
     margin: 70px 0 40px;
     text-align: center; } }
 
@@ -2197,13 +2198,13 @@ thead th, .th--highlight {
     padding: 0 20px; }
   /*Reduce post title font size */
   .post-title {
-    font-size: 33px;
-    line-height: 45px;
+    font-size: 37px;
+    line-height: 50px;
     margin: 70px 0 20px; }
   .post-meta {
     font-size: 14px; }
   .blog-aside-title {
-    font-size: 28px;
+    font-size: 33px;
     line-height: 35px; } }
 
 @media screen and (max-width: 460px) {
@@ -2262,7 +2263,10 @@ thead th, .th--highlight {
       -webkit-transform: scale(0.7);
           -ms-transform: scale(0.7);
               transform: scale(0.7);
-      margin: -4px; } }
+      margin: -4px; }
+  .post-title {
+    line-height: 45px;
+    margin-bottom: 30px; } }
 
 body {
   margin: 0 auto; }

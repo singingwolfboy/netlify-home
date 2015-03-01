@@ -68,7 +68,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   }
   .l-main {
     margin-right: 310px;
-    padding: 0 50px;
+    padding: 0 60px;
   }
   .post-title {
     font-size: 50px; /* Kilo */
@@ -98,12 +98,25 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   }
   
   .l-main {
-    padding: 0 30px;
     margin-right: 300px;
   }
   .l-aside {
     padding-left: 30px;
     width: 300px;
+  }
+  
+  .post-title {
+    font-size: 42px;
+    line-height: 55px;
+    margin-bottom: 30px;
+  }
+  .post-meta {
+    font-size: 16px;
+  }
+  .blog-aside-title {
+    font-size: 37px;
+    line-height: 55px;
+    margin: 150px 0 90px;
   }
 }
 
@@ -241,16 +254,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     padding-right: 0;
   }
   
-  /* Reduce font sizes */
-  .post-title {
-    font-size: 50px;
-    line-height: 65px;
-    margin-left: 0;
-    margin-right: 0;
-  }
   .blog-aside-title {
-    font-size: 37px;
-    line-height: 45px;
     margin: 70px 0 40px;
     text-align: center;
   }
@@ -568,15 +572,15 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   
   /*Reduce post title font size */
   .post-title {
-    font-size: 33px;
-    line-height: 45px;
+    font-size: 37px;
+    line-height: 50px;
     margin: 70px 0 20px;
   }
   .post-meta {
     font-size: 14px;
   }
   .blog-aside-title {
-    font-size: 28px;
+    font-size: 33px;
     line-height: 35px;
   }
 }
@@ -658,5 +662,10 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       transform: scale(0.7);
       margin: -4px;
     }
+  }
+  
+  .post-title {
+    line-height: 45px;
+    margin-bottom: 30px;
   }
 }
