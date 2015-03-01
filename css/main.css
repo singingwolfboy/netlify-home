@@ -1872,14 +1872,14 @@ thead th, .th--highlight {
   /* Adjust blog font sizes so headlines don't wrap too much */
   .post-title {
     font-size: 37px;
-    line-height: 55px;
+    line-height: 50px;
     margin-bottom: 30px; }
   .post-meta {
     font-size: 16px; }
   .blog-aside-title {
     font-size: 33px;
-    line-height: 55px;
-    margin: 150px 0 90px; } }
+    line-height: 50px;
+    margin: 140px 0 95px; } }
 
 @media screen and (max-width: 860px) {
   /* Hide optional elements */
