@@ -241,7 +241,7 @@ layout: default
       
       <p class="inline-block v-middle">
         {% for social in site.social-links %}
-        <a href="{{social.link}}" class="social-icon--round">
+        <a href="{{social.link}}" class="icon-link--round icon-link--{{social.name}}">
           <svg width="36" height="36" class="icon-{{social.name}}--round">
             <use xlink:href="#icon-{{social.name}}-round">
           </svg>

@@ -1422,21 +1422,21 @@ html {
 
 .nav--social {
   margin-top: 25px; }
-  .nav--social .social-icon--square {
+  .nav--social .icon-link--square {
     color: #657676;
     padding: 0 4px;
     width: 25px;
     height: 25px;
     line-height: 25px; }
-  .nav--social li:nth-child(1) .social-icon--square {
+  .nav--social .icon-link--twitter {
     background: #4f5c5d; }
-  .nav--social li:nth-child(2) .social-icon--square {
+  .nav--social .icon-link--facebook {
     background: #3e4a4a; }
-  .nav--social li:nth-child(3) .social-icon--square {
+  .nav--social .icon-link--github {
     background: #394343; }
-  .nav--social li:nth-child(4) .social-icon--square {
+  .nav--social .icon-link--linkedin {
     background: #343e3f; }
-  .nav--social li:nth-child(5) .social-icon--square {
+  .nav--social .icon-link--googleplus {
     background: #2a3233; }
 
 /* Links 
@@ -1527,19 +1527,69 @@ a {
   top: 1px; }
 
 /*
- * Social links
+ * Icon links (eg. social links)
+ *
+ * Hover effect: http://tympanus.net/Development/IconHoverEffects/#set-8
  */
-.social-icon--round {
+.icon-link--round {
   display: inline-block;
-  margin-right: 25px; }
-  .social-icon--round:nth-child(3n+1) {
-    color: #7d7d7d; }
-  .social-icon--round:nth-child(3n+2) {
-    color: #5a5a5a; }
-  .social-icon--round:nth-child(3n+0) {
-    color: #646464; }
-  .no-touch .social-icon--round:hover {
-    color: #00c7b7; }
+  margin-right: 25px;
+  position: relative;
+  transition: -webkit-transform ease-out 0.2s;
+  transition: transform ease-out 0.2s; }
+  .icon-link--round:after {
+    content: '';
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100%; }
+  .icon-link--round.icon-link--twitter svg {
+    fill: #959595; }
+  .icon-link--round.icon-link--facebook svg {
+    fill: #5d5d5d; }
+  .icon-link--round.icon-link--github svg {
+    fill: #767676; }
+  .icon-link--round.icon-link--linkedin svg {
+    fill: #525252; }
+  .icon-link--round.icon-link--googleplus svg {
+    fill: #7e7e7e; }
+  .no-touch .icon-link--round:hover {
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95); }
+    .no-touch .icon-link--round:hover:after {
+      -webkit-animation: sonarEffect 1.3s ease-out 75ms;
+              animation: sonarEffect 1.3s ease-out 75ms; }
+
+@-webkit-keyframes sonarEffect {
+  0% {
+    opacity: 0.3; }
+
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #333d3d, 0 0 0 10px rgba(255, 255, 255, 0.5); }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #333d3d, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0; } }
+
+@keyframes sonarEffect {
+  0% {
+    opacity: 0.3; }
+
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #333d3d, 0 0 0 10px rgba(255, 255, 255, 0.5); }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #333d3d, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0; } }
 
 /* 
  * Button with image of video

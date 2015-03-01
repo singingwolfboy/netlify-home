@@ -27,7 +27,7 @@
   <ul class="nav nav--social">
     {% for social in site.social-links %}
     <li>
-      <a href="{{social.link}}" class="social-icon--square">
+      <a href="{{social.link}}" class="icon-link--square icon-link--{{social.name}}">
         <svg width="16" height="16" class="icon-{{social.name}}--square">
           <use xlink:href="#icon-{{social.name}}"/>
         </svg>

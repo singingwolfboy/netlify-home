@@ -1,6 +1,5 @@
 /* Links 
 ------------------------------*/
-
 a { 
   text-decoration: none;
   transition: color 300ms ease;
@@ -30,7 +29,6 @@ a {
 /*
  * Links that look like buttons
  */
- 
 .button {
   position: relative;
   display: block;
@@ -108,24 +106,54 @@ a {
 
 
 /*
- * Social links
+ * Icon links (eg. social links)
+ *
+ * Hover effect: http://tympanus.net/Development/IconHoverEffects/#set-8
  */
-.social-icon--round {
+.icon-link--round {
   display: inline-block;
   margin-right: 25px;
+  position: relative;
+  transition: transform ease-out 0.2s;
+  &:after {
+    content: '';
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+  }
 
-  &:nth-child(3n+1) {
-    color: rgb(125,125,125);
+  @each $name, $color in $colors-social {
+    &.icon-link--#{$name} svg {
+      fill: darken(grayscale($color), 5%);
+    }
   }
-  &:nth-child(3n+2) {
-    color: rgb(90,90,90);
-  }
-  &:nth-child(3n+0) {
-    color: rgb(100,100,100);
-  }
+
   .no-touch &:hover {
-    color: $color-highlight;
+    transform: scale(0.95);
+    &:after {
+      animation: sonarEffect 1.3s ease-out 75ms;
+    }
   }
+}
+
+$color-sonar: $color-darker;
+
+@keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255,255,255,0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255,255,255,0.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
 
 

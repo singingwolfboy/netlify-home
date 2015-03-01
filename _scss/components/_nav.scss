@@ -3,13 +3,13 @@ $nav-width: 270px;
 $nav-bg-color:             rgb(64, 75, 76);
 $nav-primary-link-color:   rgb(255, 255, 255);
 $nav-secondary-link-color: rgb(126, 131, 131);
-$nav-social-link-color:    rgb(101,118, 118);
-$nav-social-link-bg-colors: (
-  rgb(79, 92, 93), 
-  rgb(62, 74, 74), 
-  rgb(57, 67, 67), 
-  rgb(52, 62, 63),
-  rgb(42, 50, 51)
+$nav-icon-color:           rgb(101,118, 118);
+$nav-icon-bg-colors: (
+  twitter:    rgb(79, 92, 93), 
+  facebook:   rgb(62, 74, 74), 
+  github:     rgb(57, 67, 67), 
+  linkedin:   rgb(52, 62, 63),
+  googleplus: rgb(42, 50, 51)
 );
 
 html {
@@ -125,17 +125,17 @@ html {
   @extend .nav--inline;
   margin-top: 25px;
 
-  .social-icon--square {
-    color: $nav-social-link-color;
+  .icon-link--square {
+    color: $nav-icon-color;
     padding: 0 4px;
     width: 25px;
     height: 25px;
     line-height: 25px;
   }
 
-  @for $i from 1 through length($nav-social-link-bg-colors) {
-    li:nth-child(#{$i}) .social-icon--square {
-      background: nth($nav-social-link-bg-colors, $i);
+  @each $name, $color in ($nav-icon-bg-colors) {
+    .icon-link--#{$name} {
+      background: $color;
     }
   }
 }
