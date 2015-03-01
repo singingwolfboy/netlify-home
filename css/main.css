@@ -1775,6 +1775,58 @@ thead th, .th--highlight {
   .banner p {
     max-width: none; }
 
+.legalese {
+  max-width: 810px;
+  padding: 0 30px;
+  margin: 0 auto;
+  color: #7e8383; }
+  .legalese h1 {
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    line-height: 25px;
+    margin: 110px 0 30px;
+    padding-top: 90px;
+    border-top: 2px solid #00c7b7; }
+  .legalese h2 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    line-height: 25px;
+    margin: 20px 0; }
+  .legalese p {
+    max-width: none; }
+  .legalese ul {
+    list-style: disc;
+    margin: 20px 0; }
+    .legalese ul > li {
+      margin: 20px 0; }
+  .legalese ol {
+    list-style: decimal;
+    margin: 20px 0 20px -50px; }
+    .legalese ol > li {
+      padding-left: 10px;
+      margin: 20px 0; }
+  .legalese ol ol {
+    list-style: decimal;
+    margin-left: -17px; }
+  .legalese ol ol ol {
+    list-style: lower-roman; }
+  .legalese > ol {
+    counter-reset: h2-counter;
+    list-style: none; }
+  .legalese > ol h2:before {
+    content: counter(h2-counter, decimal) ".";
+    counter-increment: h2-counter;
+    font-weight: bold;
+    display: inline-block;
+    width: 30px;
+    text-align: right;
+    margin-right: 20px;
+    margin-left: -50px; }
+
 /*------------------------------
  * 
  * Common page components (header, footer, navigation)
@@ -1868,7 +1920,7 @@ thead th, .th--highlight {
     padding-left: 30px;
     width: 300px; } }
 
-@media screen and (min-width: 861px) and (max-width: 960px) {
+@media screen and (min-width: 871px) and (max-width: 960px) {
   /* Adjust blog font sizes so headlines don't wrap too much */
   .post-title {
     font-size: 37px;
@@ -1881,7 +1933,7 @@ thead th, .th--highlight {
     line-height: 50px;
     margin: 140px 0 95px; } }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 870px) {
   /* Hide optional elements */
   .optional {
     display: none; }
@@ -1978,7 +2030,7 @@ thead th, .th--highlight {
 /* If the device height is big (eg. ipad portrait), the hero will look really bare. 
  * Increase the font size.
  */
-@media screen and (min-width: 681px) and (max-width: 860px) and (min-height: 800px) {
+@media screen and (min-width: 681px) and (max-width: 870px) and (min-height: 800px) {
   .media--wide .blurb {
     width: 30em; }
     .media--wide .blurb .huge {
@@ -2215,7 +2267,20 @@ thead th, .th--highlight {
     font-size: 14px; }
   .blog-aside-title {
     font-size: 33px;
-    line-height: 35px; } }
+    line-height: 35px; }
+  /*
+   * Legalese. Get rid of bullets, numbered lists and indentation
+   */
+  .legalese {
+    padding: 0; }
+    .legalese ol h2:before {
+      display: none; }
+    .legalese ul, .legalese ol, .legalese ol ol {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .legalese ul li, .legalese ol li, .legalese ol ol li {
+        padding: 0; } }
 
 @media screen and (max-width: 460px) {
   /* 
@@ -2304,9 +2369,9 @@ body:before {
   body:before {
     content: "bp-med-large-2 960px"; } }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 870px) {
   body:before {
-    content: "bp-med 860px"; } }
+    content: "bp-med 870px"; } }
 
 @media screen and (max-width: 740px) {
   body:before {
