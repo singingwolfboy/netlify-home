@@ -385,7 +385,9 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     column-gap: 0;
   }
   
-  /* Stack inline blocks */
+  /* 
+   * Stack inline blocks 
+   */
   .inline-block:not(.optional) {
     display: block;
     margin-left: 0;
@@ -548,10 +550,11 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   
   /* Extra small text the blurb body gets too
    * hard to read and looks uncompensated with 
-   * normal text
+   * normal text (see About page, Mat & Chris descriptions)
+   * Make it look like standard text
    */
   .blurb-bd .x-small {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 25px;
   }
   
@@ -564,13 +567,17 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     padding: 0;
   }
   
-  /* Reduce l-wrap-inner width to adapt to stacked blurbs */
+  /* 
+   * Reduce l-wrap-inner width to adapt to stacked blurbs
+   */
   .l-wrap-inner {
     max-width: 30em;
     padding: 0 20px;
   }
   
-  /*Reduce post title font size */
+  /*
+   * Reduce post title font size
+   */
   .post-title {
     font-size: 37px;
     line-height: 50px;

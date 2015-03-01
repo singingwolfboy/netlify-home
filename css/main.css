@@ -2062,7 +2062,9 @@ thead th, .th--highlight {
     -webkit-column-gap: 0;
        -moz-column-gap: 0;
             column-gap: 0; }
-  /* Stack inline blocks */
+  /* 
+   * Stack inline blocks 
+   */
   .inline-block:not(.optional) {
     display: block;
     margin-left: 0;
@@ -2180,10 +2182,11 @@ thead th, .th--highlight {
     font-weight: 500; }
   /* Extra small text the blurb body gets too
    * hard to read and looks uncompensated with 
-   * normal text
+   * normal text (see About page, Mat & Chris descriptions)
+   * Make it look like standard text
    */
   .blurb-bd .x-small, .blurb-bd .blurb-meta {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 25px; }
   /*
    * Blurbs aside get stacked
@@ -2192,11 +2195,15 @@ thead th, .th--highlight {
     float: none;
     max-width: none;
     padding: 0; }
-  /* Reduce l-wrap-inner width to adapt to stacked blurbs */
+  /* 
+   * Reduce l-wrap-inner width to adapt to stacked blurbs
+   */
   .l-wrap-inner {
     max-width: 30em;
     padding: 0 20px; }
-  /*Reduce post title font size */
+  /*
+   * Reduce post title font size
+   */
   .post-title {
     font-size: 37px;
     line-height: 50px;
