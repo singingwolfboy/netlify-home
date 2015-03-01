@@ -1866,15 +1866,18 @@ thead th, .th--highlight {
     margin-right: 300px; }
   .l-aside {
     padding-left: 30px;
-    width: 300px; }
+    width: 300px; } }
+
+@media screen and (min-width: 861px) and (max-width: 960px) {
+  /* Adjust blog font sizes so headlines don't wrap too much */
   .post-title {
-    font-size: 42px;
+    font-size: 37px;
     line-height: 55px;
     margin-bottom: 30px; }
   .post-meta {
     font-size: 16px; }
   .blog-aside-title {
-    font-size: 37px;
+    font-size: 33px;
     line-height: 55px;
     margin: 150px 0 90px; } }
 
