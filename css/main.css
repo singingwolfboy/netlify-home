@@ -404,12 +404,12 @@ textarea {
   *zoom: 1;
   *width: auto !important; }
 
-.content, .l-container, .l-2-col, .l-main, .l-aside, .banner, .media {
+.content, .l-container, .l-2-col, .banner, .media {
   zoom: 1; }
-  .content:before, .l-container:before, .l-2-col:before, .l-main:before, .l-aside:before, .banner:before, .media:before, .content:after, .l-container:after, .l-2-col:after, .l-main:after, .l-aside:after, .banner:after, .media:after {
+  .content:before, .l-container:before, .l-2-col:before, .banner:before, .media:before, .content:after, .l-container:after, .l-2-col:after, .banner:after, .media:after {
     content: " ";
     display: table; }
-  .content:after, .l-container:after, .l-2-col:after, .l-main:after, .l-aside:after, .banner:after, .media:after {
+  .content:after, .l-container:after, .l-2-col:after, .banner:after, .media:after {
     clear: both; }
 
 /*---------------------------------------------
@@ -714,10 +714,12 @@ ul {
   .l-2-col-auto > p:first-child {
     margin-top: 0; }
 
-/* Layout with main and sidebar */
+/* Layout with fluid main and fixed-width sidebar
+ * http://www.onderhond.com/blog/responsive-grid-old-trick/ 
+ */
 .l-wrap {
-  overflow: hidden;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .l-wrap:before, .l-wrap:after {
   content: '';
@@ -735,20 +737,21 @@ ul {
 .l-wrap-inner {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 410px 0 80px;
+  overflow: hidden;
   position: relative;
   z-index: 1; }
 
 .l-main {
-  padding-left: 80px;
-  padding-right: 60px;
-  margin-right: 395px; }
+  float: left;
+  width: 100%;
+  padding-right: 60px; }
 
 .l-aside {
-  width: 395px;
-  padding-left: 50px;
-  position: absolute;
-  top: 0;
-  right: 0; }
+  float: right;
+  width: 330px;
+  margin-right: -330px;
+  padding-left: 50px; }
 
 /* 
  * Widths, heights and margins.
@@ -1937,13 +1940,15 @@ thead th, .th--highlight {
     margin: 0; }
   .callout--large {
     margin-left: 0; }
-  /* Reduce size of aside and increase size of main */
+  /* Reduce paddings around main and aside */
+  .l-wrap-inner {
+    padding: 0 320px 0 40px; }
   .l-aside {
-    width: 310px;
-    padding-left: 40px; }
+    width: 320px;
+    padding-left: 40px;
+    margin-right: -320px; }
   .l-main {
-    margin-right: 310px;
-    padding: 0 60px; }
+    padding-right: 45px; }
   .post-title {
     font-size: 50px;
     /* Kilo */
@@ -1963,12 +1968,7 @@ thead th, .th--highlight {
       width: 50%;
       margin-right: 5%; }
     .media--wide .callout {
-      visibility: hidden; }
-  .l-main {
-    margin-right: 300px; }
-  .l-aside {
-    padding-left: 30px;
-    width: 300px; } }
+      visibility: hidden; } }
 
 @media screen and (min-width: 871px) and (max-width: 960px) {
   /* Adjust blog font sizes so headlines don't wrap too much */
@@ -2051,7 +2051,7 @@ thead th, .th--highlight {
     float: none;
     width: 100%;
     margin: 0;
-    padding: 0 0 20px 0; }
+    padding: 0; }
   .l-main {
     border-bottom: 3px solid #00c7b7; }
   .l-wrap:before, .l-wrap:after, .l-aside {

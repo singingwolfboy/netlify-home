@@ -61,15 +61,19 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     margin-left: 0;
   }
   
-  /* Reduce size of aside and increase size of main */
+  /* Reduce paddings around main and aside */
+  .l-wrap-inner {
+    padding: 0 ($aside-width + 40px) 0 40px;
+  }
   .l-aside {
-    width: 310px;
+    width: $aside-width + 40px;
     padding-left: 40px;
+    margin-right: -($aside-width + 40px);
   }
   .l-main {
-    margin-right: 310px;
-    padding: 0 60px;
+    padding-right: 45px;
   }
+
   .post-title {
     font-size: 50px; /* Kilo */
     line-height: 65px;
@@ -95,14 +99,6 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     .callout {
       visibility: hidden;
     }
-  }
-  
-  .l-main {
-    margin-right: 300px;
-  }
-  .l-aside {
-    padding-left: 30px;
-    width: 300px;
   }
 }
 
@@ -224,7 +220,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     float: none;
     width: 100%;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0;
   }
   .l-main {
     border-bottom: 3px solid $color-highlight;
