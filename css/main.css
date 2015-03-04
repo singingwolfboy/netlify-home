@@ -504,6 +504,12 @@ p {
   letter-spacing: normal;
   line-height: 25px; }
 
+.large {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 25px; }
+
 .medium {
   font-size: 16px;
   font-weight: 300;
@@ -1264,7 +1270,7 @@ svg {
 /* Dark background */
 .inverse {
   background-color: #313d3e;
-  color: #FFF;
+  color: #F4F6F6;
   font-weight: 100; }
   .inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse h6 {
     color: inherit; }
@@ -1879,6 +1885,30 @@ thead th, .th--highlight {
     text-align: right;
     margin-right: 20px;
     margin-left: -50px; }
+
+.dl-inline {
+  margin: 55px 0 40px; }
+  .dl-inline dt, .dl-inline dd {
+    display: inline;
+    margin: 0; }
+  .dl-inline dd:after {
+    content: '';
+    display: block;
+    margin-bottom: 40px; }
+  .dl-inline dd + dd {
+    margin-top: -40px; }
+  .dl-inline .block {
+    display: block;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto; }
+
+.inverse dt {
+  color: #00c7b7;
+  font-weight: 500; }
+.inverse dt + dd:not(.block) a {
+  color: inherit;
+  font-weight: 500; }
 
 /*------------------------------
  * 

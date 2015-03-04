@@ -240,10 +240,10 @@ layout: default
       <h1 class="gamma highlight inline-block v-middle mr-40">Socialize @</h1>
       
       <p class="inline-block v-middle">
-        {% for social in site.social-links %}
-        <a href="{{social.link}}" class="icon-link--round icon-link--{{social.name}}">
-          <svg width="36" height="36" class="icon-{{social.name}}--round">
-            <use xlink:href="#icon-{{social.name}}-round">
+        {% for link in site.social-links %}
+        <a href="{{link[1]}}" class="icon-link--round icon-link--{{link[0]}}">
+          <svg width="36" height="36" class="icon-{{link[0]}}--round">
+            <use xlink:href="#icon-{{link[0]}}-round">
           </svg>
         </a>
         {% endfor %}

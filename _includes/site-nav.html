@@ -21,15 +21,15 @@
     <li><a href="/meetups.html">Meetups</a></li>
     <li><a href="/privacy.html"{% if page.url == '/privacy.html' %} class="current"{% endif %}>Privacy</a></li>
     <li><a href="/tos.html"{% if page.url == '/tos.html' %} class="current"{% endif %}>Terms &amp; Conditions</a></li>
-    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="/contact.html"{% if page.url == '/contact.html' %} class="current"{% endif %}>Contact</a></li>
   </ul>
   
   <ul class="nav nav--social">
-    {% for social in site.social-links %}
+    {% for link in site.social-links %}
     <li>
-      <a href="{{social.link}}" class="icon-link--square icon-link--{{social.name}}">
-        <svg width="16" height="16" class="icon-{{social.name}}--square">
-          <use xlink:href="#icon-{{social.name}}"/>
+      <a href="{{link[1]}}" class="icon-link--square icon-link--{{link[0]}}">
+        <svg width="16" height="16" class="icon-{{link[0]}}--square">
+          <use xlink:href="#icon-{{link[0]}}"/>
         </svg>
       </a>
     </li>

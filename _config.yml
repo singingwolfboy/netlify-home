@@ -1,14 +1,9 @@
 exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock"]
 
 social-links:
-  - name: twitter
-    link: 'https://twitter.com/netlify'
-  - name: facebook
-    link: 'https://www.facebook.com/netlify'
-  - name: github
-    link: 'https://github.com/netlify'
-  - name: linkedin
-    link: 'https://www.linkedin.com/company/netlify'
-  - name: googleplus
-    link: 'https://plus.google.com/+NetlifyApp'
+  twitter: 'https://twitter.com/netlify'
+  facebook: 'https://www.facebook.com/netlify'
+  github: 'https://github.com/netlify'
+  linkedin: 'https://www.linkedin.com/company/netlify'
+  googleplus: 'https://plus.google.com/+NetlifyApp'
 

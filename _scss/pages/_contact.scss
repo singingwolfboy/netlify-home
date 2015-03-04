@@ -1,0 +1,32 @@
+.dl-inline {
+  margin: 55px 0 40px;
+  dt, dd {
+    display: inline;
+    margin: 0;
+  }
+  dd:after {
+    content:'';
+    display: block;
+    margin-bottom: 40px;
+  }
+  dd + dd {
+    margin-top: -40px;
+  }
+  .block {
+    display: block;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.inverse {
+  dt {
+    color: $color-highlight;
+    @include font-weight(medium);
+  }
+  dt + dd:not(.block) a {
+    color: inherit;
+    @include font-weight(medium);
+  }
+}

@@ -130,6 +130,13 @@ p {
    line-height: 25px;
 }
 
+.large {
+  font-size: 20px;
+  @include font-weight(light);
+  letter-spacing: normal;
+  line-height: 25px;
+}
+
 .medium {
    font-size: 16px;
    @include font-weight(light);
