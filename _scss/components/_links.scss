@@ -165,9 +165,6 @@ $color-sonar: $color-darker;
   background: url(/img/video.png) no-repeat center center;
   background-size: cover;
   position: relative;
-  img {
-    //width: 100%;
-  }
   .callout {
     @extend .callout--small;
     @extend .callout--stitch;
@@ -177,4 +174,17 @@ $color-sonar: $color-darker;
     margin-top: -10px; //* makes it easier to just 0 out the margins when going responsive than to change top and left
     margin-left: -20px;
   }
+}
+.button-video--compact {
+  .callout {
+    margin: 0;
+  }
+}
+
+/*
+ * Call to action
+ */
+.cta {
+  max-width: 355px;
+  margin: 45px auto;
 }

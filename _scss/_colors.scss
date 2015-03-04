@@ -101,11 +101,14 @@ svg {
 .bg-light-muted-2 {
   background: $color-light url(/img/bg-light-3.svg) no-repeat -25px -90px;
 }
-.bg-dark {
+.bg-dark-cover {
   background: $color-darkest url(/img/bg-dark-1.svg) no-repeat;
   background-size: cover;
 }
 .bg-dark-muted {
+  background: $color-darkest url(/img/bg-dark-2.svg) no-repeat;
+}
+.bg-dark-muted-cover {
   background: $color-darkest url(/img/bg-dark-2.svg) no-repeat;
   background-size: cover;
 }

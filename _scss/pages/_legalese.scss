@@ -1,7 +1,7 @@
 .legalese {
   max-width: 690px + 2*30px;
   padding: 0 30px;
-  margin: 0 auto;
+  margin: 110px auto;
   color: $color-muted;
   
   h1 {
@@ -10,9 +10,9 @@
     letter-spacing: normal;
     text-transform: uppercase;
     line-height: 25px;
-    margin: 110px 0 30px;
+    margin: 0 0 30px;
     padding-top: 90px;
-    border-top:2px solid $color-highlight;
+    border-top: 2px solid $color-highlight;
   }
   h2 {
     font-size: 16px;

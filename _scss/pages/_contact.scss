@@ -1,3 +1,4 @@
+/* Layout */
 .dl-inline {
   margin: 55px 0 40px;
   dt, dd {
@@ -20,7 +21,8 @@
   }
 }
 
-.inverse {
+/* Colors */
+.dl-inline {
   dt {
     color: $color-highlight;
     @include font-weight(medium);

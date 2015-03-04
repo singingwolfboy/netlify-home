@@ -36,6 +36,30 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       }
     }
   }
+  
+  /* Reduce paddings around main and aside */
+  .l-wrap-inner {
+    padding: 0 ($aside-width + 40px) 0 40px;
+  }
+  .l-aside {
+    width: $aside-width + 40px;
+    padding-left: 40px;
+    margin-right: -($aside-width + 40px);
+  }
+  .l-main {
+    padding-right: 45px;
+  }
+  .post-title {
+    font-size: 50px; /* Kilo */
+    line-height: 65px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .blog-aside-title {
+    font-size: 42px;
+    line-height: 45px;
+    margin-bottom: 110px;
+  }
 }
 
 @include breakpoint($bp-med-large) { //* Tweak point to leave more room for hero and main
@@ -59,31 +83,6 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   }
   .callout--large {
     margin-left: 0;
-  }
-  
-  /* Reduce paddings around main and aside */
-  .l-wrap-inner {
-    padding: 0 ($aside-width + 40px) 0 40px;
-  }
-  .l-aside {
-    width: $aside-width + 40px;
-    padding-left: 40px;
-    margin-right: -($aside-width + 40px);
-  }
-  .l-main {
-    padding-right: 45px;
-  }
-
-  .post-title {
-    font-size: 50px; /* Kilo */
-    line-height: 65px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .blog-aside-title {
-    font-size: 42px;
-    line-height: 45px;
-    margin-bottom: 110px;
   }
 }
 

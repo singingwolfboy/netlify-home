@@ -504,7 +504,7 @@ p {
   letter-spacing: normal;
   line-height: 25px; }
 
-.large {
+.large, .dl-faq dt {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: normal;
@@ -1299,11 +1299,14 @@ svg {
 .bg-light-muted-2 {
   background: #F4F6F6 url(/img/bg-light-3.svg) no-repeat -25px -90px; }
 
-.bg-dark {
+.bg-dark-cover {
   background: #313d3e url(/img/bg-dark-1.svg) no-repeat;
   background-size: cover; }
 
 .bg-dark-muted {
+  background: #313d3e url(/img/bg-dark-2.svg) no-repeat; }
+
+.bg-dark-muted-cover {
   background: #313d3e url(/img/bg-dark-2.svg) no-repeat;
   background-size: cover; }
 
@@ -1615,6 +1618,16 @@ a {
     margin-top: -10px;
     margin-left: -20px; }
 
+.button-video--compact .callout {
+  margin: 0; }
+
+/*
+ * Call to action
+ */
+.cta {
+  max-width: 355px;
+  margin: 45px auto; }
+
 .blurb-hd .media-img {
   margin-top: 10px; }
 .blurb-hd .media--bleed .media-img {
@@ -1666,7 +1679,8 @@ a {
   padding: 6px 180px 6px 6px;
   box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
   border-radius: 10px 55px 55px 10px;
-  background: #F4F6F6; }
+  background: #F4F6F6;
+  margin: 40px 0; }
   .form--fancy .form-group {
     float: left;
     margin: 0;
@@ -1837,7 +1851,7 @@ thead th, .th--highlight {
 .legalese {
   max-width: 750px;
   padding: 0 30px;
-  margin: 0 auto;
+  margin: 110px auto;
   color: #7e8383; }
   .legalese h1 {
     font-size: 21px;
@@ -1845,7 +1859,7 @@ thead th, .th--highlight {
     letter-spacing: normal;
     text-transform: uppercase;
     line-height: 25px;
-    margin: 110px 0 30px;
+    margin: 0 0 30px;
     padding-top: 90px;
     border-top: 2px solid #00c7b7; }
   .legalese h2 {
@@ -1886,6 +1900,7 @@ thead th, .th--highlight {
     margin-right: 20px;
     margin-left: -50px; }
 
+/* Layout */
 .dl-inline {
   margin: 55px 0 40px; }
   .dl-inline dt, .dl-inline dd {
@@ -1903,12 +1918,39 @@ thead th, .th--highlight {
     margin-left: auto;
     margin-right: auto; }
 
-.inverse dt {
+/* Colors */
+.dl-inline dt {
   color: #00c7b7;
   font-weight: 500; }
-.inverse dt + dd:not(.block) a {
+.dl-inline dt + dd:not(.block) a {
   color: inherit;
   font-weight: 500; }
+
+.dl-faq {
+  max-width: 885px;
+  margin: 70px auto 140px;
+  counter-reset: faq-counter;
+  padding-left: 40px; }
+  .dl-faq dt {
+    font-weight: 500;
+    display: inline-block;
+    margin: 10px 0; }
+    .dl-faq dt:before {
+      display: inline-block;
+      content: counter(faq-counter, decimal) ".";
+      counter-increment: faq-counter;
+      color: #00c7b7;
+      width: 30px;
+      text-align: right;
+      margin-left: -40px;
+      margin-right: 10px; }
+  .dl-faq dd {
+    display: block;
+    margin: 0 0 20px;
+    max-width: 48em; }
+  .dl-faq p {
+    max-width: none;
+    margin: 0 0 20px; }
 
 /*------------------------------
  * 
@@ -1953,23 +1995,7 @@ thead th, .th--highlight {
     .media--wide .button-video {
       width: 100%; }
       .media--wide .button-video img {
-        visibility: hidden; } }
-
-@media screen and (max-width: 1176px) {
-  /* Reduce padding around the header and hero to 
-   * leave more space for the content.
-   */
-  .content--wide {
-    padding: 0 25px; }
-  /* Adjust media hero margins to align with header */
-  .media--wide {
-    margin-left: 25px;
-    margin-right: 25px; }
-  /* Large callouts shouldn't bleed */
-  .media--wide .callout {
-    margin: 0; }
-  .callout--large {
-    margin-left: 0; }
+        visibility: hidden; }
   /* Reduce paddings around main and aside */
   .l-wrap-inner {
     padding: 0 320px 0 40px; }
@@ -1989,6 +2015,22 @@ thead th, .th--highlight {
     font-size: 42px;
     line-height: 45px;
     margin-bottom: 110px; } }
+
+@media screen and (max-width: 1176px) {
+  /* Reduce padding around the header and hero to 
+   * leave more space for the content.
+   */
+  .content--wide {
+    padding: 0 25px; }
+  /* Adjust media hero margins to align with header */
+  .media--wide {
+    margin-left: 25px;
+    margin-right: 25px; }
+  /* Large callouts shouldn't bleed */
+  .media--wide .callout {
+    margin: 0; }
+  .callout--large {
+    margin-left: 0; } }
 
 @media screen and (max-width: 960px) {
   /* Reduce margins between video and blurb. Hide callout */

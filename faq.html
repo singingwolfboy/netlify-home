@@ -1,0 +1,97 @@
+---
+layout: default
+---
+<div class="inverse bg-dark-muted bb bb--large">
+  <section class="content content--narrow">
+    <header class="text-center">
+      <h1 class="mega mt-110">
+        Netlify FAQs
+      </h1>
+      <p class="epsilon highlight">
+        Ask and thou shall find (some) answers here.
+      </p>
+    </header>
+    <dl class="dl-faq">
+      <dt>Is cheese really mold?</dt>
+      <dd>Yes.</dd>
+      <dt>Then by definition cheese can’t go bad?</dt>
+      <dd>It can actually. As cheeses go, mold is gold, but too much gold and&hellip; well&hellip; Maybe it can’t go bad.</dd>
+      <dt>Why host a static site on a static host</dt>
+      <dd>Because your site will be served from a CDN instead of a single server. That means much lower latency and much higher uptime (if one CDN server goes down, traffic just goes somewhere else, but when your godaddy or one.com server goes down, it’s down).</dd>
+      <dt>OK then, why host on Netlify rather than another static host</dt>
+      <dd>
+      <p>Netlify is smart enough to process your site and make sure all assets gets optimized and served with perfect caching-headers from a cookie-less domain. We make sure your HTML is served straight from our CDN edge nodes without any round-trip to our backend servers and are the only ones to give you instant cache invalidation when you push a new deploy. Netlify is also the only static hosting service with integrated continuous deployment.</p>
+      <p>
+      In other words, with Netlify there’s no need to configure your caching settings and there’s no special “High performance” environment. Netlify is always high performance.</p>
+      <p> And in real simple terms. We will get you there faster :-)</p>
+      </dd>
+      <dt>Which sites will not benefit from being on Netlify</dt>
+      <dd>Any sites that need updating every minute.<br>
+      A static site is built every time it’s updated, and that typically takes 20 seconds. (note that lots of services like chat or something similar can updated realtime without the site having to be built. We are talking about content that needs updating).<br>
+      And of course as of now any site that needs a CMS for non-tech users to update in.</dd>
+      <dt>What about comments, live-chat, forms, search and such? Surely they won’t work on a static site</dt>
+      <dd>Good question, as this indeed used to be a showstopper for static sites. But today services like Disqus, Olark, Swiftype, Snipcart and many, many more can be plugged into any static site (See <a href="https://eager.io/">Eager.io</a> for a long lists of static site widgets). Comments, search, realtime databases and even e-commerce shopping modules can be added to any static site in a moment. And for form submissions? Netlify comes with built-in form handling.</dd>
+      <dt>OK, so using static sites whenever I can sounds like a no brainer. Why isn’t everyone doing so?</dt>
+      <dd>
+      Now THAT’s a good question! Seriously though, more and more people are, and theres no doubt that static tech will power a large part of the internet in a few years. The reason traditional (dynamic) sites got to be so widespread in use even though the are slower, less secure, more complex and way more expensive to scale, is that it’s only now with HTML5, modern browsers and mature shared hosting services that static sites truly can cater the needs of a typical website.</dd>
+      <dt>Can I use HTTPS on my static site?</dt>
+      <dd>Yes. Of course you can. Actually netlify provides not only the easiest and cheapest way of getting up-to-date certificate that works in both old and new browsers, but you can also buy domains through us, and of course you will have your own DNS panel as well.</dd>
+      <dt>Do you supply me with a DNS panel</dt>
+      <dd>Yes.</dd>
+      <dt>Can I buy a domain through Netlify?</dt>
+      <dd>Yes</dd>
+      <dt>Did you also make BitBalloon?</dt>
+      <dd>Yes. And hosting on Bitballoon is exactly the same as hosting through Netlify, if you choose the hosting plan only.</dd>
+      <dt>What is the best ice cream in San Francisco?</dt>
+      <dd>Can’t tell you or they’ll sell out. If you know you know.</dd>
+      <dt>Seems to me that static tech will only take off if someone makes an open-source CMS</dt>
+      <dd>Hmm, that is really smart of you. We agree. 70% of all sites are made by developers for other people, and they will need to be able to update the site without knowing how to code. More will follow very soon.</dd>
+    </dl>
+  </section>
+</div>
+
+<div class="bg-light-muted-2 text-center muted">
+  <div class="content content--narrow">
+    <section class="mt-120">
+      <h1 class="mega">Wanna learn more about static sites?</h1>
+      <p class="zeta semibold">Visit the <a href="/blog.html">blog</a> section for articles or watch the <a href="#">movie</a></p>
+      <div class="mt-60">
+        <a href="#" class="button-video button-video--compact">
+          <img src="/img/video.png">
+          <div class="callout">
+            <p class="callout-text">
+              <span class="zeta">It’s pretty</span>
+              <strong class="delta semibold">Simple</strong>
+            </p>
+          </div>
+          </a>
+      </div>
+    </section>
+    <section class="mt-50">
+      <p class="zeta p--wide">Sign up for our newsletter, if you want to hear about exciting things happening in the world of static websites, and of new Netlify features that are around the corner. We send out approx. twice a month.</p>
+      <form class="form form--fancy">
+        <p class="form-group">
+            <label class="visuallyhidden" for="input-email">Email</label>
+            <input type="email" name="email" id="input-email" placeholder="your@email.com">
+        </p>
+        <p class="form-group">
+          <label class="visuallyhidden" for="input-name">Name</label>
+          <input type="text" name="name" placeholder="Name">
+        </p>
+        <button type="submit" class="form-button">Sign up</button>
+      </form>
+    </section>
+    <section class="mt-60 mb-80">
+      <h1 class="alpha">Ready to be a web warrior of tomorrow?</h1>
+      <div class="cta">
+        <a href="#" class="button button--large">
+          <svg class="button-icon" width="68" height="68">
+            <use xlink:href="#icon-arrow" />
+          </svg>
+          <span class="button-label">START HERE</span>
+        </a>
+        <p class="small-2 overloud text-right">Basic packages <strong class="highlight">free forever</strong> – no credit card required</p>
+      </div>
+    </section>
+  </div>
+</div>
