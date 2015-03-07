@@ -205,28 +205,13 @@ ul {
   position: relative;
   overflow: hidden;
 }
-.l-wrap:before,
-.l-wrap:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-}
-.l-wrap:before {
-  left: 0;
-}
-.l-wrap:after {
-  right: 0;
-}
 .l-wrap-inner {
+  display: flex;
   max-width: $page-width;
   margin: 0 auto;
   padding: 0 (50px + $aside-width + 80px) 0 80px;
-  overflow: hidden;
   position: relative;
   z-index: 1;
-  
 }
 .l-main {
   float: left;
@@ -238,6 +223,15 @@ ul {
   width: $aside-width + 50px; // aside width + left padding
   margin-right: -($aside-width + 50px);
   padding-left: 50px;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100000px;
+    width: 10000px;
+    top: 0px;
+    left: 100%;
+  }
 }
 
 /* 

@@ -7,3 +7,13 @@ social-links:
   linkedin: 'https://www.linkedin.com/company/netlify'
   googleplus: 'https://plus.google.com/+NetlifyApp'
 
+
+excerpt_separator: <!-- excerpt -->
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"

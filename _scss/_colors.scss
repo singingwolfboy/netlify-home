@@ -114,13 +114,7 @@ svg {
 }
 
 /* Main and sidebar */
-
-.l-wrap:before, 
-.l-main {
-  background: $color-light;
-}
-.l-wrap:after, 
-.l-aside {
+.l-aside, .l-aside:after {
   background: $color-darkest;
   color: $color-light;
 }

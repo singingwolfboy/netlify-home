@@ -13,7 +13,7 @@ var messages = {
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('bin/jekyll', ['build'], {stdio: 'inherit'})
+    return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -57,6 +57,8 @@ gulp.task('watch', function () {
     gulp.watch(['_scss/*.scss', '_scss/components/*.scss', '_scss/pages/*.scss'], ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*', 'img/*', 'js/*.js'], ['jekyll-rebuild']);
 });
+
+gulp.task('build', ['sass', 'jekyll-build']);
 
 /**
  * Default task, running just `gulp` will compile the sass,

@@ -39,12 +39,16 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   
   /* Reduce paddings around main and aside */
   .l-wrap-inner {
+    display: block;
     padding: 0 ($aside-width + 40px) 0 40px;
   }
   .l-aside {
     width: $aside-width + 40px;
     padding-left: 40px;
     margin-right: -($aside-width + 40px);
+    &:after {
+      display: none;
+    }
   }
   .l-main {
     padding-right: 45px;

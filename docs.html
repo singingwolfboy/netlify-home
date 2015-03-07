@@ -24,13 +24,13 @@ layout: default
       {% endfor %}
       
       <div class="banner" role="complementary">
-        <p>Made for web developers <a href="/"><strong>Netlify</strong></a> is the default entry point to the world of static</p>
+        <p>Made for web developers <strong class="highlight">Netlify</strong> is the default entry point to the world of static</p>
       </div>
     </div>
     
-    <div class="l-aside inverse blog-aside" role="complementary">
+    <div class="l-aside inverse docs-aside" role="complementary">
       <h1 class="blog-aside-title">More Articles</h1>
-      {% for post in site.posts %}
+      {% for i in (1..4) %}
         <article class="blurb">
           <header class="blurb-hd">
             <div class="media">
@@ -38,13 +38,13 @@ layout: default
                 <img src="http://placehold.it/80x80" srcset="http://placehold.it/80x80 1x, http://placehold.it/160x160 2x, http://placehold.it/240x240" alt="Mathias Biilmann" width="80" height="80">
               </div>
               <div class="media-bd">
-                <h1 class="blurb-title">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</h1>
-                <p class="blurb-meta"><a href="{{post.url}}" class="link">by {{post.author}}</a></p>
+                <h1 class="blurb-title">5 reasons to go static</h1>
+                <p class="blurb-meta"><a href="#" class="link">by Mathias Biilmann</a></p>
               </div>
             </div>
           </header>
           <div class="blurb-bd">
-            <p class="small muted">{{post.description}}</p>
+            <p class="small muted">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
           </div>
         </article>
       {% endfor %}
