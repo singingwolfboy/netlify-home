@@ -42,6 +42,16 @@
   }
 }
 
+.inverse .form--fancy {
+  background: transparentize($color-darkest, 0.95);
+  input {
+    background: transparentize($color-dark, 0.3);
+  }
+  ::-webkit-input-placeholder {
+    color: $color-muted;
+  }
+}
+
 /* To style placeholders
  * http://css-tricks.com/snippets/css/style-placeholder-text/
  */

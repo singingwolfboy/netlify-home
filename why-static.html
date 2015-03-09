@@ -1,0 +1,114 @@
+---
+layout: default
+---
+<div class="bg-light-muted-2">
+  <div class="content content--narrow">
+    <section class="bb">
+      <header class="text-center">
+        <h1 class="mega mt-110">Why Static?</h1>
+        <p class="highlight mb-80">Netlify’s State of Affairs Nov. 17, 2014</p>
+
+        <h2 class="bold highlight mb-60">Ladies and Gentle men</h2>
+      </header>
+      <div class="l-2-col-auto mb-40 muted">
+        <p>
+          The current web is a mess. Seriously though. Every week we go to Hackernews and follow a broken link. Just two weeks ago 7 million Drupal sites were infected with malware. 79% of all Wordpress sites are vulnerable to known exploits.
+        </p>
+
+        <p>
+          The emergence of mobile means a lot of slow loading sites with towering bounce rates and loss of business to follow.
+          We should do better. We must actually. Because we can.
+          Static websites have always been faster, safer, simpler and cheaper. really seen the light of day.
+        </p>
+
+        <p>
+          Though not all static glimmers in gold. There is still no CMS, so updating is developer-only. And though static sites are faster in theory, it’s still been a complex process to set it up just right. Which is the whole motivation behind Netlify. 
+        </p>
+        <p>
+          We want static sites to be as easy to make as possible, while still gaining all the speed, etc., that static sites promise to deliver.It’s just that browsers and shared hosting services weren’t good enough, so there were too many compromises. Making the slow, vulnerable and expensive traditional “dynamic” sites the best alternative.
+        </p>
+        <p>
+          But no more. The browser is all grown-up, and CDNs have  really seen the light of day.
+        </p>
+        <p>
+          Though not all static glimmers in gold. There is still no CMS, so updating is developer-only. And though static sites are faster in theory, it’s still been a complex process to set it up just right. Which is the whole motivation behind Netlify. We want static sites to be as easy to make as possible, while still gaining all the speed, etc., that static sites promise to deliver.
+        </p>
+      </div>
+    </section>
+    <section class="bb">
+      <header class="text-center">
+        <h2 class="bold highlight mb-60 mt-60">What is a static site?</h2>
+      </header>
+      <div class="l-2-col-auto mb-40 muted editorial-text">
+        <p>
+          Static websites are faster, safer, simpler and cheaper. Here we explain how.  Static sites are simple, but today they can do almost anything a traditional (dynamic) site can.
+          Basically it’s CSS, HTML, Javascript, and likewise.
+        </p>
+        <p>
+          What it isn’t is: PHP, Mysql, .net, Ruby, etc. You can use in all of those in creating the site with for example a static site generator. But you can’t actually use them in your hosting environment.
+        </p>
+        <p>
+          A traditional (dynamic) site needs to be hosted on a server, and it needs to render every single time a user visits.
+          The difference with a “static” site is that you build it BEFORE you deploy it. So what’s live are only already rendered files. So there are no so-called movable parts live and you get to host the site on a CDN. (Content Delivery Network). Anything that still needs rendering will be done so by the browser. Pretty cool if you think about it.
+        </p>
+        <p>
+          This all means a number of things. All of them good if you are going static.
+        </p>
+        <p>
+          <strong>1. Speed & Performance.</strong> That your site will be served from a CDN instead of a single server means much lower latency and much higher uptime (if one CDN server goes down, traffic just goes somewhere else, but when your Godaddy or One.com server goes down, your site goes offline).
+        </p>
+        <p>
+          <strong>2. Security.</strong> As there is no movable parts, no php or scripts being exectuted, there is no way to inject malware. Malware and the inherent structure of traditional web tech is becoming a major issue (we wrote an article about it)
+        </p>
+        <p>
+          <strong>3. Simplicity.</strong> Again there are no moving parts. You don’t need to optimize your how fast your code will be rendered, as it’s already rendered when you deploy it. So no need to worry about server updates breaking your site, etc. When it’s live it’s live, and you can go on to doing other things. Like ponder what’s up with cheese, or if you should sign that petition against the use of daylight savings. (You should. Only God gets to mess with time).
+        </p>
+        <p>
+          <strong>4. Cost.</strong> It’s way way way cheaper to scale. And it all happens automatically. So no having to cover yourself by buying into a larger hosting service than you need, or having your servers cave to traffic spikes. As an developer or agency producing just a small amount of sites per year, this alone could be saving you thousands of dollars.
+        </p>
+      </div>
+    </section>
+
+    <section class="bb mb-80">
+      <header class="text-center">
+        <h2 class="bold highlight mb-60 mt-60">What sites should / could be static?</h2>
+      </header>
+      <div class="l-2-col-auto mb-40 muted">
+        <p>
+          Most sites would benefit from being “static”. Right now there are two exceptions:
+        </p>
+        <p>
+          Those that need a CMS (major exception we know, but check in with us regularly - we are working on something huge), and those that need constant updating. 
+        </p>
+        <p>
+          Building a static site takes a while - typically perhaps 20 seconds - and that’s too long a wait if you are updating lets say every minute.<br/>
+          So if you are making a new stack overflow where the site is updated constantly you are fresh out of luck. If not, keep reading!
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+<section class="bg-dark-cover inverse text-center bb bb--large">
+  <div class="content content--narrow">
+    
+    <!-- Newsletter -->
+    <section class="mt-90 mt-120 mb-120">
+      <header>
+        <h1 class="alpha mb-30 muted">Sign up for our newsletter and stay tuned on all that’s static</h1>
+        <p class="zeta p--wide muted">Sign up for our awesome newsletter, if you want to hear about exciting things happening in the world of static websites, and of new Netlify features that are around the corner.</p>
+      </header>
+      <form class="form form--fancy mt-25">
+        <p class="form-group">
+            <label class="visuallyhidden" for="input-email">Email</label>
+            <input type="email" name="email" id="input-email" placeholder="your@email.com">
+        </p>
+        <p class="form-group">
+          <label class="visuallyhidden" for="input-name">Name</label>
+          <input type="text" name="name" placeholder="Name">
+        </p>
+        <button type="submit" class="form-button">Sign up</button>
+      </form>
+      <p class="x-small mt-30 mb-30 p--full-w muted">We send out aprox. twice a month. Go ahead, we won’t give away your address or anything, and each email is handwritten (on a keyboard).</p>
+    </section>
+  </div>
+</section>

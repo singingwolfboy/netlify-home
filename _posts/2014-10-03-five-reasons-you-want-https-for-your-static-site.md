@@ -2,7 +2,7 @@
 title: "Five Reasons you want HTTPS for your Static site"
 short_title: "Five Reasons for HTTPS"
 byline: "Does HTTPS really make sense for a static web site?"
-author: Mathias Biilmann Christensen
+author: Mathias Biilmann
 description: "HTTPS is not just for E-commerce sites. Here's five reasons you should invest in HTTPS for your static site today."
 tags: ["Security", "Netlify", "HTTPS"]
 image: /img/posts/lock.jpg
