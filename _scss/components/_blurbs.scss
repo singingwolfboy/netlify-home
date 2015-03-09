@@ -59,6 +59,9 @@
   .blurb {
     width: 245px;
   }
+  .blurb--wide {
+    width: 278px;
+  }
 }
 .l-third .blurb {
   @extend .center;

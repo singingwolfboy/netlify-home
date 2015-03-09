@@ -20,6 +20,10 @@
   height: 4px;
   margin-top: -4px;
 }
+.bb--mega:after {
+  height: 16px;
+  margin-top: -16px;
+}
 
 .bb--muted:after {
   background-color: $color-highlight-lighter;
