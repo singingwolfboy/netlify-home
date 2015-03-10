@@ -8,8 +8,7 @@
   quote: Netlify is absolutely amazing. Before I believed in God and Humanity. Now only Netlify. All Hail Netlify. Amen.
   photo: http://placehold.it/240x180
 
-- name: James Stone
-  company: Author, Speaker, Consultant
-  link: https://www.jamesstone.com
-  quote: Netlify is absolutely amazing. Before I believed in God and Humanity. Now only Netlify. All Hail Netlify. Amen.
-  photo: http://placehold.it/240x180
+- cite: Jaime Iniesta, CTO of Site Validator
+  link: https://sitevalidator.com
+  quote: Netlify provides the simplest way to deploy the fastest static sites. We love its integration with Github, and the post-deploy hooks allows for an easy integration with other services
+  photo: /img/testimonials/jaime.png
