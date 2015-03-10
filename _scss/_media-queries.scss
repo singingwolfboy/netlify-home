@@ -46,9 +46,9 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     width: $aside-width + 40px;
     padding-left: 40px;
     margin-right: -($aside-width + 40px);
-    &:after {
-      display: none;
-    }
+  }
+  .l-aside--right:after, .l-aside--left:before {
+    display: none;
   }
   .l-main {
     padding-right: 45px;
