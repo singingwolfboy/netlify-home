@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="bg-light-muted-2">
+  <div class="content content--narrow">
+    <section class="bb mb-120">
+      <header class="text-center">
+        <h1 class="mega mt-110 mb-40">Be Social</h1>
+        <p class="epsilon bold highlight mb-40">We're here to make the world a better place</p>
+      </header>
+      <div class="l-2-col-auto mb-40 muted">
+        <p>
+          Or at least it’s internet faster, safer, simpler and cheaper. But we’re still in early stages, doing our upmost to get to critical mass. We are really loving all the love we get, so please keep it coming, it means the world to us.
+        </p>
+        <p>
+          You can join us on facebook and linkedin.<br>
+          And please tweet @netlify when you have a site live with us. We will love you much back.
+        </p>
+        <p>
+          On LinkedIN we also have a group about all web tech thats static. It’s not commercial at all, we really just want to exchange ideas and experiences on how to take static to the internet.
+        </p>
+        <p>
+          It’s called “Static tech” and we would love for you to join. Whether you are just learning to code or invented Ruby on rails - let’s make the net faster, safer, simpler and cheaper :-)
+        </p>
+      </div>
+
+      <div class="l-container mt-80 mb-80 text-center">
+        <ul class="nav nav--social nav--centered nav--wide">
+          {% for link in site.social-links %}
+          <li>
+            <a href="{{link[1]}}" class="icon-link--square icon-link--large icon-link--inverse icon-link--{{link[0]}}">
+              <svg width="50" height="50" class="icon-{{link[0]}}--square">
+                <use xlink:href="#icon-{{link[0]}}"/>
+              </svg>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<section class="bg-dark-cover inverse text-center bb bb--large">
+  <div class="content content--narrow">
+    
+    <!-- Newsletter -->
+    <section class="mt-90 mt-120 mb-120">
+      <header>
+        <h1 class="alpha mb-30 muted">Sign up for our newsletter and stay tuned on all that’s static</h1>
+        <p class="zeta p--wide muted">Sign up for our awesome newsletter, if you want to hear about exciting things happening in the world of static websites, and of new Netlify features that are around the corner.</p>
+      </header>
+      <form class="form form--fancy mt-25">
+        <p class="form-group">
+            <label class="visuallyhidden" for="input-email">Email</label>
+            <input type="email" name="email" id="input-email" placeholder="your@email.com">
+        </p>
+        <p class="form-group">
+          <label class="visuallyhidden" for="input-name">Name</label>
+          <input type="text" name="name" placeholder="Name">
+        </p>
+        <button type="submit" class="form-button">Sign up</button>
+      </form>
+      <p class="x-small mt-30 mb-30 p--full-w muted">We send out aprox. twice a month. Go ahead, we won’t give away your address or anything, and each email is handwritten (on a keyboard).</p>
+    </section>
+  </div>
+</section>

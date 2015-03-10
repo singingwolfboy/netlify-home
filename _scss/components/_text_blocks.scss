@@ -1,9 +1,16 @@
 /*
  * Text blocks where some of the markdown generated tags have a special look'n feel
  */
- 
+
 .editorial-text {
   strong {
     color: $color-highlight;
+  }
+}
+
+.docs-main {
+  p {
+    max-width: 40em;
+    margin-left: 0;
   }
 }

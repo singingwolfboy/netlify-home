@@ -117,7 +117,7 @@ svg {
 }
 
 /* Main and sidebar */
-.l-aside, .l-aside:after {
+.l-aside, .l-aside--right:after, .l-aside--left:before {
   background: $color-darkest;
   color: $color-light;
 }

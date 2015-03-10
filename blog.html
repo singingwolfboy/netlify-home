@@ -2,9 +2,9 @@
 layout: default
 ---
 <div class="l-wrap bg-light-muted-2">
-  <div class="l-wrap-inner">
+  <div class="l-wrap-inner l-wrap-inner--main-left">
     
-    <div class="l-main" role="main">
+    <div class="l-main l-main--left" role="main">
       {% for post in site.posts %}
       <article class="post">
         <header class="post-hd">
@@ -28,7 +28,7 @@ layout: default
       </div>
     </div>
     
-    <div class="l-aside inverse blog-aside" role="complementary">
+    <div class="l-aside l-aside--right inverse blog-aside" role="complementary">
       <h1 class="blog-aside-title">More Articles</h1>
       {% for post in site.posts %}
         <article class="blurb">

@@ -3,7 +3,8 @@ $nav-width: 270px;
 $nav-bg-color:             rgb(64, 75, 76);
 $nav-primary-link-color:   rgb(255, 255, 255);
 $nav-secondary-link-color: rgb(126, 131, 131);
-$nav-icon-color:           rgb(101,118, 118);
+$nav-nested-link-color:    rgb(191, 207, 205);
+$nav-icon-color:           rgb(101, 118, 118);
 $nav-icon-bg-colors: (
   twitter:    rgb(79, 92, 93), 
   facebook:   rgb(62, 74, 74), 
@@ -92,6 +93,15 @@ html {
       margin-right: 15px;
     }
   }
+  .active {
+    color: $color-highlight;
+  }
+  .nav {
+    position: relative;
+    margin-left: -10000px;
+    padding: 18px 15px 18px 10035px;
+    background: $nav-bg-color;
+  }
 }
 
 .nav--primary {
@@ -104,6 +114,12 @@ html {
   .no-touch & a:hover {
     color: $color-highlight;
   }
+  .nav a {
+    color: $nav-nested-link-color;
+    &.current {
+      color: $color-highlight;
+    }
+  }
 }
 
 .nav--secondary {
@@ -112,6 +128,10 @@ html {
   a {
     color: $nav-secondary-link-color;
   }
+}
+
+.nav--flush-left {
+  margin-left: 0;
 }
 
 .nav--inline {
@@ -133,10 +153,36 @@ html {
     line-height: 25px;
   }
 
+  .icon-link--large {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+
   @each $name, $color in ($nav-icon-bg-colors) {
     .icon-link--#{$name} {
       background: $color;
     }
   }
+
+  .icon-link--inverse {
+    color: $color-lightest;
+    @each $name, $color in ($nav-icon-bg-colors) {
+      &.icon-link--#{$name} {
+        background: lighten($color, 50%);
+      }
+    }
+  }
 }
 
+.nav--centered {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nav--inline.nav--wide {
+  li {
+    margin-right: 35px;
+  }
+}

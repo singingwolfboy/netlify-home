@@ -173,6 +173,41 @@ $color-sonar: $color-darker;
     left: -35px;
     margin-top: -10px; //* makes it easier to just 0 out the margins when going responsive than to change top and left
     margin-left: -20px;
+    transition: opacity 0.2s;
+  }
+  .play-button {
+    position: absolute;
+    background: linear-gradient(to right, #f1f1f1, #ececec);
+    width: 102px;
+    height: 102px;
+    top: 50%;
+    left: 50%;
+    margin-top: -56px;
+    margin-left: -54px;
+    border-radius: 100%;
+    transition: box-shadow 0.2s;
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 30px 0 34px 61px;
+      border-color: transparent transparent transparent #4BC0B5;
+      position: absolute;
+      top: 20px;
+      left: 29px;
+    }
+  }
+  &:hover .play-button {
+    box-shadow: 2px 2px 25px rgba(0,0,0,0.2);
+  }
+  &.playing {
+    .callout {
+      opacity: 0;
+    }
+    .play-button {
+      display: none;
+    }
   }
 }
 .button-video--compact {
