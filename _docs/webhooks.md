@@ -3,7 +3,7 @@ title: Webhooks
 position: 60
 ---
 
-# Webhooks
+## Webhooks
 
 Netlify support both incoming and outgoing Webhooks.
 

@@ -3,7 +3,7 @@ title: Headers & Basic Auth
 position: 50
 ---
 
-# Headers & Basic Auth
+## Headers & Basic Auth
 
 You can configure custom headers and basic auth for your Netlify site by adding a `_headers` file to the root of your site folder.
 

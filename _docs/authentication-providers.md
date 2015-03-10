@@ -3,7 +3,7 @@ title: OAuth Providers
 position: 80
 ---
 
-# Authentication Providers
+## Authentication Providers
 
 One thing that can hold back single page apps with no backend is authentication.
 

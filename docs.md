@@ -2,7 +2,7 @@
 layout: docs
 ---
 
-# Welcome to Netlify
+## Welcome to Netlify
 
 [Netlify](http://www.netlify.com) builds, deploys and hosts your front end.
 

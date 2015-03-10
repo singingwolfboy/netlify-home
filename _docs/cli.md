@@ -3,7 +3,7 @@ title: Command Line
 position: 10
 ---
 
-# Command Line Tools
+## Command Line Tools
 
 The Netlify command line tools lets you deploy sites or configure continuous deployment straight from the command line.
 
@@ -11,6 +11,7 @@ The Netlify command line tools lets you deploy sites or configure continuous dep
 ## Installation
 
 You'll need `npm`, the node package manager, to install the Netlify cli:
+
 
 ```
 npm install netlify-cli -g

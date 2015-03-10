@@ -3,13 +3,11 @@ title: API
 position: 100
 ---
 
-Netlify REST API
-===================
+## Netlify REST API
 
 Netlify is a hosting service for the programmable web. It understands your documents and provides an API to deploy sites, manage form submissions, inject javascript snippets and do intelligent updates of HTML documents. This is a REST-style API that uses JSON for serialization and OAuth 2 for authentication.
 
-Making a request
-----------------
+## Making a request
 
 All URLs start with `https://api.netlify.com/api/v1/`. **SSL only**. The path is prefixed with the API version. If we change the API in backward-incompatible ways, we'll bump the version marker and maintain stable support for the old URLs.
 
@@ -19,8 +17,7 @@ To make a request for all the sites you have access to, you'd append the sites i
 curl -H 'User-Agent: MyApp (yourname@example.com)' https://api.netlify.com/api/v1/sites?access_token=oauth2_access_token
 ```
 
-Authenticating
---------------
+## Authenticating
 
 Netlify uses OAuth2 for authentication. All requests must use HTTPS. You'll need an application client key and a client secret before you can access the Netlify API. You can register a new application at [https://api.netlify.com/applications](https://app.netlify.com/applications).
 
@@ -28,8 +25,7 @@ If you're making a public integration with Netlify for others to enjoy, you must
 
 The Oauth2 end user authorization endpoint is `https://app.netlify.com/authorize`.
 
-Endpoints
----------
+## Endpoints
 
 * `/sites` all sites
 * `/sites/{site_id}/forms` all forms for a site
@@ -48,8 +44,7 @@ Endpoints
 
 A note on the `site_id`: this can either be the actual `id` of a site, but it is interchangeable with the full domain for a site (some-site.bitballoon.com or site.example.com).
 
-Rate Limiting
-=============
+## Rate Limiting
 
 To protect Netlify from getting flooded by automated deploys or misbehaving applications, the Netlify API is rate limited.
 
@@ -65,8 +60,7 @@ X-RateLimit-Reset: 1372700873
 
 If you need higher limits, please contact us.
 
-Pagination
-==========
+## Pagination
 
 Requests that return multiple items will be paginated to 100 items by default. You can specify further pages with the ?page parameter. You can also set a custom page size up to 100 with the ?per_page parameter.
 
@@ -93,13 +87,11 @@ The possible rel values are:
   Shows the URL of the immediate previous page of results.
 
 
-Sites
-=====
+## Sites
 
 The `/sites` endpoint allows you to access the sites deployed on Netlify.
 
-Get Sites
----------
+### Get Sites
 
 * `GET /sites` will return all sites you have access to.
 
@@ -121,8 +113,7 @@ Get Sites
 ]
 ```
 
-Get Site
---------
+### Get Site
 
 * `GET /sites/3970e0fe-8564-4903-9a55-c5f8de49fb8b` will return the site from its ID
 * `GET /sites/www.example.com` will return the site matching the domain `www.example.com`
@@ -144,8 +135,7 @@ Get Site
 }
 ```
 
-Create Site
------------
+### Create Site
 
 Creating a site will initiate a new deploy. You can either create a new site with a list of files you intend to upload, or by posting a ZIP file.
 
@@ -191,8 +181,7 @@ This will return `201 Created` with the API URL for the new site in the `Locatio
 
 To upload any required files, use the `PUT /sites/{site_id}/files/{path}` endpoint for each file. Once all the files are uploaded, the processing of the site will begin.
 
-Update Site
------------
+### Update Site
 
 * `PATCH /sites/{site_id}` will let you update some attributes on a site
 * `PUT /sites/{site_id}` will let you update some attributes on a site
@@ -200,8 +189,7 @@ Update Site
 This lets you update the `name`, `custom_domain`, `password` and `notification_email` fields of a site.
 
 
-Destroy Site
-------------
+### Destroy Site
 
 * `DELETE /sites/{site_id}` will permanently delete a site
 * `DELETE /sites/{site_domain}` will permanently delete a site
@@ -209,13 +197,11 @@ Destroy Site
 This will return `200 OK`.
 
 
-Submissions
-===========
+## Submissions
 
 The `/submissions` endpoint gives access to the form submissions of your Netlify sites. You can scope submissions to a specific site (`/sites/{site_id}/submissions`) or to a specific form (`/forms/{form_id}/submissions`).
 
-Get Submissions
----------------
+### Get Submissions
 
 * `GET /submissions` will return a list of form submissions
 
@@ -243,13 +229,11 @@ Get Submissions
 ]
 ```
 
-Forms
-=====
+## Forms
 
 The `/forms` endpoint allow you to access forms from your Netlify sites. You can scope forms to a specific site with `/sites/{site_id}/forms`.
 
-Get Forms
----------
+### Get Forms
 
 * `GET /forms` will return a list of forms
 
@@ -274,13 +258,11 @@ Get Forms
 ]
 ```
 
-Files
-=====
+## Files
 
 All files deployed by Netlify can be read, updated and deleted through the API. Where the public URL of a file will serve the processed version, the files accessed through the API are the original uploaded files. Any changes to a file will trigger a reprocessing of the site and a new deploy will be stored in the site history. This means all changes made through the API can always be rolled back by the user through the dashboard UI.
 
-Get Files
----------
+### Get Files
 
 * `GET /sites/{site_id}/files` will return a list of all the files in the current deploy
 
@@ -295,8 +277,7 @@ Get Files
 ]
 ```
 
-Get File
---------
+### Get File
 
 * `GET /sites/{site_id}/files/{path-to-file}` returns the file
 
@@ -311,27 +292,23 @@ Get File
 
 You can get the raw contents of the file by using the custom media type `application/vnd.bitballoon.v1.raw` as the Content-Type of your HTTP request.
 
-Put File
---------
+### Put File
 
 * `PUT /sites/{site_id}/files/{path-to-file}` will add or update a file, reprocess all assets and create a new deploy
 
 The request body will be used as the new content for this file. If the site is still in uploading mode (after creating a site with a list of files) and this is the last file, it will start the processing of the site.
 
-Delete File
------------
+### Delete File
 
 * `DELETE /sites/{site_id}/files/{path-to-file}` will delete a file from the site.
 
 Note that this creates a new version of the site without the deleted file. The old version can still be rolled back and the file does not get deleted from Netlify's servers.
 
-Snippets
-========
+## Snippets
 
 Snippets are code snippets that will be injected into every HTML page of the website, either right before the closing head tag or just before the closing body tag. Each snippet can specify code for all pages and code that just get injected into "Thank you" pages shown after a successful form submissions.
 
-Get Snippets
-------------
+### Get Snippets
 
 * `GET /sites/{site_id}/snippets` get a list of snippets specific to this site
 
@@ -352,8 +329,7 @@ The `general` property is the code that will be injected right before either the
 
 The `goal` property is the code that will be injected into the "Thank you" page after a form submission. `goal_position` determines where to inject this code.
 
-Get Snippet
------------
+### Get Snippet
 
 * `GET /sites/{site_id}/snippets/{snippet_id}` get a specific snippet
 
@@ -368,28 +344,23 @@ Get Snippet
 }
 ```
 
-Add Snippet
---------------
+### Add Snippet
 
 * `POST /sites/{site_id}/snippets` add a new snippet to a site.
 
-Update Snippet
---------------
+### Update Snippet
 
 * `PUT /sites/{site_id}/snippets/{snippet_id}` replace a snippet.
 
-Delete Snippet
---------------
+### Delete Snippet
 
 * `DELETE /sites/{site_id}/snippets/{snippet_id}` delete a snippet.
 
-Metadata
-========
+## Metadata
 
 Each site has a metadata object. The properties of the metadata object can be used within the snippets for a site by sing the [Liquid](https://github.com/Shopify/liquid) template syntax.
 
-Get Metadata
-------------
+### Get Metadata
 
 * `GET /sites/{site_id}/metadata` get the metadata for a site
 
@@ -399,18 +370,15 @@ Get Metadata
 }
 ```
 
-Update Metadata
----------------
+### Update Metadata
 
 * `PUT /sites/{site_id}/metadata` replace the metdata object with a new metadata object
 
-Deploys
-=======
+## Deploys
 
 You can access all deploys for a specific site.
 
-Get Deploys
-------------
+### Get Deploys
 
 * `GET /sites/{site_id}/deploys` a list of all deploys
 
@@ -435,8 +403,7 @@ Get Deploys
 ]
 ```
 
-Get Deploy
-----------
+### Get Deploy
 
 * `GET /sites/{site_id}/deploys/{deploy_id}` a specific deploy
 
@@ -459,8 +426,7 @@ Get Deploy
 }
 ```
 
-Restore Deploy
---------------
+### Restore Deploy
 
 * `POST /sites/{site_id}/deploys/{deploy_id}/restore` restore an old deploy and make it the live version of the site
 

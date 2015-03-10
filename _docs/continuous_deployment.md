@@ -3,7 +3,7 @@ title: Continuous Deployment
 position: 20
 ---
 
-# Continuous Deployment
+## Continuous Deployment
 
 Continuous deployment works by connecting a Github repository to a Netlify site and keep the two in synch.
 

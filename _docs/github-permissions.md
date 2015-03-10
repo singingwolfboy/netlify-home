@@ -3,7 +3,7 @@ title: Github Permissions
 position: 90
 ---
 
-# Github Permissions
+## Github Permissions
 
 Netlify never stores Github Access Tokens.
 

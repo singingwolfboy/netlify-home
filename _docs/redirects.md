@@ -3,7 +3,7 @@ title: Redirects and Rewrite Rules
 position: 40
 ---
 
-# Redirects and Rewrite Rules
+## Redirects and Rewrite Rules
 
 You can configure redirects and rewrite rules for your Netlify site by adding a `_redirects` file to the root of your site folder.
 
