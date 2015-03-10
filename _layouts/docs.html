@@ -6,6 +6,9 @@ layout: default
     <div class="l-aside l-aside--left inverse docs-aside" role="complementary">
       <nav class="site-nav inverse" role="navigation">
         <ul class="nav nav--primary nav--nested nav--flush-left">
+          <li>
+            <a href="/docs.html"{% if page.url == "/docs.html" %} class="active"{% endif %}>Welcome</a>
+          </li>
           {% assign items = site.docs | sort: 'position' %}
           {% for doc_page in items %}
           <li>
@@ -16,6 +19,8 @@ layout: default
       </nav>
     </div>
     <div class="l-main l-main--right docs-main" role="main">
+
+
       {{content}}
     </div>
   </div>
