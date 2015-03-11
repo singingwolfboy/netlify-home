@@ -53,4 +53,6 @@
     });
     $(this).addClass("playing");
   });
+
+  $(".js-pinned").pin({containerSelector: ".js-pinning-container"})
 })();
