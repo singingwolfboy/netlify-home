@@ -70,17 +70,7 @@ title: Frequently Asked Questions
     </section>
     <section class="mt-50">
       <p class="zeta p--wide">Sign up for our newsletter, if you want to hear about exciting things happening in the world of static websites, and of new Netlify features that are around the corner. We send out approx. twice a month.</p>
-      <form class="form form--fancy">
-        <p class="form-group">
-            <label class="visuallyhidden" for="input-email">Email</label>
-            <input type="email" name="email" id="input-email" placeholder="your@email.com">
-        </p>
-        <p class="form-group">
-          <label class="visuallyhidden" for="input-name">Name</label>
-          <input type="text" name="name" placeholder="Name">
-        </p>
-        <button type="submit" class="form-button">Sign up</button>
-      </form>
+      {% include newsletter-form.html %}
     </section>
     <section class="mt-60 mb-80">
       <h1 class="alpha">Ready to be a web warrior of tomorrow?</h1>

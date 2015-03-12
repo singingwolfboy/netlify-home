@@ -295,6 +295,11 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       max-width: 745px + 2*40px;
     }
   }
+  .nav--inline.nav--wide {
+    li {
+      margin-right: 10px;
+    }
+  }
 }
 
 /* If the device height is big (eg. ipad portrait), the hero will look really bare. 

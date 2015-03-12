@@ -1,0 +1,33 @@
+---
+layout: default
+title: Thank You For Signing Up
+---
+<section class="bg-dark-muted inverse bb bb--large">
+  <div class="content text-center">
+    <header>
+      <h1 class="alpha mt-80 mb-80">
+        Thanks so much for signing up.<br/>
+        Looking forward to keeping you posted.
+      </h1>
+    </header>
+
+    <p class="large muted p--wide mb-110">
+      You can also check out the <a href="/contact.html">contact</a> section<br>
+      – there's a lot of way you can stay up to date with netlify and the world of static web-tech
+    </p>
+
+    <div class="l-container mt-80 mb-80 text-center">
+        <ul class="nav nav--social nav--centered nav--wide">
+          {% for link in site.social-links %}
+          <li>
+            <a href="{{link[1]}}" class="icon-link--square icon-link--large icon-link--{{link[0]}}">
+              <svg width="50" height="50" class="icon-{{link[0]}}--square">
+                <use xlink:href="#icon-{{link[0]}}"/>
+              </svg>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+  </div>
+</section>

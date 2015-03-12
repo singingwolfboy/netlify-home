@@ -149,17 +149,7 @@ layout: default
         <h1 class="alpha mb-30">Sign up for our newsletter and stay tuned on all that’s static</h1>
         <p class="zeta p--wide">Sign up for our awesome newsletter, if you want to hear about exciting things happening in the world of static websites, and of new Netlify features that are around the corner.</p>
       </header>
-      <form class="form form--fancy mt-25">
-        <p class="form-group">
-            <label class="visuallyhidden" for="input-email">Email</label>
-            <input type="email" name="email" id="input-email" placeholder="your@email.com">
-        </p>
-        <p class="form-group">
-          <label class="visuallyhidden" for="input-name">Name</label>
-          <input type="text" name="name" placeholder="Name">
-        </p>
-        <button type="submit" class="form-button">Sign up</button>
-      </form>
+      {% include newsletter-form.html %}
       <p class="x-small mt-30 mb-30 p--full-w">We send out aprox. twice a month. Go ahead, we won’t give away your address or anything, and each email is handwritten (on a keyboard).</p>
     </section>
 
