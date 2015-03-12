@@ -54,11 +54,17 @@ svg {
 .muted {
   color: $color-muted;
 }
+.dark {
+  color: $color-dark;
+}
 .loud {
   color: $color-darker;
 }
 .overloud {
   color: $color-darkest;
+}
+.light {
+  color: $color-light;
 }
 
 /* Dark background */

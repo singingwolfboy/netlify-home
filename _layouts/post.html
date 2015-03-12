@@ -23,28 +23,25 @@ layout: default
       <div class="banner" role="complementary">
         <p>Made for web developers <strong class="highlight">Netlify</strong> is the default entry point to the world of static</p>
       </div>
+
+      <div id="disqus_thread" class="disqus"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'netlify';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
     </div>
     
     <div class="l-aside l-aside--right inverse blog-aside" role="complementary">
       <h1 class="blog-aside-title">More Articles</h1>
-      {% for post in site.posts %}
-        <article class="blurb">
-          <header class="blurb-hd">
-            <div class="media">
-              <div class="media-img optional">
-                <img src="http://placehold.it/80x80" srcset="http://placehold.it/80x80 1x, http://placehold.it/160x160 2x, http://placehold.it/240x240" alt="Mathias Biilmann" width="80" height="80">
-              </div>
-              <div class="media-bd">
-                <h1 class="blurb-title">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</h1>
-                <p class="blurb-meta"><a href="{{post.url}}" class="link">by {{post.author}}</a></p>
-              </div>
-            </div>
-          </header>
-          <div class="blurb-bd">
-            <p class="small muted">{{post.description}}</p>
-          </div>
-        </article>
-      {% endfor %}
+      {% include post-list.html %}
     </div>
   </div>
 </div>

@@ -1,0 +1,21 @@
+{% for post in site.posts %}
+    <article class="blurb">
+      <header class="blurb-hd">
+        <div class="media">
+          <div class="media-img optional">
+            {% author_img post.author%}
+          </div>
+          <div class="media-bd">
+            <h1 class="blurb-title">
+              <a href="{{post.url}}" class="light">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</a>
+            </h1>
+            <p class="blurb-meta"><a href="{{post.url}}" class="link">by {{post.author}}</a></p>
+          </div>
+        </div>
+      </header>
+      <div class="blurb-bd">
+        <p class="small muted">{{post.description}}</p>
+      </div>
+    </article>
+  {% endfor %}
+</div>
