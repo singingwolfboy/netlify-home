@@ -220,6 +220,7 @@ ul {
 .l-main {
   float: left;
   width: 100%;
+  padding-bottom: 80px;
 }
 .l-main--left {
   padding-right: 60px;
@@ -230,6 +231,7 @@ ul {
 .l-aside {
   float: right;
   position: relative;
+  padding-bottom: 80px;
 }
 .l-aside--right {
   width: $aside-width + 50px; // aside width + left padding

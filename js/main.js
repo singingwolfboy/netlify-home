@@ -58,5 +58,5 @@
     $(this).addClass("playing");
   });
 
-  $(".js-pinned").pin({containerSelector: ".js-pinning-container"})
+  $(".js-pinned").pin({containerSelector: ".js-pinning-container", minWidth: 870, padding: {bottom: 80}});
 })();

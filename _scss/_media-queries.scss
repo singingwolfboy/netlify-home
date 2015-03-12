@@ -38,32 +38,33 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   }
   
   /* Reduce paddings around main and aside */
-  .l-wrap-inner {
+  .l-wrap-inner--main-left {
     display: block;
     padding: 0 ($aside-width + 40px) 0 40px;
+    .l-aside {
+      width: $aside-width + 40px;
+      padding-left: 40px;
+      margin-right: -($aside-width + 40px);
+    }
+    .l-aside--right:after {
+      display: none;
+    }
+    .l-main {
+      padding-right: 45px;
+    }
+    .post-title {
+      font-size: 50px; /* Kilo */
+      line-height: 65px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .blog-aside-title {
+      font-size: 42px;
+      line-height: 45px;
+      margin-bottom: 110px;
+    }
   }
-  .l-aside {
-    width: $aside-width + 40px;
-    padding-left: 40px;
-    margin-right: -($aside-width + 40px);
-  }
-  .l-aside--right:after, .l-aside--left:before {
-    display: none;
-  }
-  .l-main {
-    padding-right: 45px;
-  }
-  .post-title {
-    font-size: 50px; /* Kilo */
-    line-height: 65px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .blog-aside-title {
-    font-size: 42px;
-    line-height: 45px;
-    margin-bottom: 110px;
-  }
+  
 }
 
 @include breakpoint($bp-med-large) { //* Tweak point to leave more room for hero and main
@@ -133,6 +134,10 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   /* Show alternate elements for medium size */
   .show-med {
     display: block;
+  }
+
+  .text-center-med {
+    text-align: center;
   }
   
     
@@ -212,6 +217,13 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   /* 
    * Main/aside layout goes in one column
    */
+   .l-wrap-inner {
+    display: block;
+    .l-aside--left:after {
+      display: none;
+    }
+  }
+
   .l-wrap-inner {
     max-width: 745px + 2*40px;
     padding: 0 40px;
@@ -227,6 +239,9 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   }
   .l-main {
     border-bottom: 3px solid $color-highlight;
+  }
+  .l-wrap-inner--main-left .l-main {
+    padding: 0;
   }
   .l-wrap:before,
   .l-wrap:after,
@@ -260,6 +275,25 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .blog-aside-title {
     margin: 70px 0 40px;
     text-align: center;
+  }
+
+  /* When we have a left menu, we make it a mobile top accordeon */
+  .l-mobile-menu {
+    .l-wrap-inner {
+      margin: 0;
+      padding: 0;
+      max-width: none;
+    }
+    .nav--primary {
+      margin: 0;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .l-main {
+      margin: 0 auto;
+      padding: 0 40px 80px;
+      max-width: 745px + 2*40px;
+    }
   }
 }
 
