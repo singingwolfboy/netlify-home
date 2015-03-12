@@ -1,4 +1,8 @@
 (function() {
+  $(".button").on('click', function(e) {
+    $(this).addClass("js-clicked");
+  });
+
   $('.off-canvas-toggle').on('click', function(e) {
     e.preventDefault();
     $('.off-canvas-wrap').toggleClass('open-menu');
