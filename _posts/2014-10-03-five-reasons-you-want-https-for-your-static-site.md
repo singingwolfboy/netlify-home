@@ -6,6 +6,7 @@ author: Mathias Biilmann
 description: "HTTPS is not just for E-commerce sites. Here's five reasons you should invest in HTTPS for your static site today."
 tags: ["Security", "Netlify", "HTTPS"]
 image: /img/posts/lock.jpg
+thumbnail: /img/posts/thumbnails/lock.jpg
 ---
 
 > "Does HTTPS really make any sense for a static web site?"
