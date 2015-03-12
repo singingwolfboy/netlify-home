@@ -23,6 +23,7 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: "post"
+      permalink: /blog/:year/:month/:day/:title.html
   - scope:
       path: ""
       type: "docs"
