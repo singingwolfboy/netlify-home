@@ -45,6 +45,6 @@ netlify deploy
 
 This site is a great example of a project built on Netlify.
 
-All of our documentation is in a [Github repository](https://www.github.com/netlify/docs).
+All of our documentation (this whole site in fact) is in a [Github repository](https://github.com/netlify/netlify-home).
 
-Whenever we push to Github or accept a pull request, Netlify will do a clean build of the documentation with [mkdocs](http://www.mkdocs.org/) and deploy the result.
+Whenever we push to Github or accept a pull request, Netlify will do a clean build of the site with [Jekyll](http://jekyllrb.com/) and deploy the result.
