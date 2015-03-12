@@ -44,10 +44,10 @@
     e.preventDefault();
 
     playerId++;
-    $(this).find("img").attr("id", "player-" + (playerId));
+    var $img = $(this).find("img").attr("id", "player-" + (playerId));
     player = new YT.Player("player-" + playerId, {
-        width : '505',
-        height : '345',
+        width : $img.width(),
+        height : $img.height(),
         videoId : $(this).data('video-id'),
         playerVars: { 'autoplay': 1 },
         events : {
