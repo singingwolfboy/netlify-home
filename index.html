@@ -184,7 +184,7 @@ layout: default
             <header class="blurb-hd">
               <div class="media">
                 <div class="media-img optional">
-                  <img src="http://placehold.it/80x80" srcset="http://placehold.it/80x80 1x, http://placehold.it/160x160 2x, http://placehold.it/240x240" alt="Mathias Biilmann" width="80" height="80">
+                  {% author_img post.author %}
                 </div>
                 <div class="media-bd">
                   <h1 class="blurb-title">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</h1>
