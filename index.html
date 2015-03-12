@@ -187,7 +187,9 @@ layout: default
                   {% author_img post.author %}
                 </div>
                 <div class="media-bd">
-                  <h1 class="blurb-title">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</h1>
+                  <h1 class="blurb-title">
+                    <a href="{{post.url}}" class="light">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</a>
+                  </h1>
                   <p class="blurb-meta"><a href="{{post.url}}" class="link">by {{post.author}}</a></p>
                 </div>
               </div>
