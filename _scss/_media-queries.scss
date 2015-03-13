@@ -240,8 +240,21 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .l-main {
     border-bottom: 3px solid $color-highlight;
   }
-  .l-wrap-inner--main-left .l-main {
-    padding: 0;
+  .l-wrap-inner--main-left {
+    .l-main {
+     padding: 0;
+    }
+    .blog-aside-title {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    .blurb-title a {
+      color: $color-highlight;
+    }
+    .l-aside {
+      padding-left: 0;
+      padding-right: 40px;
+    }
   }
   .l-wrap:before,
   .l-wrap:after,
@@ -638,6 +651,10 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
    */
   .legalese {
     padding: 0;
+    h1 {
+      padding-top: 0;
+      border: none;
+    }
     ol h2:before {
       display: none;
     }
@@ -650,7 +667,66 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       }
     }
   }
-  
+
+  .inline-block .icon-link--round {
+    margin-right: 10px;
+  }
+  .nav--inline.nav--wide {
+    li:last-child {
+      margin-right: 0;
+    }
+    .icon-link--large {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  .mobile-stack-images img {
+    display: block;
+    margin: 30px auto;
+  }
+
+  /* Responsive tables in docs: */
+  .docs-main {
+    table {
+      margin: 20px 0;
+      width: 100%;
+    }
+    thead {
+      display: none;
+    }
+    tbody, tr, th, td {
+      display: block;
+      padding: 0;
+      text-align: left;
+      white-space: normal;
+    }
+    td {
+      padding: 0 10px;
+    }
+    td[scope='row'] {
+      background: $color-highlight;
+      color: $color-lightest;
+    }
+    td[data-title] {
+      text-align: right;
+    }
+    td[data-title]:before {
+      content: attr(data-title);
+      float: left;
+      font-size: .8em;
+      color: $color-muted;
+      margin-right: 20px;
+    } 
+    td:last-child {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @include breakpoint($bp-small-2) {

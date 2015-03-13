@@ -59,4 +59,28 @@
   });
 
   $(".js-pinned").pin({containerSelector: ".js-pinning-container", minWidth: 870, padding: {bottom: 80}});
+
+  /* Responsive tables in documentation */
+  $(".docs-main table").each(function() {
+    var $td;
+    var $table = $(this);
+    var titles = [];
+    $("th", $table).each(function() {
+      titles.push($(this).text());
+    });
+
+    $("tbody tr", $table).each(function() {
+      console.log("Row: %o", this);
+      $("td", this).each(function(index) {
+        $td = $(this);
+        if (index) {
+          $(this).attr("data-title", titles[index]);  
+        } else {
+          $(this).attr("scope", "row");
+        }
+        
+      });
+    });
+
+  });
 })();
