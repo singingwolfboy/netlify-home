@@ -29,3 +29,9 @@ defaults:
       type: "docs"
     values:
       layout: "docs"
+
+# RSS
+rss:
+  name: The netlify blog. All about static web-tech and netlify
+  url: https://www.netlify.com/blog
+  path: /blog
