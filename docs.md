@@ -36,7 +36,7 @@ To start with the web UI, simply head to [app.netlify.com](http://app.netlify.co
 To start by manually deploying a folder with a static site to Netlify, make sure you have `node js` installed and then follow these steps:
 
 ```
-npm install netlify
+npm install netlify-cli -g
 cd ~/my-static-website
 netlify deploy
 ```
