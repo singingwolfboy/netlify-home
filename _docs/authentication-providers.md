@@ -21,6 +21,10 @@ Before you can use an authentication provider, you'll need to register an API ap
 
 For Github, go to the [Applications](https://github.com/settings/applications) tab in the settings and create a new Developer Application.
 
+Github will ask for an **Authorization callback URL**, make sure to enter `https://api.netlify.com/auth/done`.
+
+![Github OAuth Configuration](/img/docs/github-oauth-config.png)
+
 Then go to the **Access** tab for your Netlify site and configure the Github provider with your new **Client ID** and **Client Secret**.
 
 Once you've configured an authentication provider you can use it to obtain an access token in your single page app.
