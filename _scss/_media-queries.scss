@@ -15,9 +15,9 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   body {
     min-width: 0; // We're going responsive, baby
   }
-  
-  /* 
-   * Media hero becomes fluid 
+
+  /*
+   * Media hero becomes fluid
    */
   .media--wide {
     margin-right: 40px;
@@ -25,7 +25,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       width: 52%;
       margin-right: 60px;
     }
-    /* Show the background of the container instead of the image so 
+    /* Show the background of the container instead of the image so
      * it scales well instead of getting squished, since the height
      * needs to remain constant
      */
@@ -36,18 +36,14 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       }
     }
   }
-  
+
   /* Reduce paddings around main and aside */
   .l-wrap-inner--main-left {
-    display: block;
     padding: 0 ($aside-width + 40px) 0 40px;
     .l-aside {
       width: $aside-width + 40px;
       padding-left: 40px;
       margin-right: -($aside-width + 40px);
-    }
-    .l-aside--right:after {
-      display: none;
     }
     .l-main {
       padding-right: 45px;
@@ -64,24 +60,24 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       margin-bottom: 110px;
     }
   }
-  
+
 }
 
 @include breakpoint($bp-med-large) { //* Tweak point to leave more room for hero and main
-  
-  /* Reduce padding around the header and hero to 
+
+  /* Reduce padding around the header and hero to
    * leave more space for the content.
    */
   .content--wide {
     padding: 0 25px;
   }
-  
+
   /* Adjust media hero margins to align with header */
   .media--wide {
     margin-left: 25px;
     margin-right: 25px;
   }
-  
+
   /* Large callouts shouldn't bleed */
   .media--wide .callout {
     margin: 0;
@@ -92,7 +88,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
 }
 
 @include breakpoint($bp-med-large-2) { //* Tweak point to fix broken hero
-  
+
   /* Reduce margins between video and blurb. Hide callout */
   .media--wide {
     margin-left: 0;
@@ -125,12 +121,12 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
 
 
 @include breakpoint($bp-med) { //* Major breakpoint
-  
+
   /* Hide optional elements */
   .optional {
     display: none;
   }
- 
+
   /* Show alternate elements for medium size */
   .show-med {
     display: block;
@@ -139,17 +135,17 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .text-center-med {
     text-align: center;
   }
-  
-    
-  /* 
+
+
+  /*
    * BLURBS in columns get fluid width and some padding instead for separation
-   */ 
+   */
   .l-third .blurb {
     width: auto;
     padding: 0 15px;
     position: relative;
   }
-  
+
   .l-third:first-child .blurb {
     left: -15px;
   }
@@ -167,9 +163,9 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     right: -25px;
   }
 
-  
-  /* 
-   * HERO goes in 1 column. Video appears at the botton 
+
+  /*
+   * HERO goes in 1 column. Video appears at the botton
    */
 
   .media--wide {
@@ -197,14 +193,14 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .button-video.show-med + .pullquote {  /* add some air to pullquotes after video */
     margin-bottom: 50px;
   }
-  
-  
+
+
   /* TABLES: reduce font size, paddings and margins so lines don't wrap */
   .table {
     font-size: 14px;
   }
   .th {
-    font-size: 18px; 
+    font-size: 18px;
   }
   .th, .td {
     padding: 10px 0px;
@@ -213,8 +209,8 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .th--highlight {
     padding: 8px 0 4px;
   }
-  
-  /* 
+
+  /*
    * Main/aside layout goes in one column
    */
    .l-wrap-inner {
@@ -241,6 +237,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     border-bottom: 3px solid $color-highlight;
   }
   .l-wrap-inner--main-left {
+    display: block;
     .l-main {
      padding: 0;
     }
@@ -254,6 +251,14 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     .l-aside {
       padding-left: 0;
       padding-right: 40px;
+    }
+    .l-aside--right {
+      padding-right: 0;
+      margin-right: 0;
+      width: auto;
+    }
+    .l-aside--right:after {
+      display: none;
     }
   }
   .l-wrap:before,
@@ -284,7 +289,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     float: right;
     padding-right: 0;
   }
-  
+
   .blog-aside-title {
     margin: 70px 0 40px;
     text-align: center;
@@ -315,11 +320,11 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   }
 }
 
-/* If the device height is big (eg. ipad portrait), the hero will look really bare. 
+/* If the device height is big (eg. ipad portrait), the hero will look really bare.
  * Increase the font size.
  */
 @media screen and (min-width: $bp-small + 1px) and (max-width: $bp-med) and (min-height: 800px) {
-  
+
   .media--wide {
     .blurb {
       width: 30em;
@@ -354,7 +359,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .content {
     padding: 0 20px;
   }
-  
+
   /* Reduce bleed so it doesn't touch edge of screen */
   .l-container {
     margin-left: 0;
@@ -371,8 +376,8 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
 
 
 @include breakpoint($bp-small) { //* Major breakpoint. Stack all the things (almost)
-  /* 
-   * Reduce content width to readable line length 
+  /*
+   * Reduce content width to readable line length
    */
   .content {
     max-width: 28em;
@@ -383,23 +388,23 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       max-width: 40em;
     }
   }
-  
-  /* 
+
+  /*
    * Stack address in footer
    */
   .site-footer {
     .vcard {
       margin: 10px;
-      br { 
+      br {
         display: block;
       }
-      .address:before { 
+      .address:before {
         display: none;
       }
     }
   }
-  
-  /* 
+
+  /*
    * Reduce header
    */
   .site-header .brand-logo {
@@ -414,13 +419,13 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .top-nav {
     margin: 15px 0;
   }
-  
-  
-  /* 
-   * Stack layouts 
+
+
+  /*
+   * Stack layouts
    */
   .l-container,
-  .l-container .l-third, 
+  .l-container .l-third,
   .l-container .l-half,
   .l-2-col .l-col,
   .l-3-col .l-col {
@@ -439,17 +444,17 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     columns: 1;
     column-gap: 0;
   }
-  
-  /* 
-   * Stack inline blocks 
+
+  /*
+   * Stack inline blocks
    */
   .inline-block:not(.optional) {
     display: block;
     margin-left: 0;
     margin-right: 0;
   }
-  
-  /* 
+
+  /*
    * Fix stacked blurbs
    */
   .blurb-meta:not(.right) {
@@ -461,7 +466,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .blurb-hd .media--bleed {
     margin-bottom: 10px;
   }
-  
+
   /*
    * Fix links
    */
@@ -485,8 +490,8 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .social-icon--round {
     margin: 0 10px;
   }
-  
-  /* 
+
+  /*
    * Stack Forms
    */
   .form--fancy  {
@@ -515,15 +520,15 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   :-ms-input-placeholder {
     font-size: 16px;
   }
-  
-  /* 
+
+  /*
    * Adjust table margins to align with left and right margins
    */
   .table {
     margin-left: -4px;
     margin-right: -4px;
   }
-  
+
   /*
    * Reduce spacing between sections
    */
@@ -536,8 +541,8 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .mt-110, .mt-115, .mt-120, .mt-90 {
     margin-top: 70px; // this is a hack – need to normalize these margins
   }
-  
-  /* 
+
+  /*
    * Reduce font sizes
    */
   .huge {
@@ -589,22 +594,22 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .th {
     font-size: 20px;
   }
-  
+
   /* Adjust blurb in hero to compensate for smaller font sizes */
   .media--wide .blurb {
     width: auto;
     max-width: 330px;
   }
-  
+
   /*
    * Bold paragraphs look too bold
    */
   p.bold {
     @include font-weight(medium);
   }
-  
+
   /* Extra small text the blurb body gets too
-   * hard to read and looks uncompensated with 
+   * hard to read and looks uncompensated with
    * normal text (see About page, Mat & Chris descriptions)
    * Make it look like standard text
    */
@@ -612,7 +617,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     font-size: 16px;
     line-height: 25px;
   }
-  
+
   /*
    * Blurbs aside get stacked
    */
@@ -621,15 +626,15 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     max-width: none;
     padding: 0;
   }
-  
-  /* 
+
+  /*
    * Reduce l-wrap-inner width to adapt to stacked blurbs
    */
   .l-wrap-inner {
     max-width: 30em;
     padding: 0 20px;
   }
-  
+
   /*
    * Reduce post title font size
    */
@@ -645,7 +650,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     font-size: 33px;
     line-height: 35px;
   }
-  
+
   /*
    * Legalese. Get rid of bullets, numbered lists and indentation
    */
@@ -722,7 +727,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       font-size: .8em;
       color: $color-muted;
       margin-right: 20px;
-    } 
+    }
     td:last-child {
       margin-bottom: 20px;
     }
@@ -730,7 +735,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
 }
 
 @include breakpoint($bp-small-2) {
-  /* 
+  /*
    * Fix footer aligning address under logo
    */
   .site-footer {
@@ -745,13 +750,13 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       .org {
         display: none;
       }
-    } 
+    }
   }
 }
 
 @include breakpoint($bp-small-3) {
-  /* 
-   * More space for content 
+  /*
+   * More space for content
    */
   .content {
     padding: 0 15px;
@@ -761,16 +766,16 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       padding: 0;
     }
   }
-  
-  
-  /* 
+
+
+  /*
    * Links can be closer together
    */
   .social-icon--round {
     margin: 0 5px;
   }
-  
-  /* 
+
+  /*
    * Reduce big hero text and button
    */
   .media--wide {
@@ -794,7 +799,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       margin-top: -5px;
     }
   }
-  
+
   /*
    * Make large buttons smaller
    */
@@ -807,7 +812,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       margin: -4px;
     }
   }
-  
+
   .post-title {
     line-height: 45px;
     margin-bottom: 30px;
