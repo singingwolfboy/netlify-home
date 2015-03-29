@@ -69,7 +69,7 @@ Often sites deployed to Netlify will get close to 100/100 score on Pingdom Speed
 
 S3 does let you configure basic redirects, but there's limited flexibility and the XML syntax for specifying the rewrite rules is not the most intuitive. There's currently no way to do the kind rewrite rules you would need to get history pushstate to work for an Angular or Ember app.
 
-Netlify lets you add a simple [_rewrites](/docs/redirects_and_rewrites) file to your site folder. It's an easy to read list of redirects and rewrites and it's powerful enough to setup even complex redirects with placeholders or matches on query parameters. It also lets you do rewrites and you can easily make single page history pushstate based apps work.
+Netlify lets you add a simple [_rewrites](/docs/redirects) file to your site folder. It's an easy to read list of redirects and rewrites and it's powerful enough to setup even complex redirects with placeholders or matches on query parameters. It also lets you do rewrites and you can easily make single page history pushstate based apps work.
 
 You can even setup rewrite rules that'll let you proxy through parts of your site to external servers &mdash; straight from our CDN nodes.
 

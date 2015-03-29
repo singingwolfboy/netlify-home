@@ -13,7 +13,7 @@ First you need to assign the domain to the site you want us to show.
 
 You can do this through the web UI by clicking "Edit domain" when viewing your site.
 
-You can also assign domains through the [CLI tool](cli.md) with the `netlify update` command.
+You can also assign domains through the [CLI tool](/docs/cli) with the `netlify update` command.
 
 ## DNS configuration
 

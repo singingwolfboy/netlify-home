@@ -70,7 +70,7 @@ Services that use OAuth2 are easy to consume directly from Javascript as long as
 
 OAuth1 is not as friendly to single page apps since it requires a server to sign each request to the API with a secret key, and some OAuth2 services don't support CORS request.
 
-In these cases you can use Netlify's [proxy feature](/redirects/#proxying). For example, to proxy requests to BitBuckets API add this line to your **_redirects** file:
+In these cases you can use Netlify's [proxy feature](/docs/redirects#proxying). For example, to proxy requests to BitBuckets API add this line to your **_redirects** file:
 
     /bitbucket/* https://bitbucket.org/:splat 200
 

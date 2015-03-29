@@ -29,7 +29,7 @@ Netlify lets you link a Github repository to a site. Each time you push to Githu
 
 ## Getting Started
 
-Netlify can be used both from our web UI at [app.netlify.com](http://app.netlify.com) or by using our [command line tools](cli.md).
+Netlify can be used both from our web UI at [app.netlify.com](http://app.netlify.com) or by using our [command line tools](/docs/cli).
 
 To start with the web UI, simply head to [app.netlify.com](http://app.netlify.com) and sign in.
 

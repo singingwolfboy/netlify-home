@@ -2,6 +2,7 @@ kramdown:
   input: GFM
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock"]
+include: ["_redirects"]
 
 social-links:
   twitter: 'https://twitter.com/netlify'
