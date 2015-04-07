@@ -4,7 +4,7 @@ author: Mathias Biilmann
 description: How Amazon S3 and Netlify compares as static site hosting platforms.
 image: /img/posts/apple-orange.jpg
 thumbnail: /img/posts/thumbnails/apple-orange.jpg
-tags: ["S3", "Comparisons", "Netlift"]
+tags: ["S3", "Comparisons", "Netlify"]
 ---
 
 Today pretty much every front-end developer is familiar with Amazon's amazing Simple Storage Service, or S3, and some use it for hosting their front-end projects,  so I thought I would take the opportunity to do a proper writeup about the differences between Netlify's static hosting service and S3.

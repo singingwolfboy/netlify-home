@@ -30,7 +30,7 @@ Depending on your DNS provider changes to DNS records can take several hours to 
 
 You can use Naked domains with Netlify, but we recommend you always use the www version of the domain (eg. www.example.com) for your site. This makes it easier to take advantage of Netlify's powerful CDN.
 
-If you prefer the naked domain, we recommend you use a DNS provider that supports CNAME or ALIAS records for apex domains such as Cloudflare or DNSimple.
+If you prefer the naked domain, we recommend you use a DNS provider that supports CNAME or ALIAS records for apex domains such as Cloudflare or DNSimple. If you set an A record for the apex domain, you won't be able to take advantage of the full Netlify CDN. If your provider lets you set an ALIAS, the full CDN will work. If not, your assets (Javascript, CSS, images) will be served out of a global CDN, but your HTML will be served out of our primary datacenter in the US.
 
 ## Domain redirects
 
