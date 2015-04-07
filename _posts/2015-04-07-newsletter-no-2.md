@@ -1,7 +1,8 @@
 ---
 title: "Netlify - Newsletter no. 2"
+short_title: "Newsletter number 2"
 author: Christian Bach
-description: Netlify is live, front page of HN and intro to Static Web-Tech
+description: Netlify is live, we made front page of Hacker News and welcome to the Static Web-Tech SF Meetup
 thumbnail: /img/posts/thumbnails/newsletter.png
 tags: ["Netlify", "Newsletter"]
 ---
