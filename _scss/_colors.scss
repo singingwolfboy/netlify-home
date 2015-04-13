@@ -3,7 +3,7 @@
 //## Grays, whites and highlight colors
 
   //** Grays
-  $color-muted: rgb(126,131,131); 
+  $color-muted: rgb(126,131,131);
   $color-dark: rgb(89,98,98);
   $color-darker: rgb(51,61,61);
   $color-darkest: rgb(49,61,62);
@@ -17,7 +17,7 @@
   $color-highlight: rgb(0,199,183);
   $color-highlight-lighter: rgb(202,224,222);
   $color-highlight-lightest: rgb(230,239,238);
-  
+
   //** Social networks (http://brandcolors.net/)
   $colors-social: (
     twitter:    #55acee,
@@ -26,7 +26,7 @@
     linkedin:   #0976b4,
     googleplus: #dd4b39
   );
-  
+
 /*
  * Defaults
  */
@@ -76,7 +76,7 @@ svg {
   h1, h2, h3, h4, h5, h6 {
     color: inherit;
   }
-  
+
   .highlight {
     color: $color-highlight;
   }

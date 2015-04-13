@@ -8,7 +8,13 @@
   }
 }
 
-.docs-main {
+.post-bd {
+  img {
+    max-width: 100%;
+  }
+}
+
+.docs-main, .post-bd {
   h2 {
     font-weight: normal;
     font-size: 20px;
@@ -18,7 +24,7 @@
     margin-top: 80px;
   }
   p {
-    max-width: 40em;
+
     margin-left: 0;
   }
   pre {
