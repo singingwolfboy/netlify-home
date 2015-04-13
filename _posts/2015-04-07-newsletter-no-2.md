@@ -21,8 +21,10 @@ We want to thank our beta-testers for all their help!
 
 And thanks so much to everyone who has already signed on. We are getting raving feedback, and are really excited to see our work put to such good use as well. It sure seems like we’re on to something :)
 
+<!-- excerpt -->
+
 **Hacker News**
-We were really stoked a couple of days ago, when our launch spent the ]entire day on the front page of Hacker News](http://netlify.us2.list-manage.com/track/click?u=3ca88a0cd26d026e590224d67&id=3f546fb6c3&e=8a3a3955ba) with more than 100 upvotes and lots of great comments.
+We were really stoked a couple of days ago, when our launch spent the [entire day on the front page of Hacker News](http://netlify.us2.list-manage.com/track/click?u=3ca88a0cd26d026e590224d67&id=3f546fb6c3&e=8a3a3955ba) with more than 100 upvotes and lots of great comments.
 
 **100% netlify**
 On a more personal note Chris (co-founder) is now no longer with his Danish agency, and is super excited to move permanently to San Francisco so he can focus 100% on Netlify.
