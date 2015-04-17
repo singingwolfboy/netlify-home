@@ -3,6 +3,14 @@
     $(this).addClass("js-clicked");
   });
 
+  $(".js-swipe").swipe({
+    swipe: function() {
+      $(this).trigger("click");
+    },
+    threshold: 0,
+    excludedElements: ""
+  });
+
   $('.off-canvas-toggle').on('click', function(e) {
     e.preventDefault();
     $('.off-canvas-wrap').toggleClass('open-menu');
@@ -74,11 +82,11 @@
       $("td", this).each(function(index) {
         $td = $(this);
         if (index) {
-          $(this).attr("data-title", titles[index]);  
+          $(this).attr("data-title", titles[index]);
         } else {
           $(this).attr("scope", "row");
         }
-        
+
       });
     });
 
