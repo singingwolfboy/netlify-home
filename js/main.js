@@ -5,7 +5,7 @@
 
   $(".js-swipe").swipe({
     swipe: function() {
-      $(this).trigger("click");
+      document.location.href = $(this).attr("href");
     },
     threshold: 0,
     excludedElements: ""
