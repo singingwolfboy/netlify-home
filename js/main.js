@@ -5,10 +5,8 @@
 
   $(".js-swipe").swipe({
     swipe: function() {
-      var href = $(this).attr("href");
-      setTimeout(function() {
-        document.location.href = href;
-      }, 200);
+      $(this).addClass("js-clicked");
+      document.location.href = $(this).attr("href");
     },
     threshold: 10,
     excludedElements: ""
