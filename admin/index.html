@@ -1,0 +1,111 @@
+---
+name: admin
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Netlify CMS</title>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/admin/css/admin.css">
+
+  <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+
+  {% if site.cms == "local" %}
+  <link rel="stylesheet" href="//localhost:4200/assets/cms.css" />
+  {% else %}
+  <link rel="stylesheet" href="//ember-cms.netlify.com/assets/cms.css" />
+  {% endif %}
+  <link rel="stylesheet" href="/admin/css/admin.css" />
+
+   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <base href="/admin/">
+</head>
+<body>
+
+  {% include svg-defs.html %}
+
+  <script type="text/x-handlebars" data-template-name='cms/application'>
+    <header class="site-header bb bb--medium inverse" role="banner">
+      <div class="content content--wide">
+
+        <!-- Branding: logo & claim -->
+        <section class="brand left mt-20 mb-20">
+          <a href="/" class="loud">
+            <svg class="brand-logo" width="180" height="70">
+              <use xlink:href="#netlify-logo" />
+            </svg>
+          </a>
+          <p class="brand-claim x-small inline-block ml-25 optional">Because static sites are safer, faster, cheaper &amp; simpler</p>
+        </section>
+
+        <nav class="top-nav right mt-45">
+          {% raw %}
+            {{cms-breadcrumbs}}
+
+            <a href="#" class="button button--inline button--small button--muted" {{action 'logout'}}>
+              <svg class="button-icon" width="30" height="30">
+                <use xlink:href="#icon-keyhole" />
+              </svg>
+              <span class="button-label">Log out</span>
+            </a>
+          {% endraw %}
+
+        </nav>
+      </div>
+    </header>
+
+    <section class="bg-light">
+      <div class="content content--wide mt-40 mb-40">
+        {% raw %}{{outlet}}{% endraw %}
+      </div>
+    </section>
+  </script>
+
+  {% raw %}
+  <script type="text/x-handlebars" data-template-name='cms/widgets/author-preview'>
+    By {{widget.value}}, {{time-format widget.entry.cmsDate 'LL'}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='cms/widgets/tags-control'>
+    <label>{{widget.label}} (comma separated)</label>
+    {{input value=raw_value}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='cms/widgets/tags-preview'>
+    {{#each tag in widget.value}}
+    <span class="tag">{{tag}}</span>
+    {{/each}}
+  </script>
+  {% endraw %}
+
+  {% if site.cms == "local" %}
+  <script src="//localhost:4200/assets/vendor.js"></script>
+  <script src="//localhost:4200/assets/cms.js"></script>
+  {% else %}
+  <script src="//ember-cms.netlify.com/assets/vendor.js"></script>
+  <script src="//ember-cms.netlify.com/assets/cms.js"></script>
+  {% endif %}
+
+  {% raw %}
+  <script>
+  CMS.WidgetControl("tags", {
+    init: function() {
+      this._super();
+      this.set("raw_value", (this.get("widget.value") || []).join(", "));
+    },
+    raw_value: null,
+    setWidgetValue: function() {
+      this.set("widget.value", (this.get("raw_value").split(",").map(function(e) { return e.trim()})))
+    }.observes("raw_value")
+
+  });
+  </script>
+  {% endraw %}
+
+</body>
+</html>

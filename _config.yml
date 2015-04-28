@@ -1,8 +1,6 @@
 kramdown:
   input: GFM
 
-cms: local
-
 exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock"]
 include: ["_redirects"]
 
