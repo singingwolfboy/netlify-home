@@ -3,6 +3,8 @@ title: Form Handling
 position: 55
 ---
 
+## Handling Form Submissions
+
 Netlify comes with built-in form handling. Just add a **netlify** attribute to your form tag and you can start receiving submissions.
 
 It's a good idea to set a **name** attribute on the form so you can easily identify which form incoming submissions are coming from.
