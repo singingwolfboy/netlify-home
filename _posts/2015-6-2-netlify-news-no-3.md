@@ -4,7 +4,7 @@ author: Christian Bach
 image: "/img/posts/logo-text-dark@2x.svg"
 short_title: Our third newsletter
 description: "Formhandling, open sourced build image and much more!"
-thumbnail: /img/posts/thumbnails/email_marketing_newsletter_shopify_ecommerce_software_blog.jpg
+thumbnail: /img/posts/thumbnails/newsletter no 3 thumbnail.jpg
 tags:
   - open sourced build image
   - build image
