@@ -1,10 +1,9 @@
 ---
 title: Netlify news no. 3
 author: Christian Bach
-image: "/img/posts/logo-text-dark@2x.svg"
 short_title: Our third newsletter
 description: "Formhandling, open sourced build image and much more!"
-thumbnail: /img/posts/thumbnails/email_marketing_newsletter_shopify_ecommerce_software_blog.jpg
+thumbnail: /img/posts/thumbnails/newsletter-3.jpg
 tags:
   - open sourced build image
   - build image
@@ -31,7 +30,7 @@ Read all about it [here](http://netlify.us2.list-manage1.com/track/click?u=3ca88
 
 Next up. While Google has gotten better at crawling JavaScript, you'll still need a prerender service if you're running a large content driven single page app that needs to be indexed.
 
- Which is why we are excited to announce that netlify now integrates with various prerender services for single page apps! 
+ Which is why we are excited to announce that netlify now integrates with various prerender services for single page apps!
 
  With netlify's prerender service, requests from crawlers get sent straight from our CDN nodes to your prerender backend of choice. In our initial tests we've seen very fast response time to search engines from the combination of netlify and prerender.io, which is really important since slow response times will hurt your ranking in Google.
 
@@ -58,4 +57,3 @@ May all your websites enjoy ultra performance.
  Best regards
 
  Matt &amp; Chris from netlify
-
