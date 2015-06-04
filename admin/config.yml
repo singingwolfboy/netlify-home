@@ -1,7 +1,12 @@
-repo: netlify/netlify-home
-branch: master
+backend:
+  name: github_api
+  repo: netlify/netlify-home
+  branch: master
+
+media_folder: uploads
+
 collections:
-  - slug: "post"
+  - name: "post"
     label: "Blog Post"
     folder: "_posts"
     create: true
@@ -13,8 +18,9 @@ collections:
       - {label: "Short Title", name: "short_title", widget: "string", tagname: "h1", class: "blurb-title"}
       - {label: "Description", name: "description", widget: "string", tagname: "p", class: "small muted"}
       - {label: "Thumbnail", name: "thumbnail", widget: "image", tagname: "div", class: "media-img optional", folder: "img/posts/thumbnails"}
-      - {label: "Tags", name: "tags", widget: "tags"}
-  - slug: "docs"
+    meta:
+      - {label: "Tags (seperated by comma)", name: "tags", widget: "tags"}
+  - name: "docs"
     label: "Doc Pages"
     folder: "_docs"
     create: true

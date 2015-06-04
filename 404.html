@@ -1,0 +1,33 @@
+---
+layout: default
+title: 404 Page Not Found
+---
+<section class="bg-dark-muted inverse">
+  <div class="content text-center">
+    <header>
+      <h1 class="alpha mt-80 mb-80">
+        Whoops!<br/>
+        We couldn't find that page :(
+      </h1>
+    </header>
+
+    <p class="large muted p--wide mb-110">
+      If you think this is an error on our end <a href="/contact.html">get in touch</a><br><br>
+
+    </p>
+
+    <div class="l-container mt-80 mb-80 text-center">
+        <ul class="nav nav--social nav--centered nav--wide">
+          {% for link in site.social-links %}
+          <li>
+            <a href="{{link[1]}}" class="icon-link--square icon-link--large icon-link--{{link[0]}}">
+              <svg width="50" height="50" class="icon-{{link[0]}}--square">
+                <use xlink:href="#icon-{{link[0]}}"/>
+              </svg>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+  </div>
+</section>

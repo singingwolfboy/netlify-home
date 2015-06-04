@@ -17,7 +17,7 @@ name: admin
   {% if site.cms == "local" %}
   <link rel="stylesheet" href="//localhost:4200/assets/cms.css" />
   {% else %}
-  <link rel="stylesheet" href="//cms.netlify.com/assets/cms.css" />
+  <link rel="stylesheet" href="//cms-dev.netlify.com/cms.css" />
   {% endif %}
   <link rel="stylesheet" href="/admin/css/admin.css" />
 
@@ -26,53 +26,12 @@ name: admin
   <base href="/admin/">
 </head>
 <body>
-
-  {% include svg-defs.html %}
-
-  <script type="text/x-handlebars" data-template-name='cms/application'>
-    <header class="site-header bb bb--medium inverse" role="banner">
-      <div class="content content--wide">
-
-        <!-- Branding: logo & claim -->
-        <section class="brand left mt-20 mb-20">
-          <a href="/" class="loud">
-            <svg class="brand-logo" width="180" height="70">
-              <use xlink:href="#netlify-logo" />
-            </svg>
-          </a>
-          <p class="brand-claim x-small inline-block ml-25 optional">Because static sites are safer, faster, cheaper &amp; simpler</p>
-        </section>
-
-        <nav class="top-nav right mt-45">
-          {% raw %}
-            {{cms-breadcrumbs}}
-
-            <a href="#" class="button button--inline button--small button--muted" {{action 'logout'}}>
-              <svg class="button-icon" width="30" height="30">
-                <use xlink:href="#icon-keyhole" />
-              </svg>
-              <span class="button-label">Log out</span>
-            </a>
-          {% endraw %}
-
-        </nav>
-      </div>
-    </header>
-
-    <section class="bg-light">
-      <div class="content content--wide mt-40 mb-40">
-        {% raw %}{{outlet}}{% endraw %}
-      </div>
-    </section>
-  </script>
-
   {% raw %}
   <script type="text/x-handlebars" data-template-name='cms/widgets/author-preview'>
     By {{widget.value}}, {{time-format widget.entry.cmsDate 'LL'}}
   </script>
 
   <script type="text/x-handlebars" data-template-name='cms/widgets/tags-control'>
-    <label>{{widget.label}} (comma separated)</label>
     {{input value=raw_value}}
   </script>
 
@@ -87,8 +46,7 @@ name: admin
   <script src="//localhost:4200/assets/vendor.js"></script>
   <script src="//localhost:4200/assets/cms.js"></script>
   {% else %}
-  <script src="//cms.netlify.com/assets/vendor.js"></script>
-  <script src="//cms.netlify.com/assets/cms.js"></script>
+  <script src="//cms-dev.netlify.com/cms.js"></script>
   {% endif %}
 
   {% raw %}
