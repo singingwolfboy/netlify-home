@@ -1,6 +1,8 @@
 ---
-title: Custom Domains
-position: 30
+"title": "Custom Domains"
+"position": 30
+"cmsUserSlug": "custom-domains"
+"date": 2015-06-03 
 ---
 
 ## Using a custom domain
@@ -23,7 +25,7 @@ You can also assign domains through the [CLI tool](/docs/cli) with the `netlify 
 
 You'll need to point the DNS records for the domain at our servers.
 
-* Create a CNAME that will "alias" your site to **<site-name>**`.netlify.com`. If your domain is `example.com` and your site is at `example.netlify.com`, you would create a CNAME record for **www** pointing at `www.example.com` to `example.netlify.com`.
+* Create a CNAME that will "alias" your site to `<site-name>.netlify.com`. If your domain is `example.com` and your site is at `example.netlify.com`, you would create a CNAME record for **www** pointing at `www.example.com` to `example.netlify.com`.
 * Create an A record for the raw domain (example.com) pointing to `198.61.251.14`
 
 ![Example DNS Records](/uploads/dns-records-example-com.png)
