@@ -11,6 +11,7 @@ social-links:
   linkedin: 'https://www.linkedin.com/company/netlify'
   googleplus: 'https://plus.google.com/+NetlifyApp'
 
+cms: "local"
 
 excerpt_separator: <!-- excerpt -->
 

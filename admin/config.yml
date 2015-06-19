@@ -5,6 +5,16 @@ backend:
 
 media_folder: uploads
 
+documents:
+  - name: "post_order"
+  - fields:
+  - label: "Posts"
+      name: "posts"
+      widget: "list"
+      fields:
+        - label: Post
+        - widget: has_one
+
 collections:
   - name: "post"
     label: "Blog Post"
@@ -15,16 +25,26 @@ collections:
       - {label: "Author", name: "author", widget: "string", preview: "author", tagname: "p", class: "post-meta"}
       - {label: "Cover Image", name: "image", widget: "image", tagname: "div", class: "post-img", folder: "img/posts"}
       - {label: "Post Body", name: "body", widget: "markdown", tagname: "div", class: "post-bd"}
+      - {label: "Related Posts", name: "related_posts", widget: "relation", collection: "post"}
       - {label: "Short Title", name: "short_title", widget: "string", tagname: "h1", class: "blurb-title"}
       - {label: "Description", name: "description", widget: "string", tagname: "p", class: "small muted"}
       - {label: "Thumbnail", name: "thumbnail", widget: "image", tagname: "div", class: "media-img optional", folder: "img/posts/thumbnails"}
+      - label: "Things"
+        name: "things"
+        widget: "list"
+        fields:
+          - {label: "Title of the thing", name: "title", widget: "string"}
+          - {label: "Photo of the thing", name: "photo", widget: "image"}
     meta:
       - {label: "Tags (seperated by comma)", name: "tags", widget: "tags"}
+
+
   - name: "docs"
     label: "Doc Pages"
     folder: "_docs"
     create: true
     fields:
-      - {label: "Menu Title", name: "title", widget: "string", tagname: "h4", class: "doc-title"}
-      - {label: "Position", name: "position", widget: "number", tagname: "div", class: "doc-position"}
       - {label: "Post Body", name: "body", widget: "markdown", tagname: "div", class: "post-bd"}
+    meta:
+      - {label: "Menu Title", name: "title", widget: "string", optional: false}
+      - {label: "Position", name: "position", widget: "number", optional: false}
