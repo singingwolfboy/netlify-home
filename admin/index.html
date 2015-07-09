@@ -40,6 +40,46 @@ name: admin
     <span class="tag">{{tag}}</span>
     {{/each}}
   </script>
+
+  <script type="text/x-handlebars" data-template-name='cms/preview/post'>
+    <article class="post">
+      <header class="post-hd">
+        <h1 class="post-title">
+          {{entry.title}}
+        </h1>
+        {{#if entry.author}}
+          <p class="post-meta">By {{entry.author}}, {{time-format entry.date "LL"}}</p>
+        {{/if}}
+      </header>
+      {{cms-preview field='image'}}
+      {{cms-preview field='body'}}
+    </article>
+
+    {{#if entry.body}}
+      <section class="bg-dark-muted-cover inverse bb bb--large">
+        <div class="content">
+          <div class="l-third">
+            <article class="blurb mt-20">
+              <header class="blurb-hd">
+                <div class="media">
+                  {{cms-preview field='thumbnail'}}
+                  <div class="media-bd">
+                    <h1 class="blurb-title">
+                      <a href="#" class="light">{{if entry.short_title entry.short_title entry.title}}</a>
+                    </h1>
+                    <p class="blurb-meta"><a href="#" class="link">by {{entry.author}}</a></p>
+                  </div>
+                </div>
+              </header>
+              <div class="blurb-bd">
+                <p class="small muted">{{entry.description}}</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    {{/if}}
+  </script>
   {% endraw %}
 
   {% if site.cms == "local" %}
