@@ -1,6 +1,8 @@
 ---
-title: Headers & Basic Auth
-position: 50
+"cmsUserSlug": "headers-basic-auth"
+"date": 2015-07-21 
+"title": "Headers & Basic Auth"
+"position": 50
 ---
 
 ## Headers & Basic Auth
@@ -15,7 +17,7 @@ The format is very simple:
 ## A path:
 /templates/*
   # Headers for that path:
-  Cache-Control: max-age: 3000
+  Cache-Control: max-age=3000
 ```
 
 Paths can contain `*` or `:placeholders`. A `:placeholder` matches anything except `/` while a `*` matches anything.
