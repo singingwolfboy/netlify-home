@@ -1,6 +1,8 @@
 ---
-title: Continuous Deployment
-position: 20
+"cmsUserSlug": "continuous-deployment"
+"date": 2015-07-30 
+"title": "Continuous Deployment"
+"position": 20
 ---
 
 ## Continuous Deployment
@@ -41,3 +43,10 @@ Jekyll     | _site     | jekyll build
 Grunt      | dist      | grunt build
 Middleman  | build     | middleman build
 Roots      | public    | roots compile
+Hugo       | public    | hugo
+
+For **Jekyll hosting**, make sure you have a Gemfile and a Gemfile.lock checked into your repository, specifying the Jekyll version you want to use.
+
+For **Roots hosting**, make sure you add `roots` to your package.json.
+
+For **Hugo hosting**, `hugo` will build and deploy with the latest version of `hugo`. You can specify a specific `hugo` release like this: `hugo_0.14`. Currently `0.13` and `0.14` are supported.
