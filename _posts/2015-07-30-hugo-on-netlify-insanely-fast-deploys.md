@@ -5,7 +5,6 @@
 "short_title": "Hosting Hugo on Netlify"
 "description": "From push to GitHub, until a new deploy is live on our CDN in 6 seconds for our test project!"
 "thumbnail": "/uploads/hugo-logo-small.png"
-"cmsUserSlug": ""
 "date": 2015-07-30 
 "tags": null
 ---
@@ -39,4 +38,3 @@ We've simply set the build command to `hugo` to track the latest `hugo` release,
 That's it — now you're ready to go from Push to Deploy in 6 seconds!
 
 So if you dig modern static websites, but want to cut time of your build process, make sure to check out Hugo. On netlify :)
-
