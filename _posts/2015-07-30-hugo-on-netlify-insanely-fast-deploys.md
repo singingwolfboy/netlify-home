@@ -5,19 +5,20 @@
 "short_title": "Hosting Hugo on Netlify"
 "description": "From push to GitHub, until a new deploy is live on our CDN in 6 seconds for our test project!"
 "thumbnail": "/uploads/hugo-logo-small.png"
-"date": 2015-07-30 
+"cmsUserSlug": "hugo-on-netlify-insanely-fast-deploys"
+"date": 2015-07-30T00:00:00.000Z
 "tags": null
 ---
 
- There are those who describe netlify as “Github Pages on Steroids”.
+There are those who describe netlify as “Github Pages on Steroids”.
 
- If that’s the case then Hugo on Netlify must be digging into Lance Armstrong's stash.
+If that’s the case then Hugo on Netlify must be digging into Lance Armstrong's stash.
 
- Starting today you can easily run Hugo based builds with Netlify. Use `hugo` as your build command to run the latest version of Hugo, or use `hugo_0.14` to run your build with a specific version of Hugo.
+Starting today you can easily run Hugo based builds with Netlify. Use `hugo` as your build command to run the latest version of Hugo, or use `hugo_0.14` to run your build with a specific version of Hugo.
 
 <!-- excerpt -->
 
- ## Killer Performance
+## Killer Performance
 
 Hugo is a really exciting static site generator written in Go. For a while now it's been surging up the rankings at StaticGen, [the leading directory of top open-source static site generators]([https://www.staticgen.com/](https://www.staticgen.com/)).
 
@@ -25,7 +26,7 @@ Go is a compiled language that produces statically compiled binaries that tend t
 
 That shows, when you compare Hugo with just about any other static site generator. The [Hugo Homepage]([http://gohugo.io/overview/introduction/](http://gohugo.io/overview/introduction/)) claims ~1ms per page, and that's consistent with what we've seen in our tests.
 
- ## Our Tests
+## Our Tests
 
 The average time from push to eg. GitHub, until a new deploy is live on our CDN was around 6 seconds for our test project!
 
