@@ -20,11 +20,11 @@ Starting today you can easily run Hugo based builds with Netlify. Use `hugo` as 
 
 ## Killer Performance
 
-Hugo is a really exciting static site generator written in Go. For a while now it's been surging up the rankings at StaticGen, [the leading directory of top open-source static site generators]([https://www.staticgen.com/](https://www.staticgen.com/)).
+Hugo is a really exciting static site generator written in Go. For a while now it's been surging up the rankings at StaticGen, [the leading directory of top open-source static site generators](https://www.staticgen.com/).
 
 Go is a compiled language that produces statically compiled binaries that tend to be significantly (!) faster than any of the common interpreted languages. It has great support for high performance async IO operations, and since static site generators often spend a long time reading and writing files, this can make a world of difference in performance.
 
-That shows, when you compare Hugo with just about any other static site generator. The [Hugo Homepage]([http://gohugo.io/overview/introduction/](http://gohugo.io/overview/introduction/)) claims ~1ms per page, and that's consistent with what we've seen in our tests.
+That shows, when you compare Hugo with just about any other static site generator. The [Hugo Homepage](http://gohugo.io/overview/introduction/) claims ~1ms per page, and that's consistent with what we've seen in our tests.
 
 ## Our Tests
 
