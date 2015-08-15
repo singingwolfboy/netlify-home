@@ -1,6 +1,6 @@
 /* Call outs
 ------------------------------*/
-/* To center the text vertically in the callout: 
+/* To center the text vertically in the callout:
  * http://css-tricks.com/centering-in-the-unknown/
  */
 .callout {
@@ -14,6 +14,7 @@
   @extend %middle-element;
   text-align: center;
   padding: 1% 10% 0;
+  width: 100%;
 }
 
 .callout--small {

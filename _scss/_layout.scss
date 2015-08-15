@@ -5,13 +5,13 @@ $base-spacing: 20px;
 $aside-width: 280px;
 $aside-width-wide: 439px;
 
-/* 
- * Global layouts and 
+/*
+ * Global layouts and
  * utilities to control flow
  *
 ------------------------------*/
 
-/* 
+/*
  * HTML Elements
  */
 html {
@@ -32,8 +32,8 @@ ul {
 }
 
 
-/* 
- * Content containers 
+/*
+ * Content containers
  */
 .content {
   @extend %cf;
@@ -51,10 +51,10 @@ ul {
 }
 
 
-/* 
- * Utility classes for layout flow 
+/*
+ * Utility classes for layout flow
  */
- 
+
 .abs {
   position: absolute;
 }
@@ -68,6 +68,9 @@ ul {
 .center {
   margin-left: auto;
   margin-right: auto;
+}
+.l-third.center {
+  margin-left: 50%;
 }
 
 .block {
@@ -99,8 +102,8 @@ ul {
   white-space: nowrap;
 }
 
-/* 
-* Mixin for centering blocks vertically 
+/*
+* Mixin for centering blocks vertically
 * http://css-tricks.com/centering-in-the-unknown/
 */
 %middle-container { //* this should be applied to the parent of the element we want to center vertically
@@ -118,7 +121,7 @@ ul {
 }
 
 
-/* 
+/*
  * Media component
  */
 .media {
@@ -155,7 +158,7 @@ ul {
 
 
 
-/* 
+/*
  * Layouts
  */
 
@@ -200,7 +203,7 @@ ul {
 }
 
 /* Layout with fluid main and fixed-width sidebar
- * http://www.onderhond.com/blog/responsive-grid-old-trick/ 
+ * http://www.onderhond.com/blog/responsive-grid-old-trick/
  */
 .l-wrap {
   position: relative;
@@ -258,7 +261,7 @@ ul {
   }
 }
 
-/* 
+/*
  * Widths, heights and margins.
  *
  * ## TODO: Most of these need to be removed
@@ -288,13 +291,13 @@ ul {
 /* Margins */
 
 @for $i from 0 through 25 { // top & bottom margins
-  .mt-#{$i*5} { 
+  .mt-#{$i*5} {
     margin-top: $i * 5px;
   }
-  .mb-#{$i*5} { 
+  .mb-#{$i*5} {
     margin-bottom: $i * 5px;
   }
-  .ml-#{$i*5} { 
+  .ml-#{$i*5} {
     margin-left: $i * 5px;
   }
   .mr-#{$i*5} {
@@ -303,19 +306,19 @@ ul {
 }
 
 @for $i from 1 through 7 { // margins for bleeds and adjustments
-  .mt-#{$i} { 
+  .mt-#{$i} {
     margin-top: $i * 1px;
   }
-  .mb-#{$i} { 
+  .mb-#{$i} {
     margin-bottom: $i * 1px;
   }
-  .ml-#{$i} { 
+  .ml-#{$i} {
     margin-left: $i * 1px;
   }
-  .mr-#{$i} { 
+  .mr-#{$i} {
     margin-right: $i * 1px;
   }
-  
+
   .ml-n#{$i} {
     margin-left: $i * -1px;
   }
@@ -336,4 +339,3 @@ ul {
 .mt-n10 {
   margin-top: -10px;
 }
-
