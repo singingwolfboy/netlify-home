@@ -1,5 +1,5 @@
 ---
-"title": "Hugo on Netlify — Insanely Fast Deploys"
+"title": "Hosting Hugo on Netlify — Insanely Fast Deploys"
 "author": "Mathias Biilmann"
 "image": "/uploads/hugo.jpg"
 "short_title": "Hosting Hugo on Netlify"
