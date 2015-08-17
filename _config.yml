@@ -37,3 +37,6 @@ rss:
   name: The netlify blog. All about static web-tech and netlify
   url: https://www.netlify.com
   path: /blog
+
+gems:
+  - octopress-minify-html

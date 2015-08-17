@@ -92,4 +92,50 @@
     });
 
   });
+
+  /* Help boxes */
+  var helpboxOverlay = document.createElement("div");
+  var $currentHelpbox = null;
+  helpboxOverlay.className = "help-box-overlay";
+  var $helpboxOverlay = $(helpboxOverlay);
+  document.body.appendChild(helpboxOverlay);
+  $(".js--help-box-trigger").click(function(e) {
+    e.preventDefault();
+    if ($currentHelpbox) {
+      var $container = $currentHelpbox.parent();
+      $container.attr("style", "");
+      $helpboxOverlay.hide();
+      $currentHelpbox.hide();
+      $currentHelpbox = null;
+    } else {
+      $helpboxOverlay.show();
+      var $container = $(this).parent();
+      $currentHelpbox = $container.find(".js--help-box");
+      $container.css({position: "relative", "z-index": 950});
+      var pos = $container.offset();
+      if (pos.left + $container.width() > $(window).width() - 600) {
+        // position on left side of container;
+        $currentHelpbox.css({
+          left: -410,
+          top: -50
+        });
+      } else {
+        $currentHelpbox.css({
+          left: $container.width() + 30,
+          top: -50
+        });
+      }
+      $currentHelpbox.show();
+    }
+  });
+  $helpboxOverlay.click(function(e) {
+    if ($currentHelpbox) {
+      var $container = $currentHelpbox.parent();
+      $container.attr("style", "");
+      $helpboxOverlay.hide();
+      $currentHelpbox.hide();
+      $currentHelpbox = null;
+    }
+  });
+
 })();

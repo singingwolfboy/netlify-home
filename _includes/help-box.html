@@ -1,0 +1,6 @@
+<a href="#" class="help-icon right js--help-box-trigger" title="Click to learn more..."><img src="/img/icon-help.svg"></a>
+<div class="help-box js--help-box">
+  <h4>{{ attribute.title}}</h4>
+  <p>{{ attribute.info }}</p>
+  {% if attribute.link_text %}<p><a href="#">{{attribute.link_text}}</a></p>{% endif %}
+</div>

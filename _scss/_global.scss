@@ -1,5 +1,5 @@
 // ------------------------------------------
-// 
+//
 // This file gets imported in lib/_main.scss
 //
 // ------------------------------------------
@@ -16,6 +16,7 @@
 @import "components/tables";
 @import "components/callouts";
 @import "components/text_blocks";
+@import "components/pricing";
 @import "pages/blog";
 @import "pages/legalese";
 @import "pages/contact";
@@ -23,7 +24,7 @@
 
 
 /*------------------------------
- * 
+ *
  * Common page components (header, footer, navigation)
  *
  *------------------------------*/
@@ -41,7 +42,7 @@
 }
 
 .vcard {
-  br { 
+  br {
     display: none;
   }
   .address:before {
