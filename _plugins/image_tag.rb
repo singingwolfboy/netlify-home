@@ -62,6 +62,9 @@ module Jekyll
       unless File.exist?(dest)
         img.strip!
         img.write(dest)
+        if dest.match(/\.png$/)
+          `optipng -clobber #{dest}`
+        end
       end
       site.config['keep_files'] << filename unless site.config['keep_files'].include?(filename)
       img_attrs
