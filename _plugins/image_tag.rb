@@ -60,6 +60,7 @@ module Jekyll
       dest = File.join(site.dest, filename)
       FileUtils.mkdir_p(File.dirname(dest))
       unless File.exist?(dest)
+        img.strip!
         img.write(dest)
       end
       site.config['keep_files'] << filename unless site.config['keep_files'].include?(filename)
