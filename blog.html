@@ -16,7 +16,7 @@ title: The Netlify Blog. All about static web-tech and netlify.
         </header>
         <div class="post-img">
           {% if post.image %}
-          <img src="{{post.image}}">
+          {% image_tag src=post.image width="730" %}
           {% endif %}
         </div>
         <div class="post-bd">

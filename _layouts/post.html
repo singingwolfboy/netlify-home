@@ -14,7 +14,7 @@ layout: default
         </header>
         <div class="post-img">
           {% if page.image %}
-          <img src="{{page.image}}">
+          {% image_tag src=page.image width="730" %}
           {% endif %}
         </div>
         <div class="post-bd">

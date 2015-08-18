@@ -38,7 +38,7 @@ module Jekyll
       end
       img_attrs["srcset"] = srcset.map {|i| "#{i[:img]["src"]} #{i[:factor]}x"}.join(", ")
 
-      return "<img #{img_attrs.map {|k,v| "#{k}=\"#{v}\""}.join(" ")}>"
+      return "<img #{args.merge(img_attrs).map {|k,v| "#{k}=\"#{v}\""}.join(" ")}>"
     end
 
     def generate_image(site, src, attrs)
@@ -47,11 +47,11 @@ module Jekyll
 
       if attrs["height"]
         scale = attrs["height"].to_f * (attrs["factor"] || 1) / img.rows.to_f
-        img.scale!(scale)
+        img.scale!(scale) if scale <= 1
         img_attrs["height"] = attrs["height"]
       elsif attrs["width"]
         scale = attrs["width"].to_f * (attrs["factor"] || 1) / img.columns.to_f
-        img.scale!(scale)
+        img.scale!(scale) if scale <= 1
         img_attrs["width"] = attrs["width"]
       end
 
@@ -59,7 +59,9 @@ module Jekyll
       filename = img_attrs["src"].sub(/^\//, '')
       dest = File.join(site.dest, filename)
       FileUtils.mkdir_p(File.dirname(dest))
-      img.write(dest)
+      unless File.exist?(dest)
+        img.write(dest)
+      end
       site.config['keep_files'] << filename unless site.config['keep_files'].include?(filename)
       img_attrs
     end
