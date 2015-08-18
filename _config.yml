@@ -40,3 +40,4 @@ rss:
 
 gems:
   - octopress-minify-html
+minify_html: false
