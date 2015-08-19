@@ -45,6 +45,9 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.3.0)
       sass (~> 3.2)
+    jekyll-srcset (0.0.1)
+      jekyll (< 3)
+      rmagick
     jekyll-watch (1.2.1)
       listen (~> 2.7)
     json (1.8.3)
@@ -75,7 +78,7 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.2.2)
-    rmagick (2.13.2)
+    rmagick (2.15.4)
     safe_yaml (1.0.4)
     sass (3.4.12)
     timers (4.0.1)
@@ -92,5 +95,5 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-srcset
   octopress-minify-html
-  rmagick

@@ -39,5 +39,6 @@ rss:
   path: /blog
 
 gems:
+  - jekyll-srcset
   - octopress-minify-html
 minify_html: true
