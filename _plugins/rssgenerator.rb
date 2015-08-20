@@ -21,7 +21,11 @@
 # Copyright Assaf Gelber 2014
 
 module Jekyll
-  class RssFeed < Page; end
+  class RssFeed < Page;
+    def render_with_liquid?
+      false
+    end
+  end
 
   class RssGenerator < Generator
     priority :low
@@ -35,7 +39,7 @@ module Jekyll
     def generate(site)
       require 'rss'
       require 'cgi/util'
-      
+
       config = site.config['rss']
 
       # Create the rss with the help of the RSS module
