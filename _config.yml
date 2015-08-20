@@ -13,8 +13,6 @@ social-links:
 
 excerpt_separator: <!-- excerpt -->
 
-cms: local
-
 collections:
   docs:
     output: true
