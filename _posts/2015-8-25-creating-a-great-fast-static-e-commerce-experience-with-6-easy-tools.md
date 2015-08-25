@@ -1,5 +1,5 @@
 ---
-"title": "Creating a Great, Fast Static E-Commerce Experience With 6 Easy Tools"
+"title": "A Great, Fast Static E-Commerce Experience With 6 Easy Tools"
 "author": "Francois Lanthier"
 "image": "/uploads/snipcart.jpeg"
 "short_title": "E-Commerce With Snipcart"
