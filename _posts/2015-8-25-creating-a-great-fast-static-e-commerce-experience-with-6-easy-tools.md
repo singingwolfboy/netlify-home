@@ -1,6 +1,6 @@
 ---
 "title": "A Great, Fast Static E-Commerce Experience With 6 Easy Tools"
-"author": "Francois Lanthier"
+"author": "Charles Ouellet "
 "image": "/uploads/snipcart.jpeg"
 "short_title": "E-Commerce With Snipcart"
 "description": "Creating a Great, Fast Static E-Commerce Experience With 6 Easy Tools"
@@ -14,9 +14,15 @@
   - "tools"
 ---
 
+*Charles is a co-founder and lead engineer at Snipcart, a solution empowering developers to turn any website into a customizable e-commerce platform. He likes code, scotch, and colourful socks. You can follow him on [Twitter](https://twitter.com/couellet).*
+
+---
+
 The popularity of developer-oriented flat-file CMS and static site generators has been rocketing for the last two or three years. A growing, dynamic (see what I did there?) community of developers is embracing the static movement. And they've got good reasons to do so. Static sites are faster, cheaper and safer than their dynamic counterparts.
 
 The upper hand dynamic sites used to have was mostly due to their heavy feature-set. Back in the days, static sites couldn't offer many dynamic features and useful add-ons. But those days are gone. Using the right widgets and plugins, developers can now create amazing web experiences with static sites today. And that's exactly what we'll prove in this post.
+
+<!-- excerpt -->
 
 Today, we're going to show you how to create a fast, effective static e-commerce website by leveraging the right set of dynamic plugins and powerful static tools.
 
