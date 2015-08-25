@@ -13,8 +13,6 @@ social-links:
 
 excerpt_separator: <!-- excerpt -->
 
-cms: local
-
 collections:
   docs:
     output: true
@@ -39,4 +37,6 @@ rss:
   path: /blog
 
 gems:
+  - jekyll-srcset
   - octopress-minify-html
+minify_html: false

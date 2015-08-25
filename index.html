@@ -172,7 +172,7 @@ layout: default
     <!-- Blog -->
     <section>
       <header class="text-center mt-90 mb-50">
-        <h1 class="kilo highlight mb-35">Visit our blog</h1>
+        <h1 class="kilo highlight mb-35"><a href="/blog">Visit our blog</a></h1>
         <p class="zeta muted p--wide">See the blog for tons of articles, tips, tricks and opinions on all that is related to static web-tech.</p>
       </header>
       <div class="l-container">
@@ -182,7 +182,7 @@ layout: default
             <header class="blurb-hd">
               <div class="media">
                 <div class="media-img optional">
-                  <img src="{{post.thumbnail}}" width="80">
+                  {% image_tag src=post.thumbnail width="80" %}
                 </div>
                 <div class="media-bd">
                   <h1 class="blurb-title">

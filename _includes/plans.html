@@ -1,4 +1,5 @@
 <!-- Support -->
+{% if include.pricing2 != "yes" %}
 <section class="mt-40 mb-40">
   <h3 class="th th--highlight mb-0">All netlify plans include the following</h3>
   <div class="l-container">
@@ -22,7 +23,7 @@
     {% endfor %}
   </div>
 </section>
-
+{% endif %}
 
 <!-- Hosting -->
 <section class="mb-40">
@@ -54,6 +55,26 @@
             {% endfor %}
           </tr>
         {% endfor %}
+
+
+        {% if include.pricing2 %}
+        <tr class="text-center inverse">
+          <td colspan="5" class="th--highlight mb-10 mt-10">
+            <h3 class="mb-0 mt-0">All netlify plans include the following</h3>
+          </td>
+        </tr>
+        {% for attribute in site.data.plans.all %}
+          <tr>
+            <td class="th th--medium">
+              {{ attribute.title }}
+              {% include help-box.html attribute=attribute %}
+            </td>
+            {% for i in (1..4) %}
+            <td>Yes</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+        {% endif %}
       </tbody>
     </table>
   </div>
@@ -63,7 +84,7 @@
 <!-- Support -->
 <section class="mt-40 mb-100">
   <header>
-    <h1 class="gamma highlight mt-0 mb-0">Enterprise</h2>
+    <h1 class="gamma highlight mt-0 mb-0">Enterprise {{pricing2}}</h2>
     <p class="small p--wide loose mt-10 mb-30">netlify is the hosting service that truly caters the professionals, and our enterprise offerings are extensive.</p>
   </header>
   <div class="l-container">

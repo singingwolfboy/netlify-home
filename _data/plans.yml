@@ -1,7 +1,7 @@
 plans:
   - title: Free
     price: 0
-    price_note: "Free forever"
+    price_note: "Free forever, no credit card needed"
   - title: Basic
     price: "7,5"
     price_note: "Per month billed annually or $9 month to month"

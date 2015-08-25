@@ -6,7 +6,7 @@
     <div class="l-third">
       <section class="blurb">
         <header class="blurb-hd">
-          <img src="{{testimonial.photo}}" height="90">
+          {% image_tag src=testimonial.photo height="90" %}
         </header>
         <div class="blurb-bd">
           <blockquote>
@@ -24,11 +24,11 @@
 <section class="mt-55 mb-85">
   <h1 class="alpha">A selection of our clients</h1>
   <div class="mt-40 mobile-stack-images">
-    <img src="/img/logos/vice.png" width="82" class="mr-40">
-    <img src="/img/logos/app-io.png" width="119" class="mr-40">
-    <img src="/img/logos/nbc.png" width="66" class="mr-40">
-    <img src="/img/logos/greenpeace.png" width="120" class="mr-40">
-    <img src="/img/logos/openstack.png" width="120" class="mr-40">
-    <img src="/img/logos/baccardi.png" width="120" class="mr-40">
+    {% image_tag src="/img/logos/vice.png" width="82" class="mr-40" %}
+    {% image_tag src="/img/logos/app-io.png" width="119" class="mr-40" %}
+    {% image_tag src="/img/logos/nbc.png" width="66" class="mr-40" %}
+    {% image_tag src="/img/logos/greenpeace.png" width="120" class="mr-40" %}
+    {% image_tag src="/img/logos/openstack.png" width="120" class="mr-40" %}
+    {% image_tag src="/img/logos/baccardi.png" width="120" class="mr-40" %}
   </div>
 </section>
