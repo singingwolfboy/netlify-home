@@ -6,7 +6,7 @@
 "description": "Creating a Great, Fast Static E-Commerce Experience With 6 Easy Tools"
 "thumbnail": "/uploads/logo-snipcart.png"
 "cmsUserSlug": ""
-"date": 2015-08-25 
+"date": 2015-08-25T00:00:00.000Z
 "tags":
   - "e-commerce"
   - "guest post"
@@ -151,4 +151,4 @@ With these 6 tools, you can **build a great, fast static e-commerce experience.*
 
 ***
 
-*Charles Ouellet & Francois Lanthier Nadeau are the founders of [Snipcart](https://snipcart.com). They love discussing e-commerce and static web development, so feel free to hit the comments if you have any thoughts, questions or suggestions. You can also follow us on [Twitter](https://twitter.com/snipcart) and on our [blog](https://snipcart.com/blog). And if you've enjoyed this post, please, take a second to share it on Twitter.*
+*We'd like to thank Christian and Mathias for letting us publish this guest post on the Netlify blog. We do love discussing static web development, so feel free to hit the comments if you have any thoughts, questions or suggestions. You can also follow us on [Twitter]([https://twitter.com/snipcart](https://twitter.com/snipcart)) and on our [blog]([https://snipcart.com/blog](https://snipcart.com/blog)). And if you've enjoyed this post, please, take a second to share it on Twitter*
