@@ -56,7 +56,7 @@ This step is going to be pretty obvious: integrating Disqus is as easy as integr
 	<script type="text/javascript">
 	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 	    var disqus_shortname = '<example>'; // Required - Replace '<example>' with your forum shortname
-	
+
 	    /* * * DON'T EDIT BELOW THIS LINE * * */
 	    (function() {
 	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -85,7 +85,7 @@ The code snippet you need to integrate should like like this:
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
+
 	ga('create', 'UA-XXXX-Y', 'auto');
 	ga('send', 'pageview');
 	</script>
@@ -151,4 +151,4 @@ With these 6 tools, you can **build a great, fast static e-commerce experience.*
 
 ***
 
-*We'd like to thank Christian and Mathias for letting us publish this guest post on the Netlify blog. We do love discussing static web development, so feel free to hit the comments if you have any thoughts, questions or suggestions. You can also follow us on [Twitter]([https://twitter.com/snipcart](https://twitter.com/snipcart)) and on our [blog]([https://snipcart.com/blog](https://snipcart.com/blog)). And if you've enjoyed this post, please, take a second to share it on Twitter*
+*We'd like to thank Christian and Mathias for letting us publish this guest post on the Netlify blog. We do love discussing static web development, so feel free to hit the comments if you have any thoughts, questions or suggestions. You can also follow us on [Twitter]([https://twitter.com/snipcart](https://twitter.com/snipcart)) and on our [blog]([https://snipcart.com/blog](https://snipcart.com/blog)). And if you've enjoyed this post, please, take a second to share it on [Twitter](https://twitter.com/home?status=A%20Great,%20Fast%20Static%20%23Ecommerce%20Experience%20With%206%20Easy%20Tools%C2%A0http%3A//buff.ly/1NSudIH%20via%20%40netlify%20%26%20%40snipcart)*
