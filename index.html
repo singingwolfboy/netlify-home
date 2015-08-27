@@ -26,7 +26,20 @@ layout: default
         <div class="blurb w-355 center">
           <h1 class="huge overloud mt-0">
             <span class="block ml-n5">netlify</span>
-            <small class="alpha highlight block">Builds, deploys &amp; hosts your static site or app</small>
+            <small class="alpha highlight block">
+              Builds, deploys &amp; hosts your <span id="js-lp-text">static site or app</span>
+            </small>
+              <script>
+              (function() {
+                var match = document.location.pathname.match(/^\/(generators|frameworks)\/([^\/]+)$/)
+                if (match) {
+                  var type = match[1] == "generators" ? "site" : "app";
+                  var name = match[2];
+                  document.getElementById("js-lp-text").textContent = name.charAt(0).toUpperCase() + name.slice(1) + " " + type;
+                }
+              })();
+              </script>
+            </small>
           </h1>
           <p>
             <a href="https://app.netlify.com" class="button button--large js-swipe">
