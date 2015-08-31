@@ -6,7 +6,7 @@
 "description": "The new jekyll-srcset plugin makes it easy to serve the best image for your visitors pixel density. Share & enjoy!"
 "thumbnail": "/uploads/jekyll-logo.png"
 "cmsUserSlug": ""
-"date": 2015-08-20 
+"date": 2015-08-20
 "tags": null
 ---
 
@@ -15,7 +15,7 @@
 Here's how you would use it in a Liquid template:
 
 ```html
-{% image_tag src=page.thumbnail width="200" %}
+{%raw%}{% image_tag src=page.thumbnail width="200" %}{%endraw%}
 ```
 
 With a page with cover image `/thumb.jpg` with the dimensions 500x500, this will output the following img tag and generate all the needed image variations:
@@ -40,7 +40,7 @@ Just add a srcset attribute to your img, specifying an image to use for 1x pixel
 
 That little fix alone will let you save lots of bandwidth for low pixel density devices while serving crisp images to Retina screens, and without having to deal with polyfills or all the verbose markup of a picture tag muddled to work in all browsers...
 
-This new [responsive image Jekyll plugin](https://github.com/netlify/jekyll-srcset) makes it so straight forward to add a srcset attribute to your images, that there's really no excuse not to. Just add the plugin to your Gemfile and start using `{% image_tag %}` instead of `<img>` in your templates.
+This new [responsive image Jekyll plugin](https://github.com/netlify/jekyll-srcset) makes it so straight forward to add a srcset attribute to your images, that there's really no excuse not to. Just add the plugin to your Gemfile and start using `{%raw%}{% image_tag %}{%endraw%}` instead of `<img>` in your templates.
 
 You can see it in action on this very page, just check the [Liquid template](https://github.com/netlify/netlify-home/blob/master/_layouts/post.html) for the blog post you're reading right now.
 
