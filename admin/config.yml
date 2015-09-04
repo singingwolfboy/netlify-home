@@ -1,7 +1,12 @@
 backend:
-  name: github-api
-  repo: netlify/netlify-home
-  branch: master
+  name: netlify-api
+  url: http://localhost:8080
+
+production:
+  backend:
+    name: github-api
+    repo: netlify/netlify-home
+    branch: master
 
 media_folder: uploads
 
@@ -32,3 +37,20 @@ collections:
     meta:
       - {label: "Menu Title", name: "title", widget: "string", optional: false}
       - {label: "Position", name: "position", widget: "number", optional: false}
+
+  - name: "data"
+    label: "Page Data"
+    files:
+      - name: testimonials
+        label: Testimonials
+        file: _data/testimonials.yml
+        fields:
+          - name: quotes
+            label: Testimonials
+            description: "Quotes, Titles, Photos and Links for the testmionials"
+            widget: list
+            fields:
+              - {label: "Quote", name: "quote", widget: "markdown"}
+              - {label: "Name and title", name: "cite", widget: "string"}
+              - {label: "Link URL", name: "link", widget: "string"}
+              - {label: "Photo", name: "photo", widget: "image", media_folder: "img/testimonials"}

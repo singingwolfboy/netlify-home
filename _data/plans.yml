@@ -1,16 +1,16 @@
 plans:
   - title: Free
     price: 0
-    price_note: "Free forever, no credit card needed"
+    price_note: "Free forever\nNo credit card needed"
   - title: Basic
-    price: "7,5"
-    price_note: "Per month billed annually or $9 month to month"
+    price: "7.5"
+    price_note: "Monthly billed once a year or $9 month to month"
   - title: Advanced
     price: "24"
-    price_note: "Per month billed annually or $29 month to month"
+    price_note: "Monthly billed once a year or $29 month to month"
   - title: Pro
     price: "39"
-    price_note: "Per month billed annually or $49 month to month"
+    price_note: "Monthly billed once a year or $49 month to month"
 
 all:
   - title: Global CDN Network
@@ -80,7 +80,7 @@ attributes:
     details: [0, 1, 10, 100]
     info: Point more than one domain to the same website.
   - title: Storage / month
-    details: ["100 MB", "1 GB", "25 GB", "100 GB"]
+    details: ["100 MB", "5 GB", "25 GB", "100 GB"]
     info: To get more storage simply upgrade your plan.
   - title: Bandwidth / month
     details: ["1 GB", "100 GB", "500 GB", "1 TB"]

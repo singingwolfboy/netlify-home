@@ -13,10 +13,16 @@
   $color-lighter: #F9FAFA;
   $color-lightest: #FFF;
 
+  // ** Tints-of-greens
+  $color-tint1: rgb(193,216,213);
+  $color-tint2: rgb(154,207,201);
+  $color-tint3: rgb(117,196,186);
+
   //** Blue-greens
   $color-highlight: rgb(0,199,183);
   $color-highlight-lighter: rgb(202,224,222);
   $color-highlight-lightest: rgb(230,239,238);
+
 
   //** Social networks (http://brandcolors.net/)
   $colors-social: (
@@ -110,6 +116,10 @@ svg {
 .bg-light-muted-2 {
   background: $color-light url(/img/bg-light-3.svg) no-repeat -25px -90px;
 }
+.bg-highlight {
+  background-color: $color-highlight;
+}
+
 .bg-dark-cover {
   background: $color-darkest url(/img/bg-dark-1.svg) no-repeat;
   background-size: cover;
@@ -120,6 +130,15 @@ svg {
 .bg-dark-muted-cover {
   background: $color-darkest url(/img/bg-dark-2.svg) no-repeat;
   background-size: cover;
+}
+.bg-tint1 {
+  background: $color-tint1;
+}
+.bg-tint2 {
+  background: $color-tint2;
+}
+.bg-tint3 {
+  background: $color-tint3;
 }
 
 /* Main and sidebar */

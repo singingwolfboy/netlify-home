@@ -1,29 +1,115 @@
+.plan--features-icon {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.plan--features-icon:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    margin: 5%;
+    border: 1px solid #fff;
+    height: 90%;
+    border-radius: 100%;
+}
+
+.plan--th {
+  background-color: transparent;
+  padding: 0;
+  width: 190px;
+  vertical-align: top;
+}
 .plan--header {
   padding: 10px;
   width: 8em;
-  vertical-align: top;
 }
 .plan--title {
   font-size: 16px;
   font-weight: 100;
 }
 .plan--price {
-  padding: 3px 0 5px;
-}
-.plan--currency {
-  font-size: 16px;
-  font-weight: 100;
+  padding: 40px 0;
+  overflow: hidden;
 }
 .plan--amount {
-  font-size: 28px;
+  font-size: 54px;
+  letter-spacing: -2px;
+  font-weight: bold;
+  text-align: right;
+  position: relative;
+  top: 4px;
 }
-.plan--period {
+.plan--currency {
+  font-size: 18px;
   font-weight: normal;
+  text-align: left;
+  line-height: 1;
+  padding-left: 7px;
+}
+.plan--title, .plan--note {
+  padding: 10px;
+  margin: 0;
+}
+.plan--title {
+  margin-bottom: 5px;
+  color: $color-darker;
+  font-weight: bold;
 }
 .plan--note {
-  font-size: 14px;
-  font-weight: 100;
+  font-size: 12px;
+  font-weight: normal;
   line-height: 1.3;
+}
+.plan--feature {
+  width: 180px;
+  font-size: 12px;
+  text-align: left;
+  height: 54px;
+  line-height: 1.45;
+}
+.plan--enterprise-feature {
+  height: 40px;
+}
+.plan--feature-title {
+  float: left;
+  width: 83%;
+}
+.icon.icon-plus {
+  color: $color-muted;
+  border: 1px solid $color-highlight;
+  border-radius: 100%;
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  line-height: 12px;
+  padding: 1px 0 0 0px;
+  font-size: 14px;
+  text-align: center;
+}
+.x-small .icon-plus {
+  padding-left: 1px;
+}
+.icon.icon-no {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  border: 1px solid $color-muted;
+  border-radius: 100%;
+}
+.icon.icon-yes {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  border: 1px solid $color-highlight;
+  border-radius: 100%;
+  background-color: $color-highlight;
 }
 
 .help-box {

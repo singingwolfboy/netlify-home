@@ -60,7 +60,6 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       margin-bottom: 110px;
     }
   }
-
 }
 
 @include breakpoint($bp-med-large) { //* Tweak point to leave more room for hero and main
@@ -85,6 +84,8 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .callout--large {
     margin-left: 0;
   }
+
+
 }
 
 @include breakpoint($bp-med-large-2) { //* Tweak point to fix broken hero
@@ -99,6 +100,27 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     .callout {
       visibility: hidden;
     }
+  }
+
+  /* Plans and pricing table */
+  .plan--price.th--highlight {
+    padding: 15px 0 10px;
+  }
+  .plan--amount {
+    font-size: 45px;
+  }
+  .plan--currency {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+  .plan--note, .plan--feature, .plan--enterprise-feature {
+    font-size: 11px;
+  }
+  .plan--icon-hint {
+    display: none;
+  }
+  .td.plan--note {
+    margin: 0;
   }
 }
 
