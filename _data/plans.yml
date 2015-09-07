@@ -73,11 +73,12 @@ all:
 
 attributes:
   - title: Custom Domain
+    postfix: " "
     details: ["Netlify Callout", "Custom Domain", "Custom Domain", "Custom Domain"]
     info: Move your own domain to netlify, or simply buy it via netlify. A custom domain on the free plan adds a "netlify call-out" to your site
     link_text: "View the netlify call-out and read all about it"
   - title: Domain Aliases
-    details: [0, 1, 10, 100]
+    details: ["0", "1", "10", "100"]
     info: Point more than one domain to the same website.
   - title: Storage / month
     details: ["100 MB", "5 GB", "25 GB", "100 GB"]
@@ -86,7 +87,8 @@ attributes:
     details: ["1 GB", "100 GB", "500 GB", "1 TB"]
     info: To get more bandwith simply upgrade your plan. Note that netlify will never suspend your site because of traffic spikes.
   - title: Automated Builds / month
-    details: [50, 100, 350, 600]
+    postfix: Builds / month
+    details: ["50", "100", "350", "600"]
     info: Refers the number of times you can push a new version of your site live using netlifys continous deployment services (Easily link a Netlify site to a Github or Bitbucket repo. Whenever you push to Github we run your build and deploy the result.)
     link_text: "What can CD do for my workflow?"
   - title: Proxied requests / month
@@ -94,7 +96,8 @@ attributes:
     info: Setup proxying rules for any path, whether to avoid CORS when communicating with an API or just for embedding a dynamic site within a path of your site.
     link_text: All about proxying on netlify
   - title: Handle form submissions / month
-    details: [100, 1000, 10000, "Unlimited"]
+    postfix: Form submissions / month
+    details: ["100", "1000", "10000", "Unlimited"]
     info: Netlify supports form submissions for any HTML form on your site and trigger email, slack notifications or webhooks.
   - title: DNS hosting with DNS panel
     details: ["No", "Yes", "Yes", "Yes"]

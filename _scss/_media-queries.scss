@@ -448,6 +448,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
    */
   .l-container,
   .l-container .l-third,
+  .l-container .l-fourth,
   .l-container .l-half,
   .l-2-col .l-col,
   .l-3-col .l-col {
@@ -757,30 +758,26 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
 
   /* Responsive pricing table */
   .pricing-table {
-    margin: 20px 0;
-    width: 100%;
-    tbody, tr, th, td {
-      display: block;
-      padding: 0;
-      text-align: left;
-      white-space: normal;
-    }
-    td {
-      padding: 0 10px;
-    }
-    .plan--feature-plan {
-      display: block;
-      float: left;
-      width: 50%;
-      text-align: left;
-    }
-    .plan--feature-attr {
-      display: block;
-      float: left;
-      width: 50%;
-      text-align: right;
+    display: none;
+  }
+  .mobile-pricing-table {
+    display: block;
+    .td {
+      padding: 10px 10px;
+      height: 45px;
     }
   }
+  .plan--feature-title {
+    font-size: 16px;
+  }
+  .plan--feature-box {
+    display: none;
+  }
+  .plan--enterprise-feature {
+    display: block;
+    padding: 10px;
+  }
+
 }
 
 @include breakpoint($bp-small-2) {
