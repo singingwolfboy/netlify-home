@@ -3,7 +3,7 @@
 <!-- Hosting -->
 <section class="mb-40">
   <div class="l-container">
-    <table class="full-width">
+    <table class="full-width pricing-table">
       <thead>
         <tr>
           <th class="td">
@@ -38,13 +38,16 @@
             </td>
             {% for detail in attribute.details %}
             <td>
-              {% if detail == "Yes" %}
-              <span class="icon icon-yes"></span>
-              {% elsif detail == "No" %}
-              <span class="icon icon-no"></span>
-              {% else %}
-              {{ detail }}
-              {% endif %}
+              <div class="plan--feature-plan">{{ site.data.plans.plans[forloop.index0].title }}: </div>
+              <div class="plan--feature-attr">
+                {% if detail == "Yes" %}
+                <span class="icon icon-yes"></span>
+                {% elsif detail == "No" %}
+                <span class="icon icon-no"></span>
+                {% else %}
+                {{ detail }}
+                {% endif %}
+              </div>
             </td>
             {% endfor %}
           </tr>

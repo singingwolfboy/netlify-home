@@ -5,3 +5,9 @@ div#habla_beta_container_do_not_rely_on_div_classes_or_names {
 .cms-thumbnail {
   width: 80px;
 }
+
+.cms-testimonial {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}

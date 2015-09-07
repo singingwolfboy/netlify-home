@@ -79,7 +79,6 @@
     });
 
     $("tbody tr", $table).each(function() {
-      console.log("Row: %o", this);
       $("td", this).each(function(index) {
         $td = $(this);
         if (index) {

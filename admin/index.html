@@ -41,6 +41,28 @@ name: admin
     {{/each}}
   </script>
 
+  <script type="text/x-handlebars" data-template-name='cms/preview/testimonials'>
+    <section class="bg-light-muted muted text-center bb bb--large">
+      {{#cms-preview field="quotes" as |testimonial|}}
+      <div class="l-container mt-20 mb-20">
+        <div class="l-third cms-testimonial">
+          <section class="blurb">
+            <header class="blurb-hd">
+              {{cms-preview field="photo" from=testimonial}}
+            </header>
+            <div class="blurb-bd">
+              <blockquote>
+                {{cms-preview field="quote" from=testimonial}}
+                <cite><a class="loud" href="{{testimonial.link}}" target="_blank">{{testimonial.cite}}</a></cite>
+              </blockquote>
+            </div>
+          </section>
+        </div>
+      </div>
+      {{/cms-preview}}
+    </section>
+  </script>
+
   <script type="text/x-handlebars" data-template-name='cms/preview/post'>
     <article class="post">
       <header class="post-hd">
