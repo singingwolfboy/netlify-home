@@ -59,9 +59,10 @@
       <div class="l-container">
         {% for plan in site.data.plans.plans %}
           {% assign index = forloop.index0 %}
+          {% capture color %}{% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}{% endcapture %}
           <div class="l-third">
             <div class="table">
-              <h3 class="th th--highlight">{{plan.title}}</h3>
+              <h3 class="plan--title gamma {{color}}">{{plan.title}}</h3>
               <ul class="tbody">
                 {% for attribute in site.data.plans.attributes %}
                   {% assign detail = attribute.details[index] %}
@@ -73,6 +74,13 @@
                     </li>
                   {% endif %}
                 {% endfor %}
+                <li class="plan--price th--highlight">
+                  <span class="plan--amount l-half">{{ plan.price}}</span>
+                  <span class="plan--currency l-half">
+                    $<br>month
+                  </span>
+                </li>
+                <li class="x-small mt-10">{{ plan.price_note }}</li>
               </ul>
             </div>
           </div>
@@ -86,7 +94,7 @@
 
     <header class="mt-20 mb-20 bb bb--muted">
       <h2 class="beta highlight">
-        Still not convinced? All netlify plans also include the following features
+        All netlify plans also include the following features
       </h2>
     </header>
 
