@@ -1,11 +1,12 @@
 ---
 "title": "Netlify news no. 4"
 "author": "Christian Bach"
+"image": null
 "short_title": "Our Fourth Newsletter"
 "description": "Support for automatic builds with Clojure & Leiningen. Gitlab & self-hosted Git repo support & more."
 "thumbnail": "/uploads/download-1.jpeg"
 "cmsUserSlug": ""
-"date": 2015-09-08 
+"date": 2015-09-08T00:00:00.000Z
 "tags": null
 ---
 
@@ -21,28 +22,30 @@ Our hosting service had tons of work done under the hood as well.
 
 Here is a selection of what’s new!
 
-
-### Clojure support
+## Clojure support
 
 We now support Clojure on our build image and will automatically install and cache dependencies with Leiningen if your repository has a 'project.clj'
 
- Clojure is a really exciting functional programming language running on Java's virtual machine.
+Clojure is a really exciting functional programming language running on Java's virtual machine.
 
 
- ### Gitlab and self-hosted Git repositories
+## Gitlab and self-hosted Git repositories
 
 As you may know we support continuous deployment straight to both Github and Bitbucket: Simply push to Git, and we make sure that your site is automatically updated, code and headers optimised and all.
 
- Now some of you have been asking for GitLab and self-hosted repositories as well. Well you got it!
+Now some of you have been asking for GitLab and self-hosted repositories as well. Well you got it!
 
- When setting up continuous deployment from our [CLI tool](http://netlify.us2.list-manage.com/track/click?u=3ca88a0cd26d026e590224d67&amp;id=990c45cb15&amp;e=c4ca3f6603) we now support any public available Git repository, as long as you can setup a webhook and give access to an SSH key.
+When setting up continuous deployment from our [CLI tool](http://netlify.us2.list-manage.com/track/click?u=3ca88a0cd26d026e590224d67&amp;id=990c45cb15&amp;e=c4ca3f6603) we now support any public available Git repository, as long as you can setup a webhook and give access to an SSH key.
 
 
-  We will be back next week, with big CDN news.
 
- Till then, keep smiling.
+<br>
 
- Have an awesome day.
+We will be back next week, with big CDN news.
 
-  /Matt &amp; Chris
+Till then, keep smiling.
+
+Have an awesome day.
+
+/Matt & Chris
 
