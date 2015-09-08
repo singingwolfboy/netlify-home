@@ -1,7 +1,6 @@
 ---
 "title": "Netlify news no. 4"
 "author": "Christian Bach"
-"image": "/uploads/download-1.jpeg"
 "short_title": "Our Fourth Newsletter"
 "description": "Support for automatic builds with Clojure & Leiningen. Gitlab & self-hosted Git repo support & more."
 "thumbnail": "/uploads/download-1.jpeg"
