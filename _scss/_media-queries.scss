@@ -352,6 +352,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
       }
     }
   }
+
 }
 
 @include breakpoint($bp-med-small) { //* Tweak point to leave more room for content
@@ -370,6 +371,12 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .media--bleed {
     .media-img {
       margin-left: -4px;
+    }
+  }
+
+  .docs-main, .post-bd {
+    img {
+      max-width: 100%;
     }
   }
 }
