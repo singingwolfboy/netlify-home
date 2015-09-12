@@ -23,6 +23,7 @@ While we’d rate our ability to name things to be fairly average, Instant Cache
 Here is a bit about what it actually means, and why it’s important.
 
 ![cache-invalidation-quote.png](/uploads/cache-invalidation-quote.png)
+*See what I did there?..*
 
 <!-- excerpt -->
 
@@ -75,6 +76,8 @@ What it means is simply that when you update your site you don’t have to wait 
 So, you get a highly cached site which makes it load ultra fast. But at the same time you see your changes when you update, instantly.
 
 ![instant-cache-invalidation-joy.gif](/uploads/instant-cache-invalidation-joy.gif)
+*If the above didn’t register, laughing cute animal / baby + Betty White should leave no doubt. Instant Cache Invalidation is great thing.*
+
 
 ## The tech part
 
