@@ -92,49 +92,53 @@
 
   });
 
-  /* Help boxes */
-  var helpboxOverlay = document.createElement("div");
-  var $currentHelpbox = null;
-  helpboxOverlay.className = "help-box-overlay";
-  var $helpboxOverlay = $(helpboxOverlay);
-  document.body.appendChild(helpboxOverlay);
+
   $(".js--help-box-trigger").click(function(e) {
-    e.preventDefault();
-    if ($currentHelpbox) {
-      var $container = $currentHelpbox.parent();
-      $container.attr("style", "");
-      $helpboxOverlay.hide();
-      $currentHelpbox.hide();
-      $currentHelpbox = null;
+    e.preventDefault()
+
+    var $this = $(this);
+    if ($this.data("helpbox")) {
+      $this.data("helpbox").hide();
+      $this.data("helpbox", null);
     } else {
-      $helpboxOverlay.show();
-      var $container = $(this).parent();
-      $currentHelpbox = $container.find(".js--help-box");
-      $container.css({position: "relative", "z-index": 950});
-      var pos = $container.offset();
-      if (pos.left + $container.width() > $(window).width() - 600) {
-        // position on left side of container;
-        $currentHelpbox.css({
-          left: -410,
-          top: -50
-        });
+      $(".help-box:visible").each(function() {
+        $(this).hide().parent().find(".js--help-box-trigger").data("helpbox", null);
+      });
+      var $box = $(this).parent().find(".js--help-box");
+      var $tr = $this.closest("tr");
+      if ($tr.length) {
+        var $tds = $tr.find("td").not($this.closest("td"));
+        if ($tds.find(":visible").length == 0) {
+          $box.show();
+        } else {
+          var width = $tr.closest("table").width() / 5 * 4 - 3;
+          var height = $tr.height() - 2;
+          $box.css({top: $tds.position().top + 6, left: $tds.position().left + 3, width: width, "min-height": height, "display": "table"});
+        }
       } else {
-        $currentHelpbox.css({
-          left: $container.width() + 30,
-          top: -50
-        });
+        var $mobile = $this.closest(".mobile-pricing-table");
+        if ($mobile.length) {
+          $box.show();
+        } else {
+          var $fourth = $this.closest(".l-fourth");
+          var $container = $fourth.next(".l-fourth");
+          if ($container.length == 0) {
+            $container = $fourth.prev(".l-fourth");
+          }
+          var $ul = $container.find("ul");
+          var width = $ul.width() - 4;
+          var height = $ul.height();
+          $box.css({top: $ul.position().top, left: $ul.position().left + 2, width: width, "min-height": height, "display": "table"});
+        }
       }
-      $currentHelpbox.show();
-    }
-  });
-  $helpboxOverlay.click(function(e) {
-    if ($currentHelpbox) {
-      var $container = $currentHelpbox.parent();
-      $container.attr("style", "");
-      $helpboxOverlay.hide();
-      $currentHelpbox.hide();
-      $currentHelpbox = null;
+      $this.data("helpbox", $box);
     }
   });
 
+  $(".js-read-more").click(function(e) {
+    e.preventDefault();
+
+    var $parent = $(this).parent();
+    $parent.find(".foldout").show().end().find(".teaser").hide();
+  });
 })();

@@ -1,3 +1,10 @@
+.blurb .foldout {
+  display: none;
+}
+.blurb .more {
+  display: block;
+}
+
 .mobile-pricing-table {
   display: none;
 }
@@ -121,12 +128,20 @@
 .help-box {
   display: none;
   position: absolute;
-  background: $color-lightest;
-  border: 1px solid $color-highlight-lighter;
+  background: $color-highlight;
+  color: #fff;
   padding: 5px 20px;
   text-align: left;
   z-index: 1000;
   width: 400px;
+  .help-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+    a, a:visited, a:link, a:active {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 }
 .help-box-overlay {
   display: none;

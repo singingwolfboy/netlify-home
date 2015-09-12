@@ -781,6 +781,7 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   }
   .button--signup {
     margin: 0 auto;
+    width: 274px;
   }
   .signup--extra-info {
     display: none;
@@ -794,6 +795,23 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
   .plan--enterprise-feature {
     display: block;
     padding: 10px;
+  }
+  table, .mobile-pricing-table {
+    .plan--feature, .td {
+      position: relative;
+    }
+    .help-box {
+      position: absolute;
+      top: 60px;
+      left: 0px;
+      width: 100%;
+      font-size: 11px;
+      line-height: 1.45;
+      padding: 10px;
+    }
+  }
+  .mobile-pricing-table .help-box {
+    top: 50px;
   }
 
 }
