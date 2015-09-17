@@ -138,7 +138,6 @@
   $(".js-read-more").click(function(e) {
     e.preventDefault();
 
-    var $parent = $(this).parent();
-    $parent.find(".foldout").show().end().find(".teaser").hide();
+    $(this).closest(".js-item").toggleClass("open");
   });
 })();

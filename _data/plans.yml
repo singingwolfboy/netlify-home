@@ -1,3 +1,23 @@
+intro:
+  - title: Full Featured
+    teaser: More than 40+ features
+    text: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
+  - title: Instant Cache Invalidation
+    teaser: See your changes instantly
+    text: It might sound like just a technical detail but it’s a very defining part of netlify. When you upload a new version of your site, you don’t have to wait 10-120 minutes as with the other services. Here you can instantly see your changes live!
+  - title: Fastest Performance
+    teaser: 2x faster than second best
+    text: Netlify is more than twice as fast than any competitor. Please don’t just take our word for it. Try out a free plan and see for yourself!
+  - title: Enterprise
+    teaser: Lots of high-end Enterprise features
+    text: The enterprise features are high-end and caters large international clients, with millions of hits on a daily basis. Geo ip, language based redirects, custom SLAs, and more. See a feature list below.
+  - title: The 4 Packages
+    teaser: "From 'Free' to 'Pro'"
+    text: The free package alone offers more features than most others do in their paid plans. All packages contain netlify key features, but with things like storage, bandwith, no. of deploys, and support plans increasing which each level.
+  - title: Continuous Deployment
+    teaser: Build and Deploy autmatically
+    text: Netlify is the only static hosting service that runs your build and deploys any site whenever you push to Git.
+
 plans:
   - title: Free
     price: 0
