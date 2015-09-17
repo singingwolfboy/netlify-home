@@ -6,7 +6,7 @@ short_title: Continuous Deployment
 description: Automatically build and deploy every time you push to git. All part of netify.
 thumbnail: /uploads/softwareupdate-icon.png
 cmsUserSlug: ""
-date: 2015-09-17 
+date: 2015-09-17T00:00:00.000Z
 tags: null
 ---
 
@@ -42,5 +42,5 @@ All our agency clients and the more heavy weight web developers tend use continu
 
  **Questions?**
 
-Write them in the comments below, or [ask](https://www.netlify.com and we’ll do our best to answer.
+Write them in the comments below, or [ask](https://www.netlify.com/contact) and we’ll do our best to answer.
 
