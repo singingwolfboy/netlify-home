@@ -1,8 +1,8 @@
 //*---------------------------------------------------------
-//* 
-//* Typography loosely based on classic typographic scale, 
+//*
+//* Typography loosely based on classic typographic scale,
 //* tweaked to try to match font sizes in comp
-//* 
+//*
 //* http://spencermortensen.com/articles/typographic-scale/
 //*
 //*---------------------------------------------------------
@@ -36,8 +36,8 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-/* 
- * Basic spacing 
+/*
+ * Basic spacing
  */
 h1, h2, h3, h4, h5, p, ul, ol, dl, blockquote {
   margin: 20px 0;
@@ -173,14 +173,19 @@ p {
 }
 
 
-/* 
+/*
  * Weights
  */
 .thin {
   @include font-weight(thin);
 }
 
-strong, 
+.normal {
+  @include font-weight(normal);
+  letter-spacing: normal;
+}
+
+strong,
 b,
 .semibold {
   @include font-weight(medium);
@@ -193,16 +198,20 @@ b,
 }
 
 
-/* 
+/*
  * Line heights
  */
 .loose {
   line-height: 1.8;
 }
 
+.underline {
+  border-bottom: 2px solid;
+}
 
-/* 
- * No italics 
+
+/*
+ * No italics
  */
 em, i, cite {
   font-style: normal;
