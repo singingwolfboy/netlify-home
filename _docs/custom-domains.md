@@ -2,7 +2,7 @@
 "title": "Custom Domains"
 "position": 30
 "cmsUserSlug": "custom-domains"
-"date": 2015-06-03 
+"date": 2015-06-03
 ---
 
 ## Using a custom domain
@@ -43,3 +43,9 @@ If you prefer the naked domain, we recommend you use a DNS provider that support
 ## Domain redirects
 
 We'll automatically set up redirects for the alternative domain to the primary domain. So if you use `www.example.com`, we'll configure `example.com` to do a 301 redirect to the `www` domain. If you assign the naked domain to your site, we'll redirect in the opposite direction.
+
+## Domain aliases
+
+Depending on your plan, you can setup domain aliases for your domain, so the same site will be rendered on several different domains.
+
+You can use domain aliases together with [rewrite and redirect](/docs/redirects) to redirect or rewrite based on the current domain of the site.

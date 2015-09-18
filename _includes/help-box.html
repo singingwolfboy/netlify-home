@@ -2,6 +2,6 @@
 <div class="help-box js--help-box">
   <div class="help-box-inner">
     {{ attribute.info }}
-    {% if attribute.link_text %} &mdash; <a href="#">{{attribute.link_text}}</a>{% endif %}
+    {% if attribute.link %} &mdash; <a href="{{attribute.link}}" target="_blank">{{attribute.link_text}}</a>{% endif %}
   </div>
 </div>

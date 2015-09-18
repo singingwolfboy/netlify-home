@@ -33,6 +33,17 @@ When the status code is 301, 302 or 303 Netlify will redirect to the target url.
 
 This means that you can define **rewrite** rules as well as **redirects** by specifying 200 as the status code.
 
+## Custom 404
+
+You can easily setup a custom 404 page. This doesn't require any redirect rules. Just add a `404.html` page to your site and it'll be picked up automatically.
+
+## Trailing Slash
+
+Our CDN edge nodes does URL normalization before the redirect rules kicks in. This happens to make sure we can guarantee the highest possible cache hit rate and the absolute best performance for your site.
+
+This means you can't make redirect rules that matches on trailing slashes to either force trailing slash or always remove the trailing slash.
+
+We'll be launching a setting to let you control URL normalization soon. Meanwhile we recommend using `<link rel="canonical" href="/canonical/path/to/current/page" >` to guarantee canonical URLs for SEO purposes. This also has the advantage of not sending anyone through an extra redirect when following links to your site and will solve any SEO issues with duplicate content due to trailing slash vs no trailing slash.
 
 ## Placeholders
 
@@ -71,7 +82,6 @@ If you're developing a single page app and want history pushstate to work so you
 
 This will effectively serve the index.html instead of giving a 404 no matter what URL the browser requests.
 
-
 ## Proxying
 
 Just like you can rewrite paths like `/*` to `/index.html`, you can also setup rules to let parts of your site proxy to external services. Lets say you need to communicate from a Single Page App with an API on https://api.example.com that doesn't support CORS request. The following rule will let you use /api/ from your JavaScript client:
@@ -82,8 +92,24 @@ Now all requests to /api/... will be proxied through to https://api.example.com 
 
 ## Note on shadowing
 
-You currently can't shadow a URL that actually exists within the site. This means that even if you've setup the following rewrite rule:
+By default you can't shadow a URL that actually exists within the site when using a splat or dynamic path segment. This means that even if you've setup the following rewrite rule:
 
     /*   /index.html   200
 
-The path `/partials/chat.html` would still render the contents of that file, if that file actually exists.
+The path `/partials/chat.html` would still render the contents of that file, if that file actually exists. This tends to be the preferred behavior when setting up rewrite rules for single page apps, etc.
+
+However, if you're 100% sure that you'll always want to redirect, even when the URL match a static file, you can append an exclamation mark to the rule:
+
+    /app/*  /app/index.html  200!
+
+This will rewrite everything within /app/* to /app/index.html even if a file matches the URL.
+
+## GeoIP and Language based redirects
+
+Netlify support GeoIP and Language based redirects directly from our CDN nodes.
+
+This is ideal for large multi-regional sites where you want to send people to the right location based on their location or browser language.
+
+Both the language and the country can be specified in a cookie as well, so you can easily override the default behavior with JavaScript.
+
+GeoIP and Language based redirects are available on our enterprise plan. [Please get in touch](/contact) for more details.

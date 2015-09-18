@@ -1,5 +1,4 @@
 ---
-"cmsUserSlug": "headers-basic-auth"
 "date": 2015-07-21 
 "title": "Headers & Basic Auth"
 "position": 50

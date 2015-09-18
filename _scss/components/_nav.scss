@@ -6,9 +6,9 @@ $nav-secondary-link-color: rgb(126, 131, 131);
 $nav-nested-link-color:    rgb(191, 207, 205);
 $nav-icon-color:           rgb(101, 118, 118);
 $nav-icon-bg-colors: (
-  twitter:    rgb(79, 92, 93), 
-  facebook:   rgb(62, 74, 74), 
-  github:     rgb(57, 67, 67), 
+  twitter:    rgb(79, 92, 93),
+  facebook:   rgb(62, 74, 74),
+  github:     rgb(57, 67, 67),
   linkedin:   rgb(52, 62, 63),
   googleplus: rgb(42, 50, 51)
 );
@@ -64,7 +64,7 @@ html {
  * at least it will be usable)
  */
 .off-canvas-menu:target {
-  right: 0; 
+  right: 0;
   z-index: 100;
   + .page {
     position: relative;
@@ -185,4 +185,10 @@ html {
   li {
     margin-right: 35px;
   }
+}
+
+.site-nav.js-pinned {
+  overflow-y: auto;
+  max-height: 100%;
+  padding-bottom: 40px;
 }
