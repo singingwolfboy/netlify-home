@@ -7,12 +7,16 @@
     .icon { transform: rotate(-180deg); }
   }
 }
+.pricing-table {
+  table-layout: fixed;
+}
 
 .mobile-pricing-table {
   display: none;
 }
 .plan--features-icon {
-    width: 60%;
+    width: 96px;
+    height: 96px;
     margin: 0 auto;
     position: relative;
     svg {
@@ -82,10 +86,15 @@
 }
 .plan--feature {
   width: 180px;
-  font-size: 12px;
+  font-size: 13px;
   text-align: left;
   height: 54px;
   line-height: 1.45;
+  position: relative;
+  padding-right: 35px;
+}
+.plan--features-th {
+  width: 180px;
 }
 .plan--enterprise-feature {
   height: 40px;
@@ -93,27 +102,40 @@
 .plan--enterprise-feature .help-box {
   line-height: 1.2;
 }
-.plan--feature-title {
-  float: left;
-  width: 83%;
-}
 .plan--feature-plan {
   display: none;
 }
 .icon.icon-plus {
-  color: $color-muted;
-  border: 1px solid $color-highlight;
-  border-radius: 100%;
   display: inline-block;
   height: 17px;
   width: 17px;
   line-height: 12px;
-  padding: 1px 0 0 0px;
-  font-size: 14px;
-  text-align: center;
+}
+.mobile-pricing-table .td, .plan--enterprise-feature {
+  position: relative;
+}
+.plan--feature .icon {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 10px;
+  height: 54px;
+  svg {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+  }
+}
+.mobile-pricing-table .icon, .plan--enterprise-feature .icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 10px;
+  margin-top: -9px;
 }
 .x-small .icon-plus {
-  padding-left: 1px;
+  position: relative;
+  top: -1px;
 }
 .icon.icon-no {
   display: inline-block;
@@ -148,6 +170,10 @@
       text-decoration: underline;
     }
   }
+}
+.plan--enterprise-help {
+  font-size: 13px;
+  line-height: 1.2;
 }
 .help-box-overlay {
   display: none;

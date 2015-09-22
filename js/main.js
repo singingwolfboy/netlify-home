@@ -98,7 +98,11 @@
 
     var $this = $(this);
     if ($this.data("helpbox")) {
-      $this.data("helpbox").hide();
+      var $box = $this.data("helpbox");
+      $box.hide();
+      if ($box.data("parent")) {
+        $box.data("parent").append($box);
+      }
       $this.data("helpbox", null);
     } else {
       $(".help-box:visible").each(function() {
@@ -113,7 +117,7 @@
         } else {
           var width = $tr.closest("table").width() / 5 * 4 - 3;
           var height = $tr.height() - 2;
-          $box.css({top: $tds.position().top + 6, left: $tds.position().left + 3, width: width, "min-height": height, "display": "table"});
+          $box.css({top: 0, left: 188, width: width, "min-height": height, "display": "table"});
         }
       } else {
         var $mobile = $this.closest(".mobile-pricing-table");
@@ -128,7 +132,9 @@
           var $ul = $container.find("ul");
           var width = $ul.width() - 4;
           var height = $ul.height();
-          $box.css({top: $ul.position().top, left: $ul.position().left + 2, width: width, "min-height": height, "display": "table"});
+          $box.data("parent", $box.parent());
+          $(document.body).append($box);
+          $box.css({top: $ul.offset().top, left: $ul.offset().left + 2, width: width, "min-height": height, "display": "table"});
         }
       }
       $this.data("helpbox", $box);

@@ -1,4 +1,7 @@
 /headers_and_basic_auth /headers-and-basic-auth 301
 /custom_domains /custom-domains 301
+/continuos-deployment /continuous-deployment 301
 /continuous-deployment /blog/2015/09/17/continuous-deployment 302
 /docs/continuous_deployment /docs/continuous-deployment 301
+/generators/:generator  /index.html  200
+/frameworks/:framework  /index.html  200
