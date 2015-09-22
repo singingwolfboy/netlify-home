@@ -147,7 +147,7 @@ attributes:
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Full SSL
     details: ["No", "No", "No", "Yes"]
-    info: Full SSL gives you an additional fallback certificate that makes sure HTTPS works everywhere.. All modern browsers support SNI, which is what powers our basic SSL solution, but IE on Windows XP, older Android browsers and many feed readers and crawlers lacks support.
+    info: Full SSL gives you an additional fallback certificate that makes sure HTTPS works everywhere.. All modern browsers support SNI, which is what powers our basic SSL solution, but IE on Windows XP, older Android browsers and many feed readers and crawlers lack support.
     link_text: Why you want SSL on your site
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Prerendering
