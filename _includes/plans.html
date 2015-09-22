@@ -72,7 +72,8 @@
                   {% assign detail = attribute.details[index] %}
                   {% if detail != 'No' and detail != "0" %}
                     <li class="td">
-                      {% if detail != "Yes" %}{{detail}}{% endif %}
+                      {% if detail != "Yes" and detail != "Netlify Callout" %}{{detail}}{% endif %}
+                      {% if detail == "Netlify Callout" %}Custom Domain with Callout{% endif %}
                       {% if attribute.postfix %}{{attribute.postfix}}{% else %}{{attribute.title}}{% endif %}
                       {% include help-box.html attribute=attribute %}
                     </li>
