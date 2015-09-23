@@ -95,6 +95,7 @@
 
   $(".js--help-box-trigger").click(function(e) {
     e.preventDefault()
+    $(this).closest(".js-item").toggleClass("open");
 
     var $this = $(this);
     if ($this.data("helpbox")) {

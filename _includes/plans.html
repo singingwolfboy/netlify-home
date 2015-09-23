@@ -36,7 +36,7 @@
       <tbody>
         {% for attribute in site.data.plans.attributes %}
           <tr>
-            <td class="plan--feature">
+            <td class="plan--feature js-item">
               <span class="plan--feature-title">{{ attribute.title }}</span>
               {% include help-box.html attribute=attribute %}
             </td>
@@ -71,7 +71,7 @@
                 {% for attribute in site.data.plans.attributes %}
                   {% assign detail = attribute.details[index] %}
                   {% if detail != 'No' and detail != "0" %}
-                    <li class="td">
+                    <li class="td js-item">
                       {% if detail != "Yes" and detail != "Netlify Callout" %}{{detail}}{% endif %}
                       {% if detail == "Netlify Callout" %}Custom Domain with Callout{% endif %}
                       {% if attribute.postfix %}{{attribute.postfix}}{% else %}{{attribute.title}}{% endif %}
@@ -107,7 +107,7 @@
       <tbody>
         {% for attribute in site.data.plans.all %}
           <tr>
-            <td class="plan--feature">
+            <td class="plan--feature js-item">
               <span class="plan--feature-title">{{ attribute.title }}</span>
               {% include help-box.html attribute=attribute %}
             </td>
@@ -140,7 +140,7 @@
       <div class="table">
         <ul class="tbody">
     {% endif %}
-          <li class="td small plan--enterprise-feature">
+          <li class="td small plan--enterprise-feature js-item">
             {{ attribute.title }}
             {% include help-box.html attribute=attribute className="plan--enterprise-help" %}
           </li>

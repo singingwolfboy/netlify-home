@@ -13,6 +13,9 @@
 
 .mobile-pricing-table {
   display: none;
+  .td {
+    text-align: left;
+  }
 }
 .plan--features-icon {
     width: 96px;
@@ -107,9 +110,36 @@
 }
 .icon.icon-plus {
   display: inline-block;
-  height: 17px;
-  width: 17px;
+  height: 18px;
+  width: 18px;
   line-height: 12px;
+}
+.css-plus-icon {
+  width: 17px;
+  height: 17px;
+  border: 1px solid $color-highlight;
+  border-radius: 100%;
+  &:before, &:after {
+    content: " ";
+    position: absolute;
+    background: $color-muted;
+  }
+  &:before {
+    width: 1px;
+    height: 7px;
+    top: 4px;
+    left: 7px;
+    transition: transform 0.2s ease-in-out;
+  }
+  &:after {
+    width: 7px;
+    height: 1px;
+    top: 7px;
+    left: 4px;
+  }
+}
+.open .css-plus-icon:before {
+  transform: rotate(90deg);
 }
 .mobile-pricing-table .td, .plan--enterprise-feature {
   position: relative;
@@ -120,7 +150,7 @@
   top: 0;
   right: 10px;
   height: 54px;
-  svg {
+  svg, .css-plus-icon {
     position: absolute;
     top: 50%;
     margin-top: -9px;
@@ -132,6 +162,16 @@
   top: 50%;
   right: 10px;
   margin-top: -9px;
+  .css-plus-icon {
+    &:before {
+      top: 5px;
+      left: 8px;
+    }
+    &:after {
+      top:8px;
+      left: 5px;
+    }
+  }
 }
 .x-small .icon-plus {
   position: relative;
