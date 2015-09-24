@@ -16,6 +16,7 @@ collections:
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sort: "date:desc"
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1", class: "post-title"}
       - {label: "Author", name: "author", widget: "string", preview: "author", tagname: "p", class: "post-meta"}
@@ -32,6 +33,7 @@ collections:
     label: "Doc Pages"
     folder: "_docs"
     create: true
+    sort: "position:asc"
     fields:
       - {label: "Post Body", name: "body", widget: "markdown", tagname: "div", class: "post-bd"}
     meta:
