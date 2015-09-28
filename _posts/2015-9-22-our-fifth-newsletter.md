@@ -6,7 +6,7 @@ short_title: "Our Fifth Newsletter "
 description: "Plans and prices made much easier, with continuous deployment and support integrated in hosting plans."
 thumbnail: /uploads/tpirwordmark.png
 cmsUserSlug: ""
-date: 2015-09-22 
+date: 2015-09-22T00:00:00.000Z
 tags: null
 ---
 
@@ -24,7 +24,7 @@ Hi Everyone!
 
  We also integrated the different support plans into the main packages.
 
- So instead of having 3x3 plans, we now have just [4 plans in total](https://www.netlify.com/pricing?utm_source=Netlify+and+BitBalloon&amp;utm_campaign=9502b1f13f-Netlify_Newsletter_5_newpricing&amp;utm_medium=email&amp;utm_term=0_200b533eb5-9502b1f13f-).
+ So instead of having 3x3 plans, we now have just [4 plans in total](https://www.netlify.com/pricing).
 
  We will be back next week, with big CDN news. We promise.
 
