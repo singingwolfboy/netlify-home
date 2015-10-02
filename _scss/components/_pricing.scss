@@ -27,8 +27,12 @@
       height: 100%;
     }
 }
-
-.plan--features-icon:after {
+.pricing-icon {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.plan--features-icon:after, .pricing-icon:after {
     content: " ";
     position: absolute;
     top: 0;

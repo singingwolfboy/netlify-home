@@ -11,9 +11,11 @@ title: Plans & Pricing
     <div class="mt-60 mb-60 text-center-med">
       <div class="l-container mb-60">
         <div class="l-third mb-30">
-          <svg width="200" height="200">
-            <use xlink:href="#icon-polyhedron" />
-          </svg>
+          <div class="pricing-icon">
+            <svg width="200" height="200">
+              <use xlink:href="#icon-polyhedron" />
+            </svg>
+          </div>
         </div>
         {% for item in site.data.plans.intro %}
         {% assign mod = forloop.index0 | modulo:3 %}
