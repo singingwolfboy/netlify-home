@@ -54,7 +54,7 @@ Commit the files that you've staged in your local repository.
 git commit -m 'First commit'
 ```
 
-At the top of your GitHub repository's Quick Setup page, click [image] to copy the remote repository URL.
+At the top of your GitHub repository's Quick Setup page, click the clipboard icon to copy the remote repository URL.
 
 In Terminal, add the URL for the remote repository where your local repository will be pushed.
 ```
