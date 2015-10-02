@@ -70,7 +70,9 @@ git push origin master
 ```
 
 Now that your assets are up and running on GitHub, let's connect them to Netlify.
+
 <a id="netlifystart"></a>
+
 ### **Connecting to Netlify**
 
 #### Step 1: Add Your New Site
