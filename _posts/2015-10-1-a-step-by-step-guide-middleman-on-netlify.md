@@ -25,11 +25,13 @@ middleman init my-site
 
 Once everything is installed, it's time to push it to your repo of choice. Directions for GitHub follow here.
 
+<!-- excerpt -->
+
 ### **Creating your Git Repo**
 
 Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
 
-Open Terminal (for Mac users) or the command prompt (for Windows and Linux users). 
+Open Terminal (for Mac users) or the command prompt (for Windows and Linux users).
 
 For our purposes, let's call your new repo "middleman".
 
@@ -69,7 +71,7 @@ git push origin master
 
 Now that your assets are up and running on GitHub, let's connect them to Netlify.
 <a id="netlifystart"></a>
-###**Connecting to Netlify**
+### **Connecting to Netlify**
 
 #### Step 1: Add Your New Site
 
@@ -122,4 +124,4 @@ There, that's better. Now you can add your custom domain, and your site will be 
 ...  
 
 
-no post credits sequence. No Easter Egg. It's finito. 
+no post credits sequence. No Easter Egg. It's finito.
