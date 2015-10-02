@@ -2,7 +2,7 @@
 title: "A step-by-step guide: Middleman on Netlify"
 author: Aaron Autrand
 image: null
-short_title: "Step-by-step: Middleman on netlify"
+short_title: Middleman with netlify
 description: A guide on how to host your Middleman site on netlify.
 thumbnail: /uploads/zpc_pisy.jpeg
 cmsUserSlug: ""
