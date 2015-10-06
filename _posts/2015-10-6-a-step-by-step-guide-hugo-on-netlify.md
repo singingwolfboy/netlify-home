@@ -42,6 +42,7 @@ $ hugo new about.md
 ```
 
 If you open the `hugo` directory in your file manager, you'll see a list of subdirectories. Open `content`. There's your new about.md file. You'll see this when you open it:
+
 ```
 +++
 date = "2015-09-25T11:45:50-07:00"
