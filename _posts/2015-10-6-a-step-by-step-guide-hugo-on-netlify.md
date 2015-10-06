@@ -75,7 +75,7 @@ Beware the Jubjub bird, and shun
   The frumious Bandersnatch!"  
 ```
 
-Now that you have some content, it's time to display it. Hugo has a repository full of themes that you can use (or you can always create a custom theme). Visit https://github.com/spf13/hugoThemes to browse your options. For the purposes of this tutorial, let's use the Hyde theme. To avoid headaches and to make it easy to tweak the theme, let's download it directly instead of cloning the repository.
+Now that you have some content, it's time to display it. Hugo has a repository full of themes that you can use (or you can always create a custom theme). Visit [here](https://github.com/spf13/hugoThemes) to browse your options. For the purposes of this tutorial, let's use the Hyde theme. To avoid headaches and to make it easy to tweak the theme, let's download it directly instead of cloning the repository.
 
 Find the Hyde directory at the above link (or you can simply click [here](https://github.com/spf13/hyde)). Click **Download ZIP** on the right hand side of the page. In the `hugo` directory, create a new folder called `themes`, then unzip the file into `/PATH/TO/hugo/themes`. Be sure to rename the folder from `hyde-master` to just plain `hyde`.
 
