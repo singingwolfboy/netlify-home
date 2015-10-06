@@ -78,7 +78,7 @@ Now that you have some content, it's time to display it. Hugo has a repository f
 
 Find the Hyde directory at the above link (or you can simply click [here](https://github.com/spf13/hyde)). Click **Download ZIP** on the right hand side of the page. In the `hugo` directory, create a new folder called `themes`, then unzip the file into `/PATH/TO/hugo/themes`. Be sure to rename the folder from `hyde-master` to just plain `hyde`.
 
-###**Testing Your Site**
+### **Testing Your Site**
 Hugo has a built in server that allows you to preview your content. Let's test your site:
 
 ```
@@ -153,7 +153,7 @@ And you're ready to go!
 
 Now it's time to push it to your repo of choice. Directions for GitHub follow here.
 
-###**Creating your Git Repo**
+### **Creating your Git Repo**
 
 Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
 
