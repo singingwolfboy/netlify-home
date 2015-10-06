@@ -153,7 +153,7 @@ And you're ready to go!
 
 
 Now it's time to push it to your repo of choice. Directions for GitHub follow here.
-
+(netlify also supports linking to BitBucket, GitLabs and self-hosted repos, and the steps are similar)
 ### **Creating your Git Repo**
 
 Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
@@ -207,6 +207,8 @@ Now that your assets are up and running on GitHub, let's connect them to Netlify
 Creating a new site on Netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
 
 #### Step 2: Link to Your GitHub
+
+
 Clicking "New Site" brings you to this screen:
 
 ![step 2 - link](https://cloud.githubusercontent.com/assets/6520639/9803637/7176ac8a-57d9-11e5-9b09-f43dc772a4f9.png)
