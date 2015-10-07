@@ -167,7 +167,7 @@ enterprise:
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Migration services
     info: Need help migrating from a dynamic site to a fully static setup on Netlify? We can help you find a smooth path to 10x the performance.
-  - title: Prioritized Feaure Requests
+  - title: Prioritized Feature Requests
     info: Do you want a say in what features we add next? Have specific requirements that would need extra development?
   - title: Geo IP based redirects
     info: Redirect users from China, Taiwan or Honkong to /china or redirect visitors with a preference for Spanish to /es. Easily configurable with netlify.
