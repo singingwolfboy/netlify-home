@@ -4,12 +4,11 @@ author: Aaron Autrand
 image: null
 short_title: Hosting Hugo  on netlify
 description: A step-by-step guide on how to host a website made with static site generator Hugo.
-thumbnail: "/uploads/hugo-logo-small.png"
+thumbnail: /uploads/hugo-logo-small.png
 cmsUserSlug: ""
-date: 2015-10-06
+date: 2015-10-06T00:00:00.000Z
 tags: null
 ---
-
 
 ## **Welcome to Netlify**
 
@@ -17,7 +16,7 @@ Today, let's take a look at how to host a static website built with Hugo on Netl
 
 Let's start from scratch (if you already have a Hugo site set up, you can skip down to [here](#netlifystart)).
 
-To get started, make sure you have all the tools you need. Visit [gethugo.io](http://www.gethugo.io) to download and install Hugo.
+To get started, make sure you have all the tools you need. Visit [gethugo.io](http://www.gohugo.io) to download and install Hugo.
 
 ### **Building Your Site**
 Hugo can build a skeleton for your site, which will set up a main directory (which, for simplicity's sake, we'll call `hugo`) and sub-directories within the `hugo` directory to hold your content, html that Hugo builds for you, and all of your necessary configuration files. Let's do that now:
