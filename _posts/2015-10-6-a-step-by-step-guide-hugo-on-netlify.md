@@ -4,9 +4,9 @@ author: Aaron Autrand
 image: null
 short_title: Hosting Hugo  on netlify
 description: A step-by-step guide on how to host a website made with static site generator Hugo.
-thumbnail: /uploads/hugo.png
+thumbnail: "/uploads/hugo-logo-small.png"
 cmsUserSlug: ""
-date: 2015-10-06 
+date: 2015-10-06
 tags: null
 ---
 
@@ -54,7 +54,7 @@ title = "about"
 
 Put some content in Markdown format below the +++ in this file, and then save it.
 
-Now, let's add a new post. 
+Now, let's add a new post.
 
 ```
 $ hugo new post/first.md
@@ -91,7 +91,7 @@ Here, we're using the Hyde theme, and telling Hugo to display both pieces of con
 
 ### **Preparing for Deployment**
 
-If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Hugo and GitHub will play nicely together. 
+If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Hugo and GitHub will play nicely together.
 
 Hugo generates your website to the `public` directory with this command:
 
@@ -154,6 +154,7 @@ And you're ready to go!
 
 Now it's time to push it to your repo of choice. Directions for GitHub follow here.
 (netlify also supports linking to BitBucket, GitLabs and self-hosted repos, and the steps are similar)
+
 ### **Creating your Git Repo**
 
 Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
@@ -197,17 +198,17 @@ git push origin master
 ```
 
 Now that your assets are up and running on GitHub, let's connect them to Netlify.
-<a id="netlifystart"></a> 
+<a id="netlifystart"></a>
 
 ### **Connecting to Netlify**
 
 #### Step 1: Add Your New Site
 
 ![step 1 - add](https://cloud.githubusercontent.com/assets/6520639/9803638/717820a6-57d9-11e5-838f-d2a732eb0a41.png)
+
 Creating a new site on Netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
 
 #### Step 2: Link to Your GitHub
-
 
 Clicking "New Site" brings you to this screen:
 
