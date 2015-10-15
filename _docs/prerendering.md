@@ -20,6 +20,7 @@ There are several hosted services that can automate this for you:
 * [Prerender.io](https://prerender.io/)
 * [Brombone](http://www.brombone.com/)
 * [SEO.js](http://getseojs.com/)
+* [SEO4Ajax](http://www.seo4ajax.com/)
 
 Prerender.io also have an open-source version of their service that you can self-host.
 
