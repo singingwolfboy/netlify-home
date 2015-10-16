@@ -37,6 +37,7 @@ Now you can install Pelican (and since you'll want to create content, go ahead a
 ```
 $ pip install pelican Markdown
 ```
+
 ### **Building Your Site**
 
 Pelican can build a skeleton for your site, which will set up directories within the pelican directory to hold your content, html that Pelican builds for you, and all of your necessary configuration files. Let's do that now:
@@ -151,6 +152,7 @@ git push origin master
 
 Now that your assets are up and running on GitHub, let's connect them to Netlify.
 <a id="netlifystart"></a>
+
 ### **Connecting to Netlify**
 
 #### Step 1: Add Your New Site
