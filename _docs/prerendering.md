@@ -11,11 +11,17 @@ Google, Bing, Yandex and other all support Google's [standard for Ajax Crawling]
 
 Normally Google will penalize sites heavily for using "Cloaking", ie. showing different content to Google than to normal web visitors, but for single page apps they have an exception. When detecting a single page app their crawler will send an `_escaped_fragment_` query parameter in the request, and the origin server can then choose to return a document that represents the content a user will actually see when the single page app is running.
 
+Note. Google recently marked their Standard for Ajax Crawling as deprecated. They're still following the standard, but recommend that single page app authors just rely on Google's built-in capacity for interpreting JavaScript applications. In our experience that's often still not enough and prerendering is often still a necesity.
+
 ## Setting up Prerendering
 
-To do prerendering you'll need a backend that can actually generate the responses you want Google to index.
+Netlify comes with built-in prerendering on our larger plans. If you're on a plan that supports prerendering, enabling it is as simple as checking a box:
 
-There are several hosted services that can automate this for you:
+![Enabling netlify's built-in prerendering](/img/docs/netlify-prerendering.png)
+
+Our built-in pre-rendering service will cache prerendered pages for 24 hours. Prerendered requests counts towards the proxy request count in your plans limits.
+
+You can also use external prerender services that can automate this for you:
 
 * [Prerender.io](https://prerender.io/)
 * [Brombone](http://www.brombone.com/)
@@ -24,7 +30,7 @@ There are several hosted services that can automate this for you:
 
 Prerender.io also have an open-source version of their service that you can self-host.
 
-Once you've setup a prerendering service, send us a mail at [team@netlify.com](mailto:team@netlify.com) and let us know which service you're using. Then we'll get you setup.
+Touse an external service, send us a mail at [team@netlify.com](mailto:team@netlify.com) and let us know which service you're using. Then we'll get you setup.
 
 ## How it works
 

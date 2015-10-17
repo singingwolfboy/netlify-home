@@ -46,3 +46,9 @@ To install a certificate, you'll need the certificate itself in X.509 PEM format
 Click "Provide Your Own" certificate, and then past in the certificate, each of the intermediary certificates and the private key.
 
 Netlify validates that the certificate matches the custom domain for your site and that the DNS records for the domain is pointed at netlify, and then installs your certificate. If your certificate covers several of your sites (ie., if it's a wildcard certificate or uses subject alternative names), you only need to install it for one site.
+
+## HTTP 2.0
+
+When SSL is enabled for your site, netlify supports HTTP 2.0 - a new internet protocol engineered for faster web performance.
+
+Note that currently our asset CDN (Akamai) doesn't support HTTP 2.0. If you have a site where you expect HTTP 2.0 would make a big difference because of request patterns, [get in touch](/contact) and we can test out whether you'll get better performance from the large network of Akamai or from running the whole site on netlify CDN with HTTP 2 enabled.

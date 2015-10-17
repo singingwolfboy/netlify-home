@@ -41,9 +41,11 @@ You can easily setup a custom 404 page. This doesn't require any redirect rules.
 
 Our CDN edge nodes does URL normalization before the redirect rules kicks in. This happens to make sure we can guarantee the highest possible cache hit rate and the absolute best performance for your site.
 
-This means you can't make redirect rules that matches on trailing slashes to either force trailing slash or always remove the trailing slash.
+When "Pretty URLs" is enabled under processing settings for your site, netlify will enforce consistent URL patters.
 
-We'll be launching a setting to let you control URL normalization soon. Meanwhile we recommend using `<link rel="canonical" href="/canonical/path/to/current/page" >` to guarantee canonical URLs for SEO purposes. This also has the advantage of not sending anyone through an extra redirect when following links to your site and will solve any SEO issues with duplicate content due to trailing slash vs no trailing slash.
+A link to /about.html will be rewritten to /about in your HTML filesand netlify will enforce a redirect from /about/ to /about
+
+A link to /about/index.html will be rewritten to /about/ and netlify will redirect from /about to /about/
 
 ## Placeholders
 
