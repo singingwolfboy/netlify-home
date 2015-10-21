@@ -4,7 +4,7 @@ author: Chris Bach
 image: null
 short_title: Our Sixth Newsletter
 description: "HTTP2.0 supported! Also new CDN PoPs, Canonical URLs & more!"
-thumbnail: /uploads/http2.png
+thumbnail: /uploads/http2-1.png
 cmsUserSlug: ""
 date: 2015-10-20 
 tags: null
