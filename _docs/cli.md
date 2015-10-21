@@ -1,11 +1,13 @@
 ---
+cmsUserSlug: command-line
+date: 2015-10-21 
 title: Command Line
 position: 10
 ---
 
 ## Command Line Tools
 
-The Netlify command line tools lets you deploy sites or configure continuous deployment straight from the command line.
+Netlify's command line tools let you deploy sites or configure continuous deployment straight from the command line.
 
 
 ## Installation
@@ -27,7 +29,7 @@ netlify deploy
 The `netlify deploy` command will deploy a site, whether it's a new site or an existing site.
 
 
-The first time you deploy a new site will be created and netlify will prompt for the path to deploy. Netlify stores the site id and the folder in a local `.netlify` file. After the first deploy you can simply run `netlify deploy` to deploy again
+The first time you deploy, a new site will be created and netlify will prompt for the path to deploy. Netlify stores the site id and the folder in a local `.netlify` file. After the first deploy you can simply run `netlify deploy` to deploy again
 
 
 ## Environments
@@ -62,7 +64,7 @@ You can update attributes on your site through the cli. Currently the name of th
 netlify update -n my-test-site -d www.example.com -p my-password
 ```
 
-You'll need to configure the DNS settings for your [custom domain](/docs/custom_domains) apart from assigning the domain to your site.
+You'll need to configure the DNS settings for your [custom domain](/docs/custom_domains) separately from assigning the domain to your site.
 
 
 
