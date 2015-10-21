@@ -308,7 +308,7 @@ Note that this creates a new version of the site without the deleted file. The o
 
 ## Snippets
 
-Snippets are code snippets that will be injected into every HTML page of the website, either right before the closing head tag or just before the closing body tag. Each snippet can specify code for all pages and code that just get injected into "Thank you" pages shown after a successful form submissions.
+Snippets are code snippets that will be injected into every HTML page of the website, either right before the closing head tag or just before the closing body tag. Each snippet can specify code for all pages and code that just gets injected into "Thank you" pages shown after a successful form submission.
 
 ### Get Snippets
 
@@ -430,7 +430,7 @@ You can access all deploys for a specific site.
 
 ### Restore Deploy
 
-* `POST /sites/{site_id}/deploys/{deploy_id}/restore` restore an old deploy and make it the live version of the site
+* `POST /sites/{site_id}/deploys/{deploy_id}/restore` restores an old deploy and make it the live version of the site
 
 ```json
 {
