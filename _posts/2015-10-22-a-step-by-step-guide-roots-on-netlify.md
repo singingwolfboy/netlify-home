@@ -6,7 +6,7 @@ short_title: Roots hosted on netlify
 description: A step-by-step guide on how to host a website built with static site generator Roots.
 thumbnail: /uploads/screen-shot-2015-10-22-at-18.01.40.png
 cmsUserSlug: ""
-date: 2015-10-22 
+date: 2015-10-22
 tags: null
 ---
 
@@ -22,14 +22,14 @@ Open your terminal, and enter the following command (this guide assumes you have
 $ npm install roots -g
 ```
 
-The `-g` flag will install Roots globally on your system, which you need to make sure Roots has access to the proper dependencies. 
+The `-g` flag will install Roots globally on your system, which you need to make sure Roots has access to the proper dependencies.
 
 Now, navigate to where you want to set up your project, then run the command below. Whatever you decide to name your project, you must be sure not to call it just plain `roots` (which is why we are calling this project `rootsnetlify`).
 
 ```
 $ roots new rootsnetlify
 ```
-Now you can see a `rootsnetlify` directory, with all of the various assets you need to develop your site in `roots`. 
+Now you can see a `rootsnetlify` directory, with all of the various assets you need to develop your site in `roots`.
 
 Change into this new directory:
 ```
@@ -106,7 +106,9 @@ git push origin master
 ```
 
 Now that your assets are up and running on GitHub, let's connect them to netlify.
+
 <a id="netlifystart"></a>
+
 ### **Connecting to Netlify**
 
 #### Step 1: Add Your New Site
