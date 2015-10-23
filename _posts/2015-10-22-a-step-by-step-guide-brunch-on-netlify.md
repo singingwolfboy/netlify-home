@@ -4,9 +4,9 @@ author: Aaron Autrand
 image: null
 short_title: Host Brunch on netlify
 description: A step-by-step guide on how to host a website built with static site generator Brunch.
-thumbnail: /uploads/687474703a2f2f6272756e63682e696f2f696d616765732f7376672f6272756e63682e737667.svg
+thumbnail: /uploads/brunch.png
 cmsUserSlug: ""
-date: 2015-10-22 
+date: 2015-10-22T00:00:00.000Z
 tags: null
 ---
 
