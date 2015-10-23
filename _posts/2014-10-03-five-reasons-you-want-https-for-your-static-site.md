@@ -1,17 +1,21 @@
 ---
-title: "Five Reasons you want HTTPS for your Static site"
-short_title: "Five Reasons for HTTPS"
-byline: "Does HTTPS really make sense for a static web site?"
+title: Five Reasons you want HTTPS for your Static site
 author: Mathias Biilmann
-description: "HTTPS is not just for E-commerce sites. Here's five reasons you should invest in HTTPS for your static site today."
-tags: ["Security", "Netlify", "HTTPS"]
 image: /img/posts/lock.jpg
+short_title: Five Reasons for HTTPS
+description: "HTTPS is not just for E-commerce sites. Here's five reasons you should invest in HTTPS for your static site today."
 thumbnail: /img/posts/thumbnails/lock.jpg
+cmsUserSlug: five-reasons-you-want-https-for-your-static-site
+date: 2015-10-22 
+tags:
+  - Security
+  - netlify
+  - HTTPS
 ---
 
 > "Does HTTPS really make any sense for a static web site?"
 
-We've heard this a couple of times when talking about Netlify's HTTPS support.
+We've heard this a couple of times when talking about  netlify's HTTPS support.
 
 It might seem like a static site is already plenty secure: there's no moving parts, no risk of SQL injection, no openings for XSS attacks, no cookies to hijack, no personalized data sent over the wire, etc, etc, etc...
 
