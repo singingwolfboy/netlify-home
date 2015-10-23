@@ -6,10 +6,9 @@ short_title: Docpad on netlify
 description: A step-by-step guide on how to host a website built with static site generator Docpad.
 thumbnail: /uploads/1865439.png
 cmsUserSlug: ""
-date: 2015-10-22 
+date: 2015-10-22T00:00:00.000Z
 tags: null
 ---
-
 
 ### Welcome to Netlify
 
@@ -142,7 +141,7 @@ It's time to allow Netlify and GitHub to talk to each other. Clicking the "Autho
 #### Step 4: Choose Your Repo
 ![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4Docpad.png)
 
-Now that you've connected Netlify and GitHub, you can see a list of your Git repos. There's the "pelican" repo we just pushed to GitHub. Let's select it.
+Now that you've connected Netlify and GitHub, you can see a list of your Git repos. There's the "docpad" repo we just pushed to GitHub. Let's select it.
 
 #### Step 5: Configure Your Settings
 ![step 5 - configure](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step5Docpad.png)
