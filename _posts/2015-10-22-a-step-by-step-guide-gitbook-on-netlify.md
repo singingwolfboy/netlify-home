@@ -1,12 +1,12 @@
 ---
-title: "A step-by-step guide: GitBook on Netlify"
+title: "A step-by-step guide: GitBook on netlify"
 author: Aaron Autrand
 image: null
 short_title: GitBook on netlify
 description: A step-by-step guide on how to host a website built with static site generator Gitbook.
 thumbnail: /uploads/gitbook.png
 cmsUserSlug: ""
-date: 2015-10-22 
+date: 2015-10-22T00:00:00.000Z
 tags: null
 ---
 
@@ -182,12 +182,12 @@ Since your assets are hosted on GitHub, we'll need to link  netlify to GitHub. C
 #### Step 3: Authorize netlify
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
-It's time to allow Netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, Netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It's time to allow netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
 ![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4Gitbook.png)
 
-Now that you've connected Netlify and GitHub, you can see a list of your Git repos. There's the "gitbook" repo we just pushed to GitHub. Let's select it.
+Now that you've connected netlify and GitHub, you can see a list of your Git repos. There's the "gitbook" repo we just pushed to GitHub. Let's select it.
 
 #### Step 5: Configure Your Settings
 ![step 5 - configure](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step5Gitbook.png)
