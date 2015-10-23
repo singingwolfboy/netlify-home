@@ -3,13 +3,12 @@ title: "A step-by-step guide: Pelican on Netlify"
 author: Aaron Autrand
 image: null
 short_title: Pelican  w/netlify
-description: A step-by-step guide on how to host Pelican sites on netlify
+description: A step-by-step guide on how to host a website built with static site generator Pelican.
 thumbnail: /uploads/2043492.png
 cmsUserSlug: ""
-date: 2015-10-15 
+date: 2015-10-15T00:00:00.000Z
 tags: null
 ---
-
 
 ### **Welcome to Netlify**
 
