@@ -1,19 +1,18 @@
 ---
-title: "A step-by-step guide: Hugo on Netlify"
+title: "A step-by-step guide: Hugo on netlify"
 author: Aaron Autrand
 image: null
 short_title: Hosting Hugo  on netlify
 description: A step-by-step guide on how to host a website made with static site generator Hugo.
-thumbnail: "/uploads/hugo-logo-small.png"
+thumbnail: /uploads/hugo-logo-small.png
 cmsUserSlug: ""
-date: 2015-10-06
+date: 2015-10-06T00:00:00.000Z
 tags: null
 ---
 
+## **Welcome to netlify**
 
-## **Welcome to Netlify**
-
-Today, let's take a look at how to host a static website built with Hugo on Netlify, including setting up continuous deployment.
+Today, let's take a look at how to host a static website built with Hugo on netlify, including setting up continuous deployment.
 
 Let's start from scratch (if you already have a Hugo site set up, you can skip down to [here](#netlifystart)).
 
@@ -197,16 +196,16 @@ Now, it's time to push the changes in your local repository to GitHub.
 git push origin master
 ```
 
-Now that your assets are up and running on GitHub, let's connect them to Netlify.
+Now that your assets are up and running on GitHub, let's connect them to netlify.
 <a id="netlifystart"></a>
 
-### **Connecting to Netlify**
+### **Connecting to netlify**
 
 #### Step 1: Add Your New Site
 
 ![step 1 - add](https://cloud.githubusercontent.com/assets/6520639/9803638/717820a6-57d9-11e5-838f-d2a732eb0a41.png)
 
-Creating a new site on Netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
+Creating a new site on netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
 
 #### Step 2: Link to Your GitHub
 
@@ -214,19 +213,19 @@ Clicking "New Site" brings you to this screen:
 
 ![step 2 - link](https://cloud.githubusercontent.com/assets/6520639/9803637/7176ac8a-57d9-11e5-9b09-f43dc772a4f9.png)
 
-When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
+When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we'll need to link Netlify to GitHub. Click "Link to Github".
+Since your assets are hosted on GitHub, we'll need to link  netlify to GitHub. Click "Link to GitHub".
 
-#### Step 3: Authorize Netlify
+#### Step 3: Authorize netlify
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
-It's time to allow Netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, Netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It's time to allow netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
 ![step 4 - repo](https://cloud.githubusercontent.com/assets/6520639/9897552/b9ea7f7c-5bfe-11e5-94a0-f957a7d1986e.png)
 
-Now that you've connected Netlify and GitHub, you can see a list of your Git repos. There's the "hugo" repo we just pushed to GitHub. Let's select it.
+Now that you've connected netlify and GitHub, you can see a list of your Git repos. There's the "hugo" repo we just pushed to GitHub. Let's select it.
 
 #### Step 5: Configure Your Settings
 ![step 5 - configure](https://github.com/munkymack/netlify-assets/blob/master/Hugo%20Step%205%20-%20Configure.png?raw=true)
@@ -247,4 +246,4 @@ Wait, you thought there was going to be more? Nope! Netlify has done it all for 
 
 ![step 8 - pretty](https://raw.githubusercontent.com/munkymack/netlify-assets/master/hugoStep7-done.png)
 
-There, that's better. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!
+There, that's better. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
