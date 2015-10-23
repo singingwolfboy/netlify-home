@@ -6,7 +6,7 @@ short_title: "Our Fifth Newsletter "
 description: "Plans and prices made much easier, with continuous deployment and support integrated in hosting plans."
 thumbnail: /uploads/tpirwordmark.png
 cmsUserSlug: ""
-date: 2015-09-22T00:00:00.000Z
+date: 2015-09-22
 tags: null
 ---
 
@@ -16,7 +16,7 @@ Hi Everyone!
 
  We’re super stoked to present brand new plans and prices!
 
- Up until now our continuous deployment services have been available as a separate service. 
+ Up until now our continuous deployment services have been available as a separate service.
 
  But CD is an integral part of what netlify is. Just as much as our speed, multilayered CDN and instant cache invalidation is. As such it doesn’t make a lot of sense to separate it into it’s own service.
 
@@ -31,4 +31,3 @@ Hi Everyone!
   Till then, keep smiling and have an awesome day.
 
   /Chris & Matt
-

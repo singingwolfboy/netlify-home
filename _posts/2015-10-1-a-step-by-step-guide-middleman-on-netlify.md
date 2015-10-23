@@ -6,7 +6,7 @@ short_title: Middleman with netlify
 description: A step-by-step guide on how to host a website built with static site generator Middleman.
 thumbnail: /uploads/zpc_pisy.jpeg
 cmsUserSlug: ""
-date: 2015-10-01T00:00:00.000Z
+date: 2015-10-01
 tags: null
 ---
 

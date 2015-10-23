@@ -6,7 +6,7 @@ short_title: Docpad on netlify
 description: A step-by-step guide on how to host a website built with static site generator Docpad.
 thumbnail: /uploads/1865439.png
 cmsUserSlug: ""
-date: 2015-10-22T00:00:00.000Z
+date: 2015-10-22
 tags: null
 ---
 
@@ -55,13 +55,13 @@ Now it's time to create some content (that's why you are building a site in the 
 
 Save the file as `/PATH/TO/docpad/src/render/index.html`. This will function as your homepage.
 
-Because `docpad run` is still running, you can browse your site as you work on it by visiting [http://localhost:9778](http://localhost:9778/). 
+Because `docpad run` is still running, you can browse your site as you work on it by visiting [http://localhost:9778](http://localhost:9778/).
 
 Like what you see? Great. Let's move on!
 
 ### **Preparing for Deployment**
 
-If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Docpad and GitHub will play nicely together. 
+If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Docpad and GitHub will play nicely together.
 
 Docpad generates your website to the `out` directory. We want to make sure that the `out` directory is not version controlled by Git, so we'll create a `.gitignore` file in the root directory and add `out` to it:
 

@@ -6,7 +6,7 @@ short_title: Hosting Hugo  on netlify
 description: A step-by-step guide on how to host a website made with static site generator Hugo.
 thumbnail: /uploads/hugo-logo-small.png
 cmsUserSlug: ""
-date: 2015-10-06T00:00:00.000Z
+date: 2015-10-06
 tags: null
 ---
 

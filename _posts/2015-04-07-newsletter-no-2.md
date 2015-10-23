@@ -6,7 +6,7 @@ short_title: Our Second Newsletter
 description: "Netlify is live, we made front page of Hacker News and welcome to the Static Web-Tech SF Meetup"
 thumbnail: /img/posts/thumbnails/newsletter.png
 cmsUserSlug: netlify-newsletter-no-2
-date: 2015-10-22 
+date: 2015-04-07
 tags:
   - Netlify
   - Newsletter

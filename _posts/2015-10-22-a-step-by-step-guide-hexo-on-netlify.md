@@ -6,7 +6,7 @@ short_title: Hosting Hexo on netlify
 description: A step-by-step guide on how to host a website built with static site generator Hexo.
 thumbnail: /uploads/mqzoto9f.png
 cmsUserSlug: ""
-date: 2015-10-22T00:00:00.000Z
+date: 2015-10-22
 tags: null
 ---
 
@@ -47,14 +47,14 @@ $ hexo server
 
 You can take a look at your new site at http://0.0.0.0:4000/
 
-Wow. Seriously, that's it. You're already done. Of course, you'll probably want to add some content (that's why you are building a site in the first place, isn't it?). 
+Wow. Seriously, that's it. You're already done. Of course, you'll probably want to add some content (that's why you are building a site in the first place, isn't it?).
 
 Hexo will create a new post for you:
 ```
 $ hexo new "Hexo Websites on netlify"
 ```
 
-It even gives you a helpful file path for your new post. Follow that file path to open your new Markdown document (or just paste that path into the "Open" dialogue of your favorite text editor). 
+It even gives you a helpful file path for your new post. Follow that file path to open your new Markdown document (or just paste that path into the "Open" dialogue of your favorite text editor).
 ```
 title: Hexo Websites on netlify
 date: 2015-10-09 16:03:33
@@ -80,7 +80,7 @@ Boom! Look at that new post. Like what you see? Great. Let's move on!
 
 ### **Preparing for Deployment**
 
-If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Hexo and GitHub will play nicely together. 
+If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Hexo and GitHub will play nicely together.
 
 Hexo generates your website to the `public` directory. We want to make sure that the `public` directory is not version controlled by Git, so we'll create a `.gitignore` file in the root directory and add `public` to it:
 ```
@@ -95,7 +95,7 @@ Create a new repository on GitHub. To avoid errors, do not initialize the new re
 
 Open Terminal (for Mac users) or the command prompt (for Windows and Linux users).
 
-For our purposes, let's call your new repo "hexo". 
+For our purposes, let's call your new repo "hexo".
 
 Change the current working directory to your local project.
 

@@ -6,7 +6,7 @@ short_title: Hosting Hugo on netlify
 description: "From push to GitHub, until a new deploy is live on our CDN in 6 seconds for our test project!"
 thumbnail: /uploads/hugo-logo-small.png
 cmsUserSlug: hugo-on-netlify-insanely-fast-deploys
-date: 2015-07-30T00:00:00.000Z
+date: 2015-07-30
 tags: null
 ---
 

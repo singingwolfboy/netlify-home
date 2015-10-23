@@ -6,7 +6,7 @@ short_title: E-Commerce With Snipcart
 description: "Creating a Great, Fast Static E-Commerce Experience With 6 Easy Tools"
 thumbnail: /uploads/logo-snipcart.png
 cmsUserSlug: ""
-date: 2015-08-25T00:00:00.000Z
+date: 2015-08-25
 tags:
   - e-commerce
   - guest post

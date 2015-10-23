@@ -6,7 +6,7 @@ short_title: Netlify vs Amazon S3
 description: How Amazon S3 and netlify compares as static site hosting platforms.
 thumbnail: /img/posts/thumbnails/apple-orange.jpg
 cmsUserSlug: netlify-vs-amazon-s3
-date: 2015-10-22 
+date: 2015-03-06 
 tags:
   - S3
   - Comparisons

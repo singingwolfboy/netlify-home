@@ -6,7 +6,7 @@ short_title: Five Reasons for HTTPS
 description: "HTTPS is not just for E-commerce sites. Here's five reasons you should invest in HTTPS for your static site today."
 thumbnail: /img/posts/thumbnails/lock.jpg
 cmsUserSlug: five-reasons-you-want-https-for-your-static-site
-date: 2015-10-22 
+date: 2014-10-03
 tags:
   - Security
   - netlify

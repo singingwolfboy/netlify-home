@@ -6,7 +6,7 @@ short_title: Continuous Deployment
 description: Automatically build and deploy every time you push to git. All part of netlify.
 thumbnail: /uploads/softwareupdate-icon.png
 cmsUserSlug: ""
-date: 2015-09-17T00:00:00.000Z
+date: 2015-09-17
 tags: null
 ---
 
@@ -14,7 +14,7 @@ This is one of the key features that sets netlify apart. With all other hosting 
 
  **What is it?**
 
-Basically it means that we build, configure and deploy your site every time you push to git (be it a self-hosted repo, GitLabs, Bitbucket or of course GitHub). So you don’t have to do anything manually. 
+Basically it means that we build, configure and deploy your site every time you push to git (be it a self-hosted repo, GitLabs, Bitbucket or of course GitHub). So you don’t have to do anything manually.
 
  _A sidenote: Many people confuse Continuous Deployment with Continuous Integration. So just to clarify the latter refers to making merges in your repository and to running a test server that makes sure an automatic test is run every time you update that repository.._
 
@@ -43,4 +43,3 @@ All our agency clients and the more heavy weight web developers tend use continu
  **Questions?**
 
 Write them in the comments below, or [ask](https://www.netlify.com/contact) and we’ll do our best to answer.
-

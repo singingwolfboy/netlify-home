@@ -6,7 +6,7 @@ short_title: Pelican   on netlify
 description: A step-by-step guide on how to host a website built with static site generator Pelican.
 thumbnail: /uploads/2043492.png
 cmsUserSlug: ""
-date: 2015-10-15T00:00:00.000Z
+date: 2015-10-15
 tags: null
 ---
 
@@ -84,7 +84,7 @@ Like what you see? Great. Let's move on!
 
 ### **Preparing for Deployment**
 
-If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Pelican and GitHub will play nicely together. 
+If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Pelican and GitHub will play nicely together.
 
 Change back to the `pelican` directory:
 ```

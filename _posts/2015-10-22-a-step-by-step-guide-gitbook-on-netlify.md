@@ -6,7 +6,7 @@ short_title: GitBook on netlify
 description: A step-by-step guide on how to host a website built with static site generator Gitbook.
 thumbnail: /uploads/gitbook.png
 cmsUserSlug: ""
-date: 2015-10-22T00:00:00.000Z
+date: 2015-10-22
 tags: null
 ---
 
@@ -35,7 +35,7 @@ You don't have to enter any values for the questions that the above command will
 $ npm install -g gitbook-cli --save
 ```
 
-This will install GitBook, and the `--save` updates your `package.json` file. 
+This will install GitBook, and the `--save` updates your `package.json` file.
 
 Now, GitBook will set up your book for you:
 
@@ -71,7 +71,7 @@ Let's repeat that for `chapter2.md`:
 It is a melancholy object to those who walk through this great town or travel in the country, when they see the streets, the roads, and cabin doors, crowded with beggars of the female sex, followed by three, four, or six children, all in rags and importuning every passenger for an alms. These mothers, instead of being able to work for their honest livelihood, are forced to employ all their time in strolling to beg sustenance for their helpless infants: who as they grow up either turn thieves for want of work, or leave their dear native country to fight for the Pretender in Spain, or sell themselves to the Barbadoes.
 ```
 
-Now let's update your `SUMMARY.md` file, which functions as your table of contents. 
+Now let's update your `SUMMARY.md` file, which functions as your table of contents.
 
 ```
 # Summary
@@ -87,13 +87,13 @@ GitBook allows you to test your book before you push it to the web by using this
 $ gitbook serve
 ```
 
-Looks nice, doesn't it? You can even make changes to the text, and your book will update on the fly. 
+Looks nice, doesn't it? You can even make changes to the text, and your book will update on the fly.
 
 Like what you see? Great. Let's move on!
 
 ### **Preparing for Deployment**
 
-If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that GitBook and GitHub will play nicely together. 
+If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that GitBook and GitHub will play nicely together.
 
 Create a new file called `.gitignore` in `/PATH/TO/gitbook` and paste the following into it:
 ```
