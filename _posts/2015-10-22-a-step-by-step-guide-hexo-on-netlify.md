@@ -1,19 +1,18 @@
 ---
-title: "A step-by-step guide: Hexo on Netlify"
+title: "A step-by-step guide: Hexo on netlify"
 author: Aaron Autrand
 image: null
 short_title: Hosting Hexo on netlify
 description: A step-by-step guide on how to host a website built with static site generator Hexo.
 thumbnail: /uploads/mqzoto9f.png
 cmsUserSlug: ""
-date: 2015-10-22 
+date: 2015-10-22T00:00:00.000Z
 tags: null
 ---
 
+### **Welcome to netlify**
 
-### **Welcome to Netlify**
-
-Today, we're going to look at how to host a website built with Hexo on Netlify, including setting up continuous deployment. Hexo is a fast, simple & powerful blog framework, powered by Node.js.
+Today, we're going to look at how to host a website built with Hexo on netlify, including setting up continuous deployment. Hexo is a fast, simple & powerful blog framework, powered by Node.js.
 
 Let's start from scratch (if you already have a Hexo site set up, you can skip down to [here](#netlifystart)).
 
@@ -52,17 +51,17 @@ Wow. Seriously, that's it. You're already done. Of course, you'll probably want 
 
 Hexo will create a new post for you:
 ```
-$ hexo new "Hexo Websites on Netlify"
+$ hexo new "Hexo Websites on netlify"
 ```
 
 It even gives you a helpful file path for your new post. Follow that file path to open your new Markdown document (or just paste that path into the "Open" dialogue of your favorite text editor). 
 ```
-title: Hexo Websites on Netlify
+title: Hexo Websites on netlify
 date: 2015-10-09 16:03:33
 tags: easy,free
 ---
 
-This is how easy it is to create a static website hosted with Netlify.
+This is how easy it is to create a static website hosted with netlify.
 ```
 
 The title and date are already set up. You can copy/paste in the above content to get a better idea of how Hexo handles text.
@@ -132,14 +131,14 @@ Now, it's time to push the changes in your local repository to GitHub.
 git push origin master
 ```
 
-Now that your assets are up and running on GitHub, let's connect them to Netlify.
+Now that your assets are up and running on GitHub, let's connect them to netlify.
 <a id="netlifystart"></a>
-### **Connecting to Netlify**
+### **Connecting to netlify**
 
 #### Step 1: Add Your New Site
 
 ![step 1 - add](https://cloud.githubusercontent.com/assets/6520639/9803638/717820a6-57d9-11e5-838f-d2a732eb0a41.png)
-Creating a new site on Netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
+Creating a new site on netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
 
 #### Step 2: Link to Your GitHub
 Clicking "New Site" brings you to this screen:
@@ -148,17 +147,17 @@ Clicking "New Site" brings you to this screen:
 
 When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we'll need to link Netlify to GitHub. Click "Link to Github".
+Since your assets are hosted on GitHub, we'll need to link Netlify to GitHub. Click "Link to GitHub".
 
-#### Step 3: Authorize Netlify
+#### Step 3: Authorize netlify
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
-It's time to allow Netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, Netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It's time to allow netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
 ![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4hexo.png)
 
-Now that you've connected Netlify and GitHub, you can see a list of your Git repos. There's the "hexo" repo we just pushed to GitHub. Let's select it.
+Now that you've connected netlify and GitHub, you can see a list of your Git repos. There's the "hexo" repo we just pushed to GitHub. Let's select it.
 
 #### Step 5: Configure Your Settings
 ![step 5 - configure](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step5hexo.png)
@@ -179,4 +178,4 @@ Wait, you thought there was going to be more? Nope! Netlify has done it all for 
 
 ![step 8 - pretty](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step8hexo.png)
 
-There, that's better. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!
+There, that's better. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
