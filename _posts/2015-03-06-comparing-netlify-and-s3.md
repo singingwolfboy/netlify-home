@@ -1,13 +1,19 @@
 ---
-title: "Netlify vs Amazon S3"
+title: Netlify vs Amazon S3
 author: Mathias Biilmann
-description: How Amazon S3 and Netlify compares as static site hosting platforms.
 image: /img/posts/apple-orange.jpg
+short_title: Netlify vs Amazon S3
+description: How Amazon S3 and netlify compares as static site hosting platforms.
 thumbnail: /img/posts/thumbnails/apple-orange.jpg
-tags: ["S3", "Comparisons", "Netlify"]
+cmsUserSlug: netlify-vs-amazon-s3
+date: 2015-10-22 
+tags:
+  - S3
+  - Comparisons
+  - Netlify
 ---
 
-Today pretty much every front-end developer is familiar with Amazon's amazing Simple Storage Service, or S3, and some use it for hosting their front-end projects,  so I thought I would take the opportunity to do a proper writeup about the differences between Netlify's static hosting service and S3.
+Today pretty much every front-end developer is familiar with Amazon's amazing Simple Storage Service, or S3, and some use it for hosting their front-end projects,  so I thought I would take the opportunity to do a proper writeup about the differences between netlify's static hosting service and S3.
 
 In short: S3 manages files. Netlify manages sites.
 
@@ -26,12 +32,12 @@ The first one is that Amazon by default limits you to 100 Buckets per account, a
 
 ### Latency
 
-On it's own, S3 will give you poor latency, since it's not optimized for that. So if you use S3 for static hosting you should always combine it with Cloudfront (or another CDN). Setting this up correctly can be quite a bit of work and often you'll end up having to wait from the moment you deploy a change to your site till it actually shows up on the CDN backed page. With Netlify all changes are instant.
+On it's own, S3 will give you poor latency, since it's not optimized for that. So if you use S3 for static hosting you should always combine it with Cloudfront (or another CDN). Setting this up correctly can be quite a bit of work and often you'll end up having to wait from the moment you deploy a change to your site till it actually shows up on the CDN backed page. With netlify all changes are instant.
 
-Here's Pingdoms performance test running against the exact same site folder uploaded to S3 and Netlify:
+Here's Pingdoms performance test running against the exact same site folder uploaded to S3 and netlify:
 
 * <a href="http://tools.pingdom.com/fpt/#!/bfDfyO/http://speedtestsite.s3-website-us-east-1.amazonaws.com/" target="_blank">The test site on S3</a>
-* <a href="http://tools.pingdom.com/fpt/#!/d5XcVQ/http://speedtest.netlify.com/" target="_blank">The test site on Netlify</a>
+* <a href="http://tools.pingdom.com/fpt/#!/d5XcVQ/http://speedtest.netlify.com/" target="_blank">The test site on netlify</a>
 
 ### HTTPS
 
@@ -40,12 +46,12 @@ If you want HTTPS support for an S3 hosted site you'll need to configure Cloudfr
 * SNI based HTTPS. Cheap, but won't work in IE on Windows XP, older Android browsers and some feedreaders, crawlers, etc
 * Dedicated IP SSL. Costs $600/month.
 
-Netlify also offers SNI based SSL, but our pro plan offers HTTPS that always works in all browsers by using a hybrid model. When you activate HTTPS for a Netlify pro site, we'll provision and install a certificate for your domain and use this for all browsers that support SNI. Browsers with no SNI support will fall back to a certificate shared between multiple customers.
+Netlify also offers SNI based SSL, but our pro plan offers HTTPS that always works in all browsers by using a hybrid model. When you activate HTTPS for a netlify pro site, we'll provision and install a certificate for your domain and use this for all browsers that support SNI. Browsers with no SNI support will fall back to a certificate shared between multiple customers.
 
 
 ### Atomic Deploys
 
-S3 doesn’t do atomic deploys. So typically if you deploy a new version of the site there'll be a time where the site is in a half-deployed state with old and new assets mixed together. If you run into a connetion issue in the middle of a deploy, your site can end up in an inconsistent state. With Netlify no part of a deploy ever goes live before all the files in the deploy have been uploaded and processed.
+S3 doesn’t do atomic deploys. So typically if you deploy a new version of the site there'll be a time where the site is in a half-deployed state with old and new assets mixed together. If you run into a connetion issue in the middle of a deploy, your site can end up in an inconsistent state. With netlify no part of a deploy ever goes live before all the files in the deploy have been uploaded and processed.
 
 
 ### Vary: Accept-Encoding HTTP header
@@ -63,7 +69,7 @@ Netlify comes with integrated build automation. With just a click you can config
 
 Netlify will also process all your assets during each deploy and create unique urls for each piece of content, set far future caching headers and update the HTML to refer to the CDN URLs of the new bundled, minified and cache-optimized assets. We also run all images through lossless image optimization.
 
-Often sites deployed to Netlify will get close to 100/100 score on Pingdom Speed Test tool because of all those web performance optimizations. Obviously if you want to achieve a similar result on S3/Cloudfront, it takes quite a bit of work to get it all right.
+Often sites deployed to netlify will get close to 100/100 score on Pingdom Speed Test tool because of all those web performance optimizations. Obviously if you want to achieve a similar result on S3/Cloudfront, it takes quite a bit of work to get it all right.
 
 ### Redirect and Rewrite Rules
 
