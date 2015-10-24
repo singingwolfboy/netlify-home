@@ -6,7 +6,7 @@ short_title: Host Brunch on netlify
 description: A step-by-step guide on how to host a website built with static site generator Brunch.
 thumbnail: /uploads/brunch.png
 cmsUserSlug: ""
-date: 2015-10-22
+date: 2015-10-26
 tags: null
 ---
 
