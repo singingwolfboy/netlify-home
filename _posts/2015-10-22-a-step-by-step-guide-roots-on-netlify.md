@@ -6,7 +6,7 @@ short_title: Roots hosted on netlify
 description: A step-by-step guide on how to host a website built with static site generator Roots.
 thumbnail: /uploads/screen-shot-2015-10-22-at-18.01.40.png
 cmsUserSlug: ""
-date: 2015-10-22
+date: 2015-10-22T00:00:00.000Z
 tags: null
 ---
 
@@ -150,4 +150,4 @@ Now it's time to sit back and relax. Go grab something cold to drink, scratch th
 
 ![step 7 - done](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step7Roots.png)
 
-Wait, you thought there was going to be more? Nope! netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
+Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
