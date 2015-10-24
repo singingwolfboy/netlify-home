@@ -4,6 +4,7 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 
+
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -12,8 +13,12 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
+    var cmd = ['exec', 'jekyll', 'build'];
+    if (process.env.CMS_ENV == 'staging') {
+      cmd.push("--future")
+    }
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
+    return cp.spawn('bundle', cmd, {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -49,6 +54,12 @@ gulp.task('sass', function () {
           .pipe(gulp.dest('./css'));
 });
 
+
+gulp.task('optimize-images', function() {
+    gulp
+})
+
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -59,6 +70,8 @@ gulp.task('watch', function () {
 });
 
 gulp.task('build', ['sass', 'jekyll-build']);
+
+gulp.task('production', ['sass', 'jekyll-build', 'optimize-images'])
 
 /**
  * Default task, running just `gulp` will compile the sass,
