@@ -5,8 +5,7 @@ image: null
 short_title: Hosting Hexo on netlify
 description: A step-by-step guide on how to host a website built with static site generator Hexo.
 thumbnail: /uploads/mqzoto9f.png
-cmsUserSlug: ""
-date: 2015-10-22
+date: 2015-10-26
 tags: null
 ---
 
