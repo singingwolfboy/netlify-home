@@ -10,13 +10,11 @@ date: 2015-10-26
 tags: null
 ---
 
-Post processing settings
+Netlify does more post processing than most hosting services. G-zipping, minifying javascript, setting content-addressable URL's etc. 
+This is part of the reason that modern static sites on netlify is so much faster.
 
+Not all post processing is always necessary however, so we're happy to announce that netlify now gives you detailed control over the post processing we do to your sites.
   
-Now netlify gives you detailed control over the post processing we do to your sites.
-
-  
-You can completely disable post processing for sites where you mainly want to share HTML/CSS and don&rsquo;t care about performance, pretty URLs, form processing or snippet injection.
-
+You can completely disable post processing for sites where you mainly want to share HTML/CSS and don't care about performance, pretty URLs, form processing or snippet injection.
   
 Apart from that you can control Pretty URLs, bundling and minification of CSS and JavaScript and lossless image compressions.
