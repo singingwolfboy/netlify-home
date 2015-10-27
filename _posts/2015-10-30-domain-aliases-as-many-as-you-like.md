@@ -6,7 +6,7 @@ short_title: Domain Aliases
 description: "With our new domain alias feature, you can easily point several domains or subdomain to the same site. "
 thumbnail: /uploads/many-arrows-design-pointing-up-bending-different-directions-33958385.jpg
 cmsUserSlug: ""
-date: 2015-10-28
+date: 2015-10-30
 tags: null
 ---
 
