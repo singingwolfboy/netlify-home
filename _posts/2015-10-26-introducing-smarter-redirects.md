@@ -20,7 +20,7 @@ Before if you had a site on [www.example.com](http://www.example.com) with a red
 
 [http://example.com/blog](http://example.com/blog) -&gt; [https://example.com/blog](https://example.com/blog) -&gt; [https://www.example.com/blog](https://www.example.com/blog) -&gt; [https://www.example.com/news](https://www.example.com/news)
 
-  
+
 Now our redirect engine is smart enough to detect that chain and redirect straight from [http://example.com/blog](http://example.com/blog) to [https://www.example.com/news](https://www.example.com/news)
 
 All this happens straight on our CDN nodes, so the extra roundtrip time when people get redirected is as low as possible.
