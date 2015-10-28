@@ -6,7 +6,7 @@ short_title: Host Jekyll with netlify
 description: A step-by-step guide on how to host a website built with static site generator Jekyll (3.0).
 thumbnail: /uploads/screen-shot-2015-10-28-at-09.png
 cmsUserSlug: ""
-date: 2015-10-28 
+date: 2015-10-28
 tags: null
 ---
 
@@ -110,7 +110,9 @@ git push -u origin master
 ```
 
 Now that your assets are up and running on GitHub, let's connect them to netlify.
+
 <a id="netlifystart"></a>
+
 ### **Connecting to netlify**
 
 #### Step 1: Add Your New Site
