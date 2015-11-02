@@ -6,7 +6,7 @@ short_title: Host Exposé on netlify
 description: A step-by-step guide on how to host a site built with Exposé - A simple static site generator for photoessays written in Bash.
 thumbnail: /uploads/expose.jpg
 cmsUserSlug: ""
-date: 2015-10-30 
+date: 2015-11-02
 tags: null
 ---
 
