@@ -6,7 +6,7 @@ short_title: Wintersmith on netlify
 description: A step-by-step guide on how to host a website built with static site generator Wintersmith.
 thumbnail: /uploads/wintersmith-og.png
 cmsUserSlug: ""
-date: 2015-10-22 
+date: 2015-11-22 
 tags: null
 ---
 
@@ -22,14 +22,14 @@ Open your terminal, and enter the following command (this guide assumes you have
 $ npm install -g wintersmith
 ```
 
-The `-g` flag will install Wintersmith globally on your system, which you need to make sure Wintersmith has access to the proper dependencies. 
+The `-g` flag will install Wintersmith globally on your system, which you need to make sure Wintersmith has access to the proper dependencies.
 
 Now, navigate to where you want to set up your project, then run the command below. Whatever you decide to name your project, you must be sure not to call it just plain `wintersmith` (which is why we are calling this project `wintersmithnetlify`).
 
 ```
 $ wintersmith new wintersmithnetlify
 ```
-Now you can see a `wintersmithnetlify` directory, with all of the various assets you need to develop your site in `wintersmith`. 
+Now you can see a `wintersmithnetlify` directory, with all of the various assets you need to develop your site in `wintersmith`.
 
 Change into this new directory:
 ```

@@ -6,7 +6,7 @@ short_title: Docpad on netlify
 description: A step-by-step guide on how to host a website built with static site generator Docpad.
 thumbnail: /uploads/1865439.png
 cmsUserSlug: ""
-date: 2015-10-22
+date: 2015-11-22
 tags: null
 ---
 
