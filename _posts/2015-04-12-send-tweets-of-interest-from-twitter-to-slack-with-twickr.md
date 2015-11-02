@@ -1,15 +1,19 @@
 ---
-title: "Twickr — send tweets of interest from Twitter to Slack"
-short_title: "Send tweets to Slack"
+title: Twickr — send tweets of interest from Twitter to Slack
 author: Mathias Biilmann
+image: /img/posts/twickr.png
+short_title: Send tweets to Slack
 description: Twickr is a small open-source tool for automatically sending tweets of interest to Slack
 thumbnail: /img/posts/thumbnails/twickr.png
-image: /img/posts/twickr.png
-tags: ["Open-Source", "Twitter", "Slack"]
+cmsUserSlug: twickr-send-tweets-of-interest-from-twitter-to-slack
+date: 2015-04-12 
+tags:
+  - Open-Source
+  - Twitter
+  - Slack
 ---
 
-
-[Twickr](https://github.com/netlify/twickr) is a small tool we're using @Netlify to get tweets of interest delivered to our Slack.
+[Twickr](https://github.com/netlify/twickr) is a small tool we're using @netlify to get tweets of interest delivered to our Slack.
 
 For us Slack has turned into a sort of command center, where we process support requests, discuss features, share drafts of mails or blog posts, get operational status messages and alerts.
 

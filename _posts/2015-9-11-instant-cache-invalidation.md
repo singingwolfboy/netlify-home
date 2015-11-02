@@ -6,7 +6,7 @@ short_title: Instant Cache Invalidation
 description: "Instant Cache Invalidation is definitively part of netlify's rocketjuice. Learn all about it here."
 thumbnail: /uploads/instant-cache-thumb.jpg
 cmsUserSlug: ""
-date: 2015-09-11T00:00:00.000Z
+date: 2015-09-11
 tags:
   - netlify
   - cdn
@@ -16,7 +16,7 @@ tags:
 
 Phil Karlton, a famous computer scientist, once said
 
-> "There are only two hard problems in Computer Science: Cache Invalidation and naming things." 
+> "There are only two hard problems in Computer Science: Cache Invalidation and naming things."
 
 While we’d rate our ability to name things to be fairly average, Instant Cache Invalidation is definitely part of netlify’s rocketjuice.
 
@@ -29,13 +29,13 @@ Here is a bit about what it actually means, and why it’s important.
 
 ## Cache Invalidation
 
-One of the spectacularly good reasons for making a modern static website instead of a traditional dynamic site, is that a modern static site can be hosted exclusively on a CDN (Content Delivery Network). That means instead of having your site on one limited server, you have your site on nodes all over the World. 
+One of the spectacularly good reasons for making a modern static website instead of a traditional dynamic site, is that a modern static site can be hosted exclusively on a CDN (Content Delivery Network). That means instead of having your site on one limited server, you have your site on nodes all over the World.
 
 So, your site doesn’t actually need to be on a server as such, but can simply be distributed in Local Caches everywhere.
 
 This makes it lighting fast, and on average the Time to First Byte - as in the time it takes to start loading - is 10 times (!!!) less than with a fully optimised Dynamic site.
 
-However, this great speed opens the issue of cache invalidation. On the CDN your site is stored in the local cache (again, this is awesome, it’s what makes it so fast). But when you upload a change to your site, the files affected need to be invalidated. 
+However, this great speed opens the issue of cache invalidation. On the CDN your site is stored in the local cache (again, this is awesome, it’s what makes it so fast). But when you upload a change to your site, the files affected need to be invalidated.
 
 So you (or the hosting service / build tool you use) tell the CDN servers, that they have to discard the old files, and pick up new ones instead.
 
@@ -55,7 +55,7 @@ A “half-solution” can be to rewrite the URL of each file every time it chang
 
 For assets (files) like CSS files, JavaScript or images, you can work around cache invalidation by rewriting the URL for the file each time the content changes (this practice is also called asset fingerprinting). This can solve the cache-invalidation issue for your supporting assets, but you can't use this technique on the HTML files themselves. And setting this up yourself can be quite the task, and you would still have to update the headers of your files.
 
-Most CDN services will have you choose between caching aggressively and having to wait for updates to go live, or do no caching on your HTML files which mean you're not benefitting from the CDN layer at all for those files. 
+Most CDN services will have you choose between caching aggressively and having to wait for updates to go live, or do no caching on your HTML files which mean you're not benefitting from the CDN layer at all for those files.
 
 — So either wait, or miss out on the promised speed of the modern static site…
 
@@ -88,4 +88,3 @@ The actual HTML files however are hosted on our own special-purpose CDN. It's hi
 So there you have it.
 
 Questions, comments, and shares are very welcome indeed.
-

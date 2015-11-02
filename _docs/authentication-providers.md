@@ -1,4 +1,6 @@
 ---
+cmsUserSlug: oauth-providers
+date: 2015-10-21 
 title: OAuth Providers
 position: 80
 ---
@@ -7,7 +9,7 @@ position: 80
 
 One thing that can hold back single page apps with no backend is authentication.
 
-Lets say you want to build a small single page app that acts as a simpler UI for your Github issues.
+Let's say you want to build a small single page app that acts as a simpler UI for your Github issues.
 
 Github's API is pretty awesome and it supports CORS so you can access the API directly from your browser once you have an OAuth2 access token.
 
@@ -21,7 +23,7 @@ Before you can use an authentication provider, you'll need to register an API ap
 
 For Github, go to the [Applications](https://github.com/settings/applications) tab in the settings and create a new Developer Application.
 
-Github will ask for an **Authorization callback URL**, make sure to enter `https://api.netlify.com/auth/done`.
+Github will ask for an **Authorization callback URL**. Make sure to enter `https://api.netlify.com/auth/done`
 
 ![Github OAuth Configuration](/img/docs/github-oauth-config.png)
 
@@ -70,17 +72,17 @@ Services that use OAuth2 are easy to consume directly from Javascript as long as
 
 OAuth1 is not as friendly to single page apps since it requires a server to sign each request to the API with a secret key, and some OAuth2 services don't support CORS request.
 
-In these cases you can use Netlify's [proxy feature](/docs/redirects#proxying). For example, to proxy requests to BitBuckets API add this line to your **_redirects** file:
+In these cases you can use Netlify's [proxy feature](/docs/redirects#proxying). For example, to proxy requests to BitBucket's API, add this line to your **_redirects** file:
 
     /bitbucket/* https://bitbucket.org/:splat 200
 
-Now you can send Ajax requests to BitBuckets API even though it doesn't support CORS requests by replacing **https://bitbucket.org** with **/bitbucket**.
+Now you can send Ajax requests to BitBucket's API even though it doesn't support CORS requests by replacing **https://bitbucket.org** with **/bitbucket**.
 
-BitBucket's API use OAuth1, so normally just proxying requests wouldn't help much, since you still need a server to sign requests with your secret. Netlify also has a solution to this.
+BitBucket's API uses OAuth1, so normally just proxying requests wouldn't help much, since you still need a server to sign requests with your secret. Netlify also has a solution to this.
 
 When using netlify.authenticate with an OAuth1 API you get back an object with a **token** and a **secret** (this is not your API secret) and if you set these in an Authorization header, Netlify will automatically sign your API requests with your API secret.
 
-A jQuery Ajax request to the BitBucket API to get a users repositories would look like:
+A jQuery Ajax request to the BitBucket API to get a user's repositories would look like:
 
 ```js
 $.ajax({
@@ -95,6 +97,6 @@ The token variables here are the token and secret you get back from the call to 
 
 ## Supported Providers
 
-Right now Netlify only support Github and BitBucket as authentication providers, but we're working on adding more.
+Right now Netlify only supports Github and BitBucket as authentication providers, but we're working on adding more.
 
 If you're building a single page app and need to speak with a specific API, let us know and we'll help you out.

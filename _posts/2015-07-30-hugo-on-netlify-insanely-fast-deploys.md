@@ -1,20 +1,20 @@
 ---
-"title": "Hosting Hugo on Netlify — Insanely Fast Deploys"
-"author": "Mathias Biilmann"
-"image": "/uploads/hugo.jpg"
-"short_title": "Hosting Hugo on Netlify"
-"description": "From push to GitHub, until a new deploy is live on our CDN in 6 seconds for our test project!"
-"thumbnail": "/uploads/hugo-logo-small.png"
-"cmsUserSlug": "hugo-on-netlify-insanely-fast-deploys"
-"date": 2015-07-30T00:00:00.000Z
-"tags": null
+title: Hosting Hugo on netlify — Insanely Fast Deploys
+author: Mathias Biilmann
+image: /uploads/hugo.jpg
+short_title: Hosting Hugo on netlify
+description: "From push to GitHub, until a new deploy is live on our CDN in 6 seconds for our test project!"
+thumbnail: /uploads/hugo-logo-small.png
+cmsUserSlug: hugo-on-netlify-insanely-fast-deploys
+date: 2015-07-30
+tags: null
 ---
 
 There are those who describe netlify as “Github Pages on Steroids”.
 
-If that’s the case then Hugo on Netlify must be digging into Lance Armstrong's stash.
+If that’s the case then Hugo on netlify must be digging into Lance Armstrong's stash.
 
-Starting today you can easily run Hugo based builds with Netlify. Use `hugo` as your build command to run the latest version of Hugo, or use `hugo_0.14` to run your build with a specific version of Hugo.
+Starting today you can easily run Hugo based builds with  netlify. Use `hugo` as your build command to run the latest version of Hugo, or use `hugo_0.14` to run your build with a specific version of Hugo.
 
 <!-- excerpt -->
 
@@ -32,7 +32,7 @@ The average time from push to eg. GitHub, until a new deploy is live on our CDN 
 
 Setting up continuous deployment for a Hugo project is straight forward, here's the settings for our test site:
 
-![Hugo Netlify Configuration](/uploads/hugo-configuration.png)
+![Hugo netlify Configuration](/uploads/hugo-configuration.png)
 
 We've simply set the build command to `hugo` to track the latest `hugo` release, but if you want to make sure future `hugo` releases won't cause problems for your build, just choose `hugo_0.14` as your build command.
 

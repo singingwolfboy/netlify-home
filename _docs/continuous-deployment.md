@@ -1,15 +1,15 @@
 ---
-"cmsUserSlug": "continuous-deployment"
-"date": 2015-07-30 
-"title": "Continuous Deployment"
-"position": 20
+cmsUserSlug: continuous-deployment
+date: 2015-07-30T00:00:00.000Z
+title: Continuous Deployment
+position: 20
 ---
 
 ## Continuous Deployment
 
-Continuous deployment works by connecting a Github repository to a Netlify site and keep the two in synch.
+Continuous deployment works by connecting a Github repository to a Netlify site and keeping the two in sync.
 
-It works both for plain static sites, but it's even more powerful when you're using a [static site generator](https://www.staticgen.com) or a front end build tool like [Grunt](http://gruntjs.com/), [Gulp](http://gulpjs.com/) or [Broccoli](https://github.com/broccolijs/broccoli).
+It works for plain static sites, but it's even more powerful when you're using a [static site generator](https://www.staticgen.com) or a front end build tool like [Grunt](http://gruntjs.com/), [Gulp](http://gulpjs.com/) or [Broccoli](https://github.com/broccolijs/broccoli).
 
 Netlify will run your build command and deploy the result whenever you push to Github.
 
@@ -31,7 +31,7 @@ Make sure to include your build tool in these dependencies:
 
 ## Dependency Cache
 
-The first build you do can take some time while we install all of your dependencies. After the build we'll cache the dependencies, so we don't have to start from scratch each time you push an update. This means subsequent builds will be really fast.
+The first build you do can take some time while we install all of your dependencies. After the initial build, we'll cache the dependencies so we don't have to start from scratch each time you push an update. This means subsequent builds will be really fast.
 
 ## Examples
 

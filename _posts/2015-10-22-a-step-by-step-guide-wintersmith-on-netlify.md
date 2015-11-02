@@ -1,64 +1,67 @@
 ---
-title: "A step-by-step guide: Roots on netlify"
+title: "A step-by-step guide: Wintersmith on netlify"
 author: Aaron Autrand
 image: null
-short_title: Roots hosted on netlify
-description: A step-by-step guide on how to host a website built with static site generator Roots.
-thumbnail: /uploads/screen-shot-2015-10-22-at-18.01.40.png
+short_title: Wintersmith on netlify
+description: A step-by-step guide on how to host a website built with static site generator Wintersmith.
+thumbnail: /uploads/wintersmith-og.png
 cmsUserSlug: ""
-date: 2015-10-22
+date: 2015-10-22 
 tags: null
 ---
 
 ### **Welcome to netlify**
 
-Today, we're going to look at how to host a website built with Roots on netlify, including setting up continuous deployment.
+Today, we're going to look at how to host a website built with Wintersmith on netlify, including setting up continuous deployment.
 
-Let's start from scratch (if you already have a Roots site set up, you can skip down to [here](#netlifystart)).
+Let's start from scratch (if you already have a Wintersmith site set up, you can skip down to [here](#netlifystart)).
 
 Open your terminal, and enter the following command (this guide assumes you have Node.js installed):
 
 ```
-$ npm install roots -g
+$ npm install -g wintersmith
 ```
 
-The `-g` flag will install Roots globally on your system, which you need to make sure Roots has access to the proper dependencies.
+The `-g` flag will install Wintersmith globally on your system, which you need to make sure Wintersmith has access to the proper dependencies. 
 
-Now, navigate to where you want to set up your project, then run the command below. Whatever you decide to name your project, you must be sure not to call it just plain `roots` (which is why we are calling this project `rootsnetlify`).
+Now, navigate to where you want to set up your project, then run the command below. Whatever you decide to name your project, you must be sure not to call it just plain `wintersmith` (which is why we are calling this project `wintersmithnetlify`).
 
 ```
-$ roots new rootsnetlify
+$ wintersmith new wintersmithnetlify
 ```
-
-Now you can see a `rootsnetlify` directory, with all of the various assets you need to develop your site in `roots`.
+Now you can see a `wintersmithnetlify` directory, with all of the various assets you need to develop your site in `wintersmith`. 
 
 Change into this new directory:
 ```
-$ cd ./rootsnetlify
+$ cd ./wintersmithnetlify
 ```
- If you decided to call your project `roots`, the next command will fail:
+ If you decided to call your project `wintersmith`, the next command will fail:
 ```
-$ npm install roots --save
+$ npm install wintersmith --save
 ```
-The above command inserts `roots` into the dependencies of your `package.json` file, which tells netlify what tools it needs to build your site. If you named your project `roots`, npm will refuse to add `roots` as a dependency of itself.
+The above command inserts `wintersmith` into the dependencies of your `package.json` file, which tells netlify what tools it needs to build your site. If you named your project `wintersmith`, npm will refuse to add `wintersmith` as a dependency of itself.
 
-In the `views` folder, you'll find a file called index.jade. Open it in your favorite text editor, and add some content in markdown below the `:marked` line:
+Open the `content` directory, then the `articles` directory. In Wintersmith, each article has its own directory, and inside that directory is the actual written content contained in a file called `index.md`. Create a folder called `netlify`, and then create a new text document inside that folder. Now you can add some content to that file.
 
 ```
-extends layout
+---
+title: "Wintersmith with netlify"
+author: Netlify Team
+date: 2015-10-31
+template: article.jade
+---
 
-block content
-  h3 Roots on netlify!
-  :marked
-    It's easy to build a site with Roots and deploy it on netlify
+It's spooky how easy it is to get a website up and running on netlify when you build it with Wintersmith!
 ```
+Once you are satisfied with your content, save the text file as index.md
+
 It's time to display your content. Use this command to generate your site:
 
 ```
-$ roots watch
+$ wintersmith preview
 ```
 
-Roots will compile your site, open it in a browser, and watch for changes. Add some more content to `index.jade`. As soon as you save your changes, Roots will update your page.
+Wintersmith will compile your site, create an internal server at http://localhost:8080, and watch for changes. Add some more content to `index.md`. When you save your changes, reload your Wintersmith site to see the updated content.
 
 Like what you see? Great. Let's move on!
 
@@ -70,12 +73,12 @@ Create a new repository on GitHub. To avoid errors, do not initialize the new re
 
 Open Terminal (for Mac users) or the command prompt (for Windows and Linux users).
 
-For our purposes, let's call your new repo "roots".
+For our purposes, let's call your new repo "wintersmith".
 
 Change the current working directory to your local project.
 
 ```
-$ cd ~/PATH/TO/rootsnetlify/
+$ cd ~/PATH/TO/wintersmithnetlify/
 ```
 
 Initialize the local directory as a Git repository.
@@ -107,9 +110,7 @@ git push origin master
 ```
 
 Now that your assets are up and running on GitHub, let's connect them to netlify.
-
 <a id="netlifystart"></a>
-
 ### **Connecting to Netlify**
 
 #### Step 1: Add Your New Site
@@ -124,20 +125,20 @@ Clicking "New Site" brings you to this screen:
 
 When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we'll need to link netlify to GitHub. Click "Link to Github".
+Since your assets are hosted on GitHub, we'll need to link  netlify to GitHub. Click "Link to GitHub".
 
-#### Step 3: Authorize netlify
+#### Step 3: Authorize Netlify
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
 It's time to allow netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
-![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4Roots.png)
+![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4Wintersmith.png)
 
-Now that you've connected netlify and GitHub, you can see a list of your Git repos. There's the "roots" repo we just pushed to GitHub. Let's select it.
+Now that you've connected netlify and GitHub, you can see a list of your Git repos. There's the "wintersmith" repo we just pushed to GitHub. Let's select it.
 
 #### Step 5: Configure Your Settings
-![step 5 - configure](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step5Roots.png)
+![step 5 - configure](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step5Wintersmith.png)
 
 Here you can configure your options. For the purposes of this tutorial, there's nothing you need to change, so just click "Save".
 
@@ -145,10 +146,10 @@ Here you can configure your options. For the purposes of this tutorial, there's 
 
 ![step 6 - build](https://cloud.githubusercontent.com/assets/6520639/9803640/717b9c40-57d9-11e5-9ca4-92f90f8ed005.png)
 
-Now it's time to sit back and relax. Go grab something cold to drink, scratch the dog behind the ears, or just get up and walk around (you've probably been in front of the computer for too long today, right?). Netlify will do the rest, and you can watch the progress.
+Now it's time to sit back and relax. Go grab something cold to drink, scratch the dog behind the ears, or just get up and walk around (you've probably been in front of the computer for too long today, right?). netlify will do the rest, and you can watch the progress.
 
 #### Step 7: Done
 
-![step 7 - done](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step7Roots.png)
+![step 7 - done](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step7Wintersmith.png)
 
 Wait, you thought there was going to be more? Nope! netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!

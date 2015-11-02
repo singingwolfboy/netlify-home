@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step guide: Pelican on Netlify"
+title: "A step-by-step guide: Pelican on netlify"
 author: Aaron Autrand
 image: null
 short_title: Pelican  on netlify
@@ -12,7 +12,7 @@ tags: null
 
 ### **Welcome to Netlify**
 
-Today, we're going to look at how to host a website built with Pelican on Netlify, including setting up continuous deployment.
+Today, we're going to look at how to host a website built with Pelican on netlify, including setting up continuous deployment.
 
 Let's start from scratch (if you already have a Pelican site set up, you can skip down to [here](#netlifystart)).
 
@@ -21,7 +21,8 @@ Open your terminal, and enter the following command (this assumes you have Pytho
 ```
 $ pip install virtualenv
 ```
-Installing virtualenv will allow you to easily control all the dependencies needed for your project (or any Python project). This way, we can make sure that what you see when you build your Pelican site on your local machine is exactly what you see when you host that site on Netlify.
+
+Installing virtualenv will allow you to easily control all the dependencies needed for your project (or any Python project). This way, we can make sure that what you see when you build your Pelican site on your local machine is exactly what you see when you host that site on netlify.
 
 Let's get your workstation prepped. Use virtualenv to create the pelican directory where you'll be working:
 
@@ -49,19 +50,19 @@ Whoa, that's a bunch of questions. If you see something in square brackets after
 
 If you already have a domain, enter it in http://www.example.com format when you are asked for your URL prefix. Otherwise, you can leave it blank for now.
 
-Additionally, when Pelican asks you about hosting options, go ahead and answer "No" to each of them. You'll be hosting on Netlify instead.
+Additionally, when Pelican asks you about hosting options, go ahead and answer "No" to each of them. You'll be hosting on  netlify instead.
 
 Now it's time to create some content (that's why you are building a site in the first place, isn't it?). Open your favorite text editor, and paste in the following:
 
 ```
-Title: Pelican Websites on Netlify
+Title: Pelican Websites on netlify
 Date: 2015-09-01 10:20
 Category: Review
 
-This is how easy it is to create a static website hosted with Netlify.
+This is how easy it is to create a static website hosted with netlify.
 ```
 
-Since you installed Markdown along with Pelican (and since this content is in Markdown format), save this as `~/PATH/TO/pelican/content/Netlify.md`
+Since you installed Markdown along with Pelican (and since this content is in Markdown format), save this as `~/PATH/TO/pelican/content/netlify.md`
 
 It's time to display your content. Use this command to generate your site:
 
@@ -84,7 +85,7 @@ Like what you see? Great. Let's move on!
 
 ### **Preparing for Deployment**
 
-If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Pelican and GitHub will play nicely together. 
+If you are satisfied with your site, it's time to get it ready to deploy. First, let's make sure that Pelican and GitHub will play nicely together.
 
 Change back to the `pelican` directory:
 ```
@@ -97,7 +98,7 @@ Pelican generates your website to the `output` directory. We want to make sure t
 $ echo "/output" >> .gitignore
 ```
 
-We also want to make sure that Netlify knows exactly which versions of various Python plugins you are using. We can do that by creating a file called `requirements.txt`
+We also want to make sure that netlify knows exactly which versions of various Python plugins you are using. We can do that by creating a file called `requirements.txt`
 
 ```
 $ pip freeze > requirements.txt
@@ -149,34 +150,34 @@ Now, it's time to push the changes in your local repository to GitHub.
 git push origin master
 ```
 
-Now that your assets are up and running on GitHub, let's connect them to Netlify.
+Now that your assets are up and running on GitHub, let's connect them to netlify.
 <a id="netlifystart"></a>
 
-### **Connecting to Netlify**
+### **Connecting to netlify**
 
 #### Step 1: Add Your New Site
 
 ![step 1 - add](https://cloud.githubusercontent.com/assets/6520639/9803638/717820a6-57d9-11e5-838f-d2a732eb0a41.png)
-Creating a new site on Netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
+Creating a new site on netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
 
 #### Step 2: Link to Your GitHub
 Clicking "New Site" brings you to this screen:
 
 ![step 2 - link](https://cloud.githubusercontent.com/assets/6520639/9803637/7176ac8a-57d9-11e5-9b09-f43dc772a4f9.png)
 
-When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
+When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we'll need to link Netlify to GitHub. Click "Link to Github".
+Since your assets are hosted on GitHub, we'll need to link  netlify to GitHub. Click "Link to Github".
 
-#### Step 3: Authorize Netlify
+#### Step 3: Authorize netlify
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
-It's time to allow Netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, Netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It's time to allow netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
 ![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4Pelican.png)
 
-Now that you've connected Netlify and GitHub, you can see a list of your Git repos. There's the "pelican" repo we just pushed to GitHub. Let's select it.
+Now that you've connected netlify and GitHub, you can see a list of your Git repos. There's the "pelican" repo we just pushed to GitHub. Let's select it.
 
 #### Step 5: Configure Your Settings
 ![step 5 - configure](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step5Pelican.png)
@@ -197,4 +198,4 @@ Wait, you thought there was going to be more? Nope! Netlify has done it all for 
 
 ![step 8 - pretty](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step8Pelican.png)
 
-There, that's better. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!
+There, that's better. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!

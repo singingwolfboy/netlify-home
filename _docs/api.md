@@ -1,4 +1,6 @@
 ---
+cmsUserSlug: api
+date: 2015-10-21
 title: API
 position: 100
 ---
@@ -11,7 +13,7 @@ Netlify is a hosting service for the programmable web. It understands your docum
 
 All URLs start with `https://api.netlify.com/api/v1/`. **SSL only**. The path is prefixed with the API version. If we change the API in backward-incompatible ways, we'll bump the version marker and maintain stable support for the old URLs.
 
-To make a request for all the sites you have access to, you'd append the sites index path to the base url to form something like https://api.netlify.com/api/v1/sites. In curl, that looks like:
+To make a request for all the sites you have access to, you'd append the sites' index path to the base url to form something like https://api.netlify.com/api/v1/sites. In curl, that looks like:
 
 ```shell
 curl -H 'User-Agent: MyApp (yourname@example.com)' https://api.netlify.com/api/v1/sites?access_token=oauth2_access_token
@@ -66,7 +68,7 @@ If you need higher limits, please contact us.
 
 Requests that return multiple items will be paginated to 100 items by default. You can specify further pages with the ?page parameter. You can also set a custom page size up to 100 with the ?per_page parameter.
 
-Note that page numbering is 1-based and that ommiting the ?page parameter will return the first page.
+Note that page numbering is 1-based and that omitting the ?page parameter will return the first page.
 
 ### Link Header
 
@@ -419,7 +421,7 @@ You can get the raw contents of the file by using the custom media type `applica
 
 ## Snippets
 
-Snippets are code snippets that will be injected into every HTML page of the website, either right before the closing head tag or just before the closing body tag. Each snippet can specify code for all pages and code that just get injected into "Thank you" pages shown after a successful form submissions.
+Snippets are code snippets that will be injected into every HTML page of the website, either right before the closing head tag or just before the closing body tag. Each snippet can specify code for all pages and code that just gets injected into "Thank you" pages shown after a successful form submission.
 
 ### Get Snippets
 
@@ -541,7 +543,7 @@ You can access all deploys for a specific site.
 
 ### Restore Deploy
 
-* `POST /api/v1/sites/{site_id}/deploys/{deploy_id}/restore` restore an old deploy and make it the live version of the site
+* `POST /sites/{site_id}/deploys/{deploy_id}/restore` restores an old deploy and make it the live version of the site
 
 ```json
 {

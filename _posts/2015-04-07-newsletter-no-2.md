@@ -1,10 +1,15 @@
 ---
-title: "Netlify - Newsletter no. 2"
-short_title: "Our Second Newsletter"
+title: Netlify - Newsletter no. 2
 author: Christian Bach
-description: Netlify is live, we made front page of Hacker News and welcome to the Static Web-Tech SF Meetup
+image: null
+short_title: Our Second Newsletter
+description: "Netlify is live, we made front page of Hacker News and welcome to the Static Web-Tech SF Meetup"
 thumbnail: /img/posts/thumbnails/newsletter.png
-tags: ["Netlify", "Newsletter"]
+cmsUserSlug: netlify-newsletter-no-2
+date: 2015-04-07
+tags:
+  - Netlify
+  - Newsletter
 ---
 
 ### Welcome.
@@ -27,7 +32,7 @@ And thanks so much to everyone who has already signed on. We are getting raving 
 We were really stoked a couple of days ago, when our launch spent the [entire day on the front page of Hacker News](http://netlify.us2.list-manage.com/track/click?u=3ca88a0cd26d026e590224d67&id=3f546fb6c3&e=8a3a3955ba) with more than 100 upvotes and lots of great comments.
 
 **100% netlify**
-On a more personal note Chris (co-founder) is now no longer with his Danish agency, and is super excited to move permanently to San Francisco so he can focus 100% on Netlify.
+On a more personal note Chris (co-founder) is now no longer with his Danish agency, and is super excited to move permanently to San Francisco so he can focus 100% on netlify.
 
 **Future**
 We are currently working on some things at that we are really excited about introducing to everyone. Please let us know of any features you would like. We can be contacted in any number of ways.

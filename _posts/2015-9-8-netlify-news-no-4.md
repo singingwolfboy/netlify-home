@@ -6,7 +6,7 @@
 "description": "Support for automatic builds with Clojure & Leiningen. Gitlab & self-hosted Git repo support & more."
 "thumbnail": "/uploads/download-1.jpeg"
 "cmsUserSlug": ""
-"date": 2015-09-08T00:00:00.000Z
+"date": 2015-09-08
 "tags": null
 ---
 
@@ -48,4 +48,3 @@ Till then, keep smiling.
 Have an awesome day.
 
 /Matt & Chris
-
