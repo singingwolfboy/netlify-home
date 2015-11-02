@@ -74,6 +74,7 @@ First make sure you ran the _$ bundle install_ command as outlined above and tha
 If you haven't already done it, go to GitHub and create a new repository for your Jekyll page. 
 You can postpone adding files to the repository until after its creation (The README, license and gitignore files).
 ![createrepo.png](/uploads/createrepo.png)
+
 Once you've named the repository and clicked *Create repository* you're ready to go local.
 
 #### 2. Open Terminal. 
