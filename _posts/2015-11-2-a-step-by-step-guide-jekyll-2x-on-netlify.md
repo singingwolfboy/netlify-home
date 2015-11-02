@@ -117,7 +117,7 @@ $ git remote -v
 ```
 
 #### 8. Push.
-The final push before we're done setting up is to literally use the push command with git, as in the following command in Terminal/Command prompt:
+The final task before we're done setting up is to use the push command with git, as in the following line in Terminal/Command prompt:
 ```
 $ git push -u origin master
 ```
@@ -132,7 +132,7 @@ We're done setting up the Jekyll page, so let's connect it with Netlify.
 #### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
 
-Creating a new site on netlify is simple. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the New Site button to get started.
+Creating a new site on netlify is simple. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started.
 
 #### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
@@ -164,12 +164,13 @@ In most cases and for the purpose of this tutorial, there's nothing we need to c
 
 #### Step 6: Build Your Site
 ![siteisbuilding.png](/uploads/siteisbuilding.png)
-Once you click save, netlify will step in and take over, though it will let you know what's happening on the way, as seen in the above screenshow.
+Once you click save, netlify will step in and take over, though it will let you know what's happening on the way, as seen in the above screenshot.
 Now it’s time to sit back and relax, as the next step may take a few minutes. Take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
 ![Done](/uploads/naturalistpanda.png)
 Once netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
+
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate.
 
 That's it for now.
