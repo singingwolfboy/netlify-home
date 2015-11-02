@@ -6,7 +6,7 @@ short_title: Hosting Jekyll on netlify
 description: A step-by-step guide on how to host a website built with a specific version of jekyll.
 thumbnail: /uploads/jekyllsquarelogo.png
 cmsUserSlug: ""
-date: 2015-11-02 
+date: 2015-11-02T00:00:00.000Z
 tags: null
 ---
 
@@ -93,8 +93,10 @@ $ git commit -m 'First commit'
 ```
 
 #### 6. Get Remote URL. 
+![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
+
 Now it's time to return to the GitHub repository you created in step one to get the URL for this remote repository where your local repository will be pushed.
-![Remote URL Button](/img/)
+
 
 #### 7. Add Remote Repository URL.
 Return to the Terminal window/Command prompt and paste the remote repository URL inside the following line (instead of My-Repository-URL):
@@ -120,19 +122,20 @@ We're done setting up the Jekyll page, so let's connect it with Netlify.
 <a id="netlifystart"></a>
 
 #### Step 1: Add Your New Site
-![Netlify New Site](/img/newsitebut.png)
+![Netlify New Site](/uploads/newsitebut.png)
+
 Creating a new site on netlify is simple. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the New Site button to get started.
 
 #### Step 2: Link to Your GitHub
 Clicking “New Site” brings you to this screen:
-![Link to GitHub](/img/createsite.png)
+![Link to GitHub](/uploads/createsite.png)
 When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
 Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click “Link to GitHub”.
 
 #### Step 3: Authorize netlify
 Depending on your setup, there are different ways this can be done.
+![GitHub Login](/uploads/githublogin.png)
 
-![GitHub Login](/img/githublogin.png)
 It’s time to allow netlify and GitHub to talk to each other and to do that, you need to authorize Netlify's access to GitHub, e.g. by providing your login and password.
 
 ![Authorize Netlify](/img/)
@@ -141,21 +144,24 @@ Alternatively! Clicking the “Authorize Application” button will do just that
 If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
-![Choose Repo](/img/chooserepo.png)
+![Choose Repo](/uploads/chooserepo.png)
+
 Once you're connected to GitHub, netlify will show you a list of your Git repos, as seen above.
 For the purpose of this tutorial we'll select the “AmazingWood” repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
-![Configure Settings](/img/configurerepo.png)
+![Configure Settings](/uploads/configurerepo.png)
+
 In most cases and for the purpose of this tutorial, there's nothing we need to configure, so we'll simply click save to go with the default options.
 
 #### Step 6: Build Your Site
-![Build Site](/img/siteisbuilding.png)
+![siteisbuilding.png](/uploads/siteisbuilding.png)
 Once you click save, netlify will step in and take over, though it will let you know what's happening on the way, as seen in the above screenshow.
 Now it’s time to sit back and relax, as the next step may take a few minutes. Take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
-![Done](/img/naturalistpanda.png)
+![Done](/uploads/naturalistpanda.png)
 Once netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate.
+
 That's it for now.
