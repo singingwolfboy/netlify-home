@@ -15,7 +15,7 @@ tags:
 Jekyll past, present and future versions hosted on Netlify.  
 Today we will give you a step by step guide with more details on how to set up the biggest one of them all, I present to you: Jekyll (any version) on Netlify in continuous deployment.
 
-(If you already have a site set up and running on GitHub and only wish to connect, start [here](#netlifystart)) instead.
+If you already have a site set up and running on GitHub and only wish to connect, start [here](#netlifystart) instead.
 
 ### **Setup your GitHub Repository**
 If you want to create a GitHub repo from a local directory scroll down to [here](#githubfromlocal).
