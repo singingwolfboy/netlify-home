@@ -127,19 +127,19 @@ We're done setting up the Jekyll page, so let's connect it with Netlify.
 Creating a new site on netlify is simple. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the New Site button to get started.
 
 #### Step 2: Link to Your GitHub
-Clicking “New Site” brings you to this screen:
+Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
 When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
-Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click “Link to GitHub”.
+Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click *“Link to GitHub”*.
 
 #### Step 3: Authorize netlify
-Depending on your setup, there are different ways this can be done.
+You will be asked to provide your github login details:
 ![GitHub Login](/uploads/githublogin.png)
 
-It’s time to allow netlify and GitHub to talk to each other and to do that, you need to authorize Netlify's access to GitHub, e.g. by providing your login and password.
+It’s time to allow netlify and GitHub to talk to each other, so review the permissions and click authorize application.
+![Authorize Netlify](/uploads/authorize.png)
 
-![Authorize Netlify](/img/)
-Alternatively! Clicking the “Authorize Application” button will do just that. Like it says in the image below, netlify doesn’t store your GitHub access token on our servers. 
+Like it says in the image above, netlify doesn’t store your GitHub access token on our servers! 
 
 If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
 
@@ -147,7 +147,7 @@ If you’d like to know more about the permissions netlify requests and why we n
 ![Choose Repo](/uploads/chooserepo.png)
 
 Once you're connected to GitHub, netlify will show you a list of your Git repos, as seen above.
-For the purpose of this tutorial we'll select the “AmazingWood” repo we just pushed to GitHub. 
+For the purpose of this tutorial we'll select the *“AmazingWood”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
 ![Configure Settings](/uploads/configurerepo.png)
