@@ -7,7 +7,8 @@ description: A step-by-step guide on how to host a website built with a specific
 thumbnail: /uploads/jekyllsquarelogo.png
 cmsUserSlug: ""
 date: 2015-11-02T00:00:00.000Z
-tags: null
+tags:
+  - jekyll github
 ---
 
 ## **Welcome to Netlify**
