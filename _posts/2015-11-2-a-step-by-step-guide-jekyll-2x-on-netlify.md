@@ -11,16 +11,18 @@ tags: null
 ---
 
 ## **Welcome to Netlify**
-Jekyll past, present and future versions hosted on Netlify.  Today we will give you a step by step guide that covers how to set up the biggest one of them all, I present to you: Jekyll on Netlify in continuous deployment.
+Jekyll past, present and future versions hosted on Netlify.  
+Today we will give you a step by step guide with more details on how to set up the biggest one of them all, I present to you: Jekyll (any version) on Netlify in continuous deployment.
 
 (If you already have a site set up and running on GitHub and only wish to connect, start [here](#netlifystart)) instead.
 
 ### **Setup your GitHub Repository**
-(If you want to create a GitHub repo from a local directory scroll down to [here](#githubfromlocal)).
-If you are setting up a jekyll page from scratch check these:
-[Using jekyll with pages](https://help.github.com/articles/using-jekyll-with-pages/)
-[Jekyll Now](https://github.com/barryclark/jekyll-now)
+If you want to create a GitHub repo from a local directory scroll down to [here](#githubfromlocal).
 
+If you are setting up a jekyll page from scratch check these two out:
+* [Using jekyll with pages](https://help.github.com/articles/using-jekyll-with-pages/).
+* [Jekyll Now](https://github.com/barryclark/jekyll-now)
+.
 #### 1. Open Terminal Window/Command Prompt
 Open up a Terminal window (or the command prompt if you're on a Windows OS) and change the current working directory to your local project – the root directory of your site.
 
