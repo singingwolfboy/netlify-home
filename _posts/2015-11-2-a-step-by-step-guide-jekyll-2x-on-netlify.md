@@ -23,11 +23,9 @@ If you are setting up a jekyll page from scratch check these two out:
 * [Using jekyll with pages](https://help.github.com/articles/using-jekyll-with-pages/).
 * [Jekyll Now](https://github.com/barryclark/jekyll-now)
 .
-#### 1. Open Terminal Window/Command Prompt
-Open up a Terminal window (or the command prompt if you're on a Windows OS) and change the current working directory to your local project – the root directory of your site.
 
-#### 2. Set up your GemFile
-Make sure that Jekyll is included in your gemfile and since we're hosting at Netlify's, it's also possible to specify WHICH version of Jekyll you wish to use! 
+#### 1. Set up your GemFile
+Your gemfile should be located in the root of your site. Open it in your text editor of choice and make sure that Jekyll is included and since we're hosting at Netlify's, it's also possible to specify WHICH version of Jekyll you wish to use! 
 See the following examples of including Jekyll:
 
 To use the most current version of Jekyll (as of this writing version 3) use this line:
@@ -45,8 +43,9 @@ To use the most current beta version of Jekyll:
 $ gem install jekyll --pre
 ```
 
-The gemfile is also where you would list the gems for the plugins your site is using and just as we saw with Jekyll, it's possible to specify WHICH version you wish to use, without limitations on which plugin and what versions that are allowed.
-For example when you're using github, it's you need to install github pages and to specify this in the gem file you'd use the following line: 
+The gemfile is also where you would list the gems for the plugins your site is using and just as we saw with Jekyll, it's possible to specify WHICH version you wish to use, without limitations on which plugin and what versions are allowed! 
+
+For example when you're using github, you need to install github pages and to specify this in the gem file you'd use the following line: 
 ```
 $ gem 'jekyll-sitemap'
 ```
@@ -55,6 +54,9 @@ Here's an example where we specify WHICH exact version of the plugin we wish to 
 ```
 $ gem 'octopress', '~> 3.0.0.rc.12'
 ```
+
+#### 2. Open Terminal Window/Command Prompt
+Open up a Terminal window (or the command prompt if you're on a Windows OS) and change the current working directory to your local project – the root directory of your site.
 
 #### 3. Bundle Install.
 The following command will install the jekyll gem specified in the gemfile, along with dependencies and plugins:
@@ -71,10 +73,13 @@ First make sure you ran the _$ bundle install_ command as outlined above and tha
 #### 1. Create Repository. 
 If you haven't already done it, go to GitHub and create a new repository for your Jekyll page. 
 You can postpone adding files to the repository until after its creation (The README, license and gitignore files).
+![createrepo.png](/uploads/createrepo.png)
+Once you've named the repository and clicked *Create repository* you're ready to go local.
 
 #### 2. Open Terminal. 
 Open up a Terminal window (or the command prompt if you're on a Windows OS) and change the current working directory to your local project – the root of the directory of your page.
-Keep the Terminal Window/Command Prompt open, in between steps!
+
+*Keep the Terminal Window/Command Prompt open, in between steps!*
 
 #### 3. Initialize Directory. 
 Initialize the local directory as a git repository with the following line in Terminal/Command Prompt:
