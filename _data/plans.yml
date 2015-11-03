@@ -15,7 +15,7 @@ intro:
     teaser: "From 'Free' to 'Pro'"
     text: The free package alone offers more features than most others do in their paid plans. All packages contain netlify key features, but with things like storage, bandwith, no. of deploys, and support plans increasing which each level.
   - title: Continuous Deployment
-    teaser: Build and Deploy autmatically
+    teaser: Build and Deploy automatically
     text: Netlify is the only static hosting service that runs your build and deploys any site whenever you push to Git.
 
 plans:
