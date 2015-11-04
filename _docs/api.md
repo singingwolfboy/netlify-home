@@ -1,6 +1,6 @@
 ---
 cmsUserSlug: api
-date: 2015-10-21
+date: 2015-10-21T00:00:00.000Z
 title: API
 position: 100
 ---
@@ -330,7 +330,7 @@ The `/api/v1/hooks` endpoint lets you control the hooks for your site.
 
 ### Get Hook Types
 
-* `GET /api/v1/hooks/` returns a list of hook types that you can configure
+* `GET /api/v1/hooks/types` returns a list of hook types that you can configure
 
 ```json
 [{
