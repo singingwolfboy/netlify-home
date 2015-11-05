@@ -117,7 +117,7 @@ attributes:
     details: ["0", "1", "10", "100"]
     info: Point more than one domain to the same website.
     link_text: Read more here
-    link: https://www.netlify.com/blog/2015/10/30/domain-aliases-as-many-as-you-like
+    link: /blog/2015/10/30/domain-aliases-as-many-as-you-like
   - title: Storage / month
     details: ["100 MB", "5 GB", "25 GB", "100 GB"]
     info: To get more storage simply upgrade your plan.
@@ -139,6 +139,8 @@ attributes:
     postfix: Form submissions / month
     details: ["100", "1000", "10000", "Unlimited"]
     info: Netlify supports form submissions for any HTML form on your site and trigger email, slack notifications or webhooks.
+    link_text: Read more here
+    link: /docs/form-handling
   - title: DNS hosting with DNS panel
     details: ["No", "Yes", "Yes", "Yes"]
     info: Netlify includes high uptime DNS hosting, with a simple but powerful DNS panel and full API access.
