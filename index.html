@@ -171,7 +171,7 @@ layout: default
         <p class="zeta p--wide">Sign up for our awesome newsletter, if you want to hear about exciting things happening in the world of static websites, and of new Netlify features that are around the corner.</p>
       </header>
       {% include newsletter-form.html %}
-      <p class="x-small mt-30 mb-30 p--full-w">We send out aprox. twice a month. Go ahead, we won’t give away your address or anything, and each email is handwritten (on a keyboard).</p>
+      <p class="x-small mt-30 mb-40 p--full-w">We send out aprox. twice a month. Go ahead, we won’t give away your address or anything, and each email is handwritten (on a keyboard).</p>
     </section>
 
     {% include testimonials.html %}
@@ -193,17 +193,17 @@ layout: default
         <div class="l-third">
           <article class="blurb">
             <header class="blurb-hd">
-              <div class="media">
+              <a class="media" href="{{post.url}}">
                 <div class="media-img optional">
                   {% image_tag src=post.thumbnail width="80" %}
                 </div>
                 <div class="media-bd">
                   <h1 class="blurb-title">
-                    <a href="{{post.url}}" class="light">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</a>
+                    <span class="light">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</span>
                   </h1>
-                  <p class="blurb-meta"><a href="{{post.url}}" class="link">by {{post.author}}</a></p>
+                  <p class="blurb-meta"><span class="link">by {{post.author}}</span></p>
                 </div>
-              </div>
+              </a>
             </header>
             <div class="blurb-bd">
               <p class="small muted">{{post.description}}</p>

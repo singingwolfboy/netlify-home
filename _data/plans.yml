@@ -104,7 +104,7 @@ all:
     link_text: Read the full api documentation
     link: /docs/api
   - title: Love
-    info: Always...
+    info: It's why we do it
 
 attributes:
   - title: Custom Domain
@@ -116,6 +116,8 @@ attributes:
   - title: Domain Aliases
     details: ["0", "1", "10", "100"]
     info: Point more than one domain to the same website.
+    link_text: Read more here
+    link: https://www.netlify.com/blog/2015/10/30/domain-aliases-as-many-as-you-like
   - title: Storage / month
     details: ["100 MB", "5 GB", "25 GB", "100 GB"]
     info: To get more storage simply upgrade your plan.
