@@ -44,3 +44,6 @@ gems:
   - jekyll-srcset
   - octopress-minify-html
 minify_html: false
+
+srcset:
+  cache: /tmp/nf-home-cache
