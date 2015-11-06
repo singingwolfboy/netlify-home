@@ -20,6 +20,10 @@ excerpt_separator: <!-- excerpt -->
 collections:
   docs:
     output: true
+  reseller_docs:
+    output: true
+    permalink: /reseller/docs/:title.html
+
 
 defaults:
   - scope:
@@ -33,6 +37,11 @@ defaults:
       type: "docs"
     values:
       layout: "docs"
+  - scope:
+      path: ""
+      type: "reseller_docs"
+    values:
+      layout: "reseller_docs"
 
 # RSS
 rss:
