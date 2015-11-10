@@ -6,7 +6,7 @@ short_title: Angular apps on netlify
 description: A step-by-step guide on how to host your angular.js apps on netlify.
 thumbnail: /uploads/angular-js-copy.png
 cmsUserSlug: ""
-date: 2015-11-10 
+date: 2015-11-10
 tags: null
 ---
 
@@ -95,6 +95,7 @@ git push origin master
 
 Now that your assets are up and running on GitHub, let's connect them to netlify.
 <a id="netlifystart"></a>
+
 ### **Connecting to netlify**
 
 #### Step 1: Add Your New Site
