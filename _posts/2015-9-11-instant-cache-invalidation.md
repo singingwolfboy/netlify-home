@@ -1,12 +1,12 @@
 ---
 title: Instant Cache Invalidation
-author: Christian Bach
+author: Chris Bach
 image: null
 short_title: Instant Cache Invalidation
 description: "Instant Cache Invalidation is definitively part of netlify's rocketjuice. Learn all about it here."
 thumbnail: /uploads/instant-cache-thumb.jpg
 cmsUserSlug: ""
-date: 2015-09-11
+date: 2015-09-11T00:00:00.000Z
 tags:
   - netlify
   - cdn
