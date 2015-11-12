@@ -26,7 +26,7 @@ If you are setting up a jekyll page from scratch check these two out:
 .
 
 #### 1. Set up your GemFile
-Your gemfile should be located in the root of your site. Open it in your text editor of choice and make sure that Jekyll is included and since we're hosting at Netlify's, it's also possible to specify WHICH version of Jekyll you wish to use! 
+Your gemfile should be located in the root of your site. Open it in your text editor of choice and make sure that Jekyll is included and since we're hosting at Netlify's, it's also possible to specify *WHICH* version of Jekyll you wish to use! 
 See the following examples of including Jekyll:
 
 To use the most current version of Jekyll (as of this writing version 3) use this line:
@@ -44,14 +44,14 @@ To use the most current beta version of Jekyll:
 $ gem install jekyll --pre
 ```
 
-The gemfile is also where you would list the gems for the plugins your site is using and just as we saw with Jekyll, it's possible to specify WHICH version you wish to use, without limitations on which plugin and what versions are allowed! 
+The gemfile is also where you would list the gems for the plugins your site is using and just as we saw with Jekyll, it's possible to specify *WHICH* version you wish to use, without limitations on which plugin and what versions are allowed! 
 
 For example when you're using github, you need to install github pages and to specify this in the gem file you'd use the following line: 
 ```
 $ gem 'jekyll-sitemap'
 ```
 
-Here's an example where we specify WHICH exact version of the plugin we wish to use.  The following line specifies that octopress version 3.0.0.rc.12 should be installed:
+Here's an example where we specify *WHICH* exact version of the plugin we wish to use.  The following line specifies that octopress version 3.0.0.rc.12 should be installed:
 ```
 $ gem 'octopress', '~> 3.0.0.rc.12'
 ```
@@ -79,9 +79,9 @@ You can postpone adding files to the repository until after its creation (The RE
 Once you've named the repository and clicked *Create repository* you're ready to go local.
 
 #### 2. Open Terminal. 
-Open up a Terminal window (or the command prompt if you're on a Windows OS) and change the current working directory to your local project – the root of the directory of your page.
+Open up a Terminal window (or the command prompt if you're on a Windows OS) and change the current working directory to your local project – the root of the directory of your page (cd my-local-repo-directory).
 
-*Keep the Terminal Window/Command Prompt open, in between steps!*
+*Keep the Terminal Window/Command Prompt open, in between steps for your own convenience!*
 
 #### 3. Initialize Directory. 
 Initialize the local directory as a git repository with the following line in Terminal/Command Prompt:
@@ -96,7 +96,7 @@ $ git add .
 ```
 
 #### 5. Commit Files. 
-Commit the filest you just staged in your local repository by entering the following line in Terminal/Command Prompt:
+Commit the files you just staged in your local repository by entering the following line in Terminal/Command Prompt:
 ```
 $ git commit -m 'First commit'
 ```
@@ -105,7 +105,6 @@ $ git commit -m 'First commit'
 ![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
 
 Now it's time to return to the GitHub repository you created in step one to get the URL for this remote repository where your local repository will be pushed.
-
 
 #### 7. Add Remote Repository URL.
 Return to the Terminal window/Command prompt and paste the remote repository URL inside the following line (instead of My-Repository-URL):
