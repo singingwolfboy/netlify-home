@@ -15,7 +15,7 @@ First you need to assign the domain to the site you want us to show.
 
 You can do this through the web UI by clicking "Edit domain" when viewing your site.
 
-![set-custom-domain.jpg](/uploads/set-custom-domain.jpg)
+![set-custom-domain.jpg](/img/docs/dns-records.png)
 
 You can also assign domains through the [CLI tool](/docs/cli) with the `netlify update` command.
 
