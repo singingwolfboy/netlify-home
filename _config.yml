@@ -13,7 +13,7 @@ social-links:
   facebook: 'https://www.facebook.com/netlify'
   github: 'https://github.com/netlify'
   linkedin: 'https://www.linkedin.com/company/netlify'
-  googleplus: 'https://plus.google.com/+NetlifyApp'
+  gitter: 'https://gitter.im/netlify/community'
 
 excerpt_separator: <!-- excerpt -->
 
