@@ -1583,7 +1583,7 @@ html {
     background: #394343; }
   .nav--social .icon-link--linkedin {
     background: #343e3f; }
-  .nav--social .icon-link--googleplus {
+  .nav--social .icon-link--gitter {
     background: #2a3233; }
   .nav--social .icon-link--inverse {
     color: #FFF; }
@@ -1595,7 +1595,7 @@ html {
       background: #b8c3c3; }
     .nav--social .icon-link--inverse.icon-link--linkedin {
       background: #b2bec0; }
-    .nav--social .icon-link--inverse.icon-link--googleplus {
+    .nav--social .icon-link--inverse.icon-link--gitter {
       background: #a6b4b6; }
 
 .nav--centered {
@@ -1769,7 +1769,7 @@ a {
     fill: #767676; }
   .icon-link--round.icon-link--linkedin svg {
     fill: #525252; }
-  .icon-link--round.icon-link--googleplus svg {
+  .icon-link--round.icon-link--gitter svg {
     fill: #7e7e7e; }
   .no-touch .icon-link--round:hover {
     -webkit-transform: scale(0.95);
