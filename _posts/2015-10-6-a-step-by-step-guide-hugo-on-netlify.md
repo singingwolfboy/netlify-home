@@ -18,6 +18,8 @@ Let's start from scratch (if you already have a Hugo site set up, you can skip d
 
 To get started, make sure you have all the tools you need. Visit [gethugo.io](http://www.gohugo.io) to download and install Hugo.
 
+<!-- excerpt -->
+
 ### **Building Your Site**
 Hugo can build a skeleton for your site, which will set up a main directory (which, for simplicity's sake, we'll call `hugo`) and sub-directories within the `hugo` directory to hold your content, html that Hugo builds for you, and all of your necessary configuration files. Let's do that now:
 

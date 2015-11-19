@@ -6,7 +6,7 @@ short_title: Wintersmith on netlify
 description: A step-by-step guide on how to host a website built with static site generator Wintersmith.
 thumbnail: /uploads/wintersmith-og.png
 cmsUserSlug: ""
-date: 2015-11-22 
+date: 2015-11-22
 tags: null
 ---
 
@@ -17,7 +17,7 @@ Today, we're going to look at how to host a website built with Wintersmith on ne
 Let's start from scratch (if you already have a Wintersmith site set up, you can skip down to [here](#netlifystart)).
 
 Open your terminal, and enter the following command (this guide assumes you have Node.js installed):
-
+<!-- excerpt -->
 ```
 $ npm install -g wintersmith
 ```

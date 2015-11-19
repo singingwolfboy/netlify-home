@@ -16,6 +16,8 @@ Today, we're going to look at how to host a website built with Hexo on netlify, 
 
 Let's start from scratch (if you already have a Hexo site set up, you can skip down to [here](#netlifystart)).
 
+<!-- excerpt -->
+
 Open your terminal, and enter the following command (this assumes you have NodeJS installed):
 
 ```

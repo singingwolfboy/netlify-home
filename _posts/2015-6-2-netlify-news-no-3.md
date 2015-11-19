@@ -24,6 +24,8 @@ First of all we’ve added built-in form handling as you may have known it from 
 
 Just add a "netlify" attribute to any HTML form and we'll start processing it. You can setup email, slack or webhook notifications from the admin panel!
 
+<!-- excerpt -->
+
 Read all about it [here](http://netlify.us2.list-manage1.com/track/click?u=3ca88a0cd26d026e590224d67&amp;id=2900a67c30&amp;e=c456464faf)
 
  **Prerender**

@@ -21,7 +21,7 @@ We've got lot's of big news, so we will get right to it!
 If you’re using a single page app for a site that’s not behind a login, SEO is an important concern.Pre-rendering is the answer, and netlify has supported external pre-rendering services like prerender.io for a while.
 
 Now we’re proud to announce that Netlify has this feature built-in!
-
+<!-- excerpt -->
 If you’re on a plan that supports prerendering, just check the “Prerender” checkbox from your site settings and click save, and netlify will start proxying requests to our prerendering servers, if they have the _escaped_fragment_ query parameter set or come from known crawlers (like Facebook or Twitters crawler used when fetching og metatags or similar page data).
 
 Prerendered pages are cached for 24 hours.

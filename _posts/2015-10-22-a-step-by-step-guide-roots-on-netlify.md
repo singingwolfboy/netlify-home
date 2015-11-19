@@ -16,6 +16,8 @@ Today, we're going to look at how to host a website built with Roots on netlify,
 
 Let's start from scratch (if you already have a Roots site set up, you can skip down to [here](#netlifystart)).
 
+<!-- excerpt -->
+
 Open your terminal, and enter the following command (this guide assumes you have Node.js installed):
 
 ```

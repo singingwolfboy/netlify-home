@@ -19,6 +19,8 @@ Let's start from scratch (if you already have a AngularJS project set up, you ca
 
 We'll be using a tool called Yeoman to build our project. Yeoman is a scaffolding tool that works in conjunction with a package manager (like NPM or Bower) and a build tool (like Grunt or Gulp) to create modern web apps.
 
+<!-- excerpt -->
+
 Open your terminal, and enter the following command (this guide assumes you have Node.js installed):
 
 ```

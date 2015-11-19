@@ -13,7 +13,7 @@ tags: null
 ### **Welcome to netlify**
 
 Today, we're going to look at how to host a project built with Jekyll on netlify, including setting up continuous deployment.
-
+<!-- excerpt -->
 Let's start from scratch (if you already have a Jekyll site set up, you can skip down to [here](#netlifystart)).
 
 Install Jekyll (this guide assumes you have Ruby installed):

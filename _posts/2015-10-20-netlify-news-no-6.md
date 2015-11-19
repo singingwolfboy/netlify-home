@@ -6,7 +6,7 @@ short_title: Our Sixth Newsletter
 description: "HTTP2.0 supported! Also new CDN PoPs, Canonical URLs & more!"
 thumbnail: /uploads/http2-1.png
 cmsUserSlug: ""
-date: 2015-10-20 
+date: 2015-10-20
 tags: null
 ---
 
@@ -22,6 +22,8 @@ As one of the very first CDNs to roll this out to all clients netlify CDN now su
 ## New CDN Points of Presence
 
 At netlify we have a multi layered CDN strategy: all assets, JavaScript, images, CSS, font files, etc., we serve out of Akamais CDN.
+
+<!-- excerpt -->
 
 They have by far the most widespread infrastructure with PoPs (Points of Presence) all over the World. This is great for distributing files that never change (like finger-printed assets with far future cache headers), but really bad for rapid invalidation.
 
