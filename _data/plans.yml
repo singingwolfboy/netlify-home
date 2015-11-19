@@ -127,8 +127,8 @@ attributes:
   - title: Automated Builds / month
     postfix: Builds / month
     details: ["50", "100", "350", "600"]
-    info: Refers the number of times you can push a new version of your site live using netlifys continous deployment services (Easily link a Netlify site to a GitHub or Bitbucket repo. Whenever you push to GitHub we run your build and deploy the result.)
-    link_text: "What can CD do for my workflow?"
+    info: Refers to the number of times you can push a new version of your site live using Netlify's continous deployment services (link a Netlify site to a GitHub or Bitbucket repo which builds on push).
+    link_text: "What can continous deployment do for my workflow?"
     link: /continuous-deployment
   - title: Proxied requests / month
     details: ["1000", "50,000", "1,000,000", "5,000,000"]
@@ -151,7 +151,7 @@ attributes:
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Full SSL
     details: ["No", "No", "No", "Yes"]
-    info: Full SSL gives you an additional fallback certificate that makes sure HTTPS works everywhere.. All modern browsers support SNI, which is what powers our basic SSL solution, but IE on Windows XP, older Android browsers and many feed readers and crawlers lack support.
+    info: Full SSL gives you an additional certificate that makes sure HTTPS works everywhere. All modern browsers support our basic SSL solution, but IE on Windows XP, older Androids, and many feed readers lack support.
     link_text: Why you want SSL on your site
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Prerendering
