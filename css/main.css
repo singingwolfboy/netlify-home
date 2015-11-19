@@ -2367,6 +2367,11 @@ thead th, .th--highlight {
   padding: 0 0 40px;
   border-bottom: 1px dashed #00c7b7; }
 
+.post-author {
+  font-size: 14px;
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.7); }
+
 /*
  * Aside
  */
