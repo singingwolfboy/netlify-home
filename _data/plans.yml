@@ -48,10 +48,10 @@ all:
     link: /docs/cli
   - title: Secure Environment
     info: We never store any GitHub tokens on our servers and your builds are run in a completely locked down environment.
-    link_text: Read more about GitHub tokens & Netlify
+    link_text: Read more about GitHub tokens & netlify
     link: /docs/github-permissions
   - title: Link to GitHub or Bitbucket
-    info: "Continous Deployment: Easily link a Netlify site to a GitHub or Bitbucket repo. Whenever you push to GitHub we run your build and deploy the result."
+    info: "Continous Deployment: Easily link a netlify site to a GitHub or Bitbucket repo. Whenever you push to GitHub we run your build and deploy the result."
     link_text: What can CD do for my workflow?
     link: /blog/2015/09/17/continuous-deployment/continuos-deployment
   - title: Atomic Deploys
@@ -122,12 +122,12 @@ attributes:
     details: ["100 MB", "5 GB", "25 GB", "100 GB"]
     info: To get more storage simply upgrade your plan.
   - title: Bandwidth / month
-    details: ["1 GB", "100 GB", "500 GB", "1 TB"]
+    details: ["1 GB", "50 GB", "100 GB", "1 TB"]
     info: To get more bandwith simply upgrade your plan. Note that netlify will never suspend your site because of traffic spikes.
   - title: Automated Builds / month
     postfix: Builds / month
     details: ["50", "100", "350", "600"]
-    info: Refers to the number of times you can push a new version of your site live using Netlify's continous deployment services (link a Netlify site to a GitHub or Bitbucket repo which builds on push).
+    info: Refers to the number of times you can push a new version of your site live using netlify's continous deployment services (link a netlify site to a GitHub or Bitbucket repo which builds on push).
     link_text: "What can continous deployment do for my workflow?"
     link: /continuous-deployment
   - title: Proxied requests / month
@@ -170,7 +170,7 @@ enterprise:
     link_text: Why you want SSL on your site
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Migration services
-    info: Need help migrating from a dynamic site to a fully static setup on Netlify? We can help you find a smooth path to 10x the performance.
+    info: Need help migrating from a dynamic site to a fully static setup on netlify? We can help you find a smooth path to 10x the performance.
   - title: Prioritized Feature Requests
     info: Do you want a say in what features we add next? Have specific requirements that would need extra development?
   - title: Geo IP based redirects
