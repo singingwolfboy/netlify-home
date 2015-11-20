@@ -3,20 +3,23 @@ layout: default
 title: Contact Us
 ---
 <div class="inverse bg-dark-muted text-center">
-<section class="content text-center">
+<section class="content">
   <header>
     <h1 class="mega highlight mt-80">Netlify Contact</h1>
     <p class="large muted">Let’s contact. We’d like that. You can reach us any number of ways</p>
   </header>
 
-  <dl class="dl-inline zeta" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Netlify">
-    <dt>Email&nbsp;</dt>
-    <dd><a href="mailto:hello@netlify.com" itemprop="email">hello@netlify.com</a></dd>
-    <dt>Phone&nbsp;</dt>
-    <dd><a href="tel:+14156911573" itemprop="telephone">(415) 691 1573</a></dd>
-    <dt>Office</dt>
-    <dd>
+  <ul class="ul-blocks">
+    <li>
+      <h5>Email</h5>
+      <a href="mailto:hello@netlify.com" itemprop="email">hello@netlify.com</a>
+    </li>
+    <li>
+      <h5>Phone</h5>
+      <a href="tel:+14156911573" itemprop="telephone">(415) 691 1573</a>
+    </li>
+    <li>
+      <h5>Office</h5>
       <a href="https://www.google.com/maps/place/610+22nd+St+%23315,+San+Francisco,+CA+94107/@37.7581312,-122.3876841,17z/data=!3m1!4b1!4m2!3m1!1s0x808f7fb98740ed0b:0xdfa9a1a340756c9c">
         <span itemprop="name" class="hidden">Netlify</span>
         <span itemscope itemtype="http://schema.org/Address">
@@ -28,71 +31,38 @@ title: Contact Us
           <span itemprop="postalCode">94107</span>
         </span>
       </a>
-    </dd>
-    <dt>
-      Twitter
-    </dt>
-    <dd>
+    </li>
+    <li>
+      <h5>Twitter</h5>
+      <p>Follow us for high fives.</p>
       <a href="{{site.social-links.twitter}}">{{site.social-links.twitter | remove_first: "https://"}}</a>
-    </dd>
-    <dd class="small-2 block">
-      We spend too much time here.<br>
-      Follow us and we will so follow you back. And send you a virtual high-five.
-    </dd>
-    <dt>
-      Github
-    </dt>
-    <dd>
+    </li>
+    <li>
+      <h5>Github</h5>
       <a href="{{site.social-links.github}}">{{site.social-links.github | remove_first: "https://"}}</a>
-    </dd>
-    <dd class="small-2 block">
-      Where we live and breathe.
-    </dd>
-    <dt>
-      Facebook
-    </dt>
-    <dd>
+    </li>
+    <li>
+      <h5>Facebook</h5>
       <a href="{{site.social-links.facebook}}">{{site.social-links.facebook | remove_first: "https://www."}}</a>
-    </dd>
-    <dd class="small-2 block">
-      Like us and we will love you back.
-    </dd>
-    <dt>
-      LinkedIn
-    </dt>
-    <dd>
-      <a href="{{site.social-links.linkedin}}">{{site.social-links.linkedin | remove_first: "https://www."}}</a><br><span class="small-2">Or Static Web-Tech group</span> <a href="https://www.linkedin.com/groups/Static-WebTech-6949357">linkedin.com/groups/Static-WebTech-6949357</a>
-    </dd>
-    <dd class="small-2 block">
-      Follow us on Linked, or join our LinkedIn group on all static web tech!
-    </dd>
-    <dt>
-      Google+
-    </dt>
-    <dd>
+    </li>
+    <li>
+      <h5>Gitter</h5>
       <a href="{{site.social-links.gitter}}">{{site.social-links.gitter | remove_first: "https://"}}</a>
-    </dd>
-    <dd class="small-2 block">
-      Not much to see <a href="http://www.geek.com/geek-cetera/social-media-explained-with-donuts-1466613/" class="light">here</a> but we will get any message that you send.
-    </dd>
-    <dt>
-      Carrier Pigeon
-    </dt>
-    <dd class="small-2 block">
-      You could adopt a pigeon, train it first as a homing pigeon and then in facial recognition and then have it scout San Francisco till it finds us and deliver a cell phone with a note to call you back.<br>
-      That would be awesome. Do that. Please.
-    </dd>
-    <dt>Newsletter<dt>
-    <dd class="small-2 block">
-      You can also <a href="/newsletter-signup.html">signup</a> for our newsletter.<br>
-      Though guess that’s more of a us reaching you kind of thing. Which we’d love to. If you want.
-    </dd>
-    <dt>Telepathy</dt>
-    <dd class="small-2 block">
-      We want to believe. Like we’re all just one kindred spirit right?<br>
-      Though if it’s about something technical maybe just send a message.
-    </dd>
-  </dl>
+    </li>
+    <li>
+      <h5>LinkedIn</h5>
+      <a href="{{site.social-links.linkedin}}">{{site.social-links.linkedin | remove_first: "https://www."}}</a><br><span class="small-2">Or Static Web-Tech group</span> <a href="https://www.linkedin.com/groups/Static-WebTech-6949357">linkedin.com/groups/Static-WebTech-6949357</a>
+    </li>
+    <li>
+      <h5>Newsletter</h5>
+      <p>More of a us reaching you kind of thing. Which we’d love to. If you want.</p>
+      <a href="#">Sign up for our newsletter</a>
+    </li>
+  </ul>
+</section>
+
+<section class="content text-center">
+
   <p class="large muted p--wide mb-110">
     You can also check out the <a href="/faq.html">FAQ</a> section<br>
     – perhaps it contains the answers you did or did not know you were looking for

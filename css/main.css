@@ -1,0 +1,3285 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* 
+ * clearfix     used project wide to clear floats and create a new formatting context
+ * usage      @include clearfix-me(<empty|overflow|facebook|micro|stubborn>)
+ * $clearfix-method sets default method
+ */
+.media-bd {
+  display: table-cell;
+  vertical-align: top;
+  width: 10000px !important;
+  *display: block;
+  *zoom: 1;
+  *width: auto !important; }
+
+.content, .l-container, .l-2-col, .banner, .media {
+  zoom: 1; }
+  .content:before, .l-container:before, .l-2-col:before, .banner:before, .media:before, .content:after, .l-container:after, .l-2-col:after, .banner:after, .media:after {
+    content: " ";
+    display: table; }
+  .content:after, .l-container:after, .l-2-col:after, .banner:after, .media:after {
+    clear: both; }
+
+/*---------------------------------------------
+ *
+ * TYPOGRAPHY
+ *
+ *--------------------------------------------*/
+html {
+  font: 300 normal 16px/25px Roboto, sans-serif;
+  text-rendering: optimizeLegibility; }
+
+/*
+ * Basic spacing
+ */
+h1, h2, h3, h4, h5, p, ul, ol, dl, blockquote {
+  margin: 20px 0; }
+
+p {
+  max-width: 30em;
+  margin: 20px auto; }
+
+.p--wide {
+  max-width: 55em; }
+
+.p--full-w {
+  max-width: none; }
+
+/*
+ * Headings and paragraphs
+ */
+.huge {
+  font-size: 125px;
+  /* Not in scale */
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin: 40px 0 45px; }
+
+.tera {
+  font-size: 63px;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 1; }
+
+.mega, .post-title {
+  font-size: 55px;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 70px; }
+
+.kilo, .blog-aside-title {
+  font-size: 50px;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 60px; }
+
+.alpha, h1 {
+  font-size: 37px;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 45px;
+  margin: 25px 0; }
+
+.beta, h2 {
+  font-size: 33px;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  margin: 25px 0; }
+
+.gamma, h3 {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 35px; }
+
+.delta, h4 {
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 30px; }
+
+.epsilon, .blurb-title, .post-intro, h5 {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 30px; }
+
+.zeta, .post-meta, .banner, h6 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 25px; }
+
+.large, .dl-faq dt {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 25px; }
+
+.medium {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 25px; }
+
+.small {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 20px; }
+
+.small-2 {
+  font-size: 15px;
+  /* Not in scale. one-off size to get small text in hero to justify */
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 20px; }
+
+.x-small, .blurb-meta {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  line-height: 20px; }
+
+.xx-small, .blurb cite {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  line-height: 20px; }
+
+/*
+ * Weights
+ */
+.thin, .banner {
+  font-weight: 100; }
+
+.normal {
+  font-weight: 400;
+  letter-spacing: normal; }
+
+strong,
+b,
+.semibold,
+.blurb-title,
+.post-intro {
+  font-weight: 500;
+  letter-spacing: normal; }
+
+.bold, .blurb cite {
+  font-weight: 700;
+  letter-spacing: 0.01em; }
+
+/*
+ * Line heights
+ */
+.loose {
+  line-height: 1.8; }
+
+.underline {
+  border-bottom: 1px solid; }
+
+/*
+ * No italics
+ */
+em, i, cite {
+  font-style: normal; }
+
+/*
+ * Global layouts and
+ * utilities to control flow
+ *
+------------------------------*/
+/*
+ * HTML Elements
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  min-width: 1280px; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+/*
+ * Content containers
+ */
+.content {
+  position: relative;
+  max-width: 1056px;
+  padding: 0 40px;
+  margin: 0 auto; }
+
+.content--wide {
+  max-width: 1280px;
+  padding: 0 50px 0 80px; }
+
+.content--narrow {
+  max-width: 976px; }
+
+/*
+ * Utility classes for layout flow
+ */
+.abs {
+  position: absolute; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.center, .l-third .blurb {
+  margin-left: auto;
+  margin-right: auto; }
+
+.l-third.center, .l-third .l-third.blurb {
+  margin-left: 50%; }
+
+.block {
+  display: block; }
+
+.inline-block {
+  display: inline-block; }
+
+.v-top {
+  vertical-align: top; }
+
+.v-middle {
+  vertical-align: middle; }
+
+.v-bottom {
+  vertical-align: bottom; }
+
+.v-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+.r-180 {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.nowrap {
+  white-space: nowrap; }
+
+/*
+* Mixin for centering blocks vertically
+* http://css-tricks.com/centering-in-the-unknown/
+*/
+.callout:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */ }
+
+.callout-text {
+  display: inline-block;
+  vertical-align: middle; }
+
+/*
+ * Media component
+ */
+.media-img {
+  float: left;
+  margin-right: 15px; }
+
+.media-img-ext {
+  float: right;
+  margin-left: 15px;
+  margin-right: 0; }
+
+.media--bleed {
+  margin-left: -1px; }
+  .media--bleed .media-img {
+    margin-left: -6px;
+    margin-right: 20px; }
+
+.media--wide {
+  margin: 60px 80px 30px 80px; }
+  .media--wide .media-img {
+    margin-top: 20px;
+    margin-right: 80px; }
+
+/*
+ * Layouts
+ */
+/* Layouts without gutters */
+.l-half {
+  float: left;
+  width: 50%; }
+
+.l-third {
+  float: left;
+  width: 33.3333333%; }
+
+.l-fourth {
+  float: left;
+  width: 25%; }
+
+/* 2-column layout with gutter defining columns in the mark-up */
+.l-2-col .l-col {
+  width: 50%;
+  padding: 0 30px;
+  float: left; }
+
+.l-2-col .l-col:first-child {
+  padding-left: 0; }
+
+.l-2-col .l-col:last-child {
+  padding-right: 0; }
+
+/* 2-column layout with gutter using CSS multiple columns */
+.l-2-col-auto {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px; }
+  .l-2-col-auto > p:first-child {
+    margin-top: 0; }
+
+/* Layout with fluid main and fixed-width sidebar
+ * http://www.onderhond.com/blog/responsive-grid-old-trick/
+ */
+.l-wrap {
+  position: relative;
+  overflow: hidden; }
+
+.l-wrap-inner {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 50px 0 80px;
+  z-index: 1; }
+
+.l-wrap-inner--main-left {
+  padding: 0 410px 0 80px; }
+
+.l-main {
+  float: left;
+  width: 100%;
+  padding-bottom: 80px; }
+
+.l-main--left {
+  padding-right: 60px; }
+
+.l-main--right {
+  padding-left: 60px; }
+
+.l-aside {
+  float: right;
+  position: relative;
+  padding-bottom: 80px; }
+
+.l-aside--right {
+  width: 330px;
+  margin-right: -330px;
+  padding-left: 50px; }
+  .l-aside--right:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 10000px;
+    top: 0px;
+    left: 100%; }
+
+.l-aside--left {
+  width: 439px; }
+  .l-aside--left:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 10000px;
+    top: 0px;
+    right: 100%; }
+
+/*
+ * Widths, heights and margins.
+ *
+ * ## TODO: Most of these need to be removed
+ * ## when components are normalized
+ */
+/* Widths */
+.w-0 {
+  width: 0; }
+
+.w-355 {
+  width: 355px; }
+
+.w-245 {
+  width: 245px; }
+
+.w-240 {
+  width: 240px; }
+
+.w-215 {
+  width: 215px; }
+
+/* Margins */
+.mt-0 {
+  margin-top: 0px; }
+
+.mb-0 {
+  margin-bottom: 0px; }
+
+.ml-0 {
+  margin-left: 0px; }
+
+.mr-0 {
+  margin-right: 0px; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mb-5 {
+  margin-bottom: 5px; }
+
+.ml-5 {
+  margin-left: 5px; }
+
+.mr-5 {
+  margin-right: 5px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.ml-10 {
+  margin-left: 10px; }
+
+.mr-10 {
+  margin-right: 10px; }
+
+.mt-15 {
+  margin-top: 15px; }
+
+.mb-15 {
+  margin-bottom: 15px; }
+
+.ml-15 {
+  margin-left: 15px; }
+
+.mr-15 {
+  margin-right: 15px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.ml-20 {
+  margin-left: 20px; }
+
+.mr-20 {
+  margin-right: 20px; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+.mb-25 {
+  margin-bottom: 25px; }
+
+.ml-25 {
+  margin-left: 25px; }
+
+.mr-25 {
+  margin-right: 25px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.ml-30 {
+  margin-left: 30px; }
+
+.mr-30 {
+  margin-right: 30px; }
+
+.mt-35 {
+  margin-top: 35px; }
+
+.mb-35 {
+  margin-bottom: 35px; }
+
+.ml-35 {
+  margin-left: 35px; }
+
+.mr-35 {
+  margin-right: 35px; }
+
+.mt-40 {
+  margin-top: 40px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
+
+.ml-40 {
+  margin-left: 40px; }
+
+.mr-40 {
+  margin-right: 40px; }
+
+.mt-45 {
+  margin-top: 45px; }
+
+.mb-45 {
+  margin-bottom: 45px; }
+
+.ml-45 {
+  margin-left: 45px; }
+
+.mr-45 {
+  margin-right: 45px; }
+
+.mt-50 {
+  margin-top: 50px; }
+
+.mb-50 {
+  margin-bottom: 50px; }
+
+.ml-50 {
+  margin-left: 50px; }
+
+.mr-50 {
+  margin-right: 50px; }
+
+.mt-55 {
+  margin-top: 55px; }
+
+.mb-55 {
+  margin-bottom: 55px; }
+
+.ml-55 {
+  margin-left: 55px; }
+
+.mr-55 {
+  margin-right: 55px; }
+
+.mt-60 {
+  margin-top: 60px; }
+
+.mb-60 {
+  margin-bottom: 60px; }
+
+.ml-60 {
+  margin-left: 60px; }
+
+.mr-60 {
+  margin-right: 60px; }
+
+.mt-65 {
+  margin-top: 65px; }
+
+.mb-65 {
+  margin-bottom: 65px; }
+
+.ml-65 {
+  margin-left: 65px; }
+
+.mr-65 {
+  margin-right: 65px; }
+
+.mt-70 {
+  margin-top: 70px; }
+
+.mb-70 {
+  margin-bottom: 70px; }
+
+.ml-70 {
+  margin-left: 70px; }
+
+.mr-70 {
+  margin-right: 70px; }
+
+.mt-75 {
+  margin-top: 75px; }
+
+.mb-75 {
+  margin-bottom: 75px; }
+
+.ml-75 {
+  margin-left: 75px; }
+
+.mr-75 {
+  margin-right: 75px; }
+
+.mt-80 {
+  margin-top: 80px; }
+
+.mb-80 {
+  margin-bottom: 80px; }
+
+.ml-80 {
+  margin-left: 80px; }
+
+.mr-80 {
+  margin-right: 80px; }
+
+.mt-85 {
+  margin-top: 85px; }
+
+.mb-85 {
+  margin-bottom: 85px; }
+
+.ml-85 {
+  margin-left: 85px; }
+
+.mr-85 {
+  margin-right: 85px; }
+
+.mt-90 {
+  margin-top: 90px; }
+
+.mb-90 {
+  margin-bottom: 90px; }
+
+.ml-90 {
+  margin-left: 90px; }
+
+.mr-90 {
+  margin-right: 90px; }
+
+.mt-95 {
+  margin-top: 95px; }
+
+.mb-95 {
+  margin-bottom: 95px; }
+
+.ml-95 {
+  margin-left: 95px; }
+
+.mr-95 {
+  margin-right: 95px; }
+
+.mt-100 {
+  margin-top: 100px; }
+
+.mb-100 {
+  margin-bottom: 100px; }
+
+.ml-100 {
+  margin-left: 100px; }
+
+.mr-100 {
+  margin-right: 100px; }
+
+.mt-105 {
+  margin-top: 105px; }
+
+.mb-105 {
+  margin-bottom: 105px; }
+
+.ml-105 {
+  margin-left: 105px; }
+
+.mr-105 {
+  margin-right: 105px; }
+
+.mt-110 {
+  margin-top: 110px; }
+
+.mb-110 {
+  margin-bottom: 110px; }
+
+.ml-110 {
+  margin-left: 110px; }
+
+.mr-110 {
+  margin-right: 110px; }
+
+.mt-115 {
+  margin-top: 115px; }
+
+.mb-115 {
+  margin-bottom: 115px; }
+
+.ml-115 {
+  margin-left: 115px; }
+
+.mr-115 {
+  margin-right: 115px; }
+
+.mt-120 {
+  margin-top: 120px; }
+
+.mb-120 {
+  margin-bottom: 120px; }
+
+.ml-120 {
+  margin-left: 120px; }
+
+.mr-120 {
+  margin-right: 120px; }
+
+.mt-125 {
+  margin-top: 125px; }
+
+.mb-125 {
+  margin-bottom: 125px; }
+
+.ml-125 {
+  margin-left: 125px; }
+
+.mr-125 {
+  margin-right: 125px; }
+
+.mt-1 {
+  margin-top: 1px; }
+
+.mb-1 {
+  margin-bottom: 1px; }
+
+.ml-1 {
+  margin-left: 1px; }
+
+.mr-1 {
+  margin-right: 1px; }
+
+.ml-n1 {
+  margin-left: -1px; }
+
+.mr-n1 {
+  margin-right: -1px; }
+
+.mt-2 {
+  margin-top: 2px; }
+
+.mb-2 {
+  margin-bottom: 2px; }
+
+.ml-2 {
+  margin-left: 2px; }
+
+.mr-2 {
+  margin-right: 2px; }
+
+.ml-n2 {
+  margin-left: -2px; }
+
+.mr-n2 {
+  margin-right: -2px; }
+
+.mt-3 {
+  margin-top: 3px; }
+
+.mb-3 {
+  margin-bottom: 3px; }
+
+.ml-3 {
+  margin-left: 3px; }
+
+.mr-3 {
+  margin-right: 3px; }
+
+.ml-n3 {
+  margin-left: -3px; }
+
+.mr-n3 {
+  margin-right: -3px; }
+
+.mt-4 {
+  margin-top: 4px; }
+
+.mb-4 {
+  margin-bottom: 4px; }
+
+.ml-4 {
+  margin-left: 4px; }
+
+.mr-4 {
+  margin-right: 4px; }
+
+.ml-n4 {
+  margin-left: -4px; }
+
+.mr-n4 {
+  margin-right: -4px; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mb-5 {
+  margin-bottom: 5px; }
+
+.ml-5 {
+  margin-left: 5px; }
+
+.mr-5 {
+  margin-right: 5px; }
+
+.ml-n5 {
+  margin-left: -5px; }
+
+.mr-n5 {
+  margin-right: -5px; }
+
+.mt-6 {
+  margin-top: 6px; }
+
+.mb-6 {
+  margin-bottom: 6px; }
+
+.ml-6 {
+  margin-left: 6px; }
+
+.mr-6 {
+  margin-right: 6px; }
+
+.ml-n6 {
+  margin-left: -6px; }
+
+.mr-n6 {
+  margin-right: -6px; }
+
+.mt-7 {
+  margin-top: 7px; }
+
+.mb-7 {
+  margin-bottom: 7px; }
+
+.ml-7 {
+  margin-left: 7px; }
+
+.mr-7 {
+  margin-right: 7px; }
+
+.ml-n7 {
+  margin-left: -7px; }
+
+.mr-n7 {
+  margin-right: -7px; }
+
+.ml-n10 {
+  margin-left: -10px; }
+
+.ml-n20 {
+  margin-left: -20px; }
+
+.ml-n30 {
+  margin-left: -30px; }
+
+.ml-n40 {
+  margin-left: -40px; }
+
+.ml-n50 {
+  margin-left: -50px; }
+
+.mt-n10 {
+  margin-top: -10px; }
+
+/*
+ * Defaults
+ */
+body {
+  background-color: #F4F6F6;
+  color: #596262; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #596262; }
+
+a {
+  color: #00c7b7; }
+
+svg {
+  fill: currentColor; }
+
+.highlight {
+  color: #00c7b7;
+  fill: #00c7b7; }
+
+.lightest {
+  color: #FFF;
+  fill: #FFF; }
+
+.muted {
+  color: #7e8383; }
+
+.dark {
+  color: #596262; }
+
+.loud, .blurb cite {
+  color: #333d3d; }
+
+.overloud {
+  color: #313d3e; }
+
+.light {
+  color: #F4F6F6; }
+
+/* Dark background */
+.inverse {
+  background-color: #313d3e;
+  color: #F4F6F6;
+  font-weight: 100; }
+  .inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .inverse h6 {
+    color: inherit; }
+  .inverse .highlight {
+    color: #00c7b7; }
+  .inverse .loud, .inverse .blurb cite, .blurb .inverse cite {
+    color: #FFF; }
+  .inverse .muted {
+    color: #7e8383; }
+
+/* Icons */
+.icon {
+  color: #FFF; }
+
+.inverse .icon {
+  color: #313d3e; }
+
+/* Backgrounds */
+.bg-white {
+  background-color: #FFF; }
+
+.bg-light {
+  background: #F4F6F6 url(/img/bg-light-1.svg) no-repeat -345px -250px; }
+
+.bg-light-muted {
+  background: #F4F6F6 url(/img/bg-light-2.svg) no-repeat 430px -190px; }
+
+.bg-light-muted-2 {
+  background: #F4F6F6 url(/img/bg-light-3.svg) no-repeat -25px -90px; }
+
+.bg-highlight {
+  background-color: #00c7b7; }
+
+.bg-dark-cover {
+  background: #313d3e url(/img/bg-dark-1.svg) no-repeat;
+  background-size: cover; }
+
+.bg-dark-muted {
+  background: #313d3e url(/img/bg-dark-2.svg) no-repeat; }
+
+.bg-dark-muted-cover {
+  background: #313d3e url(/img/bg-dark-2.svg) no-repeat;
+  background-size: cover; }
+
+.bg-tint1 {
+  background: #c1d8d5; }
+
+.bg-tint2 {
+  background: #9acfc9; }
+
+.bg-tint3 {
+  background: #75c4ba; }
+
+/* Main and sidebar */
+.l-aside, .l-aside--right:after, .l-aside--left:before {
+  background: #313d3e;
+  color: #F4F6F6; }
+
+/* Borders */
+.bb:after, .blurb-hd:after {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 2px;
+  background-color: #00c7b7;
+  margin-bottom: -2px;
+  content: " ";
+  display: table;
+  clear: both; }
+
+.bb--medium:after {
+  height: 3px;
+  margin-top: -3px; }
+
+.bb--large:after {
+  height: 4px;
+  margin-top: -4px; }
+
+.bb--mega:after {
+  height: 16px;
+  margin-top: -16px; }
+
+.bb--muted:after {
+  background-color: #cae0de; }
+
+html {
+  background: #404b4c; }
+
+/*
+ * Based on Foundation Off-Canvas
+ *
+ * http://foundation.zurb.com/docs/components/offcanvas.html
+ */
+.off-canvas-menu {
+  width: 270px;
+  top: 0;
+  bottom: 0;
+  right: -270px;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #404b4c;
+  z-index: 1001;
+  transition: -webkit-transform 500ms ease 0s;
+  transition: transform 500ms ease 0s; }
+
+.off-canvas-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+.off-canvas-inner-wrap {
+  position: relative;
+  width: 100%;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease; }
+
+.open-menu .off-canvas-inner-wrap {
+  -webkit-transform: translate3d(-270px, 0, 0);
+          transform: translate3d(-270px, 0, 0); }
+
+.exit-off-canvas {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: #7e8383; }
+
+/* Fallback in case javascript is not enabled
+ * (won't get smooth sliding effect but
+ * at least it will be usable)
+ */
+.off-canvas-menu:target {
+  right: 0;
+  z-index: 100; }
+  .off-canvas-menu:target + .page {
+    position: relative;
+    left: -270px; }
+
+.nav {
+  text-transform: uppercase;
+  margin: 5px 0 5px 70px; }
+  .nav a {
+    display: block;
+    position: relative; }
+  .nav .current {
+    color: #00c7b7; }
+    .nav .current:before {
+      content: " ";
+      display: inline-block;
+      vertical-align: middle;
+      width: 15px;
+      height: 15px;
+      background: url(/img/icon-arrow.svg) no-repeat center center;
+      background-size: cover;
+      margin: -2px 15px 0 -30px;
+      margin-right: 15px; }
+  .nav .active {
+    color: #00c7b7; }
+  .nav .nav {
+    position: relative;
+    margin-left: -10000px;
+    padding: 18px 15px 18px 10035px;
+    background: #404b4c; }
+
+.nav--primary {
+  font-size: 16px;
+  line-height: 32px;
+  margin-top: 45px; }
+  .nav--primary a {
+    color: white; }
+  .no-touch .nav--primary a:hover {
+    color: #00c7b7; }
+  .nav--primary .nav a {
+    color: #bfcfcd; }
+    .nav--primary .nav a.current {
+      color: #00c7b7; }
+
+.nav--secondary {
+  font-size: 13px;
+  line-height: 30px; }
+  .nav--secondary a {
+    color: #7e8383; }
+
+.nav--flush-left {
+  margin-left: 0; }
+
+.nav--inline li, .nav--social li {
+  float: left;
+  margin-right: 6px; }
+
+.nav--social {
+  margin-top: 25px; }
+  .nav--social .icon-link--square {
+    color: #657676;
+    padding: 0 4px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px; }
+  .nav--social .icon-link--large {
+    width: 55px;
+    height: 55px;
+    line-height: 55px; }
+  .nav--social .icon-link--twitter {
+    background: #4f5c5d; }
+  .nav--social .icon-link--facebook {
+    background: #3e4a4a; }
+  .nav--social .icon-link--github {
+    background: #394343; }
+  .nav--social .icon-link--linkedin {
+    background: #343e3f; }
+  .nav--social .icon-link--gitter {
+    background: #2a3233; }
+  .nav--social .icon-link--inverse {
+    color: #FFF; }
+    .nav--social .icon-link--inverse.icon-link--twitter {
+      background: #d2d8d9; }
+    .nav--social .icon-link--inverse.icon-link--facebook {
+      background: #bec9c9; }
+    .nav--social .icon-link--inverse.icon-link--github {
+      background: #b8c3c3; }
+    .nav--social .icon-link--inverse.icon-link--linkedin {
+      background: #b2bec0; }
+    .nav--social .icon-link--inverse.icon-link--gitter {
+      background: #a6b4b6; }
+
+.nav--centered {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0; }
+
+.nav--inline.nav--wide li, .nav--wide.nav--social li {
+  margin-right: 35px; }
+
+.site-nav.js-pinned {
+  overflow-y: auto;
+  max-height: 100%;
+  padding-bottom: 40px; }
+
+/* Links
+------------------------------*/
+a {
+  text-decoration: none;
+  transition: color 300ms ease; }
+
+.inverse a:hover {
+  color: #FFF; }
+
+/*
+ * Links with a small arrow button to the right
+ */
+.link {
+  padding-right: 22px;
+  background: url(/img/icon-arrow.svg) no-repeat right center; }
+
+/*
+ * Links with a small plus button to the left
+ */
+.link-more {
+  display: inline-block;
+  padding-left: 30px;
+  background: url(/img/icon-plus.svg) no-repeat 2px 45%; }
+
+/*
+ * Links that look like buttons
+ */
+.button {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.24);
+  height: 60px;
+  line-height: 60px;
+  border-radius: 60px 4px 4px 60px;
+  text-align: center;
+  text-indent: -10px;
+  font-size: 21px;
+  font-weight: 400;
+  margin-left: -5px;
+  color: #FFF;
+  transition: box-shadow 0.2s ease-in; }
+
+.button-icon {
+  position: relative;
+  float: left;
+  margin: 5px;
+  left: 0;
+  transition: left 0.2s ease-in; }
+
+.button-label {
+  display: block;
+  overflow: hidden;
+  padding: 1px 20px 0 20px;
+  color: #7e8383; }
+
+.button:hover {
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.24); }
+
+.button.js-clicked .button-icon {
+  left: 20em; }
+
+/* Button colors on inverse background */
+.inverse .button {
+  color: #313d3e; }
+
+.inverse .button-label {
+  color: #FFF; }
+
+.inverse .button--muted,
+.inverse .button--muted .button-label {
+  color: #596262; }
+
+/* Button size variations */
+.button--large {
+  height: 80px;
+  line-height: 80px;
+  border-radius: 80px 4px 4px 80px;
+  font-size: 27px;
+  margin-left: 0; }
+  .button--large .button-icon {
+    margin: 6px; }
+  .button--large .button-label {
+    padding-left: 0;
+    padding-right: 30px; }
+
+.button--signup {
+  border-radius: 80px;
+  height: 62px;
+  line-height: 62px;
+  width: 292px; }
+  .button--signup .button-container {
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #00c7b7;
+    display: block;
+    margin: 6px;
+    border-radius: 80px;
+    height: 50px; }
+  .button--signup .button-icon {
+    margin: 0;
+    height: 50px;
+    width: 50px; }
+  .button--signup .button-label {
+    white-space: nowrap;
+    float: left;
+    margin: 0;
+    margin: 0;
+    padding: 0 10px 0 20px;
+    color: #FFF;
+    line-height: 50px; }
+
+.button--small {
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px 2px 2px 40px;
+  font-size: 15px; }
+
+/* Button layout variations */
+.button--inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  min-width: 120px;
+  top: 1px; }
+
+/* Center a button */
+.button--center {
+  margin-left: auto;
+  margin-right: auto; }
+
+/*
+ * Icon links (eg. social links)
+ *
+ * Hover effect: http://tympanus.net/Development/IconHoverEffects/#set-8
+ */
+.icon-link--round {
+  display: inline-block;
+  margin-right: 25px;
+  position: relative;
+  transition: -webkit-transform ease-out 0.2s;
+  transition: transform ease-out 0.2s; }
+  .icon-link--round:after {
+    content: '';
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100%; }
+  .icon-link--round.icon-link--twitter svg {
+    fill: #959595; }
+  .icon-link--round.icon-link--facebook svg {
+    fill: #5d5d5d; }
+  .icon-link--round.icon-link--github svg {
+    fill: #767676; }
+  .icon-link--round.icon-link--linkedin svg {
+    fill: #525252; }
+  .icon-link--round.icon-link--gitter svg {
+    fill: #7e7e7e; }
+  .no-touch .icon-link--round:hover {
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95); }
+    .no-touch .icon-link--round:hover:after {
+      -webkit-animation: sonarEffect 1.3s ease-out 75ms;
+              animation: sonarEffect 1.3s ease-out 75ms; }
+
+@-webkit-keyframes sonarEffect {
+  0% {
+    opacity: 0.3; }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #333d3d, 0 0 0 10px rgba(255, 255, 255, 0.5); }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #333d3d, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0; } }
+
+@keyframes sonarEffect {
+  0% {
+    opacity: 0.3; }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #333d3d, 0 0 0 10px rgba(255, 255, 255, 0.5); }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #333d3d, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0; } }
+
+/*
+ * Button with image of video
+ */
+.button-video {
+  display: inline-block;
+  background: url(/img/video.png) no-repeat center center;
+  background-size: cover;
+  position: relative; }
+  .button-video .callout {
+    position: absolute;
+    top: -25px;
+    left: -35px;
+    margin-top: -10px;
+    margin-left: -20px;
+    transition: opacity 0.2s; }
+  .button-video .play-button {
+    position: absolute;
+    background: linear-gradient(to right, #f1f1f1, #ececec);
+    width: 102px;
+    height: 102px;
+    top: 50%;
+    left: 50%;
+    margin-top: -56px;
+    margin-left: -54px;
+    border-radius: 100%;
+    transition: box-shadow 0.2s; }
+    .button-video .play-button:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 30px 0 34px 61px;
+      border-color: transparent transparent transparent #4BC0B5;
+      position: absolute;
+      top: 20px;
+      left: 29px; }
+  .button-video:hover .play-button {
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2); }
+  .button-video.playing .callout {
+    opacity: 0; }
+  .button-video.playing .play-button {
+    display: none; }
+
+.button-video--compact .callout {
+  margin: 0; }
+
+/*
+ * Call to action
+ */
+.cta {
+  max-width: 355px;
+  margin: 45px auto; }
+
+.cta--large {
+  max-width: 465px; }
+
+.blurb-hd .media-img {
+  margin-top: 10px; }
+
+.blurb-hd .media--bleed .media-img {
+  margin-top: 0; }
+
+.blurb-title {
+  margin: 5px 0; }
+
+.blurb-meta {
+  margin: 10px 0;
+  max-width: none; }
+  .blurb-meta .link {
+    display: block;
+    margin-right: 1px; }
+  .blurb-meta.right {
+    position: relative;
+    top: 3px; }
+
+.blurb-bd p:first-child {
+  margin-top: 15px; }
+
+.blurb-bd .media {
+  margin: 10px 0; }
+
+.blurb-bd .media-img {
+  margin: 20px 30px 0 0; }
+
+.blurb-bd .cta {
+  margin-top: 25px; }
+
+.blurb cite {
+  display: block;
+  margin-top: -5px; }
+
+.l-aside .blurb,
+.l-third .blurb {
+  width: 245px; }
+
+.l-aside .blurb--wide,
+.l-third .blurb--wide {
+  width: 278px; }
+
+.l-third:first-child .blurb {
+  margin-left: 0; }
+
+.l-third:last-child .blurb {
+  margin-right: 0; }
+
+.l-aside .blurb {
+  margin: 50px 0; }
+
+/* Forms
+------------------------------*/
+.form--fancy {
+  position: relative;
+  overflow: hidden;
+  padding: 6px 180px 6px 6px;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 55px 55px 10px;
+  background: #F4F6F6;
+  margin: 40px 0; }
+  .form--fancy .form-group {
+    float: left;
+    margin: 0;
+    width: 50%;
+    padding-right: 6px; }
+  .form--fancy input,
+  .form--fancy button {
+    display: block;
+    border: none;
+    height: 42px;
+    line-height: 42px;
+    text-align: center; }
+  .form--fancy input {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #F9FAFA; }
+  .form--fancy button {
+    width: 174px;
+    position: absolute;
+    right: 6px;
+    border-radius: 0 42px 42px 0px;
+    background: #00c7b7;
+    color: #FFF;
+    font-size: 13.62px;
+    line-height: 37px;
+    /* magic number to get the button text to align with the input placeholder */ }
+
+.inverse .form--fancy {
+  background: rgba(49, 61, 62, 0.05); }
+  .inverse .form--fancy input {
+    background: rgba(89, 98, 98, 0.7); }
+  .inverse .form--fancy ::-webkit-input-placeholder {
+    color: #7e8383; }
+
+/* To style placeholders
+ * http://css-tricks.com/snippets/css/style-placeholder-text/
+ */
+::-webkit-input-placeholder {
+  color: rgba(126, 131, 131, 0.5);
+  font-size: 13.62px; }
+
+::-moz-placeholder {
+  color: rgba(126, 131, 131, 0.5);
+  font-size: 13.62px; }
+
+:-ms-input-placeholder {
+  color: rgba(126, 131, 131, 0.5);
+  font-size: 13.62px; }
+
+/* Tables
+------------------------------*/
+table {
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin-left: -6px; }
+
+table.full-width {
+  width: 100%;
+  margin-left: 0; }
+
+.table {
+  margin: 15px 0px 45px; }
+
+.hidden-cell {
+  visibility: hidden; }
+
+th, .th,
+td, .td {
+  margin: 6px 3px;
+  padding: 10px; }
+
+th, .th {
+  background-color: #cae0de;
+  color: #333d3d;
+  font-size: 20px;
+  font-weight: 400; }
+
+td, .td {
+  background-color: #e6efee; }
+
+tbody, .tbody {
+  margin: 0; }
+
+thead th, .th--highlight {
+  background-color: #00c7b7;
+  color: #FFF;
+  padding-bottom: 5px; }
+
+.th--medium {
+  font-size: 16px;
+  font-weight: 300;
+  color: #596262; }
+
+/* Call outs
+------------------------------*/
+/* To center the text vertically in the callout:
+ * http://css-tricks.com/centering-in-the-unknown/
+ */
+.callout {
+  position: relative;
+  background: #00c7b7;
+  color: #FFF;
+  border-radius: 100%; }
+
+.callout-text {
+  text-align: center;
+  padding: 1% 10% 0;
+  width: 100%; }
+
+.callout--small, .button-video .callout {
+  width: 127px;
+  height: 127px; }
+
+.callout--large {
+  width: 276px;
+  height: 276px;
+  font-weight: 100; }
+
+.callout--stitch:after, .button-video .callout:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  border-radius: 100%;
+  border: 1px dashed white;
+  opacity: 0.5; }
+
+/*
+ * Text blocks where some of the markdown generated tags have a special look'n feel
+ */
+.editorial-text strong {
+  color: #00c7b7; }
+
+.post-bd img {
+  max-width: 100%; }
+
+.post-bd ul {
+  list-style: disc; }
+
+.post-bd em {
+  font-style: italic; }
+
+.docs-main h2, .post-bd h2 {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #313d3e;
+  text-transform: uppercase;
+  margin-top: 40px; }
+
+.docs-main p, .post-bd p {
+  margin-left: 0; }
+
+.docs-main pre, .post-bd pre {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #00c7b7;
+  font-style: italic;
+  overflow: auto;
+  max-width: 40em; }
+
+.docs-main img, .post-bd img {
+  max-width: 40em;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4); }
+
+.intro-item .icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 5px;
+  transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out; }
+
+.intro-item .text {
+  display: none; }
+
+.intro-item.open .teaser {
+  display: none; }
+
+.intro-item.open .text {
+  display: inline; }
+
+.intro-item.open .icon {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg); }
+
+.pricing-table {
+  table-layout: fixed; }
+
+.mobile-pricing-table {
+  display: none; }
+  .mobile-pricing-table .td {
+    text-align: left; }
+
+.plan--features-icon {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+  position: relative; }
+  .plan--features-icon svg {
+    width: 100%;
+    height: 100%; }
+
+.pricing-icon {
+  position: relative;
+  width: 200px;
+  height: 200px; }
+
+.plan--features-icon:after, .pricing-icon:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  margin: 5%;
+  border: 1px solid #fff;
+  height: 90%;
+  border-radius: 100%; }
+
+.plan--th {
+  background-color: transparent;
+  padding: 0;
+  width: 190px;
+  vertical-align: top; }
+
+.plan--header {
+  padding: 10px;
+  width: 8em; }
+
+.plan--title {
+  font-size: 16px;
+  font-weight: 100; }
+
+.plan--price {
+  padding: 40px 0;
+  overflow: hidden; }
+
+.plan--amount {
+  font-size: 54px;
+  letter-spacing: -2px;
+  font-weight: bold;
+  text-align: right;
+  position: relative;
+  top: 4px; }
+
+.plan--currency {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1;
+  padding-left: 7px; }
+
+.plan--title, .plan--note {
+  padding: 10px;
+  margin: 0; }
+
+.plan--title {
+  margin-bottom: 5px;
+  color: #333d3d;
+  font-weight: bold; }
+
+.plan--note {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.3; }
+
+.plan--feature {
+  width: 180px;
+  font-size: 13px;
+  text-align: left;
+  height: 54px;
+  line-height: 1.45;
+  position: relative;
+  padding-right: 35px; }
+
+.plan--features-th {
+  width: 180px; }
+
+.plan--enterprise-feature {
+  height: 40px; }
+
+.plan--enterprise-feature .help-box {
+  line-height: 1.2; }
+
+.plan--feature-plan {
+  display: none; }
+
+.icon.icon-plus {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  line-height: 12px; }
+
+.css-plus-icon {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #00c7b7;
+  border-radius: 100%; }
+  .css-plus-icon:before, .css-plus-icon:after {
+    content: " ";
+    position: absolute;
+    background: #7e8383; }
+  .css-plus-icon:before {
+    width: 1px;
+    height: 7px;
+    top: 4px;
+    left: 7px;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out; }
+  .css-plus-icon:after {
+    width: 7px;
+    height: 1px;
+    top: 7px;
+    left: 4px; }
+
+.open .css-plus-icon:before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.mobile-pricing-table .td, .plan--enterprise-feature {
+  position: relative; }
+
+.plan--feature .icon {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 10px;
+  height: 54px; }
+  .plan--feature .icon svg, .plan--feature .icon .css-plus-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px; }
+
+.mobile-pricing-table .icon, .plan--enterprise-feature .icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 10px;
+  margin-top: -9px; }
+  .mobile-pricing-table .icon .css-plus-icon:before, .plan--enterprise-feature .icon .css-plus-icon:before {
+    top: 5px;
+    left: 8px; }
+  .mobile-pricing-table .icon .css-plus-icon:after, .plan--enterprise-feature .icon .css-plus-icon:after {
+    top: 8px;
+    left: 5px; }
+
+.x-small .icon-plus, .blurb-meta .icon-plus {
+  position: relative;
+  top: -1px; }
+
+.icon.icon-no {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  border: 1px solid #7e8383;
+  border-radius: 100%; }
+
+.icon.icon-yes {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  border: 1px solid #00c7b7;
+  border-radius: 100%;
+  background-color: #00c7b7; }
+
+.help-box {
+  display: none;
+  position: absolute;
+  background: #00c7b7;
+  color: #fff;
+  padding: 5px 20px;
+  text-align: left;
+  z-index: 1000;
+  width: 400px; }
+  .help-box .help-box-inner {
+    display: table-cell;
+    vertical-align: middle; }
+    .help-box .help-box-inner a, .help-box .help-box-inner a:visited, .help-box .help-box-inner a:link, .help-box .help-box-inner a:active {
+      color: #fff;
+      text-decoration: underline; }
+
+.plan--enterprise-help {
+  font-size: 13px;
+  line-height: 1.2; }
+
+.help-box-overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.signup--extra-info h3 {
+  line-height: 22px; }
+
+/*
+ * Post
+ */
+.post {
+  margin: 40px 0 20px; }
+
+.post-hd {
+  text-align: center;
+  margin: 50px 0; }
+
+.post-title {
+  line-height: 70px;
+  color: #596262;
+  margin: 90px 40px 40px; }
+
+.post-meta {
+  color: #00c7b7; }
+
+.post-img {
+  margin: 50px 0;
+  border-bottom: 7px solid #cae0de; }
+  .post-img img {
+    display: block;
+    width: 100%; }
+
+.post-bd {
+  max-width: 40em;
+  margin: 50px auto 30px;
+  color: #7e8383; }
+  .post-bd p {
+    max-width: none; }
+
+.post-intro {
+  color: #596262; }
+
+.post-jumpline {
+  font-size: 14px;
+  margin: 30px auto;
+  max-width: 45.71em;
+  padding: 0 0 40px;
+  border-bottom: 1px dashed #00c7b7; }
+
+.post-author {
+  font-size: 14px;
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.7); }
+
+/*
+ * Aside
+ */
+.blog-aside-title {
+  line-height: 70px;
+  margin-top: 170px;
+  margin-bottom: 95px; }
+
+/*
+ * Ad-like banner
+ */
+.banner {
+  background: #e9e9e9;
+  padding: 20px;
+  margin: 60px 0;
+  text-align: center; }
+  .banner p {
+    max-width: none; }
+
+.legalese {
+  max-width: 750px;
+  padding: 0 30px;
+  margin: 110px auto;
+  color: #7e8383; }
+  .legalese h1 {
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    line-height: 25px;
+    margin: 0 0 30px;
+    padding-top: 90px;
+    border-top: 2px solid #00c7b7; }
+  .legalese h2 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    line-height: 25px;
+    margin: 20px 0; }
+  .legalese p {
+    max-width: none; }
+  .legalese ul {
+    list-style: disc;
+    margin: 20px 0; }
+    .legalese ul > li {
+      margin: 20px 0; }
+  .legalese ol {
+    list-style: decimal;
+    margin: 20px 0 20px -50px; }
+    .legalese ol > li {
+      padding-left: 10px;
+      margin: 20px 0; }
+  .legalese ol ol {
+    list-style: decimal;
+    margin-left: -17px; }
+  .legalese ol ol ol {
+    list-style: lower-roman; }
+  .legalese > ol {
+    counter-reset: h2-counter;
+    list-style: none; }
+  .legalese > ol h2:before {
+    content: counter(h2-counter, decimal) ".";
+    counter-increment: h2-counter;
+    font-weight: bold;
+    display: inline-block;
+    width: 30px;
+    text-align: right;
+    margin-right: 20px;
+    margin-left: -50px; }
+
+/* Layout */
+.ul-blocks {
+  text-align: left; }
+  .ul-blocks li {
+    min-height: 160px;
+    background-color: #84ada7;
+    padding: 1rem;
+    width: 31%;
+    float: left;
+    margin: 1%; }
+  .ul-blocks h5 {
+    font-size: 22px;
+    color: white;
+    font-weight: 300; }
+  .ul-blocks a {
+    color: #3d5b57;
+    font-size: 14px; }
+    .ul-blocks a:hover {
+      color: white; }
+
+.dl-faq {
+  max-width: 885px;
+  margin: 70px auto 140px;
+  counter-reset: faq-counter;
+  padding-left: 40px; }
+  .dl-faq dt {
+    font-weight: 500;
+    display: inline-block;
+    margin: 10px 0; }
+    .dl-faq dt:before {
+      display: inline-block;
+      content: counter(faq-counter, decimal) ".";
+      counter-increment: faq-counter;
+      color: #00c7b7;
+      width: 30px;
+      text-align: right;
+      margin-left: -40px;
+      margin-right: 10px; }
+  .dl-faq dd {
+    display: block;
+    margin: 0 0 20px;
+    max-width: 48em; }
+  .dl-faq p {
+    max-width: none;
+    margin: 0 0 20px; }
+
+/*------------------------------
+ *
+ * Common page components (header, footer, navigation)
+ *
+ *------------------------------*/
+/* Tweaks for header and footer */
+.brand {
+  margin-left: -3px; }
+
+.brand-claim {
+  position: relative;
+  top: 4px;
+  /* to align with logo text */ }
+
+.top-nav {
+  margin-right: -3px; }
+
+.vcard br {
+  display: none; }
+
+.vcard .address:before {
+  content: " – "; }
+
+.show-med {
+  display: none; }
+
+@media screen and (max-width: 1280px) {
+  body {
+    min-width: 0; }
+  /*
+   * Media hero becomes fluid
+   */
+  .media--wide {
+    margin-right: 40px;
+    /* Show the background of the container instead of the image so
+     * it scales well instead of getting squished, since the height
+     * needs to remain constant
+     */ }
+    .media--wide .media-img {
+      width: 52%;
+      margin-right: 60px; }
+    .media--wide .button-video {
+      width: 100%; }
+      .media--wide .button-video img {
+        visibility: hidden; }
+  /* Reduce paddings around main and aside */
+  .l-wrap-inner--main-left {
+    padding: 0 330px 0 80px; }
+    .l-wrap-inner--main-left .l-aside {
+      width: 320px;
+      padding-left: 40px;
+      margin-right: -320px; }
+    .l-wrap-inner--main-left .l-main {
+      padding-right: 45px; }
+    .l-wrap-inner--main-left .post-title {
+      font-size: 50px;
+      /* Kilo */
+      line-height: 65px;
+      margin-left: 0;
+      margin-right: 0; }
+    .l-wrap-inner--main-left .blog-aside-title {
+      font-size: 42px;
+      line-height: 45px;
+      margin-bottom: 110px; } }
+
+@media screen and (max-width: 1176px) {
+  /* Reduce padding around the header and hero to
+   * leave more space for the content.
+   */
+  .content--wide {
+    padding: 0 25px; }
+  /* Adjust media hero margins to align with header */
+  .media--wide {
+    margin-left: 25px;
+    margin-right: 25px; }
+  /* Large callouts shouldn't bleed */
+  .media--wide .callout {
+    margin: 0; }
+  .callout--large {
+    margin-left: 0; } }
+
+@media screen and (max-width: 960px) {
+  /* Reduce margins between video and blurb. Hide callout */
+  .media--wide {
+    margin-left: 0; }
+    .media--wide .media-img {
+      width: 50%;
+      margin-right: 5%; }
+    .media--wide .callout {
+      visibility: hidden; }
+  /* Plans and pricing table */
+  .plan--price.th--highlight {
+    padding: 15px 0 10px; }
+  .plan--amount {
+    font-size: 45px; }
+  .plan--currency {
+    font-size: 16px;
+    line-height: 1.1; }
+  .plan--note, .plan--feature, .plan--enterprise-feature {
+    font-size: 11px; }
+  .plan--icon-hint {
+    display: none; }
+  .td.plan--note {
+    margin: 0; } }
+
+@media screen and (min-width: 871px) and (max-width: 960px) {
+  /* Adjust blog font sizes so headlines don't wrap too much */
+  .post-title {
+    font-size: 37px;
+    line-height: 50px;
+    margin-bottom: 30px; }
+  .post-meta {
+    font-size: 16px; }
+  .blog-aside-title {
+    font-size: 33px;
+    line-height: 50px;
+    margin: 140px 0 95px; } }
+
+@media screen and (max-width: 870px) {
+  /* Hide optional elements */
+  .optional {
+    display: none; }
+  /* Show alternate elements for medium size */
+  .show-med {
+    display: block; }
+  .text-center-med {
+    text-align: center; }
+  /*
+   * BLURBS in columns get fluid width and some padding instead for separation
+   */
+  .l-third .blurb {
+    width: auto;
+    padding: 0 15px;
+    position: relative; }
+  .l-third:first-child .blurb {
+    left: -15px; }
+  .l-third:last-child .blurb {
+    right: -15px; }
+  .l-half-med {
+    width: 50%; }
+  .l-half-med .blurb {
+    padding-right: 25px; }
+  .l-half-med:last-child .blurb {
+    right: -25px; }
+  /*
+   * HERO goes in 1 column. Video appears at the botton
+   */
+  .media--wide {
+    margin-right: 0; }
+    .media--wide .media-img {
+      display: none; }
+  .button-video {
+    /* video buttons appear full width */
+    margin-left: 10px;
+    margin-right: 10px; }
+    .button-video img {
+      width: 100%; }
+    .button-video .callout {
+      display: none; }
+  .bg-light {
+    /* Better pattern for the hero */
+    background-position: center top;
+    /* this shows a sphere behind the "...deploys..." – kindda fitting */ }
+  .button-video.show-med + .pullquote {
+    /* add some air to pullquotes after video */
+    margin-bottom: 50px; }
+  /* TABLES: reduce font size, paddings and margins so lines don't wrap */
+  .table {
+    font-size: 14px; }
+  .th {
+    font-size: 18px; }
+  .th, .td {
+    padding: 10px 0px;
+    margin: 4px 2px; }
+  .th--highlight {
+    padding: 8px 0 4px; }
+  .plan--enterprise-feature {
+    padding: 10px 5px; }
+  /*
+   * Main/aside layout goes in one column
+   */
+  .l-wrap-inner {
+    display: block; }
+    .l-wrap-inner .l-aside--left:after {
+      display: none; }
+  .l-wrap-inner {
+    max-width: 825px;
+    padding: 0 40px;
+    margin: 0 auto; }
+  .l-main,
+  .l-aside {
+    position: relative;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .l-main {
+    border-bottom: 3px solid #00c7b7; }
+  .l-wrap-inner--main-left {
+    display: block; }
+    .l-wrap-inner--main-left .l-main {
+      padding: 0; }
+    .l-wrap-inner--main-left .blog-aside-title {
+      text-align: left;
+      margin-bottom: 40px; }
+    .l-wrap-inner--main-left .blurb-title a {
+      color: #00c7b7; }
+    .l-wrap-inner--main-left .l-aside {
+      padding-left: 0;
+      padding-right: 40px; }
+    .l-wrap-inner--main-left .l-aside--right {
+      padding-right: 0;
+      margin-right: 0;
+      width: auto; }
+    .l-wrap-inner--main-left .l-aside--right:after {
+      display: none; }
+  .l-wrap:before,
+  .l-wrap:after,
+  .l-aside {
+    background: transparent; }
+  .l-aside.inverse {
+    color: inherit; }
+    .no-touch .l-aside.inverse a:hover {
+      color: #00c7b7; }
+  .l-aside .blurb {
+    width: auto;
+    max-width: 50%;
+    padding: 0 30px;
+    margin: 0 0 30px; }
+    .l-aside .blurb .media .blurb-meta {
+      margin-top: 0; }
+  .l-aside .blurb:nth-child(odd) {
+    float: left;
+    padding-left: 0; }
+  .l-aside .blurb:nth-child(even) {
+    float: right;
+    padding-right: 0; }
+  .blog-aside-title {
+    margin: 70px 0 40px;
+    text-align: center; }
+  /* When we have a left menu, we make it a mobile top accordeon */
+  .l-mobile-menu .l-wrap-inner {
+    margin: 0;
+    padding: 0;
+    max-width: none; }
+  .l-mobile-menu .nav--primary {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center; }
+  .l-mobile-menu .l-main {
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    max-width: 825px; }
+  .nav--inline.nav--wide li, .nav--wide.nav--social li {
+    margin-right: 10px; } }
+
+/* If the device height is big (eg. ipad portrait), the hero will look really bare.
+ * Increase the font size.
+ */
+@media screen and (min-width: 681px) and (max-width: 870px) and (min-height: 800px) {
+  .media--wide .blurb {
+    width: 30em; }
+    .media--wide .blurb .huge {
+      font-size: 175px;
+      letter-spacing: -0.02em; }
+    .media--wide .blurb .alpha {
+      font-size: 50px;
+      line-height: 55px; }
+    .media--wide .blurb .small-2 {
+      font-size: 16px;
+      text-align: center;
+      margin: 30px 0; }
+    .media--wide .blurb .button {
+      font-size: 32px;
+      line-height: 100px;
+      height: 100px; }
+    .media--wide .blurb .button-icon {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      margin: 16px 0 0 16px; } }
+
+@media screen and (max-width: 740px) {
+  /* Reduce content padding to leave more room for content */
+  .content {
+    padding: 0 20px; }
+  /* Reduce bleed so it doesn't touch edge of screen */
+  .l-container {
+    margin-left: 0; }
+  .l-half-med:last-child .blurb {
+    right: -15px; }
+  .media--bleed .media-img {
+    margin-left: -4px; }
+  .docs-main img, .post-bd img {
+    max-width: 100%; } }
+
+@media screen and (max-width: 680px) {
+  /*
+   * Reduce content width to readable line length
+   */
+  .content {
+    max-width: 28em;
+    padding: 0 20px; }
+  .site-header .content, .site-footer .content {
+    max-width: 40em; }
+  /*
+   * Stack address in footer
+   */
+  .site-footer .vcard {
+    margin: 10px; }
+    .site-footer .vcard br {
+      display: block; }
+    .site-footer .vcard .address:before {
+      display: none; }
+  /*
+   * Reduce header
+   */
+  .site-header .brand-logo {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+    position: relative;
+    top: 3px;
+    left: -30px; }
+  .site-header .brand {
+    margin: 0; }
+  .top-nav {
+    margin: 15px 0; }
+  /*
+   * Stack layouts
+   */
+  .l-container,
+  .l-container .l-third,
+  .l-container .l-fourth,
+  .l-container .l-half,
+  .l-2-col .l-col,
+  .l-3-col .l-col {
+    float: none;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0; }
+    .l-container .blurb,
+    .l-container .l-third .blurb,
+    .l-container .l-fourth .blurb,
+    .l-container .l-half .blurb,
+    .l-2-col .l-col .blurb,
+    .l-3-col .l-col .blurb {
+      position: static;
+      margin: 0 0 30px; }
+  .l-2-col-auto {
+    -webkit-columns: 1;
+       -moz-columns: 1;
+            columns: 1;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0; }
+  /*
+   * Stack inline blocks
+   */
+  .inline-block:not(.optional) {
+    display: block;
+    margin-left: 0;
+    margin-right: 0; }
+  /*
+   * Fix stacked blurbs
+   */
+  .blurb-meta:not(.right) {
+    margin-top: 0; }
+  .blurb .cta {
+    margin-bottom: 80px; }
+  .blurb-hd .media--bleed {
+    margin-bottom: 10px; }
+  /*
+   * Fix links
+   */
+  .button-label {
+    padding-left: 0; }
+  .button--small {
+    min-width: 0px;
+    border-radius: 40px; }
+    .button--small .button-label {
+      display: none; }
+  .button--inline {
+    margin-right: 20px; }
+  .button-video {
+    margin-left: 0;
+    margin-right: 0; }
+  .social-icon--round {
+    margin: 0 10px; }
+  /*
+   * Stack Forms
+   */
+  .form--fancy {
+    padding: 6px;
+    border-radius: 10px;
+    margin: 40px 0 20px; }
+    .form--fancy .form-group {
+      float: none;
+      width: 100%;
+      padding: 3px; }
+    .form--fancy .form-button {
+      font-size: 16px;
+      margin-top: 3px;
+      position: static;
+      width: 100%;
+      border-radius: 0 0 5px 5px; }
+  ::-webkit-input-placeholder {
+    font-size: 16px; }
+  ::-moz-placeholder {
+    font-size: 16px; }
+  :-ms-input-placeholder {
+    font-size: 16px; }
+  /*
+   * Adjust table margins to align with left and right margins
+   */
+  .table {
+    margin-left: -4px;
+    margin-right: -4px; }
+  /*
+   * Reduce spacing between sections
+   */
+  .cf:after {
+    display: block; }
+  .site-footer .content:after {
+    display: table; }
+  .mt-110, .mt-115, .mt-120, .mt-90 {
+    margin-top: 70px; }
+  /*
+   * Reduce font sizes
+   */
+  .huge {
+    font-size: 115px;
+    line-height: 1; }
+  .tera {
+    font-size: 55px;
+    line-height: 1; }
+  .mega, .post-title {
+    font-size: 50px;
+    line-height: 65px; }
+  .kilo, .blog-aside-title {
+    font-size: 37px;
+    line-height: 45px; }
+  .alpha, h1 {
+    font-size: 33px;
+    line-height: 40px; }
+  .beta, h2 {
+    font-size: 28px;
+    line-height: 35px; }
+  .gamma, h3 {
+    font-size: 25px;
+    line-height: 30px; }
+  .delta, h4,
+  .epsilon,
+  .blurb-title,
+  .post-intro, h5 {
+    font-size: 22px;
+    line-height: 30px; }
+  .zeta, .post-meta, .banner, h6 {
+    font-size: 18px;
+    line-height: 25px; }
+  .small {
+    font-size: 15px; }
+  .small-2 {
+    font-size: 14px; }
+  .table {
+    font-size: 16px; }
+  .th {
+    font-size: 20px; }
+  /* Adjust blurb in hero to compensate for smaller font sizes */
+  .media--wide .blurb {
+    width: auto;
+    max-width: 330px; }
+  /*
+   * Bold paragraphs look too bold
+   */
+  p.bold {
+    font-weight: 500; }
+  /* Extra small text the blurb body gets too
+   * hard to read and looks uncompensated with
+   * normal text (see About page, Mat & Chris descriptions)
+   * Make it look like standard text
+   */
+  .blurb-bd .x-small, .blurb-bd .blurb-meta {
+    font-size: 16px;
+    line-height: 25px; }
+  /*
+   * Blurbs aside get stacked
+   */
+  .l-aside .blurb:nth-child(n) {
+    float: none;
+    max-width: none;
+    padding: 0; }
+  /*
+   * Reduce l-wrap-inner width to adapt to stacked blurbs
+   */
+  .l-wrap-inner {
+    max-width: 30em;
+    padding: 0 20px; }
+  /*
+   * Reduce post title font size
+   */
+  .post-title {
+    font-size: 37px;
+    line-height: 50px;
+    margin: 70px 0 20px; }
+  .post-meta {
+    font-size: 14px; }
+  .blog-aside-title {
+    font-size: 33px;
+    line-height: 35px; }
+  /*
+   * Legalese. Get rid of bullets, numbered lists and indentation
+   */
+  .legalese {
+    padding: 0; }
+    .legalese h1 {
+      padding-top: 0;
+      border: none; }
+    .legalese ol h2:before {
+      display: none; }
+    .legalese ul, .legalese ol, .legalese ol ol {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .legalese ul li, .legalese ol li, .legalese ol ol li {
+        padding: 0; }
+  .inline-block .icon-link--round {
+    margin-right: 10px; }
+  .nav--inline.nav--wide li:last-child, .nav--wide.nav--social li:last-child {
+    margin-right: 0; }
+  .nav--inline.nav--wide .icon-link--large, .nav--wide.nav--social .icon-link--large {
+    width: 40px;
+    height: 40px;
+    line-height: 40px; }
+    .nav--inline.nav--wide .icon-link--large svg, .nav--wide.nav--social .icon-link--large svg {
+      width: 35px;
+      height: 35px; }
+  .mobile-stack-images img {
+    display: block;
+    margin: 30px auto; }
+  /* Responsive tables in docs: */
+  .docs-main table {
+    margin: 20px 0;
+    width: 100%; }
+  .docs-main thead {
+    display: none; }
+  .docs-main tbody, .docs-main tr, .docs-main th, .docs-main td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal; }
+  .docs-main td {
+    padding: 0 10px; }
+  .docs-main td[scope='row'] {
+    background: #00c7b7;
+    color: #FFF; }
+  .docs-main td[data-title] {
+    text-align: right; }
+  .docs-main td[data-title]:before {
+    content: attr(data-title);
+    float: left;
+    font-size: .8em;
+    color: #7e8383;
+    margin-right: 20px; }
+  .docs-main td:last-child {
+    margin-bottom: 20px; }
+  /* Responsive pricing table */
+  .pricing-table {
+    display: none; }
+  .mobile-pricing-table {
+    display: block; }
+    .mobile-pricing-table .td {
+      padding: 10px 10px;
+      height: 45px; }
+    .mobile-pricing-table .l-third:last-child .table {
+      margin-bottom: 0; }
+    .mobile-pricing-table .plan--amount {
+      float: left;
+      width: 50%; }
+    .mobile-pricing-table .plan--currency {
+      float: left;
+      width: 50%;
+      padding-left: 7px; }
+  .button--signup {
+    margin: 0 auto;
+    width: 274px; }
+  .signup--extra-info {
+    display: none; }
+  .plan--feature-title {
+    font-size: 16px; }
+  .plan--feature-box {
+    display: none; }
+  .plan--enterprise-feature {
+    display: block;
+    padding: 10px; }
+  table .plan--feature, table .td, .mobile-pricing-table .plan--feature, .mobile-pricing-table .td {
+    position: relative; }
+  table .help-box, .mobile-pricing-table .help-box {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    font-size: 11px;
+    line-height: 1.45;
+    padding: 10px; }
+  .mobile-pricing-table .help-box {
+    top: 50px; } }
+
+@media screen and (max-width: 460px) {
+  /*
+   * Fix footer aligning address under logo
+   */
+  .site-footer .left, .site-footer .right {
+    float: none; }
+  .site-footer .brand-logo {
+    margin-left: -10px; }
+  .site-footer .vcard {
+    margin: -35px 0 0 95px; }
+    .site-footer .vcard .org {
+      display: none; } }
+
+@media screen and (max-width: 360px) {
+  /*
+   * More space for content
+   */
+  .content {
+    padding: 0 15px; }
+  .l-third .blurb, .l-half .blurb {
+    padding: 0; }
+  /*
+   * Links can be closer together
+   */
+  .social-icon--round {
+    margin: 0 5px; }
+  /*
+   * Reduce big hero text and button
+   */
+  .media--wide {
+    margin-top: 50px; }
+    .media--wide .blurb {
+      max-width: 270px; }
+    .media--wide .huge {
+      font-size: 98px;
+      line-height: 100px;
+      margin: 0 0 20px; }
+    .media--wide .alpha {
+      margin: 5px 0;
+      font-size: 28px;
+      line-height: 35px; }
+    .media--wide .small-2 {
+      font-size: 14px;
+      text-align: center;
+      margin-top: -5px; }
+  /*
+   * Make large buttons smaller
+   */
+  .button--large {
+    font-size: 21px;
+    height: 60px;
+    line-height: 60px; }
+    .button--large .button-icon {
+      -webkit-transform: scale(0.7);
+          -ms-transform: scale(0.7);
+              transform: scale(0.7);
+      margin: -4px; }
+  .post-title {
+    line-height: 45px;
+    margin-bottom: 30px; } }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }

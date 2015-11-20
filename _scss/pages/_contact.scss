@@ -1,34 +1,29 @@
 /* Layout */
-.dl-inline {
-  margin: 55px 0 40px;
-  dt, dd {
-    display: inline;
-    margin: 0;
-  }
-  dd:after {
-    content:'';
-    display: block;
-    margin-bottom: 40px;
-  }
-  dd + dd {
-    margin-top: -40px;
-  }
-  .block {
-    display: block;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+.ul-blocks {
+  text-align: left;
 
-/* Colors */
-.dl-inline {
-  dt {
-    color: $color-highlight;
-    @include font-weight(medium);
+  li {
+    min-height: 160px;
+    background-color: lighten($teal, 10%);
+    padding: 1rem;
+    width: 31%;
+    float: left;
+    margin: 1%;
   }
-  dt + dd:not(.block) a {
-    color: inherit;
-    @include font-weight(medium);
+
+  h5 {
+    font-size: 22px;
+    color: white;
+    font-weight: 300;
   }
+
+  a {
+    color: darken($teal, 20%);
+    font-size: 14px;
+
+    &:hover {
+      color: white;
+    }
+  }
+
 }
