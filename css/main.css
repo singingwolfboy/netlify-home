@@ -2444,24 +2444,90 @@ thead th, .th--highlight {
     margin-left: -50px; }
 
 /* Layout */
-.ul-blocks {
-  text-align: left; }
-  .ul-blocks li {
-    min-height: 160px;
-    background-color: #84ada7;
-    padding: 1rem;
+section.contact-blocks {
+  text-align: left;
+  margin: 50px auto; }
+  section.contact-blocks li {
     width: 31%;
     float: left;
-    margin: 1%; }
-  .ul-blocks h5 {
+    margin: 1%;
+    position: relative; }
+  section.contact-blocks .contact-block-light p, section.contact-blocks .phone p, section.contact-blocks .facebook p, section.contact-blocks .gitter p, section.contact-blocks .contact-block-light h5, section.contact-blocks .phone h5, section.contact-blocks .facebook h5, section.contact-blocks .gitter h5 {
+    color: #669891; }
+  section.contact-blocks a {
+    min-height: 180px;
+    background-repeat: no-repeat;
+    background-position: right -20% center;
+    background-size: auto 90%;
+    background-color: #84ada7;
+    padding: 20px; }
+    section.contact-blocks a:hover {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9) inset; }
+  section.contact-blocks h5 {
     font-size: 22px;
     color: white;
-    font-weight: 300; }
-  .ul-blocks a {
+    font-weight: 300;
+    margin: 0 0 20px 0; }
+  section.contact-blocks p {
+    margin: 0;
+    line-height: 1.4em;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white; }
+  section.contact-blocks a {
+    display: block;
+    position: relative; }
+  section.contact-blocks .callout-link {
+    padding-left: 30px;
     color: #3d5b57;
-    font-size: 14px; }
-    .ul-blocks a:hover {
-      color: white; }
+    font-size: 14px;
+    position: absolute;
+    bottom: 20px;
+    line-height: 1.4em; }
+    section.contact-blocks .callout-link:before {
+      content: " ";
+      background-image: url("/img/icon-arrow-white.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      left: 0;
+      top: 0px; }
+  section.contact-blocks .email {
+    background-color: #9bcdc6;
+    background-image: url("/img/bg-contact-block/email.svg");
+    background-color: #9bcdc6; }
+  section.contact-blocks .phone {
+    background-color: #bcdcd7;
+    background-image: url("/img/bg-contact-block/phone.svg");
+    background-position: right -10% center; }
+  section.contact-blocks .office {
+    background-color: #79bfb4;
+    background-image: url("/img/bg-contact-block/office.svg");
+    background-position: right -110% center; }
+  section.contact-blocks .twitter {
+    background-color: #669891;
+    background-image: url("/img/bg-contact-block/twitter.svg");
+    background-position: right 10% bottom -40%; }
+  section.contact-blocks .github {
+    background-color: #79bfb4;
+    background-image: url("/img/bg-contact-block/github.svg"); }
+  section.contact-blocks .facebook {
+    background-color: #d3e5e2;
+    background-image: url("/img/bg-contact-block/facebook.svg");
+    background-position: right -5% center; }
+  section.contact-blocks .gitter {
+    background-color: #d3e5e2;
+    background-image: url("/img/bg-contact-block/gitter.svg");
+    background-position: right 2% center; }
+  section.contact-blocks .newsletter {
+    background-color: #9bcdc6;
+    background-image: url("/img/bg-contact-block/newsletter.svg");
+    background-position: right -80% center; }
+  section.contact-blocks .linkedin {
+    background-color: #79bfb4;
+    background-image: url("/img/bg-contact-block/linkedin.svg"); }
 
 .dl-faq {
   max-width: 885px;
@@ -3159,6 +3225,19 @@ thead th, .th--highlight {
   .post-title {
     line-height: 45px;
     margin-bottom: 30px; } }
+
+@media screen and (max-width: 870px) {
+  section.contact-blocks li {
+    width: 48%; } }
+
+@media screen and (max-width: 680px) {
+  section.contact-blocks li {
+    width: 100%;
+    float: none; }
+    section.contact-blocks li a {
+      margin: 15px 0; }
+    section.contact-blocks li .contact-block {
+      background-image: none; } }
 
 /* ==========================================================================
    Helper classes

@@ -1,29 +1,134 @@
 /* Layout */
-.ul-blocks {
+
+// the big blocks in for contact options
+section.contact-blocks {
   text-align: left;
+  margin: 50px auto;
 
   li {
-    min-height: 160px;
-    background-color: lighten($teal, 10%);
-    padding: 1rem;
     width: 31%;
     float: left;
     margin: 1%;
+    position: relative;
+  }
+
+  .contact-block-light {
+    p, h5 {
+      color: #669891;
+    }
+  }
+
+  a {
+    min-height: 180px;
+    background-repeat: no-repeat;
+    background-position: right -20% center;
+    background-size: auto 90%;
+    background-color: lighten($teal, 10%);
+    padding: 20px;
+
+    &:hover {
+      box-shadow: 0 0 0 3px rgba(white, 0.9) inset;
+    }
   }
 
   h5 {
     font-size: 22px;
     color: white;
     font-weight: 300;
+    margin: 0 0 20px 0;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.4em;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
   }
 
   a {
+    display: block;
+    position: relative;
+  }
+
+  // the arrow on the callout links
+  .callout-link {
+    padding-left: 30px;
     color: darken($teal, 20%);
     font-size: 14px;
+    position: absolute;
+    bottom: 20px;
+    line-height: 1.4em;
 
-    &:hover {
-      color: white;
+    &:before {
+      content: " ";
+      background-image: url('/img/icon-arrow-white.svg');
+      background-repeat: no-repeat;
+      background-position: left center;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      left: 0;
+      top: 0px;
     }
   }
+
+  // background fun
+  .email {
+    background-color: #9bcdc6;
+    background-image: url('/img/bg-contact-block/email.svg');
+    background-color: #9bcdc6;
+  }
+
+  .phone {
+    background-color: #bcdcd7;
+    background-image: url('/img/bg-contact-block/phone.svg');
+    background-position: right -10% center;
+    @extend .contact-block-light;
+  }
+
+  .office {
+    background-color: #79bfb4;
+    background-image: url('/img/bg-contact-block/office.svg');
+    background-position: right -110% center;
+  }
+
+  .twitter {
+    background-color: #669891;
+    background-image: url('/img/bg-contact-block/twitter.svg');
+    background-position: right 10% bottom -40%;
+  }
+
+  .github {
+    background-color: #79bfb4;
+    background-image: url('/img/bg-contact-block/github.svg');
+  }
+
+  .facebook {
+    background-color: #d3e5e2;
+    background-image: url('/img/bg-contact-block/facebook.svg');
+    background-position: right -5% center;
+    @extend .contact-block-light;
+  }
+
+  .gitter {
+    background-color: #d3e5e2;
+    background-image: url('/img/bg-contact-block/gitter.svg');
+    background-position: right 2% center;
+    @extend .contact-block-light;
+  }
+
+  .newsletter {
+    background-color: #9bcdc6;
+    background-image: url('/img/bg-contact-block/newsletter.svg');
+    background-position: right -80% center;
+  }
+
+  .linkedin {
+    background-color: #79bfb4;
+    background-image: url('/img/bg-contact-block/linkedin.svg');
+  }
+
+
 
 }
