@@ -6,7 +6,7 @@ short_title: GitBook on netlify
 description: A step-by-step guide on how to host a website built with static site generator Gitbook.
 thumbnail: /uploads/gitbook.png
 cmsUserSlug: ""
-date: 2015-11-22
+date: 2016-11-22
 tags: null
 ---
 
