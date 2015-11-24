@@ -2467,7 +2467,7 @@ section.contact-blocks {
     font-size: 22px;
     color: white;
     font-weight: 300;
-    margin: 0 0 20px 0; }
+    margin: 0 0 50px 0; }
   section.contact-blocks p {
     margin: 0;
     line-height: 1.4em;
@@ -2482,7 +2482,6 @@ section.contact-blocks {
     color: #427870;
     font-size: 13px;
     position: absolute;
-    bottom: 20px;
     line-height: 1.4em; }
     section.contact-blocks .callout-link:before {
       content: " ";
