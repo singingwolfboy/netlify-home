@@ -6,20 +6,19 @@ short_title: Ember on netlify
 description: A step-by-step guide on how to host Ember on netlify.
 thumbnail: /uploads/emberjs-logo.png
 cmsUserSlug: ""
-date: 2015-11-24
+date: 2015-11-24T00:00:00.000Z
 tags: null
 ---
 
-
 ### **Welcome to netlify**
 
-Ember is a great framework for creating awesome applications. In fact [netlify CMS](https://github.com/netlify/netlify-cms) is made with Ember. It has a huge ecosystem and a great asset pipeline out of the box as well, and we're hosting tons of apps using Ember on netlify.
+Ember is a great framework for creating awesome applications. In fact [netlify CMS](https://github.com/netlify/netlify-cms) is made with Ember. It has a huge ecosystem and a great asset pipeline out of the box as well, and we're hosting tons of webapps using Ember on netlify.
 
 Today, we're going to look at how to host a webapp built with Ember.js on netlify, including setting up continuous deployment.
 
 <!-- excerpt -->
 
-Let's start from scratch (if you already have a Ember app set up, you can skip down to [here](#netlifystart)).
+Let's start from scratch (if you already have a Ember site set up, you can skip down to [here](#netlifystart)).
 
 Open your terminal, and enter the following command (this guide assumes you have Node.js installed):
 
@@ -34,7 +33,7 @@ Now, navigate to where you want to set up your project, then run the command bel
 ```
 $ ember new embernetlify
 ```
-Now you can see a `embernetlify` directory, with all of the various assets you need to develop your app in `ember`.
+Now you can see a `embernetlify` directory, with all of the various assets you need to develop your site in `ember`.
 
 Change into this new directory:
 ```
@@ -101,7 +100,7 @@ Now that your assets are up and running on GitHub, let's connect them to netlify
 #### Step 1: Add Your New Site
 
 ![step 1 - add](https://cloud.githubusercontent.com/assets/6520639/9803638/717820a6-57d9-11e5-838f-d2a732eb0a41.png)
-Creating a new app on netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
+Creating a new site on netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
 
 #### Step 2: Link to Your GitHub
 Clicking "New Site" brings you to this screen:
@@ -137,4 +136,4 @@ Now it's time to sit back and relax. Go grab something cold to drink, scratch th
 
 ![step 7 - done](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step7Ember.png)
 
-Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your app a temporary name. Now you can add your custom domain, and your app will be live for your adoring public to view. Congratulations, and thanks for using netlify!
+Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
