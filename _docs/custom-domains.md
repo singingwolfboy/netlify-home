@@ -1,8 +1,8 @@
 ---
-"title": "Custom Domains"
-"position": 30
-"cmsUserSlug": "custom-domains"
-"date": 2015-06-03
+cmsUserSlug: custom-domains
+date: 2015-06-03T00:00:00.000Z
+title: Custom Domains
+position: 30
 ---
 
 ## Using a custom domain
@@ -15,7 +15,7 @@ First you need to assign the domain to the site you want us to show.
 
 You can do this through the web UI by clicking "Edit domain" when viewing your site.
 
-![set-custom-domain.jpg](/img/docs/dns-records.png)
+![set-custom-domain.jpg](/uploads/set-custom-domain.jpg)
 
 You can also assign domains through the [CLI tool](/docs/cli) with the `netlify update` command.
 
@@ -28,7 +28,7 @@ You'll need to point the DNS records for the domain at our servers.
 * Create a CNAME that will "alias" your site to `<site-name>.netlify.com`. If your domain is `example.com` and your site is at `example.netlify.com`, you would create a CNAME record for **www** pointing at `www.example.com` to `example.netlify.com`.
 * Create an A record for the raw domain (example.com) pointing to `198.61.251.14`
 
-![Example DNS Records](/uploads/dns-records-example-com.png)
+![Example DNS Records](/img/docs/dns-records.png)
 
 If your DNS provider supports ANAME or ALIAS records for apex domains you can instead alias the raw domain to `www.netlify.com`
 

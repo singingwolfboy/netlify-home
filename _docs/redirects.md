@@ -1,17 +1,20 @@
 ---
+cmsUserSlug: redirects-and-rewrite-rules
+date: 2015-11-23 
 title: Redirects and Rewrite Rules
 position: 40
 ---
 
 ## Redirects and Rewrite Rules
 
-You can configure redirects and rewrite rules for your Netlify site by adding a `_redirects` file to the root of your site folder.
+You can configure redirects and rewrite rules for your Netlify site by adding a `_redirects` file to the root of your site folder (note, if you're running a build command, the `_redirects` file should end up in the folder you're deploying. It's not enough to have on in the root of your repository).
 
 
 ## Basic redirects
 
 Setting up basic redirects is dead simple:
 
+    # Simple redirects from one path to another
     /home              /
     /blog/my-post.php  /blog/my-post
     /news              /blog
@@ -19,14 +22,23 @@ Setting up basic redirects is dead simple:
 
 Just list the original path followed by the new path or URL.
 
+Any # indicates a comment and everything following the pound sign will be ignored.
+
 
 ## HTTP Status Codes
 
 You can specify the HTTP status code for the rewrite. The default is 301 which will do a permanent redirect.
 
+    # Redirect with a 301
     /home         /              301
+
+    # Redirect with a 302
     /my-redirect  /              302
+
+    # Rewrite a path
     /pass-through /index.html    200
+
+    # Show a custom 404 for this path
     /ecommerce    /store-closed  404
 
 When the status code is 301, 302 or 303 Netlify will redirect to the target url. With any other status code Netlify will render the target url with the specified status code.
@@ -35,7 +47,7 @@ This means that you can define **rewrite** rules as well as **redirects** by spe
 
 ## Custom 404
 
-You can easily setup a custom 404 page. This doesn't require any redirect rules. Just add a `404.html` page to your site and it'll be picked up automatically.
+You can easily setup a custom 404 page for all paths that doesn't resolve to a static file. This doesn't require any redirect rules. Just add a `404.html` page to your site and it'll be picked up automatically.
 
 ## Trailing Slash
 
@@ -46,6 +58,9 @@ When "Pretty URLs" is enabled under processing settings for your site, netlify w
 A link to /about.html will be rewritten to /about in your HTML filesand netlify will enforce a redirect from /about/ to /about
 
 A link to /about/index.html will be rewritten to /about/ and netlify will redirect from /about to /about/
+
+We don't do automatic redirects from /about/index.html to /about/ since the former URL really does correspond to a file on our servers (and redirecting in this case would often cause trouble for single page apps loading partials over AJAX).
+
 
 ## Placeholders
 
