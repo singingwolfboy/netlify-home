@@ -2457,8 +2457,8 @@ section.contact-blocks {
   section.contact-blocks a {
     min-height: 180px;
     background-repeat: no-repeat;
-    background-position: right -20% center;
-    background-size: auto 90%;
+    background-position: right center;
+    background-size: auto 100%;
     background-color: #82a8a3;
     padding: 20px; }
     section.contact-blocks a:hover {
@@ -2467,13 +2467,20 @@ section.contact-blocks {
     font-size: 22px;
     color: white;
     font-weight: 300;
-    margin: 0 0 50px 0; }
+    margin: 0 0 35px 0; }
   section.contact-blocks p {
     margin: 0;
     line-height: 1.4em;
     font-size: 13px;
     margin-bottom: 10px;
-    color: white; }
+    color: white;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 40px;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   section.contact-blocks a {
     display: block;
     position: relative; }
@@ -2498,31 +2505,25 @@ section.contact-blocks {
     background-image: url("/img/bg-contact-block/email.svg"); }
   section.contact-blocks .phone {
     background-color: #bcdcd7;
-    background-image: url("/img/bg-contact-block/phone.svg");
-    background-position: right -10% center; }
+    background-image: url("/img/bg-contact-block/phone.svg"); }
   section.contact-blocks .office {
     background-color: #79bfb4;
-    background-image: url("/img/bg-contact-block/office.svg");
-    background-position: right -110% center; }
+    background-image: url("/img/bg-contact-block/office.svg"); }
   section.contact-blocks .twitter {
     background-color: #669891;
-    background-image: url("/img/bg-contact-block/twitter.svg");
-    background-position: right 10% bottom -40%; }
+    background-image: url("/img/bg-contact-block/twitter.svg"); }
   section.contact-blocks .github {
     background-color: #79bfb4;
     background-image: url("/img/bg-contact-block/github.svg"); }
   section.contact-blocks .facebook {
     background-color: #d3e5e2;
-    background-image: url("/img/bg-contact-block/facebook.svg");
-    background-position: right -5% center; }
+    background-image: url("/img/bg-contact-block/facebook.svg"); }
   section.contact-blocks .gitter {
     background-color: #d3e5e2;
-    background-image: url("/img/bg-contact-block/gitter.svg");
-    background-position: right 2% center; }
+    background-image: url("/img/bg-contact-block/gitter.svg"); }
   section.contact-blocks .newsletter {
     background-color: #9bcdc6;
-    background-image: url("/img/bg-contact-block/newsletter.svg");
-    background-position: right -80% center; }
+    background-image: url("/img/bg-contact-block/newsletter.svg"); }
   section.contact-blocks .linkedin {
     background-color: #79bfb4;
     background-image: url("/img/bg-contact-block/linkedin.svg"); }

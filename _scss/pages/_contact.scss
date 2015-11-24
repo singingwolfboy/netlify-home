@@ -21,8 +21,8 @@ section.contact-blocks {
   a {
     min-height: 180px;
     background-repeat: no-repeat;
-    background-position: right -20% center;
-    background-size: auto 90%;
+    background-position: right center;
+    background-size: auto 100%;
     background-color: #82a8a3;
     padding: 20px;
 
@@ -35,7 +35,7 @@ section.contact-blocks {
     font-size: 22px;
     color: white;
     font-weight: 300;
-    margin: 0 0 50px 0;
+    margin: 0 0 35px 0;
   }
 
   p {
@@ -44,6 +44,9 @@ section.contact-blocks {
     font-size: 13px;
     margin-bottom: 10px;
     color: white;
+    display: flex;
+    min-height: 40px;
+    align-items: flex-end;
   }
 
   a {
@@ -81,20 +84,17 @@ section.contact-blocks {
   .phone {
     background-color: #bcdcd7;
     background-image: url('/img/bg-contact-block/phone.svg');
-    background-position: right -10% center;
     @extend .contact-block-light;
   }
 
   .office {
     background-color: #79bfb4;
     background-image: url('/img/bg-contact-block/office.svg');
-    background-position: right -110% center;
   }
 
   .twitter {
     background-color: #669891;
     background-image: url('/img/bg-contact-block/twitter.svg');
-    background-position: right 10% bottom -40%;
   }
 
   .github {
@@ -105,21 +105,18 @@ section.contact-blocks {
   .facebook {
     background-color: #d3e5e2;
     background-image: url('/img/bg-contact-block/facebook.svg');
-    background-position: right -5% center;
     @extend .contact-block-light;
   }
 
   .gitter {
     background-color: #d3e5e2;
     background-image: url('/img/bg-contact-block/gitter.svg');
-    background-position: right 2% center;
     @extend .contact-block-light;
   }
 
   .newsletter {
     background-color: #9bcdc6;
     background-image: url('/img/bg-contact-block/newsletter.svg');
-    background-position: right -80% center;
   }
 
   .linkedin {
