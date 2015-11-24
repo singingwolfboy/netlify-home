@@ -17,6 +17,8 @@ Ember is a great framework for creating awesome applications. In fact [netlify C
 
 Today, we're going to look at how to host a website built with Ember.js on netlify, including setting up continuous deployment.
 
+<!-- excerpt -->
+
 Let's start from scratch (if you already have a Ember site set up, you can skip down to [here](#netlifystart)).
 
 Open your terminal, and enter the following command (this guide assumes you have Node.js installed):
