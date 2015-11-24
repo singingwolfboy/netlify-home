@@ -12,7 +12,7 @@ tags: null
 
 ### **Welcome to netlify**
 
-Ember is a great framework for creating awesome applications. In fact [netlify CMS](https://github.com/netlify/netlify-cms) is made with Ember. It has a huge ecosystem and a great asset pipeline out of the box as well, and we're hosting tons of apps and websites using Ember on netlify.
+Ember is a great framework for creating awesome applications. In fact [netlify CMS](https://github.com/netlify/netlify-cms) is made with Ember. It has a huge ecosystem and a great asset pipeline out of the box as well, and we're hosting tons of webapps using Ember on netlify.
 
 Today, we're going to look at how to host a webapp built with Ember.js on netlify, including setting up continuous deployment.
 
