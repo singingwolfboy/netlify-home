@@ -6,7 +6,7 @@ short_title: Ember on netlify
 description: A step-by-step guide on how to host Ember on netlify.
 thumbnail: /uploads/emberjs-logo.png
 cmsUserSlug: ""
-date: 2015-11-24 
+date: 2015-11-24
 tags: null
 ---
 
@@ -91,7 +91,9 @@ git push -u origin master
 ```
 
 Now that your assets are up and running on GitHub, let's connect them to netlify.
+
 <a id="netlifystart"></a>
+
 ### **Connecting to Netlify**
 
 #### Step 1: Add Your New Site
