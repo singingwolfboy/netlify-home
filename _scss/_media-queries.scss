@@ -910,3 +910,19 @@ $bp-small-3:      360px;      //* Tweak point – try to reduce things further (
     margin-bottom: 30px;
   }
 }
+
+// for the contact page blocks
+section.contact-blocks li {
+  @include breakpoint($bp-med) {
+    width: 48%;
+  }
+
+  @include breakpoint($bp-small) {
+    width: 100%;
+    float: none;
+
+    a {
+      margin: 15px 0;
+    }
+  }
+}
