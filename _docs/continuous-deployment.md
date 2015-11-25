@@ -49,4 +49,4 @@ For **Jekyll hosting**, make sure you have a Gemfile and a Gemfile.lock checked 
 
 For **Roots hosting**, make sure you add `roots` to your package.json.
 
-For **Hugo hosting**, `hugo` will build and deploy with the latest version of `hugo`. You can specify a specific `hugo` release like this: `hugo_0.14`. Currently `0.13` and `0.14` are supported.
+For **Hugo hosting**, `hugo` will build and deploy with the latest version of `hugo`. You can specify a specific `hugo` release like this: `hugo_0.15`. Currently `0.13`, `0.14` and `0.15` are supported.
