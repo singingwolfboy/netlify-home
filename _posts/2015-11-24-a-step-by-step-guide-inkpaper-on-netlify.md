@@ -15,9 +15,11 @@ Welcome to Netlify and todays article about a new and exciting Chinese technolog
 Among the multitude of site generators that have come into existence in the past few years, this one stands out for its simplicity and extremely fast build time.
 It has a very elegant theme and is one of the fastest site generators to get up and running, as it has NO dependencies - all you have to do, is download and set it up.
 
+*Please note that this guide assumes you have Ruby, git and bundle installed!*
+
 ### **Setup InkPaper**
 If you already have inkpaper up and running on GitHub and only wish to connect, start [here](#netlifystart) instead.
-On the other hand, if you have InkPaper running locally, but need some guidance getting it on GitHub as well, before you connect it with Netlify, start [here](#githubstart) instead and finally if you're completely new to InkPaper, simply continue this guide chronologically.  
+On the other hand, if you have InkPaper running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead and finally, if you're completely new to InkPaper, simply continue this guide chronologically.  
 
 #### 1. Download InkPaper.
 The first thing you need to do is head over to [InkPapers webpage](http://www.inkpaper.io/) and download the installation package that fits with your operating system. 
@@ -50,7 +52,8 @@ Provided you've still got your terminal window open in the InkPaper directory, a
 ```
 $ ink preview
 ```
-Open your web browser of choice and enter 'http://localhost:8000/' in the address bar and voila, there you go.
+Open your web browser of choice and enter *'http://localhost:8000/'* in the address bar and voila, there you go.
+
 Quite honestly - could it get any easier?
 
 #### 5. Website Configuration and Content Creation.
@@ -103,51 +106,38 @@ Notice that the content is written in markdown below the three dashes and that y
 
 As long as you're working on the page, the *ink preview* command we entered in terminal earlier, will automatically watch and rebuild the source directory, so you can see your changes locally and instantly, by simply refreshing the browser.
 
-Once you're ready for it, you can use the following command to automatically build and publish:
-```
-$ cd '/InkPaper/blog'
-$ ink publish
-```
-The first line takes you to the blog directory from where the publish command should be invoked and the second command does the building and publishing - simple enough.
-
-Another method is to manually deploy the generated public directory by using this command:
-```
-$ cd '/InkPaper/blog'
-$ ink build
-```
-Again, as with the publish command, it's important that you first cd into the InkPaper directory or it's blog sub directory, before invoking ink, as otherwise it will not be able to find the config.yml file.
-
-For further information about customizing InkPaper and choosing or modifying a theme, see the [InkPaper getting started webpage](http://www.inkpaper.io/blog/post/2015/03/01/ink-blog-tool-en.html).
+For further information about ink commands, customizing InkPaper and choosing or modifying a theme, see the [InkPaper getting started webpage](http://www.inkpaper.io/blog/post/2015/03/01/ink-blog-tool-en.html).
 
 ### **Setup your GitHub Repository**
 <a id="githubstart"></a>
 Now we need to prepare the site for GitHub and then set up the GitHub repository.
 
 #### 1. Prepare the Project.
+Open up a Terminal window to the local InkPaper directory (or the command prompt if you're on a Windows OS).
+
+*Keep the Terminal Window/Command Prompt open, in between steps for your own convenience!*
+
 For everything to run smoothly and so that Netlify knows how to build your project, we need to initialize bundle on the project with the following commands, where the first takes us to the correct project and the second line takes care of the initialization:
 ```
 $ cd '/InkPaper'
 $ bundle init
 ```
-The last command will create a Gemfile in your directory, which is used to specify what gems and which versions you want to include when you build your site. 
-You can edit this file, adding the gems you want, but this is outside the scope of this tutorial.
-However, once you're ready and satisfied with your Gemfile, we need to run the following command:
+The *bundle init* command will create a Gemfile in your directory, which is used to specify what gems and which versions you want to include when you build your site. 
+You can edit this file, adding the gems you want, but this is outside the scope of this tutorial and we will simply use it as is.
+
+Once you're ready and satisfied with your *Gemfile*, we need to run the following command:
 ```
 $ bundle install 
 ```
-If you look in the site directory again, the Gemfile is now accompanied by a Gemfile.lock. This information is needed so that Netlify can ensure that the same versions of gems and what not are used, to avoid any unwanted surprises.
+If you look in the site directory again, the *Gemfile* is now accompanied by a *Gemfile.lock*. This information is needed so that Netlify can ensure that the same versions of gems/plugins are used, to avoid any unwanted surprises.
 
 #### 2. Create your Git Repo.
-Let's head over to [GitHub](https://github.com/) and create a new repo - we're naming ours InkPaper and we'll postpone adding files to the repository until after its creation (The README, license and gitignore files).
+Let's head over to [GitHub](https://github.com/) and create a new repo. We're naming ours InkPaper and we'll postpone adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
 ![createrepo.png](/uploads/createrepo.png)
 
 Once the repository has been named and created you're ready to go local.
 
 #### 3. Open Terminal & Initialize Directory. 
-Open up a Terminal window to the local InkPaper directory (or the command prompt if you're on a Windows OS).
-
-*Keep the Terminal Window/Command Prompt open, in between steps for your own convenience!*
-
 We'll initialize the local directory as a git repository with the following command:
 ```
 $ git init
@@ -204,20 +194,20 @@ You will be asked to provide your github login details:
 ![GitHub Login](/uploads/githublogin.png)
 
 We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
-![authorization.png](/uploads/authorization.png)
+![Authorize Netlify](/uploads/authorize.png)
 
 Like it says in the image above, Netlify doesn’t store your GitHub access token on our servers! 
 
 If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
-![selectsiteinkpaper.png](/uploads/selectsiteinkpaper.png)
+![Choose Repo](/uploads/chooserepo.png)
 
 Once you're connected to GitHub, netlify will show you a list of your Git repos, as seen above.
 For the purpose of this tutorial we'll select the *“AmazingWood”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
-![configureinkpaper.png](/uploads/configureinkpaper.png)
+![Configure Settings](/uploads/configurerepo.png)
 
 In most cases and for the purpose of this tutorial, there's nothing we need to configure, so we'll simply click save to go with the default options.
 
