@@ -50,9 +50,19 @@ Notice the user friendly messages and how well organized broccoli-taco is in ter
 INSERT TERMINAL PIC HERE
 
 #### 3. Install Dependencies.
-As stated under "Next steps" in terminal, we need to install certain dependencies with the following command
+As stated under "Next steps" in our terminal window, we need to install certain dependencies with the following command:
+```
+$ cd '/home/username/Sites/broccoli-tacos/' && npm install
+```
 
-
-$ cd my-site && npm install
+#### 4. Serve Site for Development.
+In the root of your broccoli-taco, run the following command:
+```
 $ broccoli-taco serve
+```
+
+#### 5. Build Site into Folder.
+Again in the root of your broccoli-taco, run the following command:
+```
+broccoli-taco build dist
 ```
