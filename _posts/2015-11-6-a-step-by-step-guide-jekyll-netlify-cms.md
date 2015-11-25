@@ -44,8 +44,10 @@ Then we open a terminal window to the location of our local repo directory creat
 ```
 $ git clone my-repo-url
 ```
-#### 4. The Netlify Git API.
-Since we want to show how this all work on your local computer as well, we will download the netlify-git-api that corresponds to your OS.
+### **Netlify CMS: Local Environment**
+
+#### 1. The Netlify Git API.
+Since we want to show how this all work on your local computer as well as online, we will download the netlify-git-api that corresponds to your OS.
 
 Go to the [Netlify Git API](https://github.com/netlify/netlify-git-api/releases) releases page and download the relevant version for your OS.
 
@@ -60,7 +62,7 @@ E.g. if your file was decompressed into the download folder, which is often the 
 ```
 $ cd 'my-download-folder'
 ```
-#### 5. Set up your Gemfile.
+#### 2. Setup your Gemfile.
 We want to use Jekyll 3.0.0 in our example, along with the jekyll-sitemap plugin. 
 To do this, we open the Gemfile and change/add the following:
 ```
@@ -69,54 +71,57 @@ gem 'jekyll-sitemap'
 ```
 At the time of writing the jekyll used for the template was 2.5.3, but we're having no issues with the newer version of Jekyll so far, so we're going ahead, but feel free to use the older version, if you so prefer.
 
-#### 6. Bundle Install.
+#### 3. Bundle Install.
 The following command will install the jekyll gem specified in the Gemfile, along with any other specified gems/plugins:
 ```
 $ bundle install
 ```
 Once you've used the command above, to install the listed gems, a Gemfile.lock file will be created in your directory. This makes sure that Netlify uses the same version of Jekyll, with  the same versions of gems/plugins that you used to build your site.
 
-#### 7. Create Netlify CMS Users.
+#### 4. Create Netlify CMS Users.
 
 From the terminal window, from your local repo directory, we need to run the following command for each user you wish to add (you will be asked for an email, a name and a password):
 ```
 $ netlify-git-api users add
 ```
-You need to create at least one user, to properly test the system.
-
 Alternatively you can create a user, including the information necessary, like this:
 ```
 $ netlify-git-api users add -n 'User Name' -e my@email -p mypassword
 ```
+You need to create at least one user, to properly test the system.
 
-#### 8. Start Netlify CMS Server
+#### 5. Start Netlify CMS Server
 Next we need to start the Netlify CMS server locally with the following command:
 ```
 $ netlify-git-api serve
 ```
 This will start the Netlify CMS Server.
 
-**Keep the Terminal Window/Command Prompt open to keep the server running!**
+***Keep the Terminal Window/Command Prompt open to keep the server running!***
 
-You can log in here and create a new post: 
+Open a browser to the address below, log in and create a new post: 
 [https://localhost:4000/admin](https://localhost:4000/admin)
 
-#### 9. Build and Watch 
-From the root of your site, run the following command to build your site using bundle
+#### 6. Build and Watch 
+Since we need the Netlify CMS Server to keep running, we need to open a second terminal window/command prompt for the following.
+
+From the root of your site (cd my-local-site), run the following command to build your site using bundle:
 ```
 $ bundle exec jekyll server --watch
 ```
 Now you can navigate to check out your site and the post you just created through this link:
 [https://localhost:4000](https://localhost:4000)
 
-#### 10. Push to Github
+That's pretty much all there is to setting Netlify CMS up in a local environment.
+
+### **Online Environment**
 Once you're done fiddling with the local version and maybe adding some posts, we should try out this netlify-cms online.
 
 In the terminal window/command prompt, CD to the root folder of your site and start by entering this command, to check where the project is pushed to:
 ```
 $ git remote -v
 ```
-If you're happy with the result go ahead and add the new files with this command:
+If you're happy with the result, go ahead and add the new files with this command:
 ```
 $ git add .
 ```
@@ -124,7 +129,7 @@ And then commit the files you just staged in your local repository by entering t
 ```
 git commit -m 'First commit'
 ```
-The final step we need to do is push the project to GitHub and we use the following line for that:
+The final step we need to do is push the project to GitHub and we use the following line for this:
 ```
 $ git push -u origin master
 ```
