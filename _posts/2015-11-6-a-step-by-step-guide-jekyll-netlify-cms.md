@@ -137,8 +137,9 @@ You'll be asked for login details for your account at GitHub and once they've be
 
 We're done setting up the Jekyll with Netlify CMS template page, so let's connect it with Netlify and build this thing.
 
-### **Connecting to Netlify**
+### **Connecting to Netlify and Deploy to Production Environment**
 <a id="netlifystart"></a>
+These final steps we need to go through are important ones and require that you pushed the repository to a GitHub repo you own!
 
 #### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
@@ -180,6 +181,33 @@ Once you click save, Netlify will step in and take over, though it will let you 
 
 Now it’s time to sit back and relax, as the next step may take a few minutes. Take a break and Netlify will do the rest, while you watch the progress.
 
+#### 7. Register new Application.
+Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.  
+Next fill out the application information as seen in the screenshot below - you can name and describe it however you want, but it is imperative that you use the exact URL for the Authorization callback as this: **https://api.netlify.com/auth/done**
+
+![registernewapplication.png](/uploads/registernewapplication.png)
+
+You can disregard choosing an image, though we did, to help distinguish the application.
+Once you're done filling out, simply click the green *Register application* button and you will get to the following screenshot (well, it will be similar at least):
+
+![clientidnsecret.png](/uploads/clientidnsecret.png)
+
+What you need to take note of here, is the **Client ID** and the **Client Secret** in the upper right corner. You will need to provide both in the next step.
+
+#### 8. Setup GitHub API Access.
+Return to Netlify and the site you just build and in the control panel select the **Access panel**.
+
+This is where we give the GitHub Api access to our site with the application we just registered and you need to enter the **Client ID** and the **Client Secret** from before, as seen in the screenshot below:
+
+![githubaccess.png](/uploads/githubaccess.png)
+
+Simply paste them into the windows where I've written *enter Client ID here* and below where I've written *enter Client Secret here* and you're good to go.
+
+
+
+
+
+
 #### Step 7: Done
 ![Done](/uploads/naturalistpanda.png)
 Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screenshot. You now have access to the control panel for the site.
@@ -187,6 +215,6 @@ Once Netlify has build your site, you'll be presented with the result and your v
 The site starts as default public, but you can easily and quickly change this along with the options to add a custom domain name and change from the randomly generated name to something more appropriate.
 
 ### **Trying Out Netlify CMS**
-We tried earlier in this step by step, to test the CMS system locally and it's virtually the same using it online, you just have to change the address to https://mysite.netlify.com/admin to access the CMS system and then use the login and password you created earlier.
+We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to https://mysite.netlify.com/admin to access the CMS system and then use the login and password you created earlier.
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
