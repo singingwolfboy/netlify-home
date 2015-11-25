@@ -36,7 +36,7 @@ $ tar xvzf ink_linux_amd64.tar.gz --directory 'Sites'
 $ mv /Sites/ink_linux_amd64 /Sites/InkPaper
 ```
 The first line simply takes us to the location of the downloaded package (change to your download location).
-The second line unpacks the downloaded file (in our case the linux 64 bit flavor) to our chosen destination and the third line renames this directory to InkPaper.
+The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination and the third line renames this directory to InkPaper.
 
 #### 3. Add ink to the Path.
 For ink (the site generator file of InkPaper) to run properly, we need to add it to the path.
@@ -52,7 +52,7 @@ Provided you've still got your terminal window open in the InkPaper directory, a
 ```
 $ ink preview
 ```
-Open your web browser of choice and enter *'http://localhost:8000/'* in the address bar and voila, there you go.
+Open your web browser of choice and enter *'http://localhost:8000/'* in the address bar and there you go.
 
 Quite honestly - could it get any easier?
 
@@ -81,7 +81,7 @@ build:
     copy:
         - Copied Files When Build
     publish: |
-        Excuted command when use 'ink publish'
+        Executed command when using 'ink publish'
 ```
 
 To create content, simply create any .md file in the source directory or in a subdirectory of the source directory, using the following format (as described on the InkPaper homepage):
@@ -102,7 +102,7 @@ tags: #Optional
 
 Markdown Format's Body
 ```
-Notice that the content is written in markdown below the three dashes and that you only need one set of these, as opposed to the more commonplace practise of placing the article information between two sets of dashes.
+Notice that the content is written in markdown below the three dashes and that you only need one set of these, as opposed to the more commonplace practice of placing the article information between two sets of dashes.
 
 As long as you're working on the page, the *ink preview* command we entered in terminal earlier, will automatically watch and rebuild the source directory, so you can see your changes locally and instantly, by simply refreshing the browser.
 
@@ -181,17 +181,17 @@ We're done setting up the Jekyll page, so let's connect it with Netlify.
 #### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
 
-Creating a new site on netlify is simpler than with any other host. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button (as seen above) to get started.
+Creating a new site on GitHubNetlify is simpler than with any other host. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button (as seen above) to get started.
 
 #### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
-When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
+When you push to GitHub, GitHubNetlify does all the work. No more wasting time on manual deploying of updates or changes!
 
 Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click the button *“Link to GitHub”*.
 
-#### Step 3: Authorize netlify
-You will be asked to provide your github login details:
+#### Step 3: Authorize GitHubNetlify
+You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
 
 We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
@@ -199,11 +199,11 @@ We need to let Netlify and GitHub talk to each other, so review the permissions 
 
 Like it says in the image above on the right, Netlify doesn’t store your GitHub access token on our servers! 
 
-If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/). 
+If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
 ![Choose Repo](/uploads/selectsiteinkpaper.png)
-Once you're connected to GitHub, netlify will show you a list of your Git repos, as seen above.
+Once you're connected to GitHub, GitHubNetlify will show you a list of your Git repos, as seen above.
 For the purpose of this tutorial we'll select the *“InkPaper”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
@@ -213,12 +213,11 @@ In most cases and for the purpose of this tutorial, there's nothing we need to c
 
 #### Step 6: Build Your Site
 ![siteisbuilding.png](/uploads/siteisbuilding.png)
-Once you click save, netlify will step in and take over, though it will let you know what's happening on the way, as seen in the above screenshot.
-Now it’s time to sit back and relax, as the next step may take a few minutes. Take a break and Netlify will do the rest, while you watch the progress.
+Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
 ![Done](/uploads/naturalistpanda.png)
-Once netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
+Once GitHubNetlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
 
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate.
 
