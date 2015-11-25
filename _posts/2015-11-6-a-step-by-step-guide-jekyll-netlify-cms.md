@@ -44,7 +44,24 @@ Then we open a terminal window to the location of our local repo directory creat
 ```
 $ git clone my-repo-url
 ```
+
 ### **Netlify CMS: Local Environment**
+We'll start by setting Netlify CMS up locally, by downloading the netlify-git-api but first we need to set up the web configuration of the CMS system in the *config.yml* of the admin folder of the site (/mysitename/admin/config.yml).
+Open the file and pay attention to which repo and branch the backend points to and notice you can also set the local URL if you so choose.
+Here's an example of the first ten lines of the config.yml, which contain this information:
+```
+development:
+  backend:
+    name: netlify-api
+    url: http://localhost:8080
+
+production:
+  backend:
+    name: github-api
+    repo: owner/repo # Path to your Github repository
+    branch: master # Branch to update (master by default)
+```
+It's pretty self explanatory, but also very important to change, in particular, the repo and branch, before you can go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to the repo and branch you have created and now own!
 
 #### 1. The Netlify Git API.
 Since we want to show how this all work on your local computer as well as online, we will download the netlify-git-api that corresponds to your OS.
