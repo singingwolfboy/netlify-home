@@ -193,19 +193,19 @@ In most cases, there's nothing we need to configure, but for this build we need 
 ![jekyll_env_production.png](/uploads/jekyll_env_production.png)
 
 #### Step 6: Build Your Site
-Once you click save, Netlify will step in and take over, though it will let you know what's happening on the way, as seen in this screenshot:
+Once you click save, Netlify will step in and take over, though it will let you know what's happening on the way, as seen in this screen shot:
 ![siteisbuilding.png](/uploads/siteisbuilding.png)
 
 Now it’s time to sit back and relax, as the next step may take a few minutes. Take a break and Netlify will do the rest, while you watch the progress.
 
 #### 7. Register new Application.
 Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.  
-Next fill out the application information as seen in the screenshot below - you can name and describe it however you want, but it is imperative that you use the exact URL for the Authorization callback as this: **https://api.netlify.com/auth/done**
+Next fill out the application information as seen in the screen shot below - you can name and describe it however you want, but it is imperative that you use the exact URL for the Authorization callback as this: **https://api.netlify.com/auth/done**
 
 ![registernewapplication.png](/uploads/registernewapplication.png)
 
 You can disregard choosing an image, though we did, to help distinguish the application.
-Once you're done filling out, simply click the green *Register application* button and you will get to the following screenshot (well, it will be similar at least):
+Once you're done filling out, simply click the green *Register application* button and you will get to the following screen shot (well, it will be similar at least):
 
 ![clientidnsecret.png](/uploads/clientidnsecret.png)
 
@@ -214,7 +214,7 @@ What you need to take note of here, is the **Client ID** and the **Client Secret
 #### 8. Setup GitHub API Access.
 Return to Netlify and the site you just build and in the control panel select the **Access panel**.
 
-This is where we give the GitHub Api access to our site with the application we just registered and you need to enter the **Client ID** and the **Client Secret** from before, as seen in the screenshot below:
+This is where we give the GitHub Api access to our site with the application we just registered and you need to enter the **Client ID** and the **Client Secret** from before, as seen in the screen shot below:
 
 ![githubaccess.png](/uploads/githubaccess.png)
 
