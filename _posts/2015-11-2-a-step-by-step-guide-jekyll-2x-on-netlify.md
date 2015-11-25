@@ -43,10 +43,11 @@ To use the most current beta version of Jekyll:
 ```
 $ gem install jekyll --pre
 ```
+Keep in mind that this is also how it works with other site generators and their Gemfile's
 
 The gemfile is also where you would list the gems for the plugins your site is using and just as we saw with Jekyll, it's possible to specify *WHICH* version you wish to use, without limitations on which plugin and what versions are allowed! 
 
-For example when you're using github, you need to install github pages and to specify this in the gem file you'd use the following line: 
+For example when you're using GitHub, you need to install GitHub pages and to specify this in the gem file you'd use the following line: 
 ```
 $ gem 'jekyll-sitemap'
 ```
@@ -64,7 +65,7 @@ The following command will install the jekyll gem specified in the gemfile, alon
 ```
 $ bundle install
 ```
-Once you've used the command above, a gemfile.lock file will be created in your directory listing all installed gems (plugins dependencies etc.) and this ensures that netlify always uses the same version of Jekyll (and whatever else you specified in the gemfile) that you used to build your site.
+Once you've used the command above, a gemfile.lock file will be created in your directory listing all installed gems (plugins dependencies etc.) and this ensures that Netlify always uses the same version of Jekyll (and whatever else you specified in the gemfile) that you used to build your site.
 
 ### **GitHub Repository from Local Directory**
 <a id="githubfromlocal"></a>
@@ -132,29 +133,29 @@ We're done setting up the Jekyll page, so let's connect it with Netlify.
 #### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
 
-Creating a new site on netlify is simple. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started.
+Creating a new site on Netlify is simple. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started.
 
 #### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
-When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
+When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click *“Link to GitHub”*.
 
-#### Step 3: Authorize netlify
-You will be asked to provide your github login details:
+#### Step 3: Authorize Netlify
+You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
 
-It’s time to allow netlify and GitHub to talk to each other, so review the permissions and click authorize application.
+It’s time to allow Netlify and GitHub to talk to each other, so review the permissions and click authorize application.
 ![Authorize Netlify](/uploads/authorize.png)
 
-Like it says in the image above, netlify doesn’t store your GitHub access token on our servers! 
+Like it says in the image above, Netlify doesn’t store your GitHub access token on our servers! 
 
-If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
+If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
 ![Choose Repo](/uploads/chooserepo.png)
 
-Once you're connected to GitHub, netlify will show you a list of your Git repos, as seen above.
+Once you're connected to GitHub, Netlify will show you a list of your Git repos, as seen above.
 For the purpose of this tutorial we'll select the *“AmazingWood”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
@@ -164,12 +165,12 @@ In most cases and for the purpose of this tutorial, there's nothing we need to c
 
 #### Step 6: Build Your Site
 ![siteisbuilding.png](/uploads/siteisbuilding.png)
-Once you click save, netlify will step in and take over, though it will let you know what's happening on the way, as seen in the above screenshot.
+Once you click save, Netlify will step in and take over, though it will let you know what's happening on the way, as seen in the above screenshot.
 Now it’s time to sit back and relax, as the next step may take a few minutes. Take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
 ![Done](/uploads/naturalistpanda.png)
-Once netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
+Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
 
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate.
 
