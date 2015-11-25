@@ -137,7 +137,7 @@ Let's head over to [GitHub](https://github.com/) and create a new repo. We're na
 
 Once the repository has been named and created you're ready to go local.
 
-#### 3. Open Terminal & Initialize Directory. 
+#### 3. Initialize Directory. 
 We'll initialize the local directory as a git repository with the following command:
 ```
 $ git init
@@ -162,11 +162,11 @@ Return to the Terminal window/Command prompt and paste the remote repository URL
 ```
 $ git remote add origin My-Repository-URL
 ```
-To check that it's set up correctly, you can use the following command:
+Optional: To check that it's set up correctly, you can use the following command:
 ```
 $ git remote -v
 ```
-#### 6. Push.
+#### 6. Push to GitHub.
 The final task before we're done setting up and ready for Netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
 ```
 $ git push -u origin master
@@ -187,7 +187,8 @@ Creating a new site on netlify is simpler than with any other host. Once you’v
 Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
 When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
-Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click *“Link to GitHub”*.
+
+Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click the button *“Link to GitHub”*.
 
 #### Step 3: Authorize netlify
 You will be asked to provide your github login details:
@@ -196,7 +197,7 @@ You will be asked to provide your github login details:
 We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
 ![Authorize Netlify](/uploads/authorize.png)
 
-Like it says in the image above, Netlify doesn’t store your GitHub access token on our servers! 
+Like it says in the image above on the right, Netlify doesn’t store your GitHub access token on our servers! 
 
 If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
 
