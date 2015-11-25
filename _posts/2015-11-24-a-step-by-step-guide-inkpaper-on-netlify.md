@@ -195,11 +195,11 @@ You will be asked to provide your github login details:
 ![GitHub Login](/uploads/githublogin.png)
 
 We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
-![Authorize Netlify](/uploads/authorize.png)
+![Authorize Netlify](/uploads/authorization.png)
 
 Like it says in the image above on the right, Netlify doesn’t store your GitHub access token on our servers! 
 
-If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
+If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
 ![Choose Repo](/uploads/chooserepo.png)
