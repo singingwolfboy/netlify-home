@@ -26,7 +26,7 @@ If you are setting up a jekyll page from scratch check these two out:
 .
 
 #### 1. Set up your GemFile
-Your gemfile should be located in the root of your site. Open it in your text editor of choice and make sure that Jekyll is included and since we're hosting at Netlify's, it's also possible to specify *WHICH* version of Jekyll you wish to use! 
+Your Gemfile should be located in the root of your site. Open it in your text editor of choice and make sure that Jekyll is included and since we're hosting at Netlify's, it's also possible to specify *WHICH* version of Jekyll you wish to use! 
 See the following examples of including Jekyll:
 
 To use the most current version of Jekyll (as of this writing version 3) use this line:
@@ -43,11 +43,11 @@ To use the most current beta version of Jekyll:
 ```
 $ gem install jekyll --pre
 ```
-Keep in mind that this is also how it works with other site generators and their Gemfile's
+Keep in mind that this is also how it works with other site generators and their Gemfile.
 
-The gemfile is also where you would list the gems for the plugins your site is using and just as we saw with Jekyll, it's possible to specify *WHICH* version you wish to use, without limitations on which plugin and what versions are allowed! 
+The Gemfile is also where you would list the gems for the plugins your site is using and just as we saw with Jekyll, it's possible to specify *WHICH* version you wish to use, without limitations on which plugin and what versions are allowed! 
 
-For example when you're using GitHub, you need to install GitHub pages and to specify this in the gem file you'd use the following line: 
+For example when you're using jekylll you might want to add the jekyll-sitemap plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site and to specify this in the gem file you'd use the following line: 
 ```
 $ gem 'jekyll-sitemap'
 ```
@@ -61,16 +61,16 @@ $ gem 'octopress', '~> 3.0.0.rc.12'
 Open up a Terminal window (or the command prompt if you're on a Windows OS) and change the current working directory to your local project – the root directory of your site.
 
 #### 3. Bundle Install.
-The following command will install the jekyll gem specified in the gemfile, along with dependencies and plugins:
+The following command will install the jekyll gem specified in the Gemfile, along with dependencies and plugins:
 ```
 $ bundle install
 ```
-Once you've used the command above, a gemfile.lock file will be created in your directory listing all installed gems (plugins dependencies etc.) and this ensures that Netlify always uses the same version of Jekyll (and whatever else you specified in the gemfile) that you used to build your site.
+Once you've used the command above, a Gemfile.lock file will be created in your directory listing all installed gems (plugins dependencies etc.) and this ensures that Netlify always uses the same version of Jekyll (and whatever else you specified in the Gemfile) that you used to build your site.
 
 ### **GitHub Repository from Local Directory**
 <a id="githubfromlocal"></a>
 Let's face it. Some of us prefer to work on our local machines and as such, we need to know how to create and move a local site/directory to a new GitHub repository.
-First make sure you ran the _$ bundle install_ command as outlined above and that your gemfile is included with a gemfile.lock.  This is needed for the repository to work with Netlify.
+First make sure you ran the _$ bundle install_ command as outlined above and that your Gemfile is included with a Gemfile.lock.  This is needed for the repository to work with Netlify.
 
 #### 1. Create Repository. 
 If you haven't already done it, go to GitHub and create a new repository for your Jekyll page. 
