@@ -156,7 +156,7 @@ You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
 
 It’s time to allow Netlify and GitHub to talk to each other, so review the permissions and click authorize application.
-![Authorize Netlify](/uploads/authorize.png)
+![Authorize Netlify](/uploads/authorization.png)
 
 Like it says in the image above, Netlify doesn’t store your GitHub access token on our servers! 
 
@@ -171,10 +171,8 @@ For the purpose of this tutorial we'll select the *“AmazingWood”* repo we ju
 #### Step 5: Configure Your Settings
 ![Configure Settings](/uploads/configurerepo.png)
 
-In most cases, there's nothing we need to configure, but for this build we need to set an environment variable under the environment tab:
-```
-JEKYLL_ENV = production
-```
+In most cases, there's nothing we need to configure, but for this build we need to set an environment variable under the environment tab, as seen below:
+![jekyll_env_production.png](/uploads/jekyll_env_production.png)
 
 #### Step 6: Build Your Site
 Once you click save, Netlify will step in and take over, though it will let you know what's happening on the way, as seen in this screenshot:
@@ -184,8 +182,11 @@ Now it’s time to sit back and relax, as the next step may take a few minutes. 
 
 #### Step 7: Done
 ![Done](/uploads/naturalistpanda.png)
-Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
+Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screenshot. You now have access to the control panel for the site.
 
 The site starts as default public, but you can easily and quickly change this along with the options to add a custom domain name and change from the randomly generated name to something more appropriate.
 
-That's it for now.
+### **Trying Out Netlify CMS**
+We tried earlier in this step by step, to test the CMS system locally and it's virtually the same using it online, you just have to change the address to https://mysite.netlify.com/admin to access the CMS system and then use the login and password you created earlier.
+
+As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
