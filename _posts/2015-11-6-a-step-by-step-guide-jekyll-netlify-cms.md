@@ -15,7 +15,7 @@ Welcome to Netlify or should I say welcome to Netlify CMS, the first static site
 
 I know - it sounds too good to be true, but the age where static sites were defined by a lack of dynamic content, a lack of user interactivity and a lack of a CMS system is finally over.
 
-In this little guide, we'll do a step by step, which will show you how to install and configure your own copy of our **jekyll-netlify-cms* template.
+In this little guide, we'll do a step by step, which will show you how to install and configure your own copy of our **jekyll-netlify-cms** template.
 
 ### **Netlify CMS Environments**
 Before we start, I'd like to talk a little about Netlify CMS and environments, as it is possible to run a *netlify-git-api server* for when you're working locally, as opposed to setting the environment variable to production and then use *GitHub's API* when your site is online. 
@@ -192,7 +192,7 @@ Once you're done filling out, simply click the green *Register application* butt
 
 ![clientidnsecret.png](/uploads/clientidnsecret.png)
 
-What you need to take note of here, is the **Client ID** and the **Client Secret** in the upper right corner. You will need to provide both in the next step.
+What you need to take note of here, is the **Client ID** and the **Client Secret** in the upper right corner. You will need to provide both in the next step!
 
 #### 8. Setup GitHub API Access.
 Return to Netlify and the site you just build and in the control panel select the **Access panel**.
@@ -203,18 +203,7 @@ This is where we give the GitHub Api access to our site with the application we 
 
 Simply paste them into the windows where I've written *enter Client ID here* and below where I've written *enter Client Secret here* and you're good to go.
 
-
-
-
-
-
-#### Step 7: Done
-![Done](/uploads/naturalistpanda.png)
-Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screenshot. You now have access to the control panel for the site.
-
-The site starts as default public, but you can easily and quickly change this along with the options to add a custom domain name and change from the randomly generated name to something more appropriate.
-
-### **Trying Out Netlify CMS**
-We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to https://mysite.netlify.com/admin to access the CMS system and then use the login and password you created earlier.
+#### Step 9: Trying Out Netlify CMS
+We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and then use the login and password you created earlier.
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
