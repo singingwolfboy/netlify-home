@@ -50,9 +50,7 @@ Once broccoli-taco has installed with its dependencies, we use the following com
 $ cd /my-sites-directory
 $ broccoli-taco new broccoli-tacos
 ```
-Notice the user friendly messages and how well organized broccoli-taco is in terminal:
-
-![broccoli-taco-terminal.png](/uploads/broccoli-taco-terminal.png)
+Notice the user friendly guide, and how well organized broccoli-taco is in terminal.
 
 #### 3. Install Dependencies.
 As stated under *"Next steps"* in our terminal window, we need to install certain dependencies with the following command:
