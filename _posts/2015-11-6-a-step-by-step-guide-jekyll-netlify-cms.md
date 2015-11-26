@@ -221,6 +221,6 @@ This is where we give the GitHub Api access to our site with the application we 
 Simply paste them into the windows where I've written *enter Client ID here* and below where I've written *enter Client Secret here* and you're good to go.
 
 #### Step 9: Trying Out Netlify CMS
-We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and then use the login and password you created earlier.
+We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and and then log in with GitHub.
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
