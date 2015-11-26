@@ -46,7 +46,7 @@ $ git clone my-repo-url
 ```
 
 ### **Netlify CMS: Local Environment**
-We'll start by setting Netlify CMS up locally, by downloading the netlify-git-api but first we need to set up the web configuration of the CMS system in the *config.yml* of the admin folder of the site (/mysitename/admin/config.yml).
+We'll start by setting Netlify CMS up locally, by downloading the netlify-git-api but first we need to set up the web configuration of the CMS system in the *config.yml* of the admin folder of the site: **/mysitename/admin/config.yml**.
 Open the file and pay attention to which repo and branch the backend points to and notice you can also set the local URL if you so choose.
 Here's an example of the first ten lines of the config.yml, which contain this information:
 ```
