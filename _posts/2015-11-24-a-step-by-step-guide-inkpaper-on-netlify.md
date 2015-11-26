@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step Guide: InkPaper on Netlify"
 author: Jimmi Lee
-image: /uploads/inkpaperheader.png
+image: /uploads/inkpaperlogobig.png
 short_title: InkPaper on Netlify
 description: A small guide setting up InkPaper with GitHub and Netlify
 thumbnail: /uploads/inkpaperlogo.png
