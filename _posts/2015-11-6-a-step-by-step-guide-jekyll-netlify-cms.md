@@ -18,9 +18,9 @@ I know - it sounds too good to be true, but the age where static sites were defi
 In this little guide, we'll do a step by step, which will show you how to install and configure your own copy of our **jekyll-netlify-cms** template.
 
 ### **Netlify CMS Environments**
-Before we start, I'd like to talk a little about Netlify CMS and environments, as it is possible to run a *netlify-git-api server* for when you're working locally, as opposed to setting the environment variable to production and then use *GitHub's API* when your site is online. 
+Before we start, I'd like to talk a little about Netlify CMS and environments, as it is possible to run a *netlify-git-api server* for when you're working locally, as opposed to setting the environment variable to production and using *GitHub's API* when your site goes live. 
 
-We will describe both methods in this guide, by first setting up locally and second, deploy to Netlify and use GitHub's API online.
+We will describe both methods in this guide, by first setting up locally and second, by deploying to Netlify and using GitHub's API online.
 
 ### **Setup your GitHub Repository**
 We'll start by getting our own copy of the template and then we'll set up a local version and configure it, before letting Netlify build it, but one thing at the time.
@@ -29,8 +29,8 @@ We'll start by getting our own copy of the template and then we'll set up a loca
 First you need to fork your own copy of the [jekyll-netlify-cms template](https://github.com/netlify-templates/jekyll-netlify-cms) and give it a new name.
 
 #### 2. Local Work Space.
-Make a directory locally, open terminal (or the Windows prompt if you're using a Microsoft OS) and go to the location of this directory (cd my-local-repo-directory).
-This will be the location of your site, while working locally.
+Make a local directory, open terminal (or the Windows prompt if you're using a Microsoft OS) and go to the location of this directory (cd my-local-repo-directory).
+This will be the location of your local site.
 
 *For convenience sake, keep the terminal window/command prompt open throughout this guide*
 
@@ -221,6 +221,6 @@ This is where we give the GitHub Api access to our site with the application we 
 Simply paste them into the windows where I've written *enter Client ID here* and below where I've written *enter Client Secret here* and you're good to go.
 
 #### Step 9: Trying Out Netlify CMS
-We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and and then log in with GitHub.
+We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and then use the login and password you created earlier.
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
