@@ -18,7 +18,7 @@ It has a very elegant theme and is one of the fastest site generators to get up 
 *Please note that this guide assumes you have Ruby, git and bundle installed!*
 
 ### **Setup InkPaper**
-If you already have inkpaper up and running on GitHub and only wish to connect, start [here](#netlifystart) instead.
+If you already have InkPaper up and running on GitHub and only wish to connect, start [here](#netlifystart) instead.
 On the other hand, if you have InkPaper running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead and finally, if you're completely new to InkPaper, simply continue this guide chronologically.  
 
 #### 1. Download InkPaper.
@@ -36,7 +36,7 @@ $ tar xvzf ink_linux_amd64.tar.gz --directory 'Sites'
 $ mv /Sites/ink_linux_amd64 /Sites/InkPaper
 ```
 The first line simply takes us to the location of the downloaded package (change to your download location).
-The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination and the third line renames this directory to InkPaper.
+The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination using the *--directory* flag and the third line renames this directory to InkPaper.
 
 #### 3. Add ink to the Path.
 For ink (the site generator file of InkPaper) to run properly, we need to add it to the path.
@@ -123,9 +123,14 @@ $ cd '/InkPaper'
 $ bundle init
 ```
 The *bundle init* command will create a Gemfile in your directory, which is used to specify what gems and which versions you want to include when you build your site. 
-You can edit this file, adding the gems you want, but this is outside the scope of this tutorial and we will simply use it as is.
 
-Once you're ready and satisfied with your *Gemfile*, we need to run the following command:
+To build our site with ink, we need to specify this in the Gemfile, so open the file in your favorite text editor and change the content to include this line:
+```
+gem 'ink'
+```
+You can edit this file further, adding the gems/plugins you want. It's even possible to specify *WHICH* version of a given gem/plugin ypu want, but this is outside the scope of this tutorial.
+
+Once you're ready and satisfied with your *Gemfile*, save it and in terminal run the following command:
 ```
 $ bundle install 
 ```
@@ -207,16 +212,17 @@ Once you're connected to GitHub, GitHubNetlify will show you a list of your Git 
 For the purpose of this tutorial we'll select the *“InkPaper”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
+Fill in the configuration settings as seen in the screen shot below, using the master branch, the *"/blog/public"* directory and the *"ink build"* command.
 ![Configure Settings](/uploads/configureinkpaper.png)
 
-In most cases and for the purpose of this tutorial, there's nothing we need to configure, so we'll simply click save to go with the default options.
+Click the 'Save' button and watch the magic unfold.
 
 #### Step 6: Build Your Site
 ![siteisbuilding.png](/uploads/siteisbuilding.png)
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
-![Done](/uploads/naturalistpanda.png)
+![inkpaperfinito.jpg](/uploads/inkpaperfinito.jpg)
 Once GitHubNetlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
 
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate.
