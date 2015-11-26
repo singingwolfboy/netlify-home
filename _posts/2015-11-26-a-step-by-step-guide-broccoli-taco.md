@@ -28,8 +28,8 @@ If you want to find out more about broccoli-taco, head over to [broccoli-taco's 
 
 ### **How to cook a proper Broccoli Taco**
 We'll lead you through the simple steps of installing broccoli-taco, as well as creating and building a site with a basic setup.
-However, if you've already made a broccoli-taco site and simply want help getting it up on GitHub
-
+However, if you've already made a broccoli-taco site, but need help pushing it ti GitHub, start [here](#githubstart). If you've already got your broccoli-taco site on GitHub and only wish to connect, start [here](#netlifystart) instead.
+If you're completely new to broccoli-taco, simply continue this guide below.
 
 #### 1. Install broccoli-taco.
 Simply open up a terminal window or if you're using a microsoft OS, a command prompt and then use the following command:
