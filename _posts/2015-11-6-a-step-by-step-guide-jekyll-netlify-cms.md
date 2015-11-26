@@ -61,7 +61,7 @@ production:
     repo: owner/repo # Path to your Github repository
     branch: master # Branch to update (master by default)
 ```
-It's pretty self explanatory, but also very important to change, in particular, the repo and branch, before you can go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to the repo and branch you have created and now own!
+It's pretty self explanatory, but important to change, in particular, the repo and branch, before you can go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to the repo and branch you have created and now own!
 
 #### 1. The Netlify Git API.
 Since we want to show how this all work on your local computer as well as online, we will download the netlify-git-api that corresponds to your OS.
@@ -79,6 +79,8 @@ E.g. if your file was decompressed into the download folder, which is often the 
 ```
 $ cd 'my-download-folder'
 ```
+Naturally, change my-download-folder to your location.
+
 #### 2. Setup your Gemfile.
 We want to use Jekyll 3.0.0 in our example, along with the jekyll-sitemap plugin. 
 To do this, we open the Gemfile and change/add the following:
@@ -101,7 +103,7 @@ From the terminal window, from your local repo directory, we need to run the fol
 ```
 $ netlify-git-api users add
 ```
-Alternatively you can create a user, including the information necessary, like this:
+Alternatively you can create a user, including the information necessary in a one liner like this:
 ```
 $ netlify-git-api users add -n 'User Name' -e my@email -p mypassword
 ```
@@ -154,7 +156,7 @@ You'll be asked for login details for your account at GitHub and once they've be
 
 We're done setting up the Jekyll with Netlify CMS template page, so let's connect it with Netlify and build this thing.
 
-### **Connecting to Netlify and Deploy to Production Environment**
+### **Connect to Netlify and Deploy to Production Environment**
 <a id="netlifystart"></a>
 These final steps we need to go through are important ones and require that you pushed the repository to a GitHub repo you own!
 
@@ -191,7 +193,10 @@ For the purpose of this tutorial we'll select the *“AmazingWood”* repo we ju
 
 In most cases, there's nothing we need to configure, but for this build we need to set an environment variable under the environment tab, as seen below:
 ![jekyll_env_production.png](/uploads/jekyll_env_production.png)
-
+Take care that it's spelled exactly like shown, with capital letters on the left and normal letters to the right, like this:
+```
+JEKYLL_ENV = production
+```
 #### Step 6: Build Your Site
 Once you click save, Netlify will step in and take over, though it will let you know what's happening on the way, as seen in this screen shot:
 ![siteisbuilding.png](/uploads/siteisbuilding.png)
@@ -205,7 +210,7 @@ Next fill out the application information as seen in the screen shot below - you
 ![registernewapplication.png](/uploads/registernewapplication.png)
 
 You can disregard choosing an image, though we did, to help distinguish the application.
-Once you're done filling out, simply click the green *Register application* button and you will get to the following screen shot (well, it will be similar at least):
+Once you're done filling out, simply click the green **Register application** button and you will get to the following screen shot (well, it will be similar at least):
 
 ![clientidnsecret.png](/uploads/clientidnsecret.png)
 
@@ -214,13 +219,13 @@ What you need to take note of here, is the **Client ID** and the **Client Secret
 #### 8. Setup GitHub API Access.
 Return to Netlify and the site you just build and in the control panel select the **Access panel**.
 
-This is where we give the GitHub Api access to our site with the application we just registered and you need to enter the **Client ID** and the **Client Secret** from before, as seen in the screen shot below:
+This is where we give the GitHub Api access to our site with the application we just registered and you need to enter the **Client ID** and the **Client Secret** from above, as seen in the screen shot below:
 
 ![githubaccess.png](/uploads/githubaccess.png)
 
-Simply paste them into the windows where I've written *enter Client ID here* and below where I've written *enter Client Secret here* and you're good to go.
+Simply paste them into the windows where it says *enter Client ID here* and below where it says *enter Client Secret here* and you're good to go.
 
 #### Step 9: Trying Out Netlify CMS
-We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and then use the login and password you created earlier.
+We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and then log in with GitHub, since we're using GitHub auth when working online.
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
