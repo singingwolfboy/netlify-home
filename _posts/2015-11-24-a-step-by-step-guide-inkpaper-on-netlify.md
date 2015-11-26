@@ -222,9 +222,9 @@ Click the 'Save' button and watch the magic unfold.
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
-![inkpaperfinito.jpg](/uploads/inkpaperfinito.jpg)
 Once GitHubNetlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
+![inkpaperfinito.jpg](/uploads/inkpaperfinito.jpg)
 
-The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate.
+The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate, like we did with our new i-like-turtles page.
 
-That's it for now.
+Beautiful, simple and easy.
