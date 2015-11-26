@@ -6,7 +6,7 @@ short_title: Broccoli-Taco on Netlify
 description: A detailed guide to help you get broccoli-taco on Netlify.
 thumbnail: /uploads/broccoli-taco-logo.png
 cmsUserSlug: ""
-date: 2015-11-26 
+date: 2015-11-26T00:00:00.000Z
 tags: null
 ---
 
@@ -41,10 +41,9 @@ $ sudo npm install -g broccoli-taco
 #### 2. Create a Site .
 Once broccoli-taco has installed with its dependencies, we use the following commands to create a new site in our site directory named broccoli-tacos (change to your preferred directory location and name - we just could not come up with something better):
 ```
-$ broccoli-taco new '/Sites/broccoli-tacos/'
+$ cd /my-sites-directory
+$ broccoli-taco new broccoli-tacos
 ```
-Please note that if you give broccoli-taco the full path, it may get confused, as it installs into your home folder by default.  E.g. I tried '/home/username/Sites/broccoli-tacos/', but you can safely ommit the first part, as it will otherwise end up trying to install to '/home/username/home/username/Sites/broccoli-tacos/'.
-
 Notice the user friendly messages and how well organized broccoli-taco is in terminal:
 
 INSERT TERMINAL PIC HERE
@@ -52,8 +51,9 @@ INSERT TERMINAL PIC HERE
 #### 3. Install Dependencies.
 As stated under "Next steps" in our terminal window, we need to install certain dependencies with the following command:
 ```
-$ cd '/home/username/Sites/broccoli-tacos/' && npm install
+$ cd broccoli-tacos && npm install
 ```
+First we cd into our new site directory for broccoli-taco and next we install the dependencies.
 
 #### 4. Serve Site for Development.
 In the root of your broccoli-taco, run the following command:
