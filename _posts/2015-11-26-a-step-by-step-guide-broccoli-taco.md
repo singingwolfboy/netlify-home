@@ -32,14 +32,16 @@ We'll lead you through the simple steps of installing broccoli-taco, as well as 
 If you've already made a broccoli-taco site, but need help pushing it to GitHub, start [here](#githubstart). 
 
 If you've already got your broccoli-taco site on GitHub and only wish to connect, start [here](#netlifystart).
-  
+
 If you're completely new to broccoli-taco, simply continue this guide below.
 
 #### 1. Install broccoli-taco.
-Simply open up a terminal window or if you're using a microsoft OS, a command prompt and then use the following command:
+Open up a terminal window or if you're using a microsoft OS, a command prompt and then use the following command:
 ```
 $ sudo npm install -g broccoli-taco
 ```
+This will likely take a few minutes, just enough time to eat a couple of delicious Broccoli Tacos perhaps.
+
 *For convenience sake, keep the terminal window/command prompt open throughout this guide*
 
 #### 2. Create a Site .
