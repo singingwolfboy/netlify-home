@@ -46,10 +46,10 @@ $ broccoli-taco new broccoli-tacos
 ```
 Notice the user friendly messages and how well organized broccoli-taco is in terminal:
 
-INSERT TERMINAL PIC HERE
+![broccoli-taco-terminal.png](/uploads/broccoli-taco-terminal.png)
 
 #### 3. Install Dependencies.
-As stated under "Next steps" in our terminal window, we need to install certain dependencies with the following command:
+As stated under *"Next steps"* in our terminal window, we need to install certain dependencies with the following command:
 ```
 $ cd broccoli-tacos && npm install
 ```
