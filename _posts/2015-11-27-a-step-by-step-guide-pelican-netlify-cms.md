@@ -17,11 +17,13 @@ If you merely want to set up Pelican with continous deployment on Netlify, check
 
 *Please note that this guide assumes you have virtualenv, Ruby, git and bundle installed*
 
-### **Geting the Pelican-Netlify-CMS Template**
+### **Getting the Pelican Netlify CMS Template**
 We'll start by preparing the netlify-git-api CLI tool and then we'll clone the pelican-netlify-cms template repository to our local environment and set it all up.
 
 #### 1. The netlify-git-api CLI tool.
-Browse to the [netlify-git-api page](https://github.com/netlify/netlify-git-api/releases) and download the relevant version of the tool.  E.g. as I'm demonstrating this on Ubuntu, I will download the *linux.zip* file.
+Browse to the [netlify-git-api page](https://github.com/netlify/netlify-git-api/releases) and download the relevant version of the tool.  
+
+E.g. as I'm demonstrating this on Ubuntu, I will download the *linux.zip* file.
 
 Once the download is done, unpack the netlify-git-api executable and place it in your PATH. The methods for doing this are numerous and differ slightly depending on your operating system, but we used the following commands in Ubuntu, after using the GUI to unpack the file into our download folder and opening a terminal window (or the Command Prompt in a Microsoft OS):
 ```
@@ -83,3 +85,9 @@ In the second line we use `virtualenv` to create an isolated Python environment 
 Provided all the requirements installed as they should and that the server is running, we can now enjoy the fruits of our hard labour.
 To see the beautiful Pelican site, open up a browser at [localhost:8000](http://localhost:8000) and then try out the Netlify CMS system at [localhost:8000/admin](http://localhost:8000/admin) with the user account you made earlier.
 
+### **Deploy to Production Environment.**
+So far so good.
+It's time we push this repository to GitHub and it's important that you do so to a GitHub repository you own! 
+
+#### 1. Connect to Netlify.
+We're ready to start a new project at Netlify 
