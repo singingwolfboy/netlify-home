@@ -12,7 +12,7 @@ tags: null
 
 ### **Welcome to Netlify**
 Welcome to Netlify and todays article about a new and exciting Chinese technology - the InkPaper static site generator.
-Among the multitude of site generators that have come into existence in the past few years, this one stands out for its simplicity and extremely fast build time.
+Among the multitude of site generators that have come into existence in the past few years, this one stands out for its simplicity, Chinese language support and extremely fast build time and much more.
 It has a very elegant theme and is one of the fastest site generators to get up and running, as it has NO dependencies - all you have to do, is download and set it up.
 
 *Please note that this guide assumes you have Ruby, git and bundle installed!*
