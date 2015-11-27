@@ -48,6 +48,7 @@ $ cd '/home/AlcoholiO/Sites'
 $ git clone https://github.com/AlcoholiO/Pelican.git
 ```
 Substitute *https://github.com/AlcoholiO/Pelican.git* with your repository's URL.
+
 Note that you should NOT create a folder for the project, as it comes inside a folder structure. 
 
 #### 3. Setup the Netlify CMS server.
@@ -57,13 +58,13 @@ $ netlify-git-api users add
 ```
 Alternatively you can create a user, including the information necessary, in a one liner like this:
 ```
-$ netlify-git-api users add -n 'User Name' -e my@email -p mypassword
+$ netlify-git-api users add --name='User Name' --email=my@email.com --password=mypassword
 ```
-You need to create at least one user, to be able to test the system.
+You need to create at least one user, to be able to test the system and make sure the email is in a valid format, as in the example above (something@emailprovider.com).
 
 To start the Netlify CMS server, we then use the following command:
 ```
-netlify-git-api serve
+$ netlify-git-api serve
 ```
 ***Keep the Terminal Window/Command Prompt open to keep the server running!***
 
@@ -79,4 +80,6 @@ In the first line we simply enter our new local repository's directory with the 
 In the second line we use `virtualenv` to create an isolated Python environment for our site (`sudo apt-get install virtualenv` if you haven't already got it installed), then we activate/enter this environment in the third line and in the fourth line we install various requirements, before starting a devserver, which will run Pelican in regeneration mode as well as serve the output at *http://localhost:8000*.
 
 #### 4. Test Pelican and Netlify CMS.
-Open a browser and preview the site at [localhost:8000](http://localhost:8000) or check into the CMS system at [localhost:8000/admin](http://localhost:8000/admin).
+Provided all the requirements installed as they should and that the server is running, we can now enjoy the fruits of our hard labour.
+To see the beautiful Pelican site, open up a browser at [localhost:8000](http://localhost:8000) and then try out the Netlify CMS system at [localhost:8000/admin](http://localhost:8000/admin) with the user account you made earlier.
+
