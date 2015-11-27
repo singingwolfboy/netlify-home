@@ -101,5 +101,5 @@ If you haven't made one already, create an account and login at [Netlify](https:
 Creating a new site on Netlify is extremely simple. Once your account is created and you're logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started (depicted above).
 
 Next, select *Link to GitHub* and you'll be shown a list of your GitHub repositories, as seen in the screen shot below. We'll select the Pelican repository we made earlier.
-<INSERT SELECT REPOSITORY>
+![createsitepelican.png](/uploads/createsitepelican.png)
 
