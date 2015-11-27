@@ -89,5 +89,17 @@ To see the beautiful Pelican site, open up a browser at [localhost:8000](http://
 So far so good.
 It's time we push this repository to GitHub and it's important that you do so to a GitHub repository you own! 
 
+<INSERT PUSH TO GITHUB COMMANDS>
+
 #### 1. Connect to Netlify.
-We're ready to start a new project at Netlify 
+We're ready to start a new project. 
+
+If you haven't made one already, create an account and login at [Netlify](https://www.netlify.com/).
+
+![Netlify New Site](/uploads/newsitebut.png)
+
+Creating a new site on Netlify is extremely simple. Once your account is created and you're logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started (depicted above).
+
+Next, select *Link to GitHub* and you'll be shown a list of your GitHub repositories, as seen in the screen shot below. We'll select the Pelican repository we made earlier.
+<INSERT SELECT REPOSITORY>
+
