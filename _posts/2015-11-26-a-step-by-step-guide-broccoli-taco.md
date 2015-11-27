@@ -36,11 +36,11 @@ If you've already got your broccoli-taco site on GitHub and only wish to connect
 If you're completely new to broccoli-taco, simply continue this guide below.
 
 #### 1. Install broccoli-taco.
-Open up a terminal window or if you're using a microsoft OS, a command prompt and then use the following command:
+Open up a terminal window or if you're using a Microsoft OS, a command prompt and then use the following command:
 ```
 $ sudo npm install -g broccoli-taco
 ```
-This will likely take a few minutes, just enough time to eat a couple of delicious Broccoli Tacos perhaps.
+This will likely take a few minutes, just enough time to cook a couple of delicious Broccoli Tacos.
 
 *For convenience sake, keep the terminal window/command prompt open throughout this guide*
 
@@ -58,6 +58,8 @@ As stated under *"Next steps"* in our terminal window, we need to install certai
 $ cd broccoli-tacos && npm install
 ```
 First we cd into our new site directory for broccoli-taco and next we install the dependencies.
+
+Again please note that this may take a few minutes, so perhaps this is a good time to eat those Tacos.
 
 #### 4. Serve Site for Development.
 In the root of your broccoli-taco, run the following command:
