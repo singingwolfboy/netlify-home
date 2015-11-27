@@ -39,7 +39,7 @@ $ echo $PATH
 #### 2. Fork and Clone the Template.
 First we need to fork our own copy of the [pelican-netlify-cms template](https://github.com/netlify-templates/pelican-netlify-cms) and then rename it - we simply named ours Pelican.
 
-Second, to make a local clone first we need to get the remote GitHub URL (it will look like https://github.com/AccountName/RepoName.git or similar) from the Pelican repo we just made. The button looks like this (or similar):
+Second, to make a local clone first we need to get the remote GitHub URL (it will look like https://github.com/AccountName/RepoName.git or similar) from the Pelican repo we just made. The button looks like this (or similar): 
 ![pelicanlinkbutton.png](/uploads/pelicanlinkbutton.png)
 
 The commands below first take us to the location where we want to put our new Pelican site (use cd my-site-folder) and the second command uses git to create the clone:
