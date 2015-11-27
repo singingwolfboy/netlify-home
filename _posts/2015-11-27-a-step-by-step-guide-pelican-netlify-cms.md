@@ -15,6 +15,8 @@ While static site generators with CMS capability may be a brand new thing, we *d
 
 If you merely want to set up Pelican with continous deployment on Netlify, check out [this splendid article](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-pelican-on-netlify) by Mr. Aaron Autrand and otherwise keep reading.
 
+*Please note that this guide assumes you have virtualenv, Ruby, git and bundle installed*
+
 ### **Geting the Pelican-Netlify-CMS Template**
 We'll start by preparing the netlify-git-api CLI tool and then we'll clone the pelican-netlify-cms template repository to our local environment and set it all up.
 
@@ -36,30 +38,45 @@ $ echo $PATH
 #### 2. Fork and Clone the Template.
 First we need to fork our own copy of the [pelican-netlify-cms template](https://github.com/netlify-templates/pelican-netlify-cms) and then rename it - we simply named ours Pelican.
 
-Second, we make a local directory to clone our new fork into. Open terminal and go to the location of this directory as seen in the cd command (cd 'your-sites-folde').
-The second command below creates the directory we will use for the clone:
-```
-$ cd '/home/AlcoholiO/Sites'
-$ mkdir 'Pelican'
-```
-To make a local clone we first need to get the remote GitHub URL (it will look like https://github.com/AccountName/RepoName.git or similar) from the Pelican repo we just made- the button looks like this:
+Second, to make a local clone first we need to get the remote GitHub URL (it will look like https://github.com/AccountName/RepoName.git or similar) from the Pelican repo we just made- the button looks like this:
 
 ![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
 
-Then we open a terminal window to the location of our local repo directory created above and finally we use the following command:
+The commands below first take us to the location where we want to put our new Pelican site (use cd my-site-folder) and the second command uses git to create the clone:
 ```
-$ cd Pelican
+$ cd '/home/AlcoholiO/Sites'
 $ git clone https://github.com/AlcoholiO/Pelican.git
 ```
 Substitute *https://github.com/AlcoholiO/Pelican.git* with your repository's URL.
+Note that you should NOT create a folder for the project, as it comes inside a folder structure. 
 
 #### 3. Setup the Netlify CMS server.
 To start the Netlify CMS server, we need to run the following command for each user we wish to add to the system (you will be asked for an email, a name and a password):
 ```
-netlify-git-api users add
+$ netlify-git-api users add
 ```
 Alternatively you can create a user, including the information necessary, in a one liner like this:
 ```
 $ netlify-git-api users add -n 'User Name' -e my@email -p mypassword
 ```
 You need to create at least one user, to be able to test the system.
+
+To start the Netlify CMS server, we then use the following command:
+```
+netlify-git-api serve
+```
+***Keep the Terminal Window/Command Prompt open to keep the server running!***
+
+Before we can test the system there's a few preparatory measures to be made to our Pelican site, so open up a new terminal window (do not use the one that's running the server) and enter the following commands, one by one (you can ommit the comments):
+```
+$ cd Pelican   
+$ virtualenv pelican-env   
+$ source pelican-env/bin/activate   
+$ pip install -r requirements.txt
+$ make devserver
+```
+In the first line we simply enter our new local repository's directory with the good old `cd` command.
+In the second line we use `virtualenv` to create an isolated Python environment for our site (`sudo apt-get install virtualenv` if you haven't already got it installed), then we activate/enter this environment in the third line and in the fourth line we install various requirements, before starting a devserver, which will run Pelican in regeneration mode as well as serve the output at *http://localhost:8000*.
+
+#### 4. Test Pelican and Netlify CMS.
+Open a browser and preview the site at [localhost:8000](http://localhost:8000) or check into the CMS system at [localhost:8000/admin](http://localhost:8000/admin).
