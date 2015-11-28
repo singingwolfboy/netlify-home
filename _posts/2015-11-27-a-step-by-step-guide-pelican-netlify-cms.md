@@ -30,7 +30,7 @@ Once the download is done, unpack the netlify-git-api executable and place it in
 $ cd 'my-downloads'
 $ sudo mv netlify-git-api '/usr/local/bin'
 ```
-First we cd into the downloads folder and next we move the netlify-git-api executable to a folder that is in the PATH, so that it can be invoked easily from the terminal.
+First we cd into the downloads folder (since this is were we unpacked the file to) and next we move the netlify-git-api executable to a folder that is in the PATH, so that it can be invoked easily from the terminal.
 
 If you're unsure of where to move the file, you can run the following command to see which directories are in the PATH on your computer:
 ```
@@ -51,7 +51,7 @@ $ git clone https://github.com/AlcoholiO/Pelican.git
 ```
 Substitute *https://github.com/AlcoholiO/Pelican.git* with your repository's URL.
 
-Note that you should NOT create a folder for the project, as it comes inside a folder structure. 
+Note that you should NOT create a folder for the project, as it comes inside a folder structure already. 
 
 #### 3. Setup the Netlify CMS server.
 To start the Netlify CMS server, we need to run the following command for each user we wish to add to the system (you will be asked for an email, a name and a password):
@@ -62,7 +62,7 @@ Alternatively you can create a user, including the information necessary, in a o
 ```
 $ netlify-git-api users add --name='User Name' --email=my@email.com --password=mypassword
 ```
-You need to create at least one user, to be able to test the system and make sure the email is in a valid format, as in the example above (something@emailprovider.com).
+You need to create at least one user, to be able to test the system and make sure the email is in a valid format, as in the example above (e.g. emailname@emailprovider.com).
 
 To start the Netlify CMS server, we then use the following command:
 ```
@@ -70,7 +70,7 @@ $ netlify-git-api serve
 ```
 ***Keep the Terminal Window/Command Prompt open to keep the server running!***
 
-Before we can test the system there's a few preparatory measures to be made to our Pelican site, so open up a new terminal window (do not use the one that's running the server) and enter the following commands, one by one (you can ommit the comments):
+Before we can test the system there's a few preparatory measures to be made to our Pelican site, so open up a *new* terminal window (do not use the one that's running the server) and enter the following commands, one by one:
 ```
 $ cd Pelican   
 $ virtualenv pelican-env   
@@ -81,9 +81,19 @@ $ make devserver
 In the first line we simply enter our new local repository's directory with the good old `cd` command.
 In the second line we use `virtualenv` to create an isolated Python environment for our site (`sudo apt-get install virtualenv` if you haven't already got it installed), then we activate/enter this environment in the third line and in the fourth line we install various requirements, before starting a devserver, which will run Pelican in regeneration mode as well as serve the output at *http://localhost:8000*.
 
+It's important to understand that the majority of the commands above, need not be used every single time you take a peek at your Pelican, but rather just once when you're setting the environment up! However, when you want to use the CMS system, the Netlify CMS server must be running and for the Pelican to fly proper, you will still need to use these commands (in the 2nd terminal window, so as not to close down the  Netlify CMS server):
+```
+$ cd Pelican   
+$ source pelican-env/bin/activate   
+$ make devserver
+```
+This makes sense, since the second time around, the pelican environment has already been created and just need to be activated after you've located the correct directory and of course the final step is to run the devserver for Pelican.
+
 #### 4. Test Pelican and Netlify CMS.
 Provided all the requirements installed as they should and that the server is running, we can now enjoy the fruits of our hard labour.
 To see the beautiful Pelican site, open up a browser at [localhost:8000](http://localhost:8000) and then try out the Netlify CMS system at [localhost:8000/admin](http://localhost:8000/admin) with the user account you made earlier.
+
+Let's take a look at the CMS system, by logging in and writing a quick article.
 
 ### **Deploy to Production Environment.**
 So far so good.
@@ -102,4 +112,3 @@ Creating a new site on Netlify is extremely simple. Once your account is created
 
 Next, select *Link to GitHub* and you'll be shown a list of your GitHub repositories, as seen in the screen shot below. We'll select the Pelican repository we made earlier.
 ![createsitepelican.png](/uploads/createsitepelican.png)
-
