@@ -168,15 +168,17 @@ You'll notice that Netlify detects the Pelican build command to be `pelican cont
 Once you click save, Netlify will step in and take over, while keeping you informed through a live build log, as seen in this screen shot:
 ![pelicanlivebuildlog.png](/uploads/pelicanlivebuildlog.png)
 
-Taking a short break now might make sense, as the next step may take as much as a few minutes (depending on how much content you've created). Netlify will do the work.
+Taking a short break now might make sense, as the next step may take as much as a few minutes (depending on how much content you've created). Don't worry - Netlify will do the work while you relax.
 
 #### 4. Register new Application.
 Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.  
-Next fill out the application information as seen in the screen shot below - you can name and describe it however you want, but it is imperative that you use the exact URL for the Authorization callback as this: **https://api.netlify.com/auth/done**
+Next fill out the application information as seen in the screen shot below - you can name and describe it however you want, but it is imperative that you use the exact URL for the Authorization callback like this: `https://api.netlify.com/auth/done`
+Use the screen shot below as an example:
 
 ![registernewapplication.png](/uploads/registernewapplication.png)
 
 You can disregard choosing an image, though we did, to help distinguish the application.
+
 Once you're done filling out, simply click the green **Register application** button and you will get to the following screen shot (well, it will be similar at least):
 
 ![clientidnsecret.png](/uploads/clientidnsecret.png)
@@ -193,6 +195,9 @@ This is where we give the GitHub Api access to our site with the application we 
 Simply paste them into the windows where it says *enter Client ID here* and below where it says *enter Client Secret here* and you're good to go.
 
 #### 6: Trying Out Netlify CMS
-We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and then log in with GitHub, since we're using GitHub auth when working online.
+We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** (change to the URL of your site) to access the CMS system and then log in with GitHub, since we're using GitHub auth when working online.
+
+This screen shot depicts our CMS system with Pelican, after logging in:
+![pelicannetlifycms.png](/uploads/pelicannetlifycms.png)
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
