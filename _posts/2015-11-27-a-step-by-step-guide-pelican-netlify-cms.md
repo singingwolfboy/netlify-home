@@ -161,5 +161,11 @@ Next, select *Link to GitHub* and you'll be shown a list of your GitHub reposito
 ![createsitepelican.png](/uploads/createsitepelican.png)
 
 #### 2. Configure Build.
-You'll notice that Netlify detects the Pelican build command to be pelican content, but we'll change that to make publish instead, while using the /output as Dir, as seen in this screen shot:
+You'll notice that Netlify detects the Pelican build command to be `pelican content`, but we'll change that to `make publish` instead, while using the `/output` as Dir, as seen in this screen shot:
 ![buildpelican.png](/uploads/buildpelican.png)
+
+#### 3. Build Your Site.
+Once you click save, Netlify will step in and take over, while keeping you informed through a terminal-like window, as seen in this screen shot:
+![pelicanlivebuildlog.png](/uploads/pelicanlivebuildlog.png)
+
+Taking a short break now might make sense, as the next step may take as much as a few minutes (depending on how much content you've created). Netlify will do the work.
