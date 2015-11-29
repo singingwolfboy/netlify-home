@@ -15,10 +15,8 @@ Welcome to Netlify and todays article about a new and exciting Chinese technolog
 Among the multitude of site generators that have come into existence in the past few years, this one stands out for its simplicity, Chinese language support and extremely fast build time and much more.
 It has a very elegant theme and is one of the fastest site generators to get up and running, as it has NO dependencies - all you have to do, is download and set it up.
 
-*Please note that this guide assumes you have Ruby, git and bundle installed!*
-
 ### **Setup InkPaper**
-If you already have InkPaper up and running on GitHub and only wish to connect, start [here](#netlifystart) instead.
+If you already have an InkPaper repository forked on GitHub and only wish to connect, start [here](#netlifystart) instead.
 On the other hand, if you have InkPaper running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead and finally, if you're completely new to InkPaper, simply continue this guide chronologically.  
 
 #### 1. Download InkPaper.
@@ -29,29 +27,36 @@ The first thing you need to do is head over to [InkPapers webpage](http://www.in
 We need to extract the downloaded package and change its folder name.
 These actions both differ depending on your operating system, yet are usually fairly simple. 
 
-In this example on Linux we open terminal (in Windows, your command prompt) and write the following commands:
+In this example on Linux we open terminal (in Windows, your command prompt) and write the following commands (change to your download folder, file name, site location and site name):
 ```
 $ cd 'downloads'
 $ tar xvzf ink_linux_amd64.tar.gz --directory 'Sites'
-$ mv /Sites/ink_linux_amd64 /Sites/InkPaper
+$ cd 'Sites'
+$ mv ink_linux_amd64 InkPaper
 ```
 The first line simply takes us to the location of the downloaded package (change to your download location).
-The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination using the *--directory* flag and the third line renames this directory to InkPaper.
+The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination using the *--directory* flag. The third line takes us to the location where we keep our sites (and just now unpacked the file to) and the fourth line renames this directory to InkPaper.
 
-#### 3. Add ink to the Path.
-For ink (the site generator file of InkPaper) to run properly, we need to add it to the path.
-This action is also different, depending on the operating system in use, but continuing the example in Linux, we would use these commands: 
+#### 3. Preparing ink.
+If you are using OSX or a Windows OS, rather than Linux, it is important that you also download the Linux version of the ink executable, as this is the version needed when building on Netlify! 
+
+For this reason, we will move our ink executable into a *bin* folder in the root of the site and rename it *ink.linux* and if you're on a Windows or OSX machine, make sure you also keep the ink executable needed by your OS to run locally.  E.g. create the bin folder as below and by all means, rename the linux version of the ink file to ink.linux as we do in the command example below, but also keep an ink.osx OR an ink.ms file in there (for example) for local use.
+
+As we're using Linux however, we only need one ink executable and to put it in the bin folder and rename it we'll do the following:
 ```
 $ cd InkPaper
-$ sudo mv ink '/usr/local/bin'
+$ mkdir bin
+$ mv ink '/home/user/Sites/InkPaper/bin/ink.linux'
 ```
-In the first line we enter the newly renamed directory and in the second line we move the ink executable to a location that is in the PATH, so that it can be invoked from the terminal. 
+In the first line we enter the newly renamed directory and in the second line we create a bin folder, while in the third and final line we copy and rename the ink executable to the bin folder (change to your location and preferred file name). 
 
 #### 4. Preview InkPaper.
 Provided you've still got your terminal window open in the InkPaper directory, all you need to do is enter the following command, lean back and check out the beautiful result in a web browser:
 ```
-$ ink preview
+$ ./bin/ink.linux preview
 ```
+Please note that the official documentation merely uses `ink preview` as the command, but as we've moved and renamed the file, we also have to change the command as above.
+
 Open your web browser of choice and enter *'http://localhost:8000/'* in the address bar and there you go.
 
 Quite honestly - could it get any easier?
@@ -104,51 +109,27 @@ Markdown Format's Body
 ```
 Notice that the content is written in markdown below the three dashes and that you only need one set of these, as opposed to the more commonplace practice of placing the article information between two sets of dashes.
 
-As long as you're working on the page, the *ink preview* command we entered in terminal earlier, will automatically watch and rebuild the source directory, so you can see your changes locally and instantly, by simply refreshing the browser.
+As long as you're working on the page, the `./bin/ink.linux preview` command we entered in terminal earlier, will automatically watch and rebuild the source directory, so you can see your changes locally and instantly, by simply refreshing the browser.
 
 For further information about ink commands, customizing InkPaper and choosing or modifying a theme, see the [InkPaper getting started webpage](http://www.inkpaper.io/blog/post/2015/03/01/ink-blog-tool-en.html).
 
 ### **Setup your GitHub Repository**
 <a id="githubstart"></a>
-Now we need to prepare the site for GitHub and then set up the GitHub repository.
+Let's set up a GitHub repository and push our site there.
 
-#### 1. Prepare the Project.
-Open up a Terminal window to the local InkPaper directory (or the command prompt if you're on a Windows OS).
-
-*Keep the Terminal Window/Command Prompt open, in between steps for your own convenience!*
-
-For everything to run smoothly and so that Netlify knows how to build your project, we need to initialize bundle on the project with the following commands, where the first takes us to the correct project and the second line takes care of the initialization:
-```
-$ cd '/InkPaper'
-$ bundle init
-```
-The *bundle init* command will create a Gemfile in your directory, which is used to specify what gems and which versions you want to include when you build your site. 
-
-To build our site with ink, we need to specify this in the Gemfile, so open the file in your favorite text editor and change the content to include this line:
-```
-gem 'ink'
-```
-You can edit this file further, adding the gems/plugins you want. It's even possible to specify *WHICH* version of a given gem/plugin ypu want, but this is outside the scope of this tutorial.
-
-Once you're ready and satisfied with your *Gemfile*, save it and in terminal run the following command:
-```
-$ bundle install 
-```
-If you look in the site directory again, the *Gemfile* is now accompanied by a *Gemfile.lock*. This information is needed so that Netlify can ensure that the same versions of gems/plugins are used, to avoid any unwanted surprises.
-
-#### 2. Create your Git Repo.
-Let's head over to [GitHub](https://github.com/) and create a new repo. We're naming ours InkPaper and we'll postpone adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
+#### 1. Create your Git Repo.
+Head over to [GitHub](https://github.com/) and create a new repo. We're naming ours InkPaper and we'll postpone adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
 ![createrepo.png](/uploads/createrepo.png)
 
 Once the repository has been named and created you're ready to go local.
 
-#### 3. Initialize Directory. 
+#### 2. Initialize Directory. 
 We'll initialize the local directory as a git repository with the following command:
 ```
 $ git init
 ```
 
-#### 4. Add & Commit Files. 
+#### 3. Add & Commit Files. 
 We need to add the files from our local directory to this git repository and stage them for their first commit with the following line in Terminal/Command Prompt:
 ```
 $ git add .
@@ -158,7 +139,7 @@ Commit the files you just staged in your local repository by entering the follow
 $ git commit -m 'First commit'
 ```
 
-#### 5. Get & Add Remote URL. 
+#### 4. Get & Add Remote URL. 
 ![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
 
 It's now time to return to the GitHub repository and get the URL for this remote repository where your local repository will be pushed.
@@ -171,7 +152,7 @@ Optional: To check that it's set up correctly, you can use the following command
 ```
 $ git remote -v
 ```
-#### 6. Push to GitHub.
+#### 5. Push to GitHub.
 The final task before we're done setting up and ready for Netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
 ```
 $ git push -u origin master
@@ -212,8 +193,8 @@ Once you're connected to GitHub, GitHubNetlify will show you a list of your Git 
 For the purpose of this tutorial we'll select the *“InkPaper”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
-Fill in the configuration settings as seen in the screen shot below, using the master branch, the *"/blog/public"* directory and the *"ink build"* command.
-![Configure Settings](/uploads/configureinkpaper.png)
+Fill in the configuration settings as seen in the screen shot below, using the master branch, the *"/blog/public"* directory and the *"./bin/ink.linux build"* command.
+![paperconfig.png](/uploads/paperconfig.png)
 
 Click the 'Save' button and watch the magic unfold.
 
@@ -223,8 +204,8 @@ Once you click save, Netlify will step in and take over, though it will let you 
 
 #### Step 7: Done
 Once GitHubNetlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
-![inkpaperfinito.jpg](/uploads/inkpaperfinito.jpg)
+![inkpaperresult.png](/uploads/inkpaperresult.png)
 
-The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate, like we did with our new i-like-turtles page.
+The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate (we named ours InkPaper).
 
-Beautiful, simple and easy.
+Beautiful, simple and easy.!
