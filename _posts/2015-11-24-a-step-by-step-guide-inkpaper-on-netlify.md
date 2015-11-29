@@ -205,14 +205,12 @@ Fill in the configuration settings as seen in the screen shot below, using the m
 Click the *'Save'* button and watch the magic unfold.
 
 #### Step 6: Build Your Site
-![inkpaperbuilding.png](/uploads/inkpaperbuilding.png)
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
 Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
 ![inkpaperresult.png](/uploads/inkpaperresult.png)
 
-You now have access to the site control panel.
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate (we named ours InkPaper).
 
 Beautiful, simple and easy.!
