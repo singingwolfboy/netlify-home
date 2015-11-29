@@ -13,11 +13,11 @@ tags: null
 ### **Welcome to Netlify CMS**
 While static site generators with CMS capability may be a brand new thing, we *did* cover Netlify CMS previously, with the Jekyll version of our templates [here](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-jekyll-netlify-cms) and today we'll take a look at how to set up our *pelican-netlify-cms* template in much the same manner.
 
-If you merely want to set up Pelican with continous deployment on Netlify, check out [this splendid article](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-pelican-on-netlify) by Mr. Aaron Autrand and otherwise keep reading.
+If you merely want to set up Pelican with continous deployment on Netlify, check out [this splendid article](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-pelican-on-netlify) by Mr. Aaron Autrand and otherwise, please keep reading.
 
-*Please note that this guide assumes you have virtualenv, Ruby, git and bundle installed*
+*Please note that this guide assumes you have virtualenv, Ruby, git and bundle installed.*
 
-### **Getting the Pelican Netlify CMS Template**
+### **Deploying Locally**
 We'll start by preparing the netlify-git-api CLI tool and then we'll clone the pelican-netlify-cms template repository to our local environment and set it all up.
 
 #### 1. The netlify-git-api CLI tool.
@@ -25,12 +25,16 @@ Browse to the [netlify-git-api page](https://github.com/netlify/netlify-git-api/
 
 E.g. as I'm demonstrating this on Ubuntu, I will download the *linux.zip* file.
 
-Once the download is done, unpack the netlify-git-api executable and place it in your PATH. The methods for doing this are numerous and differ slightly depending on your operating system, but we used the following commands in Ubuntu, after using the GUI to unpack the file into our download folder and opening a terminal window (or the Command Prompt in a Microsoft OS):
+Once the download is done, unpack the netlify-git-api executable and place it in your PATH. The methods for doing this are numerous and differ slightly depending on your operating system and can usually be done easily through the graphical user interface. 
+
+We used the following commands in a terminal window (the Command Prompt in a Microsoft OS):
 ```
-$ cd 'my-downloads'
+$ cd 'downloads'
+$ unzip linux.zip 
+$ cd linux
 $ sudo mv netlify-git-api '/usr/local/bin'
 ```
-First we cd into the downloads folder (since this is were we unpacked the file to) and next we move the netlify-git-api executable to a folder that is in the PATH, so that it can be invoked easily from the terminal.
+On the first line we start by entering the downloads folder and on the second line we unzip the downloaded package. We then cd into the unpacked linux directory on the third line and finally we move the netlify-git-api executable to a folder that is in the PATH, so that it can be invoked easily from the terminal.
 
 If you're unsure of where to move the file, you can run the following command to see which directories are in the PATH on your computer:
 ```
@@ -46,10 +50,10 @@ Second, to make a local clone first we need to get the remote GitHub URL (it wil
 
 The commands below first take us to the location where we want to put our new Pelican site (use `cd my-site-folder`) and the second command uses git to create the clone:
 ```
-$ cd '/home/AlcoholiO/Sites'
-$ git clone https://github.com/AlcoholiO/Pelican.git
+$ cd '/home/username/Sites'
+$ git clone https://github.com/github_username/Pelican.git
 ```
-Substitute *https://github.com/AlcoholiO/Pelican.git* with your repository's URL.
+Substitute *https://github.com/github_username/Pelican.git* with your repository's URL.
 
 Note that you should NOT create a folder for the project, as it comes inside a folder structure already. 
 
