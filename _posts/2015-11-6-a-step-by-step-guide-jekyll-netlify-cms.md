@@ -105,7 +105,7 @@ $ netlify-git-api users add
 ```
 Alternatively you can create a user, including the information necessary in a one liner like this:
 ```
-$ netlify-git-api users add -n 'User Name' -e my@email -p mypassword
+$ netlify-git-api users add --name='User Name' --email=my@email.com --password=mypassword
 ```
 You need to create at least one user, to properly test the system.
 
