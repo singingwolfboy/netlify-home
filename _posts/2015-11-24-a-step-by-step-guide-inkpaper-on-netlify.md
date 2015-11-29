@@ -205,6 +205,7 @@ Fill in the configuration settings as seen in the screen shot below, using the m
 Click the *'Save'* button and watch the magic unfold.
 
 #### Step 6: Build Your Site
+![inkpaper_building.png](/uploads/inkpaper_building.png)
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
