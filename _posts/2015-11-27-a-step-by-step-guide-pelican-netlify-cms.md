@@ -168,7 +168,8 @@ You'll notice that Netlify detects the Pelican build command to be `pelican cont
 A few notes on the difference between the two commands, though both will work with Netlify.
 
 The build command `make publish` will generate your site for production using the settings in the `pelicanconf.py` file. The *advantage* of this method is that the make command is built into most POSIX systems and won't require installing anything else to be able to use it. The problem though is that non-POSIX systems such as Windows don't include make and that it can be a bit of a long-haired affair to do so!
-The `pelican content` command on the other hand, comes with pelican and will generate or re-generate your site with any production specific settings and as such, would probably be the more likely candidate in most cases..
+
+The `pelican content` command on the other hand, comes with pelican and will generate your site with any production specific settings and as such, would probably be the more likely candidate in most cases.
 
 #### 3. Build Your Site.
 Once you click save, Netlify will step in and take over, while keeping you informed through a live build log, as seen in this screen shot:
