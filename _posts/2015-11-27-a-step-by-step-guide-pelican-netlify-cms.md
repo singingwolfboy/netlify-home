@@ -107,7 +107,8 @@ So far so good.
 It's time we push this repository back up to GitHub, to see the changes and try out the production environment.
 However, before we do so, we need to make sure our web configuration file is set up correctly. 
 
-Browse to the */Pelican/content/admin* folder and open up the **config.yml** file in a text editor. In the top of the file, under prodution, you'll find a line that says `repo: netlify-templates/pelican-netlify-cms` and one that says `branch: master` - these have to point to your repository and branch (seems quite logical doesn't it?).
+Browse to the */Pelican/content/admin* folder and open up the **config.yml** file in a text editor (change the path to your sites directory). In the top of the file, under prodution, you'll find a line that says `repo: netlify-templates/pelican-netlify-cms` and one that says `branch: master` - these have to point to your repository and branch (seems quite logical doesn't it?).
+
 Below, to better illustrate what I'm talking about, you'll see the first 10 lines of the config.yml file:
 ```
 backend:
@@ -163,6 +164,11 @@ Next, select *Link to GitHub* and you'll be shown a list of your GitHub reposito
 #### 2. Configure Build.
 You'll notice that Netlify detects the Pelican build command to be `pelican content`, but we'll change that to `make publish` instead, while using the `/output` as Dir, as seen in this screen shot:
 ![buildpelican.png](/uploads/buildpelican.png)
+
+A few notes on the difference between the two commands, though both will work with Netlify.
+
+The build command `make publish` will generate your site for production using the settings in the `pelicanconf.py` file. The *advantage* of this method is that the make command is built into most POSIX systems and won't require installing anything else to be able to use it. The problem though is that non-POSIX systems such as Windows don't include make and that it can be a bit of a long-haired affair to do so!
+The `pelican content` command on the other hand, comes with pelican and will generate or re-generate your site with any production specific settings and as such, would probably be the more likely candidate in most cases..
 
 #### 3. Build Your Site.
 Once you click save, Netlify will step in and take over, while keeping you informed through a live build log, as seen in this screen shot:
