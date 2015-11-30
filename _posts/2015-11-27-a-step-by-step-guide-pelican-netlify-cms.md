@@ -179,7 +179,7 @@ Taking a short break now might make sense, as the next step may take as much as 
 
 #### 4. Register new Application.
 Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.  
-Next fill out the application information as seen in the screen shot below - you can name and describe it however you want, but it is imperative that you use the exact URL for the Authorization callback like this: `https://api.netlify.com/auth/done`
+Next fill out the application information as seen in the screen shot below - you can name and describe it however you want, but it is important  that you use the exact URL for the Authorization callback like this: `https://api.netlify.com/auth/done`
 Use the screen shot below as an example:
 
 ![registernewapplication.png](/uploads/registernewapplication.png)
