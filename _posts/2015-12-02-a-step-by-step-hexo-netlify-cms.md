@@ -85,6 +85,10 @@ $ npm install -g hexo-cli
 Once the application has finished installing, it's time to test it out.
 
 #### 5. Test Hexo and Netlify CMS.
+While still with the terminal window opened to the root of our new demo site, use the following command:
+```
+$ hexo server
+```
 Open up [localhost:4000](https://localhost:4000) to browse the site.
 
 Next, try out the Netlify CMS system, by visiting [localhost:4000/admin](https://localhost:4000/admin)localhost:4000/admin).
@@ -92,8 +96,24 @@ Next, try out the Netlify CMS system, by visiting [localhost:4000/admin](https:/
 As is obvious (if everything is working as it should), this template comes with a bit of extra content, as it is based on Brian Rinaldi's great [Static Site Samples](https://github.com/remotesynth/Static-Site-Samples). This makes it easier to instantly get an idea of how it will look, when it's up and running with actual content and default theme. 
 
 ### **Deploy to Production Environment**
+Once you're happy with the site and ready to deploy for production, it's time to push our content back up to GitHub, before connecting to Netlify and setting up your production environment.
 
-#### 1. Add & Commit Files. 
+First things first.
+
+#### 1. Web Configuration.
+To make sure that the site works properly online in production environment, we need to first open up and correct file here `/Sites/hexo-netlify-cms-demo/source/admin/index.ejs`. Simply change the directory path according to your installation and scroll down to line 35-40 or so, where you'll find the following:
+```
+# Make sure to change this for production
+production:
+  backend:
+    name: github-api
+    repo: GitHub-username/repository-name
+    branch: master
+GitHub-username/repository-name
+```
+Simply exchange to your GitHub username and the name of your repository or in the case of our step by step, we changed the repo line to `repo: AlcoholiO/hexo-netlify-cms-demo`.
+
+#### 2. Add & Commit Files. 
 Optional: To check that our local environment is set up correctly and will push the files to the correct repository we can use this command:
 ```
 $ git remote -v
@@ -107,17 +127,15 @@ Next we'll commit the files we just staged in our local repository by entering t
 $ git commit -m 'First commit'
 ```
 
-#### 2. Push to GitHub.
+#### 3. Push to GitHub.
 The final task before we're done setting up and ready for Netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
 ```
 $ git push -u origin master
 ```
-Once it's done uploading the files (pushing them to GitHub), take a look at the repository online to check if everything looks correct.
-
-It's time to connect with Netlify.
+Once it's done uploading the files (pushing them to GitHub), take a look at the repository online to check if everything looks correct. If you're happy with the result, it's time to connect with Netlify.
 
 ### **Connect to Netlify**
-We're ready to start a new project at Netlify's to host our Pelican Netlify CMS template. 
+We're ready to start a new project at Netlify's to host our Hexo Netlify CMS template. 
 
 If you haven't made one already, create an account and login at [Netlify](https://www.netlify.com/).
 
@@ -128,22 +146,25 @@ Creating a new site on Netlify is intuitive and quick.
 
 Once your account is created and you're logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started (depicted above).
 
-Next, select *Link to GitHub* and you'll be shown a list of your GitHub repositories, as seen in the screen shot below. We'll select the Pelican repository we made earlier.
-![createsitepelican.png](/uploads/createsitepelican.png)
+Next, select *Link to GitHub* and you'll be shown a list of your GitHub repositories, as seen in the screen shot below. We'll select the hexo-netlify-cms-demo repository we made earlier.
+PICTURE HERE
 
 #### 2. Configure Build.
-You'll notice that Netlify detects the Pelican build command to be `pelican content`, but we'll change that to `make publish` instead, while using the `/output` as Dir, as seen in this screen shot:
-![buildpelican.png](/uploads/buildpelican.png)
+Netlify will auto-detect the correct settings as seen in the screen shot below:
+![hexo_webconfig.png](/uploads/hexo_webconfig.png)
+Hexo deploys to the */public* folder and the command we use to build with is `hexo generate`.
 
-A few notes on the difference between the two commands, though both will work with Netlify.
+To make sure the production environment builds properly you need to set an environment variable like this:
+![hexo_webconfig_env.png](/uploads/hexo_webconfig_env.png)
+Take care that it's spelled exactly like shown, with capital letters on the left and normal letters to the right or use the following (copy/paste):
+```
+CMS_ENV = production hexo server
+```
+#### 3: Build Your Site
+Once you click save, Netlify will step in and take over, though it will let you know what's happening on the way, as seen in this screen shot:
+![hexo_bulidlog.png](/uploads/hexo_bulidlog.png)
 
-The build command `make publish` will generate your site for production using the settings in the `pelicanconf.py` file. The *advantage* of this method is that the make command is built into most POSIX systems and won't require installing anything else to be able to use it. The problem though is that non-POSIX systems such as Windows don't include make and that it can be a bit of a long-haired affair to do so!
-
-The `pelican content` command on the other hand, comes with pelican and will generate your site with any production specific settings and as such, would probably be the more likely candidate in most cases.
-
-#### 3. Build Your Site.
-Once you click save, Netlify will step in and take over, while keeping you informed through a live build log, as seen in this screen shot:
-![pelicanlivebuildlog.png](/uploads/pelicanlivebuildlog.png)
+Now it’s time to sit back and relax, as the next step may take a few minutes. Take a break and Netlify will do the rest, while you watch the progress.
 
 Taking a short break now might make sense, as the next step may take as much as a few minutes (depending on how much content you've created). Don't worry - Netlify will do the work while you relax.
 
@@ -174,7 +195,7 @@ Simply paste them into the windows where it says *enter Client ID here* and belo
 #### 6: Trying Out Netlify CMS
 We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** (change to the URL of your site) to access the CMS system and then log in with GitHub, since we're using GitHub auth when working online.
 
-This screen shot depicts our CMS system with Pelican, after logging in:
+This screen shot depicts our CMS system with Hexo, after logging in:
 ![pelicannetlifycms.png](/uploads/pelicannetlifycms.png)
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
