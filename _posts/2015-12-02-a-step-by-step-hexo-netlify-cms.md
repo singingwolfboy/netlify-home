@@ -13,7 +13,7 @@ tags: null
 ### **Welcome to Netlify CMS**
 Even if you're new to the world of Static Site Generators, chances are you've heard of Hexo, which is one of the top five most popular web site generators as of writing and for a good reason.
 
-Hexo prides itself on being not only fast and simple, but also easy to write, while having plenty of extensibility. Hexo is powered by the nodejs framework and in this article we'll look at how to set up your very own *Hexo Netlify CMS Template*, from getting a clone online, to connecting to Netlify and beyond.
+Hexo prides itself on being not only fast and simple, but also easy to write, while having plenty of extensibility. Hexo is powered by the nodejs framework and in this guide we'll look at how to set up your very own *Hexo Netlify CMS Template*, from getting a clone online, to connecting to Netlify and beyond.
 
 If you're not interested in the template, but soley in setting up Hexo with continous deployment on Netlify, please see [this informative article](https://www.netlify.com/blog/2015/10/26/a-step-by-step-guide-hexo-on-netlify) by Mr. Aaron Autrand and otherwise continue reading.
 
@@ -24,9 +24,9 @@ We'll start by preparing the netlify-git-api CLI tool to enable us to deploy loc
 
 #### 1. The netlify-git-api CLI tool.
 Browse to the [netlify-git-api page](https://github.com/netlify/netlify-git-api/releases) and download the relevant version of the tool.  
-As I'm demonstrating this on a Linux machine, I will download the *linux.zip* file, but if you're using Apples OSX, you should download and unpack the *osx.zip* and if you're using a Microsoft OS, download the *windows.zip* file.
+As I'm demonstrating this on a Linux machine, I will download the *linux.zip* file, but if you're using OSX, the *osx.zip* file and if you're using a Microsoft OS, download the *windows.zip* file.
 
-Once the download is done, unpack the netlify-git-api executable from the zipped file and place it in your PATH. There are many methods for doing so and they differ somewhat depending on your operating system. However, it can usually be done easily through the graphical user interface. 
+Once the download is done, unpack the netlify-git-api executable from the zipped file and place it in your PATH. There are many methods for doing so and they differ somewhat depending on your operating system. 
 
 We will use the following commands in a terminal window (the Command Prompt in a Microsoft OS):
 ```
