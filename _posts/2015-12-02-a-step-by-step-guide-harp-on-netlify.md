@@ -37,7 +37,13 @@ $ harp server harp-demo
 ```
 Simply open your browser to [this location](http://localhost:9000/) to see the newly built Harp Demo site.
 
+### **Prepare for netlify.**
 
+Like this? But how to add harp
+```
+$ npm install -g bower
+$ bower init
+```
 
 ### **Create and push to GitHub**
 If it's not open already, open a terminal window/command prompt and use the following commands to initialize the directory: 
