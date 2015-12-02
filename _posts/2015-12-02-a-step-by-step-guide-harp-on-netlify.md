@@ -20,7 +20,7 @@ If you already posses your own Harp site and merely want some guidance with rega
 
 *Please note that this guide assumes you have node.js, npm, Ruby and git installed.*
 
-### **Install harp template.**
+### **Install harp.**
 Open up a terminal window/command prompt and use the following command to install harp:
 ```
 $ sudo npm install -g harp
