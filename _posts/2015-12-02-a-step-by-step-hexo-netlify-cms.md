@@ -165,7 +165,7 @@ CMS_ENV = production hexo server
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way, as seen in this screen shot:
 ![hexo_bulidlog.png](/uploads/hexo_bulidlog.png)
 
-Taking a short break now might make sense, as the next step may take as much as a few minutes (depending on how much content you've created). Don't worry - Netlify will do the work while you're attention is elsewhere.
+Taking a short break now might make sense, as the next step may take as much as a few minutes (depending on how much content you've added). Don't worry - Netlify will do the work while you're attention is elsewhere and if there are errors or warning, it's easy to look in the log file, as Netlify saves your previous builds, along with their log files.
 
 #### 4. Register new Application.
 Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.  
@@ -175,6 +175,7 @@ Use the screen shot below as an example:
 ![registernewapplication.png](/uploads/registernewapplication.png)
 
 You can disregard choosing an image, though we did, to help distinguish the application.
+Just remember to tick `enable Github`.
 
 Once you're done filling out, simply click the green **Register application** button and you will get to the following screen shot (well, it will be similar at least):
 
