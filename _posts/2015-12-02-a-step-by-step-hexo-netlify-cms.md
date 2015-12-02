@@ -195,4 +195,7 @@ Simply paste them into the windows where it says *enter Client ID here* and belo
 #### 6: Trying Out Netlify CMS
 We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** (change to the URL of your site) to access the CMS system and then log in with your GitHub account, since we're using GitHub auth when working online.
 
+In the screen shot below, you can see how it should look, after you log into the Netlify CMS part of our new demonstration page:
+![hexo_netlifycms.png](/uploads/hexo_netlifycms.png)
+
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
