@@ -6,7 +6,7 @@ short_title: Our eighth newsletter
 description: "Netlify is now on Zapier, please check out the beta app. We're also introducing smarter redirects + more control over your postprocessing."
 thumbnail: /uploads/165674556.jpg
 cmsUserSlug: ""
-date: 2015-12-01 
+date: 2015-12-02
 tags: null
 ---
 
@@ -55,4 +55,3 @@ Matt &amp; Chris
 co-founders of netlify
 
 twt. @biilmann &amp; @chr_bach
-
