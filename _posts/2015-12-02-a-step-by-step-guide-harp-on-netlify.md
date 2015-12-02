@@ -20,7 +20,7 @@ If you already posses your own Harp site and merely want some guidance with rega
 
 *Please note that this guide assumes you have node.js, npm, Ruby and git installed.*
 
-### **Install harp.**
+### **Install harp template.**
 Open up a terminal window/command prompt and use the following command to install harp:
 ```
 $ sudo npm install -g harp
@@ -29,10 +29,31 @@ Once harp has installed with a rather impressive library tree and for us without
 ```
 $ harp init harp-demo -b hb-blog
 ```
-Simply substitute with your preferred site name and boilerplate [template](https://github.com/harp-boilerplates). 
+Simply substitute with your preferred site name and boilerplate [template](https://github.com/harp-boilerplates). We chose the hb-blog boiler template, to have some sample content as well and give us a better idea about the look and feel of the site.
 
 We then build harp and run a server by using the following command:
 ```
 $ harp server harp-demo
 ```
 Simply open your browser to [this location](http://localhost:9000/) to see the newly built Harp Demo site.
+
+
+
+### **Create and push to GitHub**
+If it's not open already, open a terminal window/command prompt and use the following commands to initialize the directory: 
+```
+$ cd harp-demo
+$ git init
+```
+Add the files of the folder and prepare them for the first commit.
+```
+$ git add .
+$ git commit -m "first commit"
+```
+Create a repository online and get the remote URL of this repository. You can copy it to the clipboard using copy/paste or this button: INSERT PICTURE
+
+We then use the following command in our terminal window, so that git will know where to push our local harp-demo site and with the push command we tell it to push the project online for the first time. 
+```
+$ git remote add origin https://github.com/AlcoholiO/hexo-demo.git
+$ git push -u origin master
+```
