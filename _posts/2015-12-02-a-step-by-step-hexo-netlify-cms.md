@@ -6,21 +6,21 @@ short_title: Hexo Netlify CMS Template
 description: "A short tutorial about setting up Netlify's hexo-netlify-cms template"
 thumbnail: /uploads/hexologo.jpg
 cmsUserSlug: ""
-date: 2015-12-02 
+date: 2015-12-02T00:00:00.000Z
 tags: null
 ---
 
 ### **Welcome to Netlify CMS**
 Even if you're new to the world of Static Site Generators, chances are you've heard of Hexo, which is one of the top five most popular web site generators as of writing and for a good reason.
 
-Hexo prides itself on being not only fast and simple, but also easy to write, while having plenty of extensibility. Hexo is powered by the nodejs framework and in this guide we'll look at how to set up your very own *Hexo Netlify CMS Template*, from getting a clone online, to connecting to Netlify and beyond.
+Hexo prides itself on being not only fast and simple, but also easy to write, while having plenty of extensibility. Hexo is powered by the nodejs framework and in this guide we'll look at how to set up your very own *Hexo Netlify CMS Template*, from getting a clone online, to connecting it to Netlify and beyond.
 
 If you're not interested in the template, but soley in setting up Hexo with continous deployment on Netlify, please see [this informative article](https://www.netlify.com/blog/2015/10/26/a-step-by-step-guide-hexo-on-netlify) by Mr. Aaron Autrand and otherwise continue reading.
 
 *Please note that this guide assumes you have Ruby, git, nodejs and npm installed.*
 
 ### **Deploying Locally**
-We'll start by preparing the netlify-git-api CLI tool to enable us to deploy locally and then we'll clone the hexo-netlify-cms template repository to our local environment and set it up.
+We'll start by preparing the netlify-git-api CLI tool to enable us to deploy locally and then we'll clone the hexo-netlify-cms repository to our local environment and set it up.
 
 #### 1. The netlify-git-api CLI tool.
 Browse to the [netlify-git-api page](https://github.com/netlify/netlify-git-api/releases) and download the relevant version of the tool.  
@@ -35,7 +35,7 @@ $ unzip linux.zip
 $ cd linux
 $ sudo mv netlify-git-api '/usr/local/bin'
 ```
-We enter the downloads folder (substitute with the location of your download), use the `unzip` command to unpack the file, then we enter the new directory created by unpacking and finally we move the file to a directory that is in the PATH, making it easy to invoke from the terminal.
+We enter the downloads folder (substitute with the location of your download) and use the `unzip` command to unpack the file. Next, we enter the new directory created by unpacking and finally we move the netlify-git-api file to a directory that is in the PATH, making it easy to invoke from the terminal.
 
 If you're unsure of where to move the file, you can run the following command to see which directories are in the PATH on your computer:
 ```
@@ -46,7 +46,7 @@ $ echo $PATH
 #### 2. Fork and Clone the Template.
 We'll begin by forking our own copy of the [hexo-netlify-cms template](https://github.com/netlify-templates/hexo-cms-example) and then we rename it - we simply named ours hexo-netlify-cms-demo.
 
-To make a local clone first we need to get the remote GitHub URL from the repository we created. The button looks like this: 
+Before we can make a local clone, we need to get the remote GitHub URL from the repository we created. The button looks like this: 
 ![pelicanlinkbutton.png](/uploads/pelicanlinkbutton.png)
 
 The commands below first take us to the location where we want to put our new hexo based site (use `cd my-site-folder`) and the second command uses git to create the clone:
@@ -78,7 +78,7 @@ $ netlify-git-api serve
 #### 4. Install the Hexo CLI.
 Open up a new Terminal Window/Command Prompt to the site root (cd hexo-netlify-cms-demo in our example) and install the hexo client
 
-To install Hexo, make sure you already have npm and nodejs installed and then run the following command:
+To install Hexo, make sure you already have **npm** installed and updated and then run the following command:
 ```
 $ npm install -g hexo-cli
 ```
@@ -89,9 +89,9 @@ While still with the terminal window opened to the root of our new demo site, us
 ```
 $ hexo server
 ```
-Open up [localhost:4000](https://localhost:4000) to browse the site.
+In a browser, open up [localhost:4000](https://localhost:4000) to browse the newly generated hexo-netlify-cms-demo site.
 
-Next, try out the Netlify CMS system, by visiting [localhost:4000/admin](https://localhost:4000/admin)localhost:4000/admin).
+Next, try out the Netlify CMS system, by visiting [localhost:4000/admin](https://localhost:4000/admin) and while there, test your login and password and try to create and save a stanard article.
 
 As is obvious (if everything is working as it should), this template comes with a bit of extra content, as it is based on Brian Rinaldi's great [Static Site Samples](https://github.com/remotesynth/Static-Site-Samples). This makes it easier to instantly get an idea of how it will look, when it's up and running with actual content and default theme. 
 
@@ -101,7 +101,7 @@ Once you're happy with the site and ready to deploy for production, it's time to
 First things first.
 
 #### 1. Web Configuration.
-To make sure that the site works properly online in production environment, we need to first open up and correct file here `/Sites/hexo-netlify-cms-demo/source/admin/index.ejs`. Simply change the directory path according to your installation and scroll down to line 35-40 or so, where you'll find the following:
+To make sure that the site works properly in production environment, we need to first open up and correct some settings in the file here `/Sites/hexo-netlify-cms-demo/source/admin/index.ejs`. Change the directory path according to your installation and scroll down to line 35-40 or so, where you'll find the following:
 ```
 # Make sure to change this for production
 production:
