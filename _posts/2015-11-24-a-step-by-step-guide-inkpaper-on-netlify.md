@@ -130,12 +130,15 @@ As long as you're working on the page, the `./bin/ink.linux preview` command we 
 For further information about ink commands, customizing InkPaper and choosing or modifying a theme, see the [InkPaper getting started webpage](http://www.inkpaper.io/blog/post/2015/03/01/ink-blog-tool-en.html).
 
 ### **Setup your GitHub Repository**
+
 <a id="githubstart"></a>
+
 Let's set up a GitHub repository and push our site there.
 
 #### 1. Create your Git Repo
 Head over to [GitHub](https://github.com/) and create a new repo. We're naming ours InkPaper and we'll postpone adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
-![createrepo.png](/uploads/createrepo.png)
+
+![netlify0x_createnewrepo.png](/uploads/netlify0x_createnewrepo.png)
 
 Once the repository has been named and created you're ready to go local.
 
@@ -188,7 +191,9 @@ All your files will be copied to your online repository. Once it's done, take a 
 It's time to connect it with Netlify.
 
 ### Connecting to Netlify
+
 <a id="netlifystart"></a>
+
 Creating a new site on Netlify is simpler than with any other host. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
 
 #### Step 1: Add Your New Site
@@ -216,7 +221,7 @@ Like it says in the image above on the right, Netlify doesn’t store your GitHu
 If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
-![Choose Repo](/uploads/selectsiteinkpaper.png)
+![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
 Once you're connected to GitHub, Netlify will show you a list of your Git repos, as seen above.
 For the purpose of this tutorial we'll select the *“InkPaper”* repo we just pushed to GitHub. 
 
