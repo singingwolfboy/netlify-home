@@ -91,20 +91,20 @@ netlify-git-api serve
 Before we can test the system there's a few preparatory measures to be made to the Pelican part of our site, so open up a *new* terminal window (do not use the one that's running the server) and enter the following commands, one by one:
 
 ```
-cd Pelican   
+cd my-site-directory  
 virtualenv pelican-env   
 source pelican-env/bin/activate   
 pip install -r requirements.txt
 ./develop_server.sh start
 ```
 
-In the first line we simply enter our new local repository's directory with the good old `cd` command ().
+In the first line we simply enter our new local repository's directory with the good old `cd` command.
 In the second line we use `virtualenv` to create an isolated Python environment for our site (`sudo apt-get install virtualenv` if you haven't already got it installed), then we activate/enter this environment in the third line and in the fourth line we install various requirements, before starting a devserver, which will run Pelican in regeneration mode as well as serve the output at *http://localhost:8000*.
 
 It's important to understand that the majority of the commands above, need not be used every single time you take a peek at your Pelican, but rather just once when you're setting the environment up! However, when you want to use the CMS system, the Netlify CMS server must be running and for the Pelican to fly proper, you will still need to use these commands on successive runs (again in the 2nd terminal window, so as not to close down the  Netlify CMS server):
 
 ```
-cd Pelican   
+cd my-site-directory  
 source pelican-env/bin/activate   
 ./develop_server.sh start
 ```
@@ -185,7 +185,7 @@ Creating a new site on Netlify is intuitive and quick.
 Once your account is created and you're logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started (depicted above).
 
 Next, select *Link to GitHub* and you'll be shown a list of your GitHub repositories, as seen in the screen shot below. We'll select the Pelican repository we made earlier.
-![createsitepelican.png](/uploads/createsitepelican.png)
+![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
 
 #### 2. Configure Build.
 You'll notice that Netlify detects the Pelican build command to be `pelican content`, but we'll change that to `make publish` instead, while using the `/output` as Dir, as seen in this screen shot:
@@ -214,7 +214,7 @@ You can disregard choosing an image, though we did, to help distinguish the appl
 
 Once you're done filling out, simply click the green **Register application** button and you will get to the following screen shot (well, it will be similar at least):
 
-![clientidnsecret.png](/uploads/clientidnsecret.png)
+![netlify0x_registerapp2.png](/uploads/netlify0x_registerapp2.png)
 
 What you need to take note of here, is the **Client ID** and the **Client Secret** in the upper right corner. You will need to provide both in the next step!
 
