@@ -17,7 +17,7 @@ It lets you integrate form submissions or deploy notifications from netlify to h
 What that means is that in a few easy steps you can set up the app to send you a notification whenever a new form is submitted, or a deploy is finished and pushed live. The notification could be a mail, a message in slack or hipchat, or almost anywhere else.
 
 But don't take our word for it. 
-Matt Hackington, a long time BitBalloon and netlify customer, runs several popular codeschools in the Bay Area (with a last name like that you almost have to right?). 
+Matt Hackington, a long time BitBalloon and netlify customer, runs several popular [codeschools](https://www.hackingtons.com/) in the Bay Area (with a last name like that you almost have to right?). 
 He has made a great video tutorial showing you exactly how to set it up, and agreed for us to let us show it on our blog.
 
 A free monitoring service for your developer toolbelt. Enjoy.
