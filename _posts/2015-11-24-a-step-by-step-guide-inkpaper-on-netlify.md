@@ -56,9 +56,11 @@ In the first line we enter the newly renamed directory and in the second line we
 
 #### 4. Preview InkPaper
 Provided you've still got your terminal window open in the InkPaper directory, all you need to do is enter the following command, lean back and check out the beautiful result in a web browser:
+
 ```
 $ ./bin/ink.linux preview
 ```
+
 Please note that the official documentation merely uses `ink preview` as the command, but as we've moved and renamed the file, we also have to change the command slightly to reflect this, as seen above.
 
 Open your web browser of choice and enter *'http://localhost:8000/'* in the address bar and there you go.
@@ -69,6 +71,7 @@ Quite honestly - could it get any easier or more elegant?
 Let's dig a little deeper and look at how to configure the website, as well as create some content.
 
 As with many other static site generators, the **config.yml** file is where we do the website configuration and it's pretty much self explanatory as seen both in the config.yml generated in your site (just take a look - it's in the blog sub directory), but also in this shorter format example taken from InkPapers homepage:
+
 ```
 site:
     title: Website Title
@@ -94,6 +97,7 @@ build:
 ```
 
 To create content, simply create any .md file in the source directory or in a subdirectory of the source directory, using the following format (as described on the InkPaper homepage):
+
 ```
 title: Article Title
 date: Year-Month-Day Hour:Minute:Second #Created Time，Support TimeZone, such as " +0800"
@@ -111,6 +115,7 @@ tags: #Optional
 
 Markdown Format's Body
 ```
+
 Notice that the content is written in markdown below the three dashes and that you only need one set of these, as opposed to the more commonplace practice of placing the article information between two sets of dashes.
 
 As long as you're working on the page, the `./bin/ink.linux preview` command we entered in terminal earlier, will automatically watch and rebuild the source directory, so you can see your changes locally and instantly, by simply refreshing the browser (provided that you keep the terminal window/command prompt open and the service running).
@@ -118,7 +123,9 @@ As long as you're working on the page, the `./bin/ink.linux preview` command we 
 For further information about ink commands, customizing InkPaper and choosing or modifying a theme, see the [InkPaper getting started webpage](http://www.inkpaper.io/blog/post/2015/03/01/ink-blog-tool-en.html).
 
 ### Setup your GitHub Repository
+
 <a id="githubstart"></a>
+
 Let's set up a GitHub repository and push our site there.
 
 #### 1. Create your Git Repo
@@ -129,44 +136,57 @@ Once the repository has been named and created you're ready to go local.
 
 #### 2. Initialize Directory
 We'll initialize the local directory as a git repository with the following command:
+
 ```
 $ git init
 ```
 
 #### 3. Add & Commit Files 
 We need to add the files from our local directory to this git repository and stage them for their first commit with the following line in Terminal/Command Prompt:
+
 ```
 $ git add .
 ```
+
 Commit the files you just staged in your local repository by entering the following line in Terminal/Command Prompt:
+
 ```
 $ git commit -m 'First commit'
 ```
 
 #### 4. Get & Add Remote URL
+
 ![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
 
 It's now time to return to the GitHub repository and get the URL for this remote repository where your local repository will be pushed.
 Either copy paste the whole command or use the button as depicted above, to copy just the path to your clipboard.
 Return to the Terminal window/Command prompt and paste the remote repository URL inside the following line (instead of My-Repository-URL):
+
 ```
 $ git remote add origin My-Repository-URL
 ```
+
 Optional: To check that it's set up correctly, you can use the following command:
+
 ```
 $ git remote -v
 ```
+
 #### 5. Push to GitHub
 The final task before we're done setting up and ready for netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
+
 ```
 $ git push -u origin master
 ```
+
 All your files will be copied to your online repository. Once it's done, take a look at the repository online to check if everything looks correct.
 
 It's time to connect it with netlify.
 
 ### Connecting to netlify
+
 <a id="netlifystart"></a>
+
 Creating a new site on Netlify is simpler than with any other host. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
 
 #### Step 1: Add Your New Site
