@@ -40,57 +40,72 @@ sudo mv netlify-git-api '/usr/local/bin'
 We enter the downloads folder (substitute with the location of your downloads) and use the `unzip` command to unpack the file. Next, we enter the new directory created by unpacking and finally we move the netlify-git-api file to a directory that is in the PATH, making it easy to invoke from the terminal.
 
 If you're unsure of where to move the file, you can run the following command to see which directories are in the PATH on your computer:
+
 ```
 echo $PATH
 ```
+
 *For convenience sake, keep the terminal window/command prompt open throughout this guide.*
 
 #### 2. Fork and Clone the Template
 We'll begin by forking our own copy of the [hexo-netlify-cms template](https://github.com/netlify-templates/hexo-cms-example) and then we rename it - we simply named ours hexo-netlify-cms-demo.
 
 Before we can make a local clone, we need to get the remote GitHub URL from the repository we created. The button looks like this: 
+
 ![netlify0x_remoteurl_but.png](/uploads/netlify0x_remoteurl_but.png)
 
 The commands below first take us to the location where we want to put our new hexo based site and the second command uses git to create the clone:
+
 ```
 cd 'my-site-folder'
 git clone https://github.com/github_account/my-repo-name.git
 ```
-Substitute my-site-folder with your location and the clone address with the address of your GitHub fork and account.
+
+Substitute *my-site-folder* with your location and the clone address with the address of your GitHub fork and account.
 
 Note that you should NOT create a folder for the project, as it comes inside a folder structure already. 
 
 #### 3. Setup the Netlify CMS server
 To start the Netlify CMS server, we need to add users by running the following command for each user we wish to add to the system (you will be asked for an email, a name and a password):
+
 ```
 netlify-git-api users add
 ```
+
 Alternatively you can create a user, including the information necessary, in a one liner like this:
+
 ```
 netlify-git-api users add --name='User Name' --email=my@email.com --password=mypassword
 ```
+
 You need to create at least one user, to be able to test the system.
 
 To start the Netlify CMS server, we then use the following command:
+
 ```
 netlify-git-api serve
 ```
+
 ***Keep the Terminal Window/Command Prompt open to keep the server running!***
 
 #### 4. Install the Hexo CLI
 Open up a new Terminal Window/Command Prompt to the site root (cd hexo-netlify-cms-demo in our example) and install the hexo client.
 To install Hexo, make sure you already have **npm** installed and updated and then run the following command:
+
 ```
 cd my-site-root
 npm install -g hexo-cli
 ```
+
 Once the application has finished installing, it's time to test it out.
 
 #### 5. Test Hexo and Netlify CMS
 While still with the terminal window opened to the root of our new demo site, use the following command to build and serve your hexo site:
+
 ```
 hexo server
 ```
+
 In a browser, open up [localhost:4000](https://localhost:4000) to browse the newly generated site.
 
 Next, try out the Netlify CMS system, by visiting [localhost:4000/admin](https://localhost:4000/admin) and while there, test your login and password and try to create and save an article.
@@ -103,7 +118,8 @@ Once you're happy with the site and ready to deploy for production, it's time to
 First things first.
 
 #### 1. Web Configuration
-To make sure that the site works properly in production environment, we need to first open up and correct some settings in the file here `/my-site-root/source/admin/index.ejs`. Change the directory path according to your site location and scroll down to line 35-40 or so, where you'll find the following:
+To make sure that the site works properly in production environment, we need to first open up and correct some settings in the file here `/my-site-root/source/admin/index.ejs`. Change the directory path according to your site location, open the file in a text editor and scroll down to line 35-40 or so, where you'll find the following:
+
 ```
 # Make sure to change this for production
 production:
@@ -113,27 +129,35 @@ production:
     branch: master
 GitHub-username/repository-name
 ```
+
 Simply exchange to your GitHub username and the name of your repository or in the case of our step by step, we changed the repo line to `repo: JimmiLee/hexo-netlify-cms-demo`.
 
 #### 2. Add & Commit Files
 Optional: To check that our local environment is set up correctly and will push the files to the correct repository we can use this command:
+
 ```
 git remote -v
 ```
+
 We need to add the new files from our local directory to our repository with the following line in Terminal/Command Prompt:
+
 ```
 git add .
 ```
+
 Next we'll commit the files we just staged in our local repository by entering the following line:
+
 ```
 git commit -m 'First commit'
 ```
 
 #### 3. Push to GitHub
 The final task before we're done setting up and ready for Netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
+
 ```
 git push -u origin master
 ```
+
 Once it's done uploading the files (pushing them to GitHub), take a look at the repository online to check if everything looks correct. If you're happy with the result, it's time to connect with Netlify.
 
 ### Connect to Netlify
@@ -159,9 +183,11 @@ Hexo deploys to the */public* folder and the command we use to build with is `he
 To make sure the production environment builds properly you need to set an environment variable like this:
 ![netlify0x_environmentcms_envpro.png](/uploads/netlify0x_environmentcms_envpro.png)
 Take care that it's spelled exactly like shown, with capital letters on the left and normal letters to the right or use the following (copy/paste):
+
 ```
 CMS_ENV = production
 ```
+
 #### 3: Build Your Site
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way, as seen in this screen shot:
 ![hexo_bulidlog.png](/uploads/hexo_bulidlog.png)
