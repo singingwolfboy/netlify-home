@@ -30,16 +30,16 @@ Once the download is done, unpack the netlify-git-api executable from the zipped
 
 We will use the following commands in a terminal window (the Command Prompt in a Microsoft OS):
 ```
-$ cd 'downloads'
-$ unzip linux.zip 
-$ cd linux
-$ sudo mv netlify-git-api '/usr/local/bin'
+cd 'downloads'
+unzip linux.zip 
+cd linux
+sudo mv netlify-git-api '/usr/local/bin'
 ```
 We enter the downloads folder (substitute with the location of your download) and use the `unzip` command to unpack the file. Next, we enter the new directory created by unpacking and finally we move the netlify-git-api file to a directory that is in the PATH, making it easy to invoke from the terminal.
 
 If you're unsure of where to move the file, you can run the following command to see which directories are in the PATH on your computer:
 ```
-$ echo $PATH
+echo $PATH
 ```
 *For convenience sake, keep the terminal window/command prompt open throughout this guide.*
 
@@ -51,8 +51,8 @@ Before we can make a local clone, we need to get the remote GitHub URL from the 
 
 The commands below first take us to the location where we want to put our new hexo based site (use `cd my-site-folder`) and the second command uses git to create the clone:
 ```
-$ cd '/home/username/Sites'
-$ git clone https://github.com/github_account/hexo-netlify-cms-demo.git
+cd '/home/username/Sites'
+git clone https://github.com/github_account/hexo-netlify-cms-demo.git
 ```
 Substitute *https://github.com/github_account/hexo-netlify-cms-demo.git* with your repository's URL and your GitHub account.
 
@@ -61,17 +61,17 @@ Note that you should NOT create a folder for the project, as it comes inside a f
 #### 3. Setup the Netlify CMS server.
 To start the Netlify CMS server, we need to add users by running the following command for each user we wish to add to the system (you will be asked for an email, a name and a password):
 ```
-$ netlify-git-api users add
+netlify-git-api users add
 ```
 Alternatively you can create a user, including the information necessary, in a one liner like this:
 ```
-$ netlify-git-api users add --name='User Name' --email=my@email.com --password=mypassword
+netlify-git-api users add --name='User Name' --email=my@email.com --password=mypassword
 ```
 You need to create at least one user, to be able to test the system.
 
 To start the Netlify CMS server, we then use the following command:
 ```
-$ netlify-git-api serve
+netlify-git-api serve
 ```
 ***Keep the Terminal Window/Command Prompt open to keep the server running!***
 
@@ -80,14 +80,14 @@ Open up a new Terminal Window/Command Prompt to the site root (cd hexo-netlify-c
 
 To install Hexo, make sure you already have **npm** installed and updated and then run the following command:
 ```
-$ npm install -g hexo-cli
+npm install -g hexo-cli
 ```
 Once the application has finished installing, it's time to test it out.
 
 #### 5. Test Hexo and Netlify CMS.
 While still with the terminal window opened to the root of our new demo site, use the following command:
 ```
-$ hexo server
+hexo server
 ```
 In a browser, open up [localhost:4000](https://localhost:4000) to browse the newly generated hexo-netlify-cms-demo site.
 
@@ -116,21 +116,21 @@ Simply exchange to your GitHub username and the name of your repository or in th
 #### 2. Add & Commit Files. 
 Optional: To check that our local environment is set up correctly and will push the files to the correct repository we can use this command:
 ```
-$ git remote -v
+git remote -v
 ```
 We need to add the new files from our local directory to our repository with the following line in Terminal/Command Prompt:
 ```
-$ git add .
+git add .
 ```
 Next we'll commit the files we just staged in our local repository by entering the following line:
 ```
-$ git commit -m 'First commit'
+git commit -m 'First commit'
 ```
 
 #### 3. Push to GitHub.
 The final task before we're done setting up and ready for Netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
 ```
-$ git push -u origin master
+git push -u origin master
 ```
 Once it's done uploading the files (pushing them to GitHub), take a look at the repository online to check if everything looks correct. If you're happy with the result, it's time to connect with Netlify.
 
