@@ -2,7 +2,7 @@
 title: "A step-by-step guide: Broccoli Taco"
 author: Jimmi Lee
 image: /uploads/broccoli-taco.jpg
-short_title: Broccoli-Taco on netlify
+short_title: Broccoli Taco on netlify
 description: A step-by-step guide on how to get a site made with Broccoli Taco hosted on netlify.
 thumbnail: /uploads/broccoli-taco-logo.png
 cmsUserSlug: ""
