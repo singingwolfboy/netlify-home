@@ -15,7 +15,7 @@ While static site generators with CMS capability may be a brand new thing, we *d
 
 If you merely want to set up Pelican with continous deployment on Netlify, check out [this splendid article](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-pelican-on-netlify) by Mr. Aaron Autrand and otherwise, please keep reading.
 
-*Please note that this guide assumes you have virtualenv, Ruby, git and bundle installed.*
+*Please note that this guide assumes you have virtualenv, Ruby and git installed.*
 
 ### Deploying Locally
 We'll start by preparing the netlify-git-api CLI tool and then we'll clone the pelican-netlify-cms template repository to our local environment and set it all up.
@@ -36,7 +36,7 @@ cd linux
 sudo mv netlify-git-api '/usr/local/bin'
 ```
 
-On the first line we start by entering the downloads folder and on the second line we unzip the downloaded package. We then cd into the unpacked linux directory on the third line and finally we move the netlify-git-api executable to a folder that is in the PATH, so that it can be invoked easily from the terminal.
+On the first line we start by entering the downloads folder (substitute with your location) and on the second line we unzip the downloaded package. We then cd into the unpacked linux directory on the third line. On the fourth and final line we move the netlify-git-api executable to a folder that is in the PATH, so that it can be invoked easily from the terminal.
 
 If you're unsure of where to move the file, you can run the following command to see which directories are in the PATH on your computer:
 
@@ -49,17 +49,18 @@ echo $PATH
 #### 2. Fork and Clone the Template.
 First we need to fork our own copy of the [pelican-netlify-cms template](https://github.com/netlify-templates/pelican-netlify-cms) and then rename it - we simply named ours Pelican.
 
-Second, to make a local clone first we need to get the remote GitHub URL from the Pelican repo we just made. The button looks like this: 
-![pelicanlinkbutton.png](/uploads/pelicanlinkbutton.png)
+Second, to make a local clone first we need to get the remote GitHub URL from the Pelican repo we just made. The button looks like this:
+ 
+![netlify0x_remoteurl_but.png](/uploads/netlify0x_remoteurl_but.png)
 
-The commands below first take us to the location where we want to put our new Pelican site (use `cd my-site-folder`) and the second command uses git to create the clone:
+The commands below first take us to the location where we want to put our new Pelican site and the second command uses git to create the clone:
 
 ```
-cd '/home/username/Sites'
-git clone https://github.com/github_username/Pelican.git
+cd 'my-sites-location'
+git clone https://github.com/github_username/repo-name.git
 ```
 
-Substitute *https://github.com/github_username/Pelican.git* with your repository's URL.
+Substitute my-sites-location with the location of your sites and substitute *https://github.com/github_username/repo-name.git* with your repository's URL.
 
 Note that you should NOT create a folder for the project, as it comes inside a folder structure already. 
 
@@ -97,7 +98,7 @@ pip install -r requirements.txt
 ./develop_server.sh start
 ```
 
-In the first line we simply enter our new local repository's directory with the good old `cd` command.
+In the first line we simply enter our new local repository's directory with the good old `cd` command ().
 In the second line we use `virtualenv` to create an isolated Python environment for our site (`sudo apt-get install virtualenv` if you haven't already got it installed), then we activate/enter this environment in the third line and in the fourth line we install various requirements, before starting a devserver, which will run Pelican in regeneration mode as well as serve the output at *http://localhost:8000*.
 
 It's important to understand that the majority of the commands above, need not be used every single time you take a peek at your Pelican, but rather just once when you're setting the environment up! However, when you want to use the CMS system, the Netlify CMS server must be running and for the Pelican to fly proper, you will still need to use these commands on successive runs (again in the 2nd terminal window, so as not to close down the  Netlify CMS server):
