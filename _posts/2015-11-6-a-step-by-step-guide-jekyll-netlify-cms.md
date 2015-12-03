@@ -47,7 +47,7 @@ git clone my-repo-url
 ```
 
 ### Netlify CMS: Local Environment
-We'll start by setting Netlify CMS up locally, by downloading the netlify-git-api but first we need to set up the web configuration of the CMS system in the *config.yml* of the admin folder of the site: **/mysitename/admin/config.yml**.
+We'll start by setting Netlify CMS up locally, by downloading the netlify-git-api but first we need to set up the web configuration of the CMS system in the *config.yml* of the admin folder of the site: **/mysitename/content/admin/config.yml**.
 Open the file and pay attention to which repo and branch the backend points to and notice you can also set the local URL if you so choose.
 Here's an example of the first ten lines of the config.yml, which contain this information:
 
@@ -212,8 +212,7 @@ Like it says in the image above, Netlify doesn’t store your GitHub access toke
 If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
-![Choose Repo](/uploads/chooserepo.png)
-
+![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
 Once you're connected to GitHub, Netlify will show you a list of your Git repos, as seen above.
 For the purpose of this tutorial we'll select the *“AmazingWood”* repo we just pushed to GitHub. 
 
@@ -243,7 +242,7 @@ Next fill out the application information as seen in the screen shot below - you
 You can disregard choosing an image, though we did, to help distinguish the application.
 Once you're done filling out, simply click the green **Register application** button and you will get to the following screen shot (well, it will be similar at least):
 
-![clientidnsecret.png](/uploads/clientidnsecret.png)
+![netlify0x_registerapp2.png](/uploads/netlify0x_registerapp2.png)
 
 What you need to take note of here, is the **Client ID** and the **Client Secret** in the upper right corner. You will need to provide both in the next step!
 
