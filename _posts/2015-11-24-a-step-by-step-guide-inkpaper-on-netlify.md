@@ -129,7 +129,7 @@ As long as you're working on the page, the `./bin/ink.linux preview` command we 
 
 For further information about ink commands, customizing InkPaper and choosing or modifying a theme, see the [InkPaper getting started webpage](http://www.inkpaper.io/blog/post/2015/03/01/ink-blog-tool-en.html).
 
-### **Setup your GitHub Repository**
+### Setup your GitHub Repository
 
 <a id="githubstart"></a>
 
