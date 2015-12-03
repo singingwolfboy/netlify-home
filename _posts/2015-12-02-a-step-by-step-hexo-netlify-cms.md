@@ -48,7 +48,7 @@ echo $PATH
 *For convenience sake, keep the terminal window/command prompt open throughout this guide.*
 
 #### 2. Fork and Clone the Template
-We'll begin by forking our own copy of the [hexo-netlify-cms template](https://github.com/netlify-templates/hexo-cms-example) and then we rename it - we simply named ours hexo-netlify-cms-demo.
+We'll begin by forking our own copy of the [hexo-netlify-cms template](https://github.com/netlify-templates/hexo-cms-example) on GitHub and then we rename it - we simply named ours hexo-netlify-cms-demo.
 
 Before we can make a local clone, we need to get the remote GitHub URL from the repository we created. The button looks like this: 
 
