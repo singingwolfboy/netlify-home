@@ -147,8 +147,7 @@ Creating a new site on Netlify is intuitive and quick.
 Once your account is created and you're logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started (depicted above).
 
 Next, select *Link to GitHub* and you'll be shown a list of your GitHub repositories, as seen in the screen shot below. We'll select the hexo-netlify-cms-demo repository we made earlier.
-
-![hexo_chooserepo.png](/uploads/hexo_chooserepo.png)
+![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
 
 #### 2. Configure Build.
 Netlify will auto-detect the correct settings as seen in the screen shot below:
@@ -156,10 +155,10 @@ Netlify will auto-detect the correct settings as seen in the screen shot below:
 Hexo deploys to the */public* folder and the command we use to build with is `hexo generate`.
 
 To make sure the production environment builds properly you need to set an environment variable like this:
-![hexo_webconfig_env.png](/uploads/hexo_webconfig_env.png)
+![netlify0x_environmentcms_envpro.png](/uploads/netlify0x_environmentcms_envpro.png)
 Take care that it's spelled exactly like shown, with capital letters on the left and normal letters to the right or use the following (copy/paste):
 ```
-CMS_ENV = production hexo server
+CMS_ENV = production
 ```
 #### 3: Build Your Site
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way, as seen in this screen shot:
