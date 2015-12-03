@@ -217,7 +217,7 @@ This is where we give the GitHub Api access to our site with the application we 
 
 ![githubaccess.png](/uploads/githubaccess.png)
 
-Simply paste them into the windows where it says *enter Client ID here* and below where it says *enter Client Secret here* and you're good to go.
+Simply paste them into the windows where it says *enter Client ID here* and below where it says *enter Client Secret here* and you're good to go. Remember to tick 'enable GitHub'.
 
 #### 6: Trying Out Netlify CMS
 We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** (change to the URL of your site and add /admin to the end) to access the CMS system and then log in with your GitHub account, since we're using GitHub auth when working online.
