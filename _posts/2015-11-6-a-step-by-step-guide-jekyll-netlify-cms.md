@@ -47,7 +47,7 @@ git clone my-repo-url
 ```
 
 ### Netlify CMS: Local Environment
-We'll start by setting Netlify CMS up locally, by downloading the netlify-git-api but first we need to set up the web configuration of the CMS system in the *config.yml* of the admin folder of the site: **/mysitename/content/admin/config.yml**.
+We'll start by setting Netlify CMS up locally, by downloading the netlify-git-api but first we need to set up the web configuration of the CMS system in the *config.yml* of the admin folder of the site: **/my-site-location/admin/config.yml**.
 Open the file and pay attention to which repo and branch the backend points to and notice you can also set the local URL if you so choose.
 Here's an example of the first ten lines of the config.yml, which contain this information:
 
@@ -212,15 +212,18 @@ Like it says in the image above, Netlify doesn’t store your GitHub access toke
 If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
 
 #### Step 4: Choose Your Repo
-![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
+
+![netlify0x_chooserepo2.png](/uploads/netlify0x_chooserepo2.png)
+
 Once you're connected to GitHub, Netlify will show you a list of your Git repos, as seen above.
-For the purpose of this tutorial we'll select the *“AmazingWood”* repo we just pushed to GitHub. 
+For the purpose of this tutorial we'll select the *“jekyll-netlify-cms-demo”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
 ![Configure Settings](/uploads/configurerepo.png)
 
 In most cases, there's nothing we need to configure, but for this build we need to set an environment variable under the environment tab, as seen below:
 ![jekyll_env_production.png](/uploads/jekyll_env_production.png)
+
 Take care that it's spelled exactly like shown, with capital letters on the left and normal letters to the right, like this:
 
 ```
@@ -257,5 +260,7 @@ Simply paste them into the windows where it says *enter Client ID here* and belo
 
 #### Step 9: Trying Out Netlify CMS
 We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and then log in with GitHub, since we're using GitHub auth when working online.
+
+![jekyll-netlify-cms-act.png](/uploads/jekyll-netlify-cms-act.png)
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
