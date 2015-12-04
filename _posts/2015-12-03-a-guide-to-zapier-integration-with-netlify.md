@@ -22,3 +22,5 @@ As you may have seen in yesterday's newsletter netlify now has Zapier app in bet
 
 Enjoy.
 
+https://www.youtube.com/watch?v=vrrsH9DblSY&feature=youtu.be
+
