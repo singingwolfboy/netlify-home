@@ -18,11 +18,11 @@ Among the multitude of site generators that have come into existence in the past
 It has a very elegant theme and is one of the fastest site generators to get up and running, as it has NO dependencies - all you have to do, is download and set it up.
 
 ### Quick Start
-If you want to get a head start, you can download, install and setup from the terminal in this quick start guide. However, if you need a more detailed introduction and guide, simply scroll down to [here](#inkpapersetup).
+If you want to get a head start, you can download, install and setup from the terminal (or command prompt) in this quick start guide. However, if you need a more detailed introduction and guide, simply scroll down to [here](#inkpapersetup).
 
 The guide below does the same thing for each operating system, except that for OSX and Windows, it also downloads and renames the linux versin of ink, so that it can be used to deploy to netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
 
-Linux (64bit) Quick Start (in Terminal):
+#### Linux (64bit) Quick Start (in Terminal):
 
 ```
 wget http://www.inkpaper.io/release/ink_linux_amd64.tar.gz
@@ -33,7 +33,7 @@ mkdir bin
 mv ink bin/ink.linux
 ```
 
-OSX Quick Start (in Terminal): 
+#### OSX Quick Start (in Terminal): 
 
 ```
 curl "http://www.inkpaper.io/release/ink_darwin_amd64.zip"
@@ -51,7 +51,7 @@ mkdir bin
 mv ink bin/ink.linux
 ```
 
-Microsoft Windows (64bit) Quick Start (in Command Prompt): 
+#### Microsoft Windows (64bit) Quick Start (in Command Prompt): 
 
 ```
 bitsadmin /transfer my-download-job /download /priority normal http://www.inkpaper.io/release/ink_windows_amd64.zip C:\my-download-folder\ink_windows_amd64.zip 
@@ -63,7 +63,6 @@ move ink.exe bin/ink.windows.exe
 
 cd my-download-folder
 bitsadmin /transfer my-download-job /download /priority normal http://www.inkpaper.io/release/ink_linux_amd64.tar.gz C:\my-download-folder\ink_linux_amd64.tar.gz 
-cd my-download-folder
 7z x ink_linux_amd64.tar.gz -oc:\my-download-folder\ink_linux_amd64
 cd ink_linux_amd64
 move ink.exe c:\my-ink-paper-site\bin\ink.linux.exe
