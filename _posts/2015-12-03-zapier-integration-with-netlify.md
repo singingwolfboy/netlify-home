@@ -2,22 +2,23 @@
 title: Zapier integration with netlify
 author: Chris Bach
 image: null
-short_title: Zapier with netlify
-description: "Matt Hackington made a video showing exactly how to set up notifications from your netlify app to any other tool via netlify's Zapier app."
+short_title: netlify Zapier app - a guide
+description: "Matt Hackington made a video showing how to use netlify's form processing and Zapier to automate all formsubmissions into google docs."
 thumbnail: /uploads/144918195465336.png
 cmsUserSlug: ""
 date: 2015-12-03 
 tags: null
 ---
 
-As you may have seen in yesterday's newsletter netlify now have a Zapier app in beta.
+As you may have seen in yesterday's newsletter netlify now has Zapier app in beta.
 
-It lets you integrate form submissions or deploy notifications from netlify to hundreds of external services like MailChimp, Hipchat, Google Docs, etc,.
+ It lets you integrate form submissions or deploy notifications from netlify to hundreds of external services like MailChimp, Hipchat, Google Docs, etc,.
 
-What that means is that in a few easy steps you can set up the app to send you a notification whenever a new form is submitted, or a deploy is finished and pushed live. The notification could be a mail, a message in slack or hipchat, or almost anywhere else.
+ What that means is that in a few easy steps you can set up the app to send you a notification whenever a new form is submitted, or a deploy is finished and pushed live. The notification could be a mail, a message in slack or hipchat, or almost anywhere else.
 
-But don't take our word for it. 
-Matt Hackington, a long time BitBalloon and netlify customer, runs several popular [codeschools](https://www.hackingtons.com/) in the Bay Area (with a last name like that you almost have to right?). 
-He has made a great video tutorial showing you exactly how to set it up, and agreed for us to let us show it on our blog.
+ Matt Highland is a long time BitBalloon and netlify customer and runs several popular [codeschools](https://www.hackingtons.com/) in the Bay Area.
 
-A free monitoring service for your developer toolbelt. Enjoy.
+ He made a great video tutorial that he let us share with you. It shows you how you set up a form with netlify’s built-in form processing tool and then use the netlify Zapier app to export the data from every submission to a google doc spread sheet. 
+
+Enjoy.
+
