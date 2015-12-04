@@ -55,24 +55,20 @@ Microsoft Windows (64bit) Quick Start (in Command Prompt):
 
 ```
 bitsadmin /transfer my-download-job /download /priority normal http://www.inkpaper.io/release/ink_windows_amd64.zip C:\my-download-folder\ink_windows_amd64.zip 
-
 cd my-download-folder
-unzip ink_windows_amd64.zip 
-mv ink_windows_amd64 my-inkpaper-site
+7z x ink_windows_amd64.zip -oc:\my-download-folder\my-inkpaper-site\ 
 cd my-inkpaper-site
 mkdir bin
-mv ink bin/ink.windows
+move ink.exe bin/ink.windows.exe
 
 bitsadmin /transfer my-download-job /download /priority normal http://www.inkpaper.io/release/ink_linux_amd64.tar.gz C:\my-download-folder\ink_linux_amd64.tar.gz 
 cd my-download-folder
-tar xzvf ink_linux_amd64.tar.gz
-mv ink_linux_amd64 my-inkpaper-site
-cd my-inkpaper-site
-mkdir bin
-mv ink bin/ink.linux
+7z x ink_linux_amd64.tar.gz -oc:\my-download-folder\ink_linux_amd64
+cd ink_linux_amd64
+move ink.exe c:\my-ink-paper-site\bin\ink.linux.exe
 ```
 
-Please note that Microsoft Windows will require wget to be installed if you use the above method, which you can get from [here](https://eternallybored.org/misc/wget/).
+Please note that Microsoft Windows will require [7zip](http://www.7-zip.org/download.html) to be installed and added to your path if you use the above method.
 
 ### Setup InkPaper
 
