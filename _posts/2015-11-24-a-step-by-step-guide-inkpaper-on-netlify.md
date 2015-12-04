@@ -64,7 +64,7 @@ cd my-inkpaper-site
 mkdir binmv ink bin/ink.linux
 ```
 
-Please note that Microsoft Windows will require wget to be installed, which you can get from [here](https://eternallybored.org/misc/wget/) or another version from [here](http://gnuwin32.sourceforge.net/packages/wget.htm).
+Please note that Microsoft Windows will require wget to be installed if you use the above method, which you can get from [here](https://eternallybored.org/misc/wget/).
 
 ### Setup InkPaper
 
@@ -94,7 +94,7 @@ mv ink_linux_amd64 site-name
 ```
 
 The first line simply takes us to the location of the downloaded package (change to your download location).
-The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination using the *--directory* flag. The third line takes us to the location where we keep our sites (and just now unpacked the file to) and the fourth line renames the directory we unpacked to our chosen site name..
+The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination using the *--directory* flag. The third line takes us to the location where we keep our sites (and just now unpacked the file to) and the fourth line renames the directory we unpacked to our chosen site name.
 
 #### 3. Preparing ink
 If you are using OSX or a Windows OS, rather than Linux, it is important that you also download the Linux version of the ink executable, as this is the version needed when building on Netlify! 
