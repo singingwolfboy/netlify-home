@@ -29,7 +29,8 @@ wget http://www.inkpaper.io/release/ink_linux_amd64.tar.gz
 tar xzvf ink_linux_amd64.tar.gz
 mv ink_linux_amd64 my-inkpaper-site
 cd my-inkpaper-site
-mkdir binmv ink bin/ink.linux
+mkdir bin
+mv ink bin/ink.linux
 ```
 
 OSX Quick Start (in Terminal): 
@@ -39,13 +40,15 @@ curl "http://www.inkpaper.io/release/ink_darwin_amd64.zip"
 unzip ink_darwin_amd64.zip 
 mv ink_darwin_amd64 my-inkpaper-site
 cd my-inkpaper-site
-mkdir binmv ink bin/ink.osx
+mkdir bin
+mv ink bin/ink.osx
 
 curl "http://www.inkpaper.io/release/ink_linux_amd64.tar.gz"
 tar xzvf ink_linux_amd64.tar.gz
 mv ink_linux_amd64 my-inkpaper-site
 cd my-inkpaper-site
-mkdir binmv ink bin/ink.linux
+mkdir bin
+mv ink bin/ink.linux
 ```
 
 Microsoft Windows (64bit) Quick Start (in Command Prompt): 
@@ -55,13 +58,15 @@ wget "http://www.inkpaper.io/release/ink_windows_amd64.zip"
 unzip ink_windows_amd64.zip 
 mv ink_windows_amd64 my-inkpaper-site
 cd my-inkpaper-site
-mkdir binmv ink bin/ink.windows
+mkdir bin
+mv ink bin/ink.windows
 
 wget "http://www.inkpaper.io/release/ink_linux_amd64.tar.gz"
 tar xzvf ink_linux_amd64.tar.gz
 mv ink_linux_amd64 my-inkpaper-site
 cd my-inkpaper-site
-mkdir binmv ink bin/ink.linux
+mkdir bin
+mv ink bin/ink.linux
 ```
 
 Please note that Microsoft Windows will require wget to be installed if you use the above method, which you can get from [here](https://eternallybored.org/misc/wget/).
