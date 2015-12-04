@@ -61,7 +61,7 @@ cd 'my-site-folder'
 git clone https://github.com/github_account/my-repo-name.git
 ```
 
-Substitute *my-site-folder* with your location and the clone address with the address of your GitHub fork and account.
+Substitute *my-site-folder* with your location and the address with the address of your repository and account. Please note that you need a repository that you own!
 
 Note that you should NOT create a folder for the project, as it comes inside a folder structure already. 
 
