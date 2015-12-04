@@ -61,6 +61,7 @@ cd my-inkpaper-site
 mkdir bin
 move ink.exe bin/ink.windows.exe
 
+cd my-download-folder
 bitsadmin /transfer my-download-job /download /priority normal http://www.inkpaper.io/release/ink_linux_amd64.tar.gz C:\my-download-folder\ink_linux_amd64.tar.gz 
 cd my-download-folder
 7z x ink_linux_amd64.tar.gz -oc:\my-download-folder\ink_linux_amd64
