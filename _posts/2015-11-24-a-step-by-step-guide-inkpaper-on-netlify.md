@@ -17,7 +17,59 @@ Among the multitude of site generators that have come into existence in the past
 
 It has a very elegant theme and is one of the fastest site generators to get up and running, as it has NO dependencies - all you have to do, is download and set it up.
 
+### Quick Start
+If you want to get a head start, you can do this all from the terminal in this quick start guide. However, if you need a more detailed introduciton and guide, simply scroll down to [here](#inkpapersetup).
+
+The guide below does the same thing for each OS, except that for OSX and Windows, it also downloads and renames the linux versin of ink, so that it can be used to deploy to netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
+
+Linux (64bit) Quick Start (in Terminal):
+
+```
+wget http://www.inkpaper.io/release/ink_linux_amd64.tar.gz
+tar xzvf ink_linux_amd64.tar.gz
+mv ink_linux_amd64 my-inkpaper-site
+cd my-inkpaper-site
+mkdir binmv ink bin/ink.linux
+```
+
+OSX Quick Start (in Terminal): 
+
+```
+curl "http://www.inkpaper.io/release/ink_darwin_amd64.zip"
+unzip ink_darwin_amd64.zip 
+mv ink_darwin_amd64 my-inkpaper-site
+cd my-inkpaper-site
+mkdir binmv ink bin/ink.osx
+
+curl "http://www.inkpaper.io/release/ink_linux_amd64.tar.gz"
+tar xzvf ink_linux_amd64.tar.gz
+mv ink_linux_amd64 my-inkpaper-site
+cd my-inkpaper-site
+mkdir binmv ink bin/ink.linux
+```
+
+Microsoft Windows (64bit) Quick Start (in Command Prompt): 
+
+```
+wget "http://www.inkpaper.io/release/ink_windows_amd64.zip"
+unzip ink_windows_amd64.zip 
+mv ink_windows_amd64 my-inkpaper-site
+cd my-inkpaper-site
+mkdir binmv ink bin/ink.windows
+
+wget "http://www.inkpaper.io/release/ink_linux_amd64.tar.gz"
+tar xzvf ink_linux_amd64.tar.gz
+mv ink_linux_amd64 my-inkpaper-site
+cd my-inkpaper-site
+mkdir binmv ink bin/ink.linux
+```
+
+Please note that Microsoft Windows will require wget to be installed, which you can get from [here](https://eternallybored.org/misc/wget/) or another version from [here](http://gnuwin32.sourceforge.net/packages/wget.htm).
+
 ### Setup InkPaper
+
+<a id="inkpapersetup"></a>
+
 If you already have an InkPaper repository forked on GitHub and only wish to connect, start [here](#netlifystart) instead.
 
 On the other hand, if you have InkPaper running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
