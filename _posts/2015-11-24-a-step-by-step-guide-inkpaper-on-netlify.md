@@ -18,9 +18,9 @@ Among the multitude of site generators that have come into existence in the past
 It has a very elegant theme and is one of the fastest site generators to get up and running, as it has NO dependencies - all you have to do, is download and set it up.
 
 ### Quick Start
-If you want to get a head start, you can do this all from the terminal in this quick start guide. However, if you need a more detailed introduciton and guide, simply scroll down to [here](#inkpapersetup).
+If you want to get a head start, you can download, install and setup from the terminal in this quick start guide. However, if you need a more detailed introduction and guide, simply scroll down to [here](#inkpapersetup).
 
-The guide below does the same thing for each OS, except that for OSX and Windows, it also downloads and renames the linux versin of ink, so that it can be used to deploy to netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
+The guide below does the same thing for each operating system, except that for OSX and Windows, it also downloads and renames the linux versin of ink, so that it can be used to deploy to netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
 
 Linux (64bit) Quick Start (in Terminal):
 
