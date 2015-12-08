@@ -60,33 +60,36 @@ Is this ok? (yes) y
 
 Basically the package.json has been created and is telling npm that it wants the packages listed to be installed with metal-smith.
 
-#### 3. Adding Packages
-metalsmith itself needs a fair few packages to run, but apart from that what packages or in metalsmith terms, what plugins do we want or need?
-Well, I'm used to Markdown, so I'll add that to the list with the following line:
-
-```
-npm install --save-dev metalsmith-markdown
-```
-
-Using the npm ls command I can then see my tree with metalsmith and metalsmith-markdown almost at the bottom.
-
-#### 4. npm install
+#### 3. npm install
 To actually install these packages we run the following command, also in the root of our metalsmith site.  The `--save-dev` flag tells npm to save the devDependencies.
 
 ```
 npm install --save-dev metalsmith
 ```
 
+#### 4. Adding Packages
+metalsmith itself needs a fair few packages to run, but apart from that what packages or in metalsmith terms, what plugins do we want or need?
+Well, I'm used to Markdown, so I'll add that to the list with the following line:
+
+```
+npm install --save-dev metalsmith-markdown
+npm install --save-dev metalsmith-templates
+```
+
+Using the npm ls command I can then see my tree with metalsmith and metalsmith-markdown almost at the bottom.
+
 #### 5. Create build file
 Create build.js:
 
 ```
 var Metalsmith = require('metalsmith'),
-    markdown   = require('metalsmith-markdown');
+    markdown   = require('metalsmith-markdown'),
+    templates  = require('metalsmith-templates');
 
 
 Metalsmith(__dirname)
     .use(markdown())
+    .use(templates())
     .destination('./build')
     .build()
 ```
