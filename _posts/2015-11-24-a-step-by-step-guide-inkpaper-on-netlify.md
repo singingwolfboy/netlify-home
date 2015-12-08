@@ -36,14 +36,14 @@ mv ink bin/ink.linux
 #### OSX Quick Start (in Terminal): 
 
 ```
-curl "http://www.inkpaper.io/release/ink_darwin_amd64.zip"
+curl -O "http://www.inkpaper.io/release/ink_darwin_amd64.zip"
 unzip ink_darwin_amd64.zip 
 mv ink_darwin_amd64 my-inkpaper-site
 cd my-inkpaper-site
 mkdir bin
 mv ink bin/ink.osx
 
-curl "http://www.inkpaper.io/release/ink_linux_amd64.tar.gz"
+curl -O "http://www.inkpaper.io/release/ink_linux_amd64.tar.gz"
 tar xzvf ink_linux_amd64.tar.gz
 mv ink_linux_amd64 my-inkpaper-site
 cd my-inkpaper-site
