@@ -13,7 +13,7 @@ tags: null
 ### Welcome to Netlify
 Welcome to Netlify and todays article about metalsmith.
 
-**Please note that this guide assumes you have Node.js and npm installed!!!**
+***Please note that this guide assumes you have Node.js and npm installed!!!***
 
 ### Setup metalsmith
 
@@ -58,10 +58,11 @@ Is this ok? (yes) y
 ```
 Basically the package.json has been created and is telling npm that it wants the packages listed to be installed with metal-smith.
 
-#### 3. npm install
+#### 3. Adding Packages
+metalsmith itself needs a fair few packages to run, but apart from that what packages or in metalsmith terms, what plugins do we want or need?
 
 #### 4. npm install
-To actually install these packages we run the following command, also in the root of our metalsmith site.
+To actually install these packages we run the following command, also in the root of our metalsmith site.  The `--save-dev` flag tells npm to save the devDependencies.
 ```
 npm install --save-dev metalsmith
 ```
