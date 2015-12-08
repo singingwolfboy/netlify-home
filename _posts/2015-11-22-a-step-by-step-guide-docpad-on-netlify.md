@@ -6,7 +6,7 @@ short_title: Docpad on netlify
 description: A step-by-step guide on how to host a website built with static site generator Docpad.
 thumbnail: /uploads/1865439.png
 cmsUserSlug: ""
-date: 2016-11-22
+date: 2015-11-22
 tags: null
 ---
 
@@ -15,7 +15,7 @@ tags: null
 Today, we're going to look at how to host a website built with Docpad on netlify, including setting up continuous deployment.
 
 Let's start from scratch (if you already have a Docpad site set up, you can skip down to [here](#netlifystart)).
-<!-- excerpt -->
+
 Open your terminal, and enter the following commands (this assumes you have Node.js installed):
 
 ```

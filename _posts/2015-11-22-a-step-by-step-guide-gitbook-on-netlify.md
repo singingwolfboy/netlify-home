@@ -6,7 +6,7 @@ short_title: GitBook on netlify
 description: A step-by-step guide on how to host a website built with static site generator Gitbook.
 thumbnail: /uploads/gitbook.png
 cmsUserSlug: ""
-date: 2016-11-22
+date: 2015-11-22
 tags: null
 ---
 
@@ -17,7 +17,7 @@ Today, we're going to look at how to host a book built with GitBook on netlify, 
 This tutorial will start from scratch (if you already have GitBook set up, you can skip down to [here](#netlifystart)).
 
 Let's get your workstation prepped (this guide assumes you have Node.js installed).
-<!-- excerpt -->
+
 First, use `mkdir` to create the `gitbook` directory where you'll be working:
 
 ```
