@@ -156,7 +156,7 @@ attributes:
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Prerendering
     details: ["No", "No", "Yes", "Yes"]
-    info: Add a prerendering backend for your Single Page App. Netlify will proxy crawler requests straight to prerender.io or any other prerender backend so you SPA gets its SEO juice.
+    info: Add a prerendering backend for your Single Page App. Netlify will proxy crawler requests straight to prerender.io or any other prerender backend so your SPA gets its SEO juice.
     link_text: Read all about prerendering in our documentation
     link: /docs/prerendering
   - title: Phone Support
