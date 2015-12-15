@@ -1,4 +1,6 @@
 ---
+cmsUserSlug: redirects-and-rewrite-rules
+date: 2015-12-15 
 title: Redirects and Rewrite Rules
 position: 40
 ---
@@ -39,13 +41,13 @@ You can easily setup a custom 404 page. This doesn't require any redirect rules.
 
 ## Trailing Slash
 
-Our CDN edge nodes does URL normalization before the redirect rules kicks in. This happens to make sure we can guarantee the highest possible cache hit rate and the absolute best performance for your site.
+Our CDN edge nodes do URL normalization before the redirect rules kick in. This happens to make sure we can guarantee the highest possible cache hit rate and the absolute best performance for your site.
 
-When "Pretty URLs" is enabled under processing settings for your site, netlify will enforce consistent URL patters.
+When "Pretty URLs" is enabled under processing settings for your site, Netlify will enforce consistent URL patters.
 
-A link to /about.html will be rewritten to /about in your HTML filesand netlify will enforce a redirect from /about/ to /about
+A link to /about.html will be rewritten to /about in your HTML files and Netlify will enforce a redirect from /about/ to /about
 
-A link to /about/index.html will be rewritten to /about/ and netlify will redirect from /about to /about/
+A link to /about/index.html will be rewritten to /about/ and Netlify will redirect from /about to /about/
 
 ## Placeholders
 
@@ -68,7 +70,7 @@ This would redirects paths like `/news/2004/01/10/my-story` to `/blog/2004/01/10
 
 ## Query Params
 
-You can also use query parameters in your URL matches. The following match witll redirect a URL like: `/store?id=my-blog-post` to `/blog/my-blog-post` with a `301` redirect.
+You can also use query parameters in your URL matches. The following match will redirect a URL like: `/store?id=my-blog-post` to `/blog/my-blog-post` with a `301` redirect.
 
 ```
 /story id=:id  /blog/:id  301
@@ -86,7 +88,7 @@ This will effectively serve the index.html instead of giving a 404 no matter wha
 
 ## Proxying
 
-Just like you can rewrite paths like `/*` to `/index.html`, you can also setup rules to let parts of your site proxy to external services. Lets say you need to communicate from a Single Page App with an API on https://api.example.com that doesn't support CORS request. The following rule will let you use /api/ from your JavaScript client:
+Just like you can rewrite paths like `/*` to `/index.html`, you can also set up rules to let parts of your site proxy to external services. Let's say you need to communicate from a Single Page App with an API on https://api.example.com that doesn't support CORS request. The following rule will let you use /api/ from your JavaScript client:
 
     /api/*  https://api.example.com/:splat  200
 
@@ -94,24 +96,24 @@ Now all requests to /api/... will be proxied through to https://api.example.com 
 
 ## Note on shadowing
 
-By default you can't shadow a URL that actually exists within the site when using a splat or dynamic path segment. This means that even if you've setup the following rewrite rule:
+By default, you can't shadow a URL that actually exists within the site when using a splat or dynamic path segment. This means that even if you've setup the following rewrite rule:
 
     /*   /index.html   200
 
 The path `/partials/chat.html` would still render the contents of that file, if that file actually exists. This tends to be the preferred behavior when setting up rewrite rules for single page apps, etc.
 
-However, if you're 100% sure that you'll always want to redirect, even when the URL match a static file, you can append an exclamation mark to the rule:
+However, if you're 100% sure that you'll always want to redirect, even when the URL matches a static file, you can append an exclamation mark to the rule:
 
     /app/*  /app/index.html  200!
 
 This will rewrite everything within /app/* to /app/index.html even if a file matches the URL.
 
-## GeoIP and Language based redirects
+## GeoIP and Language-based redirects
 
-Netlify support GeoIP and Language based redirects directly from our CDN nodes.
+Netlify supports GeoIP and language-based redirects directly from our CDN nodes.
 
 This is ideal for large multi-regional sites where you want to send people to the right location based on their location or browser language.
 
 Both the language and the country can be specified in a cookie as well, so you can easily override the default behavior with JavaScript.
 
-GeoIP and Language based redirects are available on our enterprise plan. [Please get in touch](/contact) for more details.
+GeoIP and language-based redirects are available on our enterprise plan. [Please get in touch](/contact) for more details.
