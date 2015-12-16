@@ -3,13 +3,12 @@ title: "A step-by-step guide: Gatsby on Netlify "
 author: Aaron Autrand
 image: null
 short_title: Gatsby Tutorial
-description: tutorial
+description: A short guide to help you set up Gatsby on Netlify with continuous deployment.
 thumbnail: /uploads/gatsbyjs.png
 cmsUserSlug: ""
-date: 2015-12-15 
+date: 2015-12-15T00:00:00.000Z
 tags: null
 ---
-
 
 ### **Welcome to Netlify**
 
