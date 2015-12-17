@@ -20,13 +20,13 @@ We thought we’d celebrate this 7th coming with a quick look at what’s happen
 
 We picked out 3 sites that are all made with modern static build tools and all hosted with yours truly. And of course, most importantly, are part of a Universe where they have lightsabers which really are reason enough to forcefully try and daydream ourselves up and and away from this World in to a galaxy far far away.
 
-To start it off let’s have a look at Wikia’s Star Wars page.
-
 <br>
 
 ![wikia-starwars.png](/uploads/wikia-starwars.png)
 
 ## Wikia ##
+To start it off let’s have a look at Wikia’s Star Wars page.
+
 Wikia has grown hugely in the last years, and the total number of requests coming in every month is almost 4 billion. (coincidence we ask??? ..well yeah but..)
 
 This is definitely one of the better Star Wars fan pages out there, nicely made, with a lively hash tagged livestreamed convo, interviews, games, trivia and the tidbits of information that true fans live to find.
@@ -55,7 +55,7 @@ To top it off, apparently all Carrot employees are expected to see the original 
 ## Sphero (aka BB-8) ##
 Last of we have a company that has a great tip for getting initial traction. Have your prototype droid be picked up by the biggest movie franchise in the World and have them give it a prominent role in the film and marketing of the film.
 
-Sphero is one of the coolest bots we’ve ever seen and not surprisingly a lot of people agree on that. And without giving away trade secrets we can reveal that their sites are getting plenty of traffic these days :)
+BB-8 is one of the coolest bots we’ve ever seen and without giving away trade secrets we can reveal that their sites are getting plenty of traffic these days :)
 
 Get your own fully operational Star Wars droid [here](http://www.sphero.com/starwars).
 
