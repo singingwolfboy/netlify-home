@@ -6,7 +6,7 @@ short_title: Star Wars gone static
 description: 3 Star Wars themed sites on netlify. Because of course.
 thumbnail: /uploads/screen-shot-2015-12-16-at-20.13.25.png
 cmsUserSlug: ""
-date: 2015-12-16 
+date: 2015-12-16T00:00:00.000Z
 tags: null
 ---
 
@@ -22,12 +22,16 @@ We picked out 3 sites that are all made with modern static build tools and all h
 
 To start it off let’s have a look at Wikia’s Star Wars page.
 
+![wikia-starwars.png](/uploads/wikia-starwars.png)
+
 ## Wikia ##
 Wikia has grown hugely in the last years, and the total number of requests coming in every month is almost 4 billion. (coincidence we ask??? ..well yeah but..)
 
 This is definitely one of the better Star Wars fan pages out there, nicely made, with a lively hash tagged livestreamed convo, interviews, games, trivia and the tidbits of information that true fans live to find.
 
-[Check out wikia.com/starwars](www.wikia.com/starwars)
+[Check out wikia.com/starwars](http://www.wikia.com/starwars)
+
+![carrot-starwars.jpg](/uploads/carrot-starwars.jpg)
 
 ## Carrot ##
 New York based Carrot agency is amongst the most recognised digital agencies in the World. They build the static site generator Roots that’s used to power all kinds of cool sites including WeWork.com and the Malalafoundation and of course their own site Carrot.is. And this is where we find the 2nd of today’s StarWars sites. 
@@ -39,6 +43,8 @@ This special site called for brands and potential employees to write in and stat
 To top it off, apparently all Carrot employees are expected to see the original trilogy. How can you not get behind that!?
 
 [Check it out here](http://carrot.is/starwarsvip)
+
+![sphero.jpg](/uploads/sphero.jpg)
 
 ## Sphero (aka BB-8) ##
 Last of we have a company that has a great tip for getting initial traction. Have your prototype droid be picked up by the biggest movie franchise in the World and have them give it a prominent role in the film and marketing of the film.
