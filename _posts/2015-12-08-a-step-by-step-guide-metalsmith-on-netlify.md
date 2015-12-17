@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step guide: Metalsmith on Netlify"
+title: "A step-by-step guide: Metalsmith on netlify"
 author: Jimmi Lee
 image: null
 short_title: A short guide - Metalsmith on netlify
