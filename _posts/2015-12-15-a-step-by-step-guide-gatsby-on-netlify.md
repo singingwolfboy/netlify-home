@@ -10,9 +10,10 @@ date: 2015-12-15T00:00:00.000Z
 tags: null
 ---
 
-### **Welcome to netlify**
 
 Today, we're going to look at how to host a website built with Gatsby on netlify, including setting up continuous deployment.
+
+Gatsby is a new static site generator, but it's gaining traction fast! It's made in what's probably the only thing as hot as Google's 'go' right now, React.js. React is a hugely popular javascript framework out of Facebook.
 
 Let's start from scratch (if you already have a Gatsby site set up, you can skip down to [here](#netlifystart)).
 
