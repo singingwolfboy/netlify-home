@@ -2,16 +2,16 @@
 title: "A step-by-step guide: Metalsmith on Netlify"
 author: Jimmi Lee
 image: null
-short_title: A short guide - Metalsmith on Netlify
-description: A short guide on how to set Metalsmith up in continuous deployment with Netlify and GitHub
+short_title: A short guide - Metalsmith on netlify
+description: A short guide on how to set Metalsmith up in continuous deployment with netlify and GitHub
 thumbnail: /uploads/metalsmith_thumb2.png
 cmsUserSlug: ""
 date: 2015-12-08T00:00:00.000Z
 tags: null
 ---
 
-### Welcome to Netlify
-Welcome to Netlify and todays article about metalsmith.
+### Welcome to netlify
+Welcome to netlify and todays article about metalsmith.
 
 ***Please note that this guide assumes you have Node.js and npm installed!!!***
 
@@ -19,7 +19,7 @@ Welcome to Netlify and todays article about metalsmith.
 
 If you already have a metalsmith repository forked on GitHub and only wish to connect, start [here](#netlifystart) instead.
 
-On the other hand, if you have metalsmith running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
+On the other hand, if you have metalsmith running locally, but need some guidance getting it on GitHub, before you deploy to netlify, start [here](#githubstart) instead.
 
 Finally, if you're completely new to metalsmith, simply continue this guide onwards and downwards.  
 
