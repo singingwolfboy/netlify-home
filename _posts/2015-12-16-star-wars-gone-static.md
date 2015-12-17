@@ -31,6 +31,8 @@ This is definitely one of the better Star Wars fan pages out there, nicely made,
 
 [Check out wikia.com/starwars](http://www.wikia.com/starwars)
 
+<br>
+
 ![carrot-starwars.jpg](/uploads/carrot-starwars.jpg)
 
 ## Carrot ##
@@ -43,6 +45,8 @@ This special site called for brands and potential employees to write in and stat
 To top it off, apparently all Carrot employees are expected to see the original trilogy. How can you not get behind that!?
 
 [Check it out here](http://carrot.is/starwarsvip)
+
+<br>
 
 ![sphero.jpg](/uploads/sphero.jpg)
 
