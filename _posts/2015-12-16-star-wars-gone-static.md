@@ -22,6 +22,8 @@ We picked out 3 sites that are all made with modern static build tools and all h
 
 To start it off let’s have a look at Wikia’s Star Wars page.
 
+<br>
+
 ![wikia-starwars.png](/uploads/wikia-starwars.png)
 
 ## Wikia ##
