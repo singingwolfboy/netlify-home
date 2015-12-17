@@ -22,6 +22,8 @@ Our hosting service had tons of work done under the hood as well.
 
 Here is a selection of what’s new!
 
+<!-- excerpt -->
+
 ## Clojure support
 
 We now support Clojure on our build image and will automatically install and cache dependencies with Leiningen if your repository has a 'project.clj'

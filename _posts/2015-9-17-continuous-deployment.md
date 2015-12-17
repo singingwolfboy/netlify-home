@@ -18,6 +18,9 @@ Basically it means that we build, configure and deploy your site every time you 
 
  _A sidenote: Many people confuse Continuous Deployment with Continuous Integration. So just to clarify the latter refers to making merges in your repository and to running a test server that makes sure an automatic test is run every time you update that repository.._
 
+ <!-- excerpt -->
+
+
  **So how does it work?**
 
 You can setup continuous deployment in just a few seconds via netlify's web UI or CLI tool. Pick the repository you want netlify to deploy and just set your build command and the directory you want to deploy after the build is done. In most cases though, netlify will simply guess your configuration once you select the repository.

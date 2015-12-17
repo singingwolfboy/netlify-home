@@ -18,6 +18,9 @@ This tutorial will start from scratch (if you already have GitBook set up, you c
 
 Let's get your workstation prepped (this guide assumes you have Node.js installed).
 
+<!-- excerpt -->
+
+
 First, use `mkdir` to create the `gitbook` directory where you'll be working:
 
 ```
