@@ -25,18 +25,18 @@ For information about installing and handling node.js using nvm please see [this
 
 ### Setup Metalsmith
 Metalsmith is not only a static site generator, but can do a lot of other things equally well and in more general terms one might define it as a file manipulator with plugins.
-This means it's extremely versatile, while remaining simple, but it also means that it treats all files equally, unlike most other static site generators, which isn't always a good thing.
+This means it's extremely versatile, while remaining simple, but it also means that it treats all files equally and that there is a bit more to be set up, before it's doing what we want, but not to worry, it shouldn't take too long.
 
 #### 1. Create Folder Structure
 We'll start out by creating a simple folder structure for our project, with two folders, one for templates and one for the various content we have (actual content, images, styles and scripts). As we progress through the tutorial we'll add a few more folders along the way, but this will suffice for now.
-
-It's worth noting that the folder structure used in the src directory is used in the output directory.
 
 The folder structure for this project:
 <INSERT PIC INSTEAD>
 .
 |– src/
     |– content/
+      |– pages/
+      |– posts/
     |– images/
     |– styles/
     |– scripts/
@@ -44,6 +44,7 @@ The folder structure for this project:
 |   |– partials/
 |– build.js
 |– package.json
+
 
 #### 2. Setup the Node Package manager with npm init
 To handle the various packages we're using npm. 
@@ -219,7 +220,7 @@ To discern between the various content we're going to have, we will set up a fol
 title: About
 template: page.hbt
 ---
-This is a small Metalsmith demonstration site that aims at showing you a very basic site based on Metalsmith.
+This is a small Metalsmith demonstration site that aims at showing you a very basic site build with Metalsmith.
 ```
 
 As you can see in the YAML frontmatter above, we're using the page template and not the home template we made earlier and so naturally we also need to create this template file.
@@ -245,7 +246,7 @@ Let's move on to creating these partials.
 Template partials are useful for the elements that are part of every page, such as a footer and a header for example or perhaps your logo. In Metalsmith how these are handled comes down to your templating engine and in our case for this tutorial that means it comes down to the handlebars templating engine. 
 
 First we create the partials files. We're just going to create the simple `header.hbt` and `footer.hbt` files in the `templates/partials` directory.
-For the partials to work in Metalsmith, we need to add them to our build file: 
+For the partials to work in Metalsmith, we need to add them to our build file. 
 
 Updated build.js file:
 
@@ -266,6 +267,8 @@ Metalsmith(__dirname)
     .build(function (err) { if(err) console.log(err) })
 ```
 
+<EXPLAIN THE fs = require('fs') PART WHICH IS ROOTED IN fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString()>
+
 The header partials file `header.hbt` in the `templates/partials` folder:
 
 ```
@@ -275,7 +278,7 @@ The header partials file `header.hbt` in the `templates/partials` folder:
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Metalsmith Test Site</title>
-
+        <link rel="stylesheet" href="styles/main.css" type="text/css" />
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
@@ -299,9 +302,110 @@ The footer partials file `footer.hbt` in the `templates/partials` folder:
 </html>
 ```
 
-#### 10. Collections and Link Plugins
-<If we leave or site like this, we will have links that look like this: “hostname/content/pages/about.html”, but wouldn’t it be much nicer (and search engine friendlier) to have a link structure like this: “hostname/pages/about”?>
+Notice the stylesheet link in our header.
 
-<SHOULD we add a chapter on two extra plugins to create nicer perma links? >
+To make the site we're working on a little less bleak, we're going to need a stylesheet.
 
-<SOMETHING ABOUT plugin order - one may have to try out different orders to get it working>
+#### 10. Add a Stylesheet
+We're going to simply add a stylesheet in the src/styles folder named main.css as referenced in our header.
+
+You can use any old external css stylesheet or create a new one. Once you run build, metalsmith will copy this file over as is.
+
+#### 11. Collections and Link Plugins
+To illustrate the power and flexibility of metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our posts. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
+
+```
+npm install --save-dev metalsmith-collections
+npm install --save-dev metalsmith-permalinks
+```
+
+Apart from simply adding these two plugins to the build file, we also have to define the two collections by giving them a pattern as seen below.
+
+```
+Metalsmith(__dirname)
+    .use(collections({
+        pages: {
+            pattern: 'content/pages/*.md'
+        },
+        posts: {
+            pattern: 'content/posts/*.md',
+            sortBy: 'date',
+            reverse: true
+        }
+    }))
+```
+
+The pattern for the pages is defined as all markdown files in the pages folder, while the same holds true for the posts collection which is made up of all the markdown files in its corresponding posts folder. Furthermore the posts are sorted by date in reverse.
+
+The collection() function creates internal arrays of the files, which can then be accessed in templates using collections.collection-name or when setting up the permalinks as seen below.
+
+The permalinks must be set AFTER the markdown plugin to work properly!
+We set the pattern to use the collection and the title, so that the about.html file instead becomes pages/about/index.html
+
+```
+    .use(markdown())
+    .use(permalinks({
+        pattern: ':collection/:title'
+    }))
+```
+
+#### 12. Creating Content
+To see the difference between our two collections, the pages and the posts, we also need to create the posts template, so go ahead and create the post.hbt file in the templates directory.
+
+The post.hbt file:
+
+```
+{{> header}}
+<h2>{{title}}</h2>
+
+<article>
+    {{{contents}}}
+</article>
+{{> footer}}
+```
+
+Next, we need to create at least one post, but preferably a few more than that, to illustrate how the files are sorted. Each of the posts should have the following YAML frontmatter:
+
+```
+---
+title: "Title of the Post"
+date: YYYY-MM-DD
+template: post.hbt
+---
+```
+
+It's pretty self explanatory, as we've defined ourselves what YAML frontmatter makes sense through our implementation of Metalsmith. It's pretty much the same as the YAML we put with our about page, except for the added date. 
+
+We also need a page which can show our posts sorted by date in reverse.
+We'll create a blog.md file in the src/content/pages folder and put a bit of YAML in it:
+
+```
+---
+title: Blog
+template: blog.hbt
+---
+```
+
+For our blog template, we create a blog.hbt file in the templates folder and put the following content in it:
+
+```
+{{> header}}
+<h2>{{title}}</h2>
+
+<article>
+    <ul>
+        {{#each collections.posts}}
+            <li>
+                <h3>{{this.title}}</h3>
+                <article>{{this.contents}}</article>
+            </li>
+        {{/each}}
+    </ul>
+</article>
+
+{{> footer}}
+```
+
+
+
+#### 13. 
