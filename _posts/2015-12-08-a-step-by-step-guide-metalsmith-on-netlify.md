@@ -33,6 +33,7 @@ We'll start out by creating a simple folder structure for our project, with two 
 It's worth noting that the folder structure used in the src directory is used in the output directory.
 
 The folder structure for this project:
+<INSERT PIC INSTEAD>
 .
 |– src/
     |– content/
@@ -298,3 +299,9 @@ The footer partials file `footer.hbt` in the `templates/partials` folder:
 </html>
 ```
 
+#### 10. Collections and Link Plugins
+<If we leave or site like this, we will have links that look like this: “hostname/content/pages/about.html”, but wouldn’t it be much nicer (and search engine friendlier) to have a link structure like this: “hostname/pages/about”?>
+
+<SHOULD we add a chapter on two extra plugins to create nicer perma links? >
+
+<SOMETHING ABOUT plugin order - one may have to try out different orders to get it working>
