@@ -24,13 +24,13 @@ Finally, if you're completely new to Metalsmith, simply continue this guide onwa
 For information about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
 ### Setup Metalsmith
-Metalsmith is not only a static site generator, but can do a lot of other things and more general terms one might define it as a file manipulator with plugins.
-This means it's extremely versatile, while remaining simple, but it also means that it treats all files equally, unlike most other static site generators.
-
-
+Metalsmith is not only a static site generator, but can do a lot of other things equally well and in more general terms one might define it as a file manipulator with plugins.
+This means it's extremely versatile, while remaining simple, but it also means that it treats all files equally, unlike most other static site generators, which isn't always a good thing.
 
 #### 1. Create Folder Structure
 We'll start out by creating a simple folder structure for our project, with two folders, one for templates and one for the various content we have (actual content, images, styles and scripts). As we progress through the tutorial we'll add a few more folders along the way, but this will suffice for now.
+
+It's worth noting that the folder structure used in the src directory is used in the output directory.
 
 The folder structure for this project:
 .
@@ -41,7 +41,6 @@ The folder structure for this project:
     |– scripts/
 |– templates/
 |   |– partials/
-|– config.json
 |– build.js
 |– package.json
 
