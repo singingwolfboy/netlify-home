@@ -11,19 +11,19 @@ tags: null
 ---
 
 ### Welcome to Netlify
-Welcome to Netlify and todays article about metalsmith.
+Welcome to Netlify and todays article about Metalsmith.
 
-If you already have a metalsmith repository forked on GitHub and only wish to connect to Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
+If you already have a Metalsmith repository forked on GitHub and only wish to connect to Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
 
-On the other hand, if you have metalsmith running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
+On the other hand, if you have Metalsmith running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
 
-Finally, if you're completely new to metalsmith, simply continue this guide onwards and downwards.  
+Finally, if you're completely new to Metalsmith, simply continue this guide onwards and downwards.  
 
 ***Please note that this guide assumes you have Node.js (any version above 0.12.x) and npm installed!!!***
 
-For information about installing and handling node.js (or even io.js) using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
+For information about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
-### Setup metalsmith
+### Setup Metalsmith
 Metalsmith is not only a static site generator, but can do a lot of other things and more general terms one might define it as a file manipulator with plugins.
 This means it's extremely versatile, while remaining simple, but it also means that it treats all files equally, unlike most other static site generators.
 
@@ -47,7 +47,7 @@ The folder structure for this project:
 
 #### 2. Setup the Node Package manager with npm init
 To handle the various packages we're using npm. 
-Open a terminal window and cd to the root of your metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a package.json file with user feedback. Note that apart from the file, npm also creates a node_modules folder, to hold the various packages.
+Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a package.json file with user feedback. Note that apart from the file, npm also creates a node_modules folder, to hold the various packages.
 Alternatively `npm init -f` will intialize the current directory and create a package.json file with default settings.
 
 The basic output will look something like this after you're done:
@@ -55,7 +55,7 @@ The basic output will look something like this after you're done:
 ```
 name: (your-site-name) 
 version: (1.0.0) 
-description: Small demonstration of metalsmith site generator
+description: Small demonstration of Metalsmith site generator
 entry point: (build.js) 
 test command: 
 git repository: 
@@ -67,7 +67,7 @@ About to write to /home/user/path-to-site/site-name/package.json:
 {
   "name": "your-site-name",
   "version": "1.0.0",
-  "description": "Small demonstration of metalsmith site generator",
+  "description": "Small demonstration of Metalsmith site generator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -94,7 +94,7 @@ npm install --save-dev package-name
 The `--save-dev` flag tells npm to save the devDependencies.
 
 Let's get started.
-The first package we need is metalsmith, so go ahead and enter the following command
+The first package we need is Metalsmith itself, so go ahead and enter the following command:
 
 ```
 npm install --save-dev metalsmith
@@ -103,14 +103,14 @@ npm install --save-dev metalsmith
 So far so good, let's add some plugins.
 
 #### 4. Adding Packages
-metalsmith itself needs a fair few packages to run, but apart from that what packages or in metalsmith terms, what plugins do we want or need?
+Metalsmith itself needs a fair few packages to run, but apart from that what packages or in Metalsmith terms, what plugins do we want or need?
 Well, I'm getting used to Markdown and statistically speaking so is the average reader of this article, so I'll add that to the list with the following command in terminal:
 
 ```
 npm install --save-dev metalsmith-markdown
 ```
 
-As you can see, it's easy to install plugins and even metalsmith itself is a plugin.
+As you can see, it's easy to install plugins and even Metalsmith itself is a plugin.
 
 Using the `npm ls` command it's possible to see the dependency tree with metalsmith and metalsmith-markdown.
 
@@ -132,7 +132,7 @@ Metalsmith(__dirname)
 
 Did you notice a pattern here?
 For each plugin you want to install, you need to run `npm install --save-dev plugin-name` in terminal and then you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and below that invoked with `.use(variable-name())` as seen in the build.js file above.
-Furthermore the destination folder is defined with `.destination('./build')` and in the final line, the build method is called, with a callback (apparently the callback isn't needed for all versions of metalsmith, but we added it just in case).
+Furthermore the destination folder is defined with `.destination('./build')` and in the final line, the build method is called, with a callback (apparently the callback isn't needed for all versions of Metalsmith, but we added it just in case).
 
 Once you have the build file saved, you can try to build the page with the following command:
 
@@ -219,7 +219,7 @@ To discern between the various content we're going to have, we will set up a fol
 title: About
 template: page.hbt
 ---
-This is a small metalsmith demonstration site that aims at showing you a very basic site based on metalsmith.
+This is a small Metalsmith demonstration site that aims at showing you a very basic site based on Metalsmith.
 ```
 
 As you can see in the YAML frontmatter above, we're using the page template and not the home template we made earlier and so naturally we also need to create this template file.
@@ -242,10 +242,10 @@ To add the partials we simply insert the line `{{> PartialName }}` as seen above
 Let's move on to creating these partials.
 
 #### 9. Template Partials
-Template partials are useful for the elements that are part of every page, such as a footer and a header for example or perhaps your logo.  In metalsmith how these are handled comes down to your templating engine and in our case for this tutorial that means it comes down to the handlebars templating engine. 
+Template partials are useful for the elements that are part of every page, such as a footer and a header for example or perhaps your logo. In Metalsmith how these are handled comes down to your templating engine and in our case for this tutorial that means it comes down to the handlebars templating engine. 
 
 First we create the partials files. We're just going to create the simple `header.hbt` and `footer.hbt` files in the `templates/partials` directory.
-For the partials to work in metalsmith, we need to add them to our build file: 
+For the partials to work in Metalsmith, we need to add them to our build file: 
 
 Updated build.js file:
 
