@@ -31,20 +31,11 @@ This means it's extremely versatile, while remaining simple, but it also means t
 We'll start out by creating a simple folder structure for our project, with two folders, one for templates and one for the various content we have (actual content, images, styles and scripts). As we progress through the tutorial we'll add a few more folders along the way, but this will suffice for now.
 
 The folder structure for this project:
-<INSERT PIC INSTEAD>
-.
-|– src/
-    |– content/
-      |– pages/
-      |– posts/
-    |– images/
-    |– styles/
-    |– scripts/
-|– templates/
-|   |– partials/
-|– build.js
-|– package.json
 
+![metalsmithfolder_1small.png](/uploads/metalsmithfolder_1small.png)
+
+You can go ahead and create the folder structure first.
+Then we'll fill it in along the way.
 
 #### 2. Setup the Node Package manager with npm init
 To handle the various packages we're using npm. 
@@ -406,6 +397,6 @@ For our blog template, we create a blog.hbt file in the templates folder and put
 {{> footer}}
 ```
 
-
-
 #### 13. 
+
+#### 14. 
