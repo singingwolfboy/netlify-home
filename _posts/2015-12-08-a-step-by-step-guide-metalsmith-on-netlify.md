@@ -28,7 +28,7 @@ Metalsmith is not only a static site generator, but can do a lot of other things
 This means it's extremely versatile, while remaining simple, but it also means that there's a bit more to be done on the setup side, than what we're used to from other static site generators.  
 
 #### 1. Create Folder Structure
-We'll start out by creating a simple folder structure for our project as outlined in the picture below, with a number of files. We'll outline the content of the files in the following steps and more will be added along the way.
+We'll start out by creating a simple folder structure for our project as outlined in the picture below, with a number of files. We'll fill in the content of the files in the following steps and more files will be added along the way.
 
 The folder structure for this project:
 
@@ -36,6 +36,7 @@ The folder structure for this project:
 
 #### 2. Setup the Node Package manager
 To handle the various packages you will need to have node.js with npm installed (they come together). 
+
 Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a package.json file with user feedback. 
 Note that apart from the file, npm also creates a node_modules folder, to hold the various packages.
 Alternatively `npm init -f` will intialize the current directory and create a package.json file with default settings.
@@ -44,7 +45,7 @@ Alternatively `npm init -f` will intialize the current directory and create a pa
 
 #### 3. npm install
 To actually install the various packages, we'll use the `npm install --save-dev package-name` command, substituting package-name with the various packages.
-The `--save-dev` flag tells npm to save the devDependencies.
+The `--save-dev` flag tells npm to save the devDependencies in the package.json file. It is then possible to uninstall and remove the package again using `npm uninstall --save-dev package-name`
 
 Let's get started.
 The first package we need is Metalsmith itself, so go ahead and enter the following command:
@@ -65,7 +66,7 @@ npm install --save-dev metalsmith-markdown
 
 As you can see, it's easy to install plugins and even Metalsmith itself is a plugin.
 
-Using the `npm ls` command it's possible to see the dependency tree so far, with metalsmith and metalsmith-markdown.
+Using the `npm ls` command it's possible to see the dependency tree.
 
 #### 5. Create build file
 To build our site with these plugins, we need to define an output folder and run a script. We're using a simple javascript for this and we've aptly named this script build.js (since every time we run it, it will build the site).
@@ -84,8 +85,16 @@ Metalsmith(__dirname)
 ```
 
 Did you notice a pattern here?
-For each plugin you want to install, you need to run `npm install --save-dev plugin-name` in terminal and then you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and below that invoked with `.use(variable-name())` as seen in the build.js file above.
-Furthermore the destination folder is defined with `.destination('./build')` and in the final line, the build method is called, with a callback (apparently the callback isn't needed for all versions of Metalsmith, but we added it just in case).
+
+For each plugin you want to install, you need to run the following command in terminal 
+
+```
+npm install --save-dev plugin-name
+``` 
+
+Second, you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and below that invoked with `.use(variable-name())` as seen in the build.js file above.
+
+Furthermore the destination folder is defined with `.destination('./build')` and in the final line, the build method is called, with a callback to handle possible errors.
 
 Once you have the build file saved, you can try to build the page with the following command:
 
@@ -101,14 +110,13 @@ If everything went according to plan, there should be a new file in the build di
 Well, what else do we need?  
 There's a whole list of plugins [here](http://www.metalsmith.io/#the-plugins) and it's even possible to write them yourself, should you feel inclined to do so, but for our basic tutorial we won't get into this.  
 
-We're going to need a templating engine, as well as some templates to wrap around our content.  We'll use the handlebars templating engine, though there are other equally useful options. For the templates, we'll use ???
+We're going to need a templating engine, as well as some templates to wrap around our content.  We'll use the handlebars templating engine, though there are other equally useful options. For the templates, we'll use the metalsmith-templates plugin.
 We'll start by installing the two plugins with the following lines in terminal:
 
 ```
 npm install --save-dev metalsmith-templates
 npm install --save-dev handlebars
 ```
-< should change metalsmith-templates to these two instead: metalsmith-layouts & metalsmith-in-place - HOWEVER isn't working!>
 
 We need to update our bulid.js file with these changes as well.
 
@@ -126,7 +134,7 @@ Metalsmith(__dirname)
     .build(function (err) { if(err) console.log(err) })
 ```
 
-The above script follows the norm set before, except that we need to tell the templates which templating engine to use, rather than just add them with a .use method like before. This is done with the line: `.use(templates('handlebars'))`
+The above script follows the norm set before, except that we need to tell the templates which templating engine to use, rather than just add them with a `.use()` method like before. This is done with the line: `.use(templates('handlebars'))`
 
 You might want to check the changes made to the dependency tree by running the `npm ls` command again.
 
@@ -166,7 +174,7 @@ To run the build script and check out the changes, first save and next run the b
 Check the output in the build directory and see if the template HTML created above was added properly.
 
 #### 8. Folder Structure
-To discern between the various content we're going to have, we will set up a folder for each type of content in the content folder. E.g. we want one type for displaying pages and one of these pages will be our about page, so we'll create a 'src/content/pages` folder with a new file in it named `about.md` with the following content:
+To discern between the various content we're going to have, we will set up a folder for each type of content in the content folder. E.g. we want one type for displaying pages and one of these pages will be our about page, so we'll create a `src/content/pages` folder with a new file in it named `about.md` with the following content:
 
 ```
 ---
@@ -256,9 +264,9 @@ Notice the stylesheet link in our header.
 To make the site we're working on a little less bleak, we're going to add a stylesheet.
 
 #### 10. Add a Stylesheet
-We're going to simply add a stylesheet in the src/styles folder named main.css as referenced in our header.
+We're going to simply add a stylesheet in the `src/styles` folder named `main.css` as referenced in our header.
 
-You can use any old external css stylesheet or create a new one. Once you run build, metalsmith will copy this file over, duplicating the file structure.
+You can use any old external css stylesheet or create a new one. Once you run build, metalsmith will copy this file over, duplicating the file structure and any static assets you may have added in this simple manner.
 
 #### 11. Collections and Link Plugins
 To illustrate the power and flexibility of metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our posts. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
@@ -286,10 +294,11 @@ Metalsmith(__dirname)
 
 The pattern for the pages is defined as all markdown files in the pages folder, while the same holds true for the posts collection which is made up of all the markdown files in its corresponding posts folder. Furthermore the posts are sorted by date in reverse.
 
-The collection() function creates internal arrays of the files, which can then be accessed in templates using collections.collection-name or when setting up the permalinks as seen below.
+The `collection()` function creates internal arrays of the files, which can then be accessed in templates using `collections.collection-name` or when setting up the permalinks as seen below.
 
 The permalinks must be set AFTER the markdown plugin to work properly!
-We set the pattern to use the collection and the title, so that the about.html file instead becomes pages/about/index.html
+
+We set the pattern to use the collection and the title, so that the `about.html` file instead becomes `pages/about/index.html`
 
 ```
     .use(markdown())
@@ -366,7 +375,7 @@ For our blog template, we create a blog.hbt file in the templates folder and put
 Let's set up a GitHub repository and push our metalsmith site and generator to a repo of our own..
 
 #### 1. Create your Git Repo
-Let's create a GitHub repository for our metalsmith page and generator.
+We start by creating a GitHub repository for our metalsmith page and generator.
 
 Head over to [GitHub](https://github.com/) and create a new repository. 
 We're naming ours metalsmith-demo and we'll skip adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
