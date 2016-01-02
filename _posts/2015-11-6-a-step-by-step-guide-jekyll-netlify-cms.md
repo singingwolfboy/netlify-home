@@ -27,6 +27,7 @@ We'll start by getting our own copy of the template and then we'll set up a loca
 
 #### 1. Get your own copy
 First you need to fork your own copy of the [jekyll-netlify-cms template](https://github.com/netlify-templates/jekyll-netlify-cms) and give it a new name.
+If this is all new to you, head over to [GitHub's help desk](https://help.github.com/articles/fork-a-repo/) to learn about forking a repository.
 
 #### 2. Local Work Space
 Make a local directory, open terminal (or the Windows prompt if you're using a Microsoft OS) and go to the location of this directory (cd my-local-repo-directory).
@@ -47,9 +48,12 @@ git clone my-repo-url
 ```
 
 ### Netlify CMS: Local Environment
-We'll start by setting Netlify CMS up locally, by downloading the netlify-git-api but first we need to set up the web configuration of the CMS system in the *config.yml* of the admin folder of the site: **/my-site-location/admin/config.yml**.
+To setup the Netlify CMS, first we need to set up the web configuration of the CMS system in the `config.yml` of the admin folder of the site: 
+
+`/my-site-location/admin/config.yml`
+
 Open the file and pay attention to which repo and branch the backend points to and notice you can also set the local URL if you so choose.
-Here's an example of the first ten lines of the config.yml, which contain this information:
+Here's an example of the first ten lines of the `config.yml`, which contains this information:
 
 ```
 development:
@@ -64,29 +68,24 @@ production:
     branch: master # Branch to update (master by default)
 ```
 
-It's pretty self explanatory, but important to change, in particular, the repo and branch, before you can go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to the repo and branch you have created and now own!
+It's pretty straight forward, but also very important to change the repo and branch, before you go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to the repo and branch you have created and now own!
 
 #### 1. The Netlify Git API
-Since we want to show how this all work on your local computer as well as online, we will download the netlify-git-api that corresponds to your OS.
+We will show how to set this up on your local computer as well as online, but first we'll try locally, so start by downloading the netlify-git-api that corresponds to your OS [here](https://github.com/netlify/netlify-git-api/releases).
+However, if you are not interested in having a local environment, you may skip to [the online environment here](#online-environment).
 
-Go to the [Netlify Git API](https://github.com/netlify/netlify-git-api/releases) releases page and download the relevant version for your OS.
+Decompress the netlify-cms-api file and add it to your path. These actions differ somewhat, depending on your operating system. 
 
-Decompress the netlify-cms-api file and add it to your path. These actions differ somewhat, 
-depending on your operating system. 
-
-In Linux (after decompressing the file) adding it to your PATH can be done in various ways.  In terminal we can use the command below from the directory where you have the file and it will move the executable to your bin directory, which is a part of the PATH:
+We will use the following commands in a terminal window to achieve these steps on Linux (the Command Prompt in a Microsoft OS):
 
 ```
+cd 'downloads'
+unzip linux.zip 
+cd linux
 sudo mv netlify-git-api '/usr/local/bin'
 ```
 
-E.g. if your file was decompressed into the download folder, which is often the default, the following command would take you there:
-
-```
-cd 'my-download-folder'
-```
-
-Naturally, change my-download-folder to your location.
+We enter the downloads folder and unzip the file. Then we enter the newly created directory created by unpacking and finally we move the netlify-git-api file to a directory that is in the PATH, making it easy to invoke from the terminal.
 
 #### 2. Setup your Gemfile
 We want to use Jekyll 3.0.0 in our example, along with the jekyll-sitemap plugin. 
@@ -153,6 +152,7 @@ Now you can navigate to check out your site and the post you just created throug
 That's pretty much all there is to setting Netlify CMS up in a local environment.
 
 ### Online Environment
+<a id="online-environment"></a>
 Once you're done fiddling with the local version and maybe adding some posts, we should try out this netlify-cms online.
 
 In the terminal window/command prompt, CD to the root folder of your site and start by entering this command, to check where the project is pushed to:
@@ -264,3 +264,5 @@ We tried testing the CMS system locally earlier in this guide and it's virtually
 ![jekyll-netlify-cms-act.png](/uploads/jekyll-netlify-cms-act.png)
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
+
+You can see our demo site here: [http://jekyll-netlify-cms-demo.netlify.com/](http://jekyll-netlify-cms-demo.netlify.com/) and the GitHub project is [here](https://github.com/JimmiLee/jekyll-netlify-cms-demo).
