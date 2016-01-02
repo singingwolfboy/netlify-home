@@ -103,9 +103,9 @@ The second line unpacks the downloaded file (in our case the Linux 64 bit flavor
 #### 3. Preparing ink
 If you are using OSX or a Windows OS, rather than Linux, it is important that you also download the Linux version of the ink executable, as this is the version needed when building on Netlify! 
 
-For this reason, we will move our ink executable into a *bin* folder in the root of the site and rename it *ink.linux* and if you're on a Windows or OSX machine, make sure you also keep the ink executable needed by your OS to run locally.  
+For this reason, we will move our ink executable into a `bin` folder in the root of the site and rename it `ink.linux` and if you're on a Windows or OSX machine, make sure you also keep the ink executable needed by your OS to run locally.  
 
-Create the bin folder and rename the linux version of the ink file to *ink.linux* as we do in the command example below, but also keep an ink.osx OR an ink.ms file in there for local use if you're in either OSX or Windows respectively.
+Create the bin folder and rename the linux version of the ink file `ink.linux` as we do in the command example below, but also keep an `ink.osx` OR `an ink.ms` file in there for local use if you're in either OSX or Windows respectively.
 
 As we're using Linux however, we only need one ink executable and to put it in the bin folder and rename it we'll do the following:
 
@@ -126,14 +126,14 @@ Provided you've still got your terminal window open in the InkPaper directory, a
 
 Please note that the official documentation merely uses `ink preview` as the command, but as we've moved and renamed the file, we also have to change the command slightly to reflect this, as seen above.
 
-Open your web browser of choice and enter *'http://localhost:8000/'* in the address bar and there you go.
+Open your web browser of choice and enter `http://localhost:8000/` in the address bar and there you go.
 
 Quite honestly - could it get any easier or more elegant?
 
 #### 5. Website Configuration and Content Creation
 Let's dig a little deeper and look at how to configure the website, as well as create some content.
 
-As with many other static site generators, the **config.yml** file is where we do the website configuration and it's pretty much self explanatory as seen both in the config.yml generated in your site (just take a look - it's in the blog sub directory), but also in this shorter format example taken from InkPapers homepage:
+As with many other static site generators, the `config.yml` file is where we do the website configuration and it's pretty much self explanatory as seen both in the `config.yml` generated in your site (just take a look - it's in the blog sub directory), but also in this shorter format example taken from InkPapers homepage:
 
 ```
 site:
@@ -250,10 +250,11 @@ It's time to connect it with Netlify.
 
 <a id="netlifystart"></a>
 
-Creating a new site on Netlify is simpler than with any other host. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
+Creating a new site on Netlify is simpler than with any other host. Once you’ve created an account and logged in, you’ll be taken to `https://app.netlify.com/sites`
 
 #### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
+
 Click the *"New Site"* button (as seen above) to get started.
 
 #### Step 2: Link to Your GitHub
