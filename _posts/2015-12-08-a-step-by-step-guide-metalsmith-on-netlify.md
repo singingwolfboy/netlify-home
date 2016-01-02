@@ -276,7 +276,7 @@ npm install --save-dev metalsmith-collections
 npm install --save-dev metalsmith-permalinks
 ```
 
-Apart from simply adding these two plugins to the build file, we also have to define the two collections by giving them a pattern as seen below.
+Apart from simply adding these two plugins to the build file, we also have to define the two collections we want to use, by giving them a pattern as seen below.
 
 ```
 Metalsmith(__dirname)
@@ -294,7 +294,7 @@ Metalsmith(__dirname)
 
 The pattern for the pages is defined as all markdown files in the pages folder, while the same holds true for the posts collection which is made up of all the markdown files in its corresponding posts folder. Furthermore the posts are sorted by date in reverse.
 
-The `collection()` function creates internal arrays of the files, which can then be accessed in templates using `collections.collection-name` or when setting up the permalinks as seen below.
+The `collection()` method creates internal arrays of the files, which can then be accessed in templates using `collections.collection-name` or when setting up the permalinks as seen below.
 
 The permalinks must be set AFTER the markdown plugin to work properly!
 
@@ -430,3 +430,55 @@ git push -u origin master
 All your files will be copied to your online repository. Once it's done, take a look at the repository online to check if everything looks correct.
 
 It's time to connect it with Netlify.
+
+### Connecting to Netlify
+<a id="netlifystart"></a>
+
+Creating a new site on Netlify is super easy and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
+
+#### Step 1: Add Your New Site
+![Netlify New Site](/uploads/newsitebut.png)
+Click the *"New Site"* button (as seen above) to get started.
+
+#### Step 2: Link to Your GitHub
+Clicking *“New Site”* brings you to this screen:
+![Link to GitHub](/uploads/createsite.png)
+When you push to GitHub, Netlify does all the work. No more wasting time on manual deploying of updates or changes!
+
+Since we're hosting the site assets on GitHub, we’ll need to link Netlify to GitHub. Click the button *“Link to GitHub”*.
+
+#### Step 3: Authorize Netlify
+You can skip this step, if you already have an account with Netlify set up to automatically login!
+
+You will be asked to provide your GitHub login details:
+![GitHub Login](/uploads/githublogin.png)
+
+We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
+![Authorize Netlify](/uploads/authorization.png)
+
+Like it says in the image above on the right, Netlify doesn’t store your GitHub access token on our servers! 
+
+If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
+
+#### Step 4: Choose Your Repo
+![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
+Once you're connected to GitHub, Netlify will show you a list of your GitHub repositories, as seen above.
+For the purpose of this tutorial we'll select the *“metalsmith-demo”* repo we just pushed to GitHub. 
+
+#### Step 5: Configure Your Settings
+Fill in the configuration settings as seen in the screen shot below, using the master branch, the *"/blog/public"* directory and the *"./bin/ink.linux build"* command.
+![paperconfig.png](/uploads/paperconfig.png)
+
+Click the *'Save'* button and watch the magic unfold.
+
+#### Step 6: Build Your Site
+![inkpaper_building.png](/uploads/inkpaper_building.png)
+Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
+
+#### Step 7: Done
+Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
+![inkpaperresult.png](/uploads/inkpaperresult.png)
+
+The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate (we named ours InkPaper).
+
+Beautiful, simple and easy.!
