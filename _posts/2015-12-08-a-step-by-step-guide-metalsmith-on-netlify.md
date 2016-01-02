@@ -45,7 +45,7 @@ Alternatively `npm init -f` will intialize the current directory and create a pa
 
 #### 3. npm install
 To actually install the various packages, we'll use the `npm install --save-dev package-name` command, substituting package-name with the various packages.
-The `--save-dev` flag tells npm to save the devDependencies in the package.json file. It is then possible to uninstall and remove the package again using `npm uninstall --save-dev package-name`
+The `--save-dev` flag tells npm to save the devDependencies in the `package.json` file. It is then possible to uninstall and remove the package again using `npm uninstall --save-dev package-name`
 
 Let's get started.
 The first package we need is Metalsmith itself, so go ahead and enter the following command:
@@ -58,7 +58,7 @@ So far so good, let's add some plugins.
 
 #### 4. Adding Packages
 Metalsmith itself needs a few dependency packages to run (no need to worry, as it will install these by itself), but apart from that what packages or in Metalsmith terms, what plugins do we want or need?
-Well, I'm getting used to Markdown and statistically speaking so is the average reader of this article, so I'll add that to the list with the following command in terminal:
+Well, I'm getting used to Markdown and statistically speaking so is the average reader of this article, so I'll add a plugin that will enable Markdown to the list with the following command in terminal:
 
 ```
 npm install --save-dev metalsmith-markdown
@@ -69,9 +69,9 @@ As you can see, it's easy to install plugins and even Metalsmith itself is a plu
 Using the `npm ls` command it's possible to see the dependency tree.
 
 #### 5. Create build file
-To build our site with these plugins, we need to define an output folder and run a script. We're using a simple javascript for this and we've aptly named this script build.js (since every time we run it, it will build the site).
+To build our site with these plugins, we need to define an output folder and run a script. We're using a simple javascript for this and we've aptly named this script `build.js` (since every time we run it, it will build the site).
 
-Create build.js and fill it in as seen below:
+Create the `build.js` file and fill it in as seen below:
 
 ```
 var Metalsmith = require('metalsmith'),
@@ -86,13 +86,13 @@ Metalsmith(__dirname)
 
 Did you notice a pattern here?
 
-For each plugin you want to install, you need to run the following command in terminal 
+*First* - for each plugin you want to install, you need to run the following command in terminal:s 
 
 ```
 npm install --save-dev plugin-name
 ``` 
 
-Second, you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and below that invoked with `.use(variable-name())` as seen in the build.js file above.
+*Second*, you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and *third*, below that invoked with `.use(variable-name())` as seen in the build.js file above.
 
 Furthermore the destination folder is defined with `.destination('./build')` and in the final line, the build method is called, with a callback to handle possible errors.
 
