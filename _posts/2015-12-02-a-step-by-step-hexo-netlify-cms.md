@@ -37,7 +37,7 @@ cd linux
 sudo mv netlify-git-api '/usr/local/bin'
 ```
 
-We enter the downloads folder (substitute with the location of your downloads) and use the `unzip` command to unpack the file. Next, we enter the new directory created by unpacking and finally we move the netlify-git-api file to a directory that is in the PATH, making it easy to invoke from the terminal.
+We enter the downloads folder (substitute with the location of your downloads) and use the `unzip` command to unpack the file. Next, we enter the new directory created by unpacking and in the final line we move the file to the '/usr/local/bin' folder, as this directory is in the PATH.
 
 If you're unsure of where to move the file, you can run the following command to see which directories are in the PATH on your computer:
 
