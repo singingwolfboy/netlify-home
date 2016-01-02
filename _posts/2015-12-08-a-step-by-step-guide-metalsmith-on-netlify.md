@@ -11,7 +11,11 @@ tags: null
 ---
 
 ### Welcome to Netlify
-Welcome to Netlify and todays article about Metalsmith.
+Welcome to Netlify and todays article about Metalsmith. 
+
+Metalsmith is a fairly well known static site generator that bills itself as *"An extremely simple, _pluggable_ static site generator"* and to me personally, it basically felt like working with a very customizable static site generator, for better or worse. It's in fact so customizeable that it can imitate other static site generators and even has templates for this! 
+
+But enough talk, let's get to the meat and bones.
 
 If you already have a Metalsmith repository forked on GitHub and only wish to connect to Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
 
@@ -330,7 +334,8 @@ template: post.hbt
 
 It's pretty self explanatory, as we've defined ourselves what YAML frontmatter makes sense through our implementation of Metalsmith. It's pretty much the same as the YAML we put with our about page, except for the added date. 
 
-We also need a page which can show our posts sorted by date in reverse.
+#### 13. Create Articles Content Page
+We also need a page which can show our articles sorted by date in reverse.
 We'll create a blog.md file in the src/content/pages folder and put a bit of YAML in it:
 
 ```
@@ -340,7 +345,7 @@ template: blog.hbt
 ---
 ```
 
-For our blog template, we create a blog.hbt file in the templates folder and put the following content in it:
+For our blog template, we create a `blog.hbt` file in the templates folder and put the following content in it:
 
 ```
 {{> header}}
@@ -360,17 +365,18 @@ For our blog template, we create a blog.hbt file in the templates folder and put
 {{> footer}}
 ```
 
-Remember the collections we made, aptly named pages and articles? Well, as mentioned it's easy to access these in the template and we're doing this with the `{{#each collections.articles}}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the  files in the articles collection.
+Remember the collections we made, aptly named pages and articles? Well, as mentioned it's easy to access these in the template and we're doing this with the `{{#each collections.articles}}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the files in the articles collection.
 
-#### 13. 
+#### 14. Build It
+If you made it this far, you should already have an idea of how Metalsmith works internally and where to start if you want to use Metalsmith in continuous deployment on Netlify, with GitHub serving the files.
 
-#### 14. 
+Run the `node build` command again and see if the files generate properly.  If they do and you're happy with your tree (`npm ls`), it's time to check out GitHub.
 
 ### Setup your GitHub Repository
 
 <a id="githubstart"></a>
 
-Let's set up a GitHub repository and push our metalsmith site and generator to a repo of our own..
+Let's set up a GitHub repository and push our metalsmith site and generator to a repo of our own.
 
 #### 1. Create your Git Repo
 We start by creating a GitHub repository for our metalsmith page and generator.
