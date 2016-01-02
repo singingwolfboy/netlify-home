@@ -134,7 +134,7 @@ Metalsmith(__dirname)
     .build(function (err) { if(err) console.log(err) })
 ```
 
-The above script follows the norm set before, except that we need to tell the templates which templating engine to use, rather than just add them with a `.use()` method like before. This is done with the line: `.use(templates('handlebars'))`
+The above script follows the norm set before, except that we need to tell the templates which templating engine to use, rather than just add them one by one like before. This is done with the line: `.use(templates('handlebars'))`
 
 You might want to check the changes made to the dependency tree by running the `npm ls` command again.
 
@@ -187,7 +187,7 @@ This is a small Metalsmith demonstration site that aims at showing you a very ba
 As you can see in the YAML frontmatter above, we're using the page template and not the home template we made earlier and so naturally we also need to create this template file.
 We'll keep it simple though and merely present the content with a title and the aforementioned header and footer partials.
 
-I present to you the page.hbt file:
+I present to you the `page.hbt` file:
 
 ```
 {{> header}}
@@ -234,7 +234,7 @@ The header partials file `header.hbt` in the `templates/partials` folder:
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Metalsmith Test Site</title>
+        <title>Metalsmith Demo Site</title>
 
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="styles/main.css" type="text/css" />
@@ -253,7 +253,7 @@ The footer partials file `footer.hbt` in the `templates/partials` folder:
 ```
             </div> {{!-- END .main-wrapper --}}
         <footer>
-            © Metalsmith demo site
+            © Metalsmith demo site - demonstrating Metalsmith in continuous deployment using GitHub on Netlify.
         </footer>
     </body>
 </html>
