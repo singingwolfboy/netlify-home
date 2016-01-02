@@ -299,3 +299,5 @@ Once Netlify has build your site, you'll be presented with the result and your v
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate (we named ours InkPaper).
 
 Beautiful, simple and easy!
+
+You can see our demo site [here](http://inkpaper.netlify.com/) and the GitHub project [here](https://github.com/JimmiLee/InkPaper).
