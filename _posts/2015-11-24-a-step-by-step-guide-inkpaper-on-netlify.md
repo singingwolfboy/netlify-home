@@ -265,7 +265,7 @@ When you push to GitHub, Netlify does all the work. No more wasting time on manu
 Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click the button *“Link to GitHub”*.
 
 #### Step 3: Authorize Netlify
-Please note that this step is superfluous if you already have an account with Netlify set up to login automatically!
+*Please note that this step is omitted if you already have an account with Netlify set up to login automatically!*
 
 You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
@@ -298,4 +298,4 @@ Once Netlify has build your site, you'll be presented with the result and your v
 
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate (we named ours InkPaper).
 
-Beautiful, simple and easy.!
+Beautiful, simple and easy!
