@@ -230,3 +230,5 @@ In the screen shot below, you can see how it should look, after you log into the
 ![hexo_netlifycms.png](/uploads/hexo_netlifycms.png)
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
+
+You can see our demo site [here](http://hexo-netlify-cms-demo.netlify.com/) and the GitHub project [here](https://github.com/netlify-templates/hexo-cms-example).
