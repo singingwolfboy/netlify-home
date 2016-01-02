@@ -62,8 +62,6 @@ git clone https://github.com/github_username/repo-name.git
 
 Substitute my-sites-location with the location of your sites and substitute *https://github.com/github_username/repo-name.git* with your repository's URL.
 
-Note that you should NOT create a folder for the project, as it comes inside a folder structure already. 
-
 #### 3. Setup the Netlify CMS server.
 To start the Netlify CMS server, we need to run the following command for each user we wish to add to the system (you will be asked for an email, a name and a password):
 
