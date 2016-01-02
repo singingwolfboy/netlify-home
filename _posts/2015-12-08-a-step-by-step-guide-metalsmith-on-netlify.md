@@ -284,28 +284,24 @@ Metalsmith(__dirname)
         pages: {
             pattern: 'content/pages/*.md'
         },
-        posts: {
-            pattern: 'content/posts/*.md',
-            sortBy: 'date',
-            reverse: true
+        articles: {
+            pattern: 'content/articles/*.md',
+            sortBy: 'date'
         }
     }))
+    .use(markdown())
+    .use(permalinks({
+        pattern: ':collections/:title'
+    })) 
 ```
 
 The pattern for the pages is defined as all markdown files in the pages folder, while the same holds true for the posts collection which is made up of all the markdown files in its corresponding posts folder. Furthermore the posts are sorted by date in reverse.
 
-The `collection()` method creates internal arrays of the files, which can then be accessed in templates using `collections.collection-name` or when setting up the permalinks as seen below.
+The `collection()` method creates internal arrays of the files, which can be accessed in templates using `collections.collection-name` or when setting up the permalinks as seen in the last line.
 
 The permalinks must be set AFTER the markdown plugin to work properly!
 
-We set the pattern to use the collection and the title, so that the `about.html` file instead becomes `pages/about/index.html`
-
-```
-    .use(markdown())
-    .use(permalinks({
-        pattern: ':collection/:title'
-    }))
-```
+We set the pattern to use the collection and the title, so that the `about.html` file instead becomes `pages/about/index.html`, which is considered better SEO. The way we've set it up right now, this procedure of creating a folder for each file, with an index.html file, encompasses all the files we had in the pages folder, but also all the files we had in the articles folder.
 
 #### 12. Creating Content
 To see the difference between our two collections, the pages and the posts, we also need to create the posts template, so go ahead and create the post.hbt file in the templates directory.
@@ -352,7 +348,7 @@ For our blog template, we create a blog.hbt file in the templates folder and put
 
 <article>
     <ul>
-        {{#each collections.posts}}
+        {{#each collections.articles}}
             <li>
                 <h3>{{this.title}}</h3>
                 <article>{{this.contents}}</article>
@@ -363,6 +359,8 @@ For our blog template, we create a blog.hbt file in the templates folder and put
 
 {{> footer}}
 ```
+
+Remember the collections we made, aptly named pages and articles? Well, as mentioned it's easy to access these in the template and we're doing this with the `{{#each collections.articles}}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the  files in the articles collection.
 
 #### 13. 
 
@@ -461,23 +459,23 @@ Like it says in the image above on the right, Netlify doesn’t store your GitHu
 If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
-![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
+<INSERT PIC OF METALSMITH REPO CHOICE>
 Once you're connected to GitHub, Netlify will show you a list of your GitHub repositories, as seen above.
 For the purpose of this tutorial we'll select the *“metalsmith-demo”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
-Fill in the configuration settings as seen in the screen shot below, using the master branch, the *"/blog/public"* directory and the *"./bin/ink.linux build"* command.
-![paperconfig.png](/uploads/paperconfig.png)
+Fill in the configuration settings as seen in the screen shot below
+<INSERT PIC OF METALSMITH SETTINGS>
 
 Click the *'Save'* button and watch the magic unfold.
 
 #### Step 6: Build Your Site
-![inkpaper_building.png](/uploads/inkpaper_building.png)
+<INSERT PIC OF METALSMITH BUILDING>
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
 Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
-![inkpaperresult.png](/uploads/inkpaperresult.png)
+<INSERT PIC OF METALSMITH DEMO SITE>
 
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate (we named ours InkPaper).
 
