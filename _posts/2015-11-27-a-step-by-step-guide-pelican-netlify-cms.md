@@ -234,3 +234,5 @@ This screen shot depicts our CMS system with Pelican, after logging in:
 ![pelicannetlifycms.png](/uploads/pelicannetlifycms.png)
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
+
+You can see our demo site here: [http://pelicanos.netlify.com/](http://pelicanos.netlify.com/) and the GitHub project is [here](https://github.com/netlify-templates/pelican-netlify-cms).
