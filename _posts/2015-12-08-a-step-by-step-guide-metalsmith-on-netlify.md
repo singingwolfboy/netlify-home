@@ -19,7 +19,7 @@ On the other hand, if you have Metalsmith running locally, but need some guidanc
 
 Finally, if you're completely new to Metalsmith, simply continue this guide onwards and downwards.  
 
-***Please note that this guide assumes you have Node.js (any version above 0.12.x) and npm installed!!!***
+***Please note that this guide assumes you have Node.js installed - any version above 0.12.x !!!***
 
 For information about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
@@ -37,7 +37,7 @@ The folder structure for this project:
 #### 2. Setup the Node Package manager
 To handle the various packages you will need to have node.js with npm installed (they come together). 
 
-Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a package.json file with user feedback. 
+Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a `package.json` file with user feedback. 
 Note that apart from the file, npm also creates a node_modules folder, to hold the various packages.
 Alternatively `npm init -f` will intialize the current directory and create a package.json file with default settings.
 
