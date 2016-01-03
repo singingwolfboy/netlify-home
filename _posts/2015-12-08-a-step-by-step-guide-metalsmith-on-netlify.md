@@ -153,9 +153,13 @@ We create `home.hbt` with the following content in the templates folder:
     <meta charset="UTF-8" />
     <title>{{ title }} | Metalsmith Page</title>
 
-    <link rel="stylesheet" href="styles/main.css" type="text/css" />    
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
 </head>
 <body>
+    <header>
+        <img src="./images/metalsmithlogo.jpg" alt="Metalsmith Demo Site" height="226" width="709">
+    </header>
+
     <div class="main-wrapper">
         {{{ contents }}}
     </div>
