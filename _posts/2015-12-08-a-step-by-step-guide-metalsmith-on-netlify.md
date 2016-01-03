@@ -13,7 +13,7 @@ tags: null
 ### Welcome to Netlify
 Welcome to Netlify and todays article about Metalsmith. 
 
-Metalsmith is a fairly well known static site generator that bills itself as *"An extremely simple, _pluggable_ static site generator"* and to me personally, it basically felt like working with a very customizable static site generator, for better or worse. It's in fact so customizeable that it can imitate other static site generators and even has templates for this! 
+Metalsmith is a fairly well known static site generator that bills itself as *An extremely simple, _pluggable_ static site generator* and to me personally, it basically felt like working with a very customizable static site generator, for better or worse. It's in fact so customizeable that it can imitate other static site generators and even has templates for this! 
 
 But enough talk, let's get to the meat and bones.
 
@@ -479,10 +479,12 @@ Click the *'Save'* button and watch the magic unfold.
 <INSERT PIC OF METALSMITH BUILDING>
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
-#### Step 7: Done
-Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
+#### Step 7: The End
+That's it.
+
+Once Netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
 <INSERT PIC OF METALSMITH DEMO SITE>
 
-The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate (we named ours InkPaper).
+You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name, such as the one we chose (http://metalsmith-demo.netlify.com).
 
-Beautiful, simple and easy.!
+You can see our demo site [here](http://hexo-netlify-cms-demo.netlify.com/) and the GitHub project [here](https://github.com/netlify-templates/hexo-cms-example).
