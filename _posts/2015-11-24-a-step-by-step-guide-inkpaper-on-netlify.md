@@ -300,4 +300,4 @@ The site starts as default public, but you can easily and quickly change this no
 
 Beautiful, simple and easy!
 
-You can see our demo site [here](http://inkpaper.netlify.com/) and the GitHub project [here](https://github.com/JimmiLee/InkPaper).
+You can see our demo site [here](http://inkpaper.netlify.com/) and the GitHub project used for the demo site [here](https://github.com/JimmiLee/InkPaper).
