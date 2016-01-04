@@ -482,18 +482,18 @@ Like it says in the image above on the right, Netlify doesn’t store your GitHu
 If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
-<INSERT PIC OF METALSMITH REPO CHOICE>
+![metalsmith_choose_repo.jpg](/uploads/metalsmith_choose_repo.jpg)
 Once you're connected to GitHub, Netlify will show you a list of your GitHub repositories, as seen above.
 For the purpose of this tutorial we'll select the *“metalsmith-demo”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
-Fill in the configuration settings as seen in the screen shot below
-<INSERT PIC OF METALSMITH SETTINGS>
+Fill in the configuration settings as seen in the screen shot below:
+![metalsmith_nodebuild.jpg](/uploads/metalsmith_nodebuild.jpg)
 
 Click the *'Save'* button and watch the magic unfold.
 
 #### Step 6: Build Your Site
-<INSERT PIC OF METALSMITH BUILDING>
+![metalsmith_sitebuilding.jpg](/uploads/metalsmith_sitebuilding.jpg)
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
 #### Step 7: The End
