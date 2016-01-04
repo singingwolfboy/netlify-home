@@ -17,6 +17,8 @@ Metalsmith is a fairly well known static site generator that bills itself as *An
 
 But enough talk, let's get to the meat and bones.
 
+In this tutorial we will set up a basic Metalsmith demonstration site, with a build file, static assets and some plugins. The aim of this site is to show a simple Metalsmith setup in continuous deployment on Netlify using GitHub.
+
 If you already have a Metalsmith repository forked on GitHub and only wish to connect to Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
 
 On the other hand, if you have Metalsmith running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
@@ -41,25 +43,28 @@ The folder structure for this project:
 #### 2. Create .nvmrc file
 Did you notice the `.nvmrc` file in the tree above?
 
-The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file named `.nvmrc` with the version inside. While you may not be using nvm yourself, Netlify will use this information when building your site for you. 
+The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named `.nvmrc` with the version inside. While you may not be using nvm yourself, Netlify will use this information when building your site for you. 
 
 Since metalsmith is a little picky with regards to what version of node it works with (anything after 0.12.x should do), we'll add the newest version number we know is running on Netlify to this file. 
 
-To figure out which, we open netlify's build image [here](https://github.com/netlify/build-image/blob/master/Dockerfile#L95) and from line 95 and down we find the various versions of node available, with version 5.1.0 being the newest.
+To figure out which options we have, we open Netlify's build image [here](https://github.com/netlify/build-image/blob/master/Dockerfile#L95) and from line 95 and down we find the various versions of node available, with version 5.1.0 being the newest.
+
 In the `.nvmrc` file I write the following and save:
 
 ```
-5.1.0
+stable
 ```
 
-Easy enough. You could also write `0.12.7`, as I can see from the build image that this is the newest version in the `0.12.x` series that's available on netlify or to simply use the newest stable version I could use `stable`. 
+Easy enough. To simply use the newest stable version available on Netlify, we write `stable`. 
+You could also write `5.1.0`, as seen in the build image, but as any newer version should also work flawlessly, we stick with `stable`.
 
 #### 3. Setup the Node Package manager
 To handle the various packages you will need to have node.js with npm installed (they come together). 
 
 Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a `package.json` file with user feedback. 
+
 Note that apart from the file, npm also creates a node_modules folder, to hold the various packages.
-Alternatively `npm init -f` will intialize the current directory and create a package.json file with default settings.
+Alternatively `npm init -f` will intialize the current directory and create a `package.json` file with default settings.
 
 *For convenience sake, keep the terminal window open throughout this guide.*
 
