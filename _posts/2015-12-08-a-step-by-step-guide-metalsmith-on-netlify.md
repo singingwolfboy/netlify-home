@@ -69,7 +69,7 @@ Alternatively `npm init -f` will intialize the current directory and create a `p
 *For convenience sake, keep the terminal window open throughout this guide.*
 
 #### 4. npm install
-To actually install the various packages, we'll use the `npm install package-name -save` command, substituting package-name with the various packages.
+To actually install the various packages, we'll use the `npm install package-name --save` command, substituting package-name with the various packages.
 The `--save` flag tells npm to save the installations as dependencies in the `package.json` file. It is then possible to uninstall and remove the package again using `npm uninstall package-name --save`
 
 Let's get started.
