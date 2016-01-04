@@ -69,14 +69,14 @@ Alternatively `npm init -f` will intialize the current directory and create a `p
 *For convenience sake, keep the terminal window open throughout this guide.*
 
 #### 4. npm install
-To actually install the various packages, we'll use the `npm install --save-dev package-name` command, substituting package-name with the various packages.
-The `--save-dev` flag tells npm to save the devDependencies in the `package.json` file. It is then possible to uninstall and remove the package again using `npm uninstall --save-dev package-name`
+To actually install the various packages, we'll use the `npm install package-name -save` command, substituting package-name with the various packages.
+The `--save` flag tells npm to save the installations as dependencies in the `package.json` file. It is then possible to uninstall and remove the package again using `npm uninstall package-name --save`
 
 Let's get started.
 The first package we need is Metalsmith itself, so go ahead and enter the following command:
 
 ```
-npm install --save-dev metalsmith
+npm install metalsmith --save
 ```
 
 So far so good, let's add some plugins.
@@ -86,7 +86,7 @@ Metalsmith itself needs a few dependency packages to run (no need to worry, as i
 Well, I'm getting used to Markdown and statistically speaking so is the average reader of this article, so I'll add a plugin that will enable Markdown to the list with the following command in terminal:
 
 ```
-npm install --save-dev metalsmith-markdown
+npm install metalsmith-markdown --save
 ```
 
 As you can see, it's easy to install plugins and even Metalsmith itself is a plugin.
@@ -114,7 +114,7 @@ Did you notice a pattern here?
 *First* - for each plugin you want to install, you need to run the following command in terminal:s 
 
 ```
-npm install --save-dev plugin-name
+npm install plugin-name --save
 ``` 
 
 *Second*, you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and *third*, below that invoked with `.use(variable-name())` as seen in the build.js file above.
@@ -139,8 +139,8 @@ We're going to need a templating engine, as well as some templates to wrap aroun
 We'll start by installing the two plugins with the following lines in terminal:
 
 ```
-npm install --save-dev metalsmith-templates
-npm install --save-dev handlebars
+npm install metalsmith-templates --save
+npm install handlebars --save
 ```
 
 We need to update our bulid.js file with these changes as well.
@@ -301,8 +301,8 @@ You can use any old external css stylesheet or create a new one. Once you run bu
 To illustrate the power and flexibility of metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our posts. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
 
 ```
-npm install --save-dev metalsmith-collections
-npm install --save-dev metalsmith-permalinks
+npm install metalsmith-collections --save
+npm install metalsmith-permalinks --save
 ```
 
 Apart from simply adding these two plugins to the build file, we also have to define the two collections we want to use, by giving them a pattern as seen below.
