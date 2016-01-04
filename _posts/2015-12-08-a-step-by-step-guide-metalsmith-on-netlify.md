@@ -414,9 +414,8 @@ Run the `node build` command again and see if the files generate properly.  If t
 Let's set up a GitHub repository and push our metalsmith site and generator to a repo of our own.
 
 #### 1. Create your Git Repo
-We start by creating a GitHub repository for our metalsmith page and generator.
+We start by creating a [GitHub](https://github.com/) repository for our metalsmith page and generator.
 
-Head over to [GitHub](https://github.com/) and create a new repository. 
 We're naming ours metalsmith-demo and we'll skip adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
 
 ![netlify0x_createnewrepo.png](/uploads/netlify0x_createnewrepo.png)
