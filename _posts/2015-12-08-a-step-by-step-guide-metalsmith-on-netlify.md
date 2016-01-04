@@ -500,8 +500,8 @@ Once you click save, Netlify will step in and take over, though it will let you 
 That's it.
 
 Once Netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
-<INSERT PIC OF METALSMITH DEMO SITE>
+![metalsmith_done.jpg](/uploads/metalsmith_done.jpg)
 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
-You can see our demo site [here](http://hexo-netlify-cms-demo.netlify.com/) and the GitHub project [here](https://github.com/netlify-templates/hexo-cms-example).
+You can see our demo site [here](http://metalsmith-demo.netlify.com/) and the GitHub project [here](https://github.com/segmentio/metalsmith).
