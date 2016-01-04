@@ -41,15 +41,15 @@ The folder structure for this project:
 ![metalsmith_folder.jpg](/uploads/metalsmith_folder.jpg)
 
 #### 2. Create .nvmrc file
-Did you notice the `.nvmrc` file in the tree above?
+Did you notice the *.nvmrc* file in the tree above?
 
-The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named `.nvmrc` with the version inside. While you may not be using nvm yourself, Netlify will use this information when building your site for you. 
+The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named *.nvmrc* with the version inside. While you may not be using nvm yourself, Netlify will use this information when building your site for you. 
 
 Since metalsmith is a little picky with regards to what version of node it works with (anything after 0.12.x should do), we'll add the newest version number we know is running on Netlify to this file. 
 
 To figure out which options we have, we open Netlify's build image [here](https://github.com/netlify/build-image/blob/master/Dockerfile#L95) and from line 95 and down we find the various versions of node available, with version 5.1.0 being the newest.
 
-In the `.nvmrc` file I write the following and save:
+In the *.nvmrc* file I write the following and save:
 
 ```
 stable
@@ -61,7 +61,7 @@ You could also write `5.1.0`, as seen in the build image, but as any newer versi
 #### 3. Setup the Node Package manager
 To handle the various packages you will need to have node.js with npm installed (they come together). 
 
-Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a `package.json` file with user feedback. 
+Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a *package.json* file with user feedback. 
 
 Note that apart from the file, npm also creates a node_modules folder, to hold the various packages.
 Alternatively `npm init -f` will intialize the current directory and create a `package.json` file with default settings.
@@ -70,7 +70,7 @@ Alternatively `npm init -f` will intialize the current directory and create a `p
 
 #### 4. npm install
 To actually install the various packages, we'll use the `npm install package-name --save` command, substituting package-name with the various packages.
-The `--save` flag tells npm to save the installations as dependencies in the `package.json` file. It is then possible to uninstall and remove the package again using `npm uninstall package-name --save`
+The `--save` flag tells npm to save the installations as dependencies in the *package.json* file. It is then possible to uninstall and remove the package again using `npm uninstall package-name --save`
 
 Let's get started.
 The first package we need is Metalsmith itself, so go ahead and enter the following command:
@@ -94,9 +94,9 @@ As you can see, it's easy to install plugins and even Metalsmith itself is a plu
 Using the `npm ls` command it's possible to see the dependency tree.
 
 #### 6. Create build file
-To build our site with these plugins, we need to define an output folder and run a script. We're using a simple javascript for this and we've aptly named this script `build.js` (since every time we run it, it will build the site).
+To build our site with these plugins, we need to define an output folder and run a script. We're using a simple javascript for this and we've aptly named this script *build.js* (since every time we run it, it will build the site).
 
-Create the `build.js` file and fill it in as seen below:
+Create the *build.js* file and fill it in as seen below:
 
 ```
 var Metalsmith = require('metalsmith'),
@@ -111,13 +111,13 @@ Metalsmith(__dirname)
 
 Did you notice a pattern here?
 
-*First* - for each plugin you want to install, you need to run the following command in terminal:s 
+First - for each plugin you want to install, you need to run the following command in terminal: 
 
 ```
 npm install plugin-name --save
 ``` 
 
-*Second*, you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and *third*, below that invoked with `.use(variable-name())` as seen in the build.js file above.
+Second, you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and third, below that invoked with `.use(variable-name())` as seen in the *build.js* file above.
 
 Furthermore the destination folder is defined with `.destination('./build')` and in the final line, the build method is called, with a callback to handle possible errors.
 
@@ -143,9 +143,9 @@ npm install metalsmith-templates --save
 npm install handlebars --save
 ```
 
-We need to update our bulid.js file with these changes as well.
+We need to update our *build.js* file with these changes as well.
 
-Edited build.js:
+Edited *build.js*:
 
 ```
 var Metalsmith = require('metalsmith'),
@@ -165,7 +165,7 @@ You might want to check the changes made to the dependency tree by running the `
 
 #### 8. Create a Simple Template
 The next thing we want to do is create one simple template in the templates directory.
-We create `home.hbt` with the following content in the templates folder:
+We create the *home.hbt* file with the following content in the templates folder:
 
 ```
 <!doctype html>
