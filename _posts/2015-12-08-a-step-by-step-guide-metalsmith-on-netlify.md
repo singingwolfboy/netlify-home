@@ -203,7 +203,7 @@ To run the build script and check out the changes, first save and next run the b
 Check the output in the build directory and see if the template HTML created above was added properly.
 
 #### 9. Folder Structure
-To discern between the various content we're going to have, we will set up a folder for each type of content in the content folder. E.g. we want one type for displaying pages and one of these pages will be our about page, so we'll create a `src/content/pages` folder with a new file in it named `about.md` with the following content:
+To discern between the various content we're going to have, we will set up a folder for each type of content in the content folder. E.g. we want one type for displaying pages and one of these pages will be our about page, so we'll create a `src/content/pages` folder with a new file in it named *about.md* with the following content:
 
 ```
 ---
@@ -216,7 +216,7 @@ This is a small Metalsmith demonstration site that aims at showing you a very ba
 As you can see in the YAML frontmatter above, we're using the page template and not the home template we made earlier and so naturally we also need to create this template file.
 We'll keep it simple though and merely present the content with a title and the aforementioned header and footer partials.
 
-I present to you the `page.hbt` file:
+I present to you the *page.hbt* file:
 
 ```
 {{> header}}
@@ -235,7 +235,7 @@ Let's move on to creating these partials.
 #### 10. Template Partials
 Template partials are useful for the elements that are part of every page, such as a footer and a header for example or perhaps your logo. In Metalsmith how these are handled comes down to your templating engine and in our case for this tutorial that means it comes down to the handlebars templating engine. 
 
-First we create the partials files `header.hbt` and `footer.hbt` in the `templates/partials` directory.
+First we create the partials files *header.hbt* and *footer.hbt* in the `templates/partials` directory.
 For the partials to work in Metalsmith, we need to register them in our build file. 
 
 Since Consolidate.js supports partials for handlebars, we have a nice and easy way of registering them.
@@ -255,7 +255,7 @@ It's simple enough, we choose a templating engine and then we register the two p
 
 Let's create these partials.
 
-The header partials file `header.hbt` in the `templates/partials` folder:
+The header partials file *header.hbt* in the `templates/partials` folder:
 
 ```
 <!DOCTYPE html>
@@ -277,7 +277,7 @@ The header partials file `header.hbt` in the `templates/partials` folder:
         <div class="main-wrapper">
 ```
 
-The footer partials file `footer.hbt` in the `templates/partials` folder:
+The footer partials file *footer.hbt* in the `templates/partials` folder:
 
 ```
             </div> {{!-- END .main-wrapper --}}
@@ -293,9 +293,9 @@ Notice the stylesheet link in our header.
 To make the site we're working on a little less bleak, we're going to add a stylesheet.
 
 #### 11. Add a Stylesheet
-We're going to simply add a stylesheet in the `src/styles` folder named `main.css` as referenced in our header.
+We're going to simply add a stylesheet in the `src/styles` folder named *main.css* as referenced in our header.
 
-You can use any old external css stylesheet or create a new one. Once you run build, metalsmith will copy this file over, duplicating the file structure and any static assets you may have added in this simple manner.
+You can use any old external css stylesheet or create a new one. Once you run build, metalsmith will copy this file over, duplicating the file structure and any other static assets you may have added in this simple manner.
 
 #### 12. Collections and Link Plugins
 To illustrate the power and flexibility of metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our posts. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
@@ -330,7 +330,13 @@ The `collection()` method creates internal arrays of the files, which can be acc
 
 The permalinks must be set AFTER the markdown plugin to work properly!
 
-We set the pattern to use the collection and the title, so that the `about.html` file instead becomes `pages/about/index.html`, which is considered better SEO. The way we've set it up right now, this procedure of creating a folder for each file, with an index.html file, encompasses all the files we had in the pages folder, but also all the files we had in the articles folder.
+We set the pattern to use the collection and the title, so that the *about.html* file instead becomes `pages/about/index.html`, which is considered better SEO. The way we've set it up right now, this procedure of creating a folder for each file, with an *index.html* file, encompasses all the files we had in the pages folder, but also all the files we had in the articles folder.
+
+If there are any pages within these folders which we won't want to use this changed link format, we can simply add this line to the YAML front-matter and the plugin will disregard them:
+
+```
+permalink: false
+```
 
 #### 13. Creating Content
 To see the difference between our two collections, the pages and the posts, we also need to create the posts template, so go ahead and create the post.hbt file in the templates directory.
