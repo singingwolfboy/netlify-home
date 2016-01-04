@@ -36,10 +36,13 @@ We'll start out by creating a simple folder structure for our project as outline
 
 The folder structure for this project:
 
-![metalsmithfolder_1small.png](/uploads/metalsmithfolder_1small.png)
+![metalsmith_folder.jpg](/uploads/metalsmith_folder.jpg)
 
 #### 2. Create .nvmrc file
+Did you notice the `.nvmrc` file in the tree above?
+
 The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file named `.nvmrc` with the version inside. While you may not be using nvm yourself, Netlify will use this information when building your site for you. 
+
 Since metalsmith is a little picky with regards to what version of node it works with (anything after 0.12.x should do), we'll add the newest version number we know is running on Netlify to this file. 
 
 To figure out which, we open netlify's build image [here](https://github.com/netlify/build-image/blob/master/Dockerfile#L95) and from line 95 and down we find the various versions of node available, with version 5.1.0 being the newest.
