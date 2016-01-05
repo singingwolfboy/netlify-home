@@ -81,7 +81,7 @@ To distinguish our new basic Nanoc site, we'll start by editing the two files it
 #### 5. Edit Layout
 We'll follow the advice left for us in the original landing page and change the layout from the bland default color scheme and fonts to something new and refreshing.
 
-Open up the *default.html* file in the layouts folder
+Open up the *default.html* file in the layouts folder. This is where the HTML has been hiding and it's easy to dig in and edit the sidebar navigation links and the general layout.
 
 #### 6. Add Content
 
