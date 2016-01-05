@@ -24,7 +24,7 @@ It's also simple and very flexible, where each page is a folder and the only req
 
 If you want to find out more about Broccoli Taco, head over to [Broccoli Taco's web page](http://broccoli-taco.com/) before trying it out in this step-by-step guide or check out the detailed documentation [here](http://broccoli-taco.com/).
 
-*Please note that this guide assumes you have node and npm installed!*
+*Please note that this guide assumes you have node installed!*
 
 Reportedly broccoli-taco is having issues with newer versions of node, so we switched to 0.12.2, after checking that it's availble on [netlify's build image](https://github.com/netlify/build-image/blob/master/Dockerfile#L125). This image file is invaluable in determining how you build in a given project, as it defines what versions of the various package managers are available.
 
@@ -51,23 +51,22 @@ This will likely take a few minutes, just enough time to cook a couple of delici
 *For convenience sake, keep the terminal window/command prompt open throughout this guide*
 
 #### 2. Create a Site
-Once broccoli-taco has installed with its dependencies, we use the following commands to create a new site in our site directory named broccoli-taco-demo (change to your preferred directory location and name - we just could not come up with something better):
+Once broccoli-taco has installed with its dependencies, we use the following command to create a new site in our site directory named whatever you like (change my-site-name to your liking - we used the name broccoli-taco-demo):
 
 ```
-cd /my-sites-directory
-broccoli-taco new broccoli-taco-demo
+broccoli-taco new my-site-name
 ```
 
-Notice the user friendly guide, and how well organized broccoli-taco is in terminal.
+Notice the user friendly guide, and how well organized broccoli-taco is in terminal. I consider this lacking with many engines and so it's a major bonus.
 
 #### 3. Install Dependencies
 As stated under *"Next steps"* in our terminal window, we need to install certain dependencies with the following command:
 
 ```
-cd broccoli-taco-demo && npm install
+cd my-site-name && npm install
 ```
 
-First we cd into our new site directory for broccoli-taco and next we install the dependencies.
+First we cd into our new site directory and next we install the dependencies listed in the package.json file using `npm install`.
 
 Again please note that this may take a few minutes, so perhaps this is a good time to eat those Tacos.
 
@@ -78,8 +77,10 @@ In the root of your broccoli-taco, run the following command:
 broccoli-taco serve
 ```
 
+Check out the site thus far at [http://localhost:4200/](http://localhost:4200/).
+
 #### 5. Build Site into Folder
-Again in the root of your broccoli-taco, run the following command:
+Again in the root of your broccoli-taco site, run the following command:
 
 ```
 broccoli-taco build dist
@@ -199,7 +200,4 @@ Once Netlify has build your site, it will assign a random name to it and you'll 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
 You can see our demo site [here](http://broccoli-taco-demo.netlify.com/) and the GitHub project [here](https://github.com/moudy/broccoli-taco).
-
-
-
 
