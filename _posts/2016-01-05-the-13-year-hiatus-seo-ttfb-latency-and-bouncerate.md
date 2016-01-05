@@ -32,7 +32,8 @@ Dynamic content - probably the biggest issue with static site generators today i
 
 CMS system - not everyone will find it easier or better to build using a static site generator over a mature CMS based system. For a long time there simply were no static site generators with their own CMS system, though various solutions were made, but in recent times actual CMS systems capable of running with your static site generator of *choice* have seen the light (like Netlify CMS) and are paving the way for even more people to make the jump to the future.
 
-<FOLLOWING PHRASE NEED CLARIFICATION>
+<!--FOLLOWING PHRASE NEED CLARIFICATION-->
+
 Then there are the pros of a static website generator and while the cons have mostly been nullified with time, the pros have gone the other way, aging like good wine. As modern CMS systems based on a dynamic approach have become large and unwieldy, it serves to exacerbate the strength of the static site generator. Just about any solution, when compared to the dynamic approach, will have a much more secure file system and general approach to security. True simplicity that's easy to scale and of course website speed and low TTFB, which ties into good SEO, but before we go into these more, I think some basic definitions are in place.
 
 ### TTFB, SEO, Latency and Bouncerate
@@ -47,17 +48,20 @@ When I left Europe, I had a .5Mbit ADSL and now, sitting in a country where most
 
 ### Mini Dictionary
 <a id="#dictionary"></a>
+
 I've put the various terms here, with a small definition for each.
 
 #### SEO or Search Engine Optimization
 <a id="#SEO"></a>
+
 OK, so where to start.  I think it's important to quickly mention SEO which is the acronym for Search Engine Optimization and extremely important, if you want to spread your message. The better your web page fits in with the current SEO rules, as defined mostly by Google (simply because they've got the most used search engine) the higher it will rank on search engines and the higher it ranks, the more visitors you'll get - simple enough.
 
 These rules started out as a few and far in between and have come to encompass rather a lot more and today, while by far not the most important factor in good SEO, speed has nevertheless become a factor. Basically put, the faster your page loads, the higher it will potentially rank, which does make some sense from a users perspective. Still though, content is the more important factor in the overall ranking.
-<PICTURE SEO PIC: LIST?>
+<!--PICTURE SEO PIC: LIST?-->
 
 #### TTFB or Time-To-First-Byte
 <a id="#TTFB"></a>
+
 What is TTFB or Time-To-First-Byte and does it correlate with SEO and the speed with which a page loads?
 Well, let's start by quickly defining TTFB as per the manual - it's a metric affected by three components as follows:
 1. The time it takes for your request to propagate through the network to the web server
@@ -71,6 +75,7 @@ Not the same as TTFB, though it's pretty close. This however, is the time it tak
 
 #### Latency, Distance & Bandwith
 <a id="#latency"></a>
+
 Distance and bandwith - the distance to the server that all data has to travel, but the wider the bandwith the more data can travel simoultaneously. 
 <PICTURE of water in pipe or data in stream to illustrate perhaps?>
 
@@ -78,5 +83,6 @@ Latency is defined as the amount of time it takes to transmit a single piece of 
 
 #### Bouncerate
 <a id="#Bouncerate"></a>
+
 The bouncerate of a site is defined as the visitors who enter and then leave or bounce from a site, rather than stay on to view other pages within the same site. Hence the term bounce is coined from the reference to how many visitors bounce from the site and this number would be referred to as the bouncerate and obviously you would want to keep it as low as possible.
-<PICTURE BounceRate pic - not sure, but illustration showing something bouncing off of something or link to https://blog.kissmetrics.com/wp-content/uploads/2010/11/Bounce-Rate.pdf>
+<!--PICTURE BounceRate pic - not sure, but illustration showing something bouncing off of something or link to https://blog.kissmetrics.com/wp-content/uploads/2010/11/Bounce-Rate.pdf-->
