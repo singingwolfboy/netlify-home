@@ -27,26 +27,27 @@ Finally, if you want to try out our small Nanoc tutorial, before linking up with
 For information about installing and handling Ruby with Bundler please see [this documentation](http://bundler.io/).
 
 ### Setup Bundler with Ruby and Gemfile
+<Instructions on setting up Bundler with Ruby and a gemfile - or later inside step by step?>
 
 ### Setup Nanoc
 <Bla. bla bla - we will do this and that>
 
 #### 1. Install Nanoc.
-The following commands will install first Nanoc and second adsf, the latter is needed to view the page locally:
+The following commands will install first Nanoc and second adsf, the latter is needed to view the page locally and the former is everything else:
 
 ```
 gem install nanoc
 gem install adsf
 ```
 
-Optional: check if nanoc is installed properly and if so, what version by using the `--version` flag like this:
+Optional: check if Nanoc is installed properly and if so, what version by using the `--version` flag like this:
 
 ```
 nanoc --version
 ```
 
 #### 2. Create, Compile & View Nanoc Site
-To create your nanoc site use the following code in terminal (substitute my-site-name with the name of your choice):
+To create your Nanoc site, use the following code in terminal (substitute my-site-name with the name of your choice):
 
 ```
 nanoc create-site my-site-name
@@ -55,12 +56,12 @@ nanoc compile
 nanoc view 
 ```
 
-The commands above will create your nanoc site, enter your site folder, build your site and offer it up for view at [http://localhost:3000/](http://localhost:3000/), in that order from the top and down.
+The commands above will create your Nanoc site, enter your site folder, build your site and offer it up for view at [http://localhost:3000/](http://localhost:3000/), in that order from the top and down.
 
 As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
 
 #### 3. Under the Hood
-Let's take a look at what's under the hood of such a Nanoc site. First take a look at the folder structure, as depicted in the illustration below, the files and directories created are:
+Let's take a look at what's under the hood of this Nanoc site. First take a look at the folder structure, as depicted in the illustration below, the files and directories created are as follows:
 
 ![nanoc_tree.png](/uploads/nanoc_tree.png)
 
@@ -72,9 +73,16 @@ The content we're creating goes in the **content folder** and here you'll find t
 
 Then there's the **lib folder**, which contains custom Ruby code.
 
-Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules file** is used by Ruby to describe how pages and assests will be processed.
+Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assests will be processed.
 
-#### 4. Edit index.html and Layout
-Change this page’s content by editing the “index.html” file in the “content” directory. This is the actual page content, and therefore doesn’t include the header, sidebar or style information (those are part of the layout).
-Change the layout, which is the “default.html” file in the “layouts” directory, and create something unique (and hopefully less bland).
+#### 4. Edit Landing Page
+To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and changing its title, while adding a few lines of content. Take note that this file only contains the content of the page and none of the layout.
+
+#### 5. Edit Layout
+We'll follow the advice left for us in the original landing page and change the layout from the bland default color scheme and fonts to something new and refreshing.
+
+Open up the *default.html* file in the layouts folder
+
+#### 6. Add Content
+
 
