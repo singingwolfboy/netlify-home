@@ -33,11 +33,14 @@ For information about installing and handling Ruby with Bundler please see [this
 <Bla. bla bla - we will do this and that>
 
 #### 1. Install Nanoc.
-The following commands will install first Nanoc and second adsf, the latter is needed to view the page locally and the former is everything else:
+The following commands will install first Nanoc and second adsf, the latter is needed to view the page locally and the former is everything else. On the last line we install kramdown, though this is in fact an optional gem that will enable us to use markdown in the content, instead of HTML.
+
+Installing gems:
 
 ```
 gem install nanoc
 gem install adsf
+gem install kramdown
 ```
 
 Optional: check if Nanoc is installed properly and if so, what version by using the `--version` flag like this:
@@ -46,7 +49,45 @@ Optional: check if Nanoc is installed properly and if so, what version by using 
 nanoc --version
 ```
 
-#### 2. Create, Compile & View Nanoc Site
+#### 2. Edit Rules file
+For our kramdown gem to work properly, we need to let Nanoc know we changed the default language from HTML to markdown. To do this we need to open the Rules file found in the root of your Nanoc site and then we need to edit the compilation rules found herein, to take markdown files.
+
+Did that sound complicated?  Don't worry, cause it's really not! Editing compile and route rules in a Rules file is actually quite easy, but on top of this, the people behind Nanoc have anticipated our switch from HTML to Markdown and thus in our Rules file we find the compile rule for Markdown using the kramdown filter  already written and just commented out. 
+
+Normally we would also need to set up a route rule for the .md or markdown files, but again the oracles behind Nanoc have anticipated my move and the markdown files are already added to one of the existing route rules.
+
+The edited Rules file we ended up with, after the comments have been taken out:
+
+```
+#!/usr/bin/env ruby
+
+compile '/**/*.html' do
+  layout '/default.*'
+end
+
+compile '/**/*.md' do
+  filter :kramdown
+  layout '/default.*'
+end
+
+route '/**/*.{html,md}' do
+  if item.identifier =~ '/index.*'
+    '/index.html'
+  else
+    item.identifier.without_ext + '/index.html'
+  end
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+layout '/**/*', :erb
+```
+
+If you're using kramdown like us, simply used the above in your Rules file and if you're using HTML, there's nothing to edit. However, if you choose a third option, check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/)
+
+#### 3. Create, Compile & View Nanoc Site
 To create your Nanoc site, use the following code in terminal (substitute my-site-name with the name of your choice):
 
 ```
@@ -60,7 +101,7 @@ The commands above will create your Nanoc site, enter your site folder, build yo
 
 As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
 
-#### 3. Under the Hood
+#### 4. Under the Hood
 Let's take a look at what's under the hood of this Nanoc site. First take a look at the folder structure, as depicted in the illustration below, the files and directories created are as follows:
 
 ![nanoc_tree.png](/uploads/nanoc_tree.png)
@@ -75,14 +116,14 @@ Then there's the **lib folder**, which contains custom Ruby code.
 
 Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assests will be processed.
 
-#### 4. Edit Landing Page
+#### 5. Edit Landing Page
 To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and changing its title, while adding a few lines of content. Take note that this file only contains the content of the page and none of the layout.
 
-#### 5. Edit Layout
+#### 6. Edit Layout
 We'll follow the advice left for us in the original landing page and change the layout from the bland default color scheme and fonts to something new and refreshing.
 
-Open up the *default.html* file in the layouts folder. This is where the HTML has been hiding and it's easy to dig in and edit the sidebar navigation links and the general layout.
+Open up the *default.html* file in the layouts folder
 
-#### 6. Add Content
+#### 7. Add Content
 
 
