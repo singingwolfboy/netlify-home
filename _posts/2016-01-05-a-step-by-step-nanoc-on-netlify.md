@@ -24,7 +24,7 @@ Finally, if you want to try out our small Nanoc tutorial, before linking up with
 
 ***Please note that this guide assumes you have Ruby, RubyGems and Bundler installed !!!***
 
-For information about installing and handling Ruby with Bundler please see [this guide](http://bundler.io/).
+For information about installing and handling Ruby with Bundler please see [this documentation](http://bundler.io/).
 
 ### Setup Bundler with Ruby and Gemfile
 
@@ -39,7 +39,7 @@ gem install nanoc
 gem install adsf
 ```
 
-Optional: check if nanoc is installed properly and if so, what version by using the `--version` flag:
+Optional: check if nanoc is installed properly and if so, what version by using the `--version` flag like this:
 
 ```
 nanoc --version
@@ -60,10 +60,19 @@ The commands above will create your nanoc site, enter your site folder, build yo
 As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
 
 #### 3. Under the Hood
-The Folder Structure
-The files and directories created are:
+Let's take a look at what's under the hood of such a Nanoc site. First take a look at the folder structure, as depicted in the illustration below, the files and directories created are:
+
 ![nanoc_tree.png](/uploads/nanoc_tree.png)
 
+In the file and folder tree above, there are some distinct folders and to create content and customize the layout, it's important to know what goes where and why!
+
+In Nanoc we use the term layouts instead of templates and these all go in the **layouts folder**.
+
+The content we're creating goes in the **content folder** and here you'll find the landing page and a stylesheet, ready for editing.
+
+Then there's the **lib folder**, which contains custom Ruby code.
+
+Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules file** is used by Ruby to describe how pages and assests will be processed.
 
 #### 4. Edit index.html and Layout
 Change this page’s content by editing the “index.html” file in the “content” directory. This is the actual page content, and therefore doesn’t include the header, sidebar or style information (those are part of the layout).
