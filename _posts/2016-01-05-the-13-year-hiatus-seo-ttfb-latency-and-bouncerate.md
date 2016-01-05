@@ -11,7 +11,9 @@ tags: null
 ---
 
 ### **Welcome to Netlify**
-I only recently began my foray into the realm of the static site generators, as I learned about Netlify and a new and a smarter way of making homepages. I hadn't made a homepage for something like 13 years and while the world had progressed enormously when it comes to technology, I found myself in a place that is lacking behind technologically and only recently began getting more connected, but that's another story altogether. Anyhow, I started my return from this 13 year hiatus with a homepage written by hand using HTML, javascript, CSS and PHP and heavy loads of google searching and I found that a lot had changed. In fact it seemed like all the HTML had changed completely and the PHP and javascript, well to be honest I didn't remember too much about either, but 13 years ago, PHP version 5.0 still hadn't even been released. 
+I only recently began my foray into the realm of the static site generators, as I learned about Netlify and a new and a smarter way of making homepages. 
+
+I hadn't made a homepage for something like 13 years and while the world had progressed enormously when it comes to technology, I found myself in a place that is lacking behind technologically and only recently began getting more connected, but that's another story altogether. Anyhow, I started my return from this 13 year hiatus with a homepage written by hand using HTML, javascript, CSS and PHP and heavy loads of google searching and I found that a lot had changed. In fact it seemed like all the HTML had changed completely and the PHP and javascript, well to be honest I didn't remember too much about either, but 13 years ago, PHP version 5.0 still hadn't even been released. 
 
 OK, so while my memory has been steadily declining since then, I did remember other things from back in the day - e.g. that Internet Explorer was king, sitting on more than 90% of the market. Contrast that with today where completely new players have taken over and the market has split up with several well known browser brands sitting each on a decent market share. The new King is easy to identify as Google, with Chrome and Android accounting for an estimated 42%-52.67% of the browsing. I've heard a lot about WordPress over the years and I did contemplate if this was the way to go for me. An estimated 23.3% of the top 10 million websites as of January 2015 can't be wrong and it's the most popular blogging platform for a reason, but it's also bloated and slow and insecure and from what little I had seen, I found it messy, with a lack of control and transparency.
 
@@ -38,14 +40,14 @@ When I left Europe, I had a .5Mbit ADSL and now, sitting in a country where most
 I've put the various terms here, with a small definition for each.
 
 #### SEO or Search Engine Optimization
-<a id="SEO"></a>
+<a id="#SEO"></a>
 OK, so where to start.  I think it's important to quickly mention SEO which is the acronym for Search Engine Optimization and extremely important, if you want to spread your message. The better your web page fits in with the current SEO rules, as defined mostly by Google (simply because they've got the most used search engine) the higher it will rank on search engines and the higher it ranks, the more visitors you'll get - simple enough.
 
 These rules started out as a few and far in between and have come to encompass rather a lot more and today, while by far not the most important factor in good SEO, speed has nevertheless become a factor. Basically put, the faster your page loads, the higher it will potentially rank, which does make some sense from a users perspective. Still though, content is the more important factor in the overall ranking.
 <PICTURE SEO PIC: LIST?>
 
 #### TTFB or Time-To-First-Byte
-<a id="TTFB"></a>
+<a id="#TTFB"></a>
 What is TTFB or Time-To-First-Byte and does it correlate with SEO and the speed with which a page loads?
 Well, let's start by quickly defining TTFB as per the manual - it's a metric affected by three components as follows:
 1. The time it takes for your request to propagate through the network to the web server
@@ -58,13 +60,13 @@ So basically put, it's the time it takes for the first bit to get back through t
 Not the same as TTFB, though it's pretty close. This however, is the time it takes before the end user has the whole page downloaded, working and visual before their eyes.
 
 #### Latency, Distance & Bandwith
-<a id="latency"></a>
+<a id="#latency"></a>
 Distance and bandwith - the distance to the server that all data has to travel, but the wider the bandwith the more data can travel simoultaneously. 
 <PICTURE of water in pipe or data in stream to illustrate perhaps?>
 
 Latency is defined as the amount of time it takes to transmit a single piece of data from one location to another. How far things are from each other is a fairly constant factor or is it? When you start using CDN's (Content Delivery Network's) the closest CDN server will send you the copy of the site bit by bit and this helps negate the problem otherwise seen with distance, so it stands to good reason that you'd expect a CDN to be built in to any modern solution big or small and obviously this is now possible with hosts like Netlify, even for a free accounts.
 
 #### Bouncerate
-<a id="Bouncerate"></a>
+<a id="#Bouncerate"></a>
 The bouncerate of a site is defined as the visitors who enter and then leave or bounce from a site, rather than stay on to view other pages within the same site. Hence the term bounce is coined from the reference to how many visitors bounce from the site and this number would be referred to as the bouncerate and obviously you would want to keep it as low as possible.
 <PICTURE BounceRate pic - not sure, but illustration showing something bouncing off of something or link to https://blog.kissmetrics.com/wp-content/uploads/2010/11/Bounce-Rate.pdf>
