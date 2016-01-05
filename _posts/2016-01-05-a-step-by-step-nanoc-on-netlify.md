@@ -106,6 +106,8 @@ Let's take a look at what's under the hood of this Nanoc site. First take a look
 
 ![nanoc_tree.png](/uploads/nanoc_tree.png)
 
+<UPDATE PIC - Needs to be .md files and not HTML!>
+
 In the file and folder tree above, there are some distinct folders and to create content and customize the layout, it's important to know what goes where and why!
 
 In Nanoc we use the term layouts instead of templates and these all go in the **layouts folder**.
@@ -117,7 +119,7 @@ Then there's the **lib folder**, which contains custom Ruby code.
 Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assests will be processed.
 
 #### 5. Edit Landing Page
-To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and changing its title, while adding a few lines of content. Take note that this file only contains the content of the page and none of the layout.
+To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and change its extension to reflect that we're using markdown instead of html and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. Take note that this file only contains the content of the page and none of the layout.
 
 #### 6. Edit Layout
 We'll follow the advice left for us in the original landing page and change the layout from the bland default color scheme and fonts to something new and refreshing.
