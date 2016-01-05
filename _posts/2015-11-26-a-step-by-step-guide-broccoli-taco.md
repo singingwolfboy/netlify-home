@@ -91,21 +91,21 @@ broccoli-taco build dist
 ### Setup your GitHub Repository
 <a id="githubstart"></a>
 
-We want to set up a GitHub repository with our local environment and push our local files to this repository. Next, we'll connect Netlify to the repository for our automatic build (i.e. whenever you push to GitHub, Netlify will rebuild your site).
+We want to set up an online GitHub repository with our local environment and push our local files to this repository. Next, we'll connect Netlify to the repository for our automatic build (i.e. whenever you push to GitHub, Netlify will rebuild your site).
 
 #### 1. Create your Git Repo
 We start by creating a [GitHub](https://github.com/) repository for our broccoli-taco site and generator.
 
-We're naming ours roccoli-taco-demo and we'll skip adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
+We're naming ours broccoli-taco-demo and we'll skip adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
 
 ![netlify0x_createnewrepo.png](/uploads/netlify0x_createnewrepo.png)
 
-Once the repository has been named and created we need to setup our local environment with GitHub.
+Once the repository has been named and created we'll return to local environment.
 
 #### 2. Prepare the Site for GitHub
 We need to set the local site up as a git repository with the `git init` command, then we'll add all the files and subdirectories to the repository with the `git add .` command and finally stage them for the first commit with the `git commit -m 'First commit'` command.
 
-In quick succession in a terminal window or if you're in windows, the command prompt:
+In quick succession in a terminal window (the command prompt on a Windows OS):
 
 ```
 cd my-broccoli-taco-site
@@ -114,15 +114,12 @@ git add .
 git commit -m 'First commit'
 ```
 
-We'll initialize the local directory as a git repository with with the following command:
-Next we need to add the files from our local directory to this git repository and stage them for their first commit with the following line in Terminal:
-Finally we'll commit the files we just staged in our local repository by entering the following line in Terminal:
-
+Once the files are commited, it's time to connect with the GitHub repository online.
 
 #### 3. Get & Add Remote URL
 ![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
 
-It's now time to return to the GitHub repository created above and retrieve the URL for the remote repository, since this is where our local repository will be pushed.
+We return to the GitHub repository created earlier and retrieve the URL for the remote repository, since this is where our local repository will be pushed.
 Either copy paste the whole command or use the button as depicted above, to copy just the path to your clipboard.
 Return to the Terminal window/Command prompt and paste the remote repository URL inside the following line (instead of My-Repository-URL):
 
@@ -135,6 +132,8 @@ Optional: To check that it's set up correctly, you can use the following command
 ```
 git remote -v
 ```
+
+If it looks all right, we're ready to push the files.
 
 #### 4. Push to GitHub.
 The final task before we're done setting up, is to use the push command with git, as in the following line in Terminal:
@@ -150,7 +149,7 @@ It's time to connect it with Netlify.
 ### Connecting to Netlify
 <a id="netlifystart"></a>
 
-Creating a new site on Netlify is super easy and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
+Creating a new site on Netlify is intuitive and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
 
 #### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
@@ -161,7 +160,7 @@ Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
 When you push to GitHub, Netlify does all the work. No more wasting time on manual deploying of updates or changes!
 
-Since we're hosting the site assets on GitHub, we’ll need to link Netlify to GitHub. Click the button *“Link to GitHub”*.
+Since we're hosting the site assets on GitHub, we’ll need to link Netlify with GitHub. Click the button *“Link to GitHub”*.
 
 #### Step 3: Authorize Netlify
 You can skip this step, if you already have an account with Netlify set up to automatically login!
