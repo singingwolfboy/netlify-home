@@ -59,19 +59,13 @@ The commands above will create your nanoc site, enter your site folder, build yo
 
 As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
 
+#### 3. Under the Hood
+The Folder Structure
 The files and directories created are:
+![nanoc_tree.png](/uploads/nanoc_tree.png)
 
-nanoc.yaml
-Site-wide configuration details for Nanoc.
 
-Rules
-Ruby file which describes how pages and assets will be processed.
+#### 4. Edit index.html and Layout
+Change this page’s content by editing the “index.html” file in the “content” directory. This is the actual page content, and therefore doesn’t include the header, sidebar or style information (those are part of the layout).
+Change the layout, which is the “default.html” file in the “layouts” directory, and create something unique (and hopefully less bland).
 
-content/
-The content of the site, like pages, images etc.
-
-layouts/
-Layout directory for your templates/layouts.
-
-lib/
-Custom Ruby code directory.
