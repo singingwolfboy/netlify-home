@@ -91,14 +91,16 @@ These actions both differ depending on your operating system, yet are usually fa
 In this example on Linux we open terminal (in Windows, your command prompt) and write the following commands (change to your download folder, file name, site location and site name):
 
 ```
-cd 'downloads'
+cd 'download-location'
 tar xvzf ink_linux_amd64.tar.gz --directory 'site-location'
-cd 'Sites'
+cd 'site-location'
 mv ink_linux_amd64 site-name
 ```
 
 The first line simply takes us to the location of the downloaded package (change to your download location).
-The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination using the *--directory* flag. The third line takes us to the location where we keep our sites (and just now unpacked the file to) and the fourth line renames the directory we unpacked to our chosen site name.
+The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination using the *--directory* flag, simply change to your site location. The third line takes us to the location where just now unpacked the folder to and the fourth line renames the directory we unpacked to our chosen site name.
+
+**Feel free to keep the terminal window/command prompt open between steps!**
 
 #### 3. Preparing ink
 If you are using OSX or a Windows OS, rather than Linux, it is important that you also download the Linux version of the ink executable, as this is the version needed when building on Netlify! 
@@ -159,7 +161,7 @@ build:
         Executed command when using 'ink publish'
 ```
 
-To create content, simply create any .md file in the source directory or in a subdirectory of the source directory, using the following format (as described on the InkPaper homepage):
+To create content, simply create any .md file in the source directory or in a subdirectory of the source directory, using the following YAML frontmatter format (as described on the InkPaper homepage):
 
 ```
 title: Article Title
@@ -300,4 +302,4 @@ The site starts as default public, but you can easily and quickly change this no
 
 Beautiful, simple and easy!
 
-You can see our demo site [here](http://inkpaper.netlify.com/) and the GitHub project used for the demo site [here](https://github.com/JimmiLee/InkPaper).
+You can see our demo site [here](http://inkpaper.netlify.com/) and the GitHub project [here](https://github.com/JimmiLee/InkPaper).
