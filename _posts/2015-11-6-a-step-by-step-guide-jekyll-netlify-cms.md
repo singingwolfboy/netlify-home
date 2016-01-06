@@ -15,7 +15,11 @@ Welcome to Netlify or should I say welcome to Netlify CMS, the first static site
 
 I know - it sounds too good to be true, but the age where static sites were defined by a lack of dynamic content, a lack of user interactivity and a lack of a CMS system is finally over.
 
-In this little guide, we'll do a step by step, which will show you how to install and configure your own copy of our **jekyll-netlify-cms** template.
+In this little guide, we'll do a step by step, which will show you how to install and configure your own copy of our *jekyll-netlify-cms* template.
+
+This is only the beginning however and we'll follow up with guides to our other Netlify CMS templates as well.
+
+*This guide assumes that you have Ruby and bundler installed!*
 
 ### Netlify CMS Environments
 Before we start, I'd like to talk a little about Netlify CMS and environments, as it is possible to run a *netlify-git-api server* for when you're working locally, as opposed to setting the environment variable to production and using *GitHub's API* when your site goes live. 
@@ -68,11 +72,12 @@ production:
     branch: master # Branch to update (master by default)
 ```
 
-It's pretty straight forward, but also very important to change the repo and branch, before you go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to the repo and branch you have created and now own!
+It's pretty straight forward, but also very important to change the repo and branch, before you go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to a repo and branch you have created and now *own*!
 
 #### 1. The Netlify Git API
 We will show how to set this up on your local computer as well as online, but first we'll try locally, so start by downloading the netlify-git-api that corresponds to your OS [here](https://github.com/netlify/netlify-git-api/releases).
-However, if you are not interested in having a local environment, you may skip to [the online environment here](#online-environment).
+
+If you are not interested in having a local environment, you may skip to [the online environment here](#online-environment).
 
 Decompress the netlify-cms-api file and add it to your path. These actions differ somewhat, depending on your operating system. 
 
@@ -134,9 +139,6 @@ This will start the Netlify CMS Server.
 
 ***Keep the Terminal Window/Command Prompt open to keep the server running!***
 
-Open a browser to the address below, log in and create a new post: 
-[https://localhost:4000/admin](https://localhost:4000/admin)
-
 #### 6. Build and Watch 
 Since we need the Netlify CMS Server to keep running, we need to open a second terminal window/command prompt for the following.
 
@@ -146,7 +148,11 @@ From the root of your site (cd my-local-site), run the following command to buil
 bundle exec jekyll server --watch
 ```
 
-Now you can navigate to check out your site and the post you just created through this link:
+#### 7. Test the System
+Open up a browser to the address below, log in and create a new post: 
+[https://localhost:4000/admin](https://localhost:4000/admin)
+
+Let's take a look at your new site and the post you just created through this link:
 [https://localhost:4000](https://localhost:4000)
 
 That's pretty much all there is to setting Netlify CMS up in a local environment.
