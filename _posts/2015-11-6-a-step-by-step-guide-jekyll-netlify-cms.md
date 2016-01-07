@@ -13,7 +13,7 @@ tags: null
 ### Welcome to Netlify
 Welcome to Netlify or should I say welcome to Netlify CMS, the first static site CMS system that can easily be integrated with almost any static site generator!
 
-I know - it sounds too good to be true, but the age where static sites were defined by a lack of dynamic content, a lack of user interactivity and a lack of a CMS system is finally over.
+I know - it sounds too good to be true, but the age where static sites were defined by a lack of dynamic content, a lack of user interactivity and a lack of a CMS system is finally over!
 
 In this little guide, we'll do a step by step, which will show you how to install and configure your own copy of our *jekyll-netlify-cms* template.
 
@@ -34,10 +34,10 @@ First you need to fork your own copy of the [jekyll-netlify-cms template](https:
 If this is all new to you, head over to [GitHub's help desk](https://help.github.com/articles/fork-a-repo/) to learn about forking a repository.
 
 #### 2. Local Work Space
-Make a local directory, open terminal (or the Windows prompt if you're using a Microsoft OS) and go to the location of this directory (cd my-local-repo-directory).
+Make a local directory, open terminal and go to the location of this directory (cd my-local-repo-directory).
 This will be the location of your local site.
 
-*For convenience sake, keep the terminal window/command prompt open throughout this guide*
+*For convenience sake, keep the terminal window open throughout this guide*
 
 #### 3. Get Repository URL
 From the repo we made above, we want to clone a copy to our local directory.
@@ -81,7 +81,7 @@ If you are not interested in having a local environment, you may skip to [the on
 
 Decompress the netlify-cms-api file and add it to your path. These actions differ somewhat, depending on your operating system. 
 
-We will use the following commands in a terminal window to achieve these steps on Linux (the Command Prompt in a Microsoft OS):
+We will use the following commands in a terminal window to achieve these steps on Linux:
 
 ```
 cd 'downloads'
@@ -137,12 +137,12 @@ netlify-git-api serve
 
 This will start the Netlify CMS Server.
 
-***Keep the Terminal Window/Command Prompt open to keep the server running!***
+***Keep the Terminal Window open to keep the server running!***
 
 #### 6. Build and Watch 
-Since we need the Netlify CMS Server to keep running, we need to open a second terminal window/command prompt for the following.
+Since we need the Netlify CMS Server to keep running, we need to open a second terminal window for the following.
 
-From the root of your site (cd my-local-site), run the following command to build your site using bundle:
+From the new terminal window, from the root of your site (cd my-local-site), run the following command to build your site using bundle:
 
 ```
 bundle exec jekyll server --watch
@@ -159,9 +159,9 @@ That's pretty much all there is to setting Netlify CMS up in a local environment
 
 ### Online Environment
 <a id="online-environment"></a>
-Once you're done fiddling with the local version and maybe adding some posts, we should try out this netlify-cms online.
+Once you're done fiddling with the local version and maybe adding some posts, we should try out Netlify CMS with Jekyll in an online environment.
 
-In the terminal window/command prompt, CD to the root folder of your site and start by entering this command, to check where the project is pushed to:
+In the terminal window, CD to the root folder of your site and start by entering this command, to check where the project is pushed to:
 
 ```
 git remote -v
@@ -173,7 +173,7 @@ If you're happy with the result, go ahead and add the new files with this comman
 git add .
 ```
 
-And then commit the files you just staged in your local repository by entering the following line in Terminal/Command Prompt:
+And then commit the files you just staged in your local repository by entering the following line in terminal:
 
 ```
 git commit -m 'First commit'
@@ -225,6 +225,7 @@ Once you're connected to GitHub, Netlify will show you a list of your Git repos,
 For the purpose of this tutorial we'll select the *“jekyll-netlify-cms-demo”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
+Netlify can detect the build command you need with most site generators, Jekyll being one of them:
 ![Configure Settings](/uploads/configurerepo.png)
 
 In most cases, there's nothing we need to configure, but for this build we need to set an environment variable under the environment tab, as seen below:
@@ -271,4 +272,4 @@ We tried testing the CMS system locally earlier in this guide and it's virtually
 
 As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
 
-You can see our demo site here: [http://jekyll-netlify-cms-demo.netlify.com/](http://jekyll-netlify-cms-demo.netlify.com/) and the GitHub project is [here](https://github.com/JimmiLee/jekyll-netlify-cms-demo).
+You can see our demo site here: [http://jekyll-netlify-cms-demo.netlify.com/](http://jekyll-netlify-cms-demo.netlify.com/) and the GitHub project for the site is [here](https://github.com/JimmiLee/jekyll-netlify-cms-demo).
