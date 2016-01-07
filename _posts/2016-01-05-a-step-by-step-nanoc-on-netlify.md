@@ -119,7 +119,11 @@ Then there's the **lib** folder, which contains custom Ruby code.
 Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assets will be processed.
 
 #### 5. Edit Landing Page
-To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and change its extension to reflect that we're using markdown instead of html and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. Take note that this file only contains the content of the page and none of the layout.
+To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. 
+
+We take the *index.html* file and change its extension to reflect that we're using markdown instead of html and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. 
+
+Take note that this file only contains the content of the page and none of the layout.
 
 #### 6. Edit Layout
 We'll follow the advice left for us in the original landing page and change the layout from the bland default color scheme and fonts to something new and refreshing.
