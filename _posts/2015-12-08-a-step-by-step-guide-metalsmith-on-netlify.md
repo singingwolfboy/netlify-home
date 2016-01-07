@@ -109,7 +109,6 @@ var Metalsmith = require('metalsmith'),
 
 Metalsmith(__dirname)
     .use(markdown())
-    .use(templates())
     .destination('./build')
     .build(function (err) { if(err) console.log(err) })
 ```
