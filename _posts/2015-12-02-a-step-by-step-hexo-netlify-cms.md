@@ -15,7 +15,7 @@ Even if you're new to the world of Static Site Generators, chances are you've he
 
 Hexo prides itself on being not only fast and simple, but also easy to write, while having plenty of extensibility. Hexo is powered by the node.js framework and in this guide we'll look at how to set up your very own *Hexo Netlify CMS Template*, from getting a clone online, to connecting it to Netlify and beyond.
 
-We previously presented similar articles with the Jekyll version of our template [here](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-jekyll-netlify-cms) and the Pelican version of our template [here](https://www.netlify.com/blog/2015/11/27/a-step-by-step-guide-pelican-netlify-cms).
+We previously presented similar articles with the Jekyll version of our template [here](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-jekyll-netlify-cms) and the Pelican version of our template [here](https://www.netlify.com/blog/2015/11/27/a-step-by-step-guide-pelican-netlify-cms)
 
 If you're not interested in the template, but soley in setting up Hexo with continous deployment on Netlify, please see [this informative article](https://www.netlify.com/blog/2015/10/26/a-step-by-step-guide-hexo-on-netlify) by Mr. Aaron Autrand and otherwise continue reading.
 
@@ -30,7 +30,7 @@ As I'm demonstrating this on a Linux machine, I will download the `linux.zip` fi
 
 Once the download is done, unpack the netlify-git-api executable from the zipped file and place it in your PATH. There are many methods for doing so and they differ somewhat depending on your operating system. 
 
-We will use the following commands in a terminal window (the Command Prompt in a Microsoft OS):
+We will use the following commands in a terminal window:
 
 ```
 cd 'downloads'
@@ -47,7 +47,7 @@ If you're unsure of where to move the file, you can run the following command to
 echo $PATH
 ```
 
-*For convenience sake, keep the terminal window/command prompt open throughout this guide.*
+*For convenience sake, keep the terminal window open throughout this guide.*
 
 #### 2. Fork and Clone the Template
 We'll begin by forking our own copy of the [hexo-netlify-cms template](https://github.com/netlify-templates/hexo-cms-example) on GitHub and then we rename it - we simply named ours hexo-netlify-cms-demo.
@@ -56,9 +56,10 @@ Before we can make a local clone, we need to get the remote GitHub URL from the 
 
 ![netlify0x_remoteurl_but.png](/uploads/netlify0x_remoteurl_but.png)
 
-The command below uses git to create the clone:
+The commands below first take us to the location where we want to put our new hexo based site and the second command uses git to create the clone:
 
 ```
+cd 'my-site-folder'
 git clone https://github.com/github_account/my-repo-name.git
 ```
 
@@ -67,7 +68,7 @@ Substitute *my-site-folder* with your location and the address with the address 
 Note that you don't need to create a folder for the project, as it comes inside a folder structure already. 
 
 #### 3. Setup the Netlify CMS server
-To start the Netlify CMS server, locate the root of your Hexo site (cd my-site-location) and then add users by running the following command for each user, we wish to add to the system (you will be asked for an email, a name and a password):
+To start the Netlify CMS server, we need to add users by running the following command for each user, we wish to add to the system (you will be asked for an email, a name and a password):
 
 ```
 netlify-git-api users add
@@ -87,16 +88,19 @@ To start the Netlify CMS server, we then use the following command:
 netlify-git-api serve
 ```
 
-***Keep the Terminal Window/Command Prompt open to keep the server running!***
+***Keep the Terminal Window open to keep the server running!***
 
 #### 4. Install the Hexo CLI
-Open up a new Terminal Window/Command Prompt to the site root (cd hexo-netlify-cms-demo in our example) and install the hexo client.
+Open up a new Terminal Window to the site root (cd hexo-netlify-cms-demo in our example) and install the hexo client.
 To install Hexo, make sure you already have **node.js** and **npm** installed and updated and then run the following command:
 
 ```
 cd my-site-root
 npm install -g hexo-cli
+npm install
 ```
+
+This will install the hexo command line client globally, followed by the package depencies found in the package.json file.
 
 Once the application has finished installing, it's time to test it out.
 
@@ -144,7 +148,7 @@ Optional: To check that our local environment is set up correctly and will push 
 git remote -v
 ```
 
-We need to add the new files from our local directory to our repository with the following line in Terminal/Command Prompt:
+We need to add the new files from our local directory to our repository with the following line in Terminal:
 
 ```
 git add .
@@ -157,7 +161,7 @@ git commit -m 'First commit'
 ```
 
 #### 3. Push to GitHub
-The final task before we're done setting up and ready for Netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
+The final task before we're done setting up and ready for Netlify, is to use the push command with git, as in the following line in Terminal:
 
 ```
 git push -u origin master
