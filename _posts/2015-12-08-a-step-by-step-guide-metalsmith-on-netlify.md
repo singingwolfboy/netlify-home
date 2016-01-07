@@ -132,8 +132,6 @@ Once you have the build file saved, you can try to build the page with the follo
 node build
 ```
 
-Or, if you're using ubuntu, you might need to use this command instead `nodejs build`.
-
 If everything went according to plan, there should be a new file in the build directory, molded according to our plugins. It's very simple and not much is happening there yet of course, but we'll get to that. This is merely to see if your installation so far is working.
 
 #### 7. Add more Plugins
