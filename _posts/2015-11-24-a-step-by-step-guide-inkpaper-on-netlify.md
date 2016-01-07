@@ -167,7 +167,7 @@ Open your web browser of choice and enter `http://localhost:8000/` in the addres
 
 Quite honestly - could it get any easier or more elegant?
 
-#### 5. Website Configuration and Content Creation
+#### 4. Website Configuration and Content Creation
 Let's dig a little deeper and look at how to configure the website, as well as create some content.
 
 As with many other static site generators, the `config.yml` file is where we do the website configuration and it's pretty much self explanatory as seen both in the `config.yml` generated in your site (just take a look - it's in the blog sub directory), but also in this shorter format example taken from InkPapers homepage:
