@@ -191,13 +191,14 @@ We create the *home.hbt* file with the following content in the templates folder
 </html>
 ```
 
-The new YAML frontmatter then, simply needs to point to a template like this:
+We also need a landing page, so create an `index.md` file in the content folder and fill it in with this YAML frontmatter, which simply points to the template above like this:
 
 ```
 ---
 title: Home
 template: home.hbt
 ---
+Whatever content we want on our front page...
 ```
 
 To run the build script and check out the changes, first save and next run the build command from terminal once more: `node build`
