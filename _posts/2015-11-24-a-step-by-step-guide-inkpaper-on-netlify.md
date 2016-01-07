@@ -17,6 +17,8 @@ Among the multitude of site generators that have come into existence in the past
 
 It has a very elegant theme and is one of the fastest site generators to get up and running, as it has NO dependencies - all you have to do, is download and set it up.
 
+*This guide assumes that you have git installed!*
+
 ### Quick Start
 If you want to get a head start, you can download, install and setup from the terminal (or command prompt) in this quick start guide. However, if you need a more detailed introduction and guide, simply scroll down to [here](#inkpapersetup).
 
@@ -251,6 +253,12 @@ Commit the files you just staged in your local repository by entering the follow
 
 ```
 git commit -m 'First commit'
+```
+
+Windows users: the command looks slightly different as we need to use double quotes:
+
+```
+git commit -m "First commit"
 ```
 
 #### 4. Get & Add Remote URL
