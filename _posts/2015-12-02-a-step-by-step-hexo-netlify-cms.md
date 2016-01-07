@@ -13,11 +13,11 @@ tags: null
 ### Welcome to Netlify CMS
 Even if you're new to the world of Static Site Generators, chances are you've heard of Hexo, which is one of the top five most popular web site generators as of writing and for a good reason.
 
-Hexo prides itself on being not only fast and simple, but also easy to write, while having plenty of extensibility. Hexo is powered by the nodejs framework and in this guide we'll look at how to set up your very own *Hexo Netlify CMS Template*, from getting a clone online, to connecting it to Netlify and beyond.
+Hexo prides itself on being not only fast and simple, but also easy to write, while having plenty of extensibility. Hexo is powered by the node.js framework and in this guide we'll look at how to set up your very own *Hexo Netlify CMS Template*, from getting a clone online, to connecting it to Netlify and beyond.
 
-If you're not interested in the template, but soley in setting up Hexo with continous deployment on Netlify, please see [this informative article](https://www.netlify.com/blog/2015/10/26/a-step-by-step-guide-hexo-on-netlify) by Mr. Aaron Autrand and otherwise continue reading.
+If you're not interested in the template, but soley in setting up Hexo with continuous deployment on Netlify, please see [this informative article](https://www.netlify.com/blog/2015/10/26/a-step-by-step-guide-hexo-on-netlify) by Mr. Aaron Autrand and otherwise continue reading.
 
-*Please note that this guide assumes you have Ruby, git, nodejs and npm installed.*
+*Please note that this guide assumes you have node.js and npm installed!*
 
 ### Deploying Locally
 We'll start by preparing the netlify-git-api CLI tool to enable us to deploy locally and then we'll clone the hexo-netlify-cms repository to our local environment and set it up.
