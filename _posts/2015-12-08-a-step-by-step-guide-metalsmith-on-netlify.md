@@ -221,11 +221,13 @@ I present to you the *page.hbt* file (in the templates directory):
 
 ```
 {{> header}}
+
 <h2>{{title}}</h2>
 
 <article>
     {{{contents}}}
 </article>
+
 {{> footer}}
 ```
 
