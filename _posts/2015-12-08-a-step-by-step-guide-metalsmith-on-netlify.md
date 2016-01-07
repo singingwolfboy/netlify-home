@@ -3,7 +3,7 @@ title: "A step-by-step guide: Metalsmith on Netlify"
 author: Jimmi Lee
 image: null
 short_title: A short guide - Metalsmith on netlify
-description: A short guide on how to set Metalsmith up in continuous deployment with netlify and GitHub
+description: "  "
 thumbnail: /uploads/metalsmith_thumb2.png
 cmsUserSlug: ""
 date: 2015-12-08T00:00:00.000Z
@@ -310,21 +310,38 @@ npm install metalsmith-permalinks --save
 
 Apart from simply adding these two plugins to the build file, we also have to define the two collections we want to use, by giving them a pattern as seen below.
 
+The full updated build.js file:
+
 ```
-Metalsmith(__dirname)
-    .use(collections({
-        pages: {
-            pattern: 'content/pages/*.md'
-        },
-        articles: {
-            pattern: 'content/articles/*.md',
-            sortBy: 'date'
-        }
-    }))
-    .use(markdown())
-    .use(permalinks({
-        pattern: ':collections/:title'
+var Metalsmith = require('metalsmith'), 
+    markdown = require('metalsmith-markdown'), 
+    templates = require('metalsmith-templates'), 
+    collections = require('metalsmith-collections'), 
+    permalinks = require('metalsmith-permalinks');
+
+Metalsmith(__dirname) 
+    .use(collections({ 
+        pages: { 
+            pattern: 'content/pages/*.md' 
+        }, 
+        articles: { 
+            pattern: 'content/articles/*.md', 
+            sortBy: 'date' 
+        } 
     })) 
+    .use(markdown()) 
+    .use(permalinks({ 
+        pattern: ':collections/:title' 
+    }))  
+    .use(templates({ 
+        engine: 'handlebars', 
+        partials: { 
+            header: 'partials/header', 
+            footer: 'partials/footer' 
+        } 
+    })) 
+    .destination('./build') 
+    .build(function (err) { if(err) console.log(err) })
 ```
 
 The pattern for the pages is defined as all markdown files in the pages folder, while the same holds true for the articles collection which is made up of all the markdown files in its corresponding articles folder. Furthermore the articles are sorted by date in reverse.
@@ -373,7 +390,7 @@ permalink: false
 ---
 ```
 
-It's pretty self explanatory, as we've defined ourselves what YAML frontmatter makes sense through our implementation of Metalsmith. It's pretty much the same as the YAML we put with our about page, except for the added date. 
+It's pretty self explanatory, as we've defined ourselves what YAML frontmatter makes sense through our implementation of Metalsmith. It's pretty much the same as the YAML we put with our about page, except for the added date and the permalink setting to false. 
 
 #### 14. Create Articles Content Page
 We also need a page which can show our articles sorted by date in reverse.
@@ -390,6 +407,7 @@ For our blog template, we create a *blog.hbt* file in the templates folder and p
 
 ```
 {{> header}}
+
 <h2>{{title}}</h2>
 
 <article>
