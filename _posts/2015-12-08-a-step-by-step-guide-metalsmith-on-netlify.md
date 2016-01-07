@@ -343,10 +343,10 @@ permalink: false
 ---
 ```
 
-We'll go ahead and add this YAML line to each of our articles, to see the difference.
+We'll go ahead and add this YAML line to each of our articles.
 
 #### 13. Creating Content
-To see the difference between our two collections, the pages and the posts, we also need to create the posts template, so go ahead and create the *post.hbt* file in the templates directory.
+To see the difference between our two collections, the pages and the posts, we also need to create the posts template, so go ahead and create the *article.hbt* file in the templates directory.
 
 The *post.hbt* template file:
 
@@ -362,13 +362,14 @@ The *post.hbt* template file:
 {{> footer}}
 ```
 
-Next, we need to create at least one post, but preferably a few more than that, to illustrate how the files are sorted. Each of the posts should have the following YAML frontmatter:
+Next, we need to create at least one article, but preferably a few more than that, to illustrate how the files are sorted. Each of the articles should have the following YAML frontmatter:
 
 ```
 ---
 title: "Title of the Post"
 date: YYYY-MM-DD
-template: post.hbt
+template: article.hbt
+permalink: false
 ---
 ```
 
