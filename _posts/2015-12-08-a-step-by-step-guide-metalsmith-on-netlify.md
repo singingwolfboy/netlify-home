@@ -34,7 +34,11 @@ Metalsmith is not only a static site generator, but can do a lot of other things
 This means it's extremely versatile, while remaining simple, but it also means that there's a bit more to be done on the setup side, than what we're used to from other static site generators.  
 
 #### 1. Create Folder Structure
-We'll start out by creating a simple folder structure for our project as outlined in the picture below, with a number of files. We'll fill in the content of the files in the following steps and more files will be added along the way.
+We'll start out by creating a simple folder structure for our project as outlined in the picture below, with a number of files. 
+
+Alternatively you can fork a clone of the empty structure [here](https://github.com/JimmiLee/metalsmith-demo-empty), complete with empty files, ready to be filled in.
+
+We'll fill in the content of the files in the following steps and more files will be added along the way.
 
 The folder structure for this project:
 
