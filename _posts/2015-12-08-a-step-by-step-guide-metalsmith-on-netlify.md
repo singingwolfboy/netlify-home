@@ -219,8 +219,19 @@ We'll keep it simple and merely present the content with a title and the aforeme
 
 I present to you the *page.hbt* file (in the templates directory):
 
+```
+{{> header}}
 
-To add the partials we simply insert the line `{{> partial-name }}` as seen above.
+<h2>{{title}}</h2>
+
+<article>
+    {{{contents}}}
+</article>
+
+{{> footer}}
+```
+
+To add the partials we simply insert the line `{{> partial-name }}` as seen above. 
 
 Let's move on to creating these partials.
 
