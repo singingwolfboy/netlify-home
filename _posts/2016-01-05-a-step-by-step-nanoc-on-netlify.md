@@ -102,7 +102,7 @@ The commands above will create your Nanoc site, enter your site folder, compile 
 As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
 
 #### 4. Under the Hood
-Let's take a look at what's under the hood of this Nanoc site. First take a look at the folder structure, as depicted in the illustration below, the files and directories created are as follows:
+Let's take a look at what's under the hood of this Nanoc site. First take a look at the folder structure, as depicted in the illustration below (or check your site folder in a file browser), the files and directories created are as follows:
 
 ![nanoc_tree.png](/uploads/nanoc_tree.png)
 
@@ -110,13 +110,13 @@ Let's take a look at what's under the hood of this Nanoc site. First take a look
 
 In the file and folder tree above, there are some distinct folders and to create content and customize the layout, it's important to know what goes where and why!
 
-In Nanoc we use the term layouts instead of templates and these all go in the **layouts folder**.
+In Nanoc we use the term layouts instead of templates and these all go in the **layouts** folder.
 
-The content we're creating goes in the **content folder** and here you'll find the landing page and a stylesheet, ready for editing.
+The content we're creating goes in the **content** folder and here you'll find the landing page and a stylesheet, ready for editing.
 
-Then there's the **lib folder**, which contains custom Ruby code.
+Then there's the **lib** folder, which contains custom Ruby code.
 
-Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assests will be processed.
+Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assets will be processed.
 
 #### 5. Edit Landing Page
 To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and change its extension to reflect that we're using markdown instead of html and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. Take note that this file only contains the content of the page and none of the layout.
