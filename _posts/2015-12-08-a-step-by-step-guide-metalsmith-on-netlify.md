@@ -301,7 +301,7 @@ We're going to simply add a stylesheet in the `src/styles` folder named *main.cs
 You can use any old external css stylesheet or create a new one. Once you run build, metalsmith will copy this file over, duplicating the file structure and any other static assets you may have added in this simple manner.
 
 #### 12. Collections and Link Plugins
-To illustrate the power and flexibility of metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our posts. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
+To illustrate the power and flexibility of metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our articles. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
 
 ```
 npm install metalsmith-collections --save
@@ -363,9 +363,9 @@ permalink: false
 We'll go ahead and add this YAML line to each of our articles.
 
 #### 13. Creating Content
-To see the difference between our two collections, the pages and the posts, we also need to create the posts template, so go ahead and create the *article.hbt* file in the templates directory.
+To see the difference between our two collections, the pages and the articles, we also need to create the article template, so go ahead and create the *article.hbt* file in the templates directory.
 
-The *post.hbt* template file:
+The *article.hbt* template file:
 
 ```
 {{> header}}
@@ -383,7 +383,7 @@ Next, we need to create at least one article, but preferably a few more than tha
 
 ```
 ---
-title: "Title of the Post"
+title: "Title of the Article"
 date: YYYY-MM-DD
 template: article.hbt
 permalink: false
