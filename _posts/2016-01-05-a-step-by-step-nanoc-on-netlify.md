@@ -123,6 +123,16 @@ To distinguish our new basic Nanoc site, we'll start by editing the two files it
 
 We take the *index.html* file and change its extension to reflect that we're using markdown instead of html and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. 
 
+Something like this would work:
+
+```
+---
+title: Nanoc on Netlify
+---
+### Nanoc on Netlify
+Nanoc on Netlify in continuous deployment using GitHub. We'll cover the basics and then some.
+```
+
 Take note that this file only contains the content of the page and none of the layout.
 
 #### 6. Edit Layout
