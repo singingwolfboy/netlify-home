@@ -20,7 +20,7 @@ It has a very elegant theme and is one of the fastest site generators to get up 
 ### Quick Start
 If you want to get a head start, you can download, install and setup from the terminal (or command prompt) in this quick start guide. However, if you need a more detailed introduction and guide, simply scroll down to [here](#inkpapersetup).
 
-The guide below does the same thing for each operating system, except that for OSX and Windows, it also downloads and renames the linux versin of ink, so that it can be used to deploy to netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
+The quick start guides below do the same thing for each operating system, except that for OSX and Windows, they also download and rename the linux versin of ink, so that it can be used to deploy to netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
 
 #### Linux (64bit) Quick Start (in Terminal):
 
@@ -52,18 +52,18 @@ mv ink bin/ink.linux
 ```
 
 #### Microsoft Windows (64bit) Quick Start (in Command Prompt): 
-Please note that Microsoft Windows will require [7zip](http://www.7-zip.org/download.html) to be installed and added to your path if you use the method below.
+Please note that Microsoft Windows will require [7zip](http://www.7-zip.org/download.html) to be installed, including the command line tool and it must be added to your path if you use the method below.
 
 ```
 bitsadmin /transfer my-download-job /download /priority normal http://www.inkpaper.io/release/ink_windows_amd64.zip "C:\my-download-folder\ink_windows_amd64.zip" 
 cd my-download-folder
-7z x ink_windows_amd64.zip -o"c:\my-download-folder\my-inkpaper-site\" 
+7z x ink_windows_amd64.zip -o"c:\my-inkpaper-site\" 
 cd my-inkpaper-site
 mkdir bin
 move ink.exe bin/ink.windows.exe
 
-cd my-download-folder
 bitsadmin /transfer my-download-job /download /priority normal http://www.inkpaper.io/release/ink_linux_amd64.tar.gz "C:\my-download-folder\ink_linux_amd64.tar.gz"
+cd my-download-folder
 7z x ink_linux_amd64.tar.gz -o"c:\my-download-folder\"
 7z x ink_linux_amd64.tar -o"c:\my-download-folder\"
 cd ink_linux_amd64
@@ -71,6 +71,7 @@ move ink "c:\my-ink-paper-site\bin\ink.linux.exe"
 ```
 
 Substitute with your download folder location and inkpaper site location.
+
 Please note that the quick guide above has only been tested on Windows 10, but should work fine on both Windows 7 and 8 as well.
 
 ### Setup InkPaper
@@ -84,10 +85,10 @@ On the other hand, if you have InkPaper running locally, but need some guidance 
 Finally, if you're completely new to InkPaper, simply continue this guide chronologically.  
 
 #### 1. Download InkPaper
-The first thing you need to do is head over to [InkPapers webpage](http://www.inkpaper.io/) and download the installation package that fits with your operating system. 
+The first thing you need to do is head over to [InkPapers webpage](http://www.inkpaper.io/) and download the installation package that fits with your operating system. The package comes in both an OSX, a Windows and a Linux flavor and there are both 32bit and 64 bit versions for the Windows and Linux OS's.
 ![inkpaperwebpage.png](/uploads/inkpaperwebpage.png)
 
-#### 2. Linux and OSX: Extract and prepare InkPaper
+#### 2A. Linux and OSX: Extract and prepare InkPaper
 If you are using OSX or a Windows OS, rather than Linux, it is important that you also download the Linux version of the ink executable, as this is the version needed when building on Netlify! 
 
 For this reason, we will move our ink executable into a `bin` folder in the root of the site and rename it `ink.linux` and if you're on a Windows or OSX machine, make sure you also keep the ink executable needed by your OS to run locally.  
@@ -97,25 +98,27 @@ Create the bin folder and rename the linux version of the ink file `ink.linux` a
 We need to extract the downloaded package and change its folder name.
 These actions both differ depending on your operating system, yet are usually fairly simple. 
 
-In this example on Linux we open terminal (in Windows, your command prompt) and write the following commands (change to your download and site location, file name and site name):
+In this example on Linux we open a terminal window and write the following commands in terminal (change to your download location, file name and site name):
 
 ```
 cd 'download-location'
 tar xvzf ink_linux_amd64.tar.gz --directory 'download-location'
-cd 'site-location'
 mv ink_linux_amd64 my-site-name
-cd my-site-name
+cd 'site-location/my-site-name'
 mkdir bin
 mv ink '/bin/ink.linux'
 ```
 
 The first line simply takes us to the location of the downloaded package (change to your download location).
 The second line unpacks the downloaded file (in our case the Linux 64 bit flavor) to our chosen destination using the *--directory* flag, simply change to your site location. The third line takes us to the location where just now unpacked the folder to and the fourth line renames the directory we unpacked to our chosen site name.
-
-In the first line we enter the newly renamed directory (substitute my-site-directory with the location of your site root) and in the second line we create a bin folder, while in the third and final line we move and rename the ink executable to the bin folder (change to your location and preferred file name). 
+In the fifth line we enter the newly renamed directory (substitute my-site-name with the location of your site root) and in the sixth line we create a bin folder, while in the seventh and final line we move and rename the ink executable to the bin folder (change to your location and preferred file name). 
 
 #### 2B. Windows: Extract and prepare InkPaper
-Windows users: instead of doing everything in command prompt, we advice you use the GUI and a compression tool of your choice. To put it in a few words, you need to download both the windows and the linux versions and then you need to move both to a new bin folder.  Furthermore you need to rename both executables, so you can distinguish the linux version from the windows version.
+Instead of doing everything in command prompt, we advice you use the GUI and a compression tool of your choice. 
+
+To put it in a few words, you need to download both the windows and the linux versions and then you need to move both to a new bin folder.  Furthermore you need to rename both executables, so you can distinguish the linux version from the windows version.
+
+After downloading try to run the following two sets, changing the directories to fit with your system, by substituting download-location and my-site-location with their actual locations. And the Windows section of our quick guide again assumes you have 7z installed.
 
 We get the Windows version:
 
@@ -136,11 +139,9 @@ cd ink_linux_amd64
 move ink "c:\my-site-location\bin\ink.linux.exe"
 ```
 
-Remember to change the directories to fit with your system, by substituting download-location and my-site-location with their actual locations. And the Windows section of our quick guide again assumes you have 7z installed.
-
 **Feel free to keep the terminal window/command prompt open between steps for your own convenience!**
 
-#### 4. Preview InkPaper
+#### 3. Preview InkPaper
 Provided you've still got your terminal window open in the InkPaper directory, all you need to do is enter the following commands, lean back and check out the beautiful result in a web browser:
 
 ```
@@ -149,6 +150,8 @@ Provided you've still got your terminal window open in the InkPaper directory, a
 ```
 
 Please note that the official documentation merely uses `ink preview` and `ink build` as the commands, but as we've moved and renamed the file, we also have to change the command slightly to reflect this, as seen above.
+
+
 
 Open your web browser of choice and enter `http://localhost:8000/` in the address bar and there you go.
 
