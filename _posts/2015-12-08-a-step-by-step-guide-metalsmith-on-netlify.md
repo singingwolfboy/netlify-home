@@ -13,7 +13,7 @@ tags: null
 ### Welcome to Netlify
 Welcome to Netlify and todays article about Metalsmith. 
 
-Metalsmith is a fairly well known static site generator that bills itself as *An extremely simple, _pluggable_ static site generator* and to me personally, it basically felt like working with a very customizable static site generator, for better or worse. It's in fact so customizeable that it can imitate other static site generators and even has templates for this! 
+Metalsmith is a fairly well known static site generator that bills itself as *An extremely simple, pluggable static site generator*. To me personally, that's indeed exactly how it felt, like working with a very customizable static site generator, for better or worse. It's in fact so customizeable that it can imitate other static site generators and even has templates for this! 
 
 But enough talk, let's get to the meat and bones.
 
