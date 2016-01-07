@@ -331,7 +331,7 @@ The pattern for the pages is defined as all markdown files in the pages folder, 
 
 The `collection()` method creates internal arrays of the files, which can be accessed in templates using `collections.collection-name` or when setting up the permalinks as seen in the last line.
 
-The permalinks must be set AFTER the markdown plugin to work properly!
+*The permalinks must be set AFTER the markdown plugin to work properly!*
 
 We set the pattern to use the collection and the title, so that the *about.html* file instead becomes `pages/about/index.html`, which is considered better SEO. The way we've set it up right now, this procedure of creating a folder for each file, with an *index.html* file, encompasses all the files we had in the pages folder, but also all the files we had in the articles folder.
 
@@ -350,11 +350,13 @@ The *post.hbt* template file:
 
 ```
 {{> header}}
+
 <h2>{{title}}</h2>
 
 <article>
     {{{contents}}}
 </article>
+
 {{> footer}}
 ```
 
