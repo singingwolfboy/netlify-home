@@ -19,7 +19,7 @@ But enough talk, let's get to the meat and bones.
 
 In this tutorial we will set up a basic Metalsmith demonstration site, with a build file, static assets and some plugins. The aim of this site is to show a simple Metalsmith setup in continuous deployment on Netlify using GitHub.
 
-If you already have a Metalsmith repository forked on GitHub and only wish to connect to Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
+If you already have a Metalsmith repository on GitHub and only wish to connect with Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
 
 On the other hand, if you have Metalsmith running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
 
@@ -43,7 +43,7 @@ The folder structure for this project:
 #### 2. Create .nvmrc file
 Did you notice the *.nvmrc* file in the tree above?
 
-The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named *.nvmrc* with the version inside. While you may not be using nvm yourself, Netlify will use this information when building your site for you. 
+The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named *.nvmrc* with the version inside. While you may not be using nvm yourself (you should really consider it), Netlify will use this information when building your site for you. 
 
 Since metalsmith is a little picky with regards to what version of node it works with (anything after 0.12.x should do), we'll add the newest version number we know is running on Netlify to this file. 
 
