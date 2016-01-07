@@ -52,7 +52,7 @@ nanoc --version
 #### 2. Edit Rules file
 For our kramdown gem to work properly, we need to let Nanoc know we changed the default language from HTML to markdown. To do this we need to open the Rules file found in the root of a Nanoc site and then we need to edit the compilation rules found therein, to take markdown files.
 
-Did that sound complicated?  Don't worry, cause it's really not! Editing compile and route rules in a Rules file is actually quite easy, but on top of this, the people behind Nanoc have anticipated our switch from HTML to Markdown and thus in our Rules file we find the compile rule for Markdown using the kramdown filter  already written and just commented out. 
+Did that sound complicated?  Don't worry, cause it's really not! Editing compile and route rules in a Rules file is actually quite easy, but on top of this, the fortune tellers behind Nanoc have anticipated our switch from HTML to Markdown and thus in our Rules file we find the compile rule for Markdown using the kramdown filter  already written and just commented out. 
 
 Normally we would also need to set up a route rule for the .md or markdown files, but again the oracles behind Nanoc have anticipated my move and the markdown files are already added to one of the existing route rules.
 
@@ -85,7 +85,7 @@ end
 layout '/**/*', :erb
 ```
 
-If you're using kramdown like us, simply used the above in your Rules file and if you're using HTML, there's nothing to edit. However, if you choose a third option, check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/)
+If you're using kramdown like us, simply used the above in your Rules file and if you're using HTML, there's nothing to edit. However, there are numerous possibilities, if you're not afraid to check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/) and learn how to make your own.
 
 #### 3. Create, Compile & View Nanoc Site
 To create your Nanoc site, use the following code in terminal (substitute my-site-name with the name of your choice):
@@ -97,7 +97,7 @@ nanoc compile
 nanoc view 
 ```
 
-The commands above will create your Nanoc site, enter your site folder, build your site and offer it up for view at [http://localhost:3000/](http://localhost:3000/), in that order from the top and down.
+The commands above will create your Nanoc site, enter your site folder, compile your site and offer it up for view at [http://localhost:3000/](http://localhost:3000/), in that order from the top and down.
 
 As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
 
