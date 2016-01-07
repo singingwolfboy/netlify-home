@@ -296,7 +296,7 @@ Notice the stylesheet link in our header.
 To make the site we're working on a little less bleak, we're going to add a stylesheet.
 
 #### 11. Add a Stylesheet
-We're going to simply add a stylesheet in the `src/styles` folder named *main.css* as referenced in our header.
+We're going to simply add a stylesheet in the `src/styles` folder named *main.css* as referenced in our header. 
 
 You can use any old external css stylesheet or create a new one. Once you run build, metalsmith will copy this file over, duplicating the file structure and any other static assets you may have added in this simple manner.
 
