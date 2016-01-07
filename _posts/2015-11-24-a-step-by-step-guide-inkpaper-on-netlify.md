@@ -97,7 +97,7 @@ If you are using OSX or a Windows OS, rather than Linux, it is important that yo
 
 For this reason, we will move our ink executable into a `bin` folder in the root of the site and rename it `ink.linux` and if you're on a Windows or OSX machine, make sure you also keep the ink executable needed by your OS to run locally.  
 
-Create the bin folder and rename the Linux version of the ink file `ink.linux` as we do in the command example below, but also keep an `ink.osx` OR `an ink.windows` file in there for local use if you're in either OSX or Windows respectively.
+Create a bin folder and rename the Linux version of the ink file `ink.linux` as we do in the command example below, but also keep an `ink.osx` OR `an ink.windows` file in there for local use if you're in either OSX or Windows respectively.
 
 We need to extract the downloaded package and change its folder name.
 These actions both differ depending on your operating system, yet are usually fairly simple. 
@@ -121,9 +121,9 @@ In the fifth line we create a bin folder, while in the sixth and final line we m
 #### 2B. Windows: Extract and prepare InkPaper
 Instead of doing everything in command prompt, we advice you use the GUI and a compression tool of your choice. 
 
-To put it in as few words as possible, you need to download both the Windows and the Linux versions and then you need to move both executables to a new bin folder.  Furthermore you need to rename both executables, so you can distinguish the Linux version from the Windows version.
+In short, you need to download both the Windows and the Linux versions and then you need to move both executables to a new bin folder.  Furthermore you need to rename both executables, so you can distinguish the Linux version from the Windows version.
 
-After downloading try to run the following two sets, changing the directory locations to fit with your system, by substituting download-location and my-inkpaper-site with the actual location and name. Remember that the Windows section of our quick guide assumes you have 7z installed.
+After downloading, if you wish to use the command prompt, try to run the following two sets, changing the directory locations to fit with your system, by substituting download-location and my-inkpaper-site with the actual location and site name. And remember that the Windows section of our quick guide assumes you have 7z installed.
 
 We get the Windows version first:
 
@@ -144,7 +144,7 @@ cd ink_linux_amd64
 move ink "c:\my-inkpaper-site\bin\ink.linux.exe"
 ```
 
-**Feel free to keep the terminal window/command prompt open between steps for your own convenience!**
+*Feel free to keep the terminal window/command prompt open between steps for your own convenience!*
 
 #### 3. Preview InkPaper
 Provided you've still got your terminal window open in the InkPaper directory, all you need to do is enter the following commands, lean back and check out the beautiful result in a web browser:
