@@ -56,10 +56,9 @@ Before we can make a local clone, we need to get the remote GitHub URL from the 
 
 ![netlify0x_remoteurl_but.png](/uploads/netlify0x_remoteurl_but.png)
 
-The commands below first take us to the location where we want to put our new hexo based site and the second command uses git to create the clone:
+The command below uses git to create the clone:
 
 ```
-cd 'my-site-folder'
 git clone https://github.com/github_account/my-repo-name.git
 ```
 
@@ -68,7 +67,7 @@ Substitute *my-site-folder* with your location and the address with the address 
 Note that you don't need to create a folder for the project, as it comes inside a folder structure already. 
 
 #### 3. Setup the Netlify CMS server
-To start the Netlify CMS server, locate the root of your pelican site (cd my-site-location) and then add users by running the following command for each user, we wish to add to the system (you will be asked for an email, a name and a password):
+To start the Netlify CMS server, locate the root of your Hexo site (cd my-site-location) and then add users by running the following command for each user, we wish to add to the system (you will be asked for an email, a name and a password):
 
 ```
 netlify-git-api users add
