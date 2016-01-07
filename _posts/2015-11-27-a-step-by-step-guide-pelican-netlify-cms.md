@@ -233,4 +233,4 @@ This screen shot depicts our CMS system with Pelican, after logging in:
 
 As you can see from our little guide, with this template you can have a Pelican site up and running with Netlify CMS in no time at all.
 
-You can see our demo site here: [http://pelicanos.netlify.com/](http://pelicanos.netlify.com/) and the GitHub project is [here](https://github.com/netlify-templates/pelican-netlify-cms).
+You can see our demo site here: [http://pelicanos.netlify.com/](http://pelicanos.netlify.com/) and the GitHub project for the demo site is [here](https://github.com/JimmiLee/Pelican), with the GitHub repo for the template can be found [here](https://github.com/netlify-templates/pelican-netlify-cms).
