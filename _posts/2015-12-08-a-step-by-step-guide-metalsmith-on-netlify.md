@@ -327,7 +327,7 @@ Metalsmith(__dirname)
     })) 
 ```
 
-The pattern for the pages is defined as all markdown files in the pages folder, while the same holds true for the posts collection which is made up of all the markdown files in its corresponding posts folder. Furthermore the posts are sorted by date in reverse.
+The pattern for the pages is defined as all markdown files in the pages folder, while the same holds true for the articles collection which is made up of all the markdown files in its corresponding articles folder. Furthermore the articles are sorted by date in reverse.
 
 The `collection()` method creates internal arrays of the files, which can be accessed in templates using `collections.collection-name` or when setting up the permalinks as seen in the last line.
 
@@ -335,13 +335,15 @@ The `collection()` method creates internal arrays of the files, which can be acc
 
 We set the pattern to use the collection and the title, so that the *about.html* file instead becomes `pages/about/index.html`, which is considered better SEO. The way we've set it up right now, this procedure of creating a folder for each file, with an *index.html* file, encompasses all the files we had in the pages folder, but also all the files we had in the articles folder.
 
-If there are any pages within these folders which we won't want to use this changed link format, we can simply add this line to the YAML front-matter and the plugin will disregard them:
+If there are any pages within these folders which we don't want to use this changed link format with, we can simply add this line to the YAML front-matter and the plugin will disregard them:
 
 ```
 ---
 permalink: false
 ---
 ```
+
+We'll go ahead and add this YAML line to each of our articles, to see the difference.
 
 #### 13. Creating Content
 To see the difference between our two collections, the pages and the posts, we also need to create the posts template, so go ahead and create the *post.hbt* file in the templates directory.
