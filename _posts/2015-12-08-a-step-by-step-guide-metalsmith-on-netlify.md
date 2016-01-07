@@ -25,7 +25,7 @@ On the other hand, if you have Metalsmith running locally, but need some guidanc
 
 Finally, if you're completely new to Metalsmith, simply continue this guide onwards and downwards.  
 
-***Please note that this guide assumes you have Node.js installed - any version above 0.12.x !!!***
+***Please note that this guide assumes you have npm and node.js installed - any version above 0.12.x !!!***
 
 For information about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
