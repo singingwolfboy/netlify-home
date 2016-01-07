@@ -100,7 +100,7 @@ npm install -g hexo-cli
 npm install
 ```
 
-This will install the hexo command line client globally, followed by the package depencies found in the package.json file.
+This will install the hexo command line client globally, followed by the package depencies found in the package.json file in the root (since you cd to your site root in the first line).
 
 Once the application has finished installing, it's time to test it out.
 
@@ -201,7 +201,7 @@ CMS_ENV = production
 Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way, as seen in this screen shot:
 ![hexo_bulidlog.png](/uploads/hexo_bulidlog.png)
 
-Taking a short break now might make sense, as the next step may take as much as a few minutes (depending on how much content you've added). Don't worry - Netlify will do the work while you're attention is elsewhere and if there are errors or warnings, it's easy to look in the log file, as Netlify saves your previous builds, along with their log files.
+Taking a short break now might make sense, as the next step may take as much as a few minutes (depending on how much content you've added). Don't worry - Netlify will do the work while your attention is elsewhere and if there are errors or warnings, it's easy to look in the log file, as Netlify saves your previous builds, along with their log files.
 
 #### 4. Register new Application
 Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.  
@@ -226,14 +226,14 @@ This is where we give the GitHub Api access to our site with the application we 
 
 ![githubaccess.png](/uploads/githubaccess.png)
 
-Simply paste them into the windows where it says *enter Client ID here* and below where it says *enter Client Secret here* and you're good to go. Remember to tick 'enable GitHub'.
+Simply paste them into the windows where it says *enter Client ID here* and below where it says *enter Client Secret here* and you're good to go. Remember to tick *'enable GitHub'*.
 
 #### 6: Trying Out Netlify CMS
-We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** (change to the URL of your site and add /admin to the end) to access the CMS system and then log in with your GitHub account, since we're using GitHub auth when working online.
+We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** (change to the URL of your site and add */admin* to the end) to access the CMS system and then log in with your GitHub account, since we're using GitHub auth when working online.
 
 In the screen shot below, you can see how it should look, after you log into the Netlify CMS part of our new demonstration page:
 ![hexo_netlifycms.png](/uploads/hexo_netlifycms.png)
 
-As you can see, it takes very little time and effort to get up and running, so give it a try - I'm sure you won't regret it.
+Hexo is a very pleasant static site generator and with Netlify CMS it's easily accessible, once you've done a bit of tweaking and well worth half an hour of your time.
 
-You can see our demo site [here](http://hexo-netlify-cms-demo.netlify.com/) and the GitHub project [here](https://github.com/netlify-templates/hexo-cms-example).
+You can see our demo site [here](http://hexo-netlify-cms-demo.netlify.com/) and the GitHub project for the tutorial site from this article [here](https://github.com/JimmiLee/hexo-netlify-cms-demo).
