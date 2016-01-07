@@ -214,9 +214,10 @@ This is a small Metalsmith demonstration site that aims at showing you a very ba
 ```
 
 As you can see in the YAML frontmatter above, we're using the page template and not the home template we made earlier and so naturally we also need to create this template file.
-We'll keep it simple though and merely present the content with a title and the aforementioned header and footer partials.
 
-I present to you the *page.hbt* file:
+We'll keep it simple and merely present the content with a title and the aforementioned header and footer partials.
+
+I present to you the *page.hbt* file (in the templates directory):
 
 ```
 {{> header}}
