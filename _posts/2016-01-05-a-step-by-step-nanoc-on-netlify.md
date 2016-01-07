@@ -16,7 +16,7 @@ Nanoc has both in abundance and after checking out their up to date and aestheti
 
 In this little guide, we will set up and check out Nanoc and once we're up and running locally, we will push the project to GitHub and deploy on Netlify with continuous deployment.
 
-If you already have a Nanoc repository forked on GitHub and only wish to connect to Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
+If you already have a Nanoc repository on GitHub and only wish to connect to Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
 
 On the other hand, if you have Nanoc running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
 
@@ -33,7 +33,7 @@ For information about installing and handling Ruby with Bundler please see [this
 <Bla. bla bla - we will do this and that>
 
 #### 1. Install Nanoc.
-The following commands will install first Nanoc and second adsf, the latter is needed to view the page locally and the former is everything else. On the last line we install kramdown, though this is in fact an optional gem that will enable us to use markdown in the content, instead of HTML.
+The following commands will install first *Nanoc* and second *adsf*, the latter is needed to view the page locally and the former is everything else. On the last line we install kramdown, though this is in fact an optional gem that will enable us to use markdown in the content, instead of HTML.
 
 Installing gems:
 
@@ -50,7 +50,7 @@ nanoc --version
 ```
 
 #### 2. Edit Rules file
-For our kramdown gem to work properly, we need to let Nanoc know we changed the default language from HTML to markdown. To do this we need to open the Rules file found in the root of your Nanoc site and then we need to edit the compilation rules found herein, to take markdown files.
+For our kramdown gem to work properly, we need to let Nanoc know we changed the default language from HTML to markdown. To do this we need to open the Rules file found in the root of a Nanoc site and then we need to edit the compilation rules found therein, to take markdown files.
 
 Did that sound complicated?  Don't worry, cause it's really not! Editing compile and route rules in a Rules file is actually quite easy, but on top of this, the people behind Nanoc have anticipated our switch from HTML to Markdown and thus in our Rules file we find the compile rule for Markdown using the kramdown filter  already written and just commented out. 
 
