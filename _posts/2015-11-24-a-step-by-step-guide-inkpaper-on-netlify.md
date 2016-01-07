@@ -20,7 +20,7 @@ It has a very elegant theme and is one of the fastest site generators to get up 
 ### Quick Start
 If you want to get a head start, you can download, install and setup from the terminal (or command prompt) in this quick start guide. However, if you need a more detailed introduction and guide, simply scroll down to [here](#inkpapersetup).
 
-The quick start guides below do the same thing for each operating system, except that for OSX and Windows, they also download and rename the linux versin of ink, so that it can be used to deploy to netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
+The quick start guides below do the same thing for each operating system, except that for OSX and Windows, they also download and rename the Linux versin of ink, so that it can be used to deploy to Netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
 
 #### Linux (64bit) Quick Start (in Terminal):
 
@@ -95,7 +95,7 @@ If you are using OSX or a Windows OS, rather than Linux, it is important that yo
 
 For this reason, we will move our ink executable into a `bin` folder in the root of the site and rename it `ink.linux` and if you're on a Windows or OSX machine, make sure you also keep the ink executable needed by your OS to run locally.  
 
-Create the bin folder and rename the linux version of the ink file `ink.linux` as we do in the command example below, but also keep an `ink.osx` OR `an ink.windows` file in there for local use if you're in either OSX or Windows respectively.
+Create the bin folder and rename the Linux version of the ink file `ink.linux` as we do in the command example below, but also keep an `ink.osx` OR `an ink.windows` file in there for local use if you're in either OSX or Windows respectively.
 
 We need to extract the downloaded package and change its folder name.
 These actions both differ depending on your operating system, yet are usually fairly simple. 
@@ -154,6 +154,13 @@ Provided you've still got your terminal window open in the InkPaper directory, a
 
 Please note that the official documentation merely uses `ink preview` and `ink build` as the commands, but as we've moved and renamed the file, we also have to change the command slightly to reflect this, as seen above.
 
+The Windows commands corresponding with the above, can be found here:
+
+```
+call bin\ink.windows build
+call bin\ink.windows preview
+```
+
 Open your web browser of choice and enter `http://localhost:8000/` in the address bar and there you go.
 
 Quite honestly - could it get any easier or more elegant?
@@ -209,7 +216,7 @@ Markdown Format's Body
 
 Notice that the content is written in markdown below the three dashes and that you only need one set of these, as opposed to the more commonplace practice of placing the article information between two sets of dashes.
 
-As long as you're working on the page, the `./bin/ink.linux preview` command we entered in terminal earlier, will automatically watch and rebuild the source directory, so you can see your changes locally and instantly, by simply refreshing the browser (provided that you keep the terminal window/command prompt open and the service running).
+As long as you're working on the page, the modified `ink preview` command we entered in terminal/command prompt earlier, will automatically watch and rebuild the source directory, so you can see your changes locally and instantly, by simply refreshing the browser (provided that you keep the terminal window/command prompt open and the service running).
 
 For further information about ink commands, customizing InkPaper and choosing or modifying a theme, see the [InkPaper getting started webpage](http://www.inkpaper.io/blog/post/2015/03/01/ink-blog-tool-en.html).
 
