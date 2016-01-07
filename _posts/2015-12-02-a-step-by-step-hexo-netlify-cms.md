@@ -15,7 +15,7 @@ Even if you're new to the world of Static Site Generators, chances are you've he
 
 Hexo prides itself on being not only fast and simple, but also easy to write, while having plenty of extensibility. Hexo is powered by the node.js framework and in this guide we'll look at how to set up your very own *Hexo Netlify CMS Template*, from getting a clone online, to connecting it to Netlify and beyond.
 
-We previously presented similar articles with the Jekyll version of our template [here](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-jekyll-netlify-cms) and the Pelican version of our template [here](https://www.netlify.com/blog/2015/11/27/a-step-by-step-guide-pelican-netlify-cms)
+We previously presented similar articles with the Jekyll version of our template [here](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-jekyll-netlify-cms) and the Pelican version of our template [here](https://www.netlify.com/blog/2015/11/27/a-step-by-step-guide-pelican-netlify-cms).
 
 If you're not interested in the template, but soley in setting up Hexo with continous deployment on Netlify, please see [this informative article](https://www.netlify.com/blog/2015/10/26/a-step-by-step-guide-hexo-on-netlify) by Mr. Aaron Autrand and otherwise continue reading.
 
@@ -68,7 +68,7 @@ Substitute *my-site-folder* with your location and the address with the address 
 Note that you don't need to create a folder for the project, as it comes inside a folder structure already. 
 
 #### 3. Setup the Netlify CMS server
-To start the Netlify CMS server, we need to add users by running the following command for each user, we wish to add to the system (you will be asked for an email, a name and a password):
+To start the Netlify CMS server, locate the root of your pelican site (cd my-site-location) and then add users by running the following command for each user, we wish to add to the system (you will be asked for an email, a name and a password):
 
 ```
 netlify-git-api users add
