@@ -42,17 +42,11 @@ Next, cd to the location where you want the site locally (cd my-site-location) a
 nanoc create-site my-site-name
 ```
 
-Simply substitute my-site-name with the name of your site - we used the name nanoc-demo for our demonstration.
+Simply substitute my-site-name with the name of your site. We used the name nanoc-demo for our demonstration.
 
 
 #### 2. Setup gemfile
 Before you compile the site or do anything, make sure you have Bundler installed! Using the command  `bundler -v` will let you know what version (if any) is installed.
-
-If you don't, it can be easily installed from terminal using this command:
-
-```
-gem install bundler
-```
 
 Let Bundler initialize the site with the following command in terminal, from the root of your Nanoc site folder (cd my-nanoc-site):
 
