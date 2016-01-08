@@ -197,18 +197,33 @@ We've just changed the sidebar links to link to Netlify, Nanoc and GitHub, but f
 
 If you want more information about layouts in Nanoc, head over to Nanoc's excellent documentation on layouts and partials [here](http://nanoc.ws/doc/items-and-layouts/#layouts).
 
-#### 8. Compile the Site
+#### 8. Setup gemfile
 Before you compile the site, make sure you have Bundler installed. If you don't, it's `gem install bundler` in a terminal window from the root of your site.
 
-It's quite possible to compile without bundler, using e.g. the `nanoc compile` or even the short hand notation, simpy `nanoc` and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do.
+Let bundler initialize the site with the following command in terminal:
+
+```
+bundle init
+```
+
+This will create a gemile, in which we let bundler know which gems and what versions of these gems we wish to install with our Nanoc site.
+
+To install the nanoc gem as well, we need to add it to our gemfile, so open the gemfile found in the root of your nanoc site and add the following line:
+
+```
+gem 'nanoc', '~> 4.0'
+```
+
+This will ensure that nanoc version 4.0 is installed.
+
+#### 9. Compile the Site
+It's quite possible to compile without bundler, using e.g. the `nanoc compile` or even the short hand notation, simpy `nanoc` and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do, following up on the last step.
 
 From terminal, from your site root, use this command:
 
 ```
 bundle exec nanoc
 ```
-
-#### 9. FINITO?
 
 ### Setup Bundler with Ruby and Gemfile
 <Instructions on setting up Bundler with Ruby and a gemfile - or later inside step by step?>
