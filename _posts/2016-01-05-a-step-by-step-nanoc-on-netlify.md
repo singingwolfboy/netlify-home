@@ -37,7 +37,7 @@ Installing gems:
 ```
 gem install nanoc
 gem install adsf
-gem install kramdown
+gem install kramdown <OR NOT? IS IN GEM FILE!>
 ```
 
 Optional: check if Nanoc is installed properly and if so, what version by using the `--version` flag like this:
@@ -212,9 +212,10 @@ To install the nanoc gem as well, we need to add it to our gemfile, so open the 
 
 ```
 gem 'nanoc', '~> 4.0'
+gem 'kramdown'
 ```
 
-This will ensure that nanoc version 4.0 is installed.
+This will ensure that nanoc version 4.0 is installed along with kramdown.
 
 #### 9. Compile the Site
 It's quite possible to compile without bundler, using e.g. the `nanoc compile` or even the short hand notation, simpy `nanoc` and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do, following up on the last step.
