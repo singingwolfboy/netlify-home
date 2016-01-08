@@ -24,7 +24,9 @@ Finally, if you want to try check out our small Nanoc tutorial, before linking u
 
 ***Please note that this guide assumes you have Ruby 2.1 and up, RubyGems and Bundler installed !!!***
 
-For information about installing and handling Ruby with Bundler please see [this documentation](http://bundler.io/).
+For information about installing and handling Ruby with Bundler please see [the official documentation](http://bundler.io/).
+
+For excellent guides that'll help you set up Ruby with bundler, whichever way you prefer and on whichever OS you might be on, try the excellent guides on [Go Rails website](https://gorails.com/setup/).
 
 ### Setup Nanoc
 Instead of installing Nanoc gem by gem, we'll setup the site with bundler and a gemfile from the beginning, to specify what gems we want to install, all in one file.
@@ -60,7 +62,7 @@ Let bundler initialize the site with the following command in terminal, from the
 bundle init
 ```
 
-This will create a gemile, in which we let bundler know which gems and what versions of these gems we wish to install with our Nanoc site.
+This will create a gemfile, in which we let bundler know which gems and what versions of these gems we wish to install with our Nanoc site.
 
 To install the nanoc gem as well, we need to add it to our gemfile, so open the gemfile found in the root of your nanoc site and add the following lines:
 
