@@ -46,9 +46,9 @@ Simply substitute my-site-name with the name of your site - we used the name nan
 
 
 #### 2. Setup gemfile
-Before you compile the site or do anything, make sure you have Bundler installed!
-Open up a terminal window, locate your site
-If you don't, it's `gem install bundler` in a terminal window from the root of your site.
+Before you compile the site or do anything, make sure you have Bundler installed! Using the command  `bundler -v` will let you know what version (if any) is installed.
+
+If you don't, it can be easily installed from terminal using `gem install bundler`
 
 Let bundler initialize the site with the following command in terminal, from the root of your Nanoc site folder (cd my-nanoc-site):
 
