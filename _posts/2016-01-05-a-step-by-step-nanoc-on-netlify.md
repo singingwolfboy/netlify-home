@@ -147,12 +147,56 @@ I wonder if the title above will render in the proper size and font.
 I wonder if the title above will render in the proper size and font.
 ```
 
-As you can see we're simply adding sample text to check the format and layouts of the site, as the next stop is - you guessed it, we'll fiddle with the layout..
+As you can see we're simply adding sample text to check the format and layouts of the site, as the next stop is - you guessed it, we'll fiddle with the layout.
 
 #### 6. Edit Layout
 We'll follow the advice left for us in the original landing page and change the layout from the bland default color scheme and fonts to something new and refreshing.
 
-Open up the *default.html* file in the layouts folder
+The *default.html* file in the layouts folder is where you can set up the layout of your page, using HTML and eRuby instructions. Nanoc has build in support for Haml and Mustache as well and it's possible to add support for other layout engines rather easily using filters (as we did with markdown in the Rules file earlier).
+
+```
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Brand New Nanoc Site - <%= @item[:title] %></title>
+    <link rel="stylesheet" href="/stylesheet.css">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
+  </head>
+  <body>
+    <div id="main">
+      <%= yield %>
+    </div>
+    <div id="sidebar">
+      <h2>Netlify</h2>
+      <ul>
+        <li><a href="https://www.netlify.com/">Home</a></li>
+        <li><a href="https://www.netlify.com/documentation/">Documentation</a></li>
+        <li><a href="https://www.netlify.com/Blog/">Blog</a></li>
+      </ul>
+      <h2>Nanoc</h2>
+      <ul>
+        <li><a href="http://nanoc.ws//">Home</a></li>
+        <li><a href="http://nanoc.ws/doc/">Documentation</a></li>
+        <li><a href="http://nanoc.ws/community/">Community</a></li>
+      </ul>
+      <h2>GitHub</h2>
+      <ul>
+        <li><a href="https://github.com/">Home</a></li>
+        <li><a href="https://help.github.com/">Help</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
+```
+
+You can either leave the *default.html* alone and check out the basic site (which comes with additional links and documentaion) or you try something out yourselves or use our slightly modified *default.html* content as seen above.
+
+We've just changed the sidebar links to link to Netlify, Nanoc and GitHub, but feel free yo try out some eRuby or one of the other layout languages.
+
+If you want more information about layouts in Nanoc, head over to Nanoc's excellent documentation on layouts and partials [here](http://nanoc.ws/doc/items-and-layouts/#layouts).
 
 #### 7. Add Content
 
