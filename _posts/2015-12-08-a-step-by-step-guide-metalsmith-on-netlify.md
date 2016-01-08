@@ -430,7 +430,7 @@ For our blog template, we create a *blog.hbt* file in the templates folder and p
 
 Remember the collections we made, aptly named pages and articles? 
 
-Well, as mentioned it's easy to access these in the template and we're doing this with the `{{#each collections.articles}}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the files in the articles collection.
+Well, as mentioned it's easy to access these in the template and we're doing this with the `{%raw %}{{#each collections.articles}}{% endraw %}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the files in the articles collection.
 
 #### 15. Build It
 If you made it this far, you should already have an idea of how Metalsmith works internally and where to start if you want to use Metalsmith in continuous deployment on Netlify, with GitHub serving the files.
