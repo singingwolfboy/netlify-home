@@ -187,3 +187,59 @@ git push -u origin master
 All your files will be copied by git to your online repository. Once it's finished, take a look at the repository online to check if everything went according to plan.
 
 Now we're ready to connect with Netlify.
+
+### Connecting to Netlify
+<a id="netlifystart"></a>
+We want to connect our GitHub repository with Netlify, so that Netlify can build the site, whenever we push changes to our online repository - this is what's meant with continuous deployment - as soon as you've pushed changes to GitHub, Netlify will rebuild your site, to reflect these changes.
+
+If you haven't got a [Netlify account](https://www.netlify.com/) already, head over and make one - it's completely free of charge.
+
+#### Step 1: Add Your New Site
+Click the **"New Site"** button to get started.
+
+![Netlify New Site](/uploads/newsitebut.png)
+
+#### Step 2: Link to Your GitHub
+Next you'll be brought to this screen, where you can choose between manual deploy or linking to GitHub or Bitbucket - we'll link with GitHub for this demonstration:
+![Link to GitHub](/uploads/createsite.png)
+When you push to GitHub, Netlify does all the work. No more wasting time on manual deploying of updates or changes!
+
+To link Netlify with GitHub click the button **“Link to GitHub”**.
+
+#### Step 3: Authorize Netlify
+You can skip this step or rather it will be skipped automatically, if you already have an account with Netlify set up to automatically login!
+
+If not, you'll be asked to provide your GitHub login details:
+![GitHub Login](/uploads/githublogin.png)
+
+We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
+![Authorize Netlify](/uploads/authorization.png)
+
+Like stated in the image above on the right, Netlify doesn’t store your GitHub access token on our servers! 
+
+If you’d like to know more about the permissions Netlify requests and why, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
+
+#### Step 4: Choose Your Repo
+Once you've connected Netlify with GitHub, you will be shown a list of your GitHub repositories, as seen below.
+<INSERT PIC - Choose NANOC Repo>
+For the purpose of this tutorial we'll select the *“nanoc-demo”* repo we just pushed to GitHub. 
+
+#### Step 5: Configure Your Settings
+Fill in the configuration settings as seen in the screen shot below:
+<INSERT PIC - Configure NANOC Build>
+
+Click the *'Save'* button and watch the magic unfold.
+
+#### Step 6: Build Your Site
+<INSERT PIC - NANOC building>
+The first time, assuming you haven't added copious amounts of content, Netlify will build your Nanoc site very quickly. A console will let you know what's happening along the way. If you don't want to wait, simply do something else and you can always return and check the log file later, since Netlify will keep the log of each build.
+
+#### Step 7: The End
+That's all there is to it.
+
+Once Netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
+<INSERT PIC - NANOC done>
+
+You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
+
+You can see our demo site [here](http://nanoc-demo.netlify.com/) and the GitHub repository for our demo site [here](https://github.com/JimmiLee/nanoc-demo).
