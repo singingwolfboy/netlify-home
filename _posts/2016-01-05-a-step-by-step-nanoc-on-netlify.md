@@ -27,7 +27,6 @@ Finally, if you want to try out our small Nanoc tutorial, before linking up with
 For information about installing and handling Ruby with Bundler please see [this documentation](http://bundler.io/).
 
 ### Setup Nanoc
-<Bla. bla bla - we will do this and that>
 Instead of installing Nanoc gem by gem, we'll setup the site with bundler and a gemfile, to specify what gems we want to install, all in one place.
 
 #### 1. Setup gemfile
@@ -66,7 +65,7 @@ It will build the site, bar any errors and let you know how quick it all went do
 If you want to see how pretty it is, run this command:
 
 ```
-nanoc view
+bundle exec nanoc view
 ```
 
 This will open the site up for view in your local browser [here](http://localhost:3000/).
@@ -78,6 +77,7 @@ nanoc --version
 ```
 
 #### 3. Check the nanoc.yaml file
+The `nanoc.yaml` file is a good place to see how powerful the Nanoc static site generator is. It's well documented and full of various settings and other goodies. I recommend reading it through, though we won't change anything in it for this particular guide (the default settings will suffice).
 
 #### 4. Edit Rules file
 For our kramdown gem to work properly, we need to let Nanoc know we changed the default language from HTML to markdown. To do this we need to open the Rules file found in the root of your Nanoc site and then we need to edit the compilation rules found herein, to take markdown files.
