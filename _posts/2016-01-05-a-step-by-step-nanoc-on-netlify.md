@@ -138,7 +138,7 @@ end
 layout '/**/*', :erb
 ```
 
-If you're using kramdown like us, simply used the above in your Rules file and if you're using HTML, there's nothing to edit (as that's the default). However, if you choose a third option, check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/).
+If you're using kramdown like us, simply used the above in your `Rules` file and if you're using HTML, there's nothing to edit (as that's the default). However, if you choose a third option, check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/).
 
 #### 6. Under the Hood
 Let's take a look at what's under the hood of this Nanoc site. First take a look at the folder structure, as depicted in the illustration below, the files and directories created are as follows:
@@ -153,7 +153,7 @@ The content we're creating goes in the **content folder** and here you'll find t
 
 Then there's the **lib folder**, which contains custom Ruby code.
 
-Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assests will be processed.
+Of the files, its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assets will be processed.
 
 #### 7. Edit Landing Page
 To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and change its extension to reflect that we're using markdown instead of HTML and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. Take note that this file only contains the content of the page and none of the layout.
