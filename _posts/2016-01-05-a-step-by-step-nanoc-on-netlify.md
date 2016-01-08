@@ -106,8 +106,6 @@ Let's take a look at what's under the hood of this Nanoc site. First take a look
 
 ![nanoc_tree.png](/uploads/nanoc_tree.png)
 
-<UPDATE PIC - Needs to be .md files and not HTML!>
-
 In the file and folder tree above, there are some distinct folders and to create content and customize the layout, it's important to know what goes where and why!
 
 In Nanoc we use the term layouts instead of templates and these all go in the **layouts folder**.
@@ -119,7 +117,37 @@ Then there's the **lib folder**, which contains custom Ruby code.
 Of the files its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assests will be processed.
 
 #### 5. Edit Landing Page
-To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and change its extension to reflect that we're using markdown instead of html and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. Take note that this file only contains the content of the page and none of the layout.
+To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and change its extension to reflect that we're using markdown instead of HTML and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. Take note that this file only contains the content of the page and none of the layout.
+
+I'll fill the index.md file in as seen below and I suggest you do something similar. The tile in YAML front matter is important, but the text outside the YAML front matter you can fill in as you want:
+
+```
+---
+title: Nanoc Demo Site
+---
+
+# Nanoc on Netlify
+This page is mainly created to demonstrate a basic Nanoc site, with assets hosted on GitHub using Netlify to deploy in continuous deployment.
+
+We'll run some font and layout tests...
+
+**This font is Bold.**
+
+*This font is Italic.*
+
+***This font is Bold and Italic.***
+
+## Headline Title Two
+I wonder if the title above will render in the proper size and font.
+
+### Headline Title Three
+I wonder if the title above will render in the proper size and font.
+
+#### Headline Title Four
+I wonder if the title above will render in the proper size and font.
+```
+
+As you can see we're simply adding sample text to check the format and layouts of the site, as the next stop is - you guessed it, we'll fiddle with the layout..
 
 #### 6. Edit Layout
 We'll follow the advice left for us in the original landing page and change the layout from the bland default color scheme and fonts to something new and refreshing.
