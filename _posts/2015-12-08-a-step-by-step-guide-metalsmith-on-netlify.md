@@ -84,9 +84,24 @@ The first package we need is Metalsmith itself, so go ahead and enter the follow
 npm install metalsmith --save
 ```
 
+#### 5. Create .gitignore file
+If you check your folder you'll notice that npm has created a `node_modules` folder and filled it up with packages.
+Since this is only needed locally and since the `build` folder is also only used locally, we want to avoid pushing them to GitHub, simply to save space and keep them out of where they don't belong.
+
+This it where the `.gitignore` file comes into play. Create a file in the root of the site named `.gitignore` and fille it in with the following:
+
+```
+# To avoid uploading the node_modules folder, filled with node.js packages:
+node_modules/
+
+# To avoid uploading the local build folder:
+build/
+```
+
+Save it.
 So far so good, let's add some plugins.
 
-#### 5. Adding Packages
+#### 6. Adding Packages
 Metalsmith itself needs a few dependency packages to run (no need to worry, as it will install these by itself), but apart from that what packages or in Metalsmith terms, what plugins do we want or need?
 Well, I'm getting used to Markdown and statistically speaking so is the average reader of this article, so I'll add a plugin that will enable Markdown to the list with the following command in terminal:
 
@@ -98,7 +113,7 @@ As you can see, it's easy to install plugins and even Metalsmith itself is a plu
 
 Using the `npm ls` command it's possible to see the dependency tree.
 
-#### 6. Create build file
+#### 7. Create build file
 To build our site with these plugins, we need to define an output folder and run a script. We're using a simple javascript for this and we've aptly named this script *build.js* (since every time we run it, it will build the site).
 
 Create the *build.js* file and fill it in as seen below:
@@ -133,7 +148,7 @@ node build
 
 If everything went according to plan, there should be a new file in the build directory, molded according to our plugins. It's very simple and not much is happening there yet of course, but we'll get to that. This is merely to see if your installation so far is working.
 
-#### 7. Add more Plugins
+#### 8. Add more Plugins
 Well, what else do we need?  
 There's a whole list of plugins [here](http://www.metalsmith.io/#the-plugins) and it's even possible to write them yourself, should you feel inclined to do so, but for our basic tutorial we won't get into this.  
 
@@ -165,7 +180,7 @@ The above script follows the norm set before, except that we need to tell the te
 
 You might want to check the changes made to the dependency tree by running the `npm ls` command again.
 
-#### 8. Create a Simple Template
+#### 9. Create a Simple Template
 The next thing we want to do is create one simple template in the templates directory.
 We create the *home.hbt* file with the following content in the templates folder:
 
@@ -202,7 +217,7 @@ To run the build script and check out the changes, first save and next run the b
 
 Check the output in the build directory and see if the template HTML created above was added properly.
 
-#### 9. Folder Structure
+#### 10. Folder Structure
 To discern between the various content we're going to have, we will set up a folder for each type of content in the content folder. E.g. we want one type for displaying pages and one of these pages will be our about page, so we'll create a `src/content/pages` folder with a new file in it named *about.md* with the following content:
 
 ```
@@ -237,7 +252,7 @@ To add the partials we simply insert the line `{% raw %}{{> partial-name }}{% en
 
 Let's move on to creating these partials.
 
-#### 10. Template Partials
+#### 11. Template Partials
 Template partials are useful for the elements that are part of every page, such as a footer and a header for example or perhaps your logo. In Metalsmith how these are handled comes down to your templating engine and in our case for this tutorial that means it comes down to the handlebars templating engine. 
 
 First we create the partials files *header.hbt* and *footer.hbt* in the `templates/partials` directory.
@@ -297,12 +312,12 @@ Notice the stylesheet link in our header.
 
 To make the site we're working on a little less bleak, we're going to add a stylesheet.
 
-#### 11. Add a Stylesheet
+#### 12. Add a Stylesheet
 We're going to simply add a stylesheet in the `src/styles` folder named *main.css* as referenced in our header. 
 
 You can use any old external css stylesheet or create a new one. Once you run build, metalsmith will copy this file over, duplicating the file structure and any other static assets you may have added in this simple manner.
 
-#### 12. Collections and Link Plugins
+#### 13. Collections and Link Plugins
 To illustrate the power and flexibility of metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our articles. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
 
 ```
@@ -362,7 +377,7 @@ permalink: false
 
 We'll go ahead and add this YAML line to each of our articles.
 
-#### 13. Creating Content
+#### 14. Creating Content
 To see the difference between our two collections, the pages and the articles, we also need to create the article template, so go ahead and create the *article.hbt* file in the templates directory.
 
 The *article.hbt* template file:
@@ -394,7 +409,7 @@ permalink: false
 
 It's pretty self explanatory, as we've defined ourselves what YAML frontmatter makes sense through our implementation of Metalsmith. It's pretty much the same as the YAML we put with our about page, except for the added date and the permalink setting to false. 
 
-#### 14. Create Articles Content Page
+#### 15. Create Articles Content Page
 We also need a page which can show our articles sorted by date in reverse.
 We'll create a *blog.md* file in the src/content/pages folder and put a bit of YAML in it:
 
@@ -432,7 +447,7 @@ Remember the collections we made, aptly named pages and articles?
 
 Well, as mentioned it's easy to access these in the template and we're doing this with the `{%raw %}{{#each collections.articles}}{% endraw %}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the files in the articles collection.
 
-#### 15. Build It
+#### 16. Build It
 If you made it this far, you should already have an idea of how Metalsmith works internally and where to start if you want to use Metalsmith in continuous deployment on Netlify, with GitHub serving the files.
 
 Run the `node build` command again and see if the files generate properly.  If they do and you're happy with your tree (`npm ls`), it's time to check out GitHub.
