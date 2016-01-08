@@ -271,8 +271,22 @@ We're naming our site nanoc-demo and we'll skip adding files to the repository u
 
 As you'll see once you create the repository, GitHub provides very good documentation on what to do next.
 
+#### 2. Create .gitignore file
+In the root of your Nanoc site, create a .gitignore file and fill it in with the text below:
 
-#### 2. Initialize, Add & Commit
+```
+# Default location for output defined in config.yaml 
+output/
+# Temporary file directory 
+tmp/
+# Crash Log 
+crash.log
+```
+
+Basically there's no need for us to push the output content online and the same goes for the temporary file directory and the crash.log file.
+Adding them to the .gitignore file makes git ignore them and leave them behind on your local machine.
+
+#### 3. Initialize, Add & Commit
 We'll initialize the local directory as a git repository with the following command:
 Before we push (copy the files to our new online repository) the files online, we need to prep our local site and you need to have git installed for this.
 
