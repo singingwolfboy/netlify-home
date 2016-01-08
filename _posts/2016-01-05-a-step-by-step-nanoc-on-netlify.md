@@ -26,9 +26,6 @@ Finally, if you want to try out our small Nanoc tutorial, before linking up with
 
 For information about installing and handling Ruby with Bundler please see [this documentation](http://bundler.io/).
 
-### Setup Bundler with Ruby and Gemfile
-<Instructions on setting up Bundler with Ruby and a gemfile - or later inside step by step?>
-
 ### Setup Nanoc
 <Bla. bla bla - we will do this and that>
 
@@ -198,9 +195,20 @@ We've just changed the sidebar links to link to Netlify, Nanoc and GitHub, but f
 
 If you want more information about layouts in Nanoc, head over to Nanoc's excellent documentation on layouts and partials [here](http://nanoc.ws/doc/items-and-layouts/#layouts).
 
-#### 7. Add Content
+#### X. Compile the Site
+Before you compile the site, make sure you have Bundler installed. If you don't, it's `gem install bundler` in a terminal window from the root of your site.
 
-#### 8. Finish Setup
+It's quite possible to compile without bundler, using e.g. the `nanoc compile` or even the short hand notation, simpy `nanoc` and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do.
+
+From terminal, from your site root, use this command:
+
+```
+bundle exec nanoc
+```
+
+### Setup Bundler with Ruby and Gemfile
+<Instructions on setting up Bundler with Ruby and a gemfile - or later inside step by step?>
+
 
 
 We're ready to setup the local site with an online GitHub repository.
