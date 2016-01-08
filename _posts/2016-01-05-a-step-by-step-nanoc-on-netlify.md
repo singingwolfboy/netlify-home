@@ -379,7 +379,7 @@ The first time, assuming you haven't added copious amounts of content, Netlify w
 That's all there is to it.
 
 Once Netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
-<INSERT PIC - NANOC done>
+![nanoc_done.png](/uploads/nanoc_done.png)
 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
