@@ -98,16 +98,18 @@ nanoc --version
 ```
 
 #### 4. Check the nanoc.yaml file
-The `nanoc.yaml` file is a good place to see how powerful the Nanoc static site generator is. It's well documented and full of various settings and other goodies. I recommend reading it through, though we won't change anything in it for this particular guide (the default settings will suffice).
+The `nanoc.yaml` file is a good place to see how powerful the Nanoc static site generator is. It's well documented with comments and full of various settings and other goodies. I recommend reading it through, though we won't change anything in it for this particular guide (the default settings will suffice).
 
 #### 5. Edit Rules file
-For our kramdown gem to work properly, we need to let Nanoc know we changed the default language from HTML to markdown. To do this we need to open the Rules file found in the root of your Nanoc site and then we need to edit the compilation rules found herein, to take markdown files.
+For our kramdown gem to work properly, we need to let Nanoc know we changed the default language from HTML to markdown. To do this we need to open the `Rules` file found in the root of your Nanoc site and then we need to edit the compilation rules found herein, to take markdown files.
 
-Did that sound complicated?  Don't worry, cause it's really not! Editing compile and route rules in a Rules file is actually quite easy, but on top of this, the people behind Nanoc have anticipated our switch from HTML to Markdown and thus in our Rules file we find the compile rule for Markdown using the kramdown filter  already written and just commented out. 
+Did that sound complicated?  Don't worry, cause it's really not! 
 
-Normally we would also need to set up a route rule for the .md or markdown files, but again the oracles behind Nanoc have anticipated my move and the markdown files are already added to one of the existing route rules.
+Editing compile and route rules in a `Rules` file is actually quite easy, but on top of this, the people behind Nanoc have anticipated our switch from HTML to Markdown and thus in our `Rules` file we find that the compile rule for Markdown using the kramdown filter, has already been written, it's just commented out. 
 
-The edited Rules file we ended up with, after the comments have been taken out:
+Normally we would also need to set up a route rule for the .md or markdown files, but again the fortune tellers behind Nanoc have anticipated our move and the markdown files are already added to one of the existing route rules.
+
+The edited `Rules` file we ended up with, after the comments have been taken out:
 
 ```
 #!/usr/bin/env ruby
@@ -136,21 +138,7 @@ end
 layout '/**/*', :erb
 ```
 
-If you're using kramdown like us, simply used the above in your Rules file and if you're using HTML, there's nothing to edit. However, if you choose a third option, check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/)
-
-#### 5. Create, Compile & View Nanoc Site
-To create your Nanoc site, use the following code in terminal (substitute my-site-name with the name of your choice):
-
-```
-nanoc create-site my-site-name
-cd my-site-name
-nanoc compile
-nanoc view 
-```
-
-The commands above will create your Nanoc site, enter your site folder, build your site and offer it up for view at [http://localhost:3000/](http://localhost:3000/), in that order from the top and down.
-
-As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
+If you're using kramdown like us, simply used the above in your Rules file and if you're using HTML, there's nothing to edit (as that's the default). However, if you choose a third option, check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/).
 
 #### 6. Under the Hood
 Let's take a look at what's under the hood of this Nanoc site. First take a look at the folder structure, as depicted in the illustration below, the files and directories created are as follows:
@@ -251,7 +239,19 @@ If you want more information about layouts in Nanoc, head over to Nanoc's excell
 
 #### 9. Final Build
 
+#### 5. Create, Compile & View Nanoc Site
+To create your Nanoc site, use the following code in terminal (substitute my-site-name with the name of your choice):
 
+```
+nanoc create-site my-site-name
+cd my-site-name
+nanoc compile
+nanoc view 
+```
+
+The commands above will create your Nanoc site, enter your site folder, build your site and offer it up for view at [http://localhost:3000/](http://localhost:3000/), in that order from the top and down.
+
+As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
 
 We're ready to setup the local site with an online GitHub repository.
 
