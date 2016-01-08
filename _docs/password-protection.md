@@ -1,7 +1,8 @@
 ---
-"date": 2015-07-21
-"title": "Password"
-"position": 55
+cmsUserSlug: password
+date: 2015-07-21T00:00:00.000Z
+title: Password
+position: 55
 ---
 
 ## Password Protecting Sites
@@ -14,8 +15,8 @@ If you need multiple passwords for a site, or need to protect just part of your 
 
 ## Authenticating with 3rd party providers
 
-If you're using netlify to host materials for your intranet, like sales manuals for your global sales team, private developer documentation, HR guides and similar sensitive material, you might want fine grained access control based on 3rd party authentication providers like [Stormpath](https://stormpath.com) or your own authentication API.
+If you're using netlify to host materials for your intranet, like sales manuals for your global sales team, private developer documentation, HR guides and similar sensitive material, you might want fine-grained access control based on 3rd party authentication providers like [Stormpath](https://stormpath.com) or your own authentication API.
 
-We can work with you to make this possible and integrated directly with our CDN servers, to let you control fine grained access controls for individual users, with all the performance of a CDN hosted static website.
+We can work with you to make this possible and integrated directly with our CDN servers, to let you control fine grained access controls for individual users with all the performance of a CDN hosted static website.
 
 Please [get in touch](/contact) for more information about authentication on enterprise plans.
