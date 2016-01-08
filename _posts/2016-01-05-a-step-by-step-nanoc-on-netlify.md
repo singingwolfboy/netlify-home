@@ -151,14 +151,16 @@ In Nanoc we use the term layouts instead of templates and these all go in the **
 
 The content we're creating goes in the **content folder** and here you'll find the landing page and a stylesheet, ready for editing.
 
-Then there's the **lib folder**, which contains custom Ruby code.
+Then there's the **lib folder**, which contains custom Ruby code and the **output folder** to which the static site will be written.
 
 Of the files, its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assets will be processed.
 
 #### 7. Edit Landing Page
 To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and change its extension to reflect that we're using markdown instead of HTML and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. Take note that this file only contains the content of the page and none of the layout.
 
-I'll fill the index.md file in as seen below and I suggest you do something similar. The tile in YAML front matter is important, but the text outside the YAML front matter you can fill in as you want:
+I'll fill the *index.md* file in as seen below and I suggest you do something similar. The title in the YAML front matter is important, but the text outside the YAML front matter you can fill in as you want to.
+
+Here's what we came up with:
 
 ```
 ---
@@ -189,9 +191,9 @@ I wonder if the title above will render in the proper size and font.
 As you can see we're simply adding sample text to check the format and layouts of the site, as the next stop is - you guessed it, we'll fiddle with the layout.
 
 #### 8. Edit Layout
-We'll follow the advice left for us in the original landing page and change the layout from the bland default color scheme and fonts to something new and refreshing.
+We'll follow the advice left for us in the original landing page and change the layout.
 
-The *default.html* file in the layouts folder is where you can set up the layout of your page, using HTML and eRuby instructions. Nanoc has build in support for Haml and Mustache as well and it's possible to add support for other layout engines rather easily using filters (as we did with markdown in the Rules file earlier).
+The *default.html* file in the layouts folder is where you can set up the layout of your page, using HTML and eRuby instructions. Nanoc has build in support for Haml and Mustache as well and it's possible to add support for other layout engines rather easily using filters (as we did with markdown in the `Rules` file earlier).
 
 ```
 <!DOCTYPE HTML>
@@ -238,18 +240,18 @@ We've just changed the sidebar links to link to Netlify, Nanoc and GitHub, but f
 If you want more information about layouts in Nanoc, head over to Nanoc's excellent documentation on layouts and partials [here](http://nanoc.ws/doc/items-and-layouts/#layouts).
 
 #### 9. Final Build
+To test that our changes were made properly, we'll do a final build and a view, before setting up GitHub.
 
-#### 5. Create, Compile & View Nanoc Site
-To create your Nanoc site, use the following code in terminal (substitute my-site-name with the name of your choice):
+To compile and then view the site, we'll use these two commands in terminal:
 
 ```
-nanoc create-site my-site-name
-cd my-site-name
-nanoc compile
-nanoc view 
+bundle exec nanoc
+bundle exec nanoc view 
 ```
 
-The commands above will create your Nanoc site, enter your site folder, build your site and offer it up for view at [http://localhost:3000/](http://localhost:3000/), in that order from the top and down.
+The commands will build your site and offer it up for view at [http://localhost:3000/](http://localhost:3000/).
+
+Take a look and see if the changes worked as expected.
 
 As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
 
