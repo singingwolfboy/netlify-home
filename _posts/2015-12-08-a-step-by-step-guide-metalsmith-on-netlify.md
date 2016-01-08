@@ -310,9 +310,7 @@ npm install metalsmith-collections --save
 npm install metalsmith-permalinks --save
 ```
 
-Apart from simply adding these two plugins to the build file, we also have to define the two collections we want to use, by giving them a pattern as seen below.
-
-The full updated build.js file:
+Apart from simply adding these two plugins to the build file, we also have to define the two collections we want to use, by giving them a pattern as seen below in our full updated build.js file:
 
 ```
 var Metalsmith = require('metalsmith'), 
