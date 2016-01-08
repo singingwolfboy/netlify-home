@@ -301,7 +301,7 @@ git commit -m 'First commit'
 
 The above initializes the site as a git repository with `git init`, then adds all the files in the directory to the repository and stages them for the first commit with `git add .` and finally it commits all these files with the last command `git commit -m 'First commit'`.
 
-#### 3. Get & Add Remote URL
+#### 4. Get & Add Remote URL
 To let our local git repository know where to push these files to, we need to give it the remote URL of our remote repository on GitHub.
 This URL can be found under the settings and you need to use it with the following command in terminal (substitute My-Repository-URL with your actual URL):
 
@@ -315,7 +315,7 @@ Optional: To check which online repository you're working with, you can use the 
 git remote -v
 ```
 
-#### 4. Push to GitHub.
+#### 5. Push to GitHub.
 To do the actual moving after staging and committing, we'll need the push command. From the root of your Nanoc site enter it like this in terminal:
 
 ```
