@@ -408,6 +408,7 @@ template: blog.hbt
 For our blog template, we create a *blog.hbt* file in the templates folder and put the following content in it:
 
 ```
+{%raw %}
 {{> header}}
 
 <h2>{{title}}</h2>
@@ -424,6 +425,7 @@ For our blog template, we create a *blog.hbt* file in the templates folder and p
 </article>
 
 {{> footer}}
+{% endraw %}
 ```
 
 Remember the collections we made, aptly named pages and articles? 
