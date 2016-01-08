@@ -45,7 +45,7 @@ nanoc create-site my-site-name
 Simply substitute my-site-name with the name of your site - we used the name nanoc-demo for our demonstration.
 
 
-#### 1. Setup gemfile
+#### 2. Setup gemfile
 Before you compile the site or do anything, make sure you have Bundler installed!
 Open up a terminal window, locate your site
 If you don't, it's `gem install bundler` in a terminal window from the root of your site.
@@ -67,6 +67,12 @@ gem 'adsf'
 ```
 
 This will ensure that nanoc version 4.0 is installed along with kramdown and finally adsf, which we need to view our site live (it's basically to enable the `bundle exec nanoc view` command).
+
+Once you've saved the gemfile, we need to run bundle install to install the gems in the file like this:
+
+```
+bundle install
+```
 
 #### 2. Compile the Site
 It's quite possible to compile without bundler, using e.g. the `nanoc compile` or even the short hand notation, simpy `nanoc` and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do, following up on the last step.
