@@ -310,7 +310,7 @@ npm install metalsmith-collections --save
 npm install metalsmith-permalinks --save
 ```
 
-Apart from simply adding these two plugins to the build file, we also have to define the two collections we want to use, by giving them a pattern as seen below in our full updated build.js file:
+Apart from simply adding these two plugins to the build file, we also have to define the two collections we want to use, by giving them a pattern as seen below in our full updated *build.js* file:
 
 ```
 var Metalsmith = require('metalsmith'), 
@@ -368,6 +368,7 @@ To see the difference between our two collections, the pages and the articles, w
 The *article.hbt* template file:
 
 ```
+{%raw %}
 {{> header}}
 
 <h2>{{title}}</h2>
@@ -377,6 +378,7 @@ The *article.hbt* template file:
 </article>
 
 {{> footer}}
+{%endraw %}
 ```
 
 Next, we need to create at least one article, but preferably a few more than that, to illustrate how the files are sorted. Each of the articles should have the following YAML frontmatter:
