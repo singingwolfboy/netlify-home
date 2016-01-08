@@ -54,7 +54,7 @@ Let Bundler initialize the site with the following command in terminal, from the
 bundle init
 ```
 
-This will create a gemile, in which we let Bundler know which gems and what versions of these gems we wish to install with our Nanoc site.
+This will create a gemfile, in which we let Bundler know which gems and what versions of these gems we wish to install with our Nanoc site.
 
 To install the Nanoc gem as well, we need to add it to our gemfile, so open the gemfile found in the root of your Nanoc site and add the following lines:
 
@@ -66,22 +66,21 @@ gem 'adsf'
 
 This will ensure that nanoc version 4.0 is installed along with kramdown and finally adsf, which we need to view our site live (it's basically to enable the `bundle exec nanoc view` command).
 
-Once you've saved the gemfile, we need to run bundle install to install the gems in the file like this:
+Once you've saved the gemfile, we need to run one more command to install the gems in the gemfile:
 
 ```
 bundle install
 ```
 
-#### 2. Compile the Site
-It's quite possible to compile without Bundler, using e.g. the `nanoc compile` or even the short hand notation, simpy `nanoc` and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do, following up on the last step.
+#### 3. Compile the Site
+It's quite possible to compile without Bundler, using e.g. the `nanoc compile` (or even the short hand notation, simpy `nanoc`) and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do, following up on the last step.
 
-From terminal, again from your site root, use this command:
+From terminal and once again from your site root, use this command:
 
 ```
 bundle exec nanoc
 ```
 
-That's it.
 It will build the site, bar any errors and let you know how quick it all went down.
 
 If you want to see how pretty it is, run this command:
@@ -98,10 +97,10 @@ Optional: check if Nanoc is installed properly and if so, what version by using 
 nanoc --version
 ```
 
-#### 3. Check the nanoc.yaml file
+#### 4. Check the nanoc.yaml file
 The `nanoc.yaml` file is a good place to see how powerful the Nanoc static site generator is. It's well documented and full of various settings and other goodies. I recommend reading it through, though we won't change anything in it for this particular guide (the default settings will suffice).
 
-#### 4. Edit Rules file
+#### 5. Edit Rules file
 For our kramdown gem to work properly, we need to let Nanoc know we changed the default language from HTML to markdown. To do this we need to open the Rules file found in the root of your Nanoc site and then we need to edit the compilation rules found herein, to take markdown files.
 
 Did that sound complicated?  Don't worry, cause it's really not! Editing compile and route rules in a Rules file is actually quite easy, but on top of this, the people behind Nanoc have anticipated our switch from HTML to Markdown and thus in our Rules file we find the compile rule for Markdown using the kramdown filter  already written and just commented out. 
