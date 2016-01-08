@@ -11,23 +11,23 @@ tags: null
 ---
 
 ### Welcome to Netlify
-Up until recently I had never even heard of Nanoc, but I stumbled upon this gem of gems (pun intended) when searching for a well documented static site generator with on-going support and a live community.
+Up until recently I had never even heard of Nanoc, but I stumbled upon this gem of gems (pun intended), when searching for a well documented static site generator with on-going support and a live community.
 Nanoc has both in abundance and after checking out their up to date and aesthetically pleasing documentation, I quickly grew to like this extremely easy to use static site generator. 
 
 In this little guide, we will set up and check out Nanoc and once we're up and running locally, we will push the project to GitHub and deploy on Netlify with continuous deployment.
 
-If you already have a Nanoc repository forked on GitHub and only wish to connect to Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
+If you already have a Nanoc repository forked on GitHub and you just wish to connect with Netlify, you can skip the majority of this guide and scroll down [here](#netlifystart) instead.
 
-On the other hand, if you have Nanoc running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
+On the other hand, if you have Nanoc running locally, but need some guidance getting it pushed to GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
 
-Finally, if you want to try out our small Nanoc tutorial, before linking up with GitHub and Netlify, simply continue this guide.  
+Finally, if you want to try check out our small Nanoc tutorial, before linking up with GitHub and Netlify, simply continue this guide.  
 
 ***Please note that this guide assumes you have Ruby, RubyGems and Bundler installed !!!***
 
 For information about installing and handling Ruby with Bundler please see [this documentation](http://bundler.io/).
 
 ### Setup Nanoc
-Instead of installing Nanoc gem by gem, we'll setup the site with bundler and a gemfile, to specify what gems we want to install, all in one place.
+Instead of installing Nanoc gem by gem, we'll setup the site with bundler and a gemfile from the beginning, to specify what gems we want to install, all in one file.
 
 #### 1. Setup gemfile
 Before you compile the site or do anything, make sure you have Bundler installed. If you don't, it's `gem install bundler` in a terminal window from the root of your site.
