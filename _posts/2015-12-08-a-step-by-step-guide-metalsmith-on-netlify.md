@@ -17,7 +17,7 @@ Metalsmith is a fairly well known static site generator that bills itself as *An
 
 But enough talk, let's get to the meat and bones.
 
-In this tutorial we will set up a basic Metalsmith demonstration site, with a build file, static assets and some plugins. The aim of this site is to show a simple Metalsmith setup in continuous deployment on Netlify using GitHub.
+In this tutorial we will set up a basic Metalsmith demonstration site, with a build file, static assets and some plugins. The aim of this site is to show a simple Metalsmith setup in continuous deployment on Netlify using GitHub. 
 
 If you already have a Metalsmith repository on GitHub and only wish to connect with Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
 
@@ -63,7 +63,7 @@ Easy enough. To simply use the newest stable version available on Netlify, we wr
 You could also write `5.1.0`, as seen in the build image, but as any newer version should also work flawlessly, we stick with `stable`.
 
 #### 3. Setup the Node Package manager
-To handle the various packages you will need to have node.js with npm installed (they come together). 
+To handle the various packages you will need to have node.js and npm installed, which are bundled together. 
 
 Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a *package.json* file with user feedback. 
 
