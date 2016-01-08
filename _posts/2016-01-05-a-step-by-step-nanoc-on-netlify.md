@@ -24,21 +24,19 @@ Finally, if you want to try check out our small Nanoc tutorial, before linking u
 
 ***Please note that this guide assumes you have Ruby 2.1 and up, RubyGems and Bundler installed !!!***
 
-For information about installing and handling Ruby with Bundler please see [the official documentation](http://bundler.io/).
-
-For excellent guides that'll help you set up Ruby with bundler, whichever way you prefer and on whichever OS you might be on, try the excellent guides on [Go Rails website](https://gorails.com/setup/).
+For information about installing and handling Ruby with Bundler please see [this documentation](http://bundler.io/).
 
 ### Setup Nanoc
-Instead of installing Nanoc gem by gem, we'll setup the site with bundler and a gemfile from the beginning, to specify what gems we want to install, all in one file.
+Instead of installing Nanoc gem by gem, we'll setup the site with Bundler and a gemfile from the beginning, to specify what gems we want to install, all in one file.
 
 #### 1. Install Nanoc and create site
-The first thing we'll do, is install the nanoc gem with the following command in a terminal window:
+The first thing we'll do, is install the Nanoc gem with the following command in a terminal window:
 
 ```
 gem install nanoc
 ```
 
-Next, cd to the location where you want the site locally (cd my-site-location) and run the following command, to create a basic nanoc site we can work with:
+Next, cd to the location where you want the site locally (cd my-site-location) and run the following command, to create a basic Nanoc site we can work with:
 
 ```
 nanoc create-site my-site-name
@@ -56,15 +54,15 @@ If you don't, it can be easily installed from terminal using this command:
 gem install bundler
 ```
 
-Let bundler initialize the site with the following command in terminal, from the root of your Nanoc site folder (cd my-nanoc-site):
+Let Bundler initialize the site with the following command in terminal, from the root of your Nanoc site folder (cd my-nanoc-site):
 
 ```
 bundle init
 ```
 
-This will create a gemfile, in which we let bundler know which gems and what versions of these gems we wish to install with our Nanoc site.
+This will create a gemile, in which we let Bundler know which gems and what versions of these gems we wish to install with our Nanoc site.
 
-To install the nanoc gem as well, we need to add it to our gemfile, so open the gemfile found in the root of your nanoc site and add the following lines:
+To install the Nanoc gem as well, we need to add it to our gemfile, so open the gemfile found in the root of your Nanoc site and add the following lines:
 
 ```
 gem 'nanoc', '~> 4.0'
@@ -81,7 +79,7 @@ bundle install
 ```
 
 #### 2. Compile the Site
-It's quite possible to compile without bundler, using e.g. the `nanoc compile` or even the short hand notation, simpy `nanoc` and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do, following up on the last step.
+It's quite possible to compile without Bundler, using e.g. the `nanoc compile` or even the short hand notation, simpy `nanoc` and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do, following up on the last step.
 
 From terminal, again from your site root, use this command:
 
