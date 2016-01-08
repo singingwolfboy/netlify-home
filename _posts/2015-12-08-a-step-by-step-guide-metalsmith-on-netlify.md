@@ -233,7 +233,7 @@ I present to you the *page.hbt* file (in the templates directory):
 ```
 {% endraw %}
 
-To add the partials we simply insert the line {% raw %}`{{> partial-name }}`{% endraw %} as seen above. 
+To add the partials we simply insert the line `{% raw %}{{> partial-name }}{% endraw %}` as seen above. 
 
 Let's move on to creating these partials.
 
