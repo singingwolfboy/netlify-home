@@ -147,7 +147,7 @@ npm install handlebars --save
 
 We need to update our *build.js* file with these changes as well.
 
-Edited *build.js*:
+Updated *build.js*:
 
 ```
 var Metalsmith = require('metalsmith'),
