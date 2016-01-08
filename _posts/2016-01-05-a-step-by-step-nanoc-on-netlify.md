@@ -22,15 +22,33 @@ On the other hand, if you have Nanoc running locally, but need some guidance get
 
 Finally, if you want to try check out our small Nanoc tutorial, before linking up with GitHub and Netlify, simply continue this guide.  
 
-***Please note that this guide assumes you have Ruby, RubyGems and Bundler installed !!!***
+***Please note that this guide assumes you have Ruby 2.1 and up, RubyGems and Bundler installed !!!***
 
 For information about installing and handling Ruby with Bundler please see [this documentation](http://bundler.io/).
 
 ### Setup Nanoc
 Instead of installing Nanoc gem by gem, we'll setup the site with bundler and a gemfile from the beginning, to specify what gems we want to install, all in one file.
 
+#### 1. Install Nanoc and create site
+The first thing we'll do, is install the nanoc gem with the following command in a terminal window:
+
+```
+gem install nanoc
+```
+
+Next, cd to the location where you want the site locally (cd my-site-location) and run the following command, to create a basic nanoc site we can work with:
+
+```
+nanoc create-site my-site-name
+```
+
+Simply substitute my-site-name with the name of your site - we used the name nanoc-demo for our demonstration.
+
+
 #### 1. Setup gemfile
-Before you compile the site or do anything, make sure you have Bundler installed. If you don't, it's `gem install bundler` in a terminal window from the root of your site.
+Before you compile the site or do anything, make sure you have Bundler installed!
+Open up a terminal window, locate your site
+If you don't, it's `gem install bundler` in a terminal window from the root of your site.
 
 Let bundler initialize the site with the following command in terminal, from the root of your Nanoc site folder (cd my-nanoc-site):
 
