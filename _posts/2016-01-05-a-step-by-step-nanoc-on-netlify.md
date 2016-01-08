@@ -359,17 +359,20 @@ If you’d like to know more about the permissions Netlify requests and why, you
 
 #### Step 4: Choose Your Repo
 Once you've connected Netlify with GitHub, you will be shown a list of your GitHub repositories, as seen below.
-<INSERT PIC - Choose NANOC Repo>
+
+![nanoc_chooserepo.png](/uploads/nanoc_chooserepo.png)
+
 For the purpose of this tutorial we'll select the *“nanoc-demo”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
 Fill in the configuration settings as seen in the screen shot below:
-<INSERT PIC - Configure NANOC Build>
+
+![nanoc_config.png](/uploads/nanoc_config.png)
 
 Click the *'Save'* button and watch the magic unfold.
 
 #### Step 6: Build Your Site
-<INSERT PIC - NANOC building>
+![nanoc_building.png](/uploads/nanoc_building.png)
 The first time, assuming you haven't added copious amounts of content, Netlify will build your Nanoc site very quickly. A console will let you know what's happening along the way. If you don't want to wait, simply do something else and you can always return and check the log file later, since Netlify will keep the log of each build.
 
 #### Step 7: The End
