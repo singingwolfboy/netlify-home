@@ -219,8 +219,8 @@ We'll keep it simple and merely present the content with a title and the aforeme
 
 I present to you the *page.hbt* file (in the templates directory):
 
-{% raw %}
 ```
+{% raw %}
 {{> header}}
 
 <h2>{{title}}</h2>
@@ -230,8 +230,8 @@ I present to you the *page.hbt* file (in the templates directory):
 </article>
 
 {{> footer}}
-```
 {% endraw %}
+```
 
 To add the partials we simply insert the line `{% raw %}{{> partial-name }}{% endraw %}` as seen above. 
 
