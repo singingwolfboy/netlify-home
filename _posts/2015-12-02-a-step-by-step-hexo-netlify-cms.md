@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step: Hexo Netlify CMS"
+title: "A step-by-step: Hexo netlify CMS"
 author: Jimmi Lee
 image: null
 short_title: Hexo Netlify CMS Template
