@@ -10,7 +10,7 @@ date: 2015-12-08T00:00:00.000Z
 tags: null
 ---
 
-### Welcome to Netlify
+### Welcome to netlify
 Today I'm writing about Metalsmith.
 
 Metalsmith is a fairly well known static site generator that bills itself as *An extremely simple, pluggable static site generator*. To me personally, that's indeed exactly how it felt, like working with a very customizable static site generator, for better or worse. It's in fact so customizable that it can imitate other static site generators and even has templates for this!
@@ -21,7 +21,7 @@ In this tutorial we will set up a basic Metalsmith demonstration site, with a bu
 
 If you already have a Metalsmith repository on GitHub and only wish to connect with netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
 
-On the other hand, if you have Metalsmith running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
+On the other hand, if you have Metalsmith running locally, but need some guidance getting it on GitHub, before you deploy to netlify, start [here](#githubstart) instead.
 
 Finally, if you're completely new to Metalsmith, simply continue this guide onwards and downwards.  
 
@@ -302,7 +302,7 @@ The footer partials file *footer.hbt* in the `templates/partials` folder:
 ```
             </div> {{!-- END .main-wrapper --}}
         <footer>
-            © Metalsmith demo site - demonstrating Metalsmith in continuous deployment using GitHub on Netlify.
+            © Metalsmith demo site - demonstrating Metalsmith in continuous deployment using GitHub on netlify.
         </footer>
     </body>
 </html>
@@ -520,7 +520,7 @@ It's time to connect it with netlify.
 Creating a new site on netlify is super easy and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
 
 #### Step 1: Add Your New Site
-![Netlify New Site](/uploads/newsitebut.png)
+![netlify New Site](/uploads/newsitebut.png)
 Click the *"New Site"* button (as seen above) to get started.
 
 #### Step 2: Link to Your GitHub
@@ -531,17 +531,17 @@ When you push to GitHub, netlify does all the work. No more wasting time on manu
 Since we're hosting the site assets on GitHub, we’ll need to link netlify to GitHub. Click the button *“Link to GitHub”*.
 
 #### Step 3: Authorize netlify
-You can skip this step, if you already have an account with Netlify set up to automatically login!
+You can skip this step, if you already have an account with netlify set up to automatically login!
 
 You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
 
 We need to let netlify and GitHub talk to each other, so review the permissions and then click authorize application.
-![Authorize Netlify](/uploads/authorization.png)
+![Authorize netlify](/uploads/authorization.png)
 
 Like it says in the image above on the right, netlify doesn’t store your GitHub access token on our servers! 
 
-If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
+If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubnetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
 ![metalsmith_choose_repo.jpg](/uploads/metalsmith_choose_repo.jpg)
