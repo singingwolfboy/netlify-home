@@ -21,7 +21,7 @@ This is only the beginning however and we'll follow up with guides to our other 
 
 *This guide assumes that you have Ruby and bundler installed!*
 
-### netlify CMS Environments
+### Netlify CMS Environments
 Before we start, I'd like to talk a little about netlify CMS and environments, as it is possible to run a *netlify-git-api server* for when you're working locally, as opposed to setting the environment variable to production and using *GitHub's API* when your site goes live. 
 
 We will describe both methods in this guide, by first setting up locally and second, by deploying to netlify and using GitHub's API online.
@@ -51,7 +51,7 @@ Then we open a terminal window to the location of our local repo directory creat
 git clone my-repo-url
 ```
 
-### netlify CMS: Local Environment
+### Netlify CMS: Local Environment
 To setup the netlify CMS, first we need to set up the web configuration of the CMS system in the `config.yml` of the admin folder of the site: 
 
 `/my-site-location/admin/config.yml`
@@ -225,7 +225,7 @@ Once you're connected to GitHub, netlify will show you a list of your Git repos,
 For the purpose of this tutorial we'll select the *“jekyll-netlify-cms-demo”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
-netlify can detect the build command you need with most site generators, Jekyll being one of them:
+Netlify can detect the build command you need with most site generators, Jekyll being one of them:
 ![Configure Settings](/uploads/configurerepo.png)
 
 In most cases, there's nothing we need to configure, but for this build we need to set an environment variable under the environment tab, as seen below:
