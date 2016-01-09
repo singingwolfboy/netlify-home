@@ -138,7 +138,7 @@ npm install plugin-name --save
 
 Second, you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and third, below that invoked with `.use(variable-name())` as seen in the *build.js* file above.
 
-Furthermore the destination folder is defined with `.destination('./build')` and in the final line, the build method is called, with a callback to handle possible errors.
+Furthermore the destination folder is defined with the `.destination('./build')` and in the final line, the build method is called, with a callback to handle possible errors.
 
 Once you have the build file saved, you can try to build the page with the following command:
 
@@ -433,7 +433,7 @@ For our blog template, we create a *blog.hbt* file in the templates folder and p
         {{#each collections.articles}}
             <li>
                 <h3>{{this.title}}</h3>
-                <article>{{this.contents}}</article>
+                <article>{{{this.contents}}}</article>
             </li>
         {{/each}}
     </ul>
