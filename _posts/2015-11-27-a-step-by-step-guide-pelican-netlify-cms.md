@@ -10,10 +10,10 @@ date: 2015-11-27T00:00:00.000Z
 tags: null
 ---
 
-### Welcome to Netlify CMS
-While static site generators with CMS capability may be a brand new thing, we *did* cover Netlify CMS previously, with the Jekyll version of our templates [here](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-jekyll-netlify-cms) and today we'll take a look at how to set up our *pelican-netlify-cms* template in much the same manner.
+### Welcome to netlify CMS
+While static site generators with CMS capability may be a brand new thing, we *did* cover netlify CMS previously, with the Jekyll version of our templates [here](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-jekyll-netlify-cms) and today we'll take a look at how to set up our *pelican-netlify-cms* template in much the same manner.
 
-If you merely want to set up Pelican with continous deployment on Netlify, check out [this splendid article](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-pelican-on-netlify) by Mr. Aaron Autrand and otherwise, please keep reading.
+If you merely want to set up Pelican with continous deployment on netlify, check out [this splendid article](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-pelican-on-netlify) by Mr. Aaron Autrand and otherwise, please keep reading.
 
 *Please note that this guide assumes you have virtualenv, Ruby and git installed.*
 
@@ -62,8 +62,8 @@ git clone https://github.com/github_username/repo-name.git
 
 Substitute my-sites-location with the location of your sites and substitute `https://github.com/github_username/repo-name.git` with your repository's URL.
 
-#### 3. Setup the Netlify CMS server.
-To start the Netlify CMS server, we need to run the following command for each user we wish to add to the system (you will be asked for an email, a name and a password):
+#### 3. Setup the netlify CMS server.
+To start the netlify CMS server, we need to run the following command for each user we wish to add to the system (you will be asked for an email, a name and a password):
 
 ```
 netlify-git-api users add
@@ -77,7 +77,7 @@ netlify-git-api users add --name='User Name' --email=my@email.com --password=myp
 
 You need to create at least one user, to be able to test the system and make sure the email is in a valid format, as in the example above (e.g. emailname@emailprovider.com).
 
-To start the Netlify CMS server, we then use the following command:
+To start the netlify CMS server, we then use the following command:
 
 ```
 netlify-git-api serve
@@ -99,7 +99,7 @@ pip install -r requirements.txt
 In the first line we simply enter our new local repository's directory with the good old `cd` command.
 In the second line we use `virtualenv` to create an isolated Python environment for our site (`sudo apt-get install virtualenv` if you haven't already got it installed), then we activate/enter this environment in the third line and in the fourth line we install various requirements, before starting a devserver, which will run Pelican in regeneration mode as well as serve the output at *http://localhost:8000*.
 
-It's important to understand that the majority of the commands above, need not be used every single time you take a peek at your Pelican, but rather just once when you're setting the environment up! However, when you want to use the CMS system, the Netlify CMS server must be running and for the Pelican to fly proper, you will still need to use these commands on successive runs (again in the 2nd terminal window, so as not to close down the  Netlify CMS server):
+It's important to understand that the majority of the commands above, need not be used every single time you take a peek at your Pelican, but rather just once when you're setting the environment up! However, when you want to use the CMS system, the netlify CMS server must be running and for the Pelican to fly proper, you will still need to use these commands on successive runs (again in the 2nd terminal window, so as not to close down the  netlify CMS server):
 
 ```
 cd my-site-directory  
@@ -109,9 +109,9 @@ source pelican-env/bin/activate
 
 This makes sense, since the second time around, the pelican environment has already been created and just needs to be activated after you've located the correct directory and of course the final step is to run the devserver for Pelican.
 
-#### 5. Test Pelican and Netlify CMS.
+#### 5. Test Pelican and netlify CMS.
 Provided all the requirements installed as they should and that the server is running, we can now enjoy the fruits of our hard labour.
-To see the beautiful Pelican site, open up a browser at [localhost:8000](http://localhost:8000) and then try out the Netlify CMS system at [localhost:8000/admin](http://localhost:8000/admin) with the user account you made earlier.
+To see the beautiful Pelican site, open up a browser at [localhost:8000](http://localhost:8000) and then try out the netlify CMS system at [localhost:8000/admin](http://localhost:8000/admin) with the user account you made earlier.
 
 Let's take a look at the CMS system, by logging in and writing a quick article.
 Once you've written the article, refresh the Pelican site and you'll see the new content appear in the blink of an eye.
@@ -160,7 +160,7 @@ git commit -m 'First commit'
 ```
 
 #### 2. Push to GitHub.
-The final task before we're done setting up and ready for Netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
+The final task before we're done setting up and ready for netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
 
 ```
 git push -u origin master
@@ -168,17 +168,17 @@ git push -u origin master
 
 Once it's done uploading the files (pushing them to GitHub), take a look at the repository online to check if everything looks correct.
 
-It's time to connect with Netlify.
+It's time to connect with netlify.
 
-### Connect to Netlify
-We're ready to start a new project at Netlify's to host our Pelican Netlify CMS template. 
+### Connect to netlify
+We're ready to start a new project at netlify's to host our Pelican netlify CMS template. 
 
-If you haven't made one already, create an account and login at [Netlify](https://www.netlify.com/).
+If you haven't made one already, create an account and login at [netlify](https://www.netlify.com/).
 
 #### 1. Create Site.
-Creating a new site on Netlify is intuitive and quick. 
+Creating a new site on netlify is intuitive and quick. 
 
-![Netlify New Site](/uploads/newsitebut.png)
+![netlify New Site](/uploads/newsitebut.png)
 
 Once your account is created and you're logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started (depicted above).
 
@@ -186,20 +186,20 @@ Next, select *Link to GitHub* and you'll be shown a list of your GitHub reposito
 ![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
 
 #### 2. Configure Build.
-You'll notice that Netlify detects the Pelican build command to be `pelican content`, but we'll change that to `make publish` instead, while using the `/output` as Dir, as seen in this screen shot:
+You'll notice that netlify detects the Pelican build command to be `pelican content`, but we'll change that to `make publish` instead, while using the `/output` as Dir, as seen in this screen shot:
 ![buildpelican.png](/uploads/buildpelican.png)
 
-A few notes on the difference between the two commands, though both will work with Netlify.
+A few notes on the difference between the two commands, though both will work with netlify.
 
 The build command `make publish` will generate your site for production using the settings in the `pelicanconf.py` file. The *advantage* of this method is that the make command is built into most POSIX systems and won't require installing anything else to be able to use it. The problem though is that non-POSIX systems such as Windows don't include make and that it can be a bit of a long-haired affair to do so!
 
 The `pelican content` command on the other hand, comes with pelican and will generate your site with any production specific settings and as such, would probably be the more likely candidate in most cases.
 
 #### 3. Build Your Site.
-Once you click save, Netlify will step in and take over, while keeping you informed through a live build log, as seen in this screen shot:
+Once you click save, netlify will step in and take over, while keeping you informed through a live build log, as seen in this screen shot:
 ![pelicanlivebuildlog.png](/uploads/pelicanlivebuildlog.png)
 
-While it may seem alluring, following the nice green bulletin isn't strictly necessary, as Netlify will also save it all in the log for your build, so now is as good a time as ever to take that break.
+While it may seem alluring, following the nice green bulletin isn't strictly necessary, as netlify will also save it all in the log for your build, so now is as good a time as ever to take that break.
 
 #### 4. Register new Application.
 Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.  
@@ -217,7 +217,7 @@ Once you're done filling out, simply click the green **Register application** bu
 What you need to take note of here, is the **Client ID** and the **Client Secret** in the upper right corner. You will need to provide both in the next step!
 
 #### 5. Setup GitHub API Access.
-Return to Netlify and the site you just build and in the control panel select the **Access panel**.
+Return to netlify and the site you just build and in the control panel select the **Access panel**.
 
 This is where we give the GitHub Api access to our site with the application we just registered and you need to enter the **Client ID** and the **Client Secret** from above, as seen in the screen shot below:
 
@@ -225,12 +225,12 @@ This is where we give the GitHub Api access to our site with the application we 
 
 Simply paste them into the windows where it says *enter Client ID here* and below where it says *enter Client Secret here* and you're good to go.
 
-#### 6: Trying Out Netlify CMS
+#### 6: Trying Out netlify CMS
 We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** (change to the URL of your site) to access the CMS system and then log in with GitHub, since we're using GitHub auth when working online.
 
 This screen shot depicts our CMS system with Pelican, after logging in:
 ![pelicannetlifycms.png](/uploads/pelicannetlifycms.png)
 
-As you can see from our little guide, with this template you can have a Pelican site up and running with Netlify CMS in no time at all.
+As you can see from our little guide, with this template you can have a Pelican site up and running with netlify CMS in no time at all.
 
 You can see our demo site here: [http://pelicanos.netlify.com/](http://pelicanos.netlify.com/) and the GitHub project for the demo site is [here](https://github.com/JimmiLee/Pelican), with the GitHub repo for the template can be found [here](https://github.com/netlify-templates/pelican-netlify-cms).
