@@ -2,8 +2,8 @@
 title: "A step-by-step guide: Metalsmith on Netlify"
 author: Jimmi Lee
 image: null
-short_title: A short guide - Metalsmith on netlify
-description: "  "
+short_title: Metalsmith on netlify
+description: A short tutorial on the static site generator Metalsmith and how to host it on netlify (incl. continuous deployment).
 thumbnail: /uploads/metalsmith_thumb2.png
 cmsUserSlug: ""
 date: 2015-12-08T00:00:00.000Z
@@ -11,21 +11,21 @@ tags: null
 ---
 
 ### Welcome to Netlify
-Welcome to Netlify and todays article about Metalsmith. 
+Today I'm writing about Metalsmith.
 
-Metalsmith is a fairly well known static site generator that bills itself as *An extremely simple, pluggable static site generator*. To me personally, that's indeed exactly how it felt, like working with a very customizable static site generator, for better or worse. It's in fact so customizeable that it can imitate other static site generators and even has templates for this! 
+Metalsmith is a fairly well known static site generator that bills itself as *An extremely simple, pluggable static site generator*. To me personally, that's indeed exactly how it felt, like working with a very customizable static site generator, for better or worse. It's in fact so customizable that it can imitate other static site generators and even has templates for this!
 
 But enough talk, let's get to the meat and bones.
 
-In this tutorial we will set up a basic Metalsmith demonstration site, with a build file, static assets and some plugins. The aim of this site is to show a simple Metalsmith setup in continuous deployment on Netlify using GitHub. 
+In this tutorial we will set up a basic Metalsmith demonstration site, with a build file, static assets and some plugins. The aim of this site is to show a simple Metalsmith setup with continuous deployment on netlify using GitHub. 
 
-If you already have a Metalsmith repository on GitHub and only wish to connect with Netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
+If you already have a Metalsmith repository on GitHub and only wish to connect with netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
 
 On the other hand, if you have Metalsmith running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
 
 Finally, if you're completely new to Metalsmith, simply continue this guide onwards and downwards.  
 
-***Please note that this guide assumes you have npm and node.js installed - any version above 0.12.x !!!***
+***Please note that this guide assumes you have npm and node.js installed - any version above 0.12.x !!***
 
 For information about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
@@ -47,11 +47,11 @@ The folder structure for this project:
 #### 2. Create .nvmrc file
 Did you notice the *.nvmrc* file in the tree above?
 
-The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named *.nvmrc* with the version inside. While you may not be using nvm yourself (you should really consider it), Netlify will use this information when building your site for you. 
+The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named *.nvmrc* with the version inside. While you may not be using nvm yourself (you should really consider it), netlify will use this information when building your site for you. 
 
-Since metalsmith is a little picky with regards to what version of node it works with (anything after 0.12.x should do), we'll add the newest version number we know is running on Netlify to this file. 
+Since Metalsmith is a little picky with regards to what version of node it works with (anything after 0.12.x should do), we'll add the newest version number we know is running on netlify to this file. 
 
-To figure out which options we have, we open Netlify's build image [here](https://github.com/netlify/build-image/blob/master/Dockerfile#L95) and from line 95 and down we find the various versions of node available, with version 5.1.0 being the newest.
+To figure out which options we have, we open netlify's build image [here](https://github.com/netlify/build-image/blob/master/Dockerfile#L95) and from line 95 and down we find the various versions of node available, with version 5.1.0 being the newest.
 
 In the *.nvmrc* file I write the following and save:
 
@@ -59,7 +59,7 @@ In the *.nvmrc* file I write the following and save:
 stable
 ```
 
-Easy enough. To simply use the newest stable version available on Netlify, we write `stable`. 
+Easy enough. To simply use the newest stable version available on netlify, we write `stable`. 
 You could also write `5.1.0`, as seen in the build image, but as any newer version should also work flawlessly, we stick with `stable`.
 
 #### 3. Setup the Node Package manager
@@ -88,7 +88,7 @@ npm install metalsmith --save
 If you check your folder you'll notice that npm has created a `node_modules` folder and filled it up with packages.
 Since this is only needed locally and since the `build` folder is also only used locally, we want to avoid pushing them to GitHub, simply to save space and keep them out of where they don't belong.
 
-This it where the `.gitignore` file comes into play. Create a file in the root of the site named `.gitignore` and fille it in with the following:
+This it where the `.gitignore` file comes into play. Create a file in the root of the site named `.gitignore` and fill it in with the following:
 
 ```
 # To avoid uploading the node_modules folder, filled with node.js packages:
@@ -315,10 +315,10 @@ To make the site we're working on a little less bleak, we're going to add a styl
 #### 12. Add a Stylesheet
 We're going to simply add a stylesheet in the `src/styles` folder named *main.css* as referenced in our header. 
 
-You can use any old external css stylesheet or create a new one. Once you run build, metalsmith will copy this file over, duplicating the file structure and any other static assets you may have added in this simple manner.
+You can use any old external css stylesheet or create a new one. Once you run build, Metalsmith will copy this file over, duplicating the file structure and any other static assets you may have added in this simple manner.
 
 #### 13. Collections and Link Plugins
-To illustrate the power and flexibility of metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our articles. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
+To illustrate the power and flexibility of Metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our articles. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
 
 ```
 npm install metalsmith-collections --save
@@ -448,7 +448,7 @@ Remember the collections we made, aptly named pages and articles?
 Well, as mentioned it's easy to access these in the template and we're doing this with the `{%raw %}{{#each collections.articles}}{% endraw %}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the files in the articles collection.
 
 #### 16. Build It
-If you made it this far, you should already have an idea of how Metalsmith works internally and where to start if you want to use Metalsmith in continuous deployment on Netlify, with GitHub serving the files.
+If you made it this far, you should already have an idea of how Metalsmith works internally and where to start if you want to use Metalsmith with continuous deployment on netlify, with GitHub serving the files.
 
 Run the `node build` command again and see if the files generate properly.  If they do and you're happy with your tree (`npm ls`), it's time to check out GitHub.
 
@@ -456,7 +456,7 @@ Run the `node build` command again and see if the files generate properly.  If t
 
 <a id="githubstart"></a>
 
-Let's set up a GitHub repository and push our metalsmith site and generator to a repo of our own.
+Let's set up a GitHub repository and push our Metalsmith site and generator to a repo of our own.
 
 #### 1. Create your Git Repo
 We start by creating a [GitHub](https://github.com/) repository for our metalsmith page and generator.
@@ -512,12 +512,12 @@ git push -u origin master
 
 All your files will be copied to your online repository. Once it's done, take a look at the repository online to check if everything looks correct.
 
-It's time to connect it with Netlify.
+It's time to connect it with netlify.
 
-### Connecting to Netlify
+### Connecting to netlify
 <a id="netlifystart"></a>
 
-Creating a new site on Netlify is super easy and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
+Creating a new site on netlify is super easy and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
 
 #### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
@@ -526,26 +526,26 @@ Click the *"New Site"* button (as seen above) to get started.
 #### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
-When you push to GitHub, Netlify does all the work. No more wasting time on manual deploying of updates or changes!
+When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
 
-Since we're hosting the site assets on GitHub, we’ll need to link Netlify to GitHub. Click the button *“Link to GitHub”*.
+Since we're hosting the site assets on GitHub, we’ll need to link netlify to GitHub. Click the button *“Link to GitHub”*.
 
-#### Step 3: Authorize Netlify
+#### Step 3: Authorize netlify
 You can skip this step, if you already have an account with Netlify set up to automatically login!
 
 You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
 
-We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
+We need to let netlify and GitHub talk to each other, so review the permissions and then click authorize application.
 ![Authorize Netlify](/uploads/authorization.png)
 
-Like it says in the image above on the right, Netlify doesn’t store your GitHub access token on our servers! 
+Like it says in the image above on the right, netlify doesn’t store your GitHub access token on our servers! 
 
-If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
+If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
 ![metalsmith_choose_repo.jpg](/uploads/metalsmith_choose_repo.jpg)
-Once you're connected to GitHub, Netlify will show you a list of your GitHub repositories, as seen above.
+Once you're connected to GitHub, netlify will show you a list of your GitHub repositories, as seen above.
 For the purpose of this tutorial we'll select the *“metalsmith-demo”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
@@ -556,12 +556,12 @@ Click the *'Save'* button and watch the magic unfold.
 
 #### Step 6: Build Your Site
 ![metalsmith_sitebuilding.jpg](/uploads/metalsmith_sitebuilding.jpg)
-Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
+Once you click save, netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and netlify will do the rest, while you watch the progress.
 
 #### Step 7: The End
 That's it.
 
-Once Netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
+Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional customizing.
 ![metalsmith_done.jpg](/uploads/metalsmith_done.jpg)
 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
