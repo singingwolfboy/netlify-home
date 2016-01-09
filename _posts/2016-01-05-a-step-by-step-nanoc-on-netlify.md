@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step guide: Nanoc on Netlify"
+title: "A step-by-step guide: Nanoc on netlify"
 author: Jimmi Lee
 image: null
 short_title: Nanoc on netlify
