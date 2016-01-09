@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step guide: Pelican Netlify CMS"
+title: "A step-by-step guide: Pelican netlify CMS"
 author: Jimmi Lee
 image: null
 short_title: The Pelican Netlify CMS Template
