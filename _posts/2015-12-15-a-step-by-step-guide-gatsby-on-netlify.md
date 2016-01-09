@@ -1,15 +1,14 @@
 ---
-title: "A step-by-step guide: Gatsby on Netlify "
+title: "A step-by-step guide: Gatsby on netlify "
 author: Aaron Autrand
 image: null
-short_title: Gatsby Tutorial
+short_title: Gatsby on netlify
 description: A short guide to help you set up Gatsby on netlify with continuous deployment.
 thumbnail: /uploads/gatsbyjs.png
 cmsUserSlug: ""
 date: 2015-12-15T00:00:00.000Z
 tags: null
 ---
-
 
 Today, we're going to look at how to host a website built with Gatsby on netlify, including setting up continuous deployment.
 
