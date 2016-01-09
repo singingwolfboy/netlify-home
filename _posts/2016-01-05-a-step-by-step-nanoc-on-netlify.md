@@ -18,7 +18,7 @@ In this little guide, we will setup Nanoc and check out its site generation abil
 
 If you already have a Nanoc repository forked on GitHub and you just wish to connect with netlify, you can skip the majority of this guide and scroll down [here](#netlifystart) instead.
 
-On the other hand, if you have Nanoc running locally, but need some guidance getting it pushed to GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
+On the other hand, if you have Nanoc running locally, but need some guidance getting it pushed to GitHub, before you deploy to netlify, start [here](#githubstart) instead.
 
 Finally, if you want to try check out our small Nanoc tutorial, before linking up with GitHub and netlify, simply continue this guide.  
 
@@ -211,7 +211,7 @@ The *default.html* file in the layouts folder is where you can set up the layout
       <%= yield %>
     </div>
     <div id="sidebar">
-      <h2>Netlify</h2>
+      <h2>netlify</h2>
       <ul>
         <li><a href="https://www.netlify.com/">Home</a></li>
         <li><a href="https://www.netlify.com/documentation/">Documentation</a></li>
@@ -330,12 +330,12 @@ Now we're ready to connect with netlify.
 <a id="netlifystart"></a>
 We want to connect our GitHub repository with netlify, so that netlify can build the site, whenever we push changes to our online repository - this is what's meant with continuous deployment - as soon as you've pushed changes to GitHub, netlify will rebuild your site, to reflect these changes.
 
-If you haven't got a [Netlify account](https://www.netlify.com/) already, head over and make one - it's completely free of charge.
+If you haven't got a [netlify account](https://www.netlify.com/) already, head over and make one - it's completely free of charge.
 
 #### Step 1: Add Your New Site
 Click the **"New Site"** button to get started.
 
-![Netlify New Site](/uploads/newsitebut.png)
+![netlify New Site](/uploads/newsitebut.png)
 
 #### Step 2: Link to Your GitHub
 Next you'll be brought to this screen, where you can choose between manual deploy or linking to GitHub or Bitbucket - we'll link with GitHub for this demonstration:
@@ -355,7 +355,7 @@ We need to let netlify and GitHub talk to each other, so review the permissions 
 
 Like stated in the image above on the right, netlify doesn’t store your GitHub access token on our servers! 
 
-If you’d like to know more about the permissions netlify requests and why, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
+If you’d like to know more about the permissions netlify requests and why, you can check out our [documentation on GitHub Permissions](https://docs.GitHubnetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
 Once you've connected netlify with GitHub, you will be shown a list of your GitHub repositories, as seen below.
