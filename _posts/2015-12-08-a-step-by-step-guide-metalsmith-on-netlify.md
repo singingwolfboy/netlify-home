@@ -283,15 +283,15 @@ The header partials file *header.hbt* in the `templates/partials` folder:
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Metalsmith Demo Site</title>
+        <title>Metalsmith Test Site</title>
 
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="styles/main.css" type="text/css" />
+        <link rel="stylesheet" href="../styles/main.css" type="text/css" />
     </head>
     <body>
 
         <header>
-            <img src="/images/metalsmithlogo.jpg" alt="Metalsmith Demo Site" height="226" width="709">
+            <h1>The Metalsmith Demonstration Site</h1>
         </header>
 
         <div class="main-wrapper">
