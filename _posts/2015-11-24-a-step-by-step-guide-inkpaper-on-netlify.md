@@ -10,8 +10,8 @@ date: 2015-11-24T00:00:00.000Z
 tags: null
 ---
 
-### Welcome to Netlify
-Welcome to Netlify and todays article about a new and exciting Chinese technology - the InkPaper static site generator.
+### Welcome to netlify
+Welcome to netlify and todays article about a new and exciting Chinese technology - the InkPaper static site generator.
 
 Among the multitude of site generators that have come into existence in the past few years, this one stands out for its simplicity, Chinese language support, extremely fast build time and much more.
 
@@ -22,7 +22,7 @@ It has a very elegant theme and is one of the fastest site generators to get up 
 ### Quick Start
 If you want to get a head start, you can download, install and setup from the terminal (or command prompt) in this quick start guide. However, if you need a more detailed introduction and guide, simply scroll down to [here](#inkpapersetup).
 
-The quick start guides below do the same thing for each operating system, except that for OSX and Windows, they also download and rename the Linux versin of ink, so that it can be used to deploy to Netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
+The quick start guides below do the same thing for each operating system, except that for OSX and Windows, they also download and rename the Linux versin of ink, so that it can be used to deploy to netlify. Simply substitute with your inkpaper site location and name and you'll be good to go.
 
 #### Linux (64bit) Quick Start (in Terminal):
 
@@ -84,7 +84,7 @@ OK, let's take a more detailed look into the setup of InkPaper.
 
 If you already have an InkPaper repository forked on GitHub and only wish to connect, start [here](#netlifystart) instead.
 
-On the other hand, if you have InkPaper running locally, but need some guidance getting it on GitHub, before you deploy to Netlify, start [here](#githubstart) instead.
+On the other hand, if you have InkPaper running locally, but need some guidance getting it on GitHub, before you deploy to netlify, start [here](#githubstart) instead.
 
 Finally, if you're completely new to InkPaper, simply continue this guide chronologically.  
 
@@ -93,7 +93,7 @@ The first thing you need to do is head over to [InkPapers webpage](http://www.in
 ![inkpaperwebpage.png](/uploads/inkpaperwebpage.png)
 
 #### 2A. Linux and OSX: Extract and prepare InkPaper
-If you are using OSX or a Windows OS, rather than Linux, it is important that you also download the Linux version of the ink executable, as this is the version needed when building on Netlify! 
+If you are using OSX or a Windows OS, rather than Linux, it is important that you also download the Linux version of the ink executable, as this is the version needed when building on netlify! 
 
 For this reason, we will move our ink executable into a `bin` folder in the root of the site and rename it `ink.linux` and if you're on a Windows or OSX machine, make sure you also keep the ink executable needed by your OS to run locally.  
 
@@ -279,7 +279,7 @@ git remote -v
 ```
 
 #### 5. Push to GitHub.
-The final task before we're done setting up and ready for Netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
+The final task before we're done setting up and ready for netlify, is to use the push command with git, as in the following line in Terminal/Command prompt:
 
 ```
 git push -u origin master
@@ -287,42 +287,42 @@ git push -u origin master
 
 All your files will be copied to your online repository. Once it's done, take a look at the repository online to check if everything looks correct.
 
-It's time to connect it with Netlify.
+It's time to connect it with netlify.
 
-### Connecting to Netlify
+### Connecting to netlify
 
 <a id="netlifystart"></a>
 
-Creating a new site on Netlify is simpler than with any other host. Once you’ve created an account and logged in, you’ll be taken to `https://app.netlify.com/sites`
+Creating a new site on netlify is simpler than with any other host. Once you’ve created an account and logged in, you’ll be taken to `https://app.netlify.com/sites`
 
 #### Step 1: Add Your New Site
-![Netlify New Site](/uploads/newsitebut.png)
+![netlify New Site](/uploads/newsitebut.png)
 
 Click the *"New Site"* button (as seen above) to get started.
 
 #### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
-When you push to GitHub, Netlify does all the work. No more wasting time on manual deploying of updates or changes!
+When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click the button *“Link to GitHub”*.
+Since your assets are hosted on GitHub, we’ll need to link netlify to GitHub. Click the button *“Link to GitHub”*.
 
-#### Step 3: Authorize Netlify
-*Please note that this step is omitted if you already have an account with Netlify set up to login automatically!*
+#### Step 3: Authorize netlify
+*Please note that this step is omitted if you already have an account with netlify set up to login automatically!*
 
 You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
 
-We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
-![Authorize Netlify](/uploads/authorization.png)
+We need to let netlify and GitHub talk to each other, so review the permissions and then click authorize application.
+![Authorize netlify](/uploads/authorization.png)
 
-Like it says in the image above on the right, Netlify doesn’t store your GitHub access token on our servers! 
+Like it says in the image above on the right, netlify doesn’t store your GitHub access token on our servers! 
 
-If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
+If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubnetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
 ![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
-Once you're connected to GitHub, Netlify will show you a list of your Git repos, as seen above.
+Once you're connected to GitHub, netlify will show you a list of your Git repos, as seen above.
 For the purpose of this tutorial we'll select the *“InkPaper”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
@@ -333,10 +333,10 @@ Click the *'Save'* button and watch the magic unfold.
 
 #### Step 6: Build Your Site
 ![inkpaper_building.png](/uploads/inkpaper_building.png)
-Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
+Once you click save, netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and netlify will do the rest, while you watch the progress.
 
 #### Step 7: Done
-Once Netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
+Once netlify has build your site, you'll be presented with the result and your very own randomly generated name and as you can see from this screen shot, you now have access to the control panel for the site.
 ![inkpaperresult.png](/uploads/inkpaperresult.png)
 
 The site starts as default public, but you can easily and quickly change this now along with the options to add a custom domain name and changing from the randomly generated name to something more appropriate (we named ours InkPaper).
