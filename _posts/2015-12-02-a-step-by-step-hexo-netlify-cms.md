@@ -185,7 +185,7 @@ Next, select *Link to GitHub* and you'll be shown a list of your GitHub reposito
 ![netlify0x_chooserepo.png](/uploads/netlify0x_chooserepo.png)
 
 #### 2. Configure Build
-netlify will auto-detect the correct settings as seen in the screen shot below:
+Netlify will auto-detect the correct settings as seen in the screen shot below:
 ![hexo_webconfig.png](/uploads/hexo_webconfig.png)
 Hexo deploys to the */public* folder and the command we use to build with is `hexo generate`.
 
