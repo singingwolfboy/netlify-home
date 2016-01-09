@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step guide: Jekyll (2.X) on Netlify."
+title: "A step-by-step guide: Jekyll (2.X) on netlify."
 author: Jimmi Lee
 image: /uploads/1424055625jekyll.png
 short_title: Hosting Jekyll on netlify
