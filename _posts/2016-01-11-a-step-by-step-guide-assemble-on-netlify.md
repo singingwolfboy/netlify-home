@@ -6,7 +6,7 @@ short_title: Assemble on netlify
 description: A step-by-step guide on how to host a website built with static site generator Assemble.
 thumbnail: /uploads/4475-thumb.png
 cmsUserSlug: ""
-date: 2015-11-22 
+date: 2016-01-11
 tags: null
 ---
 
