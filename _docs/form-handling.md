@@ -45,7 +45,7 @@ setup triggers that sends your form submissions to any of the 500+ applications 
 their catalog.
 
 Use this link to get access to the netlify Zapier app:
-
+ake
 [Netlify on Zapier](https://zapier.com/developer/invite/27442/6c1b6a3bbcf86c07c0a0f7dfe2d0327c/?utm_source=Netlify+and+BitBalloon&utm_campaign=7897bcd976-Netlify_Newsletter_8_Zapier&utm_medium=email&utm_term=0_200b533eb5-7897bcd976-)
 
 ## Spam Filtering
@@ -78,7 +78,9 @@ Note that we add a hidden field to the form called **form-name** with the **name
 Here's a simply jQuery example:
 
 ```js
-$("#my-form").submit(function() {
+$("#my-form").submit(function(e) {
+  e.preventDefault();
+
   var $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
     alert("Thank you!");
