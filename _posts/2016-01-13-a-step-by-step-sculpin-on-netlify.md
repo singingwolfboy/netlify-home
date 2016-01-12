@@ -6,21 +6,106 @@ short_title: "A short guide: Sculpin on netlify"
 description: "A guide to help you set up Sculpin on netlify in continuous deployment, with assets on GitHub."
 thumbnail: /uploads/sculpin_logo.png
 cmsUserSlug: ""
-date: 2016-01-13 
+date: 2016-01-13T00:00:00.000Z
 tags: null
 ---
 
 
+### Welcome to netlify
+<Intro>
+Sculpin is a fast static site generator, which uses Twig templates and is built on Symfony's HTTP Kernel and written in PHP. 
+
+For those unaware, PHP is a serverside language based on C and has long been used to make dynamic homepages. This is not as common as static site generators written in Javascript or Ruby and it's a first for me and interesting since I remember a bit of PHP from back in the day.
+
+Composer is to PHP what npm is to node.js or bundler is to Ruby and will install and handle dependencies for the project and it comes built into Sculpin. 
 
 <INTRO A BIT ABOUT Sculpin>
 
+It's based on and written in PHP
 
-<LINKS AND REQUIREMENTS>
+<LINKS AND REQUIREMENTS - PHP version ???>
+
+### QUICK GUIDE LINUX, OSX, WINDOWs
+<REWRITE SIMILAR: If you want to get a head start, you can download, install and setup from the terminal (or command prompt) in this quick start guide. However, if you need a more detailed introduction and guide, simply scroll down to [here](#sculpinsetup).>
+
+#### Quick Install Sculpin - Linux:
+
+```
+curl -O https://download.sculpin.io/sculpin.phar
+chmod +x sculpin.phar
+
+mv sculpin.phar ~/bin/sculpin
+
+cd ~
+git clone https://github.com/sculpin/sculpin-blog-skeleton.git myblog
+cd myblog
+
+cd ~/myblog
+sculpin install
+```
 
 
-<SETUP Sculpin>
-<Sculpin TUTORIAL STUFF?>
 
+#### Quick Install Sculpin - OSX:
+
+```
+OSX terminal install commands
+```
+
+#### Quick Install Sculpin - Windows:
+
+```
+Windows command prompt install commands
+```
+
+### SETUP Sculpin
+
+#### 1. Download Sculpin
+Download and set permissions
+
+```
+curl -O https://download.sculpin.io/sculpin.phar
+chmod +x sculpin.phar
+```
+
+#### 2. Add Sculpin to the Path
+Add Sculpin to the path so that you can access it from everywhere.
+
+```
+mv sculpin.phar ~/bin/sculpin
+```
+
+### Sculpin TUTORIAL
+
+#### 1. Create folder structure
+Fork the empty basic folder structure from [here](https://github.com/JimmiLee/sculpin-demo-empty).
+
+<IMAGE FOLDER STRUCTURE>
+
+You will notice several configuration files in the main directory for your project as well as the following directories:
+
+app contains all the logic for generating the blog.
+source contains the raw content for your blog.
+
+#### 2. Install Dependencies
+First we tell Sculpin to install any relevant dependencies for our site with `sculpin install` and ? ? ?
+
+```
+cd ~/myblog
+sculpin install
+```
+
+#### 3. 
+
+```
+
+```
+
+#### 4. Run Sculpin Run
+
+```
+sculpin generate --watch --server
+```
 
 ### Pushing Sculpin to GitHub
 <a id="githubstart"></a>
