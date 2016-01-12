@@ -28,13 +28,11 @@ Our site for netlify is hosted on www.netlify.com, rather than netlify.com
 
 We call `netlify.com` the `apex` domain or `root` domain.
 
-Some might think that this is merely a cosmetic difference and make whole websites [arguing
-against the www prefix](http://no-www.org/). However, dropping `www` from your main site  domain can have dire consequences because of how DNS records work.
+Some might think that this is merely a cosmetic difference and make whole websites [arguing against the www prefix](http://no-www.org/). However, dropping `www` from your main site  domain can have dire consequences because of how DNS records work.
 
 ## DNS Records
 
-DNS is the internet-wide phonebook that tells browsers (and any other connected system), how
-to resolve a specific domain name to an IP address of a server they can open a connection to.
+DNS is the internet-wide phonebook that tells browsers (and any other connected system), how to resolve a specific domain name to an IP address of a server they can open a connection to.
 
 For websites, there are 3 kinds of relevant records today:
 
@@ -50,17 +48,13 @@ For websites, there are 3 kinds of relevant records today:
   
   Returns another domain name that the browser should lookup instead
 
-When you configure a custom domain to point to a netlify site, we always recommend that you use
-a CNAME record pointing at `<yoursite>.netlify.com` (where `<yoursite>` depends on the name of your
-netlify site).
+When you configure a custom domain to point to a netlify site, we always recommend that you use a CNAME record pointing at `<yoursite>.netlify.com` (where `<yoursite>` depends on the name of your netlify site).
 
 Lets say you've configured `www.example.com` to return a CNAME pointing at `example.netlify.com`.
 
 When a user visits your site, her browser will lookup the DNS record for `www.example.com`, it will receive a CNAME telling it to look up `example.netlify.com` instead. When it looks up `example.netlify.com`, it connects to our advanced traffic director, that returns an A record with an IP address of the server from our pool of currently available CDN nodes that's geographically closest to the end user.
 
-The cool thing about this is that if our system has detected that our main load balancer is currently
-being hit by a large DDoS attack and is slow or unresponsive, we'll simply route around that on the DNS level. Since we cache content at our edge nodes around the world, end users also experience extremely
-fast page load times because of this.
+The cool thing about this is that if our system has detected that our main load balancer is currently being hit by a large DDoS attack and is slow or unresponsive, we'll simply route around that on the DNS level. Since we cache content at our edge nodes around the world, end users also experience extremely fast page load times because of this.
 
 ## The Trouble with Apex Domains
 
@@ -70,8 +64,7 @@ You might think you could simply configure a CNAME record for the apex domain an
 
 The problem with CNAME records is that the DNS specification doesn't allow any other DNS records on a name that has a CNAME record set.
 
-When you have a specific name for your website like `www` or `app` or any other subdomain, that's not a
-problem. For the apex domain, however, this is different.
+When you have a specific name for your website like `www` or `app` or any other subdomain, that's not a problem. For the apex domain, however, this is different.
 
 If you want to be able to receive email on your domain, you'll need to set MX records at the apex domain. With a CNAME, no other records can be set.
 
@@ -81,19 +74,15 @@ Want to validate your domain for webmaster tools? Or for the DNS validation requ
 
 Even if your site lives at `www.example.com` instead of `example.com`, you'll still want a way to point `example.com` at our servers so we can serve a 301 redirect from `example.com` to `www.example.com` when a user visits the apex domain.
 
-Since setting a CNAME record on the apex domain will break email and wreck havoc on TXT records, the only
-remaining option is currently an A record (in the future AAAA records will be an option as well).
+Since setting a CNAME record on the apex domain will break email and wreck havoc on TXT records, the only remaining option is currently an A record (in the future AAAA records will be an option as well).
 
 Since an A record needs to point to a raw IP address, we publish the  IP address of our main load balancer for this purpose.
 
 The problem is that an A record doesn't let us insert any traffic direction between the end user's DNS lookup and our infrastructure. So we have no way of routing users to the closest CDN node, and if our main load balancer for some reason goes unresponsive, we have no way of routing traffic coming directly from A records around this.
 
-Because of this we **strongly recommend** that you always host your main site or app on `www` or any other subdomain (`app.example.com` is perfectly fine as well). This way you can use a CNAME record for the
-canonical site URL. You'll take full advantage of our globally distributed infrastructure and we can
-automatically route around any localized outage.
+Because of this we **strongly recommend** that you always host your main site or app on `www` or any other subdomain (`app.example.com` is perfectly fine as well). This way you can use a CNAME record for the canonical site URL. You'll take full advantage of our globally distributed infrastructure and we can automatically route around any localized outage.
 
-The root domain at `example.com` will still work, but will simply redirect to `www.example.com`. With
-netlify this redirect happens straight on the CDN edge nodes and is extremely fast.
+The root domain at `example.com` will still work, but will simply redirect to `www.example.com`. With netlify this redirect happens straight on the CDN edge nodes and is extremely fast.
 
 ## CNAME Flattening, ANAME or ALIAS Records
 
