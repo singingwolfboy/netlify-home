@@ -10,29 +10,42 @@ date: 2016-01-12
 tags: null
 ---
 
-
-<INTRO A BIT ABOUT PUNCH>
-
-
-<LINKS AND REQUIREMENTS>
+### Welcome to netlify
+<INTRO - A BIT ABOUT PUNCH, pro's and cons>
 
 REQUIREMENTS: Node.js (version?)
 Node.js with npm link.
 
+<LINKS - various chapters in guide>
+
 ### QUICK GUIDE LINUX, OSX, WINDOWs
+<Quick guide intro>
+
 Linux Install Punch:
 
 ```
 (sudo) npm install -g punch   # no sudo necessary if using nvm correctly!
 punch setup my-punch-site
 cd my-punch-site/default 
-punch scd 
+punch cd 
+```
+
+OSX Install Punch:
+
+```
+OSX terminal install commands
+```
+
+Windows Install Punch:
+
+```
+Windows command prompt install commands
 ```
 
 Open your browser and visit: http://localhost:9009
 Follow the steps in hands-on tutorial.
 
-<SETUP PUNCH>
+### Install & Setup Punch
 In the terminal, enter the following command:
 sudo npm install -g punch
 
