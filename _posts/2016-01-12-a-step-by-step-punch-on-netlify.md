@@ -85,6 +85,17 @@ Insert tag {{{content}}} inside <div role="main"></div>.
 As mentioned in the intro, Punch is one of the site generators that offer an incredibly easy way to set up a simple navigation bar., by editing the 
 <Edit share.jason - EXAMPLE>
 
+```
+{
+   "site-title": "Punch on netlify demo site",
+   "footer-text": "Built with <a href=\"http://laktek.github.com/punch\">Punch</a> with assets on <a href=\"http://laktek.github.com/punch\">Punch</a> deployed to <a href=\"https://www.netlify.com\">netlify</a>",
+   "navbar": [
+      { "label": "Home", "href": "/" },
+      { "label": "About", "href": "/about" }
+   ]
+}
+```
+
 #### 6.
 This site is coming up nicely. If you want to change the markup used for the site title and navbar, you can do it by editing templates/_header.mustache. 
 
