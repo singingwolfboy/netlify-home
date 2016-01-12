@@ -1,4 +1,6 @@
-url: www.netlify.com
+url: https://www.netlify.com
+name: The netlify blog. All about static web-tech and netlify
+author: Netlify
 
 future: false
 
@@ -35,12 +37,9 @@ defaults:
       layout: "docs"
 
 # RSS
-rss:
-  name: The netlify blog. All about static web-tech and netlify
-  url: https://www.netlify.com
-  path: /blog
-
+rss_path: /blog
 gems:
   - jekyll-srcset
   - octopress-minify-html
+  - jekyll-feed
 minify_html: false

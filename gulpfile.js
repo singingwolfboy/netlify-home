@@ -13,7 +13,7 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    var cmd = ['exec', 'jekyll', 'build'];
+    var cmd = ['exec', 'jekyll', 'build', '--incremental'];
     if (process.env.CMS_ENV == 'staging') {
       cmd.push("--future")
     }
@@ -55,11 +55,6 @@ gulp.task('sass', function () {
 });
 
 
-gulp.task('optimize-images', function() {
-    gulp
-})
-
-
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -69,9 +64,7 @@ gulp.task('watch', function () {
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', 'admin/*', '_posts/*', 'docs/*.md', 'img/*', 'js/*.js', '_plugins/*.rb', '_data/*.yml'], ['jekyll-rebuild']);
 });
 
-gulp.task('build', ['sass', 'jekyll-build']);
-
-gulp.task('production', ['sass', 'jekyll-build', 'optimize-images'])
+gulp.task('build', ['prepare', 'sass', 'jekyll-build']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
