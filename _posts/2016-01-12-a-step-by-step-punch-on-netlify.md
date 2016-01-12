@@ -12,12 +12,12 @@ tags: null
 
 ### Welcome to netlify
 <INTRO - A BIT ABOUT PUNCH, pro's and cons>
-Pro's -> easy to fiddle with Navigation, fast as f... to set up et>
+Pro's -> easy to fiddle with Navigation, fast as f... to set up with some default content etc.>
 
 REQUIREMENTS: Node.js (version?)
-Node.js with npm link.
+Node.js with npm using nvm to install link.
 
-<LINKS - various chapters in guide>
+<LINKS - to various chapters in guide>
 
 ### QUICK GUIDE LINUX, OSX, WINDOWs
 <Quick guide intro>
@@ -43,24 +43,31 @@ Windows Install Punch:
 Windows command prompt install commands
 ```
 
-Open your browser and visit: http://localhost:9009
-Follow the steps in hands-on tutorial.
-
 ### Install & Setup Punch
+<Short intro with recap of what we'll do here>
+
+#### 1. Install Punch
 In the terminal, enter the following command:
-sudo npm install -g punch
 
-This should install Punch as a global npm package.
+```
+npm install -g punch
+```
 
-Then, enter punch.
-This should show you a list of available commands in Punch.
+This should install Punch as a global npm package, at least if you're using nvm to control and handle your node.js versions. If not and if the command hasn't got the right privileges, you will need to add sudo to the front, like this: `sudo npm install -g punch`
 
-Follow the Quick Hands-on Tutorial
+#### 2. Create Site
+
+```
+punch setup my-punch-site
+```
+
+### 3. Quick Hands-on Tutorial
+<Follow the Quick Hands-on Tutorial
 After the installation, you can create your first site by running: punch setup mysite
 
 Go to the mysite directory and start the server: cd mysite; punch s
 Open your browser and visit: http://localhost:9009
-Follow the steps in hands-on tutorial.
+Follow the steps in hands-on tutorial.>
 
 ### Punch Tutorial
 <Punch tutorial intro - what we will do in a phrase or two>
@@ -107,5 +114,7 @@ As mentioned in the intro, Punch is one of the site generators that offer an inc
 
 ### Connect with netlify
 <CONNECT PUNCH TO NETLIFY step-by-step>
+
+
 
 
