@@ -10,18 +10,12 @@ date: 2016-01-13T00:00:00.000Z
 tags: null
 ---
 
-
 ### Welcome to netlify
-<Intro>
 Sculpin is a fast static site generator, which uses Twig templates and is built on Symfony's HTTP Kernel and written in PHP. 
 
 For those unaware, PHP is a serverside language based on C and has long been used to make dynamic homepages. This is not as common as static site generators written in Javascript or Ruby and it's a first for me and interesting since I remember a bit of PHP from back in the day.
 
 Composer is to PHP what npm is to node.js or bundler is to Ruby and will install and handle dependencies for the project and it comes built into Sculpin. 
-
-<INTRO A BIT ABOUT Sculpin>
-
-It's based on and written in PHP
 
 <LINKS AND REQUIREMENTS - PHP version ???>
 
@@ -43,8 +37,6 @@ cd myblog
 cd ~/myblog
 sculpin install
 ```
-
-
 
 #### Quick Install Sculpin - OSX:
 
