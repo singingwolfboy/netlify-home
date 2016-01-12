@@ -64,7 +64,7 @@ gulp.task('watch', function () {
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', 'admin/*', '_posts/*', 'docs/*.md', 'img/*', 'js/*.js', '_plugins/*.rb', '_data/*.yml'], ['jekyll-rebuild']);
 });
 
-gulp.task('build', ['prepare', 'sass', 'jekyll-build']);
+gulp.task('build', ['sass', 'jekyll-build']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
