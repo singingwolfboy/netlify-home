@@ -115,14 +115,11 @@ The header file:
         # Insert header layout here
 ```
 
-
 The footer file:
 
 ```
         # Insert footer layout here
 ```
-
-
 
 #### 6. Create Layout
 When using Punch, it's important to know a few things about how Punch works internally.
@@ -138,18 +135,15 @@ Open the newly created *index.mustache* file and fill it in like this:
 {{> header }}
 
         <div role="main">
-            <img src="punch_banner.jpg">
+            <img src="punch_banner.png">
             {{{content}}} 
         </div>
 
 {{> footer }}
 ```
 
-
-
-Furthermore we've added an image file just above the content.
-
-
+What's that? It's identical to the default file?  Well yes, the only change is the addition of the *punch_banner.png* image to show the world that this site was made with punch.
+For this to work properly, you'll need to add the *punch_banner.png* image to the `content/image` folder.
 
 #### 7. Title & Navigation
 As mentioned in the intro, Punch is one of the site generators that offer an incredibly easy way to set up a simple navigation bar., by editing the 
@@ -171,9 +165,6 @@ As mentioned in the intro, Punch is one of the site generators that offer an inc
 <OBS: If you want to change the markup used for the site title and navbar, you can do it by editing templates/_header.mustache.> 
 
 <OBS: Also note, any property you define in contents/shared.json is made available to all pages of the site.>
-
-
-
 
 ### Pushing Punch to GitHub
 <PUNCH ON GITHUB step-by-step>
