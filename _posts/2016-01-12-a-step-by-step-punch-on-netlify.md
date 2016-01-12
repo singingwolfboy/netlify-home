@@ -61,11 +61,19 @@ Go to the mysite directory and start the server: cd mysite; punch s
 Open your browser and visit: http://localhost:9009
 Follow the steps in hands-on tutorial.
 
-<PUNCH TUTORIAL STUFF?>
-<FOLDERS TREE>
+### Punch Tutorial
+<Punch tutorial intro - what we will do in a phrase or two>
+
+#### 1. Install 
+npm install punch #check this, just guessing
+
+#### 2. Folder Tree
 Punch takes the whole separation of content from presentation concept very seriously, which is of course a good thing, as it helps divide the work in a sensible manner.
 For this purpose the two are divided into two folders named contents and templates and as the names imply, one is for the content, such as your articles, posts and images and the other is for all the presentational elements, such as the layouts
 
+<FOLDERS TREE picture>
+
+#### 3. Edit Layout
 Edit the file named _layout.mustache - this is the main layout and we use it for everything in our guide.
 Insert tag {{{content}}} inside <div role="main"></div>.
 
@@ -79,7 +87,8 @@ Also note, any property you define in contents/shared.json is made available to 
 
 Now let's go back to homepage and try to make it little prominent.
 
-<PUNCH ON GITHUB>
+### Pushing Punch to GitHub
+<PUNCH ON GITHUB step-by-step>
 
 
 <CONNECT PUNCH TO NETLIFY>
