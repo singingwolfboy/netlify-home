@@ -12,6 +12,7 @@ tags: null
 
 ### Welcome to netlify
 <INTRO - A BIT ABOUT PUNCH, pro's and cons>
+Pro's -> easy to fiddle with Navigation, fast as f... to set up et>
 
 REQUIREMENTS: Node.js (version?)
 Node.js with npm link.
@@ -77,11 +78,15 @@ For this purpose the two are divided into two folders named contents and templat
 Edit the file named _layout.mustache - this is the main layout and we use it for everything in our guide.
 Insert tag {{{content}}} inside <div role="main"></div>.
 
+#### 4. Partials
+<ADD PARTIALS - Layout files, other than the _layout.mustache, that has a name starting with an underscore are known as partial layouts. You can include them in other layouts, using the following syntax - {{> header }}.>
 
+#### 5. Title & Navigation
+As mentioned in the intro, Punch is one of the site generators that offer an incredibly easy way to set up a simple navigation bar., by editing the 
+<Edit share.jason - EXAMPLE>
 
-
-
-Sweet! This site is coming up nicely. If you want to change the markup used for the site title and navbar, you can do it by editing templates/_header.mustache. Layout files, other than the _layout.mustache, that has a name starting with an underscore are known as partial layouts. You can include them in other layouts, using the following syntax - {{> header }}.
+#### 6.
+This site is coming up nicely. If you want to change the markup used for the site title and navbar, you can do it by editing templates/_header.mustache. 
 
 Also note, any property you define in contents/shared.json is made available to all pages of the site.
 
@@ -90,7 +95,7 @@ Now let's go back to homepage and try to make it little prominent.
 ### Pushing Punch to GitHub
 <PUNCH ON GITHUB step-by-step>
 
-
-<CONNECT PUNCH TO NETLIFY>
+### Connect with netlify
+<CONNECT PUNCH TO NETLIFY step-by-step>
 
 
