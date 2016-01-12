@@ -10,6 +10,7 @@ date: 2016-01-12T00:00:00.000Z
 tags: null
 ---
 
+{% raw %}
 ### Welcome to netlify
 <INTRO - A BIT ABOUT PUNCH, pro's and cons>
 Pro's -> easy to fiddle with Navigation, fast as f... to set up with some default content etc.>
@@ -97,7 +98,7 @@ Fill it in like this:
 {{> header }}
 
         <div role="main">
-            {% raw %}{{{content}}}{% endraw %} 
+            {{{content}}} 
         </div>
 
 {{> footer }}
@@ -317,3 +318,4 @@ You can change the site to be private and password protected, which is great for
 
 You can see our demo site [here](http://punch.netlify.com/) and the GitHub project for the demo site [here](https://github.com/jimmilee/punch-demo).
 
+{% endraw %}
