@@ -16,11 +16,9 @@ The DDoS attack was a large, mostly UDP based, volumetric attack sending more th
 
 Fortunately, the large majority of netlify sites kept working without any interruption of service as our system automatically detected the attack and started routing traffic away from Rackspace's Chicago data center.
 
-However, some sites went down hard from this, because of the way their DNS was setup.
+However, a small number of sites were affected and down from this. They differed from the rest by how their DNS was setup and they were primarily sites that were using the root domain as their canonical domain, rather than prefixing their site with www.
 
-These were primarily sites that were using the root domain as their canonical domain, rather than prefixing their site with `www`.
-
-As soon as we detected the problem, we tried to identify all sites affected by the DDoS attack and sent out instructions on how to mitigate this by changing a DNS record.
+As soon as we detected the problem, we tried to identify all sites affected by the DDoS attack and sent out instructions on how to mitigate this by changing a DNS record and directed them to the netlify docs that recommends a C-name setup as this prevents downtime from exactly this type of attack.
 
 ## To WWW or not to WWW
 
@@ -37,15 +35,15 @@ DNS is the internet-wide phonebook that tells browsers (and any other connected 
 For websites, there are 3 kinds of relevant records today:
 
 * **A Record**
-  
+
   An A record returns an IPv4 address of a server
-  
+
 * **AAAA Record**
-  
+
   Same as an A record, but returns an IPv6 address
-  
+
 * **CNAME Record**
-  
+
   Returns another domain name that the browser should lookup instead
 
 When you configure a custom domain to point to a netlify site, we always recommend that you use a CNAME record pointing at `<yoursite>.netlify.com` (where `<yoursite>` depends on the name of your netlify site).
@@ -103,7 +101,7 @@ There are two benefits:
 1. **You essentially get the benefit of a CNAME for your apex domain**
 
    We can still route around outages and do some geographic traffic direction
-   
+
 2. **End users save an extra DNS lookup**
 
    Instead of first looking up the CNAME record, and then looking up the final IP, the browser gets an IP   straight away.
