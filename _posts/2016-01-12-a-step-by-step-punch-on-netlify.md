@@ -97,11 +97,10 @@ As mentioned in the intro, Punch is one of the site generators that offer an inc
 ```
 
 #### 6.
-This site is coming up nicely. If you want to change the markup used for the site title and navbar, you can do it by editing templates/_header.mustache. 
+<OBS: If you want to change the markup used for the site title and navbar, you can do it by editing templates/_header.mustache.> 
 
-Also note, any property you define in contents/shared.json is made available to all pages of the site.
+<OBS: Also note, any property you define in contents/shared.json is made available to all pages of the site.>
 
-Now let's go back to homepage and try to make it little prominent.
 
 ### Pushing Punch to GitHub
 <PUNCH ON GITHUB step-by-step>
