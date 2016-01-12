@@ -183,12 +183,14 @@ Open the contents folder and create a directory named `_blog`, then create the *
 
 {{> footer }}
 ```
+
 <OBS: If you want to change the markup used for the site title and navbar, you can do it by editing templates/_header.mustache.> 
 
 #### 9. Create Content
 To see if our new blog page works properly, we have to create some articles for it.
 Write some new or copy paste some old articles and put them in the <WHAT FOLDER???>, two or three will do.
 Use the following frontmatter and fill in the content with whatever markdown you wish:
+
 ```
 ---
 YAML STUFF
@@ -196,7 +198,11 @@ YAML STUFF
 MARKDOWN CONTENT HERE
 ```
 
-#### 10. Build it and smile :)
+#### 10. Edit configuration
+Open up the content\config.json file and take a look
+<MAKE AN EXAMPLE SETUP>
+
+#### 11. Build it and smile :)
 If you've kept the punch server window open (the terminal window in which you ran the `punch s` command), simply refresh the browser window.
 
 ### Pushing Punch to GitHub
