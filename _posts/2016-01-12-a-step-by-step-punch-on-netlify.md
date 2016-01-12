@@ -97,7 +97,7 @@ Fill it in like this:
 {{> header }}
 
         <div role="main">
-            {{{content}}} 
+            {% raw %}{{{content}}}{% endraw %} 
         </div>
 
 {{> footer }}
