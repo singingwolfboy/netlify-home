@@ -1,10 +1,4 @@
 ---
-cmsUserSlug: redirects-and-rewrite-rules
-<<<<<<< HEAD
-date: 2015-11-23 
-=======
-date: 2015-12-15 
->>>>>>> staging
 title: Redirects and Rewrite Rules
 position: 40
 ---
