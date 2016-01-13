@@ -10,6 +10,7 @@ date: 2015-12-08T00:00:00.000Z
 tags: null
 ---
 
+{%raw %} 
 ### Welcome to netlify
 Today I'm writing about Metalsmith.
 
@@ -134,11 +135,11 @@ First - for each plugin you want to install, you need to run the following comma
 
 ```
 npm install plugin-name --save
-``` 
+```
 
 Second, you have to add each plugin to your build file with a variable declared and set to `require ('plugin-name')` and third, below that invoked with `.use(variable-name())` as seen in the *build.js* file above.
 
-Furthermore the destination folder is defined with the `.destination('./build')` and in the final line, the build method is called, with a callback to handle possible errors.
+Furthermore the destination folder is defined with `.destination('./build')` and in the final line, the build method is called, with a callback to handle possible errors.
 
 Once you have the build file saved, you can try to build the page with the following command:
 
@@ -235,7 +236,6 @@ We'll keep it simple and merely present the content with a title and the aforeme
 I present to you the *page.hbt* file (in the templates directory):
 
 ```
-{% raw %}
 {{> header}}
 
 <h2>{{title}}</h2>
@@ -245,10 +245,9 @@ I present to you the *page.hbt* file (in the templates directory):
 </article>
 
 {{> footer}}
-{% endraw %}
 ```
 
-To add the partials we simply insert the line `{% raw %}{{> partial-name }}{% endraw %}` as seen above. 
+To add the partials we simply insert the line `{{> partial-name }}` as seen above. 
 
 Let's move on to creating these partials.
 
@@ -283,15 +282,15 @@ The header partials file *header.hbt* in the `templates/partials` folder:
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Metalsmith Test Site</title>
+        <title>Metalsmith Demo Site</title>
 
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="../styles/main.css" type="text/css" />
+        <link rel="stylesheet" href="styles/main.css" type="text/css" />
     </head>
     <body>
 
         <header>
-            <h1>The Metalsmith Demonstration Site</h1>
+            <img src="/images/metalsmithlogo.jpg" alt="Metalsmith Demo Site" height="226" width="709">
         </header>
 
         <div class="main-wrapper">
@@ -383,7 +382,6 @@ To see the difference between our two collections, the pages and the articles, w
 The *article.hbt* template file:
 
 ```
-{%raw %}
 {{> header}}
 
 <h2>{{title}}</h2>
@@ -393,7 +391,6 @@ The *article.hbt* template file:
 </article>
 
 {{> footer}}
-{%endraw %}
 ```
 
 Next, we need to create at least one article, but preferably a few more than that, to illustrate how the files are sorted. Each of the articles should have the following YAML frontmatter:
@@ -423,7 +420,6 @@ template: blog.hbt
 For our blog template, we create a *blog.hbt* file in the templates folder and put the following content in it:
 
 ```
-{%raw %}
 {{> header}}
 
 <h2>{{title}}</h2>
@@ -433,19 +429,18 @@ For our blog template, we create a *blog.hbt* file in the templates folder and p
         {{#each collections.articles}}
             <li>
                 <h3>{{this.title}}</h3>
-                <article>{{{this.contents}}}</article>
+                <article>{{this.contents}}</article>
             </li>
         {{/each}}
     </ul>
 </article>
 
 {{> footer}}
-{% endraw %}
 ```
 
 Remember the collections we made, aptly named pages and articles? 
 
-Well, as mentioned it's easy to access these in the template and we're doing this with the `{%raw %}{{#each collections.articles}}{% endraw %}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the files in the articles collection.
+Well, as mentioned it's easy to access these in the template and we're doing this with the `{{#each collections.articles}}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the files in the articles collection.
 
 #### 16. Build It
 If you made it this far, you should already have an idea of how Metalsmith works internally and where to start if you want to use Metalsmith with continuous deployment on netlify, with GitHub serving the files.
@@ -567,3 +562,4 @@ Once netlify has build your site, it will assign a random name to it and you'll 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
 You can see our demo site [here](http://metalsmith-demo.netlify.com/) and the GitHub project [here](https://github.com/segmentio/metalsmith).
+{%endraw %}
