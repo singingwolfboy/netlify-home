@@ -271,7 +271,7 @@ Open up the content\config.json file and take a look
 
 < MAKE AN EXAMPLE SETUP of content\config.json >
 
-#### 11. Build it and smile :)
+#### 11. Build it and smile
 If you've kept the punch server window open (the terminal window in which you ran the `punch s` command), simply refresh the browser window.
 
 ### Pushing Punch to GitHub
