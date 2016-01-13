@@ -122,6 +122,9 @@ Fill it in like this:
 
 It's pretty simple really. We introduce partials, which follow the Mustache formula (same as with handlebars) with `{{> partial-name }}` to insert a partial in the layout. In our example the header will be printed instead of the `{{> header }}` code and the footer will be printed instead of the `{{> footer }}` code.
 
+Notice the use of an extra set of handlebars around the content tag? This will escape the content and serve it  as unescaped HTML, instead of just text and thus this is how we serve up the content, enabling us to use HTML inside the content.
+<WAIT A SEC - IS THAT REALLY WHY?  CHECK>
+
 Well, these partials don't make themselves, so let's move on to creating these partials with the punch site generator.
 
 #### 5. Partials
@@ -240,7 +243,7 @@ We filled in our `share.jason` file like this, changing the title, the footer te
 
 Again it's kept fairly simple. Any property defined in this file, is made available to all pages of the site, which can come in handy if you need some globally shared variables. As you saw in step 5 and 6, it's then possible to reference these values from the layout and we demonstrate this by using all of the information above in the header and footer partials. 
 
-The navigation bar is very easy to set up, with a number of labels, each with a name, an empty href field (useful if we want to call a javascript when interacting with a button) and a path and we've added 3 options, which we will quickly set up. One is for our landing page and is simply named Home, while the other two are About, which points to the about folder, and the Blog label pointing to the blog folder.
+The navigation bar is very easy to set up, with a number of labels, each with a name and a path and we've added 3 options, which we will quickly set up. One is for our landing page and is simply named Home, while the other two are About, which points to the about folder, and the Blog label pointing to the blog folder.
 
 #### 8. Create Blog Layout
 We'll create the blog layout and populate it with articles (we'll create these in the next step).
@@ -253,26 +256,41 @@ Open the contents folder and create a directory named `_blog`, then create the *
     <div role="main">
         <ul class="article_list">
             {{#article_list}}
-                <li><a href="{{{href}}}">{{label}}</a>
-                {{{content}}} 
+                <li>
+                    <h3>{{title}}</h3>
+                    <article>{{content}}</article>    
             {{/article_list}}
         </ul>
     </div>
+
 {{> footer }}
-
-
-#    <ul>
-#        {{#each collections.articles}}
-#            <li>
-#                <h3>{{this.title}}</h3>
-#                <article>{{this.contents}}</article>
-#            </li>
-#        {{/each}}
-#    </ul>
-
 ```
 
-The layout follows the winning formula from the other two pages, with the header and footer placed at the top and bottom and the center dedicated to content. Unlike the other pages though, this is where something interesting happens as it cycles through all your articles and prints them in succession, with the newest articles first, like one would do with a blog or news paper.
+The layout follows the winning formula from the other two pages, with the header and footer placed at the top and bottom and the center dedicated to content. Unlike the other pages though, this is where something interesting happens, as we will use Mustache to cycle through all the articles and prints them in succession, with the newest articles first, like one would do in a blog or news paper.
+
+Let's take a closer look at the Mustache inserted in the HTML and explain in detail.
+
+Inside the unordered list (the `<ul>` tags) we'll list our articles, as defined with the Mustache section tags `{{#article_list}}` to begin and `{{/article_list}}` to end the section.
+
+Within this section we'll print an ordered list item for each article (ordered list tags are `<li>` and `</li>`).
+
+Inside the ordered list item, we'll print the title as a headline above the content text, with the title line: `<h3>{{title}}</h3>` 
+
+The content is printed underneath, inside the article tag liks this: `<article>{{content}}</article>`
+
+Now all that's needed is for the list of articles to be available in a json file (e.g. share.json, making the articles available everywhere)
+
+<OBS - HOW TO GET THIS INFO AT RUNTIME?>
+share.json:
+```
+{
+  "article_list": [
+    { "title": "Article Title 1", "content": "This is the main content, but where should it go?" },
+    { "title": "Article Title 2", "content": "This is the main content, but where should it go?" },
+    { "title": "Article Title 3", "content": "This is the main content, but where should it go?" }
+  ]
+}
+```
 
 #### 9. Create Content
 To see if our new blog page works properly, we have to create some articles for it.
