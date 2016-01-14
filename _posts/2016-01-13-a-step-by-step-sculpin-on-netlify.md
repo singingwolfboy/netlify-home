@@ -11,31 +11,41 @@ tags: null
 ---
 
 ### Welcome to netlify
-Sculpin is a fast static site generator, which uses Twig templates and is built on Symfony's HTTP Kernel and written in PHP. 
+Sculpin is a fast static site generator, which uses Twig templates, is built on Symfony's HTTP Kernel and written in PHP. It's the most popular site generator written in PHP, with almost 3 times the stars of the second most popular and it's arguably the most mature and well documented static site generator written in PHP.
 
-For those unaware, PHP is a serverside language based on C and has long been used to make dynamic homepages. This is not as common as static site generators written in Javascript or Ruby and it's a first for me and interesting since I remember a bit of PHP from back in the day.
+For those unaware, PHP is a serverside language based on C and has long been used to make dynamic homepages. This is not as common as static site generators written in Javascript or Ruby and it will be interesting to see how it works compared with these.
 
-Composer is to PHP what npm is to node.js or bundler is to Ruby and will install and handle dependencies for the project and it comes built into Sculpin. 
+If you feel at home with PHP, Sculpin will be right up your alley and it comes with lots of build in features, such as embedded Composer. Composer is to PHP what npm is to node.js or bundler is to Ruby and will install and handle dependencies for the project and it comes built into Sculpin. 
 
-<LINKS AND REQUIREMENTS - PHP version ???>
+<LINKS AND REQUIREMENTS - PHP version 5 or up with php-cli ???>
+Quick installation of PHP 5:
+
+```
+sudo apt-get update
+sudo apt-get install php5 libapache2-mod-php5       # Main thing - PHP5
+sudo apt-get install php5-cli                       # command line addition
+(sudo apt-get install php5-mysql)                   # Or NO?
+sudo apt-get install php5-curl                      # Sculpin needs these libraries
+```
 
 ### QUICK GUIDE LINUX, OSX, WINDOWs
-<REWRITE SIMILAR: If you want to get a head start, you can download, install and setup from the terminal (or command prompt) in this quick start guide. However, if you need a more detailed introduction and guide, simply scroll down to [here](#sculpinsetup).>
+This sections contains a small quick guide, for each of the big three operatins systems, so whether you're on Apple, Windows or Linux, we got you covered. However, if you need a more detailed introduction and guide, simply scroll down to [here](#sculpinsetup).
+
+The commands will help you download and install Sculpin with a blog skeleton
 
 #### Quick Install Sculpin - Linux:
 
 ```
 curl -O https://download.sculpin.io/sculpin.phar
 chmod +x sculpin.phar
+sudo mv sculpin.phar '/usr/local/bin/sculpin'
 
-mv sculpin.phar ~/bin/sculpin
+git clone https://github.com/sculpin/sculpin-blog-skeleton.git my-sculpin-site
+cd my-sculpin-site
 
-cd ~
-git clone https://github.com/sculpin/sculpin-blog-skeleton.git myblog
-cd myblog
-
-cd ~/myblog
 sculpin install
+
+sculpin generate --watch --server
 ```
 
 #### Quick Install Sculpin - OSX:
@@ -51,21 +61,54 @@ Windows command prompt install commands
 ```
 
 ### SETUP Sculpin
+The quick guide is not to everyone's taste and so we'll delve deeper into the setup and installation of Sculpin in this step-by-step guide.
 
-#### 1. Download Sculpin
-Download and set permissions
+Please note, that while the quick start guide was tested on all three operating systems, this detailed main guide was only tested in Ubuntu Linux and while it will work with only slight changes in OSX, it will be somewhat different when using the Windows OS!
+
+#### 1. sculpin.phar - Download, Permissions and PATH
+Let's get this slippery sculpin, set its permissions and add it to the path.
+
+Open a terminal window and use the following three commands:
 
 ```
 curl -O https://download.sculpin.io/sculpin.phar
 chmod +x sculpin.phar
+sudo mv sculpin.phar '/usr/local/bin/sculpin'
 ```
 
-#### 2. Add Sculpin to the Path
-Add Sculpin to the path so that you can access it from everywhere.
+This will download sculpin using curl, set its permissions so it can be executed and add it to your PATH, so it can be executed from anywhere. 
+
+#### 2. Clone Boilerplate
+Sculpin can be customized to run just about any kind of site you'd want to, but unless you want to specify all of this by yourself, it helps to clone a sculpin skeleton structure for your type of site.  
+
+We'll clone the blog skeleton and enter it with the following commands in terminal:
 
 ```
-mv sculpin.phar ~/bin/sculpin
+git clone https://github.com/sculpin/sculpin-blog-skeleton.git my-sculpin-site
+cd my-sculpin-site
 ```
+
+#### 3. Install Dependencies
+Before we can view our Sculpin site, it will need to install various dependencies, using composer. 
+
+Since composer is built into sculpin, simply run this command from terminal in the root of your site:
+
+```
+sculpin install
+```
+
+As we downloaded the skeleton, we've already got the essentials needed to view the site!
+
+#### 4. Run Sculpin Run
+Let's take a look at our first catch of the day by running this sculpin command in a terminal window:
+
+```
+sculpin generate --watch --server
+```
+
+The generate command will build our site and when using the `--watch` flag, Sculpin will watch of the files in your site like a hawk and whenever anything's changed, it will re-generate the site automatically and instantly. The `--server` flag will launch a PHP web server, so you can see your work in progress at [localhost:8000](http://localhost:8000/).
+
+Go ahead and take a peek.
 
 ### Sculpin TUTORIAL
 
@@ -78,26 +121,6 @@ You will notice several configuration files in the main directory for your proje
 
 app contains all the logic for generating the blog.
 source contains the raw content for your blog.
-
-#### 2. Install Dependencies
-First we tell Sculpin to install any relevant dependencies for our site with `sculpin install` and ? ? ?
-
-```
-cd ~/myblog
-sculpin install
-```
-
-#### 3. 
-
-```
-
-```
-
-#### 4. Run Sculpin Run
-
-```
-sculpin generate --watch --server
-```
 
 ### Pushing Sculpin to GitHub
 <a id="githubstart"></a>
