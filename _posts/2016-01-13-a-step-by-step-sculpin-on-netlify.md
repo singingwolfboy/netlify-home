@@ -110,10 +110,8 @@ The generate command will build our site and when using the `--watch` flag, Scul
 
 Go ahead and take a peek.
 
-### Sculpin TUTORIAL
-
-#### 1. Create folder structure
-Fork the empty basic folder structure from [here](https://github.com/JimmiLee/sculpin-demo-empty).
+#### 5. Folder Structure
+Since we forked the basic folder structure from the blog skeleton, our folder structure is slightly different from an ordinary Sculpin site.
 
 <IMAGE FOLDER STRUCTURE>
 
@@ -121,6 +119,24 @@ You will notice several configuration files in the main directory for your proje
 
 app contains all the logic for generating the blog.
 source contains the raw content for your blog.
+output_dev contains the build output or the site and won't actually be created until you build the site the first time.
+
+#### 6. Create Content
+<Create markdown file, using Jekylls file name format YYYY-MM-DD-Title.md to create a file!>
+
+```
+---
+YAML FRONTMATTER
+---
+MARKDON CONTENT
+```
+
+<With this one file you've updated the blog listing, created a page for the post, and updated the atom feed.
+Assuming you are still running the server with the command sculpin generate --watch --server, the new pages are now available on your local server (localhost:8000). You will need to refresh the browser to see your new content.>
+
+When working with Sculpin it's worth noting two things about running the server. The first is that it might crash, but the solution to this is simple, as all you have to do is run the generate command again like before: `sculpin generate --watch --server`
+
+Another tiny issue is when the content hasn't generated completely, for whatever reason. When this happens, simply stop and then restart the server, by first pressing control + c (while you have your terminal window with the server running selected) and then running the generate command again like this: `sculpin generate --watch --server` 
 
 ### Pushing Sculpin to GitHub
 <a id="githubstart"></a>
