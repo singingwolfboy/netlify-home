@@ -145,7 +145,7 @@ attributes:
     details: ["No", "Yes", "Yes", "Yes"]
     info: Netlify includes high uptime DNS hosting, with a simple but powerful DNS panel and full API access.
   - title: Basic SSL
-    details: ["No", "Yes", "Yes", "Yes"]
+    details: ["Yes", "Yes", "Yes", "Yes"]
     info: Enable HTTPS for your site. Basic SSL is based on a browser standard called SNI that's supported by all modern browsers. Free certificate included in your plan.
     link_text: Why you want SSL on your site
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site

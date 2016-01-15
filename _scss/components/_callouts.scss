@@ -40,3 +40,19 @@
   border: 1px dashed white;
   opacity: 0.5;
 }
+
+.callout--banner {
+  border-radius: 0;
+  text-align: center;
+
+  &.callout--stitch:after {
+    border-radius: 0;
+    width: 100%;
+    left: 0;
+    border-width: 1px 0;
+  }
+
+  .callout-text {
+    padding: 1% 10%;
+  }
+}
