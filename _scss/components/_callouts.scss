@@ -1,5 +1,6 @@
 /* Call outs
 ------------------------------*/
+
 /* To center the text vertically in the callout: 
  * http://css-tricks.com/centering-in-the-unknown/
  */
@@ -35,7 +36,24 @@
   height: 90%;
   left: 5%;
   top: 5%;
-  border-radius: 100%;
   border: 1px dashed white;
+  border-radius: 100%;
   opacity: 0.5;
 }
+
+.callout--banner {
+  border-radius: 0;
+  text-align: center;
+
+  &.callout--stitch:after {
+    border-radius: 0;
+    width: 100%;
+    left: 0;
+    border-width: 1px 0;
+  }
+
+  .callout-text {
+    padding: 1% 10%;
+  }
+}
+
