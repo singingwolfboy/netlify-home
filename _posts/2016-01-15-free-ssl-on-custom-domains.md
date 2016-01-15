@@ -3,7 +3,7 @@ title: "A World's First. Free SSL with Let's Encrypt"
 author: Matt Biilmann
 image: null
 short_title: Announcing Free SSL
-description: From today HTTPS is a free one-click setup on all our plans
+description: "A World's First. Free SSL with Let's Encrypt. From today HTTPS is a free one-click setup on all our plans"
 thumbnail: /uploads/padlock.png
 cmsUserSlug: ""
 date: 2016-01-15T00:00:00.000Z
