@@ -31,6 +31,11 @@ ul {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+}
+
 
 /*
  * Content containers
