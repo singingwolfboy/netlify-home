@@ -113,7 +113,7 @@ Go ahead and take a peek.
 #### 5. Folder Structure
 Since we forked the basic folder structure from the blog skeleton, our folder structure is slightly different from an ordinary Sculpin site.
 
-< Insert IMAGE FOLDER STRUCTURE >
+// Insert IMAGE FOLDER STRUCTURE 
 
 You will notice several configuration files in the main directory for your project as well as the following directories:
 
