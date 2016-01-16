@@ -26,7 +26,7 @@ Until now most certificate authorities have been making a huge business of charg
 
 Back in 2012 two Mozilla employees got fed up with this, and started the Let’s Encrypt project to turn the certificate business on it's head and make free SSL certificates available to everybody.
 
-After years of hard work, Let’s Encrypt is now ready and have already issues more than 300,000 free SSL certificates during their period of public beta.
+After years of hard work, Let’s Encrypt is now ready and have already issued more than 300,000 free SSL certificates during their period of public beta.
 
 ## A certificate isn't enough
 
@@ -42,7 +42,7 @@ Having your site on a CDN is the most important step to lower the time to first 
 
 CDN based SSL has traditionally been expensive, because managing large volumes of certificates on a global distributed network, is far more tricky than managing a simple server.
 
-At netlify we've been working for a long time on building an efficient and secure infrastructure to distribute and rotate SSL certificate across our global network.
+At netlify we've been working for a long time on building an efficient and secure infrastructure to distribute and rotate SSL certificates across our global network.
 
 This has required working on patches to the open-source cache servers that powers our CDN and implementing a new system for securely transferring certificates and keys over encrypted connections, without ever storing sensitive keys on the disks of our CDN edge nodes.
 
