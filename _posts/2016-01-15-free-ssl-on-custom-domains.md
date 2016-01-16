@@ -49,3 +49,13 @@ This has required working on patches to the open-source cache servers that power
 All in order to be able to give all of our users easy access to free, automated SSL and to push the new category of static web tech forward.
 
 Big kudos to the team behind Let’s Encrypt for lowering the barriers to secure communication over the internet and we hope you'll all enjoy this new netlify integration.
+
+## Getting Started
+
+To get started with Let's Encrypt powered SSL on netlify, first create a new site in netlify, either via our [cli tool](/docs/cli) or via our [web UI](https://app.netlify.com/sites) and [configure a custom domain](/docs/custom-domains).
+
+Once your custom domain has been configured, you can head over to the `ssl` tab for your site.
+
+![screen-shot-2016-01-15-at-10.02.59-pm.png](/uploads/screen-shot-2016-01-15-at-10.02.59-pm.png)
+
+Click on **Let's Encrypt Certificate** and netlify will instantly provision and install a certificate for your site. The whole process takes seconds, and netlify will renew your certificate automatically.
