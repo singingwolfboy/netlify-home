@@ -113,7 +113,7 @@ Go ahead and take a peek.
 #### 5. Folder Structure
 Since we forked the basic folder structure from the blog skeleton, our folder structure is slightly different from an ordinary Sculpin site.
 
-<IMAGE FOLDER STRUCTURE>
+< Insert IMAGE FOLDER STRUCTURE >
 
 You will notice several configuration files in the main directory for your project as well as the following directories:
 
@@ -122,7 +122,7 @@ source contains the raw content for your blog.
 output_dev contains the build output or the site and won't actually be created until you build the site the first time.
 
 #### 6. Create Content
-<Create markdown file, using Jekylls file name format YYYY-MM-DD-Title.md to create a file!>
+< Create markdown file, using Jekylls file name format YYYY-MM-DD-Title.md to create a file! >
 
 ```
 ---
