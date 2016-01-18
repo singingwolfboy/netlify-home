@@ -223,7 +223,7 @@ Open the newly created *index.mustache* file and fill it in like this:
 {{> header }}
 
         <div role="main">
-            <img src="/images/punch_banner.png">
+            <img src="\images\punch_banner.png" alt="The Punch SSG">
             {{{content}}} 
         </div>
 
@@ -232,7 +232,7 @@ Open the newly created *index.mustache* file and fill it in like this:
 
 What's that? It's identical to the default file?  Well yes, the only change is the addition of the *punch_banner.png* image to show the world that this site was made with punch.
 
-For this to work properly, you'll need to add the *punch_banner.png* image to the `content\images` folder.
+For this to work properly, you'll need to add the *punch_banner.png* image to the `templates\images` folder.
 
 #### 7. Title & Navigation
 As mentioned a few times already, Punch is one of the few site generators that offer an incredibly easy way to set up a simple navigation bar straight out of the box, by simply editing the `share.jason` file in the contents folder.
@@ -265,24 +265,15 @@ Open the contents folder and create a directory named `_blog`, then create the *
 
     <div role="main">
         <ul class="article_list">
-            {{#article_list}}
+            {{#articles}}
                 <li>
                     <a href="{{ permalink }}">{{{ title }}}</a>
                     <article>{{content}}</article>    
-            {{/article_list}}
+            {{/articles}}
         </ul>
     </div>
 
 {{> footer }}
-
-#            {{#posts}}
-#            <li>
-#                <a href="{{ permalink }}">{{{ title }}}</a>
-#                <time class="updated" datetime="{{ published_date }}" pubdate>{{#short_date}}{{published_date}}{{/short_date}}</time>
-#            </li>
-#            {{/posts}}
-
-
 ```
 
 The layout follows the winning formula from the other two pages, with the header and footer placed at the top and bottom and the center dedicated to content. Unlike the other pages though, this is where something interesting happens, as we will use Mustache to cycle through all the articles and print them in succession, with the newest articles first, like one would do in a blog or news paper.
