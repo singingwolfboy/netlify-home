@@ -291,7 +291,9 @@ The content is printed underneath, inside the article tag liks this: `<article>{
 Now all that's needed is for the list of articles to be available in a json file (e.g. share.json, making the articles available everywhere)
 
 <OBS - HOW TO GET THIS INFO AT RUNTIME?>
+
 share.json:
+
 ```
 {
   "articles": [
