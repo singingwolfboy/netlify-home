@@ -12,15 +12,14 @@ tags: null
 
 {% raw %}
 ### Welcome to netlify
-Punch is a nice static site generator from Sri Lanka by Lakshan Perera. 
-It's written in javascript with node.js and what immediately stands out is its user friendliness with good documentation, while it takes only a few minutes to set up. It's not too much different from other node.js based generators and uses Mustache for its templates, with content in JSON format, though Markdown is also possible.
+Punch is a nice static site generator from Sri Lanka (written by Mr. Lakshan Perera). 
+It's written in javascript with node.js and what immediately stands out is its user friendliness and good basic documentation to get you started, while it takes only a few minutes to set up. It's not too much different from other node.js based generators and uses Mustache for its templates, with content in JSON format, though Markdown and other possibilities exist.
 
-The aim for Punch, as defined by Mr. Lakshan Perera, is to *"help anyone to build (and maintain) modern websites using only HTML, CSS and JavaScript"* and while it's largely inspired from Jekyll it is NOT a blog engine.
+The aim for Punch, as defined by Mr. Lakshan Perera, is to *"help anyone to build (and maintain) modern websites using only HTML, CSS and JavaScript"* and while it's largely inspired from Jekyll it is *NOT* a blog engine.
 
-Unlike most other static site generators, it's extremely fast and easy to change the navigation and generally speaking, it's fast and easy to get started with and comes with boilerplates.
+Unlike most other static site generators, it's extremely fast and easy to change the navigation and generally speaking, it's fast and easy to get started with and comes with a boilerplate.
 
-<INSERT PUNCH PIC?>
-
+### Today's Guide
 In our guide today, we'll do a basic Punch site with a few plugins and once we're satisfied, we'll push our site to GitHub and deploy it on netlify.
 
 If you're all set with a Punch repo or site of your own and all you want to do is see how we connect and build a Punch site on netlify, you can skip the majority of this guide and start down [here](#netlifystart) instead.
@@ -32,7 +31,7 @@ And finally, if you want to try out our small Punch tutorial, commence chronolog
 
 For an absolutely stellar article about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
-### QUICK GUIDE LINUX, OSX, WINDOWs
+### QUICK GUIDE 
 This small section is reserved for a small quick start guide to be used by those in a hurry, who simply wish to get all the terminal/command prompt commands to be entered immedeately and consecutively without too much thought.
 
 Only use these if you know what you're doing and remember it's at your own discretion.
@@ -52,25 +51,31 @@ punch s
 
 ```
 OSX terminal install commands
+<REMOVE OR FILL IN>
 ```
 
 #### Quick Install Punch - Windows:
 
 ```
 Windows command prompt install commands
+<REMOVE OR FILL IN>
 ```
 
-Provided you got the requirements sorted, the installation and setup of punch and a punch site can be done with a few short commands in terminal, as seen in the above examples. Simply choose the guide that corresponds with your operating system and substitute my-punch-site with the name of your site.
+Provided you got the requirements sorted, the installation and setup of punch and a punch site can be done with a few short commands in terminal, as seen in the above example for Linux. 
+
+Simply choose the guide that corresponds with your operating system and substitute my-punch-site with the name of your site.
 
 Once you've entered the last command `punch s`, leave the window open, as it will run a web server you can test your site against. Just open your browser and visit [http://localhost:9009](http://localhost:9009) and see for yourself.
 
-It's recommended to take the quick hands-on tutorial, as it will quickly cover the basics and get the ball running, but it's not a prerequisite for this guide.
+It's recommended to take the quick hands-on tutorial, as it will quickly cover the basics and get the ball rolling, but it's not a prerequisite for this guide. 
 
-Please note that while we've included a quick install guide for the Windows OS and tested this, the main guide was only tested on Linux and OSX and it will not work without alterations if you are using a Windows OS!
+Please note that while we've included a quick install guide for the Windows OS and tested this, the main guide was only tested on Linux and OSX and it will not work without alterations for users on Windows OS!
 
 ### Install & Setup Punch
 <a id="punchsetup"></a>
-OK, so you decided the quick start guide was a tad short on the explanations and you're correct of course. We'll give you our own personal template [here](https://github.com/jimmilee/punch-demo-template) and proceed with some details.
+OK, so you decided the quick start guide was a tad short on the explanations and you're correct of course. 
+
+We'll give you our own personal template [here](https://github.com/jimmilee/punch-demo-template) and proceed with some details.
 
 This guide will proceed with the step-by-step setup of the above template and mold it into a small Punch site which we'll host on netlify in continuous deployment with assets on GitHub.
 
@@ -92,21 +97,14 @@ Let's create a site using the `punch setup` command in a terminal window like th
 punch setup my-punch-site
 ```
 
-Easy enough. The punch setup command will setup a site at the present location and named my-punch-site (substitute with your own site name).
+Easy enough. The punch setup command will setup a site at the present location, with the name  my-punch-site (substitute with your own site name).
 
-#### 3. Folder Tree
-Punch takes the whole separation of content from presentation concept very seriously, which is of course a good thing, as it helps divide the work in a sensible manner.
-For this purpose the two are divided into two folders named contents and templates and as the names imply, one is for the content, such as your articles, posts and images and the other is for all the presentational elements, such as the layouts we'll introduce in the next step.
+*Feel free to keep the terminal window open between steps for your own convenience!*
 
-In the side by side pictures shown below, we have the folder structure created by punch on the left, with the somewhat changed folder structure we ended up with on the right:
+#### 3. Edit Layout
+The layouts define how we present the content and in punch the default template engine is [Mustache](http://mustache.github.io/) and though you can optionally change to another template engine, such as [Handlebars](https://github.com/laktek/punch-engine-handlebars), we simply opted to stay with Mustache and give it a try.
 
-<FOLDERS TREE picture - Default folders = side by side with THIS sites Finished folder tree>
-<LINK to GitHub repo with this finished folder tree?>
-
-#### 4. Edit Layout
-The layouts define how we present the content and in punch the default template engine format is [Mustache](http://mustache.github.io/) and though you can optionally change to another template engine, such as [Handlebars](https://github.com/laktek/punch-engine-handlebars), we simply opted to stay with Mustache and give it a try.
-
-Edit the file named *_layout.mustache* inside the template folder - this is the main layout and we use it for everything in our guide.
+Edit the file named *_layout.mustache* inside the template folder - this is the main layout and will be used as a fall back.
 
 Fill it in like this:
 
@@ -120,14 +118,13 @@ Fill it in like this:
 {{> footer }}
 ```
 
-It's pretty simple really. We introduce partials, which follow the Mustache formula (same as with handlebars) with `{{> partial-name }}` to insert a partial in the layout. In our example the header will be printed instead of the `{{> header }}` code and the footer will be printed instead of the `{{> footer }}` code.
+It's pretty simple really. We introduce partials, which follow the Mustache formula with `{{> partial-name }}` to insert a partial in the layout. In our example the header will be printed instead of the `{{> header }}` code tag and the footer will be printed instead of the `{{> footer }}` code tag.
 
-Notice the use of an extra set of handlebars around the content tag? This will escape the content and serve it  as unescaped HTML, instead of just text and thus this is how we serve up the content, enabling us to use HTML inside the content.
-<WAIT A SEC - IS THAT REALLY WHY?  CHECK>
+Notice the use of an extra set of mustache brackets around the content tag? This will escape the content and serve it as unescaped HTML, instead of just text and thus, this is how we serve up the content, enabling us to use HTML inside the content.
 
 Well, these partials don't make themselves, so let's move on to creating these partials with the punch site generator.
 
-#### 5. Partials
+#### 4. Partials
 Punch handles partials like most other static site generators and when you do the setup initially punch includes both a header and a footer partial file. 
 
 We'll basically use these with a few small amendments and the result is below.
@@ -164,9 +161,11 @@ The `_header.mustache` file:
             </header>
 ```
 
-If you've worked with HTML and ever tried to set up a web site, the above will look familiar and straight forward, except for a few oddities, taken from the Mustache templating engine.
+If you've worked with HTML and ever tried to set up a web site, the above will look familiar and straight forward, except for a few oddities taken from the Mustache templating engine.
 
-These are used to "inject" content into the template and thus in the head of our site, `{{{site-title}}}` is used to insert the title of the site in question. The two mustache tags with the stylesheet declaration inside, will reference a stylesheet asset bundle created in the `config.json` (soon my young padawan!) and basically take all the stylesheet files defined in this bundle and turn them into one stylesheet file in our layour named `all.css`.
+These are used to "inject" content into the template and thus in the head of our site, `{{{site-title}}}` is used to insert the title of the site in question. 
+
+The mustache helper tags with the stylesheet declaration inside (the `stylesheet_bundle` tags) are defined by Punch and will reference the stylesheet asset bundle created in the `config.json` (soon my young padawan!). These helper tags will basically take all the stylesheet files defined in this bundle and turn them into one stylesheet file in our layout named `all-xxxxxxxxxxxxx.css` with a fingerprint. 
 
 In the beginning of the body section, we find a header where the site title will be printed in headline letters using this code `{{#upcase}}{{site-title}}{{/upcase}}` and below this header title, we have our navigation bar, declared like this:
 
@@ -180,9 +179,9 @@ In the beginning of the body section, we find a header where the site title will
 
 Let's just stop for a second and take this one in!
 
-There's an ordered list label thing (center line above) inside a mustache navbar element (the `{{#navbar}}` and the `{{/navbar}}` blocks), which is in turn inside an unlinked list of the navbar class!
+Our navigation bar is the ordered list label in the center of the two navbar mustache tags (`{{#navbar}}` and `{{/navbar}}` ) and for each navbar element defined, this line will be printed once with the correct link and label. The triple mustache href tag (`{{{href}}}`), is neccessary to escape the html used for the link, while the double tagged label mustache tag will print the label (`{{label}}`).
 
-Our navigation bar is this ordered list label thing in the center. When you look at the site in a browser, it's our horizontal bar with links to various sections of the site. For each link we define in the `shared.json` file later in this guide (wait a few steps and you'll see), a link button will be printed!
+Try it out and refresh your site and you'll see how easy it is. We'll get to the `share.json` file in which we define these navbar elements, in a few steps.
 
 The `_footer.mustache` file:
 
@@ -197,13 +196,24 @@ The `_footer.mustache` file:
 </html>
 ```
 
-Again it's pretty straight forward, with a small text in the footer, referenced through Mustache and also defined in the fabled `shared.json` file later.
+Again it's pretty straight forward, with a small text in the footer and since we want to put a few links in this text, we'll allow HTML by adding the extra set of mustache brackets. The `{{{footer-text}}}` is referenced through Mustache and also defined in the fabled `shared.json` file later.
+
+#### 5. Folder Tree
+Punch takes the whole separation of content from presentation concept very seriously, which is of course a good thing, as it helps divide the work in a sensible manner.
+
+For this purpose the two are divided into two folders named contents and templates and as the names imply, one is for the content, such as your articles or posts. The templates folder though, is not only for the templates or layouts we'll introduce in the next step, but also images, stylesheets, Javascript and whatever else you might want to add to help you present the site.
+
+In the side by side pictures shown below, we have the folder structure created by punch on the left, with the somewhat changed folder structure we ended up with on the right:
+
+<FOLDERS TREE picture - Default folders defined by PUNCH left, with my added content folders and template files etc. to the right>
+<LINK to GitHub repo with this finished folder tree>
+
+As you can see from the picture above, I've created a folder for each of the html files being build, using an underscore followed by the name. E.g. the *_about* folder will turn into an *about.html* file using the content of the folder. 
 
 #### 6. Create Layout
 When using Punch, it's important to know a few things about how Punch works internally.
 
-The *_layout.mustache* file is the deault layout for all the pages of the site!
-However, if there's a file with the name of a given page of a site, then that layout would be used before the default layout. E.g. if I made an *about.mustache* file and if there was an about file in the content, then that file would use the *about.mustache* layout, since they have the same name.
+The *_layout.mustache* file is the default layout for all the pages of the site and it comes pre-installed! However, if there's a file with the name of a given page, then that layout would be used before the default layout. E.g. if I made an *about.mustache* file, this would be used to create the corresponding *about.html* file using the content of the *_about* folder in the contents directory.
 
 We'll illustrate this quickly. Copy and rename *_layout.mustache* to *index.mustache*, so we can create a layout for our landing page which is different from the rest of our pages.
 
@@ -213,7 +223,7 @@ Open the newly created *index.mustache* file and fill it in like this:
 {{> header }}
 
         <div role="main">
-            <img src="punch_banner.png">
+            <img src="/images/punch_banner.png">
             {{{content}}} 
         </div>
 
@@ -222,17 +232,17 @@ Open the newly created *index.mustache* file and fill it in like this:
 
 What's that? It's identical to the default file?  Well yes, the only change is the addition of the *punch_banner.png* image to show the world that this site was made with punch.
 
-For this to work properly, you'll need to add the *punch_banner.png* image to the `content/image` folder.
+For this to work properly, you'll need to add the *punch_banner.png* image to the `content\images` folder.
 
 #### 7. Title & Navigation
-As mentioned a few times already, Punch is one of the few site generators that offer an incredibly easy way to set up a simple navigation bar, right out of the box, by simply editing the `share.jason` file in the contents folder.
+As mentioned a few times already, Punch is one of the few site generators that offer an incredibly easy way to set up a simple navigation bar straight out of the box, by simply editing the `share.jason` file in the contents folder.
 
 We filled in our `share.jason` file like this, changing the title, the footer text and adding a navigation bar, in that order:
 
 ```
 {
    "site-title": "Punch on netlify",
-   "footer-text": "Built with <a href=\"http://laktek.github.com/punch\">Punch</a> with assets on <a href=\"http://laktek.github.com/punch\">Punch</a> deployed to <a href=\"https://www.netlify.com\">netlify</a>",
+   "footer-text": "Built with <a href=\"http://laktek.github.com/punch\">Punch</a> with assets on <a href=\"https://github.com/\">GitHub</a> and deployed to <a href=\"https://www.netlify.com\">netlify</a>.",
    "navbar": [
       { "label": "Home", "href": "/" },
       { "label": "Blog", "href": "/blog" },
@@ -257,16 +267,25 @@ Open the contents folder and create a directory named `_blog`, then create the *
         <ul class="article_list">
             {{#article_list}}
                 <li>
-                    <h3>{{title}}</h3>
+                    <a href="{{ permalink }}">{{{ title }}}</a>
                     <article>{{content}}</article>    
             {{/article_list}}
         </ul>
     </div>
 
 {{> footer }}
+
+#            {{#posts}}
+#            <li>
+#                <a href="{{ permalink }}">{{{ title }}}</a>
+#                <time class="updated" datetime="{{ published_date }}" pubdate>{{#short_date}}{{published_date}}{{/short_date}}</time>
+#            </li>
+#            {{/posts}}
+
+
 ```
 
-The layout follows the winning formula from the other two pages, with the header and footer placed at the top and bottom and the center dedicated to content. Unlike the other pages though, this is where something interesting happens, as we will use Mustache to cycle through all the articles and prints them in succession, with the newest articles first, like one would do in a blog or news paper.
+The layout follows the winning formula from the other two pages, with the header and footer placed at the top and bottom and the center dedicated to content. Unlike the other pages though, this is where something interesting happens, as we will use Mustache to cycle through all the articles and print them in succession, with the newest articles first, like one would do in a blog or news paper.
 
 Let's take a closer look at the Mustache inserted in the HTML and explain in detail.
 
@@ -313,9 +332,10 @@ You can move such contents into their own files. These are known as extended con
 Punch will actually try to parse the extended content files, before merging them into the regular content object. By default, Punch can parse content defined as Markdown. You can easily add your own parsers for other content types too. >
 
 #### 10. Edit configuration
-Open up the content\config.json file and take a look
+Open up the default `config.json` file [here](https://github.com/laktek/punch/blob/master/lib/default_config.js) and take a look and use it as a reference when making your own configuration. The `config.json` file for your project is in the content folder.
 
-< MAKE AN EXAMPLE SETUP of content\config.json >
+```
+```
 
 #### 11. Build it and smile
 If you've kept the punch server window open (the terminal window in which you ran the `punch s` command), simply refresh the browser window.
