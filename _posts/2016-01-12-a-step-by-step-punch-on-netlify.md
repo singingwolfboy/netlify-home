@@ -294,7 +294,7 @@ Now all that's needed is for the list of articles to be available in a json file
 share.json:
 ```
 {
-  "article_list": [
+  "articles": [
     { "title": "Article Title 1", "content": "This is the main content, but where should it go?" },
     { "title": "Article Title 2", "content": "This is the main content, but where should it go?" },
     { "title": "Article Title 3", "content": "This is the main content, but where should it go?" }
