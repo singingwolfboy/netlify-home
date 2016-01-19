@@ -82,7 +82,7 @@ We're working on making these editable from the reseller panel, but for now, jus
 
 As a reseller, your account doesn't distinguish between free and paid sites, but there are some actions that require payment:
 
-* **SSL Certificates** enabling SNI or Full SSL on a site with a certificate we provision is a paid action
+* **SSL Certificates** enabling Full SSL on a site with a certificate we provision is a paid action
 * **Domain Registration** registering a new domain is a paid action
 
 To interact with those features you need to specify a payment method ID when calling the action, and we'll charge the payment method based on the settings for your account.

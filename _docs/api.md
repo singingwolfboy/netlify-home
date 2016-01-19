@@ -35,6 +35,7 @@ The Oauth2 end user authorization endpoint is `https://app.netlify.com/authorize
 * `/sites/{site_id}/snippets` all snippets to be injected into the HTML of a site
 * `/sites/{site_id}/metadata` a metadata object for a site (can be used in combination with the snippets)
 * `/sites/{site_id}/deploys` all deploys for a site
+* `/sites/{site_id}/ssl` activate ssl for a site
 * `/deploys/{deploy_id}` a deploy
 * `/deploys/{deploy_id}/files` all files in a deploy
 * `/deploys/{deploy_id}/files/{path}` a specific file
@@ -260,6 +261,16 @@ If you do a PUT request to a site with `Content-Type: application/zip` and a zip
 * `DELETE /api/sites/{site_domain}` will permanently delete a site
 
 This will return `200 OK`.
+
+### Provision SSL for a site
+
+* `POST /api/sites/{site_id}/ssl` will activate SSL for site
+
+The site must have a custom domain with DNS records configured to point to netlify's infrastructure.
+
+Any domain aliases with valid DNS records will also be included in the SSL certificate for the site.
+
+It normally takes just a few seconds from making the call until the site is accessible via HTTPS from all global CDN nodes.
 
 ## Submissions
 
