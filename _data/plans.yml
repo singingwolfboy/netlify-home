@@ -174,7 +174,7 @@ enterprise:
   - title: Prioritized Feature Requests
     info: Do you want a say in what features we add next? Have specific requirements that would need extra development?
   - title: Geo IP based redirects
-    info: Redirect users from China, Taiwan or Honkong to /china or redirect visitors with a preference for Spanish to /es. Easily configurable with netlify.
+    info: Redirect users from China, Taiwan or Hong Kong to /china or redirect visitors with a preference for Spanish to /es. Easily configurable with netlify.
     link_text: Read more about it here
     link: /docs/redirects#geoip-and-language-based-redirects
   - title: Private build environment
