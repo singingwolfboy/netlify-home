@@ -313,13 +313,49 @@ I give to you the *posts.json* file:
 ```
 
 #### 10. Edit configuration
-Open up the default `config.json` file [here](https://github.com/laktek/punch/blob/master/lib/default_config.js) and take a look and use it as a reference when making your own configuration. The `config.json` file for your project is in the content folder.
+Alas, finally the wait is over and we arrive at the `config.json` file, in which we set up various project settings, including our stylesheet asset bundle
+
+Open up the default `config.json` file [here](https://github.com/laktek/punch/blob/master/lib/default_config.js) and take a look and use it as a reference when making your own configuration. The settings you see in the default file are probably fine, but we did add some of the configuration options from the default file into our own configuration file.
+
+The `config.json` file for your project is in the content folder.
 
 ```
+{
+    "template_dir": "templates", 
+    "content_dir": "contents",
+    "output_dir": "output",
+
+    "server": { 
+        "port": 9009
+    },
+
+    "bundles": {
+        "/css/all.css": [
+            "/css/normalize.css",   
+            "/css/main.css",
+            "/css/site.less"
+        ]   
+    },
+
+    "generator": {
+        "blank": true,
+    }
+
+}
 ```
+
+In the top three lines, the directory options are set and beneath this, our local test server port can be set.
+Under the server settings we find a bundles option. This option can be used on your javascript files as well and in our example the three stylesheet files `normalize.css`, `main.css` and `site.less` are bundled into the `all.css` file.
+The final option simply tells the generator to start from a blank slate, every time it builds our files and once we're done fiddling and messing around, it should be set to false.
 
 #### 11. Build it and smile
 If you've kept the punch server window open (the terminal window in which you ran the `punch s` command), simply refresh the browser window.
+
+If not, try `punch g` to build the files and then `punch s` to start the server and view the site. This is to make sure all our changes, whether to the config.json file or elsewhere, are included by the server.
+
+Check [http://localhost:9009](http://localhost:9009) to see the result.
+
+It's time to go to GitHub.
 
 ### Pushing Punch to GitHub
 <a id="githubstart"></a>
