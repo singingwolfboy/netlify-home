@@ -14,11 +14,11 @@ tags: null
 ### Welcome to netlify
 Today we'll take a look at Punch, a static site generator that bills itself as *"a simple, intuitive web publishing framework that will delight both designers and developers"*.
 
-Punch is written in javascript with node.js and what immediately stands out is its user friendliness and good basic documentation to get you started, while it takes only a few minutes to set up. It's not too much different from other node.js based generators and uses Mustache as its template engine, with content in JSON format, though Markdown and other possibilities exist.
+Punch is written in javascript with node.js and what immediately stands out, is its user friendliness and good basic documentation to get you started, while it takes only a few minutes to set up. It's not too much different from other node.js based generators and uses Mustache as its template engine, with content in JSON format, though Markdown and other possibilities exist.
 
 The aim for Punch, as defined by Mr. Lakshan Perera, is to *"help anyone to build (and maintain) modern websites using only HTML, CSS and JavaScript"* and while it's largely inspired by Jekyll it is *NOT* a blog engine.
 
-Even without a boilerplate, Punch comes with a basic setup, so it's fast and easy to get started with and there are several good exampes [here](https://github.com/laktek/punch/wiki/Sites-using-Punch).
+Even without a boilerplate, Punch comes with a basic setup, so it's fast and easy to get started with and there are several good examples [here](https://github.com/laktek/punch/wiki/Sites-using-Punch).
 
 ### Today's Guide
 In our guide today, we'll do a basic Punch site with a few plugins and once we're satisfied, we'll push our site to GitHub and deploy it on netlify.
@@ -28,51 +28,31 @@ However, if you need a bit of help with regards to hooking your local Punch site
 
 And finally, if you want to try out our small Punch tutorial, commence chronologically and please enjoy the show.
 
-***Please note that as Punch requires node.js, this guide assumes you have it installed before partaking !!!***
+***Please note that this guide assumes you have node.js and git installed !!!***
 
 For a very detailed guide about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
-### QUICK GUIDE 
-This small section is reserved for a small quick start guide to be used by those in a hurry, who simply wish to get all the terminal window/command prompt commands to be entered immedeately and consecutively without too much thought.
+### Quick Install Guide
+This small section is reserved for a small quick start guide to be used by those who simply wish to get all the terminal commands to be entered immediately and consecutively without he details
 
-Only use these if you know what you're doing and remember it's at your own discretion.
+Only use these if you know what you're doing and remember it's at your own discretion!
 
 For a more detailed installation with setup instructions for a basic site, scroll past the quick install guide to [here](#punchsetup).
 
-#### Quick Install Punch - Linux:
+The terminal commands:
 
 ```
 npm install -g punch
 punch setup my-punch-site
-cd my-punch-site
+cd my-punch-site/default
 punch s
 ```
 
-#### Quick Install Punch - OSX:
-
-```
-npm install -g punch
-punch setup my-punch-site
-cd my-punch-site
-punch s
-```
-
-#### Quick Install Punch - Windows:
-
-```
-Windows command prompt install commands
-<REMOVE OR FILL IN>
-```
-
-Provided you got the requirements sorted, the installation and setup of punch and a punch site can be done with a few short commands in a terminal window or a command prompt , as seen in the above examples for Linux, OSX and Windows. 
-
-Simply choose the guide that corresponds with your operating system and substitute my-punch-site with the name of your site.
+Provided you got the requirements sorted, the installation and setup of punch and a punch site can be done with a few short commands in a terminal window, as seen in the above example. Simply substitute my-punch-site with the name of your site.
 
 Once you've entered the last command `punch s`, just leave the window open, as it will run a web server you can test your site against. Open your browser and visit [http://localhost:9009](http://localhost:9009) and see for yourself.
 
 It's recommended to take the quick hands-on tutorial, as it will quickly cover the basics and get the ball rolling, but it's not a prerequisite for this guide. 
-
-Please note that while we've included a quick install guide for the Windows OS and tested this, the main guide was only tested on Linux and OSX and it will not work without alterations for users on Windows OS!
 
 ### Install & Setup Punch
 <a id="punchsetup"></a>
