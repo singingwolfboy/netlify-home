@@ -80,6 +80,8 @@ punch setup my-punch-site
 
 Easy enough. The `punch setup` command will setup a site at the present location, with the name my-punch-site (substitute with your own site name).
 
+Please note that punch installs into a directory named *default*, so that you will find it in */my-punch-site/default/*.
+
 *You might want to keep the terminal window open between steps for your own convenience!*
 
 #### 3. Edit Layout
@@ -182,10 +184,11 @@ Punch takes the whole separation of content from presentation concept very serio
 
 For this purpose the two are divided into two folders named contents and templates and as the names imply, one is for the content, such as your articles or posts. The other folder though, the templates folder, is not only for the templates or layouts we'll introduce in the next step, but also images, stylesheets, Javascript and whatever else you might want to add to help you present the site. 
 
-In the side by side pictures shown below, we have the folder structure created by punch on the left, with the somewhat changed folder structure we ended up with on the right:
+In the pictures shown below, we have the folder structure created by punch on top, with the somewhat changed folder structure with added files, which we ended up with underneath:
 
-<FOLDERS TREE picture - Default folders defined by Punch LEFT, with my added content folders and template files etc. to the RIGHT>
-<LINK to GitHub repo with this finished folder tree>
+![punch_folderstruct_b4.png](/uploads/punch_folderstruct_b4.png)
+
+![punch_folderstruct_after.png](/uploads/punch_folderstruct_after.png)
 
 As you can see from the picture above, I've created a folder for each of the html files being build, using an underscore followed by the name. E.g. the *_about* folder will turn into an *about.html* file using the content of the folder. 
 
