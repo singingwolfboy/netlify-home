@@ -12,13 +12,13 @@ tags: null
 
 ### **Welcome to netlify**
 
-So you've decided to build a static site, and you've found that some of your favorite sites are built with [Assemble](http://assemble.io). Great! Netlify can help you get started building your site, pushing it to GitHub, and then hosting the resulting site on netlify.
+So you are looking to build a static site, and you've found that some of your favorite sites use [Assemble](http://assemble.io). Great! Here, we'll talk a little bit about Assemble, and if you decide it's right for you, the tutorial below can help you get started building your site, pushing it to GitHub, and then hosting the resulting site on netlify.
 
 Let's start from scratch (if you already have a Assemble site set up, you can skip down to [here](#netlifystart)).
 
-What is Assemble? It's a static site generator for Node.js, Grunt.js, and Yeoman and Gulp. Assemble lets you render templates with Handlebars, Lo-Dash or any template engine. Assemble was the original tool used by [Zurb](http://zurb.com/)'s set of [Foundation](http://foundation.zurb.com/) frameworks, and is often used for creating internal documentation.
+What is Assemble? It's a static site generator for Node.js, Grunt.js, and Yeoman and Gulp. You can use it to render templates with Handlebars, Lo-Dash or any template engine. Assemble was the original tool used by [Zurb](http://zurb.com/)'s set of [Foundation](http://foundation.zurb.com/) frameworks, and is often used for creating internal documentation.
 
-Assemble is extremely flexible, but it isn't going to hold your hand. Assemble assumes you are a "a semi-responsible very bearded adult" and thus, it's "beard-aware". If you want a tool that does a lot of the work for you, Assemble might not be the choice for you. You define your configuration, your project structure, and your workflow. If that sounds appealing, Assemble could be right up your alley. 
+Assemble is extremely flexible (it's a Grunt plugin, after all), but it isn't going to hold your hand. Assemble assumes you are a "a semi-responsible very bearded adult" and thus, it's "beard-aware". If you want a tool that does a lot of the work for you, Assemble might not be the choice for you. You define your configuration, your project structure, and your workflow. If that sounds appealing, Assemble could be right up your alley. 
 
 Of course it goes without saying that [Assemble.io](http://assemble.io) is going to be your goto place for templates, resources and questions. Think of this tutorial as a jumpstart. Ready to go? Good. Let's get started.
 
