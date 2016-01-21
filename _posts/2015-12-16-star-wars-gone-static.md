@@ -12,7 +12,7 @@ tags: null
 
 *** No spoilers contained. Really, We haven’t even seen it yet***
 
-Sooo 4 billion (with a b) dollars seems like a steal these days. At least judging from the hype this first Disney instalment is getting. 
+Sooo 4 billion (with a b) dollars seems like a steal these days. At least judging from the hype this first Disney installment is getting. 
 
 The netlify servers are seeing plenty of disturbance in the force too!
 
@@ -29,7 +29,7 @@ To start it off let’s have a look at Wikia’s Star Wars page.
 
 Wikia has grown hugely in the last years, and the total number of requests coming in every month is almost 4 billion. (coincidence we ask??? ..well yeah but..)
 
-This is definitely one of the better Star Wars fan pages out there, nicely made, with a lively hash tagged livestreamed convo, interviews, games, trivia and the tidbits of information that true fans live to find.
+This is definitely one of the better Star Wars fan pages out there, nicely made, with a lively hash tagged live-streamed convo, interviews, games, trivia and the tidbits of information that true fans live to find.
 
 [Check out wikia.com/starwars](http://www.wikia.com/starwars)
 
@@ -53,7 +53,7 @@ To top it off, apparently all Carrot employees are expected to see the original 
 ![sphero.jpg](/uploads/sphero.jpg)
 
 ## Sphero (aka BB-8) ##
-Last of we have a company that has a great tip for getting initial traction. Have your prototype droid be picked up by the biggest movie franchise in the World and have them give it a prominent role in the film and marketing of the film.
+Lastly, we have a company that has a great tip for getting initial traction. Have your prototype droid be picked up by the biggest movie franchise in the World and have them give it a prominent role in the film and marketing of the film.
 
 BB-8 is one of the coolest bots we’ve ever seen and without giving away trade secrets we can reveal that their sites are getting plenty of traffic these days :)
 
