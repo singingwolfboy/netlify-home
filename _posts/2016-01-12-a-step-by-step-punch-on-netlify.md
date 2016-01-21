@@ -186,9 +186,22 @@ In the pictures shown below, we have the folder structure created by punch on to
 
 ![punch_folderstruct_b4.png](/uploads/punch_folderstruct_b4.png)
 
+As you can see above, punch provides a basic site with conten in JSON format, some stylesheets and some template files in mustache format and of course the aforementioned folder separation.
+
 ![punch_folderstruct_after.png](/uploads/punch_folderstruct_after.png)
 
 As you can see from the picture above, I've created a folder for each of the html files being build, using an underscore followed by the name. E.g. the *_about* folder will turn into an *about.html* file using the contents of its folder. 
+
+Go ahead and create these folders in a terminal window using the following commands: 
+
+```
+cd my-punch-site/default/contents
+mkdir _about
+mkdir _blog
+mkdir _index
+```
+
+Remember to substitute my-punch-site with the name of your site.
 
 #### 6. Create Layout
 When using Punch, it's important to know a few things about how Punch works internally.
@@ -296,12 +309,62 @@ I give to you the *posts.json* file:
 
 It's pretty simple, with the name of the file used as the name of the object and each of these has a title and some content defined.
 
-#### 10. Edit configuration
+#### 10. Create markdown content
+The content for each of our pages is kept in a *content.markdown* file in each directory, referenced as content in our layout files.
+
+You can either fill them in yourself, copy/paste what's below or get them from the repo, they're mostly just filler to see how the layout looks with text.
+
+The `_index\content.markdown` file:
+
+```
+## Punch on netlify
+This page is mainly created to demonstrate a basic Punch site, with assets hosted on GitHub using netlify to deploy in continuous deployment.
+
+We'll run some font and layout tests...
+
+**This font is Bold.**
+
+*This font is Italic.*
+
+***This font is Bold and Italic.***
+
+## Headline Title Two
+I wonder if the title above will render in the proper size and font.
+
+### Headline Title Three
+I wonder if the title above will render in the proper size and font.
+
+#### Headline Title Four
+I wonder if the title above will render in the proper size and font.
+```
+
+
+The `_about\content.markdown` file:
+
+```
+## About 
+This page is mainly created to demonstrate a basic Punch site, with assets hosted on GitHub using netlify to deploy in continuous deployment.
+
+### GitHub
+We will use GitHub to host all our assets.
+
+### netlify
+We will use netlify to build and deploy the site.
+```
+
+The `_blog\content.markdown` file:
+
+```
+### The Posts
+We'll list the various post underneath this little intro written in markdown, with the posts as json files.
+```
+
+#### 11. Edit configuration
 Alas, finally the wait is over and we arrive at the `config.json` file, in which we set up various project settings, including our stylesheet asset bundle.
 
 Open up the default `config.json` file [here](https://github.com/laktek/punch/blob/master/lib/default_config.js) and take a look and use it as a reference when making your own configuration. The settings you see in the default file are probably fine, but we did add some of the configuration options from the default file into our own configuration file.
 
-The `config.json` file for your project is in the content folder.
+The `config.json` file for your project is in the contents folder.
 
 ```
 {
@@ -332,7 +395,7 @@ In the top three lines, the directory options are set and beneath this, our loca
 Under the server settings we find the bundles definition. This option can be used on your javascript files as well and in our example the three stylesheet files `normalize.css`, `main.css` and `site.less` are bundled into the `all.css` file.
 The final option simply tells the generator to start from a blank slate, every time it builds our files and once we're done fiddling and messing around, it should be set to false.
 
-#### 11. Build it and smile
+#### 12. Build it and smile
 If you've kept the punch server window open (the terminal window in which you ran the `punch s` command), simply refresh the browser window.
 
 If not, try `punch g` to build the files and then `punch s` to start the server and view the site. This is to make sure all our changes, whether to the *config.json* file or elsewhere, are included by the server.
