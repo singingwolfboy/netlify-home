@@ -158,7 +158,7 @@ In the beginning of the body section, we find the header section where the site 
 
 Let's just stop for a second and take this one in!
 
-Our navigation bar is the ordered list label in the center of the two navbar mustache tags (between the `{{#navbar}}` and the `{{/navbar}}` ) and for each navbar element defined, this line will be printed once with the correct link and label. The triple mustache href tag (`{{{href}}}`), is neccessary to escape the html used for the link, while the double tagged label mustache tag will print the label (`{{label}}`).
+Our navigation bar is the ordered list label in the center of the two navbar mustache tags (between the `{{#navbar}}` and the `{{/navbar}}` tags) and for each navbar element defined, this line will be printed once with the correct link and label. The triple mustache href tag `{{{href}}}`, is neccessary to escape the html used for the link, while the double tagged label mustache tag will print the label `{{label}}`.
 
 Try it out and refresh your site and you'll see how easy it is. We'll get to the `share.json` file in which we define these navbar elements, in a few steps.
 
@@ -338,8 +338,7 @@ I wonder if the title above will render in the proper size and font.
 I wonder if the title above will render in the proper size and font.
 ```
 
-
-The `_about\content.markdown` file:
+The `_about\content.md` file:
 
 ```
 ## About 
@@ -351,6 +350,8 @@ We will use GitHub to host all our assets.
 ### netlify
 We will use netlify to build and deploy the site.
 ```
+
+If you're wondering why the about markdown file is saved with a different extension, it's simply because we wish to illustrate that punch handles both options right out of the box - it's a demo site we're building after all. 
 
 The `_blog\content.markdown` file:
 
