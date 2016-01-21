@@ -502,11 +502,14 @@ Creating a new site on netlify is intuitive and once you’ve created an account
 
 #### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
+
 Click the *"New Site"* button (as seen above) to get started.
 
 #### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
+
 ![Link to GitHub](/uploads/createsite.png)
+
 When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
 
 Since we're hosting the site assets on GitHub, we’ll need to link netlify with GitHub. Click the button *“Link to GitHub”*.
@@ -548,6 +551,6 @@ Once netlify has build your site, it will assign a random name to it and you'll 
 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
-You can see our demo site [here](http://punch.netlify.com/) and the GitHub project for the demo site [here](https://github.com/jimmilee/punch-demo).
+You can see our demo site [here](http://punch-demo.netlify.com/) and the GitHub project for the demo site [here](https://github.com/JimmiLee/punch-demo).
 
 {% endraw %}
