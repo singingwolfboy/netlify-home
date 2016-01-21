@@ -33,9 +33,7 @@ And finally, if you want to try out our small Punch tutorial, commence chronolog
 For a very detailed guide about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
 ### Quick Install Guide
-This small section is reserved for a small quick start guide to be used by those who simply wish to get all the terminal commands to be entered immediately and consecutively without he details
-
-Only use these if you know what you're doing and remember it's at your own discretion!
+This small section is reserved for a small quick start guide to be used by those who simply wish to get all the terminal commands to be entered immediately and consecutively without the details
 
 For a more detailed installation with setup instructions for a basic site, scroll past the quick install guide to [here](#punchsetup).
 
@@ -110,7 +108,7 @@ Well, these partials don't make themselves, so let's move on to creating these p
 #### 4. Partials
 Punch handles partials like most other static site generators and when you do the initial setup, punch includes both a header and a footer partial file. 
 
-We'll basically use these with a few small amendments and the result is below.
+We'll basically use these with a few small amendments and the results are below.
 
 The `_header.mustache` file:
 
@@ -144,7 +142,7 @@ The `_header.mustache` file:
 
 If you've worked with HTML and ever tried to set up a web site, the above will look familiar and straight forward, except for a few oddities taken from the Mustache templating engine.
 
-These are used to "inject" content into the template and thus in the head of our site, `{{{site-title}}}` is used to insert the title of the site in question. 
+These are used to "inject" content into the template and thus in the head of our site, `{{{site-title}}}` is used to insert a variable named site-title, which contains the title of the site in question (got it?). 
 
 The mustache helper tags with the stylesheet declaration inside (the `stylesheet_bundle` tags) are helper tags defined by Punch and will reference the stylesheet asset bundle created in the `config.json` (We'll get to that one soon enough). These helper tags will basically take all the stylesheet files defined in this bundle and turn them into one stylesheet file in our layout named `all.css` with a fingerprint in the name (unique number added to the file name, to bust the CDN server cache). 
 
@@ -160,7 +158,7 @@ In the beginning of the body section, we find the header section where the site 
 
 Let's just stop for a second and take this one in!
 
-Our navigation bar is the ordered list label in the center of the two navbar mustache tags (`{{#navbar}}` and `{{/navbar}}` ) and for each navbar element defined, this line will be printed once with the correct link and label. The triple mustache href tag (`{{{href}}}`), is neccessary to escape the html used for the link, while the double tagged label mustache tag will print the label (`{{label}}`).
+Our navigation bar is the ordered list label in the center of the two navbar mustache tags (between the `{{#navbar}}` and the `{{/navbar}}` ) and for each navbar element defined, this line will be printed once with the correct link and label. The triple mustache href tag (`{{{href}}}`), is neccessary to escape the html used for the link, while the double tagged label mustache tag will print the label (`{{label}}`).
 
 Try it out and refresh your site and you'll see how easy it is. We'll get to the `share.json` file in which we define these navbar elements, in a few steps.
 
@@ -177,12 +175,12 @@ The `_footer.mustache` file:
 </html>
 ```
 
-Again it's pretty straight forward, with a small text in the footer and since we want to put a few links in this text, we'll allow HTML by adding the extra set of mustache brackets. The `{{{footer-text}}}` is referenced through Mustache and also defined in the fabled `shared.json` file, which we'll take a look at later.
+Again it's pretty straight forward, with a text in the footer and since we want to put a few links in this text, we'll allow HTML by adding the extra set of mustache brackets. The `{{{footer-text}}}` is referenced through Mustache and also defined in the fabled `shared.json` file, which we'll take a look at later.
 
 #### 5. Folder Tree
 Punch takes the whole separation of content from presentation concept very seriously, which is of course a good thing, as it helps divide the work in a sensible manner.
 
-For this purpose the two are divided into two folders named contents and templates and as the names imply, one is for the content, such as your articles or posts. The other folder though, the templates folder, is not only for the templates or layouts we'll introduce in the next step, but also images, stylesheets, Javascript and whatever else you might want to add to help you present the site. 
+For this purpose the two are divided into two folders named contents and templates and as the names imply, one is for the content, such as your articles or posts, while the other is for templates. The way the content of the templates folder is defined though, the templates folder is not only for the templates or layouts we'll introduce in the next step, but also images, stylesheets, Javascripts and whatever else you might want to add to help you *present* the site. 
 
 In the pictures shown below, we have the folder structure created by punch on top, with the somewhat changed folder structure with added files, which we ended up with underneath:
 
@@ -190,7 +188,7 @@ In the pictures shown below, we have the folder structure created by punch on to
 
 ![punch_folderstruct_after.png](/uploads/punch_folderstruct_after.png)
 
-As you can see from the picture above, I've created a folder for each of the html files being build, using an underscore followed by the name. E.g. the *_about* folder will turn into an *about.html* file using the content of the folder. 
+As you can see from the picture above, I've created a folder for each of the html files being build, using an underscore followed by the name. E.g. the *_about* folder will turn into an *about.html* file using the contents of its folder. 
 
 #### 6. Create Layout
 When using Punch, it's important to know a few things about how Punch works internally.
@@ -217,7 +215,7 @@ What's that? It's identical to the default file?  Well yes, the only change is t
 For this to work properly, you'll need to add the *punch_banner.png* image to the `templates\images` folder.
 
 #### 7. Title & Navigation
-As mentioned a few times already, Punch is one of the few site generators that offer an incredibly easy way to set up a simple navigation bar straight out of the box, by simply editing the `share.jason` file in the contents folder.
+Punch is one of the few site generators that offer an incredibly easy way to set up a simple navigation bar straight out of the box, by simply editing the `share.jason` file in the contents folder.
 
 We filled in our `share.jason` file like this, changing the title, the footer text and adding a navigation bar, in that order:
 
@@ -273,8 +271,9 @@ Let's create this content.
 
 #### 9. Create Content
 To see if our new blog page works properly, we have to create the posts for it.
-If you use Jekyll or many other SSG's that are aimed at blogging, you'll usually create one file for each post or article and if this is what you're after, I recommend that you take a look at the punch-blog boiler plate.
-For our little guide we won't exactly write long posts or even longer articles, so instead of seperate files, we've put all the posts in a *posts.json* file and illustrate how punch's native content system works.
+If you use Jekyll or many other SSG's that are aimed at blogging, you'll usually create one file for each post or article and if this is what you're after, I recommend that you take a look at the [punch-blog](https://github.com/laktek/punch-blog) boiler plate.
+
+For our little guide we won't exactly write long posts or even longer articles, so instead of seperate files, we've put all the posts in a *posts.json* file to illustrate how punch's native content system works.
 
 I give to you the *posts.json* file:
 
@@ -295,8 +294,10 @@ I give to you the *posts.json* file:
 ]
 ```
 
+It's pretty simple, with the name of the file used as the name of the object and each of these has a title and some content defined.
+
 #### 10. Edit configuration
-Alas, finally the wait is over and we arrive at the `config.json` file, in which we set up various project settings, including our stylesheet asset bundle
+Alas, finally the wait is over and we arrive at the `config.json` file, in which we set up various project settings, including our stylesheet asset bundle.
 
 Open up the default `config.json` file [here](https://github.com/laktek/punch/blob/master/lib/default_config.js) and take a look and use it as a reference when making your own configuration. The settings you see in the default file are probably fine, but we did add some of the configuration options from the default file into our own configuration file.
 
@@ -328,13 +329,13 @@ The `config.json` file for your project is in the content folder.
 ```
 
 In the top three lines, the directory options are set and beneath this, our local test server port can be set.
-Under the server settings we find a bundles option. This option can be used on your javascript files as well and in our example the three stylesheet files `normalize.css`, `main.css` and `site.less` are bundled into the `all.css` file.
+Under the server settings we find the bundles definition. This option can be used on your javascript files as well and in our example the three stylesheet files `normalize.css`, `main.css` and `site.less` are bundled into the `all.css` file.
 The final option simply tells the generator to start from a blank slate, every time it builds our files and once we're done fiddling and messing around, it should be set to false.
 
 #### 11. Build it and smile
 If you've kept the punch server window open (the terminal window in which you ran the `punch s` command), simply refresh the browser window.
 
-If not, try `punch g` to build the files and then `punch s` to start the server and view the site. This is to make sure all our changes, whether to the config.json file or elsewhere, are included by the server.
+If not, try `punch g` to build the files and then `punch s` to start the server and view the site. This is to make sure all our changes, whether to the *config.json* file or elsewhere, are included by the server.
 
 Check [http://localhost:9009](http://localhost:9009) to see the result.
 
