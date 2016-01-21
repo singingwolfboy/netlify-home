@@ -225,7 +225,7 @@ Open the newly created *index.mustache* file and fill it in like this:
 
 What's that? It's identical to the default file?  Well yes, the only change is the addition of the *punch_banner.png* image to show the world that this site was made with punch.
 
-For this to work properly, you'll need to add the *punch_banner.png* image to the `templates\images` folder.
+For this to work properly, you'll need to add the [*punch_banner.png* image](http://laktek.github.io/punch/img/punch.png) to the `templates\images` folder, which we kindly loaned from the [Punch website](http://laktek.github.io/punch/).
 
 #### 7. Title & Navigation
 Punch is one of the few site generators that offer an incredibly easy way to set up a simple navigation bar straight out of the box, by simply editing the `share.jason` file in the contents folder.
@@ -412,7 +412,7 @@ cd my-punch-site/default
 npm init
 ```
 
-You will be asked for a name and a few other things, but more importantly npm will create a local `package.json` file. 
+Again simply substitute my-punch-site with your directory. You will be asked for a name and a few other things, but more importantly npm will create a local `package.json` file. 
 
 Next we install punch into our local project (unlike the global installation earlier) like this:
 
@@ -427,7 +427,7 @@ You'll get a few warnings that punch should be installed globally and while this
 ### Pushing Punch to GitHub
 <a id="githubstart"></a>
 
-We want to set up an online GitHub repository with our local environment and push our local files to this repository. Next, we'll connect netlify to the repository for our automatic build (i.e. whenever you push to GitHub, netlify will rebuild your site).
+We want to set up an online GitHub repository with our local environment and push our local files to this repository. After this, we'll connect netlify to the repository for our automatic build (i.e. whenever you push to GitHub, netlify will rebuild your site).
 
 #### 1. Create your Git Repo
 We start by creating a [GitHub](https://github.com/) repository for our Punch site and generator.
@@ -439,13 +439,13 @@ We're naming ours punch-demo and we'll skip adding files to the repository until
 Once the repository has been named and created we'll return to local environment.
 
 #### 2. Create .gitignore
-Since we don't want our local output directory to be pushed to GitHub (instead we'll let netlify build and take care of this directory) we'll create a `.gitignore` file and fill it in like this:
+Since we don't want our local output directory to be pushed to GitHub (instead we'll let netlify build and take care of this directory) we'll create a `.gitignore` file in the *default* directory and fill it in like this:
 
 ```
 # disregard the output folder with contents - we don't want the build output folder on GitHub!
 ouput/*
 
-# disregard the node_modules folder with contents - these are also only for local use, so don't push to GitHub!
+# disregard the node_modules folder with contents!
 node_modules/*
 ```
 
@@ -453,7 +453,7 @@ This will prevent the output and node_modules directories from being pushed to g
 
 #### 3. Prepare the Site for GitHub
 We need to set the local site up as a git repository with the `git init` command, then we'll add all the files and subdirectories to the repository with the `git add .` command and finally stage them for the first commit with the `git commit -m 'First commit'` command.
- ''
+
 In quick succession in a terminal window:
 
 ```
@@ -468,7 +468,7 @@ Once the files are committed, it's time to connect with the GitHub repository on
 #### 4. Get & Add Remote URL
 ![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
 
-We return to the GitHub repository created earlier and retrieve the URL for the remote repository, since this is where our local repository will be pushed.
+We return to the GitHub repository we just created and retrieve the URL for the remote repository. This will be the location of all of our site assets  and is where our local repository will be pushed or uploaded to.
 Either copy paste the whole command or use the button as depicted above, to copy just the path to your clipboard.
 Return to the Terminal window and paste the remote repository URL inside the following line (instead of My-Repository-URL):
 
@@ -484,8 +484,8 @@ git remote -v
 
 If it looks all right, we're ready to push the files.
 
-#### 6. Push to GitHub.
-The final task before we're done setting up, is to use the push command with git, as in the following line in Terminal:
+#### 5. Push to GitHub.
+The final task before we're done setting up, is to use the push command with git, as in the following line in terminal:
 
 ```
 git push -u origin master
@@ -498,14 +498,13 @@ It's time to connect it with netlify.
 ### Connect with netlify
 <a id="netlifystart"></a>
 
-Creating a new site on netlify is intuitive and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
+Creating a new site on netlify can be done with a few clicks, it's intuitive and once you’ve created an account and logged in, you’ll be taken to [https://app.netlify.com/sites](https://app.netlify.com/sites).
 
-#### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
 
 Click the *"New Site"* button (as seen above) to get started.
 
-#### Step 2: Link to Your GitHub
+#### Step 1: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
 
 ![Link to GitHub](/uploads/createsite.png)
@@ -514,7 +513,7 @@ When you push to GitHub, netlify does all the work. No more wasting time on manu
 
 Since we're hosting the site assets on GitHub, we’ll need to link netlify with GitHub. Click the button *“Link to GitHub”*.
 
-#### Step 3: Authorize netlify
+#### Step 2: Authorize netlify
 You can skip this step, if you already have an account with netlify set up to automatically login!
 
 You will be asked to provide your GitHub login details:
@@ -527,27 +526,27 @@ Like it says in the image above on the right, netlify doesn’t store your GitHu
 
 If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
 
-#### Step 4: Choose Your Repo
+#### Step 3: Choose Your Repo
 Once you're connected to GitHub, netlify will show you a list of your GitHub repositories - simply choose the one you created a moment ago.
 
-#### Step 5: Configure Your Settings
+#### Step 4: Configure Your Settings
 Fill in the configuration settings as seen in the screen shot below:
 
 ![punch_config.png](/uploads/punch_config.png)
 
 Click the *'Save'* button and watch the magic unfold.
 
-#### Step 6: Build Your Site
+#### Step 5: Build Your Site
 ![punch_building.png](/uploads/punch_building.png)
 
-Once you click save, netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and netlify will do the rest, while you watch the progress.
+If everything went according to plan, netlify will now build your site, with a nice status window you can either follow or just leave, as netlify saves the information in the log file it saves with each build.
 
-#### Step 7: The End
-That's it.
-
-Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
+#### Step 6: The End
+You should arrive at something along the lines of this result within a few minutes:
 
 ![punch_done.png](/uploads/punch_done.png)
+
+Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional customizing.
 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
