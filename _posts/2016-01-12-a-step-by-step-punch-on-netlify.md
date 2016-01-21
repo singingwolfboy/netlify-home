@@ -402,7 +402,27 @@ If not, try `punch g` to build the files and then `punch s` to start the server 
 
 Check [http://localhost:9009](http://localhost:9009) to see the result.
 
-It's time to go to GitHub.
+It's time to go to GitHub, but just before we do, we need to configure punch for our local folder as well.
+
+### Install punch in local directory
+To make sure punch is installed with our local package as well, before we push to netlify (otherwise netlify won't have punch to build!) we need to run the following commands:
+
+```
+cd my-punch-site/default
+npm init
+```
+
+You will be asked for a name and a few other things, but more importantly npm will create a local `package.json` file. 
+
+Next we install punch into our local project (unlike the global installation earlier) like this:
+
+```
+npm install punch --save
+```
+
+We use the `--save` flag to make sure punch is added to the *package.json* file as a dependency. This way, when netlify looks at the project, it knows it will need punch and will include it at build time.
+
+You'll get a few warnings that punch should be installed globally and while this is ordinarily true, we need it both ways - globally for us to use locally and in our site to give netlify something to build with online.
 
 ### Pushing Punch to GitHub
 <a id="githubstart"></a>
@@ -422,15 +442,18 @@ Once the repository has been named and created we'll return to local environment
 Since we don't want our local output directory to be pushed to GitHub (instead we'll let netlify build and take care of this directory) we'll create a `.gitignore` file and fill it in like this:
 
 ```
-# To avoid uploading the output folder
-output/
+# disregard the output folder with contents - we don't want the build output folder on GitHub!
+ouput/*
+
+# disregard the node_modules folder with contents - these are also only for local use, so don't push to GitHub!
+node_modules/*
 ```
 
-This will prevent the output directory from being pushed to git.
+This will prevent the output and node_modules directories from being pushed to git.
 
 #### 3. Prepare the Site for GitHub
 We need to set the local site up as a git repository with the `git init` command, then we'll add all the files and subdirectories to the repository with the `git add .` command and finally stage them for the first commit with the `git commit -m 'First commit'` command.
-
+ ''
 In quick succession in a terminal window:
 
 ```
@@ -461,7 +484,7 @@ git remote -v
 
 If it looks all right, we're ready to push the files.
 
-#### 5. Push to GitHub.
+#### 6. Push to GitHub.
 The final task before we're done setting up, is to use the push command with git, as in the following line in Terminal:
 
 ```
@@ -502,25 +525,26 @@ Like it says in the image above on the right, netlify doesn’t store your GitHu
 If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
-<PICTURE - ADD choose repo punch-demo PIC>
-Once you're connected to GitHub, netlify will show you a list of your GitHub repositories, as seen above.
-For the purpose of this tutorial we'll select the *“punch-demo”* repo we just pushed to GitHub. 
+Once you're connected to GitHub, netlify will show you a list of your GitHub repositories - simply choose the one you created a moment ago.
 
 #### Step 5: Configure Your Settings
 Fill in the configuration settings as seen in the screen shot below:
-<PICTURE - ADD punch settings PIC>
+
+![punch_config.png](/uploads/punch_config.png)
 
 Click the *'Save'* button and watch the magic unfold.
 
 #### Step 6: Build Your Site
-<PICTURE - ADD site building PIC>
+![punch_building.png](/uploads/punch_building.png)
+
 Once you click save, netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and netlify will do the rest, while you watch the progress.
 
 #### Step 7: The End
 That's it.
 
 Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
-<PICTURE - ADD DONE PIC>
+
+![punch_done.png](/uploads/punch_done.png)
 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
