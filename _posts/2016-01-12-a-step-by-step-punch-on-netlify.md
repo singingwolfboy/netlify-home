@@ -297,8 +297,8 @@ I give to you the *posts.json* file:
         "content": "This is the first post in our mini blog made with Punch and we haven't even added dates!" 
     },
     { 
-        "title": "Netlify for Deployment", 
-        "content": "Netlify is the worlds fastest, smartest and most honest and nice web site host in the world." 
+        "title": "netlify for Deployment", 
+        "content": "netlify is the worlds fastest, smartest and most honest and nice web site host in the world." 
     },
     { 
         "title": "GitHub for Assets", 
@@ -386,9 +386,8 @@ The `config.json` file for your project is in the contents folder.
     },
 
     "generator": {
-        "blank": true,
+        "blank": true
     }
-
 }
 ```
 
@@ -419,13 +418,23 @@ We're naming ours punch-demo and we'll skip adding files to the repository until
 
 Once the repository has been named and created we'll return to local environment.
 
-#### 2. Prepare the Site for GitHub
+#### 2. Create .gitignore
+Since we don't want our local output directory to be pushed to GitHub (instead we'll let netlify build and take care of this directory) we'll create a `.gitignore` file and fill it in like this:
+
+```
+# To avoid uploading the output folder
+output/
+```
+
+This will prevent the output directory from being pushed to git.
+
+#### 3. Prepare the Site for GitHub
 We need to set the local site up as a git repository with the `git init` command, then we'll add all the files and subdirectories to the repository with the `git add .` command and finally stage them for the first commit with the `git commit -m 'First commit'` command.
 
 In quick succession in a terminal window:
 
 ```
-cd my-punch-site
+cd my-punch-site/default
 git init
 git add .
 git commit -m 'First commit'
@@ -433,7 +442,7 @@ git commit -m 'First commit'
 
 Once the files are committed, it's time to connect with the GitHub repository online.
 
-#### 3. Get & Add Remote URL
+#### 4. Get & Add Remote URL
 ![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
 
 We return to the GitHub repository created earlier and retrieve the URL for the remote repository, since this is where our local repository will be pushed.
@@ -452,7 +461,7 @@ git remote -v
 
 If it looks all right, we're ready to push the files.
 
-#### 4. Push to GitHub.
+#### 5. Push to GitHub.
 The final task before we're done setting up, is to use the push command with git, as in the following line in Terminal:
 
 ```
