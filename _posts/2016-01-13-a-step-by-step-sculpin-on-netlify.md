@@ -10,14 +10,16 @@ date: 2016-01-13T00:00:00.000Z
 tags: null
 ---
 
+{% raw %}
 ### Welcome to netlify
-Sculpin is a fast static site generator, which uses Twig templates, is built on Symfony's HTTP Kernel and written in PHP. It's the most popular site generator written in PHP, with almost 3 times the stars of the second most popular and it's arguably the most mature and well documented static site generator written in PHP.
+Sculpin is a fast static site generator, which uses Twig templates, is built on Symfony's HTTP Kernel and written in PHP. It's arguably the most mature and well documented static site generator written in PHP and today we'll take a look at how to install and setup a basic Sculpin blog site with assets on GitHub, in continuous deployment on netlify.
 
 For those unaware, PHP is a serverside language based on C and has long been used to make dynamic homepages. This is not as common as static site generators written in Javascript or Ruby and it will be interesting to see how it works compared with these.
 
-If you feel at home with PHP, Sculpin will be right up your alley and it comes with lots of build in features, such as embedded Composer. Composer is to PHP what npm is to node.js or bundler is to Ruby and will install and handle dependencies for the project and it comes built into Sculpin. 
+If you feel at home with PHP, Sculpin will be right up your alley and it comes with lots of build in features, such as embedded Composer. Composer is to PHP what npm is to node.js or bundler is to Ruby and will install and handle dependencies for the project, so it's handy that it comes built in.
 
-<LINKS AND REQUIREMENTS - PHP version 5 or up with php-cli ???>
+***Please note that this guide assumes you have git installed, as well as a recent PHP version 5 or up with command line interface!!!***
+
 Quick installation of PHP 5:
 
 ```
@@ -26,17 +28,22 @@ sudo apt-get install php5 libapache2-mod-php5       # Main thing - PHP5
 sudo apt-get install php5-cli                       # command line addition
 (sudo apt-get install php5-mysql)                   # Or NO?
 sudo apt-get install php5-curl                      # Sculpin needs these libraries
+
+# < Delete this and link to guides on how to install instead ??? >
 ```
 
 ### QUICK GUIDE LINUX, OSX, WINDOWs
-This sections contains a small quick guide, for each of the big three operatins systems, so whether you're on Apple, Windows or Linux, we got you covered. However, if you need a more detailed introduction and guide, simply scroll down to [here](#sculpinsetup).
+This sections contains a small quick guide, for each of the big three operating systems, so whether you're on Apple, Windows or Linux, we got you covered. 
 
-The commands will help you download and install Sculpin with a blog skeleton
+If you aren't familiar with the commands used and would like a more detailed introduction and guide, simply scroll down to [here](#sculpinsetup).
 
-#### Quick Install Sculpin - Linux:
+The commands will help you download and install Sculpin with a blog skeleton, simply substitute my-sculpin-site with the name of your choice.
+
+#### Quick Install Sculpin - Linux/OSX:
+If you're on a Linux based OS or if you're using Apple's OSX, open a terminal window and run the following commands:
 
 ```
-curl -O https://download.sculpin.io/sculpin.phar
+curl -O https://download.sculpin.io/sculpin.phar     
 chmod +x sculpin.phar
 sudo mv sculpin.phar '/usr/local/bin/sculpin'
 
@@ -44,15 +51,10 @@ git clone https://github.com/sculpin/sculpin-blog-skeleton.git my-sculpin-site
 cd my-sculpin-site
 
 sculpin install
-
 sculpin generate --watch --server
 ```
 
-#### Quick Install Sculpin - OSX:
-
-```
-OSX terminal install commands
-```
+The first three lines will download Sculpin, set its permissions to be able to execute it and move and rename it to a location that is in the path. Please note that this path may in some cases differ on your system! To see which locations are in the path, use this command in a terminal window: `echo "$PATH"`
 
 #### Quick Install Sculpin - Windows:
 
@@ -60,8 +62,8 @@ OSX terminal install commands
 Windows command prompt install commands
 ```
 
-### SETUP Sculpin
-The quick guide is not to everyone's taste and so we'll delve deeper into the setup and installation of Sculpin in this step-by-step guide.
+### Setup Sculpin
+The quick guide is not to everyone's taste and so we'll delve deeper into the installation and setup of Sculpin in this step-by-step guide.
 
 Please note, that while the quick start guide was tested on all three operating systems, this detailed main guide was only tested in Ubuntu Linux and while it will work with only slight changes in OSX, it will be somewhat different when using the Windows OS!
 
@@ -77,6 +79,8 @@ sudo mv sculpin.phar '/usr/local/bin/sculpin'
 ```
 
 This will download sculpin using curl, set its permissions so it can be executed and add it to your PATH, so it can be executed from anywhere. 
+
+*Consider keeping your terminal window open in between steps, for your own convenience!*
 
 #### 2. Clone Boilerplate
 Sculpin can be customized to run just about any kind of site you'd want to, but unless you want to specify all of this by yourself, it helps to clone a sculpin skeleton structure for your type of site.  
@@ -117,26 +121,54 @@ Since we forked the basic folder structure from the blog skeleton, our folder st
 
 You will notice several configuration files in the main directory for your project as well as the following directories:
 
-app contains all the logic for generating the blog.
-source contains the raw content for your blog.
-output_dev contains the build output or the site and won't actually be created until you build the site the first time.
+The *app* folder contains all the logic for generating the blog.
+The *source* folder contains the raw content for your blog.
+The *output_dev* folder contains the build output or the site and won't actually be created until you build the site the first time.
 
 #### 6. Create Content
-< Create markdown file, using Jekylls file name format YYYY-MM-DD-Title.md to create a file! >
+Let's create our first piece of content, a markdown file following Jekylls file name format *YYYY-MM-DD-Title.md* with a date that's never than today, so we can make sure it pops up on top, like it would in an ordinary blog (the newest posts from the top and down). 
+
+We created the `2016-01-22-Sculpin-on-netlify.md` file with the following content:
 
 ```
 ---
-YAML FRONTMATTER
+title: Sculpin on netlify with GitHub
+tags:
+    - Sculpin
+    - blog
+categories:
+    - time
 ---
-MARKDON CONTENT
+# Sculpin on netlify
+This page is mainly created to demonstrate a basic Sculpin Blog site, with assets hosted on GitHub using netlify to deploy in continuous deployment.
+
+Sculpin uses Markdown and twig and twig knows this page's name is: {{ page.title }}
+
+We'll run some font and layout tests...
+
+**This font is Bold.**
+
+*This font is Italic.*
+
+***This font is Bold and Italic.***
+
+## Headline Title Two
+I wonder if the title above will render in the proper size and font for headline 2.
+
+### Headline Title Three
+I wonder if the title above will render in the proper size and font for headline 3.
+
+#### Headline Title Four
+I wonder if the title above will render in the proper size and font for headline 4.
 ```
 
-<With this one file you've updated the blog listing, created a page for the post, and updated the atom feed.
-Assuming you are still running the server with the command sculpin generate --watch --server, the new pages are now available on your local server (localhost:8000). You will need to refresh the browser to see your new content.>
+Let's take a look at our work.
 
-When working with Sculpin it's worth noting two things about running the server. The first is that it might crash, but the solution to this is simple, as all you have to do is run the generate command again like before: `sculpin generate --watch --server`
+Assuming the server hasn't crashed yet (it probably will), simply refresh your browser at [localhost:8000](http://localhost:8000/) and behold.
 
-Another tiny issue is when the content hasn't generated completely, for whatever reason. When this happens, simply stop and then restart the server, by first pressing control + c (while you have your terminal window with the server running selected) and then running the generate command again like this: `sculpin generate --watch --server` 
+When working with Sculpin it's worth noting two things about running the server. The first is that it might crash, but the solution to this is simple, as all you have to do is re-run the generate command again like before: `sculpin generate --watch --server`
+
+Another tiny issue is when the content hasn't generated completely, for whatever reason. When this happens, simply stop and then restart the server, by first pressing `control + c` (while you have your terminal window with the server running selected) and then re-running the generate command again like this: `sculpin generate --watch --server` 
 
 ### Pushing Sculpin to GitHub
 <a id="githubstart"></a>
@@ -250,4 +282,4 @@ You can change the site to be private and password protected, which is great for
 
 You can see our demo site [here](http://sculpin.netlify.com/) and the GitHub project for the demo site [here](https://github.com/jimmilee/sculpin-demo).
 
-
+{% endraw %}
