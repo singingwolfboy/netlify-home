@@ -1,9 +1,9 @@
 ---
-title: "A World’s First. Free SSL with Let’s Encrypt"
+title: A World’s First. Free SSL with Let’s Encrypt
 author: Matt Biilmann
 image: null
 short_title: Announcing Free SSL
-description: "A World’s First. Free SSL with Let’s Encrypt. From today HTTPS is a free one-click setup on all our plans"
+description: A World’s First. Free SSL with Let’s Encrypt. From today HTTPS is a free one-click setup on all our plans
 thumbnail: /uploads/padlock.png
 cmsUserSlug: ""
 date: 2016-01-15T00:00:00.000Z
@@ -14,7 +14,7 @@ Here’s some news we’re really excited about!
 
 **Starting today**, we’re offering Free SSL to all our users. 
 
-As the first hosting service in the world netlify offers full integration with [Let’s Encrypt](https://letsencrypt.org)
+As the first hosting service in the world, netlify offers full integration with [Let’s Encrypt](https://letsencrypt.org)
 
 With one click install, HTTPS will instantly be available for your sites on all our CDN nodes, and netlify automatically handles renewals.
 
