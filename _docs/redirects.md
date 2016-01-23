@@ -64,7 +64,7 @@ We don't do automatic redirects from /about/index.html to /about/ since the form
 
 You can use placeholders in the origin and target paths:
 
-    /news/:year/:month:/:date/:slug  /blog/:year/:month/:date/:story_id
+    /news/:year/:month:/:date/:slug  /blog/:year/:month/:date/:slug
 
 This would redirect a URL like `/news/2004/02/12/my-story` to `/blog/2004/02/12/my-story`
 
