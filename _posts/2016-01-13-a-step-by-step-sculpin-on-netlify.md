@@ -18,29 +18,23 @@ For those unaware, PHP is a serverside language based on C and has long been use
 
 If you feel at home with PHP, Sculpin will be right up your alley and it comes with lots of build in features, such as embedded Composer. Composer is to PHP what npm is to node.js or bundler is to Ruby and will install and handle dependencies for the project, so it's handy that it comes built in.
 
-***Please note that this guide assumes you have git installed, as well as a recent PHP version 5 or up with command line interface!!!***
+***Please note that this guide assumes you have git installed, as well as a recent PHP version 5 or up with command line interface and cURL libraries !!!***
 
-Quick installation of PHP 5:
+For example to install PHP5 with the command line interface and the cURL libraries on Linux Ubuntu you would use the following commands from a terminal window:
 
 ```
 sudo apt-get update
 sudo apt-get install php5 libapache2-mod-php5       # Main thing - PHP5
 sudo apt-get install php5-cli                       # command line addition
-(sudo apt-get install php5-mysql)                   # Or NO?
-sudo apt-get install php5-curl                      # Sculpin needs these libraries
-
-# < Delete this and link to guides on how to install instead ??? >
+sudo apt-get install php5-curl                      # cURL libraries
 ```
 
-### QUICK GUIDE LINUX, OSX, WINDOWs
-This sections contains a small quick guide, for each of the big three operating systems, so whether you're on Apple, Windows or Linux, we got you covered. 
+### Quick Guide
+This sections contains a small quick guide, to quickly get you up and running with a template Sculpin site you can play around with. 
 
 If you aren't familiar with the commands used and would like a more detailed introduction and guide, simply scroll down to [here](#sculpinsetup).
 
 The commands will help you download and install Sculpin with a blog skeleton, simply substitute my-sculpin-site with the name of your choice.
-
-#### Quick Install Sculpin - Linux/OSX:
-If you're on a Linux based OS or if you're using Apple's OSX, open a terminal window and run the following commands:
 
 ```
 curl -O https://download.sculpin.io/sculpin.phar     
@@ -54,18 +48,12 @@ sculpin install
 sculpin generate --watch --server
 ```
 
-The first three lines will download Sculpin, set its permissions to be able to execute it and move and rename it to a location that is in the path. Please note that this path may in some cases differ on your system! To see which locations are in the path, use this command in a terminal window: `echo "$PATH"`
+The first three lines will download Sculpin, set its permissions to be able to execute it and move and rename it to a location that is in the path. Please note that this path may in some cases differ on your system! 
 
-#### Quick Install Sculpin - Windows:
-
-```
-Windows command prompt install commands
-```
+To see which locations are in the path, use this command in a terminal window: `echo "$PATH"`
 
 ### Setup Sculpin
 The quick guide is not to everyone's taste and so we'll delve deeper into the installation and setup of Sculpin in this step-by-step guide.
-
-Please note, that while the quick start guide was tested on all three operating systems, this detailed main guide was only tested in Ubuntu Linux and while it will work with only slight changes in OSX, it will be somewhat different when using the Windows OS!
 
 #### 1. sculpin.phar - Download, Permissions and PATH
 Let's get this slippery sculpin, set its permissions and add it to the path.
@@ -103,32 +91,21 @@ sculpin install
 
 As we downloaded the skeleton, we've already got the essentials needed to view the site!
 
-#### 4. Run Sculpin Run
+#### 4. Run Sculpin Server
 Let's take a look at our first catch of the day by running this sculpin command in a terminal window:
 
 ```
 sculpin generate --watch --server
 ```
 
-The generate command will build our site and when using the `--watch` flag, Sculpin will watch of the files in your site like a hawk and whenever anything's changed, it will re-generate the site automatically and instantly. The `--server` flag will launch a PHP web server, so you can see your work in progress at [localhost:8000](http://localhost:8000/).
+The generate command will build our site and when using the `--watch` flag, Sculpin will watch over the files in your site like a hawk and whenever anything's changed, it will re-generate the site automatically and instantly. The `--server` flag will launch a PHP web server, so you can see your work in progress at [localhost:8000](http://localhost:8000/).
 
 Go ahead and take a peek.
 
-#### 5. Folder Structure
-Since we forked the basic folder structure from the blog skeleton, our folder structure is slightly different from an ordinary Sculpin site.
+#### 5. Create Content
+Let's create our first piece of content, a markdown file following Jekylls file name format *YYYY-MM-DD-Title.md* with a date that's newer than today, so we can make sure it pops up on top, like it would in an ordinary blog. 
 
-// Insert IMAGE FOLDER STRUCTURE 
-
-You will notice several configuration files in the main directory for your project as well as the following directories:
-
-The *app* folder contains all the logic for generating the blog.
-The *source* folder contains the raw content for your blog.
-The *output_dev* folder contains the build output or the site and won't actually be created until you build the site the first time.
-
-#### 6. Create Content
-Let's create our first piece of content, a markdown file following Jekylls file name format *YYYY-MM-DD-Title.md* with a date that's never than today, so we can make sure it pops up on top, like it would in an ordinary blog (the newest posts from the top and down). 
-
-We created the `2016-01-22-Sculpin-on-netlify.md` file with the following content:
+We created the `2016-01-22-Sculpin-on-netlify.md` file in the `/source/_posts` folder with the following content:
 
 ```
 ---
@@ -153,13 +130,11 @@ We'll run some font and layout tests...
 ***This font is Bold and Italic.***
 
 ## Headline Title Two
-I wonder if the title above will render in the proper size and font for headline 2.
 
 ### Headline Title Three
-I wonder if the title above will render in the proper size and font for headline 3.
 
 #### Headline Title Four
-I wonder if the title above will render in the proper size and font for headline 4.
+I wonder if the titles above will render in the proper size and font for headline 2, 3 and 4.
 ```
 
 Let's take a look at our work.
@@ -168,7 +143,36 @@ Assuming the server hasn't crashed yet (it probably will), simply refresh your b
 
 When working with Sculpin it's worth noting two things about running the server. The first is that it might crash, but the solution to this is simple, as all you have to do is re-run the generate command again like before: `sculpin generate --watch --server`
 
-Another tiny issue is when the content hasn't generated completely, for whatever reason. When this happens, simply stop and then restart the server, by first pressing `control + c` (while you have your terminal window with the server running selected) and then re-running the generate command again like this: `sculpin generate --watch --server` 
+Another tiny issue is when the content hasn't generated completely, for whatever reason. When this happens, simply stop and then restart the server, by first pressing `control + c` to stop (while you have your terminal window with the server running selected) and then re-running the generate command again like this: `sculpin generate --watch --server` 
+
+#### 6. Generate a Production-Ready Site
+Once you're happy with the result of your output, it's time to make a production ready version of the site we can upload
+
+// < Explain production versus development environment and how Sculpin implements this >
+
+To create a production ready version of our site, we need to use the following command from the root of our site:
+
+```
+sculpin generate --env=prod
+```
+
+With this command, Sculpin will create a standalone *output_prod* directory for upload to a live environment, in our case GitHub and netlify.
+
+#### 8. Customize the Theme
+Let's change the theme for our Sculpin, to something 
+
+First we need to register our theme name in the `sculpin_kernel.yml` file like this:
+
+```
+sculpin_theme:
+  theme: myApp/myTheme
+```
+
+The above would tell sculpin to search for the theme assets in `sources/themes/myApp/` and the twig code `{{ theme_path("css/style.css") }}` would resolve to `sources/themes/myApp/css/style.css`. 
+
+< OBS: WHY not resolve to `sources/themes/myApp/myTheme/css/style.css` ??? >
+
+
 
 ### Pushing Sculpin to GitHub
 <a id="githubstart"></a>
