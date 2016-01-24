@@ -69,6 +69,9 @@ svg {
 }
 .loud {
   color: $color-darker;
+  .no-touch a:hover & {
+    color: $color-highlight;
+  }
 }
 .overloud {
   color: $color-darkest;
@@ -95,6 +98,9 @@ svg {
   }
   .muted {
     color: $color-muted;
+  }
+  .light {
+    color: rgba(255,255,255,0.7);
   }
 }
 
@@ -149,4 +155,12 @@ svg {
 .l-aside, .l-aside--right:after, .l-aside--left:before {
   background: $color-darkest;
   color: $color-light;
+}
+
+/* Filters */
+.grayscale {
+  filter: grayscale(100%);
+  .no-touch a:hover & {
+    filter: grayscale(0%);
+  }
 }
