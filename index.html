@@ -199,24 +199,6 @@ layout: default
       <div class="l-container">
         {% for post in site.posts | limit:3 %}
         <div class="l-third">
-          <article class="blurb">
-            <header class="blurb-hd">
-              <a class="media" href="{{post.url}}">
-                <div class="media-img optional">
-                  {% image_tag src=post.thumbnail width="80" %}
-                </div>
-                <div class="media-bd">
-                  <h1 class="blurb-title">
-                    <span class="light">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</span>
-                  </h1>
-                  <p class="post-author">by {{post.author}}</p>
-                </div>
-              </a>
-            </header>
-            <div class="blurb-bd">
-              <p class="small muted">{{post.description}}</p>
-            </div>
-          </article>
         </div>
         {% endfor %}
       </div>
