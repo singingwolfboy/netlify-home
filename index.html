@@ -199,6 +199,7 @@ layout: default
       <div class="l-container">
         {% for post in site.posts | limit:3 %}
         <div class="l-third">
+          {% include post-blurb.html %}
         </div>
         {% endfor %}
       </div>
