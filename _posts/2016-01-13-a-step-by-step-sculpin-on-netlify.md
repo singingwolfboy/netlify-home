@@ -20,7 +20,7 @@ If you feel at home with PHP, Sculpin will be right up your alley and it comes w
 
 ***Please note that this guide assumes you have git installed, as well as a recent PHP version 5 or up with command line interface and cURL libraries !!!***
 
-For example to install PHP5 with the command line interface and the cURL libraries on Linux Ubuntu you would use the following commands from a terminal window:
+For example to install PHP5 with the command line interface and the cURL libraries on Linux Ubuntu, as required by Sculpin, you would use the following commands from a terminal window:
 
 ```
 sudo apt-get update
@@ -55,7 +55,7 @@ To see which locations are in the path, use this command in a terminal window: `
 ### Setup Sculpin
 The quick guide is not to everyone's taste and so we'll delve deeper into the installation and setup of Sculpin in this step-by-step guide.
 
-#### 1. sculpin.phar - Download, Permissions and PATH
+#### 1. Download, Permissions and PATH
 Let's get this slippery sculpin, set its permissions and add it to the path.
 
 Open a terminal window and use the following three commands:
@@ -70,7 +70,7 @@ This will download sculpin using curl, set its permissions so it can be executed
 
 *Consider keeping your terminal window open in between steps, for your own convenience!*
 
-#### 2. Clone Boilerplate
+#### 2. Clone Skeleton
 Sculpin can be customized to run just about any kind of site you'd want to, but unless you want to specify all of this by yourself, it helps to clone a sculpin skeleton structure for your type of site.  
 
 We'll clone the blog skeleton and enter it with the following commands in terminal:
@@ -100,7 +100,7 @@ sculpin generate --watch --server
 
 The generate command will build our site and when using the `--watch` flag, Sculpin will watch over the files in your site like a hawk and whenever anything's changed, it will re-generate the site automatically and instantly. The `--server` flag will launch a PHP web server, so you can see your work in progress at [localhost:8000](http://localhost:8000/).
 
-Go ahead and take a peek.
+Check to see if everything is running like it should, before we start adding our own content.
 
 #### 5. Create Content
 Let's create our first piece of content, a markdown file following Jekylls file name format *YYYY-MM-DD-Title.md* with a date that's newer than today, so we can make sure it pops up on top, like it would in an ordinary blog. 
@@ -113,6 +113,7 @@ title: Sculpin on netlify with GitHub
 tags:
     - Sculpin
     - blog
+    - netlify
 categories:
     - time
 ---
@@ -146,9 +147,9 @@ When working with Sculpin it's worth noting two things about running the server.
 Another tiny issue is when the content hasn't generated completely, for whatever reason. When this happens, simply stop and then restart the server, by first pressing `control + c` to stop (while you have your terminal window with the server running selected) and then re-running the generate command again like this: `sculpin generate --watch --server` 
 
 #### 6. Generate a Production-Ready Site
-Once you're happy with the result of your output, it's time to make a production ready version of the site we can upload
+Once you're happy with the result of your output, it's time to make a production ready version of the site and go live with it. The way Sculpin works, is is possible to have a production setup that is different from a development and a live setup and to do this, an output folder for each is created.
 
-// < Explain production versus development environment and how Sculpin implements this >
+With our small demonstration site, it hardly seems necessary to have two output folders, but in the long run it will make more sense.
 
 To create a production ready version of our site, we need to use the following command from the root of our site:
 
@@ -156,23 +157,7 @@ To create a production ready version of our site, we need to use the following c
 sculpin generate --env=prod
 ```
 
-With this command, Sculpin will create a standalone *output_prod* directory for upload to a live environment, in our case GitHub and netlify.
-
-#### 8. Customize the Theme
-Let's change the theme for our Sculpin, to something 
-
-First we need to register our theme name in the `sculpin_kernel.yml` file like this:
-
-```
-sculpin_theme:
-  theme: myApp/myTheme
-```
-
-The above would tell sculpin to search for the theme assets in `sources/themes/myApp/` and the twig code `{{ theme_path("css/style.css") }}` would resolve to `sources/themes/myApp/css/style.css`. 
-
-< OBS: WHY not resolve to `sources/themes/myApp/myTheme/css/style.css` ??? >
-
-
+With this command, Sculpin will create a standalone *output_prod* directory for upload to a live environment.
 
 ### Pushing Sculpin to GitHub
 <a id="githubstart"></a>
@@ -188,38 +173,29 @@ We're naming ours sculpin-demo and we'll skip adding files to the repository unt
 
 Once the repository has been named and created we'll return to local environment.
 
-#### 2. Prepare the Site for GitHub
-We need to set the local site up as a git repository with the `git init` command, then we'll add all the files and subdirectories to the repository with the `git add .` command and finally stage them for the first commit with the `git commit -m 'First commit'` command.
+#### 2. Update Repo URL
+Since we downloaded the skeleton, our site is already set up as a git repo, but it's pointing to the blog skeleton and not our own repo!
+
+To see which repository your local directory points to use the `git remote -v` command in a terminal window and to change this to our own repo, we use the following command in a terminal window:
+
+```
+cd my-sculpin-site
+git remote set-url origin my-repository-url
+```
+
+Instead of my-repository-url insert the URL of the repo you've just created for this purpose - it will look something like this: `https://github.com/username/repository-name.git`
+
+#### 3. Add & Commit
+We need to  add all the files and subdirectories to the repository with the `git add .` command and stage them for the first commit with the `git commit -m 'First commit'` command.
 
 In quick succession in a terminal window:
 
 ```
-cd my-sculpin-site
-git init
 git add .
 git commit -m 'First commit'
 ```
 
-Once the files are committed, it's time to connect with the GitHub repository online.
-
-#### 3. Get & Add Remote URL
-![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
-
-We return to the GitHub repository created earlier and retrieve the URL for the remote repository, since this is where our local repository will be pushed.
-Either copy paste the whole command or use the button as depicted above, to copy just the path to your clipboard.
-Return to the Terminal window and paste the remote repository URL inside the following line (instead of My-Repository-URL):
-
-```
-git remote add origin My-Repository-URL
-```
-
-Optional: To check that it's set up correctly, you can use the following command:
-
-```
-git remote -v
-```
-
-If it looks all right, we're ready to push the files.
+No need to worry about a .gitignore, since this was included in the skeleton we downloaded already and has already been set to not include any output folders and then some.
 
 #### 4. Push to GitHub.
 The final task before we're done setting up, is to use the push command with git, as in the following line in Terminal:
@@ -239,6 +215,7 @@ Creating a new site on netlify is intuitive and once you’ve created an account
 
 #### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
+
 Click the *"New Site"* button (as seen above) to get started.
 
 #### Step 2: Link to Your GitHub
@@ -262,9 +239,10 @@ Like it says in the image above on the right, netlify doesn’t store your GitHu
 If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
 
 #### Step 4: Choose Your Repo
-<PICTURE - ADD choose repo sculpin-demo PIC>
+![sculpin_chooserepo.png](/uploads/sculpin_chooserepo.png)
+
 Once you're connected to GitHub, netlify will show you a list of your GitHub repositories, as seen above.
-For the purpose of this tutorial we'll select the *“sculpin-demo”* repo we just pushed to GitHub. 
+For the purpose of this tutorial we'll select the *“sculpin-blog-demo”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
 Fill in the configuration settings as seen in the screen shot below:
