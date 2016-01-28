@@ -1,0 +1,12 @@
+.details-bd {
+  display: none;
+}
+
+.details:target, .expanded {
+  .details-more {
+    display: none;
+  }
+  .details-bd {
+    display: block;
+  }
+}

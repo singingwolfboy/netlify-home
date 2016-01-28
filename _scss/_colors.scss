@@ -151,11 +151,13 @@ svg {
   background: $color-tint3;
 }
 
+
 /* Main and sidebar */
-.l-aside, .l-aside--right:after, .l-aside--left:before {
-  background: $color-darkest;
-  color: $color-light;
+.l-aside--right:after, .l-aside--left:before {
+  background: inherit;
+  color: inherit;
 }
+
 
 /* Filters */
 .grayscale {

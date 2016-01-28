@@ -1,5 +1,13 @@
 /* Forms
 ------------------------------*/
+
+select, .select {
+  border: none;
+  background: transparent;
+  color: inherit;
+  outline: none;
+}
+
 .form--fancy {
   position: relative;
   overflow: hidden;
