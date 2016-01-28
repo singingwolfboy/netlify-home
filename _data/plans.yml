@@ -53,7 +53,7 @@ all:
   - title: Link to GitHub or Bitbucket
     info: "Continous Deployment: Easily link a netlify site to a GitHub or Bitbucket repo. Whenever you push to GitHub we run your build and deploy the result."
     link_text: What can CD do for my workflow?
-    link: /blog/2015/09/17/continuous-deployment/continuos-deployment
+    link: /blog/2015/09/17/continuous-deployment
   - title: Atomic Deploys
     info: No inconsistent state while you're uploading. Your deploy only goes live when all changes have been uploaded. So if you loose connection while uploading, no problem!
     link_text: The importance of atomic deploys
