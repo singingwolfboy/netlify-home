@@ -166,3 +166,9 @@ svg {
     filter: grayscale(0%);
   }
 }
+.colorize {
+  filter: sepia() hue-rotate(125deg) saturate(70%);
+  .no-touch a:hover & {
+    filter: sepia(0%);
+  }
+}
