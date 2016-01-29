@@ -10,9 +10,9 @@ date: 2015-11-09T00:00:00.000Z
 tags: null
 ---
 
-Modern Static Web Tech is growing by leaps and bounds as developers begin to learn just how much of a difference static web technology can make for their sites, apps and projects. At the most recent [Static Web Tech Meetup](http://www.meetup.com/sf-static-web-tech/) (where we got to be in the room for the launch of [Jekyll 3.0](https://jekyllrb.com/)!!) our gracious host, Wade Warren of Wikia, took some time to talk to us about how static web technology is being used at [Wikia](http://www.wikia.com/).
+Modern Static Web Tech is growing by leaps and bounds as developers begin to learn just how much of a difference static web technology can make for their sites, apps and projects. At a recent [Static Web Tech Meetup](http://www.meetup.com/sf-static-web-tech/) (where we got to be in the room for the launch of [Jekyll 3.0](https://jekyllrb.com/)!!) our gracious host, Wade Warren of Wikia, took some time to talk to us about how static web technology is being used at [Wikia](http://www.wikia.com/).
 
-**Netlify:** _Could you talk about the ways you guys here at Wikia use static sites to better your process?_
+**Us:** _Could you talk about the ways you guys here at Wikia use static sites to better your process?_
 
 **Wade Warren:** Absolutely! The way Netlify has instrumented static site generation, makes it really easy to federate the creation of the sites amongst a large group of people, especially distributed around the world like we are. It ties into whatever code management system you want to use.
 
