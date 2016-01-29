@@ -33,3 +33,7 @@ Now it's public and it's literally within hours. We can go from concept to relea
 It's really interesting how back in the old days, when I started--you know, vi is my editor of choice because I've been using it for way more years than I'm willing to admit in public--everything was a static site. Back in the 90s there was no dynamic site generation. The pendulum has swung all the way to the other side where we're actually making static sites with dynamic site tools, which is completely the wrong way to think about it.
 
 Especially when you look at security vulnerabilities, site performance issues, especially at load and at scale, nothing beats the speed, the performance and the load capacity of a static site.
+
+--
+
+_The [Static Web Tech Meetup](http://www.meetup.com/sf-static-web-tech/) is a monthly gathering of developers and tech forward-thinkers who want to learn and share their insight about the technology that will power tomorrow's internet. Join us at our next event by connecting with us on [Meetup](http://www.meetup.com/sf-static-web-tech/)!_
