@@ -1,83 +1,133 @@
 ---
-layout: default
-title: Status
 ---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Netlify Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="l-container inverse bg-dark-muted-cover bb bb--large">
-<section>
-  <header class="content content--wide text-center">
-    <h1 class="mega mt-110">
-      All Systems Operational 
-    </h1>
-    <p class="epsilon muted">
-      If you are experiencing any issues please <a href="#">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-arrow-round" /></svg></a>
-    </p>
-  </header>
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700'>
+    <link rel="stylesheet" href="/css/status.css">
 
-  <div class="l-wrap mt-50 mb-140">
-    <div class="l-wrap-inner l-wrap-inner--narrow l-wrap-inner--main-left">
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+
+  {% include svg-defs.html %}
+
+  <!-- Site Header -->
+  <header class="site-header bb bb--medium inverse" role="banner">
+    <div class="content content--wide">
+      <!-- Branding: logo & claim -->
+      <section class="brand left mt-20 mb-20">
+        <a href="/" class="loud">
+          <svg class="brand-logo" width="180" height="70">
+            <use xlink:href="#netlify-logo" />
+          </svg>
+        </a>
+      </section>
       
-      <div class="l-aside l-aside--right">
-        <section>
-          <div class="blurb-hd">
-            <h2 class="blurb-title">Services</h2>
-          </div>
-          <div class="blurb-bd">
-            <ul>
-              <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>API
-              <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Cloud Control Panel
-              <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Community
-              <li class="muted"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ko" /></svg>DNS
-              <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Droplets
-              <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Event Processing
-              <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Networking
-            </ul>
-          </div>
-        </section>
-      </div>
-      
-      <div class="l-main">
-        <section>
-          <header class="blurb-hd">
-            <h2 class="blurb-title left">Status History</h1>
-            <form class="blurb-meta right highlight js">
-              <select>
-                <option selected>This month</option>
-                <option>All 2015</option>
-                <option>All 2014</option>
-                <option>All 2013</option>
-              </select>
-            </form>
-          </header>
-          <div class="blurb-bd">
-            <ul>
-              <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 23 2016</time></li>
-              <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 21 2016</time></li>
-              <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 20 2016</time></li>
-              <li class="mt-15 mb-30 clearfix">
-                <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ko" /></svg><time class="small">Jan 19 2016 15:00:00 UTC</time>
-                <div class="left ml-30" id="issue-1">
-                  <h3 class="epsilon">Cloud Control Panel &amp; API Connectivity</h3>
-                  <p>At this time, connectivity to our Control Panel and API has been fully restored. If you continue to experience any issues please open a support ticket.</p>
-                  <div id="issue-details-1" class="details">
-                    <a class="details-more small" href="#issue-details-1">Show full details<svg width="16" height="16" class="append"><use xlink:href="#icon-plus-round" /></svg></a>
-                    <div class="details-bd">
-                      <h4 class="small muted"><time>2016-01-12 16:41:51 UTC</time></h4>
-                      <p>Our engineering team has diagnosed the cause of connectivity issues to our cloud platform and API. At this time they are working to resolve the issue and we will be sure to let you know as soon as we have an update.</p>
-                      <h4 class="small muted"><time>2016-01-12 16:41:51 UTC</time></h4>
-                      <p>Our engineering team has diagnosed the cause of connectivity issues to our cloud platform and API. At this time they are working to resolve the issue and we will be sure to let you know as soon as we have an update.</p>
-                      <a class="small" href="#issue-1">Hide full details<svg width="16" height="16" class="append"><use xlink:href="#icon-minus-round" /></svg></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 18 2016</time></li>
-              <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 17 2016</time></li>
-            </ul>
-          </div>
-        </section>
-      </div>
+      <nav class="top-nav right mt-20 optional">
+        <ul class="nav nav--social">
+          {% for link in site.social-links %}
+          <li>
+            <a href="{{link[1]}}" class="icon-link--square icon-link--{{link[0]}}">
+              <svg width="16" height="16" class="icon-{{link[0]}}--square">
+                <use xlink:href="#icon-{{link[0]}}"/>
+              </svg>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
     </div>
+  </header>
+  <!-- end Site Header -->
+
+  <!-- Page Body -->
+  <div class="l-container inverse bg-dark-muted-cover bb bb--large">
+    <section>
+      <header class="content content--wide text-center">
+        <h1 class="mega mt-110">
+          All Systems Operational 
+        </h1>
+        <p class="epsilon muted">
+          If you are experiencing any issues please <a href="#">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-link" /></svg></a>
+        </p>
+      </header>
+
+      <div class="l-wrap mb-140">
+        <div class="l-wrap-inner l-wrap-inner--narrow l-wrap-inner--main-left">
+
+          <div class="l-aside l-aside--right">
+            <section class="mt-50">
+              <div class="blurb-hd">
+                <h2 class="blurb-title left">Services</h2>
+              </div>
+              <div class="blurb-bd">
+                <ul>
+                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>API
+                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Cloud Control Panel
+                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Community
+                  <li class="muted"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ko" /></svg>DNS
+                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Droplets
+                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Event Processing
+                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Networking
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <div class="l-main l-main--left">
+            <section class="mt-50">
+              <header class="blurb-hd">
+                <h2 class="blurb-title left">Status History</h1>
+                <form class="blurb-meta right highlight js">
+                  <select>
+                    <option selected>This month</option>
+                    <option>All 2015</option>
+                    <option>All 2014</option>
+                    <option>All 2013</option>
+                  </select>
+                </form>
+              </header>
+              <div class="blurb-bd">
+                <ul>
+                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 23 2016</time></li>
+                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 21 2016</time></li>
+                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 20 2016</time></li>
+                  <li class="mt-15 mb-30 clearfix">
+                    <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ko" /></svg><time class="small">Jan 19 2016 15:00:00 UTC</time>
+                    <div class="left ml-30" id="issue-1">
+                      <h3 class="epsilon">Cloud Control Panel &amp; API Connectivity</h3>
+                      <p>At this time, connectivity to our Control Panel and API has been fully restored. If you continue to experience any issues please open a support ticket.</p>
+                      
+                      <div id="issue-details-1" class="details">
+                        <a class="details-more small" href="#issue-details-1">Show full details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg></a>
+                        <div class="details-bd">
+                          <h4 class="small muted"><time>2016-01-12 16:41:51 UTC</time></h4>
+                          <p>Our engineering team has diagnosed the cause of connectivity issues to our cloud platform and API. At this time they are working to resolve the issue and we will be sure to let you know as soon as we have an update.</p>
+                          <h4 class="small muted"><time>2016-01-12 16:41:51 UTC</time></h4>
+                          <p>Our engineering team has diagnosed the cause of connectivity issues to our cloud platform and API. At this time they are working to resolve the issue and we will be sure to let you know as soon as we have an update.</p>
+                          <a class="small" href="#issue-1">Hide full details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 18 2016</time></li>
+                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 17 2016</time></li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-</section>
-</div>
+  
+  {% include site-footer.html %}
+</body>
+</html>
