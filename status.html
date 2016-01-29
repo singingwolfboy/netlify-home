@@ -1,5 +1,5 @@
----
----
+{% assign incident = site.incidents.first %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -48,85 +48,128 @@
   <!-- end Site Header -->
 
   <!-- Page Body -->
-  <div class="l-container inverse bg-dark-muted-cover bb bb--large">
-    <section>
-      <header class="content content--wide text-center">
-        <h1 class="mega mt-110">
-          All Systems Operational 
-        </h1>
-        <p class="epsilon muted">
-          If you are experiencing any issues please <a href="#">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-link" /></svg></a>
-        </p>
-      </header>
+  <main class="inverse bg-dark-muted-cover bb bb--large">
+    
+    <header class="content text-center">
+    {% if incident.resolved %}
+      <h1 class="mega mt-110">
+        All Systems Operational
+      </h1>
+      <p class="epsilon muted">
+        If you are experiencing any issues please <a href="#">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-link" /></svg></a>
+      </p>
+    {% else %}
+      <h1 class="mega mt-110">
+        {{ incident.title }}
+      </h1>
+      <p class="epsilon">
+        {{ incident.description | markdownify }}
+      </p>
+    {% endif %}
+    </header>
 
-      <div class="l-wrap mb-140">
-        <div class="l-wrap-inner l-wrap-inner--narrow l-wrap-inner--main-left">
+    <div class="l-wrap mb-140">
+      <div class="l-wrap-inner l-wrap-inner--narrow l-wrap-inner--main-left">
 
-          <div class="l-aside l-aside--right">
-            <section class="mt-50">
-              <div class="blurb-hd">
-                <h2 class="blurb-title left">Services</h2>
-              </div>
-              <div class="blurb-bd">
-                <ul>
-                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>API
-                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Cloud Control Panel
-                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Community
-                  <li class="muted"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ko" /></svg>DNS
-                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Droplets
-                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Event Processing
-                  <li><svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>Networking
-                </ul>
-              </div>
-            </section>
-          </div>
+        <div class="l-aside l-aside--right">
+          <section class="mt-50">
+            <div class="blurb-hd">
+              <h2 class="blurb-title left">Services</h2>
+            </div>
+            <div class="blurb-bd">
+              <ul>
+                {% for service in site.services %}
+                <li>
+                  <svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>{{service}}
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </section>
+        </div>
 
-          <div class="l-main l-main--left">
-            <section class="mt-50">
-              <header class="blurb-hd">
-                <h2 class="blurb-title left">Status History</h1>
-                <form class="blurb-meta right highlight js">
-                  <select>
-                    <option selected>This month</option>
-                    <option>All 2015</option>
-                    <option>All 2014</option>
-                    <option>All 2013</option>
-                  </select>
-                </form>
-              </header>
-              <div class="blurb-bd">
-                <ul>
-                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 23 2016</time></li>
-                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 21 2016</time></li>
-                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 20 2016</time></li>
-                  <li class="mt-15 mb-30 clearfix">
-                    <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ko" /></svg><time class="small">Jan 19 2016 15:00:00 UTC</time>
-                    <div class="left ml-30" id="issue-1">
-                      <h3 class="epsilon">Cloud Control Panel &amp; API Connectivity</h3>
-                      <p>At this time, connectivity to our Control Panel and API has been fully restored. If you continue to experience any issues please open a support ticket.</p>
-                      
-                      <div id="issue-details-1" class="details">
-                        <a class="details-more small" href="#issue-details-1">Show full details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg></a>
-                        <div class="details-bd">
-                          <h4 class="small muted"><time>2016-01-12 16:41:51 UTC</time></h4>
-                          <p>Our engineering team has diagnosed the cause of connectivity issues to our cloud platform and API. At this time they are working to resolve the issue and we will be sure to let you know as soon as we have an update.</p>
-                          <h4 class="small muted"><time>2016-01-12 16:41:51 UTC</time></h4>
-                          <p>Our engineering team has diagnosed the cause of connectivity issues to our cloud platform and API. At this time they are working to resolve the issue and we will be sure to let you know as soon as we have an update.</p>
-                          <a class="small" href="#issue-1">Hide full details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg></a>
-                        </div>
+        <div class="l-main l-main--left">
+          <section class="mt-50">
+            <header class="blurb-hd">
+              <h2 class="blurb-title left">Status History</h1>
+              <form class="blurb-meta right highlight js">
+                {% assign day   = site.time | date: '%d' %}
+                {% assign month = site.time | date: '%m' %}
+                {% assign year  = site.time | date: '%Y' %}
+                {% assign id    = 0 %}
+                <select>
+                  <option selected>This month</option>
+                  {% if month != "01" %}
+                  <option>All {{year}}</option>
+                  {% endif %}
+                  <option>All {{year | minus: 1}}</option>
+                </select>
+              </form>
+            </header>
+            <div class="blurb-bd">
+              <ul>
+              {% for d in (1..day) reversed %}
+                {% capture date_string %}{{ year }}-{{ month }}-{% if d < 10 %}0{% endif %}{{ d }}{% endcapture %}
+                {% assign date = date_string | parse_date %}
+                {% assign incidents = site.incidents | where: "date", date %}
+                
+                <li class="mt-5">
+                {% if incidents == empty %}
+                
+                  <div class="small muted">
+                    <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>
+                    <time>{{ date_string }}</time>
+                  </div>
+                  
+                {% else %}
+                  
+                  {% for incident in incidents %}
+                    
+                    {% assign id = id | plus: 1 %}
+                    <article id="incident-{{ id }}" class="clearfix">
+                      <div class="small mt-25">
+                        <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ko" /></svg>
+                        <time>{{ incident.date | date: '%Y-%m-%d' }}</time>
                       </div>
-                    </div>
-                  </li>
-                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 18 2016</time></li>
-                  <li class="mt-5 muted small"><svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg><time>Jan 17 2016</time></li>
-                </ul>
-              </div>
-            </section>
-          </div>
+                      <div class="left ml-30">
+                        <h3 class="epsilon">{{ incident.title }}</h3>
+                        {{ incident.description | markdownify }}
+                        
+                        {% if incident.details != empty %}
+                        <div class="details" id="incident-details-{{ id }}">
+                          <p class="details-more">
+                            <a class="small" href="#incident-details-{{ id }}">
+                              Show full details
+                              <svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
+                            </a>
+                          </p>
+                          <div class="details-bd">
+                            {{ incident.details | markdownify }}
+                            <p>
+                              <a class="small" href="#incident-{{ id }}">
+                                Hide full details
+                                <svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                        {% endif %}
+                        
+                      </div>
+                    </article>
+                  {% endfor %}
+                </li>
+                {% endif %}
+              {% endfor %}
+               
+              </ul>
+            </div>
+          </section>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </main>
+  <!-- end Page Body -->
   
   {% include site-footer.html %}
 </body>

@@ -46,7 +46,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 gulp.task('sass', function () {
   gulp.src('./_scss/*.scss')
           .pipe(sass({
-            onError: browserSync.notify
+            //onError: browserSync.notify
           }))
           .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
           .pipe(gulp.dest('_site/css'))

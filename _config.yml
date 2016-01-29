@@ -15,6 +15,8 @@ social-links:
   linkedin: 'https://www.linkedin.com/company/netlify'
   gitter: 'https://gitter.im/netlify/community'
 
+services: ["API", "DNS", "Event Processing"]
+
 excerpt_separator: <!-- excerpt -->
 
 collections:
@@ -23,6 +25,8 @@ collections:
   reseller_docs:
     output: true
     permalink: /reseller/docs/:title.html
+  incidents:
+    output: false
 
 
 defaults:
