@@ -1,11 +1,15 @@
-{% assign incident = site.incidents.first %}
+---
+---
+
+{% assign latest_incident = site.incidents.last %}
+{% assign is_ok = latest_incident | if: latest_incident.resolved, true %}
 
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Netlify Status</title>
+    <title>Netlify Status: {{ is_ok | if: "OK", "Problems" }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700'>
@@ -50,8 +54,8 @@
   <!-- Page Body -->
   <main class="inverse bg-dark-muted-cover bb bb--large">
     
-    <header class="content text-center">
-    {% if incident.resolved %}
+    <header class="content text-center">      
+    {% if is_ok %}
       <h1 class="mega mt-110">
         All Systems Operational
       </h1>
@@ -59,18 +63,19 @@
         If you are experiencing any issues please <a href="#">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-link" /></svg></a>
       </p>
     {% else %}
-      <h1 class="mega mt-110">
-        {{ incident.title }}
-      </h1>
-      <p class="epsilon">
-        {{ incident.description | markdownify }}
-      </p>
+       <h1 class="mega mt-110">
+         {{ latest_incident.title }}
+       </h1>
+       <p class="epsilon highlight">
+         {{ latest_incident.description }}
+       </p>
     {% endif %}
     </header>
 
     <div class="l-wrap mb-140">
       <div class="l-wrap-inner l-wrap-inner--narrow l-wrap-inner--main-left">
 
+        <!-- Service Status -->
         <div class="l-aside l-aside--right">
           <section class="mt-50">
             <div class="blurb-hd">
@@ -88,88 +93,113 @@
           </section>
         </div>
 
+        <!-- Status History -->
+        {% assign day     = site.time | date: '%d' %}
+        {% assign month   = site.time | date: '%m' %}
+        {% assign year    = site.time | date: '%Y' %}
+        {% assign counter = 0 %}
+        
         <div class="l-main l-main--left">
           <section class="mt-50">
             <header class="blurb-hd">
               <h2 class="blurb-title left">Status History</h1>
               <form class="blurb-meta right highlight js">
-                {% assign day   = site.time | date: '%d' %}
-                {% assign month = site.time | date: '%m' %}
-                {% assign year  = site.time | date: '%Y' %}
-                {% assign id    = 0 %}
+                
+                {% assign oldest_incident = site.incidents.last %}
+                {% assign first_year = oldest_incident | if: oldest_incident.date , site.time | date: '%Y' %}
+                
                 <select>
                   <option selected>This month</option>
-                  {% if month != "01" %}
-                  <option>All {{year}}</option>
-                  {% endif %}
-                  <option>All {{year | minus: 1}}</option>
+                {% for y in (first_year..year) reverse %}
+                  <option>All {{y}}</option>  
+                {% endfor %}
                 </select>
+                
               </form>
             </header>
             <div class="blurb-bd">
               <ul>
               {% for d in (1..day) reversed %}
+              
                 {% capture date_string %}{{ year }}-{{ month }}-{% if d < 10 %}0{% endif %}{{ d }}{% endcapture %}
                 {% assign date = date_string | parse_date %}
                 {% assign incidents = site.incidents | where: "date", date %}
                 
                 <li class="mt-5">
+                  
                 {% if incidents == empty %}
                 
                   <div class="small muted">
                     <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>
-                    <time>{{ date_string }}</time>
+                    <time>{{ date | date: '%Y-%m-%d' }}</time>
                   </div>
                   
                 {% else %}
                   
                   {% for incident in incidents %}
                     
-                    {% assign id = id | plus: 1 %}
-                    <article id="incident-{{ id }}" class="clearfix">
+                    {% assign counter = counter | plus: 1 %}
+                    
+                    <article id="incident-{{ counter }}" class="clearfix">
                       <div class="small mt-25">
                         <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ko" /></svg>
                         <time>{{ incident.date | date: '%Y-%m-%d' }}</time>
                       </div>
                       <div class="left ml-30">
                         <h3 class="epsilon">{{ incident.title }}</h3>
-                        {{ incident.description | markdownify }}
+                        <p>{{ incident.description}}</p>
                         
-                        {% if incident.details != empty %}
-                        <div class="details" id="incident-details-{{ id }}">
+                        {% comment %}
+                          Apparently in Jekyll 2 you need to check for both nil and empty.
+                          Checking for black doesn't work.
+                          https://github.com/Shopify/liquid/issues/223 
+                        {% endcomment %}
+                        
+                        {% if incident.details != nil and incident.details != empty %}
+                        
+                        <div class="details" id="incident-details-{{ counter }}">
                           <p class="details-more">
-                            <a class="small" href="#incident-details-{{ id }}">
-                              Show full details
+                            <a class="small" href="#incident-details-{{ counter }}">
+                              Show Details
                               <svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
                             </a>
                           </p>
                           <div class="details-bd">
+                            
                             {{ incident.details | markdownify }}
+                            
                             <p>
-                              <a class="small" href="#incident-{{ id }}">
-                                Hide full details
+                              <a class="small" href="#incident-{{ counter }}">
+                                Hide Details
                                 <svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
                               </a>
                             </p>
                           </div>
                         </div>
+                        
                         {% endif %}
+                        
                         
                       </div>
                     </article>
+                    
                   {% endfor %}
-                </li>
+                  
                 {% endif %}
+
+                </li>
+                
               {% endfor %}
                
               </ul>
             </div>
           </section>
         </div>
-      </div>
-    </div>
+
+      </div><!-- end l-wrap-inner -->
+    </div><!-- end l-wrap -->
+
   </main>
-  <!-- end Page Body -->
   
   {% include site-footer.html %}
 </body>
