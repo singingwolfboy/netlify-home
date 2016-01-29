@@ -71,3 +71,7 @@ If I had a soapbox, I would say "don't give up". Bang your head against it for a
 _And if you don't give up, you are more likely to become part of the solution, because you have skin in the game._
 
 Yeah, exactly.
+
+--
+
+_The [Static Web Tech Meetup](http://www.meetup.com/sf-static-web-tech/) is a monthly gathering of developers and tech forward-thinkers who want to learn and share their insight about the technology that will power tomorrow's internet. Join us at our next event by connecting with us on [Meetup](http://www.meetup.com/sf-static-web-tech/)!_
