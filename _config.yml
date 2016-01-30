@@ -15,7 +15,7 @@ social-links:
   linkedin: 'https://www.linkedin.com/company/netlify'
   gitter: 'https://gitter.im/netlify/community'
 
-services: ["API", "DNS", "Event Processing"]
+services: ["API", "DNS", "Mail", "Builds"]
 
 excerpt_separator: <!-- excerpt -->
 

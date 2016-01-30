@@ -1,8 +1,8 @@
 ---
 ---
 
-{% assign latest_incident = site.incidents | where: "resolved", nil | sort: "date:desc" | last %}
-{% assign is_ok = latest_incident | if: latest_incident.resolved, true %}
+{% assign open_incidents = site.incidents | where: "resolved", nil | sort: "date:desc" %}
+{% assign is_ok = open_incidents.empty %}
 
 <!doctype html>
 <html lang="en">
@@ -67,10 +67,10 @@
           </p>
         {% else %}
            <h1 class="mega mt-110">
-             {{ latest_incident.title }}
+             {{ open_incidents.last.title }}
            </h1>
            <div class="epsilon highlight">
-             {{ latest_incident.description | markdownify }}
+             {{ open_incidents.last.description | markdownify }}
            </div>
         {% endif %}
         </header>
@@ -90,8 +90,18 @@
           <div class="blurb-bd">
             <ul>
               {% for service in site.services %}
-              <li>
-                <svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>{{service}}
+                {% assign running = true %}
+                {% for incident in open_incidents %}
+                  {% if incident.tags contains service %}
+                    {% assign running = false %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              <li class="{{ running | if: 'loud', 'muted' }}">
+                <svg class="prepend {{ running | if: 'highlight', 'muted' }}" width="16" height="16">
+                  <use xlink:href="#icon-{{ running | if: 'ok', 'ko' }}" />
+                </svg>
+                {{service}}
               </li>
               {% endfor %}
             </ul>
