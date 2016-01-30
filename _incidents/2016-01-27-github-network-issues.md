@@ -1,9 +1,9 @@
 ---
 title: GitHub Network Issues
-description: "GitHub is having network issues. Builds pulling from GitHub are failing right now."
+description: GitHub is back to normal. Github network issues were causing builds to fail.
 details: ""
 resolved: true
 cmsUserSlug: ""
-date: 2016-01-27 
+date: 2016-01-27
 ---
 
