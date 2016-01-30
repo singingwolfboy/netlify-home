@@ -65,12 +65,11 @@
               <h1 class="alpha mt-60 mb-60 text-center">Netlify Is Experiencing Some Issues</h1>
             </div>
           
-            <section class="md-flex md-flex--space-around mt-60 mb-60">
-              <div class="optional mr-50">
-                {% assign image_size = 100 | times: open_incidents.size %}
-                <svg width="{{ image_size }}" height="{{ image_size }}"><use xlink:href="#icon-polyhedron"></use></svg>
+            <section class="media mt-60 mb-60">
+              <div class="media-img optional ml-50 mr-50">
+                <svg width="220" height="220"><use xlink:href="#icon-polyhedron"></use></svg>
               </div>
-              <div class="text">
+              <div class="media-bd">
                 {% for incident in open_incidents %}
                   <article class="blurb center mb-40">
                     <h1 class="blurb-title highlight">{{ incident.title }}</h1>
@@ -80,7 +79,7 @@
               </div>
             </section>
           </header>
-          
+
         {% else %}
         
           <header class="mt-100 mb-100 text-center">
