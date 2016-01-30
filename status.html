@@ -133,8 +133,7 @@
               {% if incidents == empty %}
 
                 <!-- No incidents on this date -->
-                <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>
-                <time class="small">{{ date | date: '%Y-%m-%d' }}</time>
+                <time class="x-small">{{ date | date: '%Y-%m-%d' }}</time>
 
               {% else %}
 
@@ -142,12 +141,18 @@
 
                   {% assign counter = counter | plus: 1 %}
 
-                    <article id="incident-{{ counter }}" class="text mt-30 mb-30 ml-30 mr-30">
+                    <article id="incident-{{ counter }}" class="text mb-30">
 
                       <header>
-                        <svg class="left ml-n30" width="16" height="30"><use xlink:href="#icon-warning" /></svg>
-                        <h1 class="epsilon mt-0 mb-0">{{ incident.title}}</h1>
-                        <time class="small">{{ incident.date | date: '%Y-%m-%d' }}</time>
+                        <h1 class="delta mb-0">{{ incident.title}}</h1>
+                        <time class="x-small">{{ incident.date | date: '%Y-%m-%d' }}</time>
+                        {% if incident.resolved == nil %}
+                          <a title="This issue is still open">
+                            <svg class="append muted" width="16" height="16">
+                              <use xlink:href="#icon-warning" />
+                            </svg>
+                          </a>
+                        {% endif %}
                       </header>
 
                       {{ incident.description | markdownify }}

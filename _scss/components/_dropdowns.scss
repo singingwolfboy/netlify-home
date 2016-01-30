@@ -1,5 +1,5 @@
 .dropdown {
-  background: $color-light url(/img/icon-select-drop.png) no-repeat 95% 0.825em;
+  background: url(/img/icon-select-drop.png) no-repeat 95% 0.825em;
   position: absolute;
   z-index: 999;
   overflow: hidden;
@@ -8,8 +8,13 @@
   border-radius: 3px;
 
   &:hover {
+    background-color: $color-light;
     height: auto;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    
+    .inverse & {
+      background-color: $color-darkest;
+    }
   }
   
   .right &, &.right {
@@ -31,8 +36,4 @@
   .no-touch & a:hover {
     color: $color-highlight;
   }
-}
-
-.inverse .dropdown {
-  background-color: $color-darkest;
 }
