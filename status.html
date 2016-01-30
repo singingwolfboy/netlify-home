@@ -1,7 +1,7 @@
 ---
 ---
 
-{% assign latest_incident = site.incidents.last %}
+{% assign latest_incident = site.incidents | where: "resolved", nil | sort: "date:desc" | last %}
 {% assign is_ok = latest_incident | if: latest_incident.resolved, true %}
 
 <!doctype html>
@@ -18,7 +18,7 @@
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body>
+<body class="page-status">
 
   {% include svg-defs.html %}
 
@@ -52,46 +52,52 @@
   <!-- end Site Header -->
 
   <!-- Page Body -->
-  <main class="inverse bg-dark-muted-cover bb bb--large">
+  <main>
     
-    <header class="content text-center">      
-    {% if is_ok %}
-      <h1 class="mega mt-110">
-        All Systems Operational
-      </h1>
-      <p class="epsilon muted">
-        If you are experiencing any issues please <a href="#">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-link" /></svg></a>
-      </p>
-    {% else %}
-       <h1 class="mega mt-110">
-         {{ latest_incident.title }}
-       </h1>
-       <p class="epsilon highlight">
-         {{ latest_incident.description }}
-       </p>
-    {% endif %}
-    </header>
+    <!-- Current Status Banner -->
+    <div class="inverse bg-dark-muted-cover bb bb--large">
+      <div class="content">
+        <header class="text-center mt-100 mb-100">      
+        {% if is_ok %}
+          <h1 class="mega">
+            All Systems Operational
+          </h1>
+          <p class="epsilon muted">
+            If you are experiencing any issues please <a href="#">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-link" /></svg></a>
+          </p>
+        {% else %}
+           <h1 class="mega mt-110">
+             {{ latest_incident.title }}
+           </h1>
+           <div class="epsilon highlight">
+             {{ latest_incident.description | markdownify }}
+           </div>
+        {% endif %}
+        </header>
+      </div>
+    </div>
+    
+    <!-- Status Details: Services and History -->
+    <div class="bg-light-muted-2 muted">
+      
+      <div class="content mt-50 mb-100 md-flex md-flex--row-reverse md-flex--space-between">
+    
+        <!-- Services -->
+        <section class="blurb center mb-50">
+          <div class="blurb-hd">
+            <h2 class="blurb-title left">Services</h2>
+          </div>
+          <div class="blurb-bd">
+            <ul>
+              {% for service in site.services %}
+              <li>
+                <svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>{{service}}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
 
-    <div class="l-wrap mb-140">
-      <div class="l-wrap-inner l-wrap-inner--narrow l-wrap-inner--main-left">
-
-        <!-- Service Status -->
-        <div class="l-aside l-aside--right">
-          <section class="mt-50">
-            <div class="blurb-hd">
-              <h2 class="blurb-title left">Services</h2>
-            </div>
-            <div class="blurb-bd">
-              <ul>
-                {% for service in site.services %}
-                <li>
-                  <svg class="highlight prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>{{service}}
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </section>
-        </div>
 
         <!-- Status History -->
         {% assign day     = site.time | date: '%d' %}
@@ -99,106 +105,88 @@
         {% assign year    = site.time | date: '%Y' %}
         {% assign counter = 0 %}
         
-        <div class="l-main l-main--left">
-          <section class="mt-50">
-            <header class="blurb-hd">
-              <h2 class="blurb-title left">Status History</h1>
-              <form class="blurb-meta right highlight js">
-                
-                {% assign oldest_incident = site.incidents.last %}
-                {% assign first_year = oldest_incident | if: oldest_incident.date , site.time | date: '%Y' %}
-                
-                <select>
-                  <option selected>This month</option>
-                {% for y in (first_year..year) reverse %}
-                  <option>All {{y}}</option>  
-                {% endfor %}
-                </select>
-                
-              </form>
-            </header>
-            <div class="blurb-bd">
-              <ul>
-              {% for d in (1..day) reversed %}
+        <section class="blurb center mb-50">
+          <header class="blurb-hd">
+            <h2 class="blurb-title left">Status History</h1>
+            <form class="blurb-meta right highlight js">
+            
+              {% assign oldest_incident = site.incidents.last %}
+              {% assign first_year = oldest_incident | if: oldest_incident.date , site.time | date: '%Y' %}
+            
+              <select>
+                <option selected>This month</option>
+              {% for y in (first_year..year) reverse %}
+                <option>All {{y}}</option>  
+              {% endfor %}
+              </select>
+            
+            </form>
+          </header>
+          <div class="blurb-bd">
+            <ul>
+            {% for d in (1..day) reversed %}
+          
+              {% capture date_string %}{{ year }}-{{ month }}-{{ d }}{% endcapture %}
+              {% assign date = date_string | parse_date %}
+              {% assign incidents = site.incidents | where: "date", date %}
+            
+              {% if incidents == empty %}
+                <li class="mt-5 mb-5 small">
+                  <!-- No incidents on this date -->
+                  <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>
+                  <time>{{ date | date: '%Y-%m-%d' }}</time>
+                </li>
               
-                {% capture date_string %}{{ year }}-{{ month }}-{% if d < 10 %}0{% endif %}{{ d }}{% endcapture %}
-                {% assign date = date_string | parse_date %}
-                {% assign incidents = site.incidents | where: "date", date %}
+              {% else %}
+              
+                {% for incident in incidents %}
                 
-                <li class="mt-5">
+                  {% assign counter = counter | plus: 1 %}
                   
-                {% if incidents == empty %}
-                
-                  <div class="small muted">
-                    <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>
-                    <time>{{ date | date: '%Y-%m-%d' }}</time>
-                  </div>
-                  
-                {% else %}
-                  
-                  {% for incident in incidents %}
+                  <li class="mt-30 mb-30 bb bb--muted">
                     
-                    {% assign counter = counter | plus: 1 %}
+                    <article id="incident-{{ counter }}" class="ml-30 ">
                     
-                    <article id="incident-{{ counter }}" class="clearfix">
-                      <div class="small mt-25">
-                        <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ko" /></svg>
-                        <time>{{ incident.date | date: '%Y-%m-%d' }}</time>
-                      </div>
-                      <div class="left ml-30">
-                        <h3 class="epsilon">{{ incident.title }}</h3>
-                        <p>{{ incident.description}}</p>
-                        
-                        {% comment %}
-                          Apparently in Jekyll 2 you need to check for both nil and empty.
-                          Checking for black doesn't work.
-                          https://github.com/Shopify/liquid/issues/223 
-                        {% endcomment %}
-                        
-                        {% if incident.details != nil and incident.details != empty %}
-                        
-                        <div class="details" id="incident-details-{{ counter }}">
-                          <p class="details-more">
-                            <a class="small" href="#incident-details-{{ counter }}">
-                              Show Details
-                              <svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
+                      <header>
+                        <h1 class="epsilon mt-0 mb-0"><svg class="prepend ml-n30" width="16" height="16"><use xlink:href="#icon-warning" /></svg>{{ incident.title}}</h1>
+                        <time class="small">{{ incident.date | date: '%Y-%m-%d' }}</time>
+                      </header>
+                  
+                      {{ incident.description | markdownify }}
+                  
+                      {% if incident.details != nil and incident.details != empty %}
+                      <div class="details" id="incident-details-{{ counter }}">
+                        <p class="details-more">
+                          <a class="small block" href="#incident-details-{{ counter }}">
+                            Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
+                          </a>
+                        </p>
+                        <div class="details-bd post-bd">
+                          {{ incident.details | markdownify }}
+                          <p>
+                            <a class="small block" href="#incident-{{ counter }}">
+                              Hide Details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
                             </a>
                           </p>
-                          <div class="details-bd">
-                            
-                            {{ incident.details | markdownify }}
-                            
-                            <p>
-                              <a class="small" href="#incident-{{ counter }}">
-                                Hide Details
-                                <svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
-                              </a>
-                            </p>
-                          </div>
                         </div>
-                        
-                        {% endif %}
-                        
-                        
                       </div>
+                      {% endif %}
+                  
                     </article>
                     
-                  {% endfor %}
-                  
-                {% endif %}
-
-                </li>
-                
-              {% endfor %}
-               
-              </ul>
-            </div>
-          </section>
-        </div>
-
-      </div><!-- end l-wrap-inner -->
-    </div><!-- end l-wrap -->
-
+                  </li>
+                {% endfor %}
+              
+              {% endif %}
+            
+            {% endfor %}
+            </ul>
+          </div>
+        </section><!-- end Status History -->
+  
+      </div><!-- end Content -->
+    
+    </div><!-- end Status details-->
   </main>
   
   {% include site-footer.html %}
