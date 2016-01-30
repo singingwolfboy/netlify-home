@@ -1,0 +1,19 @@
+.incident {
+  margin-bottom: 30px;
+  .details-more {
+    border-bottom: 1px dashed $color-highlight;
+    padding-bottom: 20px;
+  }
+  .details-less, header + p:last-child {
+    border-bottom: 2px solid $color-highlight-lighter;
+    padding-bottom: 20px;
+  }
+}
+
+.no-incidents + .incidents:before {
+  content: '';
+  display: block;
+  height: 2px;
+  background: $color-highlight-lighter;
+  margin-top: 20px;
+}

@@ -137,65 +137,58 @@
               {% capture date_string %}{{ year }}-{{ month }}-{{ d }}{% endcapture %}
               {% assign date = date_string | parse_date %}
               {% assign incidents = site.incidents | where: "date", date %}
-
-              <li>
-
+              
               {% if incidents == empty %}
-
-                <!-- No incidents on this date -->
-                <time class="x-small">{{ date | date: '%Y-%m-%d' }}</time>
-
+              
+                <li class="no-incidents">
+                  <time class="x-small">{{ date | date: '%Y-%m-%d' }}</time>
+                </li>
+                
               {% else %}
-
+              
+                <li class="incidents">
+                  
                 {% for incident in incidents %}
-
+                
                   {% assign counter = counter | plus: 1 %}
 
-                    <article id="incident-{{ counter }}" class="text mb-30">
+                  <article id="incident-{{ counter }}" class="incident text">
 
-                      <header>
-                        <h1 class="delta mb-0">{{ incident.title}}</h1>
-                        <time class="x-small">{{ incident.date | date: '%Y-%m-%d' }}</time>
-                        {% if incident.resolved == nil %}
-                          <a title="This issue is still open">
-                            <svg class="append muted" width="16" height="16">
-                              <use xlink:href="#icon-warning" />
-                            </svg>
-                          </a>
-                        {% endif %}
-                      </header>
-
-                      {{ incident.description | markdownify }}
-                      
-                      {% if incident.details != nil and incident.details != empty %}
-                      <div class="details" id="incident-details-{{ counter }}">
-                        <div class="details-more bb bb--dashed">
-                          <p>
-                            <a class="small block" href="#incident-details-{{ counter }}">
-                              Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
-                            </a>
-                          </p>
-                        </div>
-                        <div class="details-bd bb bb--muted">
-                          {{ incident.details | markdownify }}
-                          <p>
-                            <a class="small block" href="#incident-{{ counter }}">
-                              Hide Details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      {% else %}
-                      <div class="bb bb--muted"></div>
+                    <header>
+                      <h1 class="delta mb-0">{{ incident.title}}</h1>
+                      <time class="x-small">{{ incident.date | date: '%Y-%m-%d' }}</time>
+                      {% if incident.resolved == nil %}
+                        <a title="This issue is still open">
+                          <svg class="append muted" width="16" height="16">
+                            <use xlink:href="#icon-warning" />
+                          </svg>
+                        </a>
                       {% endif %}
+                    </header>
 
-                    </article>
+                    {{ incident.description | markdownify }}
+                    
+                    {% if incident.details != nil and incident.details != empty %}
+                    <div class="details" id="incident-details-{{ counter }}">
+                      <a class="details-more small block" href="#incident-details-{{ counter }}">
+                          Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
+                      </a>
+                      <div class="details-bd">
+                        {{ incident.details | markdownify }}
+                        <a class="details-less small block" href="#incident-{{ counter }}">
+                          Hide Details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
+                        </a>
+                      </div>
+                    </div>
+                    {% endif %}
 
+                  </article>
+                  
                 {% endfor %}
-              
+                
+                </li>
+                
               {% endif %}
-
-              </li>
 
             {% endfor %}
             </ul>
