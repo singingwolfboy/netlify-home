@@ -1,10 +1,10 @@
 ---
 title: Interview with Parker Moore from Jekyll
 author: Aaron Autrand
-image: /uploads/parkercrop.jpeg
+image: null
 short_title: Interview with Parker Moore from Jekyll
 description: "Parker Moore chats with netlify about Jekyll, development and the future of static web tech."
-thumbnail: /uploads/lv55uzmx.png
+thumbnail: /uploads/parker.jpg
 cmsUserSlug: ""
 date: 2016-01-28T00:00:00.000Z
 tags: null
