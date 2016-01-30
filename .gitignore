@@ -1,4 +1,5 @@
 _site
+_status
 .idea
 node_modules
 .DS_Store

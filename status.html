@@ -1,4 +1,5 @@
 ---
+permalink: /index.html
 ---
 
 {% assign open_incidents = site.incidents | where: "resolved", nil | sort: "date:desc" %}
@@ -57,14 +58,14 @@
     <!-- Current Status Banner -->
     <div class="inverse bg-dark-muted-cover bb bb--large">
       <div class="content">
-        
+
         {% if open_incidents.size > 1 %}
-        
-          <header> 
+
+          <header>
             <div class="bb">
               <h1 class="alpha mt-60 mb-60 text-center">Netlify Is Experiencing Some Issues</h1>
             </div>
-          
+
             <section class="media mt-60 mb-60">
               <div class="media-img optional ml-50 mr-50">
                 <svg width="220" height="220"><use xlink:href="#icon-polyhedron"></use></svg>
@@ -81,9 +82,9 @@
           </header>
 
         {% else %}
-        
+
           <header class="mt-100 mb-100 text-center">
-               
+
           {% if is_ok %}
             <h1 class="mega">
               All Systems Operational
@@ -99,11 +100,11 @@
                {{ open_incidents.last.description | markdownify }}
              </div>
           {% endif %}
-          
+
           </header>
-          
+
         {% endif %}
-        
+
       </div>
     </div>
 
@@ -148,14 +149,14 @@
         <section class="blurb center mt-50 mb-100">
           <header class="blurb-hd">
             <h2 class="blurb-title left">Status History</h1>
-            <div class="blurb-meta right">
+            <div class="blurb-meta dropdown-container right">
               <ul class="dropdown">
               {% assign oldest_incident = site.incidents.last %}
               {% assign first_year = oldest_incident | if: oldest_incident.date , site.time | date: '%Y' %}
 
               <li class="selected"><a href="#">This month</a></li>
               {% for y in (first_year..year) reverse %}
-              <li><a href="#">All {{y}}</a></li>  
+              <li><a href="#">All {{y}}</a></li>
               {% endfor %}
               </ul>
             </div>
@@ -167,19 +168,19 @@
               {% capture date_string %}{{ year }}-{{ month }}-{{ d }}{% endcapture %}
               {% assign date = date_string | parse_date %}
               {% assign incidents = site.incidents | where: "date", date %}
-              
+
               {% if incidents == empty %}
-              
+
                 <li class="no-incidents">
                   <time class="x-small">{{ date | date: '%Y-%m-%d' }}</time>
                 </li>
-                
+
               {% else %}
-              
+
                 <li class="incidents">
-                  
+
                 {% for incident in incidents %}
-                
+
                   {% assign counter = counter | plus: 1 %}
 
                   <article id="incident-{{ counter }}" class="incident text">
@@ -197,7 +198,7 @@
                     </header>
 
                     {{ incident.description | markdownify }}
-                    
+
                     {% if incident.details != nil and incident.details != empty %}
                     <div class="details" id="incident-details-{{ counter }}">
                       <a class="details-more small block" href="#incident-details-{{ counter }}">
@@ -213,11 +214,11 @@
                     {% endif %}
 
                   </article>
-                  
+
                 {% endfor %}
-                
+
                 </li>
-                
+
               {% endif %}
 
             {% endfor %}

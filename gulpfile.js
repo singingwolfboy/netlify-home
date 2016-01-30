@@ -30,6 +30,24 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 });
 
 /**
+ * Build the status page
+ */
+gulp.task('status-build', function (done) {
+    var cmd = ['exec', 'jekyll', 'build', '-t', '-c', '_status.yml'];
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn('bundle', cmd, {stdio: 'inherit'})
+        .on('close', done);
+});
+
+/**
+ * Rebuild Jekyll & do page reload
+ */
+gulp.task('status-rebuild', ['status-build'], function () {
+    browserSync.reload();
+});
+
+
+/**
  * Wait for jekyll-build, then launch the Server
  */
 gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
@@ -39,6 +57,15 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
         }
     });
 });
+
+gulp.task('browser-sync-status', ['sass', 'status-build'], function() {
+    browserSync({
+        server: {
+            baseDir: '_status'
+        }
+    });
+});
+
 
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
@@ -54,12 +81,6 @@ gulp.task('sass', function () {
           .pipe(gulp.dest('./css'));
 });
 
-
-gulp.task('optimize-images', function() {
-    gulp
-})
-
-
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -69,9 +90,16 @@ gulp.task('watch', function () {
     gulp.watch(['*.html', 'reseller/docs/*.md', '_layouts/*.html', '_includes/*.html', 'admin/*', '_posts/*', 'docs/*.md', 'img/*', 'js/*.js', '_plugins/*.rb', '_data/*.yml'], ['jekyll-rebuild']);
 });
 
+gulp.task('status-watch', function () {
+    gulp.watch(['_scss/*.scss', '_scss/components/*.scss', '_scss/pages/*.scss'], ['sass']);
+    gulp.watch(['status.html', '_includes/*.html', 'admin-status/*', 'admin-status/css/*', 'img/*', 'js/*.js', '_plugins/*.rb', '_incidents/*'], ['status-rebuild']);
+});
+
 gulp.task('build', ['sass', 'jekyll-build']);
 
-gulp.task('production', ['sass', 'jekyll-build', 'optimize-images'])
+gulp.task('status', ['sass', 'status-build']);
+
+gulp.task('status-server', ['browser-sync-status', 'status-watch']);
 
 /**
  * Default task, running just `gulp` will compile the sass,

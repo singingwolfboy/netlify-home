@@ -1,0 +1,27 @@
+url: status.netlify.com
+
+future: false
+
+kramdown:
+  input: GFM
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock", "*.md", "*.html", "_posts", "reseller", "uploads", "admin/"]
+include: ["status.html"]
+
+social-links:
+  twitter: 'https://twitter.com/netlify'
+  gitter: 'https://gitter.im/netlify/community'
+
+services: ["CDN",  "DNS", "API", "Build Automation", "Prerendering"]
+
+collections:
+  incidents:
+    output: false
+
+destination: _status
+
+# RSS
+rss:
+  name: The netlify status feed.
+  url: https://status.netlify.com
+  path: /status

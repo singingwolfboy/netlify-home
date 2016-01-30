@@ -5,7 +5,7 @@ future: false
 kramdown:
   input: GFM
 
-exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock", "status.html", "status-cms", "admin-status"]
 include: ["_redirects"]
 
 social-links:
@@ -14,8 +14,6 @@ social-links:
   github: 'https://github.com/netlify'
   linkedin: 'https://www.linkedin.com/company/netlify'
   gitter: 'https://gitter.im/netlify/community'
-
-services: ["CDN",  "DNS", "API", "Build Automation", "Prerendering"]
 
 excerpt_separator: <!-- excerpt -->
 
