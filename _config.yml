@@ -15,7 +15,7 @@ social-links:
   linkedin: 'https://www.linkedin.com/company/netlify'
   gitter: 'https://gitter.im/netlify/community'
 
-services: ["API", "DNS", "Mail", "Builds"]
+services: ["CDN",  "DNS", "API", "Build Automation", "Prerendering"]
 
 excerpt_separator: <!-- excerpt -->
 

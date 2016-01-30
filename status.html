@@ -2,7 +2,7 @@
 ---
 
 {% assign open_incidents = site.incidents | where: "resolved", nil | sort: "date:desc" %}
-{% assign is_ok = open_incidents.empty %}
+{% assign is_ok = open_incidents == empty %}
 
 <!doctype html>
 <html lang="en">
@@ -57,33 +57,64 @@
     <!-- Current Status Banner -->
     <div class="inverse bg-dark-muted-cover bb bb--large">
       <div class="content">
-        <header class="text-center mt-100 mb-100">      
-        {% if is_ok %}
-          <h1 class="mega">
-            All Systems Operational
-          </h1>
-          <p class="epsilon muted">
-            If you are experiencing any issues please <a href="#">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-link" /></svg></a>
-          </p>
+        
+        {% if open_incidents.size > 1 %}
+        
+          <header> 
+            <div class="bb">
+              <h1 class="alpha mt-60 mb-60 text-center">Netlify Is Experiencing Some Issues</h1>
+            </div>
+          
+            <section class="md-flex md-flex--space-around mt-60 mb-60">
+              <div class="optional mr-50">
+                {% assign image_size = 100 | times: open_incidents.size %}
+                <svg width="{{ image_size }}" height="{{ image_size }}"><use xlink:href="#icon-polyhedron"></use></svg>
+              </div>
+              <div class="text">
+                {% for incident in open_incidents %}
+                  <article class="blurb center mb-40">
+                    <h1 class="blurb-title highlight">{{ incident.title }}</h1>
+                    {{ incident.description | markdownify }}
+                  </article>
+                {% endfor %}
+              </div>
+            </section>
+          </header>
+          
         {% else %}
-           <h1 class="mega mt-110">
-             {{ open_incidents.last.title }}
-           </h1>
-           <div class="epsilon highlight">
-             {{ open_incidents.last.description | markdownify }}
-           </div>
+        
+          <header class="mt-100 mb-100 text-center">
+               
+          {% if is_ok %}
+            <h1 class="mega">
+              All Systems Operational
+            </h1>
+            <p class="epsilon muted">
+              If you are experiencing any issues please <a href="#">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-link" /></svg></a>
+            </p>
+          {% else %}
+             <h1 class="mega mt-110">
+               {{ open_incidents.last.title }}
+             </h1>
+             <div class="epsilon highlight">
+               {{ open_incidents.last.description | markdownify }}
+             </div>
+          {% endif %}
+          
+          </header>
+          
         {% endif %}
-        </header>
+        
       </div>
     </div>
 
     <!-- Status Details: Services and History -->
     <div class="bg-light-muted-2 muted">
 
-      <div class="content mt-50 mb-100 md-flex md-flex--row-reverse md-flex--space-between">
+      <div class="content md-flex md-flex--row-reverse md-flex--space-between">
 
         <!-- Services -->
-        <section class="blurb center mb-50">
+        <section class="blurb center mt-50">
           <div class="blurb-hd">
             <h2 class="blurb-title left">Services</h2>
           </div>
@@ -115,7 +146,7 @@
         {% assign year    = site.time | date: '%Y' %}
         {% assign counter = 0 %}
 
-        <section class="blurb center mb-50">
+        <section class="blurb center mt-50 mb-100">
           <header class="blurb-hd">
             <h2 class="blurb-title left">Status History</h1>
             <div class="blurb-meta right">
