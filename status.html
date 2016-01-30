@@ -127,13 +127,14 @@
               {% capture date_string %}{{ year }}-{{ month }}-{{ d }}{% endcapture %}
               {% assign date = date_string | parse_date %}
               {% assign incidents = site.incidents | where: "date", date %}
-            
+              
+              <li>
+                
               {% if incidents == empty %}
-                <li class="mt-5 mb-5">
-                  <!-- No incidents on this date -->
-                  <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>
-                  <time class="small">{{ date | date: '%Y-%m-%d' }}</time>
-                </li>
+
+                <!-- No incidents on this date -->
+                <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>
+                <time class="small">{{ date | date: '%Y-%m-%d' }}</time>
               
               {% else %}
               
@@ -141,26 +142,25 @@
                 
                   {% assign counter = counter | plus: 1 %}
                   
-                  <li class="mt-30 mb-30 bb bb--muted">
-                    
-                    <article id="incident-{{ counter }}" class="ml-30 ">
+                    <article id="incident-{{ counter }}" class="mt-30 mb-30 ml-30 mr-30">
                     
                       <header>
                         <svg class="left ml-n30" width="16" height="30"><use xlink:href="#icon-warning" /></svg>
                         <h1 class="epsilon mt-0 mb-0">{{ incident.title}}</h1>
                         <time class="small">{{ incident.date | date: '%Y-%m-%d' }}</time>
+                        {{ incident.description | markdownify }}
                       </header>
-                  
-                      {{ incident.description | markdownify }}
                   
                       {% if incident.details != nil and incident.details != empty %}
                       <div class="details" id="incident-details-{{ counter }}">
-                        <p class="details-more">
-                          <a class="small block" href="#incident-details-{{ counter }}">
-                            Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
-                          </a>
-                        </p>
-                        <div class="details-bd">
+                        <div class="details-more bb bb--dashed">
+                          <p>
+                            <a class="small block" href="#incident-details-{{ counter }}">
+                              Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
+                            </a>
+                          </p>
+                        </div>
+                        <div class="details-bd bb bb--muted">
                           {{ incident.details | markdownify }}
                           <p>
                             <a class="small block" href="#incident-{{ counter }}">
@@ -169,15 +169,18 @@
                           </p>
                         </div>
                       </div>
+                      {% else %}
+                      <div class="bb bb--muted"></div>
                       {% endif %}
                   
                     </article>
                     
-                  </li>
                 {% endfor %}
               
               {% endif %}
-            
+              
+              </li>
+              
             {% endfor %}
             </ul>
           </div>
