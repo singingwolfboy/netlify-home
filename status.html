@@ -33,7 +33,7 @@
           </svg>
         </a>
       </section>
-      
+
       <nav class="top-nav right mt-20 optional">
         <ul class="nav nav--social">
           {% for link in site.social-links %}
@@ -53,7 +53,7 @@
 
   <!-- Page Body -->
   <main>
-    
+
     <!-- Current Status Banner -->
     <div class="inverse bg-dark-muted-cover bb bb--large">
       <div class="content">
@@ -76,12 +76,12 @@
         </header>
       </div>
     </div>
-    
+
     <!-- Status Details: Services and History -->
     <div class="bg-light-muted-2 muted">
-      
+
       <div class="content mt-50 mb-100 md-flex md-flex--row-reverse md-flex--space-between">
-    
+
         <!-- Services -->
         <section class="blurb center mb-50">
           <div class="blurb-hd">
@@ -104,7 +104,7 @@
         {% assign month   = site.time | date: '%m' %}
         {% assign year    = site.time | date: '%Y' %}
         {% assign counter = 0 %}
-        
+
         <section class="blurb center mb-50">
           <header class="blurb-hd">
             <h2 class="blurb-title left">Status History</h1>
@@ -112,7 +112,7 @@
               <ul class="dropdown">
               {% assign oldest_incident = site.incidents.last %}
               {% assign first_year = oldest_incident | if: oldest_incident.date , site.time | date: '%Y' %}
-            
+
               <li class="selected"><a href="#">This month</a></li>
               {% for y in (first_year..year) reverse %}
               <li><a href="#">All {{y}}</a></li>  
@@ -123,34 +123,35 @@
           <div class="blurb-bd">
             <ul>
             {% for d in (1..day) reversed %}
-          
+
               {% capture date_string %}{{ year }}-{{ month }}-{{ d }}{% endcapture %}
               {% assign date = date_string | parse_date %}
               {% assign incidents = site.incidents | where: "date", date %}
-              
+
               <li>
-                
+
               {% if incidents == empty %}
 
                 <!-- No incidents on this date -->
                 <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>
                 <time class="small">{{ date | date: '%Y-%m-%d' }}</time>
-              
+
               {% else %}
-              
+
                 {% for incident in incidents %}
-                
+
                   {% assign counter = counter | plus: 1 %}
-                  
-                    <article id="incident-{{ counter }}" class="mt-30 mb-30 ml-30 mr-30">
-                    
+
+                    <article id="incident-{{ counter }}" class="text mt-30 mb-30 ml-30 mr-30">
+
                       <header>
                         <svg class="left ml-n30" width="16" height="30"><use xlink:href="#icon-warning" /></svg>
                         <h1 class="epsilon mt-0 mb-0">{{ incident.title}}</h1>
                         <time class="small">{{ incident.date | date: '%Y-%m-%d' }}</time>
-                        {{ incident.description | markdownify }}
                       </header>
-                  
+
+                      {{ incident.description | markdownify }}
+                      
                       {% if incident.details != nil and incident.details != empty %}
                       <div class="details" id="incident-details-{{ counter }}">
                         <div class="details-more bb bb--dashed">
@@ -172,25 +173,25 @@
                       {% else %}
                       <div class="bb bb--muted"></div>
                       {% endif %}
-                  
+
                     </article>
-                    
+
                 {% endfor %}
               
               {% endif %}
-              
+
               </li>
-              
+
             {% endfor %}
             </ul>
           </div>
         </section><!-- end Status History -->
-  
+
       </div><!-- end Content -->
-    
+
     </div><!-- end Status details-->
   </main>
-  
+
   {% include site-footer.html %}
 </body>
 </html>
