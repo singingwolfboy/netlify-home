@@ -20,15 +20,15 @@ For us, the advantage is purely performance based. We measure dollars in millise
 
 _You said you guys do 2.5 million views per day?_
 
-We actually do 2.6 billion page views a month, but with API calls it's another 1.2 billion, so we're right at 3.8 billion total.
+We actually do 1.7 billion page views a month, but with API calls it’s another 1.3 billion, so we’re right at 3 billion total.
 
 _Do you have any idea of what kind of improvement you guys have seen using static web tech like netlify?_
 
-A big part of it is that we've actually been able to divorce ourselves from the complexities of our dynamic site and generate custom implementations of pages very quickly. So the cycle time in order to generate a site or a special page went from literally days trying to work within the MediaWiki framework--and then our very heavily-forked version of it, which is very customized, mostly for performance reasons--we were able to pull ourselves out of the MediaWiki framework, which can be very confining at times, and allow the marketing team to be much more involved.
+A big part of it is that we’ve actually been able to divorce ourselves from the complexities of our dynamic site and generate custom implementations of pages very quickly. So the cycle time in order to generate a site or a special page went from literally days or weeks trying to work within the MediaWiki framework–and then our very heavily-forked version of it, which is heavily customized, mostly for performance reasons–we were able to pull ourselves out of the MediaWiki framework, which can be very confining at times, and allow the marketing team to be much more involved.
 
-It used to be that the marketing team would come up with an idea or the design team would come up with an idea that would require engineering iterations to make MediaWiki do a thing that's completely unnatural for that application. Now, we've been able to federate that to the extent that they can come up with their idea and then they can build it themselves, whether it's in Dreamweaver and then pump out the html, and upload it to their GitHub repo with the webhooks tied in to netlify to generate the site.
+It used to be that the marketing team would come up with an idea or the design team would come up with an idea that would require engineering iterations to make MediaWiki do a thing that's completely unnatural for that application. Now, we've been able to federate that to the extent that they can come up with their idea and then they can build it themselves, in their preferred authoring tool and then pump out the html, and upload it to their GitHub repo with the webhooks tied in to netlify to generate the site.
 
-Now it's public and it's literally within hours. We can go from concept to release in hours, where it used to take days to weeks depending on the complexity of the site, and depending on how many constraints we had to overcome within the MediaWiki platform itself.
+Now it’s public and it’s literally within hours. We can go from concept to release in hours, where it used to take days to weeks depending on the complexity of the requirements and how many constraints we had to overcome within the MediaWiki platform itself.
 
 It's really interesting how back in the old days, when I started--you know, vi is my editor of choice because I've been using it for way more years than I'm willing to admit in public--everything was a static site. Back in the 90s there was no dynamic site generation. The pendulum has swung all the way to the other side where we're actually making static sites with dynamic site tools, which is completely the wrong way to think about it.
 
