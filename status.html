@@ -108,19 +108,17 @@
         <section class="blurb center mb-50">
           <header class="blurb-hd">
             <h2 class="blurb-title left">Status History</h1>
-            <form class="blurb-meta right highlight js">
-            
+            <div class="blurb-meta right">
+              <ul class="dropdown">
               {% assign oldest_incident = site.incidents.last %}
               {% assign first_year = oldest_incident | if: oldest_incident.date , site.time | date: '%Y' %}
             
-              <select>
-                <option selected>This month</option>
+              <li class="selected"><a href="#">This month</a></li>
               {% for y in (first_year..year) reverse %}
-                <option>All {{y}}</option>  
+              <li><a href="#">All {{y}}</a></li>  
               {% endfor %}
-              </select>
-            
-            </form>
+              </ul>
+            </div>
           </header>
           <div class="blurb-bd">
             <ul>
@@ -131,10 +129,10 @@
               {% assign incidents = site.incidents | where: "date", date %}
             
               {% if incidents == empty %}
-                <li class="mt-5 mb-5 small">
+                <li class="mt-5 mb-5">
                   <!-- No incidents on this date -->
                   <svg class="prepend" width="16" height="16"><use xlink:href="#icon-ok" /></svg>
-                  <time>{{ date | date: '%Y-%m-%d' }}</time>
+                  <time class="small">{{ date | date: '%Y-%m-%d' }}</time>
                 </li>
               
               {% else %}
@@ -148,7 +146,8 @@
                     <article id="incident-{{ counter }}" class="ml-30 ">
                     
                       <header>
-                        <h1 class="epsilon mt-0 mb-0"><svg class="prepend ml-n30" width="16" height="16"><use xlink:href="#icon-warning" /></svg>{{ incident.title}}</h1>
+                        <svg class="left ml-n30" width="16" height="30"><use xlink:href="#icon-warning" /></svg>
+                        <h1 class="epsilon mt-0 mb-0">{{ incident.title}}</h1>
                         <time class="small">{{ incident.date | date: '%Y-%m-%d' }}</time>
                       </header>
                   
@@ -161,7 +160,7 @@
                             Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
                           </a>
                         </p>
-                        <div class="details-bd post-bd">
+                        <div class="details-bd">
                           {{ incident.details | markdownify }}
                           <p>
                             <a class="small block" href="#incident-{{ counter }}">
