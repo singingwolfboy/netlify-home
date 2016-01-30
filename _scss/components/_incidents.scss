@@ -1,12 +1,12 @@
 .incident {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   .details-more {
     border-bottom: 1px dashed $color-highlight;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
   }
   .details-less, header + p:last-child {
     border-bottom: 2px solid $color-highlight-lighter;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
   }
 }
 
@@ -15,5 +15,5 @@
   display: block;
   height: 2px;
   background: $color-highlight-lighter;
-  margin-top: 20px;
+  margin-top: 25px;
 }
