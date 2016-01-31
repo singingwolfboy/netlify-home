@@ -5,7 +5,7 @@ future: false
 kramdown:
   input: GFM
 
-exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock", "*.md", "*.html", "_posts", "reseller", "uploads", "admin/"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock", "docs.md", "*.html", "_posts", "reseller", "uploads", "admin/"]
 include: ["status.html"]
 
 social-links:
