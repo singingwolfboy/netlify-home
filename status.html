@@ -137,7 +137,7 @@ permalink: /index.html
 
           <!-- Services Section -->
         
-          <section id="section-services" class="blurb center mt-50 mb-50">
+          <section id="services" class="blurb center mt-50 mb-50">
             <div class="blurb-hd">
               <h2 class="blurb-title left">Services</h2>
             </div>
@@ -181,7 +181,7 @@ permalink: /index.html
           
           {% assign today = site.time | to_date %}          
           
-          <section id="section-history" class="blurb center mt-50 mb-50">
+          <section id="history" class="blurb center mt-50 mb-50">
             <header class="blurb-hd">
               <h2 class="blurb-title left">Status History</h1>
               <div class="blurb-meta dropdown-container right">
@@ -201,7 +201,7 @@ permalink: /index.html
                 {% for y in (first_year..current_year) reverse %}
                   <li><a id="js-history-link-{{y}}" href="/?year={{y}}">All {{y}}</a></li>
                 {% endfor %}
-                
+
                 </ul>
               </div>
             </header>
@@ -344,8 +344,6 @@ permalink: /index.html
   
   <script>
   (function($) {
-
-    location.hash = ''; 
     
     /* 
      * Help Scout beacon 
@@ -361,6 +359,8 @@ permalink: /index.html
     /* 
      * Expand/collapse details 
      */
+    
+    if (location.hash.match(/^#incident-details/)) location.hash = ''; 
     
     $(document).delegate(".details-more, .details-less", "click", function(e) {
       e.preventDefault();
