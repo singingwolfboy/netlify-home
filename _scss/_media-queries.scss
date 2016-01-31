@@ -926,3 +926,21 @@ section.contact-blocks li {
     }
   }
 }
+
+/* 
+ * Mobile first 
+ */
+@media (min-width: $bp-med) {
+  .md-flex {
+    display: flex;
+  }
+  .md-flex--row-reverse {
+    flex-direction: row-reverse;
+  }
+  .md-flex--space-between {
+    justify-content: space-between;
+  }
+  .md-flex--space-around {
+    justify-content: space-around;
+  }
+}

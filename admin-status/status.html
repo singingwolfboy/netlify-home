@@ -1,0 +1,144 @@
+---
+name: admin-status
+permalink: /admin-status/index.html
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Netlify Status CMS</title>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700'>
+  <link rel="stylesheet" href="/css/status.css">
+  <link rel="stylesheet" href="/admin-status/css/admin.css">
+
+  <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+
+  <link rel="stylesheet" href="//cms.netlify.com/cms.css" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script>window.CMS_ENV = "{{ site.cms }}";</script>
+
+  <base href="/admin-status/">
+</head>
+<body>
+  {% include svg-defs.html %}
+
+  {% raw %}
+  <script type="text/x-handlebars" data-template-name='cms/preview/incidents'>
+    <article id="incident-{{ counter }}" class="incident text">
+
+      <header>
+        <h1 class="delta mb-0">{{ entry.title}}</h1>
+        <time class="x-small">{{time-format entry.date "YYYY-MM-DD"}}</time>
+        {{#unless entry.resolved }}
+          <a title="This issue is still open">
+            <svg class="append muted" width="16" height="16">
+              <use xlink:href="#icon-{{ entry.severity }}" />
+            </svg>
+          </a>
+        {{/unless}}
+      </header>
+
+      {{cms-preview field="description"}}
+
+      <div class="details expanded">
+        <div class="details-bd">
+          {{cms-preview field="details"}}
+        </div>
+      </div>
+    </article>
+
+    {{cms-preview field="services"}}
+  </script>
+  {% endraw %}
+
+  {% if site.cms == "local" %}
+  <script src="//localhost:4200/assets/vendor.js"></script>
+  <script src="//localhost:4200/assets/cms.js"></script>
+  {% else %}
+  <script src="//cms.netlify.com/cms.js"></script>
+  {% endif %}
+
+  {% raw %}
+  <script type="text/x-handlebars" data-template-name='components/widgets/severity-control'>
+    <p>
+      <label><input type="radio" name="severity" value="warning"> Warning</label><br>
+      <label><input type="radio" name="severity" value="fatal"> Fatal</label>
+    </p>
+  </script>
+
+  <script>
+  CMS.WidgetControl("severity", {
+    onChange: function() {
+      this.set("widget.value", this.$("input:checked").val());
+    },
+    didInsertElement: function() {
+      var severity = this.get("widget.value");
+      var handler = this.onChange.bind(this);
+      this.$("input").each(function() {
+        var $this = $(this);
+        $this.attr("checked", severity == $this.val());
+        $this.on("change", handler);
+      });
+    },
+    willRemoveElement: function() {
+      this.$("input").off('change');
+    }
+  });
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='components/widgets/services-control'>
+    <p>
+      {{#each widget.services as |service|}}
+      <label>{{input type="checkbox" checked=service.affected}} {{service.name}}</label><br>
+      {{/each}}
+    </p>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name='components/widgets/services-preview'>
+    <!-- Services -->
+    <section class="blurb center mt-50">
+      <div class="blurb-hd">
+        <h2 class="blurb-title left">Services</h2>
+      </div>
+      <div class="blurb-bd">
+        <ul>
+          {{#each widget.services as |service|}}
+          <li class="{{if service.affected 'muted' 'loud'}}">
+            <svg class="prepend {{if service.affected 'muted' 'highlight'}}" width="16" height="16">
+              <use xlink:href="#icon-{{if service.affected 'fatal' 'ok'}}" />
+            </svg>
+            {{service.name}}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+  </script>
+  {% endraw %}
+
+  <script>
+  CMS.WidgetControl("services", {
+    init: function() {
+      this._super.apply(this, arguments);
+
+      var services = Ember.A();
+      var value = this.get("widget.value") || [];
+      this.get("services").forEach(function(service) {
+        services.push({name: service, affected: value.includes(service)});
+      });
+      this.set("widget.services", services);
+    },
+    services: {{site.services | jsonify}},
+    onChange: function() {
+      this.set("widget.value", this.get("widget.services").filter(function(s) {
+        return s.affected;
+      }).map(function(s) {
+        return s.name;
+      }));
+    }.observes("widget.services.@each.affected")
+  });
+  </script>
+</body>
+</html>

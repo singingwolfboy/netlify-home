@@ -28,3 +28,9 @@
 .bb--muted:after {
   background-color: $color-highlight-lighter;
 }
+
+.bb--dashed:after {
+  background-color: transparent;
+  height: 1px;
+  border-bottom: 1px dashed $color-highlight;
+}

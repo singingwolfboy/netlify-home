@@ -13,7 +13,7 @@ production:
     name: github-api
     repo: netlify/netlify-home
     branch: master
-
+  
 media_folder: uploads
 
 collections:
@@ -33,7 +33,6 @@ collections:
       - {label: "Thumbnail", name: "thumbnail", widget: "image", tagname: "div", class: "media-img optional cms-thumbnail", folder: "img/posts/thumbnails"}
     meta:
       - {label: "Tags (seperated by comma)", name: "tags", widget: "tags"}
-
 
   - name: "docs"
     label: "Doc Pages"
@@ -62,3 +61,15 @@ collections:
               - {label: "Name and title", name: "cite", widget: "string"}
               - {label: "Link URL", name: "link", widget: "string"}
               - {label: "Photo", name: "photo", widget: "image", media_folder: "img/testimonials"}
+
+  - name: "incidents"
+    label: "Incident"
+    folder: "_incidents"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sort: "date:desc"
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1", class:"mega"}
+      - {label: "Description", name: "description", widget: "markdown", tagname: "div", class: "epsilon highlight"}
+      - {label: "Details", name: "details", widget: "markdown", optional: true, tagname: "div", class: "text"}
+      - {label: "Resolved", name: "resolved", widget: "checkbox"}

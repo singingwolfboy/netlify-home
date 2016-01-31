@@ -1,3 +1,7 @@
+.blurb {
+  max-width: 30em;
+}
+
 .blurb-hd {
   @extend .bb;
   .media-img {
@@ -14,6 +18,9 @@
   @extend .epsilon;
   @extend .semibold;
   margin: 5px 0;
+  + p {
+    margin-top: 0;
+  }
 }
 
 .blurb-meta {

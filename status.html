@@ -1,0 +1,277 @@
+---
+permalink: /index.html
+---
+
+{% assign open_incidents = site.incidents | where: "resolved", nil | sort: "date:desc" %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Netlify Status: {% if open_incidents == empty %} OK {% else %} Houston, we have a problem {% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700'>
+    <link rel="stylesheet" href="/css/status.css">
+
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body class="page-status">
+  
+  {% include svg-defs.html %}
+
+  <!-- Site Header -->
+  <header class="site-header bb bb--medium inverse" role="banner">
+    <div class="content content--wide">
+      <!-- Branding: logo & claim -->
+      <section class="brand left mt-20 mb-20">
+        <a href="/" class="loud">
+          <svg class="brand-logo" width="180" height="70">
+            <use xlink:href="#netlify-logo" />
+          </svg>
+        </a>
+      </section>
+
+      <nav class="top-nav right mt-20 optional">
+        <ul class="nav nav--social">
+          {% for link in site.social-links %}
+          <li>
+            <a href="{{link[1]}}" class="icon-link--square icon-link--{{link[0]}}" title="Contact us on {{ link[0] | capitalize }}">
+              <svg width="16" height="16" class="icon-{{link[0]}}--square">
+                <use xlink:href="#icon-{{link[0]}}"/>
+              </svg>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- end Site Header -->
+
+  <!-- Page Body -->
+  <main>
+
+    <!-- Current Status Banner -->
+    <div class="inverse bg-dark-muted-cover bb bb--large">
+      <div class="content">
+
+      {% case open_incidents.size %}
+      
+      {% when 0 %}
+
+        <header class="mt-100 mb-100 text-center">
+          <h1 class="mega">
+            All Systems Operational
+          </h1>
+          <p class="epsilon muted">
+            If you are experiencing any issues please <a href="mailto:support@netlify.com" id="btn-open-ticket">open a support ticket<svg class="append" width="16" height="16"><use xlink:href="#icon-link" /></svg></a>
+          </p>
+        </header>
+
+      {% when 1 %}
+        
+        <header class="mt-100 mb-100 text-center">
+          <h1 class="mega">
+            {{ open_incidents.first.title }}
+          </h1>
+          <div class="epsilon highlight">
+            {{ open_incidents.first.description | markdownify }}
+          </div>
+        </header>
+        
+      {% else %}
+        
+        <header>
+          <div class="bb">
+            <h1 class="alpha mt-60 mb-60 text-center">Netlify Is Experiencing Some Issues</h1>
+          </div>
+
+          <section class="media mt-60 mb-60">
+            <div class="media-img optional ml-50 mr-50">
+              <svg width="220" height="220"><use xlink:href="#icon-polyhedron"></use></svg>
+            </div>
+            <div class="media-bd">
+              {% for incident in open_incidents %}
+                <article class="blurb center mb-40">
+                  <h1 class="blurb-title highlight">{{ incident.title }}</h1>
+                  {{ incident.description | markdownify }}
+                </article>
+              {% endfor %}
+            </div>
+          </section>
+        </header>
+
+      {% endcase %}
+
+      </div>
+    </div>
+
+    <!-- Status Details: Services and History -->
+    <div class="bg-light-muted-2 muted">
+
+      <div class="content md-flex md-flex--row-reverse md-flex--space-between">
+
+        <!-- Services -->
+        <section class="blurb center mt-50">
+          <div class="blurb-hd">
+            <h2 class="blurb-title left">Services</h2>
+          </div>
+          <div class="blurb-bd">
+            <ul>
+            {% for service in site.services %}
+
+              {% assign running = true %}
+              {% assign status  = "ok" %}
+              
+              {% for incident in open_incidents %}
+                {% if incident.services contains service %}
+                
+                  {% assign running = false %}
+                  {% assign status  = incident.severity %}
+                  
+                  {% if status == "fatal" %}
+                    {% break %}
+                  {% endif %}
+                  
+                {% endif %}
+              {% endfor %}
+              
+              <li class="{{ running | if: 'loud', 'muted' }}">
+                <svg class="prepend {{ running | if: 'highlight', 'muted' }}" width="16" height="16">
+                  <use xlink:href="#icon-{{ status }}" />
+                </svg>
+                {{service}}
+              </li>
+              
+            {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+
+        <!-- Status History -->
+        {% assign day     = site.time | date: '%d' %}
+        {% assign month   = site.time | date: '%m' %}
+        {% assign year    = site.time | date: '%Y' %}
+        {% assign counter = 0 %}
+
+        <section class="blurb center mt-50 mb-100">
+          <header class="blurb-hd">
+            <h2 class="blurb-title left">Status History</h1>
+            <div class="blurb-meta dropdown-container right">
+              <ul class="dropdown">
+
+              {% assign oldest_incident = site.incidents.last %}
+              {% assign first_year = oldest_incident | if: oldest_incident.date , site.time | date: '%Y' %}
+
+              <li class="selected"><a href="#">This month</a></li>
+              {% for y in (first_year..year) reverse %}
+              <li><a href="#">All {{y}}</a></li>
+              {% endfor %}
+              </ul>
+            </div>
+          </header>
+          <div class="blurb-bd">
+            <ul>
+            {% for d in (1..day) reversed %}
+
+              {% capture date_string %}{{ year }}-{{ month }}-{{ d }}{% endcapture %}
+              {% assign date = date_string | parse_date %}
+              {% assign incidents = site.incidents | where: "date", date %}
+
+              {% if incidents == empty %}
+
+                <li class="no-incidents">
+                  <time class="x-small">{{ date | date: '%Y-%m-%d' }}</time>
+                </li>
+
+              {% else %}
+
+                <li class="incidents">
+
+                {% for incident in incidents %}
+
+                  {% assign counter = counter | plus: 1 %}
+
+                  <article id="incident-{{ counter }}" class="incident text">
+
+                    <header>
+                      <h1 class="delta mb-0">{{ incident.title}}</h1>
+                      <time class="x-small">{{ incident.date | date: '%Y-%m-%d' }}</time>
+                      {% if incident.resolved == nil %}
+                        <a title="This issue is still open">
+                          <svg class="append muted" width="16" height="16">
+                            <use xlink:href="#icon-{{ incident.severity }}" />
+                          </svg>
+                        </a>
+                      {% endif %}
+                    </header>
+
+                    {{ incident.description | markdownify }}
+
+                    {% if incident.details != nil and incident.details != empty %}
+                    <div class="details" id="incident-details-{{ counter }}">
+                      <a class="details-more small block" href="#incident-details-{{ counter }}">
+                          Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
+                      </a>
+                      <div class="details-bd">
+                        {{ incident.details | markdownify }}
+                        <a class="details-less small block" href="#incident-{{ counter }}">
+                          Hide Details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
+                        </a>
+                      </div>
+                    </div>
+                    {% endif %}
+
+                  </article>
+
+                {% endfor %}
+
+                </li>
+
+              {% endif %}
+
+            {% endfor %}
+            </ul>
+          </div>
+        </section><!-- end Status History -->
+
+      </div><!-- end Content -->
+
+    </div><!-- end Status details-->
+  </main>
+
+  {% include site-footer.html %}
+  
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  
+  <!-- Help Scout beacon to open support tickets -->
+  <script>!function(e,o,n){window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};var t=n.beacon;t.userConfig={},t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:!1,baseUrl:""},contact:{enabled:!0,formId:"e1b3a46d-c543-11e5-9e75-0a7d6919297d"}};var r=e.getElementsByTagName("script")[0],c=e.createElement("script");c.type="text/javascript",c.async=!0,c.src="https://djtflbt20bdde.cloudfront.net/",r.parentNode.insertBefore(c,r)}(document,window.HSCW||{},window.HS||{});</script>
+  
+  <script>
+    (function($) {
+      
+      /* Open Help Scout beacon when clicking the "open a support ticket" link */
+      
+      $("#btn-open-ticket").on("click", function(e) {
+        e.preventDefault();
+        HS.beacon.open();
+      });
+      
+      /* Expand/collapse incident details */
+      
+      if (location.hash) { location.hash = ''; }
+      
+      $(".details-more, .details-less").on("click", function(e) {
+        e.preventDefault();
+        $(this).closest('.details').toggleClass("expanded", $(this).is(".details-more"));
+      });
+      
+    })(jQuery);
+  </script>
+  
+</body>
+</html>

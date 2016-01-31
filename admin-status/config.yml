@@ -1,0 +1,32 @@
+backend:
+  name: netlify-api
+  url: http://localhost:8080
+
+staging:
+  backend:
+    name: github-api
+    repo: netlify/netlify-home
+    branch: staging
+
+production:
+  backend:
+    name: github-api
+    repo: netlify/netlify-home
+    branch: master
+
+media_folder: img/status
+
+collections:
+  - name: "incidents"
+    label: "Incident"
+    folder: "_incidents"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sort: "date:desc"
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1", class:"mega"}
+      - {label: "Description", name: "description", widget: "markdown", tagname: "div"}
+      - {label: "Details", name: "details", widget: "markdown", optional: true, tagname: "div", class: "text"}
+      - {label: "Severity", name: "severity", widget: "severity", default: "warning"}
+      - {label: "Resolved", name: "resolved", widget: "checkbox"}
+      - {label: "Services", name: "services", widget: "services"}

@@ -10,7 +10,7 @@
 
   //** Whites
   $color-light: #F4F6F6;
-  $color-lighter: #F9FAFA;
+  $color-lighter: #F6FAFA;
   $color-lightest: #FFF;
 
   // ** Tints-of-greens
@@ -111,6 +111,13 @@ svg {
 .inverse .icon {
   color: $color-darkest;
 }
+svg.muted {
+  color: rgb(195,195,195); /* Same color as icon-select-drop.png */
+  .inverse & {
+    color: $color-muted;
+  }
+}
+
 
 
 /* Backgrounds */
@@ -151,10 +158,11 @@ svg {
   background: $color-tint3;
 }
 
+
 /* Main and sidebar */
-.l-aside, .l-aside--right:after, .l-aside--left:before {
-  background: $color-darkest;
-  color: $color-light;
+.l-aside--right:after, .l-aside--left:before {
+  background: inherit;
+  color: inherit;
 }
 
 /* Filters */
