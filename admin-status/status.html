@@ -26,7 +26,7 @@ permalink: /admin-status/index.html
 
   {% raw %}
   <script type="text/x-handlebars" data-template-name='cms/preview/incidents'>
-    <article id="incident-{{ counter }}" class="incident text">
+    <article class="incident blurb">
 
       <header>
         <h1 class="delta mb-0">{{ entry.title}}</h1>
@@ -42,14 +42,12 @@ permalink: /admin-status/index.html
 
       {{cms-preview field="description"}}
 
-      <div class="details expanded">
-        <div class="details-bd">
-          {{cms-preview field="details"}}
-        </div>
-      </div>
+      {{cms-preview field="details"}}
+      
     </article>
 
     {{cms-preview field="services"}}
+    
   </script>
   {% endraw %}
 
@@ -62,10 +60,10 @@ permalink: /admin-status/index.html
 
   {% raw %}
   <script type="text/x-handlebars" data-template-name='components/widgets/severity-control'>
-    <p>
+    <div>
       <label><input type="radio" name="severity" value="warning"> Warning</label><br>
       <label><input type="radio" name="severity" value="fatal"> Fatal</label>
-    </p>
+    </div>
   </script>
 
   <script>
@@ -89,18 +87,18 @@ permalink: /admin-status/index.html
   </script>
 
   <script type="text/x-handlebars" data-template-name='components/widgets/services-control'>
-    <p>
+    <div>
       {{#each widget.services as |service|}}
       <label>{{input type="checkbox" checked=service.affected}} {{service.name}}</label><br>
       {{/each}}
-    </p>
+    </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name='components/widgets/services-preview'>
     <!-- Services -->
-    <section class="blurb center mt-50">
+    <section class="blurb mt-50">
       <div class="blurb-hd">
-        <h2 class="blurb-title left">Services</h2>
+        <h2 class="blurb-title">Services</h2>
       </div>
       <div class="blurb-bd">
         <ul>

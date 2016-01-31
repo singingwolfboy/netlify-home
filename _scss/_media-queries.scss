@@ -943,4 +943,10 @@ section.contact-blocks li {
   .md-flex--space-around {
     justify-content: space-around;
   }
+  .md-flex-basis--m {
+    flex-basis: 30em;
+  }
+  .md-flex-basis--s {
+    flex-basis: 15em;
+  }
 }
