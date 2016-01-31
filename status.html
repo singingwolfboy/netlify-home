@@ -13,6 +13,7 @@ permalink: /index.html
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700'>
+    <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/status.css">
 
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -246,14 +247,14 @@ permalink: /index.html
                       </div>
                       {% if incident.details != nil and incident.details != empty %}
                       <div class="details" id="incident-details-{{ counter }}">
-                        <a class="details-more small block" href="#incident-details-{{ counter }}">
+                        <a class="details-toggle details-toggle--expand small block" href="#incident-details-{{ counter }}">
                             Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
                         </a>
                         <div class="details-bd">
                           <div class="text">
                            {{ incident.details | markdownify }}
                           </div>
-                          <a class="details-less small block" href="#incident-{{ counter }}">
+                          <a class="details-toggle details-toggle--collapse small block" href="#incident-{{ counter }}">
                             Hide Details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
                           </a>
                         </div>
@@ -313,14 +314,14 @@ permalink: /index.html
          
          {{#hasDetails}}
          <div class="details" id="incident-details-{{ counter }}">
-           <a class="details-more small block" href="#incident-details-{{ counter }}">
+           <a class="details-toggle details-toggle--expand small block" href="#incident-details-{{ counter }}">
                Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
            </a>
            <div class="details-bd">
              <div class="text">
                {{{ details }}}
              </div>
-             <a class="details-less small block" href="#incident-{{ counter }}">
+             <a class="details-toggle details-toggle--collapse small block" href="#incident-{{ counter }}">
                Hide Details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
              </a>
            </div>

@@ -17,12 +17,13 @@
   
   if (location.hash.match(/^#incident-details/)) location.hash = ''; 
   
-  $(document).delegate(".details-more, .details-less", "click", function(e) {
+  $(document).delegate(".details-toggle", "click", function(e) {
     e.preventDefault();
     
-    $(this).closest('.details').toggleClass("expanded", $(this).is(".details-more"));
+    $(this)
+      .closest(".details").toggleClass("expanded");
   });
-  
+
   
   /*
    * Status History Filter

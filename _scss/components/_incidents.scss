@@ -10,14 +10,20 @@ $incident-border: 2px solid $color-highlight-lighter;
     padding-bottom: $incident-spacing - $base-spacing; 
   }
 
-  .details-less {
-    border-bottom: $incident-border; 
-    padding-bottom: $incident-spacing;
-  }
-  
-  .details-more {
+  .details {
+    @extend %cf;
     border-bottom: 1px dashed $color-highlight;
     padding-bottom: $incident-spacing;
+    
+    &.expanded {
+      border-bottom: $incident-border;
+    }
+  }
+  
+  .details-bd {
+    position: relative;
+    top: -$incident-spacing;
+    margin-bottom: -$incident-spacing;
   }
 }
 
