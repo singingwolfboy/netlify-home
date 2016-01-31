@@ -26,7 +26,7 @@ permalink: /admin-status/index.html
 
   {% raw %}
   <script type="text/x-handlebars" data-template-name='cms/preview/incidents'>
-    <article id="incident-{{ counter }}" class="incident text">
+    <article class="incident blurb">
 
       <header>
         <h1 class="delta mb-0">{{ entry.title}}</h1>
@@ -42,14 +42,12 @@ permalink: /admin-status/index.html
 
       {{cms-preview field="description"}}
 
-      <div class="details expanded">
-        <div class="details-bd">
-          {{cms-preview field="details"}}
-        </div>
-      </div>
+      {{cms-preview field="details"}}
+      
     </article>
 
     {{cms-preview field="services"}}
+    
   </script>
   {% endraw %}
 
@@ -98,9 +96,9 @@ permalink: /admin-status/index.html
 
   <script type="text/x-handlebars" data-template-name='components/widgets/services-preview'>
     <!-- Services -->
-    <section class="blurb center mt-50">
+    <section class="blurb mt-50">
       <div class="blurb-hd">
-        <h2 class="blurb-title left">Services</h2>
+        <h2 class="blurb-title">Services</h2>
       </div>
       <div class="blurb-bd">
         <ul>
