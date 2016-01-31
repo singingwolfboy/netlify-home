@@ -5,6 +5,7 @@ details: "## History\n\nEarly Saturday morning we got alerted by Rackspace that 
 resolved: true
 cmsUserSlug: ""
 date: 2016-01-09
-tags: ["DNS"]
+severity: "warning"
+services: ["DNS"]
 ---
 

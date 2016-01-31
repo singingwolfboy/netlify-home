@@ -5,5 +5,7 @@ details: ""
 resolved: true
 cmsUserSlug: ""
 date: 2016-01-27
+severity: "warning"
+services: ["Build Automation"]
 ---
 
