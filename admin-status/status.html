@@ -60,10 +60,10 @@ permalink: /admin-status/index.html
 
   {% raw %}
   <script type="text/x-handlebars" data-template-name='components/widgets/severity-control'>
-    <p>
+    <div>
       <label><input type="radio" name="severity" value="warning"> Warning</label><br>
       <label><input type="radio" name="severity" value="fatal"> Fatal</label>
-    </p>
+    </div>
   </script>
 
   <script>
@@ -87,11 +87,11 @@ permalink: /admin-status/index.html
   </script>
 
   <script type="text/x-handlebars" data-template-name='components/widgets/services-control'>
-    <p>
+    <div>
       {{#each widget.services as |service|}}
       <label>{{input type="checkbox" checked=service.affected}} {{service.name}}</label><br>
       {{/each}}
-    </p>
+    </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name='components/widgets/services-preview'>
