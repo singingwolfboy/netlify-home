@@ -6,7 +6,7 @@ short_title: Assemble on netlify
 description: A step-by-step guide on how to host a website built with static site generator Assemble.
 thumbnail: /uploads/4475-thumb.png
 cmsUserSlug: ""
-date: 2016-01-11
+date: 2016-01-11T00:00:00.000Z
 tags: null
 ---
 
@@ -20,6 +20,7 @@ Since Assemble is a Grunt plugin, `grunt` must be installed first (this guide as
 ```
 $ npm install -g grunt-cli
 ```
+
 The `-g` flag will install Grunt globally on your system, which you need to make sure Grunt has access to the proper dependencies.
 
 We'll be using an Assemble boilerplate site for this tutorial. Download it [here](https://github.com/assemble/boilerplate-site/archive/master.zip "Assemble Boilerplate Site"), and unzip it wherever you'd like.
