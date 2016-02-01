@@ -301,6 +301,32 @@ svg.prepend {
   }
 }
 
+
+/* Flexbox
+ */
+
+@media (min-width: $bp-med) {
+  .md-flex {
+    display: flex;
+  }
+  .md-flex--row-reverse {
+    flex-direction: row-reverse;
+  }
+  .md-flex--space-between {
+    justify-content: space-between;
+  }
+  .md-flex--space-around {
+    justify-content: space-around;
+  }
+  .md-flex-basis--m {
+    flex-basis: 30em;
+  }
+  .md-flex-basis--s {
+    flex-basis: 15em;
+  }
+}
+
+
 /*
  * Widths, heights and margins.
  *

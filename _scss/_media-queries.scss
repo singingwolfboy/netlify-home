@@ -1,12 +1,3 @@
-$bp-large:       1280px;   //* Major breakpoint – Comp width
-$bp-med-large:   1176px;      //* Tweak point – Hero breaks
-$bp-med-large-2:  960px;      //* Tweak point – Hero breaks (ipad landscape is in this range)
-$bp-med:          870px;   //* Major breakpoint – Layout changes (ipad portrait is in this range)
-$bp-med-small:    740px;      //* Tweak point – Things start looking too squished
-$bp-small:        680px;   //* Major breakpoint – Every thing gets linearized
-$bp-small-2:      460px;      //* Tweak point – Footer wraps
-$bp-small-3:      360px;      //* Tweak point – try to reduce things further (header, hero, large buttons)
-
 .show-med {
   display: none;
 }
@@ -924,29 +915,5 @@ section.contact-blocks li {
     a {
       margin: 15px 0;
     }
-  }
-}
-
-/* 
- * Mobile first 
- */
-@media (min-width: $bp-med) {
-  .md-flex {
-    display: flex;
-  }
-  .md-flex--row-reverse {
-    flex-direction: row-reverse;
-  }
-  .md-flex--space-between {
-    justify-content: space-between;
-  }
-  .md-flex--space-around {
-    justify-content: space-around;
-  }
-  .md-flex-basis--m {
-    flex-basis: 30em;
-  }
-  .md-flex-basis--s {
-    flex-basis: 15em;
   }
 }
