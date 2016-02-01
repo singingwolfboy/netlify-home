@@ -1,4 +1,5 @@
 .legalese {
+  
   max-width: 690px + 2*30px;
   padding: 0 30px;
   margin: 110px auto;
@@ -14,6 +15,7 @@
     padding-top: 90px;
     border-top: 2px solid $color-highlight;
   }
+  
   h2 {
     font-size: 16px;
     @include font-weight(medium);
@@ -22,32 +24,12 @@
     line-height: 25px;
     margin: 20px 0;
   }
-  p {
-    max-width: none;
-  }
-  ul {
-    list-style: disc;
-    margin: 20px 0;
-    > li {
-      margin: 20px 0;
-    }
-  }
-  ol {
-    list-style: decimal;
-    margin: 20px 0 20px -50px;
-    > li {
-      padding-left: 10px;
-      margin: 20px 0;
-    }
-  }
-  ol ol {
-    list-style: decimal;
-    margin-left: -17px;
-  }
-  ol ol ol {
-    list-style: lower-roman;
-  }
   
+  li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  } 
+
   > ol {
       counter-reset: h2-counter;
       list-style: none;
