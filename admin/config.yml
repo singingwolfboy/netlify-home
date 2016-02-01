@@ -13,7 +13,7 @@ production:
     name: github-api
     repo: netlify/netlify-home
     branch: master
-  
+
 media_folder: uploads
 
 collections:
