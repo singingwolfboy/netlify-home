@@ -40,7 +40,7 @@ collections:
     create: true
     sort: "position:asc"
     fields:
-      - {label: "Body", name: "body", widget: "markdown", tagname: "div", class: "docs-main text"}
+      - {label: "Body", name: "body", widget: "markdown", tagname: "div", class: "text"}
     meta:
       - {label: "Menu Title", name: "title", widget: "string", optional: false}
       - {label: "Position", name: "position", widget: "number", optional: false}

@@ -722,43 +722,6 @@
     margin: 30px auto;
   }
 
-  /* Responsive tables in text blocks */
-  .text {
-    table {
-      margin: 20px 0;
-      width: 100%;
-    }
-    thead {
-      display: none;
-    }
-    tbody, tr, th, td {
-      display: block;
-      padding: 0;
-      text-align: left;
-      white-space: normal;
-    }
-    td {
-      padding: 0 10px;
-    }
-    td[scope='row'] {
-      background: $color-highlight;
-      color: $color-lightest;
-    }
-    td[data-title] {
-      text-align: right;
-    }
-    td[data-title]:before {
-      content: attr(data-title);
-      float: left;
-      font-size: .8em;
-      color: $color-muted;
-      margin-right: 20px;
-    }
-    td:last-child {
-      margin-bottom: 20px;
-    }
-  }
-
   /* Responsive pricing table */
   .pricing-table {
     display: none;
