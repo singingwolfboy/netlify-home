@@ -173,8 +173,10 @@ svg.muted {
   }
 }
 .colorize {
-  filter: sepia() hue-rotate(125deg) saturate(70%);
+  filter: sepia() hue-rotate(130deg) saturate(70%) brightness(98%);
+  opacity: 0.9;
   .no-touch a:hover & {
     filter: sepia(0%);
+    opacity: 1;
   }
 }
