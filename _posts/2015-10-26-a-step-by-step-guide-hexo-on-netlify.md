@@ -6,30 +6,37 @@ short_title: Hosting Hexo on netlify
 description: A step-by-step guide on how to host a website built with static site generator Hexo.
 thumbnail: /uploads/6375567nnnnn.png
 cmsUserSlug: a-step-by-step-guide-hexo-on-netlify
-date: 2015-10-26T00:00:00.000Z
-tags: null
+date: 2015-10-26
+tags:
+  - nodejs
+  - hexo
+  - tutorial
 ---
 
-### **Welcome to netlify**
+Today, we're going to look at how to host a website built with [Hexo](https://hexo.io/) on netlify, including setting up continuous deployment.
 
-Today, we're going to look at how to host a website built with Hexo on netlify, including setting up continuous deployment. Hexo is a fast, simple & powerful blog framework, powered by Node.js.
-
-Let's start from scratch (if you already have a Hexo site set up, you can skip down to [here](#netlifystart)).
+Let's start from scratch. If you already have a Hero site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
 
 <!-- excerpt -->
 
-Open your terminal, and enter the following command (this assumes you have NodeJS installed):
+### Installing Hexo
+
+This guide assumes you have [Node.js](https://nodejs.org) installed.
+
+Open your terminal, and enter the following command:
 
 ```
 $ npm install -g hexo-cli
 ```
 
 Hexo will create a directory for your project with this command:
+
 ```
 $ hexo init /PATH/TO/hexo
 ```
 
 Switch to the `hexo` directory:
+
 ```
 $ cd /PATH/TO/hexo
 ```

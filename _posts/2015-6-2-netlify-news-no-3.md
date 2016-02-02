@@ -2,21 +2,23 @@
 title: Netlify news no. 3
 author: Christian Bach
 short_title: Our third newsletter
-description: "Formhandling, open sourced build image and much more!"
+description: "Form handling, open-sourced build image and much more!"
 thumbnail: /img/posts/thumbnails/newsletter-3.jpg
+date: 2015-06-02
 tags:
-  - open sourced build image
-  - build image
-  - form handling
+  - netlify
+  - newsletter
+  - builds
+  - forms
   - static web tech
   - meetup
-  - first video
-  - prerender
+  - video
+  - prerendering
 ---
 
-Hi everyone!
+Hi everyone
 
- Summer is here (or should be) and we’re celebrating that with a quick recap of what’s new at netlify, the premium hosting service for modern static websites.
+Summer is here (or should be) and we’re celebrating that with a quick recap of what’s new at netlify, the premium hosting service for modern static websites.
 
  **Form handling**
 

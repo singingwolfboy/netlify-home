@@ -6,17 +6,16 @@ short_title: Instant Cache Invalidation
 description: "Instant Cache Invalidation is definitively part of netlify's rocketjuice. Learn all about it here."
 thumbnail: /uploads/instant-cache-thumb.jpg
 cmsUserSlug: ""
-date: 2015-09-11T00:00:00.000Z
+date: 2015-09-11
 tags:
   - netlify
-  - cdn
-  - instant cache invalidation
   - features
+  - cdn
+  - cache invalidation
 ---
 
-Phil Karlton, a famous computer scientist, once said
-
-> "There are only two hard problems in Computer Science: Cache Invalidation and naming things."
+> "There are only two hard problems in Computer Science: Cache Invalidation and naming things." 
+> _– Phil Karlton_
 
 While we’d rate our ability to name things to be fairly average, Instant Cache Invalidation is definitely part of netlify’s rocketjuice.
 

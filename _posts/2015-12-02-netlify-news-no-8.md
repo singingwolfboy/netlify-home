@@ -7,7 +7,9 @@ description: "Netlify is now on Zapier, please check out the beta app. We're als
 thumbnail: /uploads/165674556.jpg
 cmsUserSlug: ""
 date: 2015-12-02
-tags: null
+tags:
+  - netlify
+  - newsletter
 ---
 
 Hi there.

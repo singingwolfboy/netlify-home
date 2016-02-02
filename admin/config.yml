@@ -30,7 +30,7 @@ collections:
       - {label: "Post Body", name: "body", widget: "markdown", tagname: "div", class: "post-bd text"}
       - {label: "Short Title", name: "short_title", widget: "string", tagname: "h1", class: "blurb-title"}
       - {label: "Description", name: "description", widget: "string", tagname: "p", class: "small muted"}
-      - {label: "Thumbnail", name: "thumbnail", widget: "image", tagname: "div", class: "media-img optional cms-thumbnail", folder: "img/posts/thumbnails"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", tagname: "div", class: "media-img colorize cms-thumbnail", folder: "img/posts/thumbnails"}
     meta:
       - {label: "Tags (seperated by comma)", name: "tags", widget: "tags"}
 

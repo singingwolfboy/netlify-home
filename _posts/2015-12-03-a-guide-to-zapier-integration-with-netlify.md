@@ -7,10 +7,13 @@ description: "Matt Highland made a video showing how to use netlify's form proce
 thumbnail: /uploads/144918195465336.png
 cmsUserSlug: ""
 date: 2015-12-03
-tags: null
+tags:
+  - zapier
+  - tutorial
+  - tools
 ---
 
-As you may have seen in yesterday's newsletter netlify now has Zapier app in beta.
+As you may have seen in yesterday's newsletter netlify now has [Zapier app](https://zapier.com/developer/invite/27442/6c1b6a3bbcf86c07c0a0f7dfe2d0327c/) in beta.
 
 It lets you integrate form submissions or deploy notifications from netlify to hundreds of external services like MailChimp, Hipchat, Google Docs, etc,.
 

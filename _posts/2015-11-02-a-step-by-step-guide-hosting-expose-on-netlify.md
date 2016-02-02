@@ -7,17 +7,22 @@ description: A step-by-step guide on how to host a site built with Exposé - A s
 thumbnail: /uploads/expose.jpg
 cmsUserSlug: ""
 date: 2015-11-02
-tags: null
+tags:
+  - expose
+  - bash
+  - tutorial
 ---
 
+Today, we're going to look at how to host a photo and video portfolio built with [Expose](https://github.com/Jack000/Expose) on netlify, including setting up continuous deployment.
 
-### **Welcome to netlify**
+With a few simple tweaks, Expose can work with netlify to continually and consistently update your photo and video content.
 
-Today, we're going to look at how to host a photo and video portfolio built with Expose on netlify, including setting up continuous deployment.
-
-Expose is a static site generator that uses a Bash script to create photo essays. With a few simple tweaks, Expose can work with netlify to continually and consistently update your photo and video content.
 <!-- excerpt -->
+
+### Installing Expose
+
 Let's begin by creating your project directory. For the purposes of this tutorial, let's call it `exposenetlify`:
+
 ```
 $ mkdir PATH/TO/exposenetlify
 ```

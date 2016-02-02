@@ -7,21 +7,25 @@ description: A step-by-step guide on how to host your angular.js apps on netlify
 thumbnail: /uploads/angular-js-copy.png
 cmsUserSlug: ""
 date: 2015-11-10
-tags: null
+tags:
+  - angularjs
+  - nodejs
+  - tutorial
 ---
 
+Today, we're going to look at how to host applications built with [AngularJS](https://angularjs.org/) on netlify, including setting up continuous deployment.
 
-### **Welcome to netlify**
-
-Today, we're going to look at how to host applications built with AngularJS on netlify, including setting up continuous deployment.
-
-Let's start from scratch (if you already have a AngularJS project set up, you can skip down to [here](#netlifystart)).
-
-We'll be using a tool called Yeoman to build our project. Yeoman is a scaffolding tool that works in conjunction with a package manager (like NPM or Bower) and a build tool (like Grunt or Gulp) to create modern web apps.
+Let's start from scratch. If you already have an AngularJS project set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
 
 <!-- excerpt -->
 
-Open your terminal, and enter the following command (this guide assumes you have Node.js installed):
+### Installing Angular
+
+This guide assumes you have [Node.js](https://nodejs.org) installed.
+
+We'll be using a tool called Yeoman to build our project. Yeoman is a scaffolding tool that works in conjunction with a package manager (like NPM or Bower) and a build tool (like Grunt or Gulp) to create modern web apps.
+
+Open your terminal, and enter the following command:
 
 ```
 $ npm install -g grunt-cli bower yo generator-karma generator-angular

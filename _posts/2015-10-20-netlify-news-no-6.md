@@ -7,14 +7,20 @@ description: "HTTP2.0 supported! Also new CDN PoPs, Canonical URLs & more!"
 thumbnail: /uploads/http2-1.png
 cmsUserSlug: ""
 date: 2015-10-20
-tags: null
+tags:
+  - netlify
+  - newsletter
+  - https
+  - ssl
+  - cdn
+  - urls
 ---
 
-Hi Everyone!
+Hi Everyone
 
- Hope you’re having a great week.
+Hope you’re having a great week.
 
- We'll get right to it.
+We'll get right to it.
 
 ## HTTP2.0
 As one of the very first CDNs to roll this out to all clients netlify CDN now supports HTTP 2.0 out of the box!! HTTP2 is enabled for all sites using HTTPS.

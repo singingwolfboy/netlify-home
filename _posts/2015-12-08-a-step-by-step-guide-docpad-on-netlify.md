@@ -7,19 +7,23 @@ description: A step-by-step guide on how to host a website built with static sit
 thumbnail: /uploads/1865439.png
 cmsUserSlug: ""
 date: 2015-12-08
-tags: null
+tags:
+  - docpad
+  - nodejs
+  - tutorial
 ---
 
-### Welcome to netlify
+Today, we're going to look at how to host a website built with [Docpad](http://docpad.org/) on netlify, including setting up continuous deployment.
 
-Today, we're going to look at how to host a website built with Docpad on netlify, including setting up continuous deployment.
-
-Let's start from scratch (if you already have a Docpad site set up, you can skip down to [here](#netlifystart)).
+Let's start from scratch. If you already have a Docpad site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
 
 <!-- excerpt -->
 
+### Installing Docpad
 
-Open your terminal, and enter the following commands (this assumes you have Node.js installed):
+This guide assumes you have [Node.js](https://nodejs.org) installed.
+
+Open your terminal, and enter the following commands:
 
 ```
 $ npm install -g npm

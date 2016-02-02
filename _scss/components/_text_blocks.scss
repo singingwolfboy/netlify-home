@@ -25,7 +25,6 @@
   @include font-weight(normal);
   font-style: normal;
   color: $color-dark;
-  display: block;
   line-height: 1.5;
 }
 
@@ -105,6 +104,7 @@
   
   p > em {
     @extend .text-sidenote;
+    display: inline-block;
   }
   
   /* 

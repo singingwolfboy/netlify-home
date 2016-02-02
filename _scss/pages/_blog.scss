@@ -36,7 +36,8 @@
   margin: 50px auto 30px;
   color: $color-muted;
   
-  > p:first-child {
+  > p:first-child,
+  > div > p:first-child {
     @extend .text-intro;
     br {
       display: none;
@@ -47,7 +48,7 @@
   /*
    * !! Fix for current posts that don't use H2
    */
-  &.text {
+  &.text, &.text > div {
     > h3 {
       @extend .text-h2;
     }

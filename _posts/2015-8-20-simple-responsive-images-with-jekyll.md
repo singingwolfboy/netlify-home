@@ -7,7 +7,10 @@
 "thumbnail": "/uploads/jekyll-logo.png"
 "cmsUserSlug": ""
 "date": 2015-08-20
-"tags": null
+"tags":
+  - tools
+  - jekyll
+  - responsive images
 ---
 
 [Jekyll Srcset](https://github.com/netlify/jekyll-srcset) is a small plugin for Jekyll that may solve your most important responsive image needs, without making things ridiculously complicated.

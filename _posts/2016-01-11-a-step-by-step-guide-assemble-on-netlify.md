@@ -6,17 +6,25 @@ short_title: Assemble on netlify
 description: A step-by-step guide on how to host a website built with static site generator Assemble.
 thumbnail: /uploads/4475-thumb.png
 cmsUserSlug: ""
-date: 2016-01-11T00:00:00.000Z
-tags: null
+date: 2016-01-11
+tags:
+  - assemble
+  - nodejs
+  - tutorial
 ---
 
-### **Welcome to netlify**
+Today, we're going to look at how to host a project built with [Assemble](http://assemble.io/) on netlify, including setting up continuous deployment.
 
-Today, we're going to look at how to host a project built with Assemble on netlify, including setting up continuous deployment.
+Let's start from scratch. If you already have an Assemble site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
 
-Let's start from scratch (if you already have a Assemble site set up, you can skip down to [here](#netlifystart)).
+<!-- excerpt -->
 
-Since Assemble is a Grunt plugin, `grunt` must be installed first (this guide assumes you have Node.js installed):
+### Installing Assemble
+ 
+This guide assumes you have [Node.js](https://nodejs.org) installed.
+
+Since Assemble is a Grunt plugin, `grunt` must be installed first:
+
 ```
 $ npm install -g grunt-cli
 ```

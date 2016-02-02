@@ -7,12 +7,18 @@
 "thumbnail": "/uploads/download-1.jpeg"
 "cmsUserSlug": ""
 "date": 2015-09-08
-"tags": null
+"tags":
+  - netlify
+  - newsletter
+  - clojure
+  - leiningen
+  - gitlab
+  - git
 ---
 
-Hi Everyone!
+Hi Everyone
 
-Welcome to our fourth newsletter!
+Welcome to our fourth newsletter.
 
 Hope you’ve all been enjoying summer. We’ve been keeping real busy.
 

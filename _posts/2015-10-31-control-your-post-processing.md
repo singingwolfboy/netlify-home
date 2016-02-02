@@ -7,10 +7,15 @@ description: Now netlify gives you detailed control over the post processing we 
 thumbnail: /uploads/screen-shot-2013-07-15-at-11.09.27-pm.png
 cmsUserSlug: ""
 date: 2015-10-31
-tags: null
+tags:
+  - netlify
+  - features
+  - post-processing
 ---
 
-Netlify does more post processing than most hosting services. Gzipping, minifying javascript, setting content-addressable URL's etc.
+Now netlify gives you detailed control over the post processing we do to your sites.
+
+Netlify does more post-processing than most hosting services. Gzipping, minifying javascript, setting content-addressable URL's etc.
 This is part of the reason that modern static sites on netlify are so much faster.
 
 Not all post processing is always necessary however, so we're happy to announce that netlify now gives you detailed control over the post processing we do to your sites.

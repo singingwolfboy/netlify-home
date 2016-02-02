@@ -6,8 +6,11 @@ short_title: Announcing Free SSL
 description: A World’s First. Free SSL with Let’s Encrypt. From today HTTPS is a free one-click setup on all our plans
 thumbnail: /uploads/padlock.png
 cmsUserSlug: ""
-date: 2016-01-15T00:00:00.000Z
-tags: null
+date: 2016-01-15
+tags:
+  - netlify
+  - https
+  - ssl
 ---
 
 Here’s some news we’re really excited about!
@@ -19,6 +22,8 @@ As the first hosting service in the world, netlify offers full integration with 
 With one click install, HTTPS will instantly be available for your sites on all our CDN nodes, and netlify automatically handles renewals.
 
 Promoting security as a default is really important to us, and SSL has become a must for a [number of reasons](/blog/2014/10/03/five-reasons-you-want-https-for-your-static-site), like improvement of SEO, better analytics, and of course protection of both users and content. But until now, costs, implementation difficulties, and legacy APIs have stood in the way for many users.
+
+<!-- excerpt -->
 
 ## Let’s Encrypt
 

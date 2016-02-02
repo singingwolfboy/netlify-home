@@ -8,12 +8,15 @@ thumbnail: /img/posts/thumbnails/apple-orange.jpg
 cmsUserSlug: netlify-vs-amazon-s3
 date: 2015-03-06 
 tags:
-  - S3
-  - Comparisons
-  - Netlify
+  - netlify
+  - s3
+  - comparisons
+  - features
 ---
 
-Today pretty much every front-end developer is familiar with Amazon's amazing Simple Storage Service, or S3, and some use it for hosting their front-end projects,  so I thought I would take the opportunity to do a proper writeup about the differences between netlify's static hosting service and S3.
+How do Amazon S3 and netlify compare as static site hosting platforms
+
+Today pretty much every front-end developer is familiar with Amazon's amazing Simple Storage Service, or S3. Some use it for hosting their front-end projects, so I thought I would take the opportunity to do a proper writeup about the differences between netlify's static hosting service and S3.
 
 In short: S3 manages files. Netlify manages sites.
 

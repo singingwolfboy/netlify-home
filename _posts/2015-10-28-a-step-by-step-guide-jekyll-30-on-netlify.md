@@ -7,16 +7,24 @@ description: A step-by-step guide on how to host a website built with static sit
 thumbnail: /uploads/screen-shot-2015-10-28-at-09.png
 cmsUserSlug: ""
 date: 2015-10-28
-tags: null
+tags:
+  - jekyll
+  - ruby
+  - tutorial
 ---
 
-### **Welcome to netlify**
+Today, we're going to look at how to host a project built with [Jekyll](https://jekyllrb.com/) on netlify, including setting up continuous deployment.
 
-Today, we're going to look at how to host a project built with Jekyll on netlify, including setting up continuous deployment.
+Let's start from scratch. If you already have a Jekyll site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
+
 <!-- excerpt -->
-Let's start from scratch (if you already have a Jekyll site set up, you can skip down to [here](#netlifystart)).
 
-Install Jekyll (this guide assumes you have Ruby installed):
+### Installing Jekyll
+
+This guide assumes you have [Ruby](https://www.ruby-lang.org) and [RubyGems](https://rubygems.org/) installed.
+
+Open your terminal, and enter the following command:
+
 ```
 $ gem install jekyll
 ```

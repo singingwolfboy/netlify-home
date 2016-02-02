@@ -6,9 +6,15 @@ short_title: DDoS and DNS Records
 description: Your DNS Setup can have a great effect on performance and DDoS resilience.
 thumbnail: /uploads/ddos-attack.png
 cmsUserSlug: ddos-attacks-and-dns-records
-date: 2016-01-12T00:00:00.000Z
-tags: null
+date: 2016-01-12
+tags:
+  - incident
+  - dns
+  - ddos
+  - domains
 ---
+
+Your DNS Setup can have a great effect on performance and DDoS resilience.
 
 Early Saturday morning we got alerted by Rackspace that a major DDoS attack was hitting our main load balancer in their Chicago data center.
 
@@ -27,6 +33,8 @@ Our site for netlify is hosted on www.netlify.com, rather than netlify.com
 We call `netlify.com` the `apex` domain or `root` domain.
 
 Some might think that this is merely a cosmetic difference and make whole websites [arguing against the www prefix](http://no-www.org/). However, dropping `www` from your main site  domain can have dire consequences because of how DNS records work.
+
+<!-- excerpt -->
 
 ## DNS Records
 

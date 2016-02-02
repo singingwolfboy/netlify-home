@@ -8,11 +8,11 @@ thumbnail: /img/posts/thumbnails/newsletter.png
 cmsUserSlug: netlify-newsletter-no-2
 date: 2015-04-07
 tags:
-  - Netlify
-  - Newsletter
+  - netlify
+  - newsletter
 ---
 
-### Welcome.
+Welcome
 
 A lot of things have happened since our last newsletter.
 
@@ -20,6 +20,7 @@ A lot of things have happened since our last newsletter.
 ### Netlify
 
 **Woohoo!**
+
 We’ve launched [netlify.com](https://www.netlify.com) and are now live, both with hosting of static sites and apps (as you knew it from [bitballoon.com](https://www.bitballoon.com)) & our continuous deployment service.
 
 We want to thank our beta-testers for all their help!
@@ -29,12 +30,15 @@ And thanks so much to everyone who has already signed on. We are getting raving 
 <!-- excerpt -->
 
 **Hacker News**
+
 We were really stoked a couple of days ago, when our launch spent the [entire day on the front page of Hacker News](http://netlify.us2.list-manage.com/track/click?u=3ca88a0cd26d026e590224d67&id=3f546fb6c3&e=8a3a3955ba) with more than 100 upvotes and lots of great comments.
 
 **100% netlify**
+
 On a more personal note Chris (co-founder) is now no longer with his Danish agency, and is super excited to move permanently to San Francisco so he can focus 100% on netlify.
 
 **Future**
+
 We are currently working on some things at that we are really excited about introducing to everyone. Please let us know of any features you would like. We can be contacted in any number of ways.
 
 
@@ -43,9 +47,11 @@ We are currently working on some things at that we are really excited about intr
 … is fortunately for us still becoming more popular by the hour.
 
 **Staticgen.com**
+
 Our open-sourced resource [staticgen.com](https://www.staticgen.com) is getting more traffic than ever and has in a few weeks gone from listing 70 to now more than 80 static site engines.
 
 **Meet up**
+
 We also created a meet-up on meetup.com, which quickly got 90+ members. It’s going to be about all things static and you can sign up right here.
 
 

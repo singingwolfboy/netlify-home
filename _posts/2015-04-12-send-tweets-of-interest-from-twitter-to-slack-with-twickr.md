@@ -8,9 +8,10 @@ thumbnail: /img/posts/thumbnails/twickr.png
 cmsUserSlug: twickr-send-tweets-of-interest-from-twitter-to-slack
 date: 2015-04-12 
 tags:
-  - Open-Source
-  - Twitter
-  - Slack
+  - open-source
+  - twitter
+  - slack
+  - tools
 ---
 
 [Twickr](https://github.com/netlify/twickr) is a small tool we're using @netlify to get tweets of interest delivered to our Slack.

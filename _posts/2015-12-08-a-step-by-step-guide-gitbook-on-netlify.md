@@ -7,19 +7,23 @@ description: A step-by-step guide on how to host a website built with static sit
 thumbnail: /uploads/gitbook.png
 cmsUserSlug: ""
 date: 2015-12-08
-tags: null
+tags:
+  - gitbook
+  - nodejs
+  - tutorial
 ---
 
-### Welcome to netlify
+Today, we're going to look at how to host a book built with [Gitbook](https://www.gitbook.com/) on netlify, including setting up continuous deployment.
 
-Today, we're going to look at how to host a book built with GitBook on netlify, including setting up continuous deployment.
-
-This tutorial will start from scratch (if you already have GitBook set up, you can skip down to [here](#netlifystart)).
-
-Let's get your workstation prepped (this guide assumes you have Node.js installed).
+Let's start from scratch. If you already have GitBook set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
 
 <!-- excerpt -->
 
+### Installing Gitbook
+
+This guide assumes you have [Node.js](https://nodejs.org) installed.
+
+Let's get your workstation prepped.
 
 First, use `mkdir` to create the `gitbook` directory where you'll be working:
 

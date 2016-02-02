@@ -7,16 +7,23 @@ description: A step-by-step guide on how to host a website built with static sit
 thumbnail: /uploads/zpc_pisy.jpeg
 cmsUserSlug: ""
 date: 2015-10-01
-tags: null
+tags:
+  - middleman
+  - ruby
+  - tutorial
 ---
 
-### **Welcome to netlify**
+Today, let's take a look at how to host [Middleman](https://middlemanapp.com/) on netlify, including setting up continuous deployment.
 
-Today, let's take a look at how to host Middleman on netlify, including setting up continuous deployment.
+Let's start from scratch. If you already have a Middleman site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
 
-Let's start from scratch (if you already have a Middleman site set up, you can skip down to [here](#netlifystart)).
+<!-- excerpt -->
 
-Open your terminal, and enter the following commands (this assumes you have Ruby and RubyGems installed):
+### Installing Middleman
+
+This guide assumes you have [Ruby](https://www.ruby-lang.org) and [RubyGems](https://rubygems.org/) installed.
+
+Open your terminal, and enter the following commands:
 
 ```
 gem install middleman
@@ -24,8 +31,6 @@ middleman init my-site
 ```
 
 Once everything is installed, it's time to push it to your repo of choice. Directions for GitHub follow here.
-
-<!-- excerpt -->
 
 ### **Creating your Git Repo**
 

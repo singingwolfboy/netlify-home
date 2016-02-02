@@ -7,18 +7,23 @@ description: A step-by-step guide on how to host a website built with static sit
 thumbnail: /uploads/brunch-copy.png
 cmsUserSlug: ""
 date: 2015-10-26
-tags: null
+tags:
+  - nodejs
+  - brunch
+  - tutorial
 ---
 
-### **Welcome to netlify**
+Today, we're going to look at how to host a website built with [Brunch](http://brunch.io/) on netlify, including setting up continuous deployment.
 
-Today, we're going to look at how to host a website built with Brunch on netlify, including setting up continuous deployment.
-
-Let's start from scratch (if you already have a Brunch site set up, you can skip down to [here](#netlifystart)).
+Let's start from scratch. If you already have a Brunch site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
 
 <!-- excerpt -->
 
-Open your terminal, and enter the following command (this guide assumes you have Node.js installed):
+### Installing Brunch
+
+This guide assumes you have [Node.js](https://nodejs.org) installed.
+
+Open your terminal, and enter the following command:
 
 ```
 $ npm install -g brunch

@@ -6,11 +6,11 @@ short_title: Star Wars gone static
 description: 3 Star Wars themed sites on netlify. Because of course.
 thumbnail: /uploads/screen-shot-2015-12-16-at-20.13.25.png
 cmsUserSlug: ""
-date: 2015-12-16T00:00:00.000Z
+date: 2015-12-16
 tags: null
 ---
 
-*** No spoilers contained. Really, We haven’t even seen it yet***
+** No spoilers contained. Really. We haven’t even seen it yet **
 
 Sooo 4 billion (with a b) dollars seems like a steal these days. At least judging from the hype this first Disney instalment is getting.
 

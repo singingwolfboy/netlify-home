@@ -4,7 +4,7 @@ layout: default
 <div class="l-wrap bg-light-muted-2">
   <div class="l-wrap-inner l-wrap-inner--main-left">
 
-    <div class="l-main l-main--left" role="main">
+    <section class="l-main l-main--left" role="main">
       <article class="post">
         <header class="post-hd">
           <h1 class="post-title">
@@ -30,21 +30,30 @@ layout: default
       </div>
 
       <div id="disqus_thread" class="disqus"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'netlify';
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'netlify';
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    </div>
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>
+          Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+        </noscript>
+    </section>
 
-    {% include blog-aside.html %}
-
+    <section class="l-aside l-aside--right inverse blog-aside" role="complementary">
+      <h1 class="blog-aside-title">More Articles</h1>
+      {% for post in site.related_posts | limit: 10 %}
+        {% include post-blurb.html %}
+      {% endfor %}
+      <footer>
+        <p><a href="/blog.html" class="link-more">More Articles</a></p>
+      </footer>
+    </section>
   </div>
 </div>

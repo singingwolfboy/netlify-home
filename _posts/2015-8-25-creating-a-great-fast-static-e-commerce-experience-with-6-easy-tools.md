@@ -8,6 +8,8 @@ thumbnail: /uploads/logo-snipcart.png
 cmsUserSlug: ""
 date: 2015-08-25
 tags:
+  - hugo
+  - go
   - e-commerce
   - guest post
   - widgets

@@ -7,18 +7,23 @@ description: A step-by-step guide on how to host a website built with static sit
 thumbnail: /uploads/screen-shot-2015-10-22-at-18.01.40.png
 cmsUserSlug: ""
 date: 2015-10-22
-tags: null
+tags:
+  - nodejs
+  - roots
+  - tutorial
 ---
 
-### **Welcome to netlify**
+Today, we're going to look at how to host a website built with [Roots](http://roots.cx/) on netlify, including setting up continuous deployment.
 
-Today, we're going to look at how to host a website built with Roots on netlify, including setting up continuous deployment.
-
-Let's start from scratch (if you already have a Roots site set up, you can skip down to [here](#netlifystart)).
+Let's start from scratch. If you already have a Roots site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
 
 <!-- excerpt -->
 
-Open your terminal, and enter the following command (this guide assumes you have Node.js installed):
+### Installing Roots
+
+This guide assumes you have [Node.js](https://nodejs.org) installed.
+
+Open your terminal, and enter the following command:
 
 ```
 $ npm install roots -g
