@@ -10,6 +10,9 @@ include: ["status.html"]
 
 social-links:
   twitter: 'https://twitter.com/netlify'
+  facebook: 'https://www.facebook.com/netlify'
+  github: 'https://github.com/netlify'
+  linkedin: 'https://www.linkedin.com/company/netlify'
   gitter: 'https://gitter.im/netlify/community'
 
 services: ["CDN",  "DNS", "API", "Build Automation", "Prerendering"]
