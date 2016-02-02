@@ -35,12 +35,32 @@
   max-width: 40em;
   margin: 50px auto 30px;
   color: $color-muted;
-}
+  
+  > p:first-child {
+    @extend .text-intro;
+    br {
+      display: none;
+    }
+  }
 
-.post-intro {
-  @extend .epsilon;
-  @extend .semibold;
-  color: $color-dark;
+  
+  /*
+   * !! Fix for current posts that don't use H2
+   */
+  &.text {
+    > h3 {
+      @extend .text-h2;
+    }
+    > h4 {
+      @extend .text-h3;
+    }
+    > h5 {
+      @extend .text-h4;
+    }
+    > h6 {
+      @extend .text-h5;
+    }
+  }
 }
 
 .post-jumpline {
@@ -51,11 +71,6 @@
   border-bottom: 1px dashed $color-highlight;
 }
 
-.post-author {
-  font-size: 14px;
-  margin-top: 0;
-  color: rgba(white, 0.7);
-}
 
 /*
  * Aside

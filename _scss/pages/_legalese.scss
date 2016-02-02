@@ -8,7 +8,12 @@
   li {
     margin-top: 20px;
     margin-bottom: 20px;
-  } 
+  }
+  
+  h2 {
+    @extend .text-h3;
+    @include font-weight(medium);
+  }
 
   > ol {
       counter-reset: h2-counter;

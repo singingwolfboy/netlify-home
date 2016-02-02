@@ -1,74 +1,122 @@
 /*
+* Text blocks where some of the markdown generated tags have a special look'n feel
+*/
+
+.editorial-text {
+  strong {
+   color: $color-highlight;
+  }
+}
+
+.pullquote {
+  @extend .editorial-text;
+}
+
+.text-intro {
+  @extend .epsilon;
+  @include font-weight(normal);
+  color: $color-dark;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.text-sidenote {
+  @extend .small;
+  @include font-weight(normal);
+  font-style: normal;
+  color: $color-dark;
+  display: block;
+  line-height: 1.5;
+}
+
+
+/*
  * Typography for markdown generated tags
  */
+
+
+/*
+ * Headers
+ */
  
-%text-subheadline {
+@mixin text-headline {
+  @include font-weight(normal);
+  line-height: 25px;
+  letter-spacing: normal;
+  text-transform: uppercase;
   margin-top: 40px;
   margin-bottom: 20px;
-  color: $color-darkest;
+  color: $color-darker;
   li & {
     margin-top: 20px;
   }
 }
 
-%text-subheadline--uppercase {
-  @include font-weight(normal);
-  text-transform: uppercase;
+.text-h1, .text h1 {
+  @include text-headline;
+  @include font-weight(medium);
+  font-size: 21px;
+  border-top: 2px solid $color-highlight;
+  padding-top: 90px;
+  margin-bottom: 30px;
 }
+
+.text-h2, .text h2 {
+  @extend .large;
+  @include text-headline;
+}
+
+.text-h3, .text h3 {
+  @extend .medium;
+  @include text-headline;
+}
+
+.text-h4, .text h4 {
+  @extend .small;
+  @include text-headline;
+}
+
+.text-h5, .text h5 {
+  @extend .small;
+  @include text-headline;
+  text-transform: none;
+}
+
+.text-h6, .text h6 {
+  @extend .x-small;
+  @include text-headline;
+  text-transform: none;
+}
+
+
+/*
+ * Other HTML Elements
+ */
  
 .text {
 
   /* 
-   * Headers 
+   * Emphasis
    */
    
-  h1 {
-    font-size: 21px;
-    line-height: 25px;
-    @include font-weight(medium);
-    letter-spacing: normal;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    border-top: 2px solid $color-highlight;
-    padding-top: 90px;
-  }
-
-  h2, h3, h4, h5, h6 {
-    @extend %text-subheadline;
-  }
-  
-  h2 {
-    @extend .large;
-    @extend %text-subheadline--uppercase;
-  }
-  
-  h3 {
-    @include font-weight(medium);
-  }
-
-  h1 ~ h2, li > h2,
-  h2 ~ h3, li > h3,
-  h4 {
-    @extend .medium;
-    @extend %text-subheadline--uppercase;
-  }
-
-  h1 ~ h2, li > h2 {
-    @include font-weight(medium);
-  }
-
-
-  /*
-   * Other HTML Elements
-   */
-
-  p, ul, ol, pre, blockquote, img {
-    max-width: 40em;
-    margin: 20px 0;
-  }
-
   em {
     font-style: italic;
+  }
+  
+  p > em {
+    @extend .text-sidenote;
+  }
+  
+  /* 
+   * Block Elements 
+   */
+   
+  p, ul, ol, pre, blockquote {
+    margin: 20px 0;
+  }
+  
+  p, li, pre, blockquote {
+    max-width: 40em;
   }
 
 
@@ -79,6 +127,10 @@
   ul {
     list-style: disc;
     margin-left: 1em;
+    
+    @media (min-width: $bp-small) {
+      margin-left: 0;
+    }
   }
   
   ol {
@@ -89,14 +141,8 @@
         list-style: lower-roman;
       }
     }
-  }
-
-  @media (min-width: $bp-small) {
-    ul {
-      margin-left: 0;
-    }
     
-    ol {
+    @media (min-width: $bp-small) {
       margin-left: -50px;
       > li {
         padding-left: 10px;
@@ -107,17 +153,16 @@
     }
   }
 
-
   /* 
    * Images
    */
  
   img {
-    box-shadow: 0 0 3px rgba(0,0,0,0.4);
     display: block;
+    box-shadow: 0 0 3px rgba(0,0,0,0.4);
     margin: 40px 0;
   }
-  
+
 
   /*
    * Code
@@ -138,6 +183,15 @@
     }
   }
   
+
+  /*
+   * Blockquotes
+   */
+   blockquote {
+     p {
+       @extend .text-intro;
+     }
+   }
 
   /*
    * Tables
@@ -210,19 +264,4 @@
       margin-left: 0;
     }
   }
-}
-
-
-/*
- * Text blocks where some of the markdown generated tags have a special look'n feel
- */
-
-.editorial-text {
-  strong {
-    color: $color-highlight;
-  }
-}
-
-.pullquote {
-  @extend .editorial-text;
 }
