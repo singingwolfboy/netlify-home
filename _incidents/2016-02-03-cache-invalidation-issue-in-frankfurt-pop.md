@@ -7,6 +7,6 @@ resolved: true
 services:
   - CDN
 cmsUserSlug: ""
-date: now
+date: 2016-02-03 
 ---
 
