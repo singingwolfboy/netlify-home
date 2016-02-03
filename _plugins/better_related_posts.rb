@@ -1,12 +1,19 @@
 require 'jekyll/post'
 
+# Modified version of
+#
 # http://www.chrisyin.com/2014/08/23/jekyll-related-posts/
-
+#
+# We always want to return some results so we keep the original
+# Jekyll related_posts method around so we can call it if we
+# don't find a match
+#
 module BetterRelatedPosts
 
   # Used to remove #related_posts so that it can be overridden
   def self.included(klass)
     klass.class_eval do
+      alias_method :old_related_posts, :related_posts
       remove_method :related_posts
     end
   end
@@ -26,8 +33,11 @@ module BetterRelatedPosts
         end
       end
     end
-
-    Jekyll::Post.sort_related_posts(related_scores)
+    if related_scores.empty? 
+      old_related_posts(posts)
+    else
+      Jekyll::Post.sort_related_posts(related_scores)
+    end
   end
 
   module ClassMethods

@@ -48,7 +48,7 @@ layout: default
 
     <section class="l-aside l-aside--right inverse blog-aside" role="complementary">
       <h1 class="blog-aside-title">More Articles</h1>
-      {% for post in site.related_posts | limit: 5 %}
+      {% for post in site.related_posts limit: 5 %}
         {% include post-blurb.html %}
       {% endfor %}
       <footer>
