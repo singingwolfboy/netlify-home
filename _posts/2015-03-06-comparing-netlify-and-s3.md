@@ -22,7 +22,7 @@ In short: S3 manages files. Netlify manages sites.
 
 <!-- excerpt -->
 
-### Level of Abstraction
+## Level of Abstraction
 
 S3, as it's name implies, is a low-level utility. Beyond the "bucket" you upload files to, S3 makes no assumptions about files you upload to it and the role they play in composing an actual website.
 
@@ -33,7 +33,7 @@ If you’re looking to add static site publishing component into a SaaS web auth
 The first one is that Amazon by default limits you to 100 Buckets per account, and each site uses one up. For a few sites this obviously won’t be a problem, but if you’re looking to build a tool that publishes websites at a large scale, this could spell trouble.
 
 
-### Latency
+## Latency
 
 On it's own, S3 will give you poor latency, since it's not optimized for that. So if you use S3 for static hosting you should always combine it with Cloudfront (or another CDN). Setting this up correctly can be quite a bit of work and often you'll end up having to wait from the moment you deploy a change to your site till it actually shows up on the CDN backed page. With netlify all changes are instant.
 
@@ -42,7 +42,7 @@ Here's Pingdoms performance test running against the exact same site folder uplo
 * <a href="http://tools.pingdom.com/fpt/#!/bfDfyO/http://speedtestsite.s3-website-us-east-1.amazonaws.com/" target="_blank">The test site on S3</a>
 * <a href="http://tools.pingdom.com/fpt/#!/d5XcVQ/http://speedtest.netlify.com/" target="_blank">The test site on netlify</a>
 
-### HTTPS
+## HTTPS
 
 If you want HTTPS support for an S3 hosted site you'll need to configure Cloudfront for your site as well. Then you can supply your own certificate and go for one of two options:
 
@@ -52,12 +52,12 @@ If you want HTTPS support for an S3 hosted site you'll need to configure Cloudfr
 Netlify also offers SNI based SSL, but our pro plan offers HTTPS that always works in all browsers by using a hybrid model. When you activate HTTPS for a netlify pro site, we'll provision and install a certificate for your domain and use this for all browsers that support SNI. Browsers with no SNI support will fall back to a certificate shared between multiple customers.
 
 
-### Atomic Deploys
+## Atomic Deploys
 
 S3 doesn’t do atomic deploys. So typically if you deploy a new version of the site there'll be a time where the site is in a half-deployed state with old and new assets mixed together. If you run into a connetion issue in the middle of a deploy, your site can end up in an inconsistent state. With netlify no part of a deploy ever goes live before all the files in the deploy have been uploaded and processed.
 
 
-### Vary: Accept-Encoding HTTP header
+## Vary: Accept-Encoding HTTP header
 
 S3 also does not provide proper support for the Vary: Accept-Encoding HTTP header. So for mobile sites (or sites supporting older browsers) you might find that serving gzipped content in that setting is more trouble than it's worth.
 
@@ -66,7 +66,7 @@ Netlify automatically creates a gzipped version of everything and supports this 
 When using S3 for static sites, you’ll have to decide whether to serve gzipped or plain text content to all browsers, regardless of gzip support. You’ll also have to do the gzipping up front if you chose to serve the compressed version.
 
 
-### Build Automation
+## Build Automation
 
 Netlify comes with integrated build automation. With just a click you can configure netlify to listen to your Github or BitBucket repository and do a build and deploy each time you push to git. It works with all common build tools like Grunt, Gulp, Jekyll, Middleman, Roots, etc...
 
@@ -74,7 +74,7 @@ Netlify will also process all your assets during each deploy and create unique u
 
 Often sites deployed to netlify will get close to 100/100 score on Pingdom Speed Test tool because of all those web performance optimizations. Obviously if you want to achieve a similar result on S3/Cloudfront, it takes quite a bit of work to get it all right.
 
-### Redirect and Rewrite Rules
+## Redirect and Rewrite Rules
 
 S3 does let you configure basic redirects, but there's limited flexibility and the XML syntax for specifying the rewrite rules is not the most intuitive. There's currently no way to do the kind rewrite rules you would need to get history pushstate to work for an Angular or Ember app.
 
@@ -82,14 +82,14 @@ Netlify lets you add a simple [_rewrites](/docs/redirects) file to your site fol
 
 You can even setup rewrite rules that'll let you proxy through parts of your site to external servers &mdash; straight from our CDN nodes.
 
-### Form processing
+## Form processing
 
 Netlify has built-in support for form submissions. Any form with a 'netlify' attribute will be processed when the HTML is uploaded and netlify automatically connects them up to an API-accessible database. All the other HTML tags work on static sites, forms should work too! There's nothing like this for S3.
 
-### Versioning
+## Versioning
 
 S3 can enable versioning for individual files. Netlify automatically stores a complete version for each deploy, so you can always review or rollback to a earlier version. You can even download a zip with all the files from any historic deploy you've uploaded.
 
-### Stay tuned for more
+## Stay tuned for more
 
 We have lots more features on the roadmap as well and we're always open to your suggestions for what else we can do to create the ultimate platform for static site hosting.
