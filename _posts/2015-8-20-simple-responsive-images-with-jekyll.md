@@ -17,6 +17,8 @@
 
 Here's how you would use it in a Liquid template:
 
+<!-- excerpt -->
+
 ```html
 {%raw%}{% image_tag src=page.thumbnail width="200" %}{%endraw%}
 ```
@@ -26,8 +28,6 @@ With a page with cover image `/thumb.jpg` with the dimensions 500x500, this will
 ```html
 <img src="/thumb-200x200.jpg" srcset="/thumb-200x200.jpg 1x, /thumb-400x400.jpg 2x, /thumb-500x500.jpg 3x">
 ```
-
-<!-- excerpt -->
 
 Managing images in a responsive design is something that can reach almost any level of complexity, when you're managing different devices, aspect rations, art direction based on breakpoints and varying pixel densities.
 
