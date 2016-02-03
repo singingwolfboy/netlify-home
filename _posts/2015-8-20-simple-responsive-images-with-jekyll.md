@@ -8,8 +8,8 @@
 "cmsUserSlug": ""
 "date": 2015-08-20
 "tags":
-  - tools
   - jekyll
+  - plugins
   - responsive images
 ---
 

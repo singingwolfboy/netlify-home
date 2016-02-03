@@ -10,8 +10,6 @@ date: 2015-07-30
 tags:
   - hugo
   - go
-  - netlify
-  - features
 ---
 
 There are those who describe netlify as “Github Pages on Steroids”. If that’s the case then Hugo on netlify must be digging into Lance Armstrong's stash.
