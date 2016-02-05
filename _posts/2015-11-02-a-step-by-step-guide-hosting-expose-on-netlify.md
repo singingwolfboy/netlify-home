@@ -6,7 +6,7 @@ short_title: Host Exposé on netlify
 description: A step-by-step guide on how to host a site built with Exposé - A simple static site generator for photoessays written in Bash.
 thumbnail: /uploads/expose.jpg
 cmsUserSlug: ""
-date: 2015-11-02
+date: 2015-11-02T00:00:00.000Z
 tags:
   - expose
   - bash
@@ -122,8 +122,9 @@ git push -u origin master
 ```
 
 Now that your assets are up and running on GitHub, let's connect them to netlify.
+
 <a id="netlifystart"></a>
-## **Connecting to netlify**
+## Connecting to netlify
 
 ### Step 1: Add Your New Site
 
