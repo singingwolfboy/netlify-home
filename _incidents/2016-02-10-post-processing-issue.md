@@ -1,12 +1,12 @@
 ---
 title: Post Processing Issue
-description: "We're investigating a post processing issue causing some builds to hang after being uploaded"
-details: ""
+description: Delays in our background processing pipeline left some queues hanging...
+details: As soon as we were notified about the issue we triggered manual processing of all builds affected and added extra background processing capacity to make sure all waiting tasks in our system got processed.
 severity: warning
-resolved: null
+resolved: true
 services:
   - API
 cmsUserSlug: ""
-date: 2016-02-10 
+date: 2016-02-10T00:00:00.000Z
 ---
 
