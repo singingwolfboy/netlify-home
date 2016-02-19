@@ -6,7 +6,7 @@ short_title: Five Reasons for HTTPS
 description: "HTTPS is not just for E-commerce sites. Here's five reasons you should invest in HTTPS for your static site today."
 thumbnail: /img/posts/thumbnails/lock.jpg
 cmsUserSlug: five-reasons-you-want-https-for-your-static-site
-date: 2014-10-03
+date: 2014-10-03T00:00:00.000Z
 tags:
   - https
   - ssl
@@ -30,17 +30,17 @@ Here are 5 good reasons you should switch to HTTPS for your static site today:
 
 ## 1. Improve your SEO
 
-If you care about how well your site positions in Google searches, then adding HTTPS can give you a small boost. Google recently announced that they would [start ranking sites with HTTPS support](http://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html) higher than sites that only works under HTTP.
+If you care about how well your site positions in Google searches, then adding HTTPS can give you a small boost. Google recently announced that they would [start ranking sites with HTTPS support](http://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html) higher than sites that only work under HTTP.
 
 ## 2. Better Analytics
 
 If you're not using HTTPS for your site, you're missing out on really important Analytics data.
 
-We all wan't to know where our visitors comes from. Being able to dive into our traffic sources is one of the major selling points of Google Analytics or any of their alternatives.
+We all want to know where our visitors come from. Being able to dive into our traffic sources is one of the major selling points of Google Analytics or any of their alternatives.
 
-Browsers, however, won't send the important "Referer" header when a user follows a link from a HTTPS site to a plain HTTP site. As more and more sites starts forcing HTTPS this becomes a larger and larger problem for site owners without HTTPS enabled.
+Browsers, however, won't send the important "Referer" header when a user follows a link from an HTTPS site to a plain HTTP site. As more and more sites start forcing HTTPS this becomes a larger and larger problem for site owners without HTTPS enabled.
 
-If a you got an inbound link from [HackerNews](https://news.ycombinator.com) and your site is not HTTPS, you won't see see Hacker News as a traffic source at all in your Analytics, since Hacker News forced HTTPS. Wan't to know the bounce rate from the Hacker News audience? Tough luck unless you run HTTPS.
+If you got an inbound link from [HackerNews](https://news.ycombinator.com) and your site is not HTTPS, you won't see see Hacker News as a traffic source at all in your Analytics, since Hacker News forced HTTPS. Want to know the bounce rate from the Hacker News audience? Tough luck unless you run HTTPS.
 
 Same goes for any other traffic source enforcing HTTPS and there are more of those every day.
 
@@ -63,9 +63,9 @@ During the last years browsers have gone from being simple document viewers, and
 
 With great power comes great responsibility, and one of the key security systems that all the web infrastructure relies on is the same-origin policy.
 
-When a user gives a site access to his location or his webcam, she does it based on the domain of the site asking for permission. As browsers gets more powerful, this means the trust bestowed on individual domains becomes much more valuable.
+When a user gives a site access to his location or his webcam, she does it based on the domain of the site asking for permission. As browsers get more powerful, this means the trust bestowed on individual domains becomes much more valuable.
 
-Because of this browser vendors are starting to consider only granting these permissions to domains served with HTTPS. It's really part of the same reason as #4. How can you trust a domain, if there's no way to guarantee that what you're getting from that domain is really what the owner of the domain intended?
+Because of this, browser vendors are starting to consider only granting these permissions to domains served with HTTPS. It's really part of the same reason as #4. How can you trust a domain, if there's no way to guarantee that what you're getting from that domain is really what the owner of the domain intended?
 
 The new, incredibly interesting, Service Workers spec explicitly limits support to HTTPS origins and there's talks about moving in that direction for some existing browser features like geolocation.
 
