@@ -49,7 +49,7 @@ Same goes for any other traffic source enforcing HTTPS and there are more of tho
 
 Last month Comcast received a lot of flak when people found out they were [injecting adware into people's browsers](http://arstechnica.com/tech-policy/2014/09/why-comcasts-javascript-ad-injections-threaten-security-net-neutrality/) when using their Xfinity public Wi-Fi hotspots.
 
-They're not the first, and they won't be the last, to tamper with traffic over public networks. As a website owner, having other companies inject ads into your site is a disaster. Ads on a company site makes you seem cheap and can seriously hurt the first impression you make on your users.
+They're not the first, and they won't be the last, to tamper with traffic over public networks. As a website owner, having other companies inject ads into your site is a disaster. Ads on a company site make you seem cheap and can seriously hurt the first impression you make on your users.
 
 HTTPS means all the traffic between your site and your users is sent over an encrypted connection, and no-one can tamper with the source code of your site. So by enabling HTTPS you're getting a guarantee that what your users see is really what you intended.
 
