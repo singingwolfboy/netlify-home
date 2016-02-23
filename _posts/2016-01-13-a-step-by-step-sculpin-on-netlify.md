@@ -10,7 +10,6 @@ date: 2016-01-13T00:00:00.000Z
 tags: null
 ---
 
-{% raw %}
 ### Welcome to netlify
 Sculpin is a fast static site generator, which uses Twig templates, is built on Symfony's HTTP Kernel and written in PHP. It's arguably the most mature and well documented static site generator written in PHP and today we'll take a look at how to install and setup a basic Sculpin blog site with assets on GitHub, in continuous deployment on netlify.
 
@@ -103,7 +102,7 @@ The generate command will build our site and when using the `--watch` flag, Scul
 Check to see if everything is running like it should, before we start adding our own content.
 
 #### 5. Create Content
-Let's create our first piece of content, a markdown file following Jekylls file name format *YYYY-MM-DD-Title.md* with a date that's newer than today, so we can make sure it pops up on top, like it would in an ordinary blog. 
+Let's create our first piece of content, a markdown file following Jekyll's file name format *YYYY-MM-DD-Title.md* with a date that's newer than today, so we can make sure it pops up on top, like it would in an ordinary blog. 
 
 We created the `2016-01-22-Sculpin-on-netlify.md` file in the `/source/_posts` folder with the following content:
 
