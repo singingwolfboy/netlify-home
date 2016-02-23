@@ -6,7 +6,7 @@ short_title: "Interview with ZURB's Geoff Kimball"
 description: "ZURB's Geoff Kimball talks Foundation 6, Panini and Gulp"
 thumbnail: /uploads/geoffzurb.jpg
 cmsUserSlug: ""
-date: Invalid date
+date: 2016-02-22 
 tags: null
 ---
 
