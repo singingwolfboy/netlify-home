@@ -6,7 +6,7 @@ short_title: Interviewing Wade Warren
 description: "An interview about the value of static sites and CDN hosting with VP of Operations @ Wikia that serves 36,000 http requests per second."
 thumbnail: /uploads/performance.jpg
 cmsUserSlug: ""
-date: 2015-11-09T00:00:00.000Z
+date: 2016-02-24
 tags: null
 ---
 
