@@ -12,15 +12,15 @@ tags: null
 
 {% raw %}
 ### Welcome to netlify
-Punch is a nice static site generator from Sri Lanka by Lakshan Perera. 
-It's written in javascript with node.js and what immediately stands out is its user friendliness with good documentation, while it takes only a few minutes to set up. It's not too much different from other node.js based generators and uses Mustache for its templates, with content in JSON format, though Markdown is also possible.
+Today we'll take a look at Punch, a static site generator that bills itself as *"a simple, intuitive web publishing framework that will delight both designers and developers"*.
 
-The aim for Punch, as defined by Mr. Lakshan Perera, is to *"help anyone to build (and maintain) modern websites using only HTML, CSS and JavaScript"* and while it's largely inspired from Jekyll it is NOT a blog engine.
+Punch is written in javascript with node.js and what immediately stands out, is its user friendliness and good basic documentation to get you started, while it takes only a few minutes to set up. It's not too much different from other node.js based generators and uses Mustache as its template engine, with content in JSON format, though Markdown and other possibilities exist.
 
-Unlike most other static site generators, it's extremely fast and easy to change the navigation and generally speaking, it's fast and easy to get started with and comes with boilerplates.
+The aim for Punch, as defined by Mr. Lakshan Perera, is to *"help anyone to build (and maintain) modern websites using only HTML, CSS and JavaScript"* and while it's largely inspired by Jekyll it is *NOT* a blog engine.
 
-<INSERT PUNCH PIC?>
+Even without a boilerplate, Punch comes with a basic setup, so it's fast and easy to get started with and there are several good examples [here](https://github.com/laktek/punch/wiki/Sites-using-Punch).
 
+### Today's Guide
 In our guide today, we'll do a basic Punch site with a few plugins and once we're satisfied, we'll push our site to GitHub and deploy it on netlify.
 
 If you're all set with a Punch repo or site of your own and all you want to do is see how we connect and build a Punch site on netlify, you can skip the majority of this guide and start down [here](#netlifystart) instead.
@@ -28,51 +28,35 @@ However, if you need a bit of help with regards to hooking your local Punch site
 
 And finally, if you want to try out our small Punch tutorial, commence chronologically and please enjoy the show.
 
-***Please note that as Punch requires node.js, this guide assumes you have it installed before partaking !!!***
+***Please note that this guide assumes you have node.js and git installed !!!***
 
-For an absolutely stellar article about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
+For a very detailed guide about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
-### QUICK GUIDE LINUX, OSX, WINDOWs
-This small section is reserved for a small quick start guide to be used by those in a hurry, who simply wish to get all the terminal/command prompt commands to be entered immedeately and consecutively without too much thought.
-
-Only use these if you know what you're doing and remember it's at your own discretion.
+### Quick Install Guide
+This small section is reserved for a small quick start guide to be used by those who simply wish to get all the terminal commands to be entered immediately and consecutively without the details
 
 For a more detailed installation with setup instructions for a basic site, scroll past the quick install guide to [here](#punchsetup).
 
-#### Quick Install Punch - Linux:
+The terminal commands:
 
 ```
 npm install -g punch
 punch setup my-punch-site
-cd my-punch-site
+cd my-punch-site/default
 punch s
 ```
 
-#### Quick Install Punch - OSX:
+Provided you got the requirements sorted, the installation and setup of punch and a punch site can be done with a few short commands in a terminal window, as seen in the above example. Simply substitute my-punch-site with the name of your site.
 
-```
-OSX terminal install commands
-```
+Once you've entered the last command `punch s`, just leave the window open, as it will run a web server you can test your site against. Open your browser and visit [http://localhost:9009](http://localhost:9009) and see for yourself.
 
-#### Quick Install Punch - Windows:
-
-```
-Windows command prompt install commands
-```
-
-Provided you got the requirements sorted, the installation and setup of punch and a punch site can be done with a few short commands in terminal, as seen in the above examples. Simply choose the guide that corresponds with your operating system and substitute my-punch-site with the name of your site.
-
-Once you've entered the last command `punch s`, leave the window open, as it will run a web server you can test your site against. Just open your browser and visit [http://localhost:9009](http://localhost:9009) and see for yourself.
-
-It's recommended to take the quick hands-on tutorial, as it will quickly cover the basics and get the ball running, but it's not a prerequisite for this guide.
-
-Please note that while we've included a quick install guide for the Windows OS and tested this, the main guide was only tested on Linux and OSX and it will not work without alterations if you are using a Windows OS!
+It's recommended to take the quick hands-on tutorial, as it will quickly cover the basics and get the ball rolling, but it's not a prerequisite for this guide. 
 
 ### Install & Setup Punch
 <a id="punchsetup"></a>
-OK, so you decided the quick start guide was a tad short on the explanations and you're correct of course. We'll give you our own personal template [here](https://github.com/jimmilee/punch-demo-template) and proceed with some details.
+OK, so you decided the quick start guide was a tad short on the explanations and you're correct of course. 
 
-This guide will proceed with the step-by-step setup of the above template and mold it into a small Punch site which we'll host on netlify in continuous deployment with assets on GitHub.
+This guide will proceed with the step-by-step setup of a small Punch site which we'll host on netlify in continuous deployment with assets on GitHub.
 
 #### 1. Install Punch
 In the terminal, enter the following command:
@@ -92,23 +76,18 @@ Let's create a site using the `punch setup` command in a terminal window like th
 punch setup my-punch-site
 ```
 
-Easy enough. The punch setup command will setup a site at the present location and named my-punch-site (substitute with your own site name).
+Easy enough. The `punch setup` command will setup a site at the present location, with the name my-punch-site (substitute with your own site name).
 
-#### 3. Folder Tree
-Punch takes the whole separation of content from presentation concept very seriously, which is of course a good thing, as it helps divide the work in a sensible manner.
-For this purpose the two are divided into two folders named contents and templates and as the names imply, one is for the content, such as your articles, posts and images and the other is for all the presentational elements, such as the layouts we'll introduce in the next step.
+Please note that punch installs into a directory named *default*, so that you will find it in */my-punch-site/default/*.
 
-In the side by side pictures shown below, we have the folder structure created by punch on the left, with the somewhat changed folder structure we ended up with on the right:
+*You might want to keep the terminal window open between steps for your own convenience!*
 
-<FOLDERS TREE picture - Default folders = side by side with THIS sites Finished folder tree>
-<LINK to GitHub repo with this finished folder tree?>
+#### 3. Edit Layout
+The layouts define how we present the content and in punch the default template engine is [Mustache](http://mustache.github.io/) and though you can optionally change to another template engine, such as [Handlebars](https://github.com/laktek/punch-engine-handlebars), we simply opted to stay with Mustache and give it a try.
 
-#### 4. Edit Layout
-The layouts define how we present the content and in punch the default template engine format is [Mustache](http://mustache.github.io/) and though you can optionally change to another template engine, such as [Handlebars](https://github.com/laktek/punch-engine-handlebars), we simply opted to stay with Mustache and give it a try.
+Edit the file named *_layout.mustache* inside the template folder - this is the main layout and will be used as a fall back. In other words, it will be used as the layout for every page created, except when there's another *_layout.mustache* file on the same level as the content in question (section layouts) or if there's a layout file with the same name as the content file. See the documentation on [contents](https://github.com/laktek/punch/wiki/Contents) for more details.
 
-Edit the file named *_layout.mustache* inside the template folder - this is the main layout and we use it for everything in our guide.
-
-Fill it in like this:
+We fill in the *_layout.mustache* file like this:
 
 ```
 {{> header }}
@@ -120,17 +99,16 @@ Fill it in like this:
 {{> footer }}
 ```
 
-It's pretty simple really. We introduce partials, which follow the Mustache formula (same as with handlebars) with `{{> partial-name }}` to insert a partial in the layout. In our example the header will be printed instead of the `{{> header }}` code and the footer will be printed instead of the `{{> footer }}` code.
+It's pretty simple really. We introduce partials, which follow the Mustache formula with `{{> partial-name }}` to insert a partial in the layout. In our example the header will be printed instead of the `{{> header }}` code tag and the footer will be printed instead of the `{{> footer }}` code tag.
 
-Notice the use of an extra set of handlebars around the content tag? This will escape the content and serve it  as unescaped HTML, instead of just text and thus this is how we serve up the content, enabling us to use HTML inside the content.
-<WAIT A SEC - IS THAT REALLY WHY?  CHECK>
+Notice the use of an extra set of mustache brackets around the content tag? This will escape the content and serve it as unescaped HTML, instead of just text and thus, this is how we serve up the content, enabling us to use HTML inside the content.
 
 Well, these partials don't make themselves, so let's move on to creating these partials with the punch site generator.
 
-#### 5. Partials
-Punch handles partials like most other static site generators and when you do the setup initially punch includes both a header and a footer partial file. 
+#### 4. Partials
+Punch handles partials like most other static site generators and when you do the initial setup, punch includes both a header and a footer partial file. 
 
-We'll basically use these with a few small amendments and the result is below.
+We'll basically use these with a few small amendments and the results are below.
 
 The `_header.mustache` file:
 
@@ -147,8 +125,6 @@ The `_header.mustache` file:
             <meta name="description" content="">
             <meta name="viewport" content="width=device-width">
 
-            <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
             {{#stylesheet_bundle}}/css/all.css{{/stylesheet_bundle}} 
     </head>
 
@@ -164,11 +140,13 @@ The `_header.mustache` file:
             </header>
 ```
 
-If you've worked with HTML and ever tried to set up a web site, the above will look familiar and straight forward, except for a few oddities, taken from the Mustache templating engine.
+If you've worked with HTML and ever tried to set up a web site, the above will look familiar and straight forward, except for a few oddities taken from the Mustache templating engine.
 
-These are used to "inject" content into the template and thus in the head of our site, `{{{site-title}}}` is used to insert the title of the site in question. The two mustache tags with the stylesheet declaration inside, will reference a stylesheet asset bundle created in the `config.json` (soon my young padawan!) and basically take all the stylesheet files defined in this bundle and turn them into one stylesheet file in our layour named `all.css`.
+These are used to "inject" content into the template and thus in the head of our site, `{{{site-title}}}` is used to insert a variable named site-title, which contains the title of the site in question (got it?). 
 
-In the beginning of the body section, we find a header where the site title will be printed in headline letters using this code `{{#upcase}}{{site-title}}{{/upcase}}` and below this header title, we have our navigation bar, declared like this:
+The mustache helper tags with the stylesheet declaration inside (the `stylesheet_bundle` tags) are helper tags defined by Punch and will reference the stylesheet asset bundle created in the `config.json` (We'll get to that one soon enough). These helper tags will basically take all the stylesheet files defined in this bundle and turn them into one stylesheet file in our layout named `all.css` with a fingerprint in the name (unique number added to the file name, to bust the CDN server cache). 
+
+In the beginning of the body section, we find the header section where the site title will be printed in upper case letters using these Mustache tags `{{#upcase}}{{site-title}}{{/upcase}}` and below this header title, we have our navigation bar, declared like this:
 
 ```
     <ul class="navbar">
@@ -180,9 +158,9 @@ In the beginning of the body section, we find a header where the site title will
 
 Let's just stop for a second and take this one in!
 
-There's an ordered list label thing (center line above) inside a mustache navbar element (the `{{#navbar}}` and the `{{/navbar}}` blocks), which is in turn inside an unlinked list of the navbar class!
+Our navigation bar is the ordered list label in the center of the two navbar mustache tags (between the `{{#navbar}}` and the `{{/navbar}}` tags) and for each navbar element defined, this line will be printed once with the correct link and label. The triple mustache href tag `{{{href}}}`, is neccessary to escape the html used for the link, while the double tagged label mustache tag will print the label `{{label}}`.
 
-Our navigation bar is this ordered list label thing in the center. When you look at the site in a browser, it's our horizontal bar with links to various sections of the site. For each link we define in the `shared.json` file later in this guide (wait a few steps and you'll see), a link button will be printed!
+Try it out and refresh your site and you'll see how easy it is. We'll get to the `share.json` file in which we define these navbar elements, in a few steps.
 
 The `_footer.mustache` file:
 
@@ -197,13 +175,38 @@ The `_footer.mustache` file:
 </html>
 ```
 
-Again it's pretty straight forward, with a small text in the footer, referenced through Mustache and also defined in the fabled `shared.json` file later.
+Again it's pretty straight forward, with a text in the footer and since we want to put a few links in this text, we'll allow HTML by adding the extra set of mustache brackets. The `{{{footer-text}}}` is referenced through Mustache and also defined in the fabled `shared.json` file, which we'll take a look at later.
+
+#### 5. Folder Tree
+Punch takes the whole separation of content from presentation concept very seriously, which is of course a good thing, as it helps divide the work in a sensible manner.
+
+For this purpose the two are divided into two folders named contents and templates and as the names imply, one is for the content, such as your articles or posts, while the other is for templates. The way the content of the templates folder is defined though, the templates folder is not only for the templates or layouts we'll introduce in the next step, but also images, stylesheets, Javascripts and whatever else you might want to add to help you *present* the site. 
+
+In the pictures shown below, we have the folder structure created by punch on top, with the somewhat changed folder structure with added files, which we ended up with underneath:
+
+![punch_folderstruct_b4.png](/uploads/punch_folderstruct_b4.png)
+
+As you can see above, punch provides a basic site with conten in JSON format, some stylesheets and some template files in mustache format and of course the aforementioned folder separation.
+
+![punch_folderstruct_after.png](/uploads/punch_folderstruct_after.png)
+
+As you can see from the picture above, I've created a folder for each of the html files being build, using an underscore followed by the name. E.g. the *_about* folder will turn into an *about.html* file using the contents of its folder. 
+
+Go ahead and create these folders in a terminal window using the following commands: 
+
+```
+cd my-punch-site/default/contents
+mkdir _about
+mkdir _blog
+mkdir _index
+```
+
+Remember to substitute my-punch-site with the name of your site.
 
 #### 6. Create Layout
 When using Punch, it's important to know a few things about how Punch works internally.
 
-The *_layout.mustache* file is the deault layout for all the pages of the site!
-However, if there's a file with the name of a given page of a site, then that layout would be used before the default layout. E.g. if I made an *about.mustache* file and if there was an about file in the content, then that file would use the *about.mustache* layout, since they have the same name.
+The *_layout.mustache* file is the default layout for all the pages of the site and it comes pre-installed! However, if there's a file with the name of a given page, then that layout would be used before the default layout. E.g. if I made an *about.mustache* file, this would be used to create the corresponding *about.html* file using the content of the *_about* folder in the contents directory.
 
 We'll illustrate this quickly. Copy and rename *_layout.mustache* to *index.mustache*, so we can create a layout for our landing page which is different from the rest of our pages.
 
@@ -213,7 +216,7 @@ Open the newly created *index.mustache* file and fill it in like this:
 {{> header }}
 
         <div role="main">
-            <img src="punch_banner.png">
+            <img src="\images\punch_banner.png" alt="The Punch SSG">
             {{{content}}} 
         </div>
 
@@ -222,17 +225,17 @@ Open the newly created *index.mustache* file and fill it in like this:
 
 What's that? It's identical to the default file?  Well yes, the only change is the addition of the *punch_banner.png* image to show the world that this site was made with punch.
 
-For this to work properly, you'll need to add the *punch_banner.png* image to the `content/image` folder.
+For this to work properly, you'll need to add the [*punch_banner.png* image](http://laktek.github.io/punch/img/punch.png) to the `templates\images` folder, which we kindly loaned from the [Punch website](http://laktek.github.io/punch/).
 
 #### 7. Title & Navigation
-As mentioned a few times already, Punch is one of the few site generators that offer an incredibly easy way to set up a simple navigation bar, right out of the box, by simply editing the `share.jason` file in the contents folder.
+Punch is one of the few site generators that offer an incredibly easy way to set up a simple navigation bar straight out of the box, by simply editing the `share.jason` file in the contents folder.
 
 We filled in our `share.jason` file like this, changing the title, the footer text and adding a navigation bar, in that order:
 
 ```
 {
    "site-title": "Punch on netlify",
-   "footer-text": "Built with <a href=\"http://laktek.github.com/punch\">Punch</a> with assets on <a href=\"http://laktek.github.com/punch\">Punch</a> deployed to <a href=\"https://www.netlify.com\">netlify</a>",
+   "footer-text": "Built with <a href=\"http://laktek.github.com/punch\">Punch</a> with assets on <a href=\"https://github.com/\">GitHub</a> and deployed to <a href=\"https://www.netlify.com\">netlify</a>.",
    "navbar": [
       { "label": "Home", "href": "/" },
       { "label": "Blog", "href": "/blog" },
@@ -248,82 +251,183 @@ The navigation bar is very easy to set up, with a number of labels, each with a 
 #### 8. Create Blog Layout
 We'll create the blog layout and populate it with articles (we'll create these in the next step).
 
-Open the contents folder and create a directory named `_blog`, then create the *blog.mustache* file in the layouts folder and finally open the newly created file and fill it in like this:
+Open the contents folder and create a directory named `_blog`, then create the *_blog.mustache* file in the layouts folder and finally open the newly created file and fill it in like this:
 
 ```
 {{> header }}
 
     <div role="main">
-        <ul class="article_list">
-            {{#article_list}}
+        <ul>
+            {{#posts}}
                 <li>
-                    <h3>{{title}}</h3>
-                    <article>{{content}}</article>    
-            {{/article_list}}
+                    <h2>{{title}}</h2>
+                    <p>{{content}}</p>  
+                </li>  
+            {{/posts}}
         </ul>
     </div>
 
 {{> footer }}
 ```
 
-The layout follows the winning formula from the other two pages, with the header and footer placed at the top and bottom and the center dedicated to content. Unlike the other pages though, this is where something interesting happens, as we will use Mustache to cycle through all the articles and prints them in succession, with the newest articles first, like one would do in a blog or news paper.
+The layout follows the winning formula from the other two pages, with the header and footer placed at the top and bottom and the center dedicated to content. Unlike the other pages though, this is where something interesting happens, as we will use Mustache to cycle through all the posts and print them in succession in our *blog.html* page.
 
 Let's take a closer look at the Mustache inserted in the HTML and explain in detail.
 
-Inside the unordered list (the `<ul>` tags) we'll list our articles, as defined with the Mustache section tags `{{#article_list}}` to begin and `{{/article_list}}` to end the section.
+Inside the unordered list (the `<ul>` tags) we'll list our posts, as defined with the Mustache section tags `{{#posts}}` to begin and `{{/posts}}` to end the section.
 
-Within this section we'll print an ordered list item for each article (ordered list tags are `<li>` and `</li>`).
+Within this section we'll print an ordered list item for each post (ordered list tags are `<li>` and `</li>`) defined in the content.
 
-Inside the ordered list item, we'll print the title as a headline above the content text, with the title line: `<h3>{{title}}</h3>` 
+Inside the ordered list item, we'll print the title as a headline above the content text.
 
-The content is printed underneath, inside the article tag liks this: `<article>{{content}}</article>`
+Let's create this content.
 
-Now all that's needed is for the list of articles to be available in a json file (e.g. share.json, making the articles available everywhere)
+#### 9. Create Content
+To see if our new blog page works properly, we have to create the posts for it.
+If you use Jekyll or many other SSG's that are aimed at blogging, you'll usually create one file for each post or article and if this is what you're after, I recommend that you take a look at the [punch-blog](https://github.com/laktek/punch-blog) boiler plate.
 
-<OBS - HOW TO GET THIS INFO AT RUNTIME?>
-share.json:
+For our little guide we won't exactly write long posts or even longer articles, so instead of seperate files, we've put all the posts in a *posts.json* file to illustrate how punch's native content system works.
+
+I give to you the *posts.json* file:
+
+```
+[
+    { 
+        "title": "Punch SSG Power", 
+        "content": "This is the first post in our mini blog made with Punch and we haven't even added dates!" 
+    },
+    { 
+        "title": "netlify for Deployment", 
+        "content": "netlify is the worlds fastest, smartest and most honest and nice web site host in the world." 
+    },
+    { 
+        "title": "GitHub for Assets", 
+        "content": "We will use GitHub for our assets with continuous deployment on netlify. Every time a push is done to GitHub, netlify will automatically deploy a new build." 
+    }
+]
+```
+
+It's pretty simple, with the name of the file used as the name of the object and each of these has a title and some content defined.
+
+#### 10. Create markdown content
+The content for each of our pages is kept in a *content.markdown* file in each directory, referenced as content in our layout files.
+
+You can either fill them in yourself, copy/paste what's below or get them from the repo, they're mostly just filler to see how the layout looks with text.
+
+The `_index\content.markdown` file:
+
+```
+## Punch on netlify
+This page is mainly created to demonstrate a basic Punch site, with assets hosted on GitHub using netlify to deploy in continuous deployment.
+
+We'll run some font and layout tests...
+
+**This font is Bold.**
+
+*This font is Italic.*
+
+***This font is Bold and Italic.***
+
+## Headline Title Two
+I wonder if the title above will render in the proper size and font.
+
+### Headline Title Three
+I wonder if the title above will render in the proper size and font.
+
+#### Headline Title Four
+I wonder if the title above will render in the proper size and font.
+```
+
+The `_about\content.md` file:
+
+```
+## About 
+This page is mainly created to demonstrate a basic Punch site, with assets hosted on GitHub using netlify to deploy in continuous deployment.
+
+### GitHub
+We will use GitHub to host all our assets.
+
+### netlify
+We will use netlify to build and deploy the site.
+```
+
+If you're wondering why the about markdown file is saved with a different extension, it's simply because we wish to illustrate that punch handles both options right out of the box - it's a demo site we're building after all. 
+
+The `_blog\content.markdown` file:
+
+```
+### The Posts
+We'll list the various post underneath this little intro written in markdown, with the posts as json files.
+```
+
+#### 11. Edit configuration
+Alas, finally the wait is over and we arrive at the `config.json` file, in which we set up various project settings, including our stylesheet asset bundle.
+
+Open up the default `config.json` file [here](https://github.com/laktek/punch/blob/master/lib/default_config.js) and take a look and use it as a reference when making your own configuration. The settings you see in the default file are probably fine, but we did add some of the configuration options from the default file into our own configuration file.
+
+The `config.json` file for your project is in the contents folder.
+
 ```
 {
-  "article_list": [
-    { "title": "Article Title 1", "content": "This is the main content, but where should it go?" },
-    { "title": "Article Title 2", "content": "This is the main content, but where should it go?" },
-    { "title": "Article Title 3", "content": "This is the main content, but where should it go?" }
-  ]
+    "template_dir": "templates", 
+    "content_dir": "contents",
+    "output_dir": "output",
+
+    "server": { 
+        "port": 9009
+    },
+
+    "bundles": {
+        "/css/all.css": [
+            "/css/normalize.css",   
+            "/css/main.css",
+            "/css/site.less"
+        ]   
+    },
+
+    "generator": {
+        "blank": true
+    }
 }
 ```
 
-#### 9. Create Content
-To see if our new blog page works properly, we have to create some articles for it.
-Write some new or copy paste some old articles and put them in the <WHAT FOLDER???>, two or three will do.
-Use the following frontmatter and fill in the content with whatever markdown you wish:
+In the top three lines, the directory options are set and beneath this, our local test server port can be set.
+Under the server settings we find the bundles definition. This option can be used on your javascript files as well and in our example the three stylesheet files `normalize.css`, `main.css` and `site.less` are bundled into the `all.css` file.
+The final option simply tells the generator to start from a blank slate, every time it builds our files and once we're done fiddling and messing around, it should be set to false.
 
-```
----
-YAML STUFF
----
-MARKDOWN CONTENT HERE
-```
-
-
-<INFORMATION: Extended contents
-While, JSON format works great for structured content, it would not be ideal to define long, formatted texts. Practically, properties such as intro from the above example, wouldn't be just a single sentence. It will span into multiple paragraphs and can contain hyperlinks, emphasizing, etc.
-
-You can move such contents into their own files. These are known as extended contents. All extended contents for a page must be placed in a directory named by the page name preceded with an underscore (eg. _index, _about). Punch will merge all properties defined in a extended content directory into the regular content object.
-
-Punch will actually try to parse the extended content files, before merging them into the regular content object. By default, Punch can parse content defined as Markdown. You can easily add your own parsers for other content types too. >
-
-#### 10. Edit configuration
-Open up the content\config.json file and take a look
-
-< MAKE AN EXAMPLE SETUP of content\config.json >
-
-#### 11. Build it and smile
+#### 12. Build it and smile
 If you've kept the punch server window open (the terminal window in which you ran the `punch s` command), simply refresh the browser window.
+
+If not, try `punch g` to build the files and then `punch s` to start the server and view the site. This is to make sure all our changes, whether to the *config.json* file or elsewhere, are included by the server.
+
+Check [http://localhost:9009](http://localhost:9009) to see the result.
+
+It's time to go to GitHub, but just before we do, we need to configure punch for our local folder as well.
+
+### Install punch in local directory
+To make sure punch is installed with our local package as well, before we push to netlify (otherwise netlify won't have punch to build!) we need to run the following commands:
+
+```
+cd my-punch-site/default
+npm init
+```
+
+Again simply substitute my-punch-site with your directory. You will be asked for a name and a few other things, but more importantly npm will create a local `package.json` file. 
+
+Next we install punch into our local project (unlike the global installation earlier) like this:
+
+```
+npm install punch --save
+```
+
+We use the `--save` flag to make sure punch is added to the *package.json* file as a dependency. This way, when netlify looks at the project, it knows it will need punch and will include it at build time.
+
+You'll get a few warnings that punch should be installed globally and while this is ordinarily true, we need it both ways - globally for us to use locally and in our site to give netlify something to build with online.
 
 ### Pushing Punch to GitHub
 <a id="githubstart"></a>
 
-We want to set up an online GitHub repository with our local environment and push our local files to this repository. Next, we'll connect netlify to the repository for our automatic build (i.e. whenever you push to GitHub, netlify will rebuild your site).
+We want to set up an online GitHub repository with our local environment and push our local files to this repository. After this, we'll connect netlify to the repository for our automatic build (i.e. whenever you push to GitHub, netlify will rebuild your site).
 
 #### 1. Create your Git Repo
 We start by creating a [GitHub](https://github.com/) repository for our Punch site and generator.
@@ -334,13 +438,26 @@ We're naming ours punch-demo and we'll skip adding files to the repository until
 
 Once the repository has been named and created we'll return to local environment.
 
-#### 2. Prepare the Site for GitHub
+#### 2. Create .gitignore
+Since we don't want our local output directory to be pushed to GitHub (instead we'll let netlify build and take care of this directory) we'll create a `.gitignore` file in the *default* directory and fill it in like this:
+
+```
+# disregard the output folder with contents - we don't want the build output folder on GitHub!
+ouput/*
+
+# disregard the node_modules folder with contents!
+node_modules/*
+```
+
+This will prevent the output and node_modules directories from being pushed to git.
+
+#### 3. Prepare the Site for GitHub
 We need to set the local site up as a git repository with the `git init` command, then we'll add all the files and subdirectories to the repository with the `git add .` command and finally stage them for the first commit with the `git commit -m 'First commit'` command.
 
 In quick succession in a terminal window:
 
 ```
-cd my-punch-site
+cd my-punch-site/default
 git init
 git add .
 git commit -m 'First commit'
@@ -348,10 +465,10 @@ git commit -m 'First commit'
 
 Once the files are committed, it's time to connect with the GitHub repository online.
 
-#### 3. Get & Add Remote URL
+#### 4. Get & Add Remote URL
 ![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
 
-We return to the GitHub repository created earlier and retrieve the URL for the remote repository, since this is where our local repository will be pushed.
+We return to the GitHub repository we just created and retrieve the URL for the remote repository. This will be the location of all of our site assets  and is where our local repository will be pushed or uploaded to.
 Either copy paste the whole command or use the button as depicted above, to copy just the path to your clipboard.
 Return to the Terminal window and paste the remote repository URL inside the following line (instead of My-Repository-URL):
 
@@ -367,8 +484,8 @@ git remote -v
 
 If it looks all right, we're ready to push the files.
 
-#### 4. Push to GitHub.
-The final task before we're done setting up, is to use the push command with git, as in the following line in Terminal:
+#### 5. Push to GitHub.
+The final task before we're done setting up, is to use the push command with git, as in the following line in terminal:
 
 ```
 git push -u origin master
@@ -381,20 +498,22 @@ It's time to connect it with netlify.
 ### Connect with netlify
 <a id="netlifystart"></a>
 
-Creating a new site on netlify is intuitive and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
+Creating a new site on netlify can be done with a few clicks, it's intuitive and once you’ve created an account and logged in, you’ll be taken to [https://app.netlify.com/sites](https://app.netlify.com/sites).
 
-#### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
+
 Click the *"New Site"* button (as seen above) to get started.
 
-#### Step 2: Link to Your GitHub
+#### Step 1: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
+
 ![Link to GitHub](/uploads/createsite.png)
+
 When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
 
 Since we're hosting the site assets on GitHub, we’ll need to link netlify with GitHub. Click the button *“Link to GitHub”*.
 
-#### Step 3: Authorize netlify
+#### Step 2: Authorize netlify
 You can skip this step, if you already have an account with netlify set up to automatically login!
 
 You will be asked to provide your GitHub login details:
@@ -407,29 +526,30 @@ Like it says in the image above on the right, netlify doesn’t store your GitHu
 
 If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
 
-#### Step 4: Choose Your Repo
-<PICTURE - ADD choose repo punch-demo PIC>
-Once you're connected to GitHub, netlify will show you a list of your GitHub repositories, as seen above.
-For the purpose of this tutorial we'll select the *“punch-demo”* repo we just pushed to GitHub. 
+#### Step 3: Choose Your Repo
+Once you're connected to GitHub, netlify will show you a list of your GitHub repositories - simply choose the one you created a moment ago.
 
-#### Step 5: Configure Your Settings
+#### Step 4: Configure Your Settings
 Fill in the configuration settings as seen in the screen shot below:
-<PICTURE - ADD punch settings PIC>
+
+![punch_config.png](/uploads/punch_config.png)
 
 Click the *'Save'* button and watch the magic unfold.
 
-#### Step 6: Build Your Site
-<PICTURE - ADD site building PIC>
-Once you click save, netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and netlify will do the rest, while you watch the progress.
+#### Step 5: Build Your Site
+![punch_building.png](/uploads/punch_building.png)
 
-#### Step 7: The End
-That's it.
+If everything went according to plan, netlify will now build your site, with a nice status window you can either follow or just leave, as netlify saves the information in the log file it saves with each build.
 
-Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
-<PICTURE - ADD DONE PIC>
+#### Step 6: The End
+You should arrive at something along the lines of this result within a few minutes:
+
+![punch_done.png](/uploads/punch_done.png)
+
+Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional customizing.
 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
-You can see our demo site [here](http://punch.netlify.com/) and the GitHub project for the demo site [here](https://github.com/jimmilee/punch-demo).
+You can see our demo site [here](http://punch-demo.netlify.com/) and the GitHub project for the demo site [here](https://github.com/JimmiLee/punch-demo).
 
 {% endraw %}

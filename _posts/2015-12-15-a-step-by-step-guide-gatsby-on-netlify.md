@@ -6,13 +6,13 @@ short_title: Gatsby on netlify
 description: A short guide to help you set up Gatsby on netlify with continuous deployment.
 thumbnail: /uploads/gatsbyjs.png
 cmsUserSlug: ""
-date: 2015-12-15T00:00:00.000Z
+date: 2016-02-23 
 tags: null
 ---
 
 Today, we're going to look at how to host a website built with Gatsby on netlify, including setting up continuous deployment.
 
-Gatsby is a new static site generator, but it's gaining traction fast! It's made in what's probably the only thing as hot as Google's 'go' right now, React.js. React is a hugely popular javascript framework out of Facebook.
+Gatsby is a new static site generator, but it's gaining traction fast! It's made in what's probably the only thing as hot as Google's 'go' right now, React.js. React is a hugely popular javascript framework that comes from the minds at Facebook.
 
 Let's start from scratch (if you already have a Gatsby site set up, you can skip down to [here](#netlifystart)).
 
@@ -168,10 +168,10 @@ Here you can configure your options. For the purposes of this tutorial, there's 
 
 ![step 6 - build](https://cloud.githubusercontent.com/assets/6520639/9803640/717b9c40-57d9-11e5-9ca4-92f90f8ed005.png)
 
-Now it's time to sit back and relax. Go grab something cold to drink, scratch the dog behind the ears, or just get up and walk around (you've probably been in front of the computer for too long today, right?). Netlify will do the rest, and you can watch the progress.
+Now it's time to sit back and relax. Netlify will do the rest, and you can watch the progress.
 
 #### Step 7: Done
 
 ![step 7 - done](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step7Gatsby.png)
 
-Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
+And with that, you are finished! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
