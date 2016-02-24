@@ -6,13 +6,13 @@ short_title: Interviewing Wade Warren
 description: "An interview about the value of static sites and CDN hosting with VP of Operations @ Wikia that serves 36,000 http requests per second."
 thumbnail: /uploads/performance.jpg
 cmsUserSlug: ""
-date: 2016-02-24
+date: 2016-02-24T00:00:00.000Z
 tags: null
 ---
 
 Wade Warren is a central figure when it comes to...well, the internet.
 
-Over 25 years in the technology world he's been a part of 4 IPOs, more than 20 mergers and acquisitions, heading the team that created Apache webserver, kicking ass at both LoudCloud and Opsware, scaling the infrastructure at Netflix to a massive percentage of all broadband usage, heading operations at VeriSign, and now at [Wikia](http://www.wikia.com/), where he serves as the Vice President of Engineering.
+Over 30 years in the technology world he's been a part of 4 IPOs, more than 20 mergers and acquisitions, involved in the creation of what became the Apache webserver at Organic, kicking ass at LoudCloud building the foundation for OpsWare, scaling the infrastructure at Netflix to a massive percentage of all broadband usage, heading operations at VeriSign, and now at [Wikia] ([http://www.wikia.com/](http://www.wikia.com/)), where he serves as the Vice President of Engineering.
 
 His confidence in the benefits and bright future of the new stack of modern static web tech has led to Wikia both using netlify, and co-sponsoring the [Static Web Tech Meetup](http://www.meetup.com/sf-static-web-tech/) with netlify. At a recent meetup (where we got to be in the room for the launch of [Jekyll 3.0](https://jekyllrb.com/)!!) Wade took some time to talk to us about the role of static web technology in Wikia's world.
 
