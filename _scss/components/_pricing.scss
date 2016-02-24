@@ -59,7 +59,7 @@
   font-weight: 100;
 }
 .plan--price {
-  padding: 40px 0;
+  padding: 40px 0 20px;
   overflow: hidden;
 }
 .plan--amount {
@@ -76,6 +76,11 @@
   text-align: left;
   line-height: 1;
   padding-left: 7px;
+}
+.plan--per-site {
+  text-align: left;
+  padding-left: 7px;
+  font-weight: 100;
 }
 .plan--title, .plan--note {
   padding: 10px;

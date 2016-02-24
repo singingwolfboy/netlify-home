@@ -1,6 +1,6 @@
 ---
 cmsUserSlug: prerendering
-date: 2015-12-15 
+date: 2015-12-15
 title: Prerendering
 position: 85
 ---

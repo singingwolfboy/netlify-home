@@ -1,6 +1,6 @@
 ---
 cmsUserSlug: github-permissions
-date: 2015-12-15 
+date: 2015-12-15
 title: Github Permissions
 position: 90
 ---
@@ -9,9 +9,9 @@ position: 90
 
 Netlify never stores GitHub Access Tokens.
 
-Once you authorize Netlify, we fetch an Access Token from GitHub. But we **never store this token**. Netlify simply passes the token to our Javascript Single Page App, and from then on all communication with the GitHub API happens straight from the browser. After configuring continuous deployment, the token is **permanently discarded**.
+Once you authorize netlify, we fetch an Access Token from GitHub. But we **never store this token**. Netlify simply passes the token to our Javascript Single Page App, and from then on all communication with the GitHub API happens straight from the browser. After configuring continuous deployment, the token is **permanently discarded**.
 
-The only access Netlify will have is through a deploy key installed in a specific repository.
+The only access netlify will have is through a deploy key installed in a specific repository.
 
 We would love to ask for fewer permissions than we do when starting a new project. However [GitHub only provides very coarse-grained permissions](http://developer.github.com/v3/oauth/#scopes) for their API.
 
@@ -24,7 +24,7 @@ If you're still worried about granting access to sensitive repositories, GitHub 
 [![settings-third-party-restrict-confirm.png](/img/docs/settings-third-party-restrict-confirm.png)
 ](https://help.github.com/articles/about-third-party-application-restrictions/)
 
-Once these restrictions are in place, Netlify will no longer have any kind of access to the repositories from this organization unless you explicitly whitelist our API application.
+Once these restrictions are in place, netlify will no longer have any kind of access to the repositories from this organization unless you explicitly whitelist our API application.
 
 We recommend keeping all your most sensitive projects in an organization and enabling third party restrictions. This will make taking advantage of any of the countless applications that can enhance your GitHub experience easier and more secure.
 

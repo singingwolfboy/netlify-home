@@ -5,7 +5,7 @@ title: The Netlify Blog. All about static web-tech and netlify.
 <div class="l-wrap bg-light-muted-2">
   <div class="l-wrap-inner l-wrap-inner--main-left">
 
-    <div class="l-main l-main--left" role="main">
+    <section class="l-main l-main--left" role="main">
       {% for post in site.posts %}
       <article class="post">
         <header class="post-hd">
@@ -19,20 +19,23 @@ title: The Netlify Blog. All about static web-tech and netlify.
           {% image_tag src=post.image width="730" %}
           {% endif %}
         </div>
-        <div class="post-bd">
+        <div class="post-bd text">
           {{post.excerpt}}
         </div>
         <div class="post-jumpline"><a href="{{post.url}}" class="link-more">More</a></div>
       </article>
       {% endfor %}
 
-      <div class="banner" role="complementary">
+      <aside class="banner" role="complementary">
         <p>Made for web developers <a href="/"><strong>Netlify</strong></a> is the default entry point to the world of static</p>
-      </div>
-    </div>
-
-    <div class="l-aside l-aside--right inverse blog-aside" role="complementary">
+      </aside>
+    </section>
+    
+    <section class="l-aside l-aside--right inverse blog-aside" role="complementary">
       <h1 class="blog-aside-title">More Articles</h1>
-      {% include post-list.html %}
+      {% for post in site.posts %}
+        {% include post-blurb.html %}
+      {% endfor %}
+    </section>
   </div>
 </div>

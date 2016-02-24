@@ -1,10 +1,9 @@
 ---
 layout: default
-title: Continuous Deployment for Static Sites
 ---
 
 <!-- Hero -->
-<section class="bg-light">
+<section class="bg-light section-hero">
   <div class="content content--wide">
     <div class="media media--wide">
 
@@ -15,8 +14,7 @@ title: Continuous Deployment for Static Sites
           <div class="play-button"></div>
           <div class="callout">
             <p class="callout-text">
-              <span class="zeta">Automate Your</span>
-              <strong class="delta semibold">Builds</strong>
+              {{ page.callout }}
             </p>
           </div>
         </a>
@@ -24,12 +22,16 @@ title: Continuous Deployment for Static Sites
 
       <!-- Blurb -->
       <div class="media-bd">
-        <div class="blurb w-380 center">
-          <h1 class="huge overloud mt-0">
-            <span class="block ml-n5">netlify</span>
-            <small class="alpha highlight block">
-              Continuous Deployment for your static site or app
-            </small>
+        <div class="blurb center">
+          <h1 class="alpha highlight mt-0">
+            <span class="block">
+              <img src="/img/netlify-text.svg" />
+            </span>
+            {% if page.deck %}
+              {{ page.deck }}
+            {% else %}
+              {{ page.title }}
+            {% endif %}
           </h1>
           <p>
             <a href="https://app.netlify.com" class="button button--large js-swipe">
@@ -39,7 +41,7 @@ title: Continuous Deployment for Static Sites
               <span class="button-label">START HERE</span>
             </a>
           </p>
-          <p class="small-2 overloud text-right">Basic packages <strong class="highlight">free forever</strong> – no credit card required</p>
+          <p class="small-2 overloud text-center">Basic packages <strong class="highlight">free forever</strong> – no credit card required</p>
         </div>
       </div> <!-- end media-bd -->
     </div><!-- end media -->
@@ -55,18 +57,18 @@ title: Continuous Deployment for Static Sites
       <img src="/img/video.png">
       <div class="callout">
         <p class="callout-text">
-          <span class="zeta">It’s pretty</span>
-          <strong class="delta semibold">Simple</strong>
+          {{ page.callout }}
         </p>
       </div>
     </a>
     <p class="pullquote delta thin p--wide mt-40 mb-40">
-      <strong class="highlight">Instantly</strong>
-      configure Continuous Deployment to the worlds' <strong class="highlight">premium hosting platform</strong>
+      {{ page.pullquote }}
     </p>
   </div><!-- end content -->
 </section>
 <!-- end Pull Quote-->
+
+{{ content }}
 
 <!-- Products -->
 <section class="bg-dark-cover inverse bb bb--large">
@@ -134,16 +136,15 @@ title: Continuous Deployment for Static Sites
     </div>
   </div><!-- end content -->
 </section>
-</div><!-- end fullscreen -->
 
 <!-- Pull Quote -->
 <section class="bg-white muted text-center">
   <div class="content">
     <!-- Section with video button for smaller devices -->
     <p class="pullquote delta thin p--wide mt-40 mb-40">
-      <strong class="highlight">15,000+</strong> Developers •
-      <strong class="highlight">35,000+</strong> Web Sites •
-      <strong class="highlight">150,000+</strong> Deploys
+      <strong>18,000+</strong> Developers •
+      <strong>45,000+</strong> Web Sites •
+      <strong>200,000+</strong> Deploys
     </p>
   </div><!-- end content -->
 </section>
@@ -154,13 +155,8 @@ title: Continuous Deployment for Static Sites
   <div class="content content--narrow">
 
     <!-- Newsletter -->
-    <section class="bb bb--muted mt-90 mb-40">
-      <header>
-        <h1 class="alpha mb-30">Sign up for our newsletter and stay tuned on all that’s static</h1>
-        <p class="zeta p--wide">Sign up for our awesome newsletter, if you want to hear about exciting things happening in the world of static websites, and of new Netlify features that are around the corner.</p>
-      </header>
-      {% include newsletter-form.html %}
-      <p class="x-small mt-30 mb-30 p--full-w">We send out aprox. twice a month. Go ahead, we won’t give away your address or anything, and each email is handwritten (on a keyboard).</p>
+    <section class="bb bb--muted mt-90">
+      {% include newsletter.html %}
     </section>
 
     {% include testimonials.html %}
@@ -174,30 +170,13 @@ title: Continuous Deployment for Static Sites
     <!-- Blog -->
     <section>
       <header class="text-center mt-90 mb-50">
-        <h1 class="kilo highlight mb-35"><a href="/blog">Visit our blog</a></h1>
+        <h1 class="kilo mb-35"><a href="/blog">Visit our blog</a></h1>
         <p class="zeta muted p--wide">See the blog for tons of articles, tips, tricks and opinions on all that is related to static web-tech.</p>
       </header>
       <div class="l-container">
         {% for post in site.posts | limit:3 %}
         <div class="l-third">
-          <article class="blurb">
-            <header class="blurb-hd">
-              <div class="media">
-                <div class="media-img optional">
-                  {% image_tag src=post.thumbnail width="80" %}
-                </div>
-                <div class="media-bd">
-                  <h1 class="blurb-title">
-                    <a href="{{post.url}}" class="light">{% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}</a>
-                  </h1>
-                  <p class="blurb-meta"><a href="{{post.url}}" class="link">by {{post.author}}</a></p>
-                </div>
-              </div>
-            </header>
-            <div class="blurb-bd">
-              <p class="small muted">{{post.description}}</p>
-            </div>
-          </article>
+          {% include post-blurb.html %}
         </div>
         {% endfor %}
       </div>
@@ -205,7 +184,7 @@ title: Continuous Deployment for Static Sites
 
     <!-- Social links -->
     <section class="text-center mt-30 mb-80">
-      <h1 class="gamma highlight inline-block v-middle mr-40">Socialize @</h1>
+      <h1 class="gamma inline-block v-middle mr-40"><a href="/social">Socialize @</a></h1>
 
       <p class="inline-block v-middle">
         {% for link in site.social-links %}

@@ -35,15 +35,14 @@
   max-width: 40em;
   margin: 50px auto 30px;
   color: $color-muted;
-  p {
-    max-width: none;
+  
+  > p:first-child,
+  > div > p:first-child {
+    @extend .text-intro;
+    br {
+      display: none;
+    }
   }
-}
-
-.post-intro {
-  @extend .epsilon;
-  @extend .semibold;
-  color: $color-dark;
 }
 
 .post-jumpline {
@@ -53,6 +52,7 @@
   padding: 0 0 40px;
   border-bottom: 1px dashed $color-highlight;
 }
+
 
 /*
  * Aside

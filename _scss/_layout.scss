@@ -5,6 +5,8 @@ $base-spacing: 20px;
 $aside-width: 280px;
 $aside-width-wide: 439px;
 
+$logo-width: 180px;
+
 /*
  * Global layouts and
  * utilities to control flow
@@ -29,6 +31,27 @@ body {
 ul {
   list-style: none;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+}
+
+
+/* 
+ * Icons 
+ */
+svg.append {
+  position: relative;
+  top: -1px;
+  margin-left: 0.385em;
+}
+
+svg.prepend {
+  position: relative;
+  top: -1px;
+  margin-right: 0.75em;
 }
 
 
@@ -110,6 +133,7 @@ ul {
 .nowrap {
   white-space: nowrap;
 }
+
 
 /*
 * Mixin for centering blocks vertically
@@ -230,6 +254,9 @@ ul {
   padding: 0 2.5*$base-spacing 0 4*$base-spacing;
   z-index: 1;
 }
+.l-wrap-inner--narrow {
+  max-width: $page-width - $logo-width;
+}
 .l-wrap-inner--main-left {
   padding: 0 (50px + $aside-width + 80px) 0 80px;
 }
@@ -273,6 +300,32 @@ ul {
     right: 100%;
   }
 }
+
+
+/* Flexbox
+ */
+
+@media (min-width: $bp-med) {
+  .md-flex {
+    display: flex;
+  }
+  .md-flex--row-reverse {
+    flex-direction: row-reverse;
+  }
+  .md-flex--space-between {
+    justify-content: space-between;
+  }
+  .md-flex--space-around {
+    justify-content: space-around;
+  }
+  .md-flex-basis--m {
+    flex-basis: 30em;
+  }
+  .md-flex-basis--s {
+    flex-basis: 15em;
+  }
+}
+
 
 /*
  * Widths, heights and margins.

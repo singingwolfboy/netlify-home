@@ -48,12 +48,12 @@ all:
     link: /docs/cli
   - title: Secure Environment
     info: We never store any GitHub tokens on our servers and your builds are run in a completely locked down environment.
-    link_text: Read more about GitHub tokens & Netlify
+    link_text: Read more about GitHub tokens & netlify
     link: /docs/github-permissions
   - title: Link to GitHub or Bitbucket
-    info: "Continous Deployment: Easily link a Netlify site to a GitHub or Bitbucket repo. Whenever you push to GitHub we run your build and deploy the result."
+    info: "Continous Deployment: Easily link a netlify site to a GitHub or Bitbucket repo. Whenever you push to GitHub we run your build and deploy the result."
     link_text: What can CD do for my workflow?
-    link: /blog/2015/09/17/continuous-deployment/continuos-deployment
+    link: /blog/2015/09/17/continuous-deployment
   - title: Atomic Deploys
     info: No inconsistent state while you're uploading. Your deploy only goes live when all changes have been uploaded. So if you loose connection while uploading, no problem!
     link_text: The importance of atomic deploys
@@ -117,18 +117,18 @@ attributes:
     details: ["0", "1", "10", "100"]
     info: Point more than one domain to the same website.
     link_text: Read more here
-    link: https://www.netlify.com/blog/2015/10/30/domain-aliases-as-many-as-you-like
+    link: /blog/2015/10/30/domain-aliases-as-many-as-you-like
   - title: Storage / month
     details: ["100 MB", "5 GB", "25 GB", "100 GB"]
     info: To get more storage simply upgrade your plan.
   - title: Bandwidth / month
-    details: ["1 GB", "100 GB", "500 GB", "1 TB"]
+    details: ["1 GB", "50 GB", "100 GB", "1 TB"]
     info: To get more bandwith simply upgrade your plan. Note that netlify will never suspend your site because of traffic spikes.
   - title: Automated Builds / month
     postfix: Builds / month
     details: ["50", "100", "350", "600"]
-    info: Refers the number of times you can push a new version of your site live using netlifys continous deployment services (Easily link a Netlify site to a GitHub or Bitbucket repo. Whenever you push to GitHub we run your build and deploy the result.)
-    link_text: "What can CD do for my workflow?"
+    info: Refers to the number of times you can push a new version of your site live using netlify's continous deployment services (link a netlify site to a GitHub or Bitbucket repo which builds on push).
+    link_text: "What can continous deployment do for my workflow?"
     link: /continuous-deployment
   - title: Proxied requests / month
     details: ["1000", "50,000", "1,000,000", "5,000,000"]
@@ -139,22 +139,24 @@ attributes:
     postfix: Form submissions / month
     details: ["100", "1000", "10000", "Unlimited"]
     info: Netlify supports form submissions for any HTML form on your site and trigger email, slack notifications or webhooks.
+    link_text: Read more here
+    link: /docs/form-handling
   - title: DNS hosting with DNS panel
     details: ["No", "Yes", "Yes", "Yes"]
     info: Netlify includes high uptime DNS hosting, with a simple but powerful DNS panel and full API access.
   - title: Basic SSL
-    details: ["No", "Yes", "Yes", "Yes"]
+    details: ["Yes", "Yes", "Yes", "Yes"]
     info: Enable HTTPS for your site. Basic SSL is based on a browser standard called SNI that's supported by all modern browsers. Free certificate included in your plan.
     link_text: Why you want SSL on your site
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Full SSL
     details: ["No", "No", "No", "Yes"]
-    info: Full SSL gives you an additional fallback certificate that makes sure HTTPS works everywhere.. All modern browsers support SNI, which is what powers our basic SSL solution, but IE on Windows XP, older Android browsers and many feed readers and crawlers lack support.
+    info: Full SSL gives you an additional certificate that makes sure HTTPS works everywhere. All modern browsers support our basic SSL solution, but IE on Windows XP, older Androids, and many feed readers lack support.
     link_text: Why you want SSL on your site
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Prerendering
     details: ["No", "No", "Yes", "Yes"]
-    info: Add a prerendering backend for your Single Page App. Netlify will proxy crawler requests straight to prerender.io or any other prerender backend so you SPA gets its SEO juice.
+    info: Add a prerendering backend for your Single Page App. Netlify will proxy crawler requests straight to prerender.io or any other prerender backend so your SPA gets its SEO juice.
     link_text: Read all about prerendering in our documentation
     link: /docs/prerendering
   - title: Phone Support
@@ -168,11 +170,11 @@ enterprise:
     link_text: Why you want SSL on your site
     link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Migration services
-    info: Need help migrating from a dynamic site to a fully static setup on Netlify? We can help you find a smooth path to 10x the performance.
+    info: Need help migrating from a dynamic site to a fully static setup on netlify? We can help you find a smooth path to 10x the performance.
   - title: Prioritized Feature Requests
     info: Do you want a say in what features we add next? Have specific requirements that would need extra development?
   - title: Geo IP based redirects
-    info: Redirect users from China, Taiwan or Honkong to /china or redirect visitors with a preference for Spanish to /es. Easily configurable with netlify.
+    info: Redirect users from China, Taiwan or Hong Kong to /china or redirect visitors with a preference for Spanish to /es. Easily configurable with netlify.
     link_text: Read more about it here
     link: /docs/redirects#geoip-and-language-based-redirects
   - title: Private build environment

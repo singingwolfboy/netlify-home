@@ -27,27 +27,26 @@ collections:
       - {label: "Title", name: "title", widget: "string", tagname: "h1", class: "post-title"}
       - {label: "Author", name: "author", widget: "string", preview: "author", tagname: "p", class: "post-meta"}
       - {label: "Cover Image", name: "image", widget: "image", tagname: "div", class: "post-img", folder: "img/posts", optional: true}
-      - {label: "Post Body", name: "body", widget: "markdown", tagname: "div", class: "post-bd"}
+      - {label: "Post Body", name: "body", widget: "markdown", tagname: "div", class: "post-bd text"}
       - {label: "Short Title", name: "short_title", widget: "string", tagname: "h1", class: "blurb-title"}
       - {label: "Description", name: "description", widget: "string", tagname: "p", class: "small muted"}
-      - {label: "Thumbnail", name: "thumbnail", widget: "image", tagname: "div", class: "media-img optional cms-thumbnail", folder: "img/posts/thumbnails"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", tagname: "div", class: "media-img colorize cms-thumbnail", folder: "img/posts/thumbnails"}
     meta:
       - {label: "Tags (seperated by comma)", name: "tags", widget: "tags"}
 
-
   - name: "docs"
-    label: "Doc Pages"
+    label: "Docs"
     folder: "_docs"
     create: true
     sort: "position:asc"
     fields:
-      - {label: "Post Body", name: "body", widget: "markdown", tagname: "div", class: "post-bd"}
+      - {label: "Body", name: "body", widget: "markdown", tagname: "div", class: "text"}
     meta:
       - {label: "Menu Title", name: "title", widget: "string", optional: false}
       - {label: "Position", name: "position", widget: "number", optional: false}
 
   - name: "data"
-    label: "Page Data"
+    label: "Misc"
     files:
       - name: testimonials
         label: Testimonials
@@ -55,7 +54,7 @@ collections:
         fields:
           - name: quotes
             label: Testimonials
-            description: "Quotes, Titles, Photos and Links for the testmionials"
+            description: "Quotes, Titles, Photos and Links for the testimonials"
             widget: list
             fields:
               - {label: "Quote", name: "quote", widget: "markdown"}

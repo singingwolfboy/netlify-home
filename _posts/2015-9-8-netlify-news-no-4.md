@@ -7,12 +7,18 @@
 "thumbnail": "/uploads/download-1.jpeg"
 "cmsUserSlug": ""
 "date": 2015-09-08
-"tags": null
+"tags":
+  - netlify
+  - newsletter
+  - clojure
+  - leiningen
+  - gitlab
+  - git
 ---
 
-Hi Everyone!
+Hi Everyone
 
-Welcome to our fourth newsletter!
+Welcome to our fourth newsletter.
 
 Hope you’ve all been enjoying summer. We’ve been keeping real busy.
 
@@ -21,6 +27,8 @@ Lot’s of stuff going on. Working on our CMS. It will support all (!!) static s
 Our hosting service had tons of work done under the hood as well.
 
 Here is a selection of what’s new!
+
+<!-- excerpt -->
 
 ## Clojure support
 

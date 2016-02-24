@@ -6,9 +6,15 @@ short_title: DDoS and DNS Records
 description: Your DNS Setup can have a great effect on performance and DDoS resilience.
 thumbnail: /uploads/ddos-attack.png
 cmsUserSlug: ddos-attacks-and-dns-records
-date: 2016-01-12T00:00:00.000Z
-tags: null
+date: 2016-01-12
+tags:
+  - incident
+  - dns
+  - ddos
+  - domains
 ---
+
+Your DNS Setup can have a great effect on performance and DDoS resilience.
 
 Early Saturday morning we got alerted by Rackspace that a major DDoS attack was hitting our main load balancer in their Chicago data center.
 
@@ -16,11 +22,9 @@ The DDoS attack was a large, mostly UDP based, volumetric attack sending more th
 
 Fortunately, the large majority of netlify sites kept working without any interruption of service as our system automatically detected the attack and started routing traffic away from Rackspace's Chicago data center.
 
-However, some sites went down hard from this, because of the way their DNS was setup.
+However, a small number of sites were affected and down from this. They differed from the rest by how their DNS was setup and they were primarily sites that were using the root domain as their canonical domain, rather than prefixing their site with www.
 
-These were primarily sites that were using the root domain as their canonical domain, rather than prefixing their site with `www`.
-
-As soon as we detected the problem, we tried to identify all sites affected by the DDoS attack and sent out instructions on how to mitigate this by changing a DNS record.
+As soon as we detected the problem, we tried to identify all sites affected by the DDoS attack and sent out instructions on how to mitigate this by changing a DNS record and directed them to the netlify docs that recommends a C-name setup as this prevents downtime from exactly this type of attack.
 
 ## To WWW or not to WWW
 
@@ -30,6 +34,8 @@ We call `netlify.com` the `apex` domain or `root` domain.
 
 Some might think that this is merely a cosmetic difference and make whole websites [arguing against the www prefix](http://no-www.org/). However, dropping `www` from your main site  domain can have dire consequences because of how DNS records work.
 
+<!-- excerpt -->
+
 ## DNS Records
 
 DNS is the internet-wide phonebook that tells browsers (and any other connected system), how to resolve a specific domain name to an IP address of a server they can open a connection to.
@@ -37,15 +43,15 @@ DNS is the internet-wide phonebook that tells browsers (and any other connected 
 For websites, there are 3 kinds of relevant records today:
 
 * **A Record**
-  
+
   An A record returns an IPv4 address of a server
-  
+
 * **AAAA Record**
-  
+
   Same as an A record, but returns an IPv6 address
-  
+
 * **CNAME Record**
-  
+
   Returns another domain name that the browser should lookup instead
 
 When you configure a custom domain to point to a netlify site, we always recommend that you use a CNAME record pointing at `<yoursite>.netlify.com` (where `<yoursite>` depends on the name of your netlify site).
@@ -103,7 +109,7 @@ There are two benefits:
 1. **You essentially get the benefit of a CNAME for your apex domain**
 
    We can still route around outages and do some geographic traffic direction
-   
+
 2. **End users save an extra DNS lookup**
 
    Instead of first looking up the CNAME record, and then looking up the final IP, the browser gets an IP   straight away.

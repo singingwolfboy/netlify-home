@@ -2,27 +2,31 @@
 title: Netlify news no. 3
 author: Christian Bach
 short_title: Our third newsletter
-description: "Formhandling, open sourced build image and much more!"
+description: "Form handling, open-sourced build image and much more!"
 thumbnail: /img/posts/thumbnails/newsletter-3.jpg
+date: 2015-06-02
 tags:
-  - open sourced build image
-  - build image
-  - form handling
+  - netlify
+  - newsletter
+  - builds
+  - forms
   - static web tech
   - meetup
-  - first video
-  - prerender
+  - video
+  - prerendering
 ---
 
-Hi everyone!
+Hi everyone
 
- Summer is here (or should be) and we’re celebrating that with a quick recap of what’s new at netlify, the premium hosting service for modern static websites.
+Summer is here (or should be) and we’re celebrating that with a quick recap of what’s new at netlify, the premium hosting service for modern static websites.
 
  **Form handling**
 
 First of all we’ve added built-in form handling as you may have known it from Bitballoon.
 
 Just add a "netlify" attribute to any HTML form and we'll start processing it. You can setup email, slack or webhook notifications from the admin panel!
+
+<!-- excerpt -->
 
 Read all about it [here](http://netlify.us2.list-manage1.com/track/click?u=3ca88a0cd26d026e590224d67&amp;id=2900a67c30&amp;e=c456464faf)
 

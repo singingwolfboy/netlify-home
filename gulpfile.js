@@ -13,7 +13,7 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    var cmd = ['exec', 'jekyll', 'build', '--incremental'];
+    var cmd = ['exec', 'jekyll', 'build', '--incremental', '-t'];
     if (process.env.CMS_ENV == 'staging') {
       cmd.push("--future")
     }
@@ -30,6 +30,24 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 });
 
 /**
+ * Build the status page
+ */
+gulp.task('status-build', function (done) {
+    var cmd = ['exec', 'jekyll', 'build', '-t', '-c', '_status.yml'];
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn('bundle', cmd, {stdio: 'inherit'})
+        .on('close', done);
+});
+
+/**
+ * Rebuild Jekyll & do page reload
+ */
+gulp.task('status-rebuild', ['status-build'], function () {
+    browserSync.reload();
+});
+
+
+/**
  * Wait for jekyll-build, then launch the Server
  */
 gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
@@ -40,20 +58,29 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
     });
 });
 
+gulp.task('browser-sync-status', ['sass', 'status-build'], function() {
+    browserSync({
+        server: {
+            baseDir: '_status'
+        }
+    });
+});
+
+
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
   gulp.src('./_scss/*.scss')
           .pipe(sass({
-            onError: browserSync.notify
+            //onError: browserSync.notify
           }))
           .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
           .pipe(gulp.dest('_site/css'))
+          .pipe(gulp.dest('_status/css'))
           .pipe(browserSync.reload({stream:true}))
           .pipe(gulp.dest('./css'));
 });
-
 
 /**
  * Watch scss files for changes & recompile
@@ -61,10 +88,19 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch(['_scss/*.scss', '_scss/components/*.scss', '_scss/pages/*.scss'], ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', 'admin/*', '_posts/*', 'docs/*.md', 'img/*', 'js/*.js', '_plugins/*.rb', '_data/*.yml'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', 'reseller/docs/*.md', '_layouts/*.html', '_includes/*.html', 'admin/*', '_posts/*', 'docs/*.md', 'img/*', 'js/*.js', '_plugins/*.rb', '_data/*.yml'], ['jekyll-rebuild']);
+});
+
+gulp.task('status-watch', function () {
+    gulp.watch(['_scss/*.scss', '_scss/components/*.scss', '_scss/pages/*.scss'], ['sass']);
+    gulp.watch(['status.html', '_includes/*.html', 'admin-status/*', 'admin-status/css/*', 'img/*', 'js/*.js', '_plugins/*.rb', '_incidents/*'], ['status-rebuild']);
 });
 
 gulp.task('build', ['sass', 'jekyll-build']);
+
+gulp.task('status', ['sass', 'status-build']);
+
+gulp.task('status-server', ['browser-sync-status', 'status-watch']);
 
 /**
  * Default task, running just `gulp` will compile the sass,

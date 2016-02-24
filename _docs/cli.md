@@ -1,6 +1,6 @@
 ---
 cmsUserSlug: command-line
-date: 2015-10-21 
+date: 2015-10-21
 title: Command Line
 position: 10
 ---

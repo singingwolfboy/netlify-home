@@ -10,7 +10,7 @@
 
   //** Whites
   $color-light: #F4F6F6;
-  $color-lighter: #F9FAFA;
+  $color-lighter: #F6FAFA;
   $color-lightest: #FFF;
 
   // ** Tints-of-greens
@@ -30,7 +30,7 @@
     facebook:   #3b5998,
     github:     #4183c4,
     linkedin:   #0976b4,
-    googleplus: #dd4b39
+    gitter:     #dd4b39
   );
 
 /*
@@ -69,6 +69,9 @@ svg {
 }
 .loud {
   color: $color-darker;
+  .no-touch a:hover & {
+    color: $color-highlight;
+  }
 }
 .overloud {
   color: $color-darkest;
@@ -96,6 +99,9 @@ svg {
   .muted {
     color: $color-muted;
   }
+  .light {
+    color: rgba(255,255,255,0.7);
+  }
 }
 
 /* Icons */
@@ -105,6 +111,13 @@ svg {
 .inverse .icon {
   color: $color-darkest;
 }
+svg.muted {
+  color: rgb(195,195,195); /* Same color as icon-select-drop.png */
+  .inverse & {
+    color: $color-muted;
+  }
+}
+
 
 
 /* Backgrounds */
@@ -145,8 +158,26 @@ svg {
   background: $color-tint3;
 }
 
+
 /* Main and sidebar */
-.l-aside, .l-aside--right:after, .l-aside--left:before {
-  background: $color-darkest;
-  color: $color-light;
+.l-aside--right:after, .l-aside--left:before {
+  background: inherit;
+  color: inherit;
+}
+
+/* Filters */
+.grayscale {
+  filter: grayscale(100%);
+  .no-touch a:hover & {
+    filter: grayscale(0%);
+  }
+}
+.colorize {
+  filter: sepia() hue-rotate(130deg) saturate(70%) brightness(98%);
+  opacity: 0.9;
+  transition: ease .3s;
+  .no-touch a:hover & {
+    filter: sepia(0%);
+    opacity: 1;
+  }
 }

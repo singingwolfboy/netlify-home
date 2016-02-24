@@ -7,7 +7,12 @@ description: "Netlify now 1 stop for all your prerendering needs, multiple domai
 thumbnail: /uploads/dog-riders-harness-halloween-costume-mailman-3664.jpg
 cmsUserSlug: ""
 date: 2015-10-29
-tags: null
+tags:
+  - netlify
+  - newsletter
+  - prerendering
+  - domains
+  - builds
 ---
 
 Hi there.  
@@ -18,11 +23,13 @@ We've got lot's of big news, so we will get right to it!
 
 
 ## Prerendering
-If you’re using a single page app for a site that’s not behind a login, SEO is an important concern.Pre-rendering is the answer, and netlify has supported external pre-rendering services like prerender.io for a while.
+If you’re using a single page app for a site that’s not behind a login, SEO is an important concern. Pre-rendering is the answer, and netlify has supported external prerendering services like prerender.io for a while.
 
 Now we’re proud to announce that Netlify has this feature built-in!
 
-If you’re on a plan that supports prerendering, just check the “Prerender” checkbox from your site settings and click save, and netlify will start proxying requests to our prerendering servers, if they have the _escaped_fragment_ query parameter set or come from known crawlers (like Facebook or Twitters crawler used when fetching og metatags or similar page data).
+<!-- excerpt -->
+
+If you’re on a plan that supports prerendering, just check the “Prerender” checkbox from your site settings and click save. Netlify will start proxying requests to our prerendering servers if they have the _escaped_fragment_ query parameter set, or come from known crawlers (like Facebook’s or Twitter’s crawler used when fetching og metatags or similar page data).
 
 Prerendered pages are cached for 24 hours.
 

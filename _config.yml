@@ -7,7 +7,7 @@ future: false
 kramdown:
   input: GFM
 
-exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock", "status.html", "status-cms", "admin-status"]
 include: ["_redirects"]
 
 social-links:
@@ -15,13 +15,19 @@ social-links:
   facebook: 'https://www.facebook.com/netlify'
   github: 'https://github.com/netlify'
   linkedin: 'https://www.linkedin.com/company/netlify'
-  googleplus: 'https://plus.google.com/+NetlifyApp'
+  gitter: 'https://gitter.im/netlify/community'
 
 excerpt_separator: <!-- excerpt -->
 
 collections:
   docs:
     output: true
+  reseller_docs:
+    output: true
+    permalink: /reseller/docs/:title.html
+  incidents:
+    output: false
+
 
 defaults:
   - scope:
@@ -35,6 +41,11 @@ defaults:
       type: "docs"
     values:
       layout: "docs"
+  - scope:
+      path: ""
+      type: "reseller_docs"
+    values:
+      layout: "reseller_docs"
 
 # RSS
 rss_path: /blog
@@ -43,3 +54,6 @@ gems:
   - octopress-minify-html
   - jekyll-feed
 minify_html: false
+
+srcset:
+  cache: /tmp/nf-home-cache

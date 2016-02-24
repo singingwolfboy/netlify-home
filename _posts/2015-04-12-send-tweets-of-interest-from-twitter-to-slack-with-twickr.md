@@ -8,9 +8,10 @@ thumbnail: /img/posts/thumbnails/twickr.png
 cmsUserSlug: twickr-send-tweets-of-interest-from-twitter-to-slack
 date: 2015-04-12 
 tags:
-  - Open-Source
-  - Twitter
-  - Slack
+  - open-source
+  - twitter
+  - slack
+  - tools
 ---
 
 [Twickr](https://github.com/netlify/twickr) is a small tool we're using @netlify to get tweets of interest delivered to our Slack.
@@ -31,13 +32,13 @@ Today we're releasing [Twickr](https://github.com/netlify/twickr) as open-source
 
 Twickr lets you setup a list of keywords you're interested in and then connects to [Twitter's streaming API](https://dev.twitter.com/streaming/overview). Whenever someone mention any of your keywords in a tweet, it'll send a message to your Slack channel of choice.
 
-### Installation
+## Installation
 
 Download the relevant release for your server's OS and architecture and extract the files.
 
 [Twickr Downloads](https://github.com/netlify/twickr/releases)
 
-### Configuration
+## Configuration
 
 Before you can run Twickr, you need to setup a [Twitter application](https://apps.twitter.com/) and a [Slack Inbound Webhook](https://netlify.slack.com/services/new/incoming-webhook).
 
@@ -59,7 +60,7 @@ Create a `config.json` file in the same folder as the twickr executable. An exam
 2. Optionally specify which channel to send Twickr messages to
 3. Enter a coma-separated list of keywords you want Twickr to keep an eye on
 
-### Running
+## Running
 
 ```bash
 cd <path-to-your-twickr-install>

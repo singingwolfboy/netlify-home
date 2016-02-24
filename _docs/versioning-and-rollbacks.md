@@ -1,13 +1,13 @@
 ---
 cmsUserSlug: versioning-rollbacks
-date: 2015-12-15 
+date: 2015-12-15
 title: "Versioning & Rollbacks"
 position: 67
 ---
 
 ## Versioning and Rollbacks
 
-Netlify versions all deploys. From the "Builds" tab for your site in the Netlify UI, you can browse any deploy you've ever made and preview it from a unique URL.
+Netlify versions all deploys. From the "Builds" tab for your site in the netlify UI, you can browse any deploy you've ever made and preview it from a unique URL.
 
 ## Atomic Deploys
 
@@ -15,7 +15,7 @@ Netlify enforces a strict concept of atomic deploys.
 
 If you're used to uploading files with FTP, SSH, RSync or S3's API, this is quite a different concept.
 
-Instead of pushing individual files to Netlify, you always create a new deploy. Netlify will compare the new deploy with your existing deploy and determine which files have changed and need to be uploaded.
+Instead of pushing individual files to netlify, you always create a new deploy. Netlify will compare the new deploy with your existing deploy and determine which files have changed and need to be uploaded.
 
 No changes go live on your site's public URL before all changes have been uploaded. Once all the changes are ready, the new version of the site immediately goes live on the CDN.
 

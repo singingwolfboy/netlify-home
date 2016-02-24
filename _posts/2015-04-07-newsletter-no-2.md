@@ -8,16 +8,16 @@ thumbnail: /img/posts/thumbnails/newsletter.png
 cmsUserSlug: netlify-newsletter-no-2
 date: 2015-04-07
 tags:
-  - Netlify
-  - Newsletter
+  - netlify
+  - newsletter
 ---
 
-### Welcome.
+Welcome
 
 A lot of things have happened since our last newsletter.
 
 
-### Netlify
+## Netlify
 
 **Woohoo!**
 We’ve launched [netlify.com](https://www.netlify.com) and are now live, both with hosting of static sites and apps (as you knew it from [bitballoon.com](https://www.bitballoon.com)) & our continuous deployment service.
@@ -38,7 +38,7 @@ On a more personal note Chris (co-founder) is now no longer with his Danish agen
 We are currently working on some things at that we are really excited about introducing to everyone. Please let us know of any features you would like. We can be contacted in any number of ways.
 
 
-### Static web-tech
+## Static web-tech
 
 … is fortunately for us still becoming more popular by the hour.
 

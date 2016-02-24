@@ -9,7 +9,7 @@ name: admin
 
   <title>Netlify CMS</title>
   <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700'>
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/site.css">
   <link rel="stylesheet" href="/admin/css/admin.css">
 
   <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -81,22 +81,22 @@ name: admin
       <section class="bg-dark-muted-cover inverse bb bb--large mb-20">
         <div class="content">
           <div class="l-third">
-            <article class="blurb mt-20">
+            <article class="blurb mt-50 mb-50">
               <header class="blurb-hd">
-                <div class="media">
+                <a class="media" href="#">
                   {{cms-preview field='thumbnail'}}
                   <div class="media-bd">
-                    <h1 class="blurb-title">
-                      <a href="#" class="light">{{if entry.short_title entry.short_title entry.title}}</a>
+                    <h1 class="blurb-title loud">
+                      {{if entry.short_title entry.short_title entry.title}}
                     </h1>
-                    <p class="blurb-meta"><a href="#" class="link">by {{entry.author}}</a></p>
+                    <p class="blurb-meta link light">{{entry.author}}</p>
                   </div>
-                </div>
+                </a>
               </header>
               <div class="blurb-bd">
                 <p class="small muted">{{entry.description}}</p>
               </div>
-            </article>
+            </article> 
           </div>
         </div>
       </section>
