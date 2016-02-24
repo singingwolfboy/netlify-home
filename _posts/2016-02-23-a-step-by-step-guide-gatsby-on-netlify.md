@@ -6,7 +6,7 @@ short_title: Gatsby on netlify
 description: A short guide to help you set up Gatsby on netlify with continuous deployment.
 thumbnail: /uploads/gatsbyjs.png
 cmsUserSlug: ""
-date: 2016-02-34
+date: 2016-02-24
 tags: null
 ---
 
