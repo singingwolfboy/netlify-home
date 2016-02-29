@@ -5,8 +5,8 @@ image: null
 short_title: "Static Web Tech Meetup #4: ZURB Foundation 6"
 description: "Geoff Kimball from ZURB presents Foundation 6 at Static Web Tech Meetup #4"
 thumbnail: /uploads/foundationthumb.jpg
-cmsUserSlug: ""
-date: now
+cmsUserSlug: SWT 4 ZURB
+date: 2016-02-29 
 tags: null
 ---
 
