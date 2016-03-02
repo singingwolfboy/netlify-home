@@ -16,6 +16,8 @@ Over 30 years in the technology world he's been a part of 4 IPOs, more than 20 m
 
 His confidence in the benefits and bright future of the new stack of modern static web tech has led to Wikia both using netlify, and co-sponsoring the [Static Web Tech Meetup](http://www.meetup.com/sf-static-web-tech/) with netlify. At a recent meetup (where we got to be in the room for the launch of [Jekyll 3.0](https://jekyllrb.com/)!!) Wade took some time to talk to us about the role of static web technology in Wikia's world.
 
+<!-- excerpt -->
+
 **Aaron:** _Could you talk about the ways you guys here at Wikia use modern static sites to better your process?_
 
 **Wade Warren:** Absolutely! The way netlify has instrumented static site generation, makes it really easy to federate the creation of the sites amongst a large group of people, especially distributed around the world like we are. It ties into whatever code management system you want to use.
