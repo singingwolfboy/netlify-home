@@ -10,8 +10,6 @@ date: 2016-01-13T00:00:00.000Z
 tags: null
 ---
 
-{% raw %}
-
 ### Welcome to netlify
 Sculpin is a fast static site generator, which uses Twig templates, is built on Symfony's HTTP Kernel and written in PHP. It's arguably the most mature and well documented static site generator written in PHP, and today we'll take a look at how to install and setup a basic Sculpin blog site with assets on GitHub, in continuous deployment on netlify.
 
@@ -213,10 +211,10 @@ git add .
 git commit -m 'First commit'
 ```
 
-No need to worry about a .gitignore, since this was included in the skeleton we downloaded already and has already been set to not include any output folders and then some.
+No need to worry about a .gitignore, since this was included in the skeleton we downloaded and has already been set to not include any output folders.
 
 #### 4. Push to GitHub.
-The final task before we're done setting up, is to use the push command with git, as in the following line in Terminal:
+The final task before we're done setting up is to push your files to GitHub:
 
 ```
 git push -u origin master
@@ -244,7 +242,7 @@ When you push to GitHub, netlify does all the work. No more wasting time on manu
 Since we're hosting the site assets on GitHub, we’ll need to link netlify with GitHub. Click the button *“Link to GitHub”*.
 
 #### Step 3: Authorize netlify
-You can skip this step, if you already have an account with netlify set up to automatically login!
+If you already have an account with netlify (awesome!) you can skip down to Step 4. If you are new to netlify, read on.
 
 You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
@@ -281,5 +279,3 @@ Once netlify has build your site, it will assign a random name to it and you'll 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
 You can see our demo site [here](http://sculpin.netlify.com/) and the GitHub project for the demo site [here](https://github.com/jimmilee/sculpin-demo).
-
-{% endraw %}
