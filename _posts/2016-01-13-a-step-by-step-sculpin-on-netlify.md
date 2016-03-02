@@ -15,6 +15,8 @@ Sculpin is a fast static site generator, which uses Twig templates, is built on 
 
 For those unaware, PHP is a serverside language based on C and has long been used to make dynamic homepages. This isn't as common as static site generators written in Javascript or Ruby and it will be interesting to see how it works compared with these.
 
+<!-- excerpt -->
+
 If you feel at home with PHP, Sculpin will be right up your alley. It comes with lots of built-in features, including embedded Composer. Composer is to PHP what npm is to node.js or bundler is to Ruby--it will install and handle dependencies for the project, so it's handy that it comes built in.
 
 ***Please note that this guide assumes you have git installed, as well as a recent PHP version 5 or up with command line interface and cURL libraries !!!***
