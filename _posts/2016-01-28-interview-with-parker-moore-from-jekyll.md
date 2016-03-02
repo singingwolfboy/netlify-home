@@ -12,6 +12,8 @@ tags: null
 
 While there is a constantly growing roster of static web tools available for developers of both the professional and amateur stripe, none swings as much weight or garners as much attention as Jekyll. Its popularity is no surprise, considering Jekyll was created by one of the cofounders of GitHub and is the engine that powers GitHub pages. Recently we witnessed the launch of Jekyll 3.0, with the final commit being pushed live during a talk by current Jekyll lead Parker Moore at the October edition of the Static Web MeetUp in Wikia's San Francisco office. After his talk, Moore took some time to chat with Aaron from netlify about Jekyll, development and the future of static web tech.
 
+<!-- excerpt -->
+
 Aaron: _What you do outside of working on Jekyll?_
 
 Parker: I'm a software developer at VSCO, Visual Supply Company is what it stands for.
