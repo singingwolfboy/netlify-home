@@ -13,15 +13,15 @@ tags: null
 {% raw %}
 
 ### Welcome to netlify
-Sculpin is a fast static site generator, which uses Twig templates, is built on Symfony's HTTP Kernel and written in PHP. It's arguably the most mature and well documented static site generator written in PHP and today we'll take a look at how to install and setup a basic Sculpin blog site with assets on GitHub, in continuous deployment on netlify.
+Sculpin is a fast static site generator, which uses Twig templates, is built on Symfony's HTTP Kernel and written in PHP. It's arguably the most mature and well documented static site generator written in PHP, and today we'll take a look at how to install and setup a basic Sculpin blog site with assets on GitHub, in continuous deployment on netlify.
 
-For those unaware, PHP is a serverside language based on C and has long been used to make dynamic homepages. This is not as common as static site generators written in Javascript or Ruby and it will be interesting to see how it works compared with these.
+For those unaware, PHP is a serverside language based on C and has long been used to make dynamic homepages. This isn't as common as static site generators written in Javascript or Ruby and it will be interesting to see how it works compared with these.
 
-If you feel at home with PHP, Sculpin will be right up your alley and it comes with lots of build in features, such as embedded Composer. Composer is to PHP what npm is to node.js or bundler is to Ruby and will install and handle dependencies for the project, so it's handy that it comes built in.
+If you feel at home with PHP, Sculpin will be right up your alley. It comes with lots of built-in features, including embedded Composer. Composer is to PHP what npm is to node.js or bundler is to Ruby--it will install and handle dependencies for the project, so it's handy that it comes built in.
 
 ***Please note that this guide assumes you have git installed, as well as a recent PHP version 5 or up with command line interface and cURL libraries !!!***
 
-For example to install PHP5 with the command line interface and the cURL libraries on Linux Ubuntu, as required by Sculpin, you would use the following commands from a terminal window:
+As an example, if you need install PHP5 with the command line interface and the cURL libraries on Ubuntu Linux, you would use the following commands from a terminal window:
 
 ```
 sudo apt-get update
@@ -30,22 +30,32 @@ sudo apt-get install php5-cli                       # command line addition
 sudo apt-get install php5-curl                      # cURL libraries
 ```
 
-### Quick Guide
-This sections contains a small quick guide, to quickly get you up and running with a template Sculpin site you can play around with. 
+### Quick Start Guide
+Now let's quickly get you up and running with a template Sculpin site you can play around with. 
 
 If you aren't familiar with the commands used and would like a more detailed introduction and guide, simply scroll down to [here](#sculpinsetup).
 
 The commands will help you download and install Sculpin with a blog skeleton, simply substitute my-sculpin-site with the name of your choice.
 
 ```
-curl -O https://download.sculpin.io/sculpin.phar     
+curl -O https://download.sculpin.io/sculpin.phar 
+```  
+```  
 chmod +x sculpin.phar
+```
+```
 sudo mv sculpin.phar '/usr/local/bin/sculpin'
-
+```
+```
 git clone https://github.com/sculpin/sculpin-blog-skeleton.git my-sculpin-site
+```
+```
 cd my-sculpin-site
-
+```
+```
 sculpin install
+```
+```
 sculpin generate --watch --server
 ```
 
@@ -54,7 +64,7 @@ The first three lines will download Sculpin, set its permissions to be able to e
 To see which locations are in the path, use this command in a terminal window: `echo "$PATH"`
 
 ### Setup Sculpin
-The quick guide is not to everyone's taste and so we'll delve deeper into the installation and setup of Sculpin in this step-by-step guide.
+The quick guide is not to everyone's taste, so we'll delve deeper into the installation and setup of Sculpin in this step-by-step guide.
 
 #### 1. Download, Permissions and PATH
 Let's get this slippery sculpin, set its permissions and add it to the path.
@@ -63,21 +73,28 @@ Open a terminal window and use the following three commands:
 
 ```
 curl -O https://download.sculpin.io/sculpin.phar
+```
+This command downloads sculpin using curl.
+```
 chmod +x sculpin.phar
+```
+This makes the file you just downloaded executable.
+```
 sudo mv sculpin.phar '/usr/local/bin/sculpin'
 ```
-
-This will download sculpin using curl, set its permissions so it can be executed and add it to your PATH, so it can be executed from anywhere. 
+And this adds it to your PATH, so that you can execute it from anywhere.
 
 *Consider keeping your terminal window open in between steps, for your own convenience!*
 
 #### 2. Clone Skeleton
 Sculpin can be customized to run just about any kind of site you'd want to, but unless you want to specify all of this by yourself, it helps to clone a sculpin skeleton structure for your type of site.  
 
-We'll clone the blog skeleton and enter it with the following commands in terminal:
-
+First, clone the blog skeleton
 ```
 git clone https://github.com/sculpin/sculpin-blog-skeleton.git my-sculpin-site
+```
+Then change to the directory you just cloned:
+```
 cd my-sculpin-site
 ```
 
