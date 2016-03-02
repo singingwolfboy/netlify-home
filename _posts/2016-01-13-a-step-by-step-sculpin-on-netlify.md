@@ -123,7 +123,7 @@ Check to see if everything is running like it should, before we start adding our
 #### 5. Create Content
 Let's create our first piece of content, a markdown file following Jekyll's file name format *YYYY-MM-DD-Title.md* with a date that's newer than today, so we can make sure it pops up on top, like it would in an ordinary blog. 
 
-We created the `2016-01-22-Sculpin-on-netlify.md` file in the `/source/_posts` folder with the following content:
+We created the `2016-03-02-Sculpin-on-netlify.md` file in the `/source/_posts` folder with the following content:
 
 ```
 ---
