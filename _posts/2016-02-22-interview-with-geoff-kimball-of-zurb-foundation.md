@@ -32,7 +32,7 @@ Right now people in the JavaScript ecosystem are doing a lot of hemming and hawi
 ## _Small tools become annoying when you have to glue them all together_
 ---
 
-I think in the Node ecosystem in general, people are going to try to focus more on maybe being more opinionated on things; I think that’s a problem that people don’t really quite know how to solve yet. There are so many different ways to do things in JavaScript and Node, there are so many different ideas floating around and that exchange of ideas is very positivem but it can really confuse new developers. I think JavaScript developers are going to find a way to make those ideas more accessible.
+I think in the Node ecosystem in general, people are going to try to focus more on maybe being more opinionated on things; that’s a problem that people don’t really quite know how to solve yet. There are so many different ways to do things in JavaScript and Node, there are so many different ideas floating around and that exchange of ideas is very positivem but it can really confuse new developers. I think JavaScript developers are going to find a way to make those ideas more accessible.
 
 Maybe instead of having fifteen different build systems- maybe two or three will emerge as the ones which are popular. You can say the same thing about a static site generator or any tool like that has a lot of options; maybe people will focus their ideas and they will focus on the handful of tools that do those things very well.
 
