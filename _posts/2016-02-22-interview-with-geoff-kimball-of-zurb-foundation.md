@@ -18,9 +18,9 @@ Foundation hit the scene in 2011 when interaction design company ZURB decided to
 
 **Geoff Kimball:** People found that they were very interested in deploying sites that were entirely static--they had needs that were simple enough that they could just do all that on their computer, they could compile the pages once and then upload those flat files to the server.
 
-The trend there is finding more ways to integrate the things that people are used to having like PHP or Rails or Django or any typical kind of MVC framework or any primary language template on the server side, and then finding ways we can do that on the client’s side to generate static files. Ruby and Node have a lot of that big stuff.
+The trend there is finding more ways to integrate the things that people are used to having, like PHP or Rails or Django or any typical kind of MVC framework or any primary language template on the server side, and then finding ways we can do that on the client’s side to generate static files. Ruby and Node have a lot of that big stuff.
 
-I’ll bias myself towards Node. You have the full power of JavaScript to generate static sites so you still have the backing of the full programming language but you are compiling all those pages in your development environment versus compiling them on the fly on the server; and that means that the pages you deliver on the server are much faster because they’ve been pre-compiled by you.
+I’ll bias myself towards Node. You have the full power of JavaScript to generate static sites, so you still have the backing of the full programming language, but you are compiling all those pages in your development environment versus compiling them on the fly on the server; that means that the pages you deliver on the server are much faster because they’ve been pre-compiled by you.
 
 A lot of the evolution comes from creating more tools that work client side. You have things like Jekyll, which gives you a lot of the bells and whistles of a typical server-side framework to generate flat pages, and the same thing with Node with tools like Wintersmith and Metalsmith.
 
@@ -29,13 +29,12 @@ _Based on your experience with all these tools and the various different things 
 Right now people in the JavaScript ecosystem are doing a lot of hemming and hawing about JavaScript fatigue or JavaScript fragmentation; you may have read some of those Medium think pieces at the end of last year. The Node system is built on this concept of modularity in small tools, but small tools become annoying when you have to glue them all together; the React.js ecosystem has this problem right now where there are a lot of React boilerplates.
 
 ---
-## _Small tools become annoying when you have to glue them all together_ 
-
+>## _Small tools become annoying when you have to glue them all together_ 
 ---
 
-I think in the Node ecosystem in general, people are going to try to focus more on maybe being more opinionated on things; that’s a problem that people don’t really quite know how to solve yet. There are so many different ways to do things in JavaScript and Node, there are so many different ideas floating around and that exchange of ideas is very positivem but it can really confuse new developers. I think JavaScript developers are going to find a way to make those ideas more accessible.
+I think in the Node ecosystem in general, people are going to try to focus more on maybe being more opinionated on things; that’s a problem that people don’t really quite know how to solve yet. There are so many different ways to do things in JavaScript and Node, there are so many different ideas floating around and that exchange of ideas is very positive but it can really confuse new developers. I think JavaScript developers are going to find a way to make those ideas more accessible.
 
-Maybe instead of having fifteen different build systems- maybe two or three will emerge as the ones which are popular. You can say the same thing about a static site generator or any tool like that has a lot of options; maybe people will focus their ideas and they will focus on the handful of tools that do those things very well.
+Instead of having fifteen different build systems, maybe two or three will emerge as the ones which are popular. You can say the same thing about a static site generator or any tool like that has a lot of options; maybe people will focus their ideas and they will focus on the handful of tools that do those things very well.
 
 _Along the same lines, where do you see stuff like Gulp going?_
 
