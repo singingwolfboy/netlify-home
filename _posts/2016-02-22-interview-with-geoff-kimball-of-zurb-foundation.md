@@ -29,7 +29,8 @@ _Based on your experience with all these tools and the various different things 
 Right now people in the JavaScript ecosystem are doing a lot of hemming and hawing about JavaScript fatigue or JavaScript fragmentation; you may have read some of those Medium think pieces at the end of last year. The Node system is built on this concept of modularity in small tools, but small tools become annoying when you have to glue them all together; the React.js ecosystem has this problem right now where there are a lot of React boilerplates.
 
 ---
-## _Small tools become annoying when you have to glue them all together_
+## _Small tools become annoying when you have to glue them all together_ 
+
 ---
 
 I think in the Node ecosystem in general, people are going to try to focus more on maybe being more opinionated on things; that’s a problem that people don’t really quite know how to solve yet. There are so many different ways to do things in JavaScript and Node, there are so many different ideas floating around and that exchange of ideas is very positivem but it can really confuse new developers. I think JavaScript developers are going to find a way to make those ideas more accessible.
