@@ -29,7 +29,7 @@ _Based on your experience with all these tools and the various different things 
 Right now people in the JavaScript ecosystem are doing a lot of hemming and hawing about JavaScript fatigue or JavaScript fragmentation; you may have read some of those Medium think pieces at the end of last year. The Node system is built on this concept of modularity in small tools, but small tools become annoying when you have to glue them all together; the React.js ecosystem has this problem right now where there are a lot of React boilerplates.
 
 ---
->## _Small tools become annoying when you have to glue them all together_ 
+> ## _Small tools become annoying when you have to glue them all together_ 
 ---
 
 I think in the Node ecosystem in general, people are going to try to focus more on maybe being more opinionated on things; that’s a problem that people don’t really quite know how to solve yet. There are so many different ways to do things in JavaScript and Node, there are so many different ideas floating around and that exchange of ideas is very positive but it can really confuse new developers. I think JavaScript developers are going to find a way to make those ideas more accessible.
@@ -43,7 +43,7 @@ I hope Gulp has a bright future. Gulp is entering the same phase that Grunt did 
 Once again, that’s one of the things with the exchange of ideas. The node ecosystem likes to move around a lot, people like to look at the new ideas and say that the old ideas are bad.
 
 ---
->## _The node ecosystem likes to move around a lot. People like to look at the new ideas and say that the old ideas are bad_
+> ## _The node ecosystem likes to move around a lot. People like to look at the new ideas and say that the old ideas are bad_
 ---
 
 For ZURB’s part we are going to stay committed to Gulp; Gulp 4 brings a lot of really interesting ideas and it kind of fixes a lot of problems that people had with that build system and ultimately since it’s a task runner and it is designed to basically do anything, we’re hoping it eventually just kind of have a good future ahead of it. It is designed to just run other plug-ins, which means that it should be suitable for pretty much any situation.
