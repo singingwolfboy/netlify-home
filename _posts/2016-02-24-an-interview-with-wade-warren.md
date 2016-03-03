@@ -18,6 +18,8 @@ His confidence in the benefits and bright future of the new stack of modern stat
 
 <!-- excerpt -->
 
+---
+
 **Aaron:** **Could you talk about the ways you guys here at Wikia use modern static sites to better your process?**
 
 **Wade Warren:** Absolutely! The way netlify has instrumented static site generation, makes it really easy to federate the creation of the sites amongst a large group of people, especially distributed around the world like we are. It ties into whatever code management system you want to use.
