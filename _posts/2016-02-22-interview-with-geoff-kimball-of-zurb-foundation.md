@@ -38,7 +38,7 @@ Maybe instead of having fifteen different build systems- maybe two or three will
 
 _Along the same lines, where do you see stuff like Gulp going?_
 
-I hope Gulp has a bright future. I think Gulp is entering the same phase that Grunt did when Gulp showed up; so Grunt was a thing for like a year and a half, two years. Gulp came along in early 2014 and then the mantra became like “nah man, you can’t use Grunt, you’ve got to move to Gulp.” And then last year the mantra became “nah man, you don’t have to use a build system at all; you use NPM scripts your package.json.
+I hope Gulp has a bright future. Gulp is entering the same phase that Grunt did when Gulp showed up. Grunt was a thing for like a year and a half, two years. Then Gulp came along in early 2014 and the mantra became like “nah man, you can’t use Grunt, you’ve got to move to Gulp.” And then last year the mantra became “nah man, you don’t have to use a build system at all; you use NPM scripts your package.json.
 
 Once again, that’s one of the things with the exchange of ideas. The node ecosystem likes to move around a lot, people like to look at the new ideas and say that the old ideas are bad.
 
