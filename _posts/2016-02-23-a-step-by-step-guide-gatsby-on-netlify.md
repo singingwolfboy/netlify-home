@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step guide: Gatsby on netlify "
+title: "A step-by-step guide: Gatsby on netlify"
 author: Aaron Autrand
 image: null
 short_title: Gatsby on netlify
@@ -10,7 +10,7 @@ date: 2016-02-24T00:00:00.000Z
 tags: null
 ---
 
-Today, we’re going to look at how to host a website built with Gatsby on netlify, including setting up continuous deployment.
+Today, we’re going to look at how to host a website built with [Gatsby](https://github.com/gatsbyjs/gatsby) on netlify, including setting up continuous deployment.
 
 Gatsby is a new static site generator, but it’s gaining traction fast! It’s made in what’s probably the only thing as hot as Google’s ‘go’ right now, React.js. React is a hugely popular javascript framework out of Facebook.
 
@@ -153,6 +153,7 @@ git push -u origin master
 Now that your assets are up and running on GitHub, let’s connect them to netlify.
 
 <a id="netlifystart"></a>
+
 ## Connecting to netlify
 
 ### Step 1: Add Your New Site
