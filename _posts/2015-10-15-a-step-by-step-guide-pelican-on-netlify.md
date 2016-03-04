@@ -8,7 +8,7 @@ thumbnail: /uploads/2043492.png
 cmsUserSlug: ""
 date: 2015-10-15
 tags:
-  - pelical
+  - pelican
   - python
   - tutorial
 ---
