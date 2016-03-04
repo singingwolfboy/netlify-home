@@ -108,7 +108,7 @@ We want to set up an online GitHub repository with our local environment and pus
 
 We start by creating a [GitHub](https://github.com/) repository for our Punch site and generator.
 
-We’re naming ours punch-demo and we’ll skip adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
+We’re naming ours `punch-demo` and we’ll skip adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
 
 ![netlify0x_createnewrepo.png](/uploads/netlify0x_createnewrepo.png)
 
