@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step: Punch on netlify"
+title: "A step-by-step guide: Punch on netlify"
 author: Jimmi Lee
 image: null
 short_title: Punch on netlify
