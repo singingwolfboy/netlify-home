@@ -6,7 +6,7 @@ short_title: Punch on netlify
 description: "A short tutorial on how to set up Punch in continuous deployment on netlify, with assets on GitHub"
 thumbnail: /uploads/punch_logo_400p.png
 cmsUserSlug: ""
-date: 2016-01-12T00:00:00.000Z
+date: 2016-03-04T00:00:00.000Z
 tags: null
 ---
 
