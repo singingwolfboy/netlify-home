@@ -50,7 +50,7 @@ Let’s create a site using the `punch setup` command in a terminal window like 
 punch setup my-punch-site
 ```
 
-Easy enough. The `punch setup` command will setup a site at the present location, with the name my-punch-site (substitute with your own site name).
+Easy enough. The `punch setup` command will setup a site at the present location, with the name `my-punch-site` (substitute with your own site name).
 
 Please note that punch installs into a directory named `default`, so that you will find it in `/my-punch-site/default/`.
 
