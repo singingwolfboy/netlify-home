@@ -52,7 +52,7 @@ punch setup my-punch-site
 
 Easy enough. The `punch setup` command will setup a site at the present location, with the name `my-punch-site` (substitute with your own site name).
 
-Please note that punch installs into a directory named `default`, so that you will find it in `/my-punch-site/default/`.
+Please note that Punch installs into a directory named `default`, so that you will find it in `/my-punch-site/default/`.
 
 *You might want to keep the terminal window open between steps for your own convenience*
 
@@ -74,9 +74,9 @@ punch s
 
 In your terminal, you’ll see the message `Running Punch server on localhost:9009`. That means your Punch server is running. Open your browser and visit [http://localhost:9009](http://localhost:9009) and see for yourself.
 
-If this is your first time using punch, we highly suggest that you do the hands-on tutorial that launches, as it will quickly cover the basics and get the ball rolling. It’s not a necessity for this tutorial, but it will help you get comfortable with Punch.
+If this is your first time using Punch, we highly suggest that you do the hands-on tutorial that launches, as it will quickly cover the basics and get the ball rolling. It’s not a necessity for this tutorial, but it will help you get comfortable with Punch.
 
-It’s time to go to GitHub, but just before we do, we need to configure punch for our local folder as well.
+It’s time to go to GitHub, but just before we do, we need to configure Punch for our local folder as well.
 
 ## Install Punch in local directory
 <a id="githubstart"></a>
@@ -88,17 +88,17 @@ cd my-punch-site/default
 npm init
 ```
 
-You’ll be asked a few questions. You can answer however you'd like, but the default answer for each will be in the parentheses, and will be selected if you just hit enter. The important thing here is that npm will create a local `package.json` file.
+You’ll be asked a few questions. You can answer however you’d like, but the default answer for each will be in the parentheses, and will be selected if you just hit enter. The important thing here is that npm will create a local `package.json` file.
 
-Next we install punch into our local project (unlike the global installation earlier) like this:
+Next we install Punch into our local project (unlike the global installation earlier) like this:
 
 ```
 npm install punch --save
 ```
 
-We use the `--save` flag to make sure punch is added to the `package.json` file as a dependency. This way, when netlify looks at the project, it knows it will need punch and will include it at build time.
+We use the `--save` flag to make sure Punch is added to the `package.json` file as a dependency. This way, when netlify looks at the project, it knows it will need Punch and will include it at build time.
 
-You may get a few warnings that punch should be installed globally and while this is ordinarily true, we need it both ways–globally for you to use it on your home computer, and locally in our site to give netlify something to build with online.
+You may get a few warnings that Punch should be installed globally and while this is ordinarily true, we need it both ways–globally for you to use it on your home computer, and locally in our site to give netlify something to build with online.
 
 ## Pushing Punch to GitHub
 
@@ -115,6 +115,7 @@ We’re naming ours punch-demo and we’ll skip adding files to the repository u
 Once the repository has been named and created we’ll return to local environment.
 
 ### 2. Create .gitignore
+
 Since we don’t want our local output directory to be pushed to GitHub (instead we’ll let netlify build and take care of this directory) we’ll create a `.gitignore` file in the `default` directory and fill it in like this:
 
 ```
