@@ -35,10 +35,15 @@
   max-width: 40em;
   margin: 50px auto 30px;
   color: $color-muted;
-  
+
   > p:first-child,
   > div > p:first-child {
-    @extend .text-intro;
+    @extend .intro;
+
+    em {
+      @extend .sidenote;
+    }
+
     br {
       display: none;
     }

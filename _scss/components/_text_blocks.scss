@@ -12,7 +12,7 @@
   @extend .editorial-text;
 }
 
-.text-intro {
+.intro {
   @extend .epsilon;
   @include font-weight(normal);
   color: $color-dark;
@@ -20,11 +20,12 @@
   margin-bottom: 30px;
 }
 
-.text-sidenote {
+.sidenote {
   @extend .small;
   @include font-weight(normal);
   font-style: normal;
   color: $color-dark;
+  display: block;
   line-height: 1.5;
 }
 
@@ -96,20 +97,18 @@
 
   /*
    * Emphasis
+   *
+   * When us­ing a sans serif font, skip italic and use bold for em­pha­sis
+   * http://practicaltypography.com/bold-or-italic.html
    */
 
-  em {
-    font-style: italic;
-  }
-
-  p > em {
-    @extend .text-sidenote;
-    display: inline-block;
-  }
-
+  em,
   strong {
+    @include font-weight(medium);
+    font-style: normal;
     color: $color-dark;
   }
+
 
   /*
    * Block Elements
@@ -190,9 +189,14 @@
   /*
    * Blockquotes
    */
+
    blockquote {
      p {
-       @extend .text-intro;
+       @extend .intro;
+     }
+
+     em {
+       @extend .sidenote;
      }
    }
 
@@ -200,12 +204,15 @@
      text-align: center;
    }
 
-   /*
-    * Horizontal rules
-    */
+
+  /*
+   * Horizontal rules
+   */
+
   hr {
     margin: 40px 0;
   }
+
 
   /*
    * Tables
