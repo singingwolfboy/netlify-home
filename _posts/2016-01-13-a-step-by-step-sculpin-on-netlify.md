@@ -18,7 +18,7 @@ For those unaware, PHP is a serverside language based on C and has long been use
 
 If you feel at home with PHP, Sculpin will be right up your alley. It comes with lots of built-in features, including embedded Composer. Composer is to PHP what npm is to node.js or bundler is to Ruby--it will install and handle dependencies for the project, so it's handy that it comes built in.
 
-***Please note that this guide assumes you have git installed, as well as a recent PHP version 5 or up with command line interface and cURL libraries***
+**Please note that this guide assumes you have git installed, as well as a recent PHP version 5 or up with command line interface and cURL libraries**
 
 As an example, if you need install PHP5 with the command line interface and the cURL libraries on Ubuntu Linux, you would use the following commands from a terminal window:
 
@@ -30,6 +30,7 @@ sudo apt-get install php5-curl                      # cURL libraries
 ```
 
 ## Quick Start Guide
+
 Now let's quickly get you up and running with a template Sculpin site you can play around with. 
 
 If you aren't familiar with the commands used and would like a more detailed introduction and guide, simply scroll down to [here](#sculpinsetup).
@@ -62,10 +63,14 @@ The first three lines will download Sculpin, set its permissions to be able to e
 
 To see which locations are in the path, use this command in a terminal window: `echo "$PATH"`
 
+<a id="sculpinsetup"></a>
+
 ## Setup Sculpin
+
 The quick guide is not to everyone's taste, so we'll delve deeper into the installation and setup of Sculpin in this step-by-step guide.
 
 ### 1. Download, Permissions and PATH
+
 Let's get this slippery sculpin, set its permissions and add it to the path.
 
 Open a terminal window and use the following three commands:
@@ -176,8 +181,9 @@ sculpin generate --env=prod
 
 With this command, Sculpin will create a standalone *output_prod* directory for upload to a live environment.
 
+<a id="githubstart"></a>
+
 ## Pushing Sculpin to GitHub
-{: id=githubstart}
 
 We want to set up an online GitHub repository with our local environment and push our local files to this repository. Next, we'll connect netlify to the repository for our automatic build (i.e. whenever you push to GitHub, netlify will rebuild your site).
 
@@ -225,8 +231,9 @@ All your files will be copied to your online repository. Once it's done, take a 
 
 It's time to connect it with netlify.
 
+<a id="netlifystart"></a>
+
 ## Connect with netlify
-{: id="netlifystart"}
 
 Creating a new site on netlify is intuitive and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
 
