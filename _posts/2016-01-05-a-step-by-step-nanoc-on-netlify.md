@@ -138,7 +138,7 @@ end
 layout '/**/*', :erb
 ```
 
-If you're using kramdown like us, simply used the above in your `Rules` file and if you're using HTML, there's nothing to edit (as that's the default). However, if you choose a third option, check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/).
+If you're using kramdown like us, simply use the above in your `Rules` file and if you're using HTML, there's nothing to edit (as that's the default). However, if you choose a third option, check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/).
 
 #### 6. Under the Hood
 Let's take a look at what's under the hood of this Nanoc site. First take a look at the folder structure, as depicted in the illustration below, the files and directories created are as follows:
@@ -195,6 +195,8 @@ We'll follow the advice left for us in the original landing page and change the 
 
 The *default.html* file in the layouts folder is where you can set up the layout of your page, using HTML and eRuby instructions. Nanoc has build in support for Haml and Mustache as well and it's possible to add support for other layout engines rather easily using filters (as we did with markdown in the `Rules` file earlier).
 
+You can either leave the *default.html* alone and check out the basic site (which comes with additional links and documentation) or you try something out yourselves or use our slightly modified *default.html* content as seen below.
+
 ```
 <!DOCTYPE HTML>
 <html lang="en">
@@ -233,9 +235,7 @@ The *default.html* file in the layouts folder is where you can set up the layout
 </html>
 ```
 
-You can either leave the *default.html* alone and check out the basic site (which comes with additional links and documentation) or you try something out yourselves or use our slightly modified *default.html* content as seen above.
-
-We've just changed the sidebar links to link to netlify, Nanoc and GitHub, but feel free yo try out some eRuby or one of the other layout languages.
+We've just changed the sidebar links to link to netlify, Nanoc and GitHub, but feel free to try out some eRuby or one of the other layout languages.
 
 If you want more information about layouts in Nanoc, head over to Nanoc's excellent documentation on layouts and partials [here](http://nanoc.ws/doc/items-and-layouts/#layouts).
 
@@ -365,7 +365,7 @@ Once you've connected netlify with GitHub, you will be shown a list of your GitH
 For the purpose of this tutorial we'll select the *“nanoc-demo”* repo we just pushed to GitHub. 
 
 #### Step 5: Configure Your Settings
-Fill in the configuration settings as seen in the screen shot below:
+Once you've selected the repo, it's time to configure your site. With nanoc, that's easy, since netlify does the work for you. Verify the configuration settings as seen in the screen shot below:
 
 ![nanoc_config.png](/uploads/nanoc_config.png)
 
