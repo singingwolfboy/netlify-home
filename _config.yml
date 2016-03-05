@@ -2,8 +2,13 @@ url: www.netlify.com
 
 future: false
 
-kramdown:
-  input: GFM
+markdown: redcarpet
+
+redcarpet:
+  extensions: ["smart", "tables", "no_intra_emphasis"]
+
+# kramdown:
+#   input: GFM
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock", "status.html", "status-cms", "admin-status"]
 include: ["_redirects"]
