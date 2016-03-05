@@ -12,7 +12,7 @@
   @extend .editorial-text;
 }
 
-.text-intro {
+.intro {
   @extend .epsilon;
   @include font-weight(normal);
   color: $color-dark;
@@ -20,11 +20,12 @@
   margin-bottom: 30px;
 }
 
-.text-sidenote {
+.sidenote {
   @extend .small;
   @include font-weight(normal);
   font-style: normal;
   color: $color-dark;
+  display: inline-block;
   line-height: 1.5;
 }
 
@@ -37,7 +38,7 @@
 /*
  * Headers
  */
- 
+
 @mixin text-headline {
   @include font-weight(normal);
   line-height: 25px;
@@ -91,30 +92,32 @@
 /*
  * Other HTML Elements
  */
- 
+
 .text {
 
-  /* 
+  /*
    * Emphasis
+   *
+   * When us­ing a sans serif font, skip italic and use bold for em­pha­sis
+   * http://practicaltypography.com/bold-or-italic.html
    */
-   
-  em {
-    font-style: italic;
+
+  em,
+  strong {
+    @include font-weight(medium);
+    font-style: normal;
+    color: $color-dark;
   }
-  
-  p > em {
-    @extend .text-sidenote;
-    display: inline-block;
-  }
-  
-  /* 
-   * Block Elements 
+
+
+  /*
+   * Block Elements
    */
-   
+
   p, ul, ol, pre, blockquote {
     margin: 20px 0;
   }
-  
+
   p, li, pre, blockquote {
     max-width: 40em;
   }
@@ -123,16 +126,16 @@
   /*
    * Lists
    */
-   
+
   ul {
     list-style: disc;
     margin-left: 1em;
-    
+
     @media (min-width: $bp-small) {
       margin-left: 0;
     }
   }
-  
+
   ol {
     margin-left: -1em;
     ol {
@@ -141,7 +144,7 @@
         list-style: lower-roman;
       }
     }
-    
+
     @media (min-width: $bp-small) {
       margin-left: -50px;
       > li {
@@ -153,10 +156,10 @@
     }
   }
 
-  /* 
+  /*
    * Images
    */
- 
+
   img {
     display: block;
     box-shadow: 0 0 3px rgba(0,0,0,0.4);
@@ -167,7 +170,7 @@
   /*
    * Code
    */
-   
+
   code {
     color: $color-dark;
   }
@@ -182,24 +185,42 @@
       color: inherit;
     }
   }
-  
 
   /*
    * Blockquotes
    */
+
    blockquote {
      p {
-       @extend .text-intro;
+       @extend .intro;
+     }
+
+     em {
+       @extend .sidenote;
      }
    }
+
+   hr + blockquote {
+     text-align: center;
+   }
+
+
+  /*
+   * Horizontal rules
+   */
+
+  hr {
+    margin: 40px 0;
+  }
+
 
   /*
    * Tables
    */
-   
+
   table {
     width: 100%;
-    
+
     @media (max:width $bp-small) {
       thead {
         display: none;
@@ -233,9 +254,9 @@
   }
 
   /*
-   * !! Fixes for funny markup in current posts 
+   * !! Fixes for funny markup in current posts
    */
-   
+
   br + code {
     @extend pre;
     display: block;
@@ -245,7 +266,7 @@
   img + br, code + br {
     display: none;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     strong {
       font-weight: inherit;
@@ -259,7 +280,7 @@
  */
 .text--no-bullets {
   ul {
-    list-style: none;  
+    list-style: none;
     @media {
       margin-left: 0;
     }

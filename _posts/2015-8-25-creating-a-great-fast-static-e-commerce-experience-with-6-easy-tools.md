@@ -118,7 +118,7 @@ Adding our HTML/JS shopping cart to your static Hugo website mostly consists of 
 
 Since this post is already 6 steps long, we won't be covering the whole Snipcart/Hugo integration right here. When you're ready to integrate Snipcart to your static Hugo site, we invite you to read our how-to demo directly on our blog:
 
-> [Static Site E-Commerce (part 3): Integrating Snipcart with Hugo](https://snipcart.com/blog/snipcart-hugo-integration)
+[Static Site E-Commerce (part 3): Integrating Snipcart with Hugo](https://snipcart.com/blog/snipcart-hugo-integration)
 
 ## Step 6: Deploy on netlify and become a millionaire
 

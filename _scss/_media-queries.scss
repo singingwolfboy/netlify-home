@@ -157,6 +157,10 @@
     width: auto;
     padding: 0 15px;
     position: relative;
+
+    .w-0 {
+      width: auto;
+    }
   }
 
   .l-third:first-child .blurb {
@@ -174,6 +178,16 @@
   }
   .l-half-med:last-child .blurb {
     right: -25px;
+  }
+
+  .l-full-med, .l-full-med.center {
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    right: 0;
+    width: 100%;
   }
 
 
