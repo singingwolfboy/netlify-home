@@ -16,6 +16,7 @@ Nanoc has both in abundance and after checking out their up-to-date and aestheti
 
 In this little guide, we will setup Nanoc and check out its site generation abilities and once we're up and running locally, we will push the project to GitHub and deploy on netlify with continuous deployment.
 
+<!-- excerpt -->
 If you already have a Nanoc repository forked on GitHub and you just wish to connect with netlify, you can skip the majority of this guide and scroll down [here](#netlifystart) instead.
 
 On the other hand, if you have Nanoc running locally, but need some guidance getting it pushed to GitHub, before you deploy to netlify, start [here](#githubstart) instead.
