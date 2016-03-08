@@ -6,7 +6,7 @@ short_title: Setting Up Your Custom Domain
 description: A step-by-step walkthrough on how to point your custom domain to netlify.
 thumbnail: /uploads/lv55uzmx.png
 cmsUserSlug: ""
-date: now
+date: 2016-03-08 
 tags: null
 ---
 
