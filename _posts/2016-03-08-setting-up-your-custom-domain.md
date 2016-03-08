@@ -43,19 +43,19 @@ Step 1: Log in to your GoDaddy account
 Step 2: Click the plus sign next to  `Domains`
 ![godaddy2.png](/uploads/godaddy2.png)
 
-Step 3: For your chosen domain, click `Manage DNS`
+Step 3: For your chosen domain, click  `Manage DNS`
 ![godaddy3.png](/uploads/godaddy3.png)
 
-Step 4: Click `DNS ZONE FILE`
+Step 4: Click  `DNS ZONE FILE`
 ![godaddy4.png](/uploads/godaddy4.png)
 
-Step 5: Click `Add Record`
+Step 5: Click  `Add Record`
 ![godaddy5.png](/uploads/godaddy5.png)
 
-Step 6: Add a CNAME Record as shown below, then click `Add Another`
+Step 6: Add a CNAME Record as shown below, then click  `Add Another`
 ![godaddy6.png](/uploads/godaddy6.png)
 
-Step 7: Add an A Record as shown below, then click `Finish`
+Step 7: Add an A Record as shown below, then click  `Finish`
 ![godaddy7.png](/uploads/godaddy7.png)
 
 Step 8: Don't forget to save!
