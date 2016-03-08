@@ -6,7 +6,7 @@ short_title: Setting Up Your Custom Domain
 description: A step-by-step walkthrough on how to point your custom domain to netlify.
 thumbnail: /uploads/lv55uzmx.png
 cmsUserSlug: ""
-date: 2016-03-08 
+date: 2016-03-08T00:00:00.000Z
 tags: null
 ---
 
@@ -40,7 +40,7 @@ If you've purchased your domain on GoDaddy, follow these simple instructions to 
 Step 1: Log in to your GoDaddy account 
 ![godaddy1.png](/uploads/godaddy1.png)
 
-Step 2: Click the plus sign next to `Domains`
+Step 2: Click the plus sign next to  `Domains`
 ![godaddy2.png](/uploads/godaddy2.png)
 
 Step 3: For your chosen domain, click `Manage DNS`
