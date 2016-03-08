@@ -16,17 +16,17 @@ First, you want to  tell netlify to use your custom domain. You can do this thro
 
 ![set-custom-domain.jpg](/uploads/set-custom-domain.jpg)
 
-Next, the standard values: If your registrar isn't listed below, then you can use these standard values to set up your domain.
+Next, the standard values: If your registrar isn't listed [below](#walkthroughstart), then you can use these standard values to set up your domain.
 
 **CNAME**: `www` should point at `example.netlify.com` (replace `example` with the name of your site as listed at [https://app.netlify.com/sites](https://app.netlify.com/sites))
 
 **A Record**: your raw domain (`example.com`) should be pointing to `198.61.251.14`
 
-Once you've added these new values, visiting `www.example.com` will take you to your new site. Remember, it could take a few hours to start pointing traffic in the right direction
-
 ![Example DNS Records](/img/docs/dns-records.png)
 
-# How do I set up with [insert Registrar here]?
+Once you've added these new values, visiting `www.example.com` will take you to your new site. Remember, it could take a few hours to start pointing traffic in the right direction.
+
+# How do I set up with [insert Registrar here]?<a id="walkthroughstart"></a>
 
 Is it your first time setting up a custom domain? No worries, we can help with that (we've all been there). For a step-by-step walkthrough with screenshots, choose your provider:  
 [GoDaddy](#godaddy)  
