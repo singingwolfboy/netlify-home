@@ -6,7 +6,7 @@ short_title: Nanoc on netlify
 description: A short tutorial on the static site generator Nanoc and how to host it on netlify (+continuous deployment).
 thumbnail: /uploads/nanoc_logo.png
 cmsUserSlug: ""
-date: 2016-01-05T00:00:00.000Z
+date: 2016-03-08T00:00:00.000Z
 tags: null
 ---
 
