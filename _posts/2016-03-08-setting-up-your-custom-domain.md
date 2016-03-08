@@ -16,7 +16,7 @@ First, the standard values: If your registrar isn't listed below, then you can u
 
 CNAME: **www** should point at `example.netlify.com` (replace `example` with the name of your site as listed at [https://app.netlify.com/sites](https://app.netlify.com/sites))
 
-A Record: your raw domain (`example.com`) should point to `198.61.251.14`
+A Record: your raw domain (`example.com`) should be pointing to `198.61.251.14`
 
 ![Example DNS Records](/img/docs/dns-records.png)
 
