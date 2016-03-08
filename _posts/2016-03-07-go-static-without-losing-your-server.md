@@ -6,7 +6,7 @@ short_title: Go Static Without Losing Your Server
 description: "Sam Deere of Giving What We Can talks about the reasons behind the non-profit's switch to the static stack, and how they are using netlify to do it in stages."
 thumbnail: /uploads/gwwc-logo.jpg
 cmsUserSlug: ""
-date: 2016-03-09 
+date: 2016-03-09T00:00:00.000Z
 tags: null
 ---
 
@@ -15,6 +15,8 @@ tags: null
 [Giving What We Can](https://www.givingwhatwecan.org/) is a charity that encourages people to give more, and give more effectively to charity. We’re part of the [effective altruism](http://www.effectivealtruism.org/) movement, using reason and evidence to find the best opportunities for giving. Our website is critical to our success — it’s how people learn about our work, and where they go to take [our pledge to give 10%](https://www.givingwhatwecan.org/get-involved/join/) of their income to the best charities in the world.
 
 We’ve recently switched from a traditional PHP-based CMS to a static build on Netlify, and I couldn’t be happier with the results. But while making the change, we came up against a fairly thorny problem — what to do about our backend server.
+
+<!--excerpt-->
 
 Static sites are awesome. But there are some things where it’s unavoidable to run a backend server — client records, payment processing, and so on. If you’re starting from scratch, you can use an API or cloud-based services to handle dynamic content on your static site via Javascript (say, through a single-page app). But having a legacy system means that it’s not always simple to make the switch. Taking a membership database that’s currently locked away in your old CMS and trying to open it up via a nice RESTful API can be a daunting task, especially for a small organisation like Giving What We Can.
 
