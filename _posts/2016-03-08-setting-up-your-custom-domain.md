@@ -21,11 +21,13 @@ A Record: your raw domain (`example.com`) should point to `198.61.251.14`
 ![Example DNS Records](/img/docs/dns-records.png)
 
 For a step-by-step walkthrough with screenshots, choose your provider:
-GoDaddy
-NameCheap
+[GoDaddy](#godaddy) 
+[NameCheap](#namecheap)
 
 
-## Godaddy
+## Godaddy <a id="godaddy"></a>
+
+If you've purchased your domain on GoDaddy, follow these simple instructions to point it at your netlify site:
 
 Step 1: Log in to your GoDaddy account 
 ![godaddy1.png](/uploads/godaddy1.png)
