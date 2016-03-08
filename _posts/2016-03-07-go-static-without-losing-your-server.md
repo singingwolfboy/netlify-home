@@ -3,7 +3,7 @@ title: Go Static Without Losing Your Server
 author: Sam Deere
 image: null
 short_title: Go Static Without Losing Your Server
-description: "Sam Deere of Giving What We Can talks about the reasons behind the non-profit's switch to the static stack, and how they are using netlify to do it in stages"
+description: "Sam Deere of Giving What We Can talks about the reasons behind the non-profit's switch to the static stack, and how they are using netlify to do it in stages."
 thumbnail: /uploads/gwwc-logo.jpg
 cmsUserSlug: ""
 date: 2016-03-09 
