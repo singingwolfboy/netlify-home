@@ -6,11 +6,11 @@ short_title: Go Static Without Losing Your Server
 description: "Sam Deere of Giving What We Can talks about the reasons behind the non-profit's switch to the static stack, and how they are using netlify to do it in stages"
 thumbnail: /uploads/gwwc-logo.jpg
 cmsUserSlug: ""
-date: now
+date: 2016-03-09 
 tags: null
 ---
 
-## Go Static Without Losing Your Server — how we made Giving What We Can’s switch to Netlify really easy.
+## how we made Giving What We Can’s switch to Netlify really easy.
 
 [Giving What We Can](https://www.givingwhatwecan.org/) is a charity that encourages people to give more, and give more effectively to charity. We’re part of the [effective altruism](http://www.effectivealtruism.org/) movement, using reason and evidence to find the best opportunities for giving. Our website is critical to our success — it’s how people learn about our work, and where they go to take [our pledge to give 10%](https://www.givingwhatwecan.org/get-involved/join/) of their income to the best charities in the world.
 
