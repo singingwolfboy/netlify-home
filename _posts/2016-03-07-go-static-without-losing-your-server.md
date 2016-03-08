@@ -16,7 +16,7 @@ tags: null
 
 We’ve recently switched from a traditional PHP-based CMS to a static build on Netlify, and I couldn’t be happier with the results. But while making the change, we came up against a fairly thorny problem — what to do about our backend server.
 
-<!--excerpt-->
+<!-- excerpt -->
 
 Static sites are awesome. But there are some things where it’s unavoidable to run a backend server — client records, payment processing, and so on. If you’re starting from scratch, you can use an API or cloud-based services to handle dynamic content on your static site via Javascript (say, through a single-page app). But having a legacy system means that it’s not always simple to make the switch. Taking a membership database that’s currently locked away in your old CMS and trying to open it up via a nice RESTful API can be a daunting task, especially for a small organisation like Giving What We Can.
 
