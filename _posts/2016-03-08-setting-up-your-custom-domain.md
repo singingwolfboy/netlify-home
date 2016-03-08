@@ -20,8 +20,8 @@ A Record: your raw domain (`example.com`) should point to `198.61.251.14`
 
 ![Example DNS Records](/img/docs/dns-records.png)
 
-For a step-by-step walkthrough with screenshots, choose your provider:
-[GoDaddy](#godaddy) 
+For a step-by-step walkthrough with screenshots, choose your provider:  
+[GoDaddy](#godaddy)  
 [NameCheap](#namecheap)
 
 
