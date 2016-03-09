@@ -67,3 +67,16 @@ It could take up to 48 hours (but most likely won't) for the changes to go into 
 
 If you've purchased your domain on NameCheap, follow these simple instructions to point it at your netlify site:
 
+Step 1: In your dashboard, click  `Manage`
+![namecheap1.png](/uploads/namecheap1.png)
+
+Step 2: Click  `Advanced DNS`
+![namecheap2.png](/uploads/namecheap2.png)
+
+Step 3: Under  `Type` select  `CNAME Record`. Make sure the  `Host` is set to  `www` and  `Value` is the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites), then click the green check mark
+![namecheap3.png](/uploads/namecheap3.png)
+
+Step 4: Under  `Type` select  `A Record`. Set the value to  `198.61.251.14` and click the green check mark
+![namecheap4.png](/uploads/namecheap4.png)
+
+Your custom domain is now pointing at your netlify site. Remember, it may take up to 30 minutes for everything to work correctly.
