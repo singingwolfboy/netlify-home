@@ -79,4 +79,20 @@ Step 3: Under  `Type` select  `CNAME Record`. Make sure the  `Host` is set to  `
 Step 4: Under  `Type` select  `A Record`. Set the value to  `198.61.251.14` and click the green check mark
 ![namecheap4.png](/uploads/namecheap4.png)
 
-Your custom domain is now pointing at your netlify site. Remember, it may take up to 30 minutes for everything to work correctly.
+Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+
+## Google Domains <a id="googledomains"></a>
+
+Step 1: Click the server icon under  `DNS`
+![goog1.png](/uploads/goog1.png)
+
+Step 2: Scroll down to `Custom Resource Records`
+![goog2.png](/uploads/goog2.png)
+
+Step 3: Choose  `A` from the dropdown menu, and set the IPv4 address to  `198.61.251.14`, then click  `Add`
+![goog3.png](/uploads/goog3.png)
+
+Step 4: Choose  `CNAME` from the dropdown, then set the first box to  `www` and enter the name of your site as shown on [app.netlify.com/sites] (https://app.netlify.com/sites) in the  `Domain` box, then click  `Add`
+![goog4.png](/uploads/goog4.png)
+
+Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
