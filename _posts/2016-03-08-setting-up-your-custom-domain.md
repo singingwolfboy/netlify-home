@@ -62,3 +62,8 @@ Step 8: Don't forget to save!
 ![godaddy8.png](/uploads/godaddy8.png)
 
 It could take up to 48 hours (but most likely won't) for the changes to go into effect.
+
+## NameCheap<a id="namecheap"></a>
+
+If you've purchased your domain on NameCheap, follow these simple instructions to point it at your netlify site:
+
