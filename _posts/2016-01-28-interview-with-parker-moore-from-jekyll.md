@@ -16,11 +16,7 @@ While there is a constantly growing roster of static web tools available for dev
 
 Aaron: _What you do outside of working on Jekyll?_
 
-Parker: I'm a software developer at VSCO, Visual Supply Company is what it stands for.
-
-_That's the one that shows up in everybody's hashtags on Instagram, right?_
-
-Yeah, #VSCO and #VSCOcam are popular on various social networks. I do server-side software engineering for them.
+Parker: I'm an engineer at GitHub, working on GitHub Pages.
 
 _Can you tell us a little bit about how you got involved with Jekyll, and how you got to the point where you now are the one who is pushing Jekyll 3.0 live?_
 
