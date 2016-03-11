@@ -130,14 +130,14 @@ permalink: /index.html
     
     <div class="bg-light-muted-2 muted">
 
-      <div class="content">
+      <div class="content content--narrow">
         
         <div class="md-flex md-flex--row-reverse mb-60">
 
 
           <!-- Services Section -->
         
-          <section id="services" class="blurb center mt-50 mb-50">
+          <section id="services" class="blurb center mt-50 mb-50 md-flex-basis--s">
             <div class="blurb-hd">
               <h2 class="blurb-title left">Services</h2>
             </div>
@@ -181,10 +181,10 @@ permalink: /index.html
           
           {% assign today = site.time | to_date %}          
           
-          <section id="history" class="blurb center mt-50 mb-50">
+          <section id="history" class="blurb center mt-50 mb-50 md-flex-basis--m">
             <header class="blurb-hd">
               <h2 class="blurb-title left">Status History</h1>
-              <div class="blurb-meta dropdown-container right">
+              <div class="blurb-meta right dropdown">
                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Last 30 days
                 </a>
@@ -229,8 +229,7 @@ permalink: /index.html
 
                     {% assign counter = counter | plus: 1 %}
 
-                    <article id="incident-{{ counter }}" class="incident text">
-
+                    <article id="incident-{{ counter }}" class="incident">
                       <header>
                         <h1 class="incident-title delta mb-0">{{ incident.title}}</h1>
                         <time class="incident-date x-small">{{ incident.date | date: '%Y-%m-%d' }}</time>
@@ -242,17 +241,17 @@ permalink: /index.html
                           </a>
                         {% endif %}
                       </header>
-
-                      {{ incident.description | markdownify }}
-
+                      <div class="incident-description text">
+                        {{ incident.description | markdownify }}
+                      </div>
                       {% if incident.details != nil and incident.details != empty %}
                       <div class="details" id="incident-details-{{ counter }}">
                         <a class="details-more small block" href="#incident-details-{{ counter }}">
                             Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
                         </a>
                         <div class="details-bd">
-                          <div class="incident-details">
-                            {{ incident.details | markdownify }}
+                          <div class="text">
+                           {{ incident.details | markdownify }}
                           </div>
                           <a class="details-less small block" href="#incident-{{ counter }}">
                             Hide Details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
@@ -294,13 +293,13 @@ permalink: /index.html
   <script id="js-template-incident" type="template">
     <li class="incidents">
     {{#incidents}}
-      <article class="incident text">
+      <article class="incident">
       
          <header>
-           <h1 class="delta mb-0">{{ incident.title}}</h1>
-           <time class="x-small">{{ incident.date }}</time>
+           <h1 class="incident-title delta mb-0">{{ incident.title}}</h1>
+           <time class="incident-date x-small">{{ incident.date }}</time>
            {{#open }}
-           <a title="This issue is still open">
+           <a class="incident-status" title="This issue is still open">
              <svg class="append muted" width="16" height="16">
                <use xlink:href="#icon-{{ incident.severity }}" />
              </svg>
@@ -308,7 +307,9 @@ permalink: /index.html
             {{/open}}
          </header>
        
-         {{{ description }}}
+         <div class="incident-description text">
+           {{{ description }}}
+         </div>
          
          {{#hasDetails}}
          <div class="details" id="incident-details-{{ counter }}">
@@ -316,7 +317,9 @@ permalink: /index.html
                Show Details<svg width="16" height="16" class="append"><use xlink:href="#icon-more" /></svg>
            </a>
            <div class="details-bd">
-             {{{ details }}}
+             <div class="text">
+               {{{ details }}}
+             </div>
              <a class="details-less small block" href="#incident-{{ counter }}">
                Hide Details<svg width="16" height="16" class="append"><use xlink:href="#icon-less" /></svg>
              </a>

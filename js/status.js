@@ -90,7 +90,7 @@
   
   function updateHistoryDropdown($link) {
     $link
-      .closest(".dropdown-container")
+      .closest(".dropdown")
         .find(".selected").removeClass("selected").end()
         .find(".dropdown-toggle").text($link.text()).end()
       .end()
