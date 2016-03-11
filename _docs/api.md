@@ -1,11 +1,4 @@
----
-cmsUserSlug: api
-date: 2015-10-21T00:00:00.000Z
-title: API
-position: 100
----
-
-## Netlify REST API
+# Netlify REST API
 
 Netlify is a hosting service for the programmable web. It understands your documents and provides an API to handle atomic deploys of web sites, manage form submissions, inject javascript snippets, and much more. This is a REST-style API that uses JSON for serialization and OAuth 2 for authentication.
 
