@@ -16,7 +16,7 @@ While there is a constantly growing roster of static web tools available for dev
 
 Aaron: _What you do outside of working on Jekyll?_
 
-Parker: I'm an engineer at GitHub, working on GitHub Pages.
+Parker: I’m a software engineer at GitHub, where I help build GitHub Pages. My work also includes maintaining Jekyll and helping grow the community surrounding the project. 
 
 _Can you tell us a little bit about how you got involved with Jekyll, and how you got to the point where you now are the one who is pushing Jekyll 3.0 live?_
 
