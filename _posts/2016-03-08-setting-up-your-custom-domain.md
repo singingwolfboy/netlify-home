@@ -31,7 +31,9 @@ Once you've added these new values, visiting `www.example.com` will take you to 
 Is it your first time setting up a custom domain? No worries, we can help with that (we've all been there). For a step-by-step walkthrough with screenshots, choose your provider:  
 [GoDaddy](#godaddy)  
 [NameCheap](#namecheap)
-
+[Google Domains](#googledomains)
+[DNSimple](#dnsimple)
+[DNS Made Easy](#madeeasy)
 
 ## Godaddy <a id="godaddy"></a>
 
@@ -96,3 +98,5 @@ Step 4: Choose  `CNAME` from the dropdown, then set the first box to  `www` and 
 ![goog4.png](/uploads/goog4.png)
 
 Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+
+##
