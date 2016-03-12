@@ -85,6 +85,8 @@ Your custom domain is now pointing at your netlify site. Remember, it may take u
 
 ## Google Domains <a id="googledomains"></a>
 
+If you've purchased your domain on Google Domains, follow these simple instructions to point it at your netlify site:
+
 Step 1: Click the server icon under  `DNS`
 ![goog1.png](/uploads/goog1.png)
 
@@ -99,4 +101,7 @@ Step 4: Choose  `CNAME` from the dropdown, then set the first box to  `www` and 
 
 Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
 
-##
+## DNSimple <a id="dnsimple"></a>
+
+If you've purchased your domain on DNSimple, follow these simple instructions to point it at your netlify site:
+
