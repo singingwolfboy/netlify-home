@@ -30,10 +30,10 @@ Once you've added these new values, visiting `www.example.com` will take you to 
 
 Is it your first time setting up a custom domain? No worries, we can help with that (we've all been there). For a step-by-step walkthrough with screenshots, choose your provider:  
 [GoDaddy](#godaddy)  
-[NameCheap](#namecheap)
-[Google Domains](#googledomains)
-[DNSimple](#dnsimple)
-[DNS Made Easy](#madeeasy)
+[NameCheap](#namecheap)  
+[Google Domains](#googledomains)  
+[DNSimple](#dnsimple)  
+[DNS Made Easy](#madeeasy)  
 
 ## Godaddy <a id="godaddy"></a>
 
