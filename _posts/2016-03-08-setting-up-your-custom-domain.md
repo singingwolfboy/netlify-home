@@ -121,3 +121,27 @@ Step 5: Enter the name of your site as shown on [app.netlify.com/sites](https://
 ![dnsimple5.png](/uploads/dnsimple5.png)
 
 Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+
+## DNS Made Easy <a id="madeeasy"></a>
+
+If you've purchased your domain on DNSimple, follow these simple instructions to point it at your netlify site:
+
+Step 1: Click  `Domains`
+![madeeasy1.png](/uploads/madeeasy1.png)
+
+Step 2: Click the name of your domain
+![madeeasy2.png](/uploads/madeeasy2.png)
+
+Step 3: Under  `A Records` click the  `+` sign
+![madeeasy3.png](/uploads/madeeasy3.png)
+
+Step 4: Leave the  `Name` field blank, enter  `198.61.251.14` in the  `IP` field, and click  `Submit`
+![madeeasy4.png](/uploads/madeeasy4.png)
+
+Step 5: Under  `CNAME Records` click the  `+` sign
+![madeeasy5.png](/uploads/madeeasy5.png)
+
+Step 6: In the  `Name` field enter  `www`, and in the  `Alias to` field enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites). Then click  `Submit`
+![madeeasy6.png](/uploads/madeeasy6.png)
+
+Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
