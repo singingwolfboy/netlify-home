@@ -96,7 +96,7 @@ Step 2: Scroll down to `Custom Resource Records`
 Step 3: Choose  `A` from the dropdown menu, and set the IPv4 address to  `198.61.251.14`, then click  `Add`
 ![goog3.png](/uploads/goog3.png)
 
-Step 4: Choose  `CNAME` from the dropdown, then set the first box to  `www` and enter the name of your site as shown on [app.netlify.com/sites] (https://app.netlify.com/sites) in the  `Domain` box, then click  `Add`
+Step 4: Choose  `CNAME` from the dropdown, then set the first box to  `www` and enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites) in the  `Domain` box, then click  `Add`
 ![goog4.png](/uploads/goog4.png)
 
 Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
@@ -105,3 +105,19 @@ Your custom domain is now pointing at your netlify site. Remember, it may take u
 
 If you've purchased your domain on DNSimple, follow these simple instructions to point it at your netlify site:
 
+Step 1: From your dashboard, click the name of your domain
+![dnsimple1.png](/uploads/dnsimple1.png)
+
+Step 2: Click  `Services`
+![dnsimple2.png](/uploads/dnsimple2.png)
+
+Step 3: Click  `Add or edit services`
+![dnsimple3.png](/uploads/dnsimple3.png)
+
+Step 4: Scroll down to netlify, then click  `Add service`
+![dnsimple4.png](/uploads/dnsimple4.png)
+
+Step 5: Enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites) and then click  `Complete Netlify Setup`
+![dnsimple5.png](/uploads/dnsimple5.png)
+
+Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
