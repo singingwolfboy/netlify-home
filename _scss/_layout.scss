@@ -39,8 +39,8 @@ img {
 }
 
 
-/* 
- * Icons 
+/*
+ * Icons
  */
 svg.append {
   position: relative;
@@ -159,6 +159,9 @@ svg.prepend {
  */
 .media {
   @include clearfix-me(micro);
+}
+a.media {
+  display: block;
 }
 .media-img {
   float: left;
