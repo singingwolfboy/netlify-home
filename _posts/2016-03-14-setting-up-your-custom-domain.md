@@ -18,9 +18,9 @@ First, you want to  tell netlify to use your custom domain. You can do this thro
 
 **We highly recommend using a www domain instead of an apex domain (ie. www.example.com instead of example.com**. Unless your DNS provider supports ANAME or ALIAS records for the apex domain you won’t be able to take full advantage of our CDN unless you use the **www** prefix or a similar subdomain. If you want an apex domain to point to your site, follow our documentation [here](https://www.netlify.com/docs/custom-domains#naked-domains).
 
-<!-- excerpt -->
-
 Next, the standard values: If your registrar isn't listed [below](#walkthroughstart), then you can use these standard values to set up your domain.
+
+<!-- excerpt -->
 
 **CNAME**: `www` should point at `example.netlify.com` (replace `example` with the name of your site as listed at [https://app.netlify.com/sites](https://app.netlify.com/sites))
 
