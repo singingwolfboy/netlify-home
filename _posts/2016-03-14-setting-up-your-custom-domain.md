@@ -38,6 +38,7 @@ Is it your first time setting up a custom domain? No worries, we can help with t
 [Google Domains](#googledomains)  
 [DNSimple](#dnsimple)  
 [DNS Made Easy](#madeeasy)  
+[1and1](#1and1)  
 
 ## Godaddy <a id="godaddy"></a>
 
@@ -147,5 +148,38 @@ Step 5: Under  `CNAME Records` click the  `+` sign
 
 Step 6: In the  `Name` field enter  `www`, and in the  `Alias to` field enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites). Then click  `Submit`
 ![madeeasy6.png](/uploads/madeeasy6.png)
+
+Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+
+## 1and1 <a id="1and1"></a>
+
+If you've purchased your domain on 1and1, follow these simple instructions to point it at your netlify site:
+
+Step 1: After logging in to 1and1, click  `Domains` in the left sidebar  
+![1and11.png](/uploads/1and11.png)
+
+Step 2: Click  `Manage domains`  
+![1and12.png](/uploads/1and12.png)
+
+Step 3: Click  `Edit DNS Settings`  
+![1and13.png](/uploads/1and13.png)
+
+Step 4: Scroll down to  `A/AAAA and CNAME Records`. Select  `Other IP address` and enter  `198.61.251.14` in the  `IPv4 Address` box. Then scroll to the bottom and click  `Save`  
+![1and14.png](/uploads/1and14.png)
+
+Step 5: After clicking  `Save`, you will be returned to the Domains page. Click  `Manage Subdomains`  
+![1and15.png](/uploads/1and15.png)
+
+Step 6: Click  `Create Subdomain`  
+![1and16.png](/uploads/1and16.png)
+
+Step 7: In the  `Create Subdomain` box, enter  `www`, then click  `Create Subdomain`
+![1and17.png](/uploads/1and17.png)
+
+Step 8: Click the down arrow to expand your options, then click  `Edit DNS Settings`  
+![1and18.png](/uploads/1and18.png)
+
+Step 9: Scroll down to  `A/AAAA and CNAME Records`. Select  `CNAME`. In the  `Alias` field enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites). Then click  `Save`  
+![1and19.png](/uploads/1and19.png)
 
 Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
