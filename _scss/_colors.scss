@@ -168,10 +168,12 @@ svg.muted {
 /* Filters */
 .grayscale {
   filter: grayscale(100%);
+  transition: ease .3s;
   .no-touch a:hover & {
     filter: grayscale(0%);
   }
 }
+
 .colorize {
   filter: sepia() hue-rotate(130deg) saturate(70%) brightness(98%);
   opacity: 0.9;
