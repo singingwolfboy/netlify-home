@@ -1,0 +1,37 @@
+---
+layout: default
+title: Features
+---
+<article class="bg-light muted">
+  <div class="content content--narrow">
+    <h1 class="tera text-center mt-110">{{page.title}}</h1>
+
+    <div class="mb-70">
+    {% assign sections = site.features | sort: 'position' %}
+
+    {% for section in sections %}
+      <section class="mb-30">
+        <header class="text-center mb-30">
+          <svg width="120" height="120" class="highlight">
+            <use xlink:href="#polyhedron" />
+          </svg>
+          <h2 class="alpha highlight mt-0">{{ section.title }}</h2>
+        </header>
+        <div class="l-2-col-auto">
+          {% for feature in section.features %}
+          <div class="blurb break-inside-avoid">
+            <h3 class="blurb-title large">{{ feature.title }}</h3>
+            <div class="blurb-text">
+            {{ feature.body | markdownify }}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+    </div>
+
+    {% include pricing-footer.html %}
+  </div>
+  </div>
+</article>

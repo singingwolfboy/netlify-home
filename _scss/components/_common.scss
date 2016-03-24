@@ -20,7 +20,8 @@
   br {
     display: none;
   }
-  .address:before {
+  .address:before,
+  .address:after {
     content: " – ";
   }
 }

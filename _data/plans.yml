@@ -32,80 +32,6 @@ plans:
     price: "39"
     price_note: "Monthly billed once a year or $49 month to month"
 
-all:
-  - title: Global CDN Network
-    info: Sites hosted on netlify are served straight out of our CDN nodes around the world with incredibly low latency.
-    # link_text: What is a CDN, what does it mean for my site, and why are netlify more than twice as fast as the other static hosting companies CDNs?
-  - title: Instant Cache Invalidation
-    info: No need to wait for your CDN to update. The new version of your Site is live the moment your deploy is done.
-    link_text: Why is ICI so important?
-    link: /blog/2015/09/11/instant-cache-invalidation
-  - title: Drag'n Drop Interface
-    info: If you just need to host your static site just drag your site folder onto your browser and in seconds you're live accross a lightning fast, global CDN.
-  - title: Smooth CLI
-    info: We are constantly working on the CLI to make sure that you have the smoothest and most intuitive interface possible while working with netlify. Remember, if you have any suggestions for improvements, please let us know!
-    link_text: See it here
-    link: /docs/cli
-  - title: Secure Environment
-    info: We never store any GitHub tokens on our servers and your builds are run in a completely locked down environment.
-    link_text: Read more about GitHub tokens & netlify
-    link: /docs/github-permissions
-  - title: Link to GitHub or Bitbucket
-    info: "Continous Deployment: Easily link a netlify site to a GitHub or Bitbucket repo. Whenever you push to GitHub we run your build and deploy the result."
-    link_text: What can CD do for my workflow?
-    link: /blog/2015/09/17/continuous-deployment
-  - title: Atomic Deploys
-    info: No inconsistent state while you're uploading. Your deploy only goes live when all changes have been uploaded. So if you loose connection while uploading, no problem!
-    link_text: The importance of atomic deploys
-    link: /docs/versioning-and-rollbacks
-  - title: Netlify subdomain
-    info: If you either don't have a domain or just need to do a test site use yourdomain.netlify.com
-    link_text: Example
-    link: http://speedtest.netlify.com/
-  - title: Domain registration
-    info: Register and manage your domain from within netlify. We also provide a complete DNS panel.
-    #link_text: Did you know that the longest legal domain name is 63 characters starting with a letter or number?
-  - title: Redirect & Rewrite Rules
-    info: Our flexible redirect and rewrite rules allow you to easily handle migrations from old site structures, without SEO penalties or support history push state for your single page apps.
-    link_text: Learn how to configure redirect & rewrite rules
-    link: /docs/redirects
-  - title: Inject JS into all pages
-    info: Add Google Analytics, retargeting codes or any other script you want, straight from the web UI.
-    link_text: Easy Snippet Injection
-    link: /docs/inject-analytics-snippets
-  - title: Staging environments
-    info: Netlify's CLI (Command Line Interface) makes it easy to setup as many environments as you want, each deploying to a different site, and our free plan is great for staging sites.
-    link_text: View the CLI
-    link: /docs/cli
-  - title: Versioning & rollbacks
-    info: You can always view and download every deploy you ever made and instantly roll back your site to an earlier version. All at the push of a button, no setup required.
-    link_text: Read more
-    link: /docs/versioning-and-rollbacks
-  - title: Cached Dependencies
-    info: Dependencies (rubygems, npm, etc.) are automatically installed and cached between builds to keep build time down.
-    link_text: Read more about dependencies and run times
-    link: /docs/continuous-deployment
-  - title: Email / Chat support
-    info: Anyone, including those on free plans, are always more than welcome to reach out with support questions over chat or mail. We like you.
-  - title: Custom HTTP headers
-    info: Take full control over any HTTP header our server sends. Easily add CORS or Content Security Headers to your site.
-    link_text: What does this mean and why is this important?
-    link: /docs/headers-and-basic-auth
-  - title: Password protection
-    info: It's super easy to add a password to your site. Ideal for staging sites or for sharing prototypes with clients. Or for secrets!
-    link_text: Example
-    link: /docs/password-protection
-  - title: Webhooks & notifications
-    info: Support for both inbound and outbound webhooks. Trigger builds with a POST request or receive Slack notifications for new form submissions, deploys or build failures.
-    link_text: What can you do with webhooks?
-    link: /docs/webhooks
-  - title: Rest API
-    info: Netlify's own UI is an Angular app built on top of a powerful REST API. You get full access to all of this from your programming language of choice.
-    link_text: Read the full api documentation
-    link: /docs/api
-  - title: Love
-    info: It's why we do it
-
 attributes:
   - title: Custom Domain
     postfix: " "
@@ -144,16 +70,6 @@ attributes:
   - title: DNS hosting with DNS panel
     details: ["No", "Yes", "Yes", "Yes"]
     info: Netlify includes high uptime DNS hosting, with a simple but powerful DNS panel and full API access.
-  - title: Basic SSL
-    details: ["Yes", "Yes", "Yes", "Yes"]
-    info: Enable HTTPS for your site. Basic SSL is based on a browser standard called SNI that's supported by all modern browsers. Free certificate included in your plan.
-    link_text: Why you want SSL on your site
-    link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
-  - title: Full SSL
-    details: ["No", "No", "No", "Yes"]
-    info: Full SSL gives you an additional certificate that makes sure HTTPS works everywhere. All modern browsers support our basic SSL solution, but IE on Windows XP, older Androids, and many feed readers lack support.
-    link_text: Why you want SSL on your site
-    link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
   - title: Prerendering
     details: ["No", "No", "Yes", "Yes"]
     info: Add a prerendering backend for your Single Page App. Netlify will proxy crawler requests straight to prerender.io or any other prerender backend so your SPA gets its SEO juice.
@@ -163,33 +79,3 @@ attributes:
     details: ["No", "Yes", "Yes", "Yes"]
     info: Call our hotline to talk with a real human being.  No automated labyrinths of hell where you have to listen to an audiobook and press 17 times to end up leaving a voicemail. We promise.
     #link_text: The horror
-
-enterprise:
-  - title: Dedicated SSL certificate
-    info: A dedicated SSL certificate requires a unique IP address in each of our CDN PoPs. This will give you full HTTPS support in all browsers without any fallback certificate.
-    link_text: Why you want SSL on your site
-    link: /blog/2014/10/03/five-reasons-you-want-https-for-your-static-site
-  - title: Migration services
-    info: Need help migrating from a dynamic site to a fully static setup on netlify? We can help you find a smooth path to 10x the performance.
-  - title: Prioritized Feature Requests
-    info: Do you want a say in what features we add next? Have specific requirements that would need extra development?
-  - title: Geo IP based redirects
-    info: Redirect users from China, Taiwan or Hong Kong to /china or redirect visitors with a preference for Spanish to /es. Easily configurable with netlify.
-    link_text: Read more about it here
-    link: /docs/redirects#geoip-and-language-based-redirects
-  - title: Private build environment
-    info: Want even faster builds, and a guarentee for no build queues? Get your own dedicated build environment.
-  - title: 3rd party Authentication
-    info: Use authentication providers like Stormpath to limit access to your site. Ideal for running private documentation for your global marketing, developer or sales teams integrated with 3rd party auth providers.
-  - title: Personal Account manager
-    info: An account manager with a real name that you talk to everytime anyone from your organisation needs support or any other contact. Someone who knows all the ins and outs of the account and your needs.
-  - title: 24/7/365 support
-    info: Yes. All day, all night, even on christmas. Please don't call us on chrismas unless you really have to.
-  - title: Custom SLA
-    info: Custom service level agreement. Specific requirements of uptime, support, developer requests prioritisation, or other features, can all be part of a custom SLA.
-  - title: Advanced DDOS protection
-    info: Netlify runs a very efficient CDN and is very resilient to DDoS attack, but if you want to be secured even against against massive, global, targeted DDoS attacks, we can setup bullet-proof protection with specialized partners.
-  - title: Custom API rate limits
-    info: During normal usage you'll never run into API limits, but if you're building your own site builder, deploy engine or similar integrations, we're happy to find a plan that fits.
-  - title: Streaming CDN logs
-    info: View HTTP logs for your site live through our web UI or subscribe to feeds to do your own log processing. Get notified on 404 spikes, see CDN response times and traffic distribution.

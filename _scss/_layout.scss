@@ -237,8 +237,53 @@ a.media {
 .l-2-col-auto {
   column-count: 2;
   column-gap: 50px;
+
   > p:first-child {
     margin-top: 0;
+  }
+}
+
+.break-inside-avoid {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+}
+
+/* Grid */
+.l-grid {
+  display: inline-block;
+  letter-spacing: -.31em;
+  list-style-type: none;
+  word-spacing: -.43em;
+
+  &:before,
+  &:after,
+  *,
+  *:before,
+  *:after {
+    letter-spacing: normal;
+    white-space: normal;
+    word-spacing: normal;
+  }
+
+  > * {
+    @extend .content;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 

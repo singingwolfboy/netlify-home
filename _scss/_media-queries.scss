@@ -1,10 +1,19 @@
-.show-med {
+.show-med, .show-for-small, .hide-for-large {
   display: none;
 }
+
 
 @include breakpoint($bp-large) { //* Screen is smaller than comp – start making things responsive
   body {
     min-width: 0; // We're going responsive, baby
+  }
+
+  .show-for-large {
+    display: none;
+  }
+
+  .hide-for-large {
+    display: inherit;
   }
 
   /*
@@ -415,6 +424,14 @@
 
 
 @include breakpoint($bp-small) { //* Major breakpoint. Stack all the things (almost)
+  .show-for-small {
+    display: inherit;
+  }
+
+  .hide-for-small {
+    display: none;
+  }
+
   /*
    * Reduce content width to readable line length
    */
@@ -437,7 +454,8 @@
       br {
         display: block;
       }
-      .address:before {
+      .address:before,
+      .address:after {
         display: none;
       }
     }

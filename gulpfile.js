@@ -13,9 +13,9 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    var cmd = ['exec', 'jekyll', 'build', '--incremental', '-t'];
+    var cmd = ['exec', 'jekyll', 'build', '-t'];
     if (process.env.CMS_ENV == 'staging') {
-      cmd.push("--future")
+      cmd.push("--future");
     }
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn('bundle', cmd, {stdio: 'inherit'})
@@ -71,15 +71,16 @@ gulp.task('browser-sync-status', ['sass', 'status-build'], function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-  gulp.src('./_scss/*.scss')
-          .pipe(sass({
-            //onError: browserSync.notify
-          }))
-          .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-          .pipe(gulp.dest('_site/css'))
-          .pipe(gulp.dest('_status/css'))
-          .pipe(browserSync.reload({stream:true}))
-          .pipe(gulp.dest('./css'));
+    gulp.src('./_scss/*.scss')
+    .pipe(sass({
+      errLogToConsole: true,
+      onError: browserSync.notify
+    }))
+    .pipe(prefix({browsers: ['> 1%']}))
+    .pipe(gulp.dest('_site/css'))
+    .pipe(gulp.dest('_status/css'))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(gulp.dest('./css'));
 });
 
 /**
@@ -87,13 +88,44 @@ gulp.task('sass', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch(['_scss/*.scss', '_scss/components/*.scss', '_scss/pages/*.scss'], ['sass']);
-    gulp.watch(['*.html', 'reseller/docs/*.md', '_layouts/*.html', '_includes/*.html', 'admin/*', '_posts/*', 'docs/*.md', 'img/*', 'js/*.js', '_plugins/*.rb', '_data/*.yml'], ['jekyll-rebuild']);
+    gulp.watch([
+      '_scss/*.scss',
+      '_scss/components/*.scss',
+      '_scss/pages/*.scss'
+    ], ['sass']);
+    gulp.watch([
+      '*.html',
+      '*.md',
+      '_data/*.yml',
+      '_docs/*.md',
+      '_features/*.md',
+      '_includes/*.html',
+      '_layouts/*.html',
+      '_plugins/*.rb',
+      '_posts/*',
+      '_reseller_docs/*.md',
+      'admin/*',
+      'img/*',
+      'js/*.js'
+    ], ['jekyll-rebuild']);
 });
 
 gulp.task('status-watch', function () {
-    gulp.watch(['_scss/*.scss', '_scss/components/*.scss', '_scss/pages/*.scss'], ['sass']);
-    gulp.watch(['status.html', '_includes/*.html', 'admin-status/*', 'admin-status/css/*', 'img/*', 'js/*.js', '_plugins/*.rb', '_incidents/*'], ['status-rebuild']);
+    gulp.watch([
+      '_scss/*.scss',
+      '_scss/components/*.scss',
+      '_scss/pages/*.scss'
+    ], ['sass']);
+    gulp.watch([
+      'status.html',
+      '_incidents/*',
+      '_includes/*.html',
+      '_plugins/*.rb',
+      'admin-status/*',
+      'admin-status/css/*',
+      'img/*',
+      'js/*.js'
+    ], ['status-rebuild']);
 });
 
 gulp.task('build', ['sass', 'jekyll-build']);

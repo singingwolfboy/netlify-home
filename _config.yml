@@ -30,7 +30,8 @@ collections:
     permalink: /reseller/docs/:title.html
   incidents:
     output: false
-
+  features:
+    output: false
 
 defaults:
   - scope:
