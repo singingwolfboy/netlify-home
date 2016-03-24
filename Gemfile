@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
-gem "jekyll"
+gem 'jekyll', '~> 3.1', '>= 3.1.2'
 gem "octopress-minify-html"
-gem "jekyll-srcset", "0.1.2"
+gem "jekyll-srcset", "0.1.3"
+gem 'jekyll-feed'
+gem 'redcarpet'
