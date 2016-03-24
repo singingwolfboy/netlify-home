@@ -18,9 +18,9 @@ layout: default
       <!-- Blurb -->
       <div class="media-bd">
         <div class="blurb center">
-          <h1 class="alpha highlight mt-0">
-            <span class="block">
-              <img src="/img/netlify-text.svg" />
+          <h1 class="alpha highlight mt-0 mb-30">
+            <span class="block mb-5">
+              <img src="/img/netlify-text.svg" alt="netlify" />
             </span>
             {% if page.deck %}
               {{ page.deck }}
@@ -129,9 +129,9 @@ layout: default
   <div class="content">
     <!-- Section with video button for smaller devices -->
     <p class="pullquote delta thin p--wide mt-40 mb-40">
-      <strong>25,000+</strong> Developers •
-      <strong>65,000+</strong> Web Sites •
-      <strong>400,000+</strong> Deploys
+      <strong>{{site.data.stats.developers}}</strong> Developers •
+      <strong>{{site.data.stats.websites}}</strong> Web Sites •
+      <strong>{{site.data.stats.deploys}}</strong> Deploys
     </p>
   </div><!-- end content -->
 </section>

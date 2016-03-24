@@ -106,10 +106,12 @@
   margin-right: 0;
 }
 
-.l-aside .blurb {
-  margin: 50px 0;
+.l-aside {
+  .blurb {
+    margin: 50px 0;
+  }
 
-  .loud {
-    color: $color-light;
+  .blurb-title {
+    opacity: .9;
   }
 }

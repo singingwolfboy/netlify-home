@@ -64,8 +64,17 @@ collections:
   - name: "data"
     label: "Misc"
     files:
+      - name: stats
+        label: Stats
+        description: Number of Developers, Web Sites and Deploys
+        file: _data/stats.yml
+        fields:
+          - {label: "Developers", name: "developers", widget: "string"}
+          - {label: "Web Sites", name: "websites", widget: "string"}
+          - {label: "Deploys", name: "deploys", widget: "string"}
       - name: testimonials
         label: Testimonials
+        description: Testimonials for the Home Page
         file: _data/testimonials.yml
         fields:
           - name: quotes
