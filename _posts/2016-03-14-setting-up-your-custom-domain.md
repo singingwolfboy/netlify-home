@@ -2,7 +2,7 @@
 title: Setting Up Your Custom Domain
 author: Aaron Autrand
 image: null
-short_title: Setting Up Your Custom Domain
+short_title: Setting Up Your Domain
 description: A step-by-step walkthrough on how to point your custom domain to netlify.
 thumbnail: /uploads/lv55uzmx.png
 cmsUserSlug: ""
