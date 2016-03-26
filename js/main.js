@@ -149,4 +149,114 @@
 
     $(this).closest(".js-item").toggleClass("open");
   });
+
+  // var $terminal = $(".js-terminal");
+  // if ($terminal.length) {
+  //   var script = [
+  //     {
+  //       prompt: '$', cmd: 'npm install netlify-cli', title: 'Install'
+  //     },
+  //     {
+  //       output: ['Installing ...', 'done']
+  //     },
+  //     {
+  //       prompt: '$', cmd: 'cd web-app'
+  //     },
+  //     {
+  //       prompt: 'web-app$', cmd: 'npm run build', title: 'Build'
+  //     },
+  //     {
+  //       output: ['building HTML pages', 'running post-css', 'babel compilation', 'all done, built output in dist/']
+  //     },
+  //     {
+  //       prompt: 'web-app$', cmd: 'ls dist'
+  //     },
+  //     {
+  //       output: ['css/<br>  js/<br>  /assets<br>  index.html<br>  about.html<br>  robots.txt</br>']
+  //     },
+  //     {
+  //       prompt: 'web-app$', cmd: 'netlify deploy', title: 'Deploy'
+  //     },
+  //     {
+  //       prompt: '  Create a new site (Y/n)?', cmd: 'Y'
+  //     },
+  //     {
+  //       prompt: '  Folder to deploy?', cmd: 'dist/'
+  //     },
+  //     {
+  //       output: ['Uploading....', 'Processing...', '  Your site is live at judge-recombination-12277.netlify.com']
+  //     }
+  //   ];
+  //
+  //   var $output      = $terminal.find('.js-terminal-output');
+  //   var $container   = $output.closest('pre');
+  //   var $title       = $terminal.find('.js-terminal-title');
+  //   var $nav         = $title.closest('.blurb');
+  //   var $template    = $title.closest('.js-terminal-title-template');
+  //   //$template.remove();
+  //
+  //   // var titles = [];
+  //   // for (var i in script) {
+  //   //   if (script[i].title) {
+  //   //     $nav.append($template.clone().find('.js-terminal-title').html(script[i].title).end());
+  //   //   }
+  //   // };
+  //
+  //
+  // //   var current = 0;
+  // //   var step = function() {
+  // //     var line = script[current];
+  // //     current = (current + 1) % (script.length - 1);
+  // //     if (current === 0) {
+  // //       $output.empty();
+  // //     }
+  // //     if (line.prompt) {
+  // //       var $lineOutput = $("<span><strong>" + line.prompt + "</strong> " + "</span>");
+  // //       $output.append($lineOutput);
+  // //       typeLine($container, $lineOutput, line.cmd, step);
+  // //     } else {
+  // //       printOutput($container, $output, line.output, function() {
+  // //         setTimeout(step, 2000);
+  // //       });
+  // //     }
+  // //     // if (line.title) {
+  // //     //   $nav.find(".js-terminal-title").each(function() {
+  // //     //     var $el = $(this);
+  // //     //     console.log('Checking if %s is %s', $el.html(), line.title);
+  // //     //     $el.parent().toggleClass('active', $el.html() == line.title);
+  // //     //   });
+  // //     // }
+  // //   }
+  // //   step();
+  // // }
+  //
+  // function typeLine($container, $el, line, nextStep) {
+  //   var chars = line.split('');
+  //   var type = function() {
+  //     var char = chars.shift();
+  //     if (char) {
+  //       $el.append(char);
+  //       setTimeout(type, Math.random() * 100 + 50)
+  //     } else {
+  //       $el.append("<br>");
+  //       nextStep();
+  //     }
+  //     $container[0].scrollTop = $container[0].scrollHeight;
+  //   }
+  //   type();
+  // }
+  //
+  // function printOutput($container, $el, lines, nextStep) {
+  //   console.log()
+  //   var output = function(i) {
+  //     if (lines[i]) {
+  //       $el.append("<div>  " + lines[i] + "</div>");
+  //       setTimeout(function() { output(i+1); }, Math.random() * 600 + 200);
+  //     } else {
+  //       nextStep();
+  //     }
+  //     $container[0].scrollTop = $container[0].scrollHeight;
+  //   }
+  //   output(0);
+  // }
 })();

@@ -31,7 +31,7 @@ a, a * {
 /*
  * Links that look like buttons
  */
-.button {
+.button, .tab-button {
   position: relative;
   display: block;
   overflow: hidden;
@@ -80,7 +80,9 @@ a, a * {
     color: $color-lightest;
   }
   .button--muted,
-  .button--muted .button-label {
+  .button--muted .button-label,
+  .tab-button,
+  .tab-button .button-label {
     color: $color-dark;
   }
 }

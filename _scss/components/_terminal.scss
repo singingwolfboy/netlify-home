@@ -1,0 +1,50 @@
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+
+.bg-terminal {
+  background: darken($color-darkest, 8%);
+}
+
+pre.terminal, pre.term--body {
+  background: transparent;
+  height: 36em;
+  margin-right: 20px;
+  padding: 10px;
+  overflow: hidden;
+  width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+  white-space: pre-wrap;
+}
+
+.term--input {
+  border: none;
+  background: inherit;
+  color: inherit;
+  font-family: monospace;
+  outline: 0;
+  width: 30em;
+}
+.term--history, .term--current {
+  margin: 0;
+}
+.term, .term--input {
+  font-size: var(--term-font-size);
+}
+
+.terminal-caret {
+  font-weight: 100;
+  animation: 1s blink step-end infinite;
+  margin-left: -5px;
+}
+
+.terminal strong {
+  //color: $color-highlight;
+}
