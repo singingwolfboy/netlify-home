@@ -1,4 +1,21 @@
 (function() {
+
+  $.fn.scrollIntoView = function(options) {
+    options = options || {};
+
+    var
+      $this = $(this),
+      top = $this.offset().top,
+      marginTop = parseInt($this.css('margin-top'), 10),
+      scrollTop = top - marginTop;
+
+    $('body, html').animate({
+      scrollTop: scrollTop
+    }, options);
+
+    return $this;
+  };
+
   $(".button").on('click', function(e) {
     $(this).addClass("js-clicked");
   });
@@ -24,15 +41,35 @@
 
   if ($('.docs-main').length) {
     var $ul = $("<ul class='nav'></ul>");
-    var $li, id;
+    var $li, href;
     $('.docs-main h2').each(function() {
-      id = "#" + this.id;
+      href = "#" + this.id;
       $li = $("<li><a></a></li>");
-      $li.find("a").attr("href", id).text(this.textContent).toggleClass("current", document.location.hash === id);
+      $li.find("a").attr("href", href).text(this.textContent).toggleClass("current", document.location.hash === href);
       $ul.append($li);
     });
     $(".docs-aside .active").append($ul);
   }
+
+  $('.nav a[href^=#]').on('click', function(e) {
+    e.preventDefault();
+    var
+      $this = $(this),
+      href = $this.attr('href');
+
+    $this
+      .closest('.nav')
+        .find('.current')
+          .removeClass('current')
+        .end()
+      .end()
+      .addClass('current');
+
+    $(href).scrollIntoView({complete: function() {
+      document.location.hash = href;
+    }});
+  });
+
 
   var player;
   var playerId = 0;
@@ -92,7 +129,7 @@
 
 
   $(".js--help-box-trigger").click(function(e) {
-    e.preventDefault()
+    e.preventDefault();
     $(".js-item .open").not(this).removeClass("open");
     $(this).toggleClass("open");
 
