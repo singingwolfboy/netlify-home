@@ -5,7 +5,7 @@ future: false
 markdown: redcarpet
 
 redcarpet:
-  extensions: ["smart", "tables", "no_intra_emphasis"]
+  extensions: ["smart", "tables", "no_intra_emphasis", "with_toc_data"]
 
 # kramdown:
 #   input: GFM
