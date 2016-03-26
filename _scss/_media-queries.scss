@@ -342,6 +342,7 @@
     text-align: center;
   }
 
+
   /* When we have a left menu, we move it to the bottom */
   .l-mobile-menu {
 
@@ -727,6 +728,7 @@
    */
   .legalese {
     padding: 0;
+    margin: 60px 0 0;
     h1 {
       padding-top: 0;
       border: none;
@@ -742,11 +744,15 @@
         padding: 0;
       }
     }
+    hr {
+      display: none;
+    }
   }
 
   .inline-block .icon-link--round {
     margin-right: 10px;
   }
+
   .nav--inline.nav--wide {
     li:last-child {
       margin-right: 0;
