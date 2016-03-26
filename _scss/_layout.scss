@@ -60,17 +60,23 @@ svg.prepend {
  */
 .content {
   @extend %cf;
-  position: relative;
-  max-width: $content-width + 3*$base-spacing;
-  padding: 0 2*$base-spacing;
   margin: 0 auto;
+  max-width: $content-width + 3 * $base-spacing;
+  padding: 0 (2 * $base-spacing);
+  position: relative;
 }
+
 .content--wide {
   max-width: $page-width;
-  padding: 0 2.5*$base-spacing 0 4*$base-spacing;
+  padding: 0 (2.5 * $base-spacing) 0 (4 * $base-spacing);
 }
+
 .content--narrow {
   max-width: $content-width;
+}
+
+.content--full-width {
+  max-width: none;
 }
 
 
@@ -296,10 +302,9 @@ a.media {
 }
 .l-wrap-inner {
   display: flex;
-  max-width: $page-width;
   margin: 0 auto;
   position: relative;
-  padding: 0 2.5*$base-spacing 0 4*$base-spacing;
+  padding: 0 2.5*$base-spacing;
   z-index: 1;
 }
 .l-wrap-inner--narrow {
@@ -314,7 +319,7 @@ a.media {
   padding-bottom: 80px;
 }
 .l-main--left {
-  padding-right: 60px;
+  padding-right: 80px;
 }
 .l-main--right {
   padding-left: 60px;

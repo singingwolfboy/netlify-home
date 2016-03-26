@@ -39,14 +39,14 @@
 
   /* Reduce paddings around main and aside */
   .l-wrap-inner--main-left {
-    padding: 0 ($aside-width + 50px) 0 80px;
+    padding: 0 ($aside-width + 45px) 0 50px;
     .l-aside {
       width: $aside-width + 40px;
       padding-left: 40px;
       margin-right: -($aside-width + 40px);
     }
     .l-main {
-      padding-right: 45px;
+      padding-right: 50px;
     }
     .post-title {
       font-size: 50px; /* Kilo */
@@ -272,7 +272,7 @@
     margin: 0;
     padding: 0;
   }
-  .l-main {
+  .l-main--left {
     border-bottom: 3px solid $color-highlight;
   }
   .l-wrap-inner--main-left {
@@ -342,42 +342,39 @@
     text-align: center;
   }
 
+  .l-wrap-inner--main-right {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
 
-  /* When we have a left menu, we move it to the bottom */
-  .l-mobile-menu {
-
-    .l-wrap-inner {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      max-width: none;
-      padding: 0;
-    }
-
-    .l-aside {
-      order: 2;
-    }
+  .l-aside--left {
+    border: solid $color-highlight;
+    border-width: 3px 0;
+    order: 2;
 
     .nav--primary {
       margin: 0;
       padding: 10px 40px;
     }
+  }
 
-    .l-main {
-      margin: 0 auto;
-      max-width: 745px + 2 * 40px;
-      padding: 0 40px 80px;
-    }
-
-    .nav .nav {
-      display: none;
-    }
+  .l-main--right {
+    margin: 0 auto;
+    max-width: 745px + 2 * 40px;
+    padding: 0 40px 80px;
   }
 
   .nav--inline.nav--wide {
     li {
       margin-right: 10px;
     }
+  }
+
+  .nav .nav {
+    display: none;
   }
 }
 
