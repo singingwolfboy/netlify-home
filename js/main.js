@@ -67,8 +67,6 @@
     $(this).addClass("playing");
   });
 
-  $(".js-pinned").pin({containerSelector: ".js-pinning-container", minWidth: 870, padding: {bottom: 80}});
-
   /* Responsive tables in documentation */
   $(".docs-main table").each(function() {
     var $td;

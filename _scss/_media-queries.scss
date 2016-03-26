@@ -342,24 +342,37 @@
     text-align: center;
   }
 
-  /* When we have a left menu, we make it a mobile top accordeon */
+  /* When we have a left menu, we move it to the bottom */
   .l-mobile-menu {
+
     .l-wrap-inner {
+      display: flex;
+      flex-direction: column;
       margin: 0;
-      padding: 0;
       max-width: none;
+      padding: 0;
     }
+
+    .l-aside {
+      order: 2;
+    }
+
     .nav--primary {
       margin: 0;
-      padding: 10px 0;
-      text-align: center;
+      padding: 10px 40px;
     }
+
     .l-main {
       margin: 0 auto;
+      max-width: 745px + 2 * 40px;
       padding: 0 40px 80px;
-      max-width: 745px + 2*40px;
+    }
+
+    .nav .nav {
+      display: none;
     }
   }
+
   .nav--inline.nav--wide {
     li {
       margin-right: 10px;
