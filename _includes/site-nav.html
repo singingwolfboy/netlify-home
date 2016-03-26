@@ -1,34 +1,38 @@
+{% assign fragments = page.url | replace: '.html', '' | split: '/' %}
+{% assign current = fragments[1] %}
+
 <nav id="navigation" class="site-nav inverse off-canvas-menu" role="navigation">
 
   <a href="#page" class="exit-off-canvas">
     <svg class="icon-close" width="10" height="10"><use xlink:href="#icon-close"></use></svg>
   </a>
 
-  <ul class="nav nav--primary">
-    <li><a href="/"{% if page.url == '/index.html' %} class="current"{% endif %}>Home</a></li>
-    <li><a href="/features.html"{% if page.url == '/features.html' %} class="current"{% endif %}>Features</a></li>
-    <li><a href="/pricing.html"{% if page.url == '/pricing.html' %} class="current"{% endif %}>Pricing</a></li>
-    <li><a href="/docs.html"{% if page.url == '/docs.html' %} class="current"{% endif %}>Docs</a></li>
-    <li><a href="/blog.html"{% if page.url == '/blog.html' %} class="current"{% endif %}>Blog</a></li>
-  </ul>
+  <div class="ml-40 mt-10">
+    <ul class="nav nav--primary">
+      <li><a href="/"{% if current == '' %} class="current"{% endif %}>Home</a></li>
+      <li><a href="/features.html"{% if current == 'features' %} class="current"{% endif %}>Features</a></li>
+      <li><a href="/pricing.html"{% if current == 'pricing' %} class="current"{% endif %}>Pricing</a></li>
+      <li><a href="/docs.html"{% if current == 'docs' %} class="current"{% endif %}>Docs</a></li>
+      <li><a href="/blog.html"{% if current == 'blog' %} class="current"{% endif %}>Blog</a></li>
+    </ul>
 
-  <ul class="nav nav--secondary">
-    <li><a href="/about.html"{% if page.url == '/about.html' %} class="current"{% endif %}>About</a></li>
-    <li><a href="/contact.html"{% if page.url == '/contact.html' %} class="current"{% endif %}>Contact</a></li>
-    <li><a href="/tos.html"{% if page.url == '/tos.html' %} class="current"{% endif %}>Terms &amp; Conditions</a></li>
-    <li><a href="/privacy.html"{% if page.url == '/privacy.html' %} class="current"{% endif %}>Privacy</a></li>
-  </ul>
+    <ul class="nav nav--secondary">
+      <li><a href="/about.html"{% if current == 'about' %}class="current"{% endif %}>About</a></li>
+      <li><a href="/contact.html"{% if current == 'contact' %} class="current"{% endif %}>Contact</a></li>
+      <li><a href="/tos.html"{% if current == 'tos' %} class="current"{% endif %}>Terms &amp; Conditions</a></li>
+      <li><a href="/privacy.html"{% if current == 'privacy' %} class="current"{% endif %}>Privacy</a></li>
+    </ul>
 
-  <ul class="nav nav--social nav--inline">
-    {% for link in site.social-links %}
-    <li>
-      <a href="{{link[1]}}" class="icon-link--square icon-link--{{link[0]}}">
-        <svg width="16" height="16" class="icon-{{link[0]}}--square">
-          <use xlink:href="#icon-{{link[0]}}"/>
-        </svg>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-
+    <ul class="nav nav--social nav--inline">
+      {% for link in site.social-links %}
+      <li>
+        <a href="{{link[1]}}" class="icon-link--square icon-link--{{link[0]}}">
+          <svg width="16" height="16" class="icon-{{link[0]}}--square">
+            <use xlink:href="#icon-{{link[0]}}"/>
+          </svg>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </nav>

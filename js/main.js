@@ -1,4 +1,4 @@
-(function() {
+(function($, document, location) {
 
   $.fn.scrollIntoView = function(options) {
     options = options || {};
@@ -23,7 +23,7 @@
   $(".js-swipe").swipe({
     swipe: function() {
       $(this).addClass("js-clicked");
-      document.location.href = $(this).attr("href");
+      location.href = $(this).attr("href");
     },
     threshold: 10,
     excludedElements: ""
@@ -45,20 +45,20 @@
     $('.docs-main h2').each(function() {
       href = "#" + this.id;
       $li = $("<li><a></a></li>");
-      $li.find("a").attr("href", href).text(this.textContent).toggleClass("current", document.location.hash === href);
+      $li.find("a").attr("href", href).text(this.textContent).toggleClass("current", location.hash === href);
       $ul.append($li);
     });
-    $(".docs-aside .active").append($ul);
+    $(".docs-aside .active").toggleClass('current', !location.hash).append($ul);
   }
 
-  $('.nav a[href^=#]').on('click', function(e) {
+  $('.site-nav a[href^=#]').on('click', function(e) {
     e.preventDefault();
     var
       $this = $(this),
       href = $this.attr('href');
 
     $this
-      .closest('.nav')
+      .closest('.site-nav')
         .find('.current')
           .removeClass('current')
         .end()
@@ -66,7 +66,7 @@
       .addClass('current');
 
     $(href).scrollIntoView({complete: function() {
-      document.location.hash = href;
+      location.hash = href;
     }});
   });
 
@@ -184,4 +184,4 @@
 
     $(this).closest(".js-item").toggleClass("open");
   });
-})();
+})(jQuery, document, window.location);

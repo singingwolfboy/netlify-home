@@ -1,3 +1,7 @@
+{% assign fragments = page.url | replace: '.html', '' | split: '/' %}
+{% assign current = fragments[1] %}
+{% assign page_names = 'features,pricing,docs,blog,about,contact' | split: ',' %}
+
 <!-- Site Header -->
 <header class="site-header bb bb--medium inverse" role="banner">
   <div class="content content--wide">
@@ -14,18 +18,17 @@
     <nav class="top-nav show-for-large right mt-35">
 
       <ul class="nav nav--primary inline">
-        <li><a href="/features.html" class="{% if page.url == '/features.html' %}current{% endif %}">Features</a></li>
-        <li><a href="/pricing.html" class="{% if page.url == '/pricing.html' %}current{% endif %}">Pricing</a></li>
-        <li><a href="/docs.html" class="{% if page.url == '/docs.html' %}current{% endif %}">Docs</a></li>
-        <li><a href="/blog.html" class="{% if page.url == '/blog.html' %}current{% endif %}">Blog</a></li>
-        <li><a href="/about.html" class="{% if page.url == '/about.html' %}current{% endif %}">About</a></li>
-        <li><a href="/contact.html" class="{% if page.url == '/contact.html' %}current{% endif %}">Contact</a></li>
+        {% for page_name in page_names %}
+        <li><a href="/{{page_name}}.html" class="{% if current == page_name %}current{% endif %}">{{page_name | capitalize}}</a></li>
+        {% endfor %}
+        <li>
+          <a href="https://app.netlify.com" class="button button--pill button--small button--inline">
+          <span class="button-container">
+            <span class="button-label">Log In</span>
+          </span>
+          </a>
+        </li>
       </ul>
-      <a href="https://app.netlify.com" class="button button--pill button--small button--inline">
-        <span class="button-container">
-          <span class="button-label">Log In</span>
-        </span>
-      </a>
     </nav>
 
     <nav class="top-nav hide-for-large right mt-35">
