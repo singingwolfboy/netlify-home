@@ -84,7 +84,7 @@ html {
 }
 
 .nav {
-  margin: 5px 0 5px 70px;
+  margin: 0 0 0 70px;
   text-transform: uppercase;
 
   a {
@@ -103,9 +103,13 @@ html {
 
   .nav {
     background: $nav-bg-color;
+    line-height: 2;
+    margin-bottom: 15px;
     margin-left: -10000px;
-    padding: 18px 15px 18px 10035px;
+    padding: 15px;
+    padding-left: 10030px;
     position: relative;
+    text-transform: none;
   }
 }
 
@@ -149,6 +153,10 @@ html {
   .inverse & {
     color: $nav-secondary-link-color;
   }
+}
+
+.nav--nested {
+  line-height: 40px;
 }
 
 .nav--flush-left {
