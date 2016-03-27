@@ -1,9 +1,11 @@
 var gulp        = require('gulp');
+var cp          = require('child_process');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
-var cp          = require('child_process');
-
+var postcss     = require('gulp-postcss');
+var pxtorem     = require('postcss-pxtorem');
+require('es6-promise').polyfill();
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -76,7 +78,16 @@ gulp.task('sass', function () {
       errLogToConsole: true,
       onError: browserSync.notify
     }))
-    .pipe(prefix({browsers: ['> 1%']}))
+    .pipe(postcss([
+      pxtorem({
+        propWhiteList: [],
+        mediaQuery: false,
+        replace: true
+      })
+    ]))
+    .pipe(prefix({
+      browsers: ['> 1%']
+    }))
     .pipe(gulp.dest('_site/css'))
     .pipe(gulp.dest('_status/css'))
     .pipe(browserSync.reload({stream:true}))

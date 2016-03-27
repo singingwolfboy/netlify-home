@@ -15,11 +15,6 @@ $font-weights: ( //* keep getting them wrong, so mapping them to their names to 
   bold: 700
 );
 
-@mixin line-height($px) {
-  line-height: $px;
-  line-height: px2rem($px);
-}
-
 @mixin font-weight($name) {
   font-weight: if(map-has-key($font-weights, $name), map-get($font-weights, $name), $name);
 }
@@ -31,7 +26,11 @@ $font-weights: ( //* keep getting them wrong, so mapping them to their names to 
  *
  *--------------------------------------------*/
 
-html {
+:root {
+  @include fluid-typography(80em, 90em, 1em, 1.125em);
+}
+
+body {
   font: 300 normal 16px/25px Roboto, sans-serif;
   text-rendering: optimizeLegibility;
 }
@@ -216,5 +215,3 @@ b,
 em, i, cite {
   font-style: normal;
 }
-
-
