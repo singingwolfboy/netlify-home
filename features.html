@@ -5,23 +5,25 @@ content-width: narrow
 ---
 <article class="bg-light muted">
   <div class="content content--{{page.content-width}}">
-    <h1 class="tera text-center mt-110">{{page.title}}</h1>
+    <h1 class="tera text-center mt-80 mb-30">{{page.title}}</h1>
 
-    <div class="mb-70">
+    <hr class="bb bb--muted mt-40 mb-40">
+
     {% assign sections = site.features | sort: 'position' %}
 
     {% for section in sections %}
-      <section class="mb-30">
+
+      <section>
         <header class="text-center mb-40">
           <svg width="120" height="120" class="highlight">
             <use xlink:href="#polyhedron" />
           </svg>
-          <h2 class="beta highlight mt-n10">{{ section.title }}</h2>
+          <h2 class="gamma highlight mt-n10">{{ section.title }}</h2>
         </header>
         <div class="l-2-col-auto">
           {% for feature in section.features %}
           <div class="blurb break-inside-avoid">
-            <h3 class="blurb-title large">{{ feature.title }}</h3>
+            <h3 class="blurb-title zeta">{{ feature.title }}</h3>
             <div class="blurb-text">
             {{ feature.body | markdownify }}
             </div>
@@ -29,8 +31,10 @@ content-width: narrow
           {% endfor %}
         </div>
       </section>
+
+      <hr class="bb bb--muted mt-40 mb-40">
+
     {% endfor %}
-    </div>
 
     {% include pricing-footer.html %}
   </div>
