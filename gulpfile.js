@@ -82,7 +82,7 @@ gulp.task('sass', function () {
       pxtorem({
         propWhiteList: [],
         mediaQuery: false,
-        replace: true
+        replace: false
       })
     ]))
     .pipe(prefix({
