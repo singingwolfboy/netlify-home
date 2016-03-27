@@ -109,25 +109,26 @@
   //*
   //* Stack plan amount and period in pricing table
   //*/
-
-  .plan-amount {
-    margin-left: -5px;
-  }
-
-  .plan-period {
-    padding-left: 5px;
-  }
-
   .pricing-table {
+
     .plan-price {
-      padding: 20px 0 5px;
+      padding-bottom: 12px;
+      padding-top: 15px;
     }
 
     .plan-amount,
     .plan-period {
       display: block;
-      margin-bottom: 10px;
       text-align: center;
+      width: 100%;
+    }
+
+    .plan-amount {
+      margin-left: -3px;
+    }
+
+    .plan-period {
+      padding-left: 3px;
     }
   }
 }
@@ -771,15 +772,6 @@
   .mobile-stack-images img {
     display: block;
     margin: 30px auto;
-  }
-
-  /* Stacked pricing table */
-  .pricing-table {
-    display: none;
-  }
-
-  .mobile-pricing-table {
-    display: block;
   }
 }
 
