@@ -22,7 +22,7 @@
 .plan--features-icon {
     width: 96px;
     height: 96px;
-    margin: 0 auto;
+    margin: 5px auto;
     position: relative;
     svg {
       width: 100%;
@@ -61,28 +61,37 @@
   width: 8em;
 }
 .plan--price {
-  padding: 40px 0 20px;
-  overflow: hidden;
+  display: table;
+  padding: 30px 0 25px;
+  width: 100%;
+}
+.plan--amount,
+.plan--period {
+  display: table-cell;
+  vertical-align: middle;
 }
 .plan--amount {
-  font-size: 54px;
-  letter-spacing: -2px;
+  font-size: 50px;
   font-weight: bold;
-  text-align: right;
   position: relative;
-  top: 4px;
+  text-align: right;
+  top: 7px;
+
+  &:before {
+    content: '$';
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 6px 0 -6px;
+    position: relative;
+    top: -1em;
+  }
 }
-.plan--currency {
+.plan--period {
   font-size: 18px;
   font-weight: normal;
-  text-align: left;
   line-height: 1;
-  padding-left: 7px;
-}
-.plan--per-site {
   text-align: left;
-  padding-left: 7px;
-  font-weight: 100;
 }
 .plan--title, .plan--note {
   padding: 10px;

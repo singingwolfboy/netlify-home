@@ -84,43 +84,51 @@
   .callout--large {
     margin-left: 0;
   }
-
-
 }
 
-@include breakpoint($bp-med-large-2) { //* Tweak point to fix broken hero
+@include breakpoint($bp-med-large-2) { //* Tweak point to fix broken hero and pricing table
 
-  /* Reduce margins between video and blurb. Hide callout */
+  //*
+  //* Reduce margins between video and blurb. Hide callout
+  //*/
+
   .media--wide {
     margin-left: 0;
+
     .media-img {
-      width: 50%;
       margin-right: 5%;
+      width: 50%;
     }
+
     .callout {
       visibility: hidden;
     }
   }
 
-  /* Plans and pricing table */
-  .plan--price.th--highlight {
-    padding: 15px 0 10px;
-  }
+
+  //*
+  //* Stack plan amount and period in pricing table
+  //*/
+
   .plan--amount {
-    font-size: 45px;
+    margin-left: -5px;
   }
-  .plan--currency {
-    font-size: 16px;
-    line-height: 1.1;
+
+  .plan--period {
+    padding-left: 5px;
   }
-  .plan--note, .plan--feature, .plan--enterprise-feature {
-    font-size: 11px;
-  }
-  .plan--icon-hint {
-    display: none;
-  }
-  .td.plan--note {
-    margin: 0;
+
+  .pricing-table {
+    .plan--price {
+      padding: 20px 0 5px;
+    }
+
+    .plan--amount,
+    .plan--period {
+      display: block;
+      margin-bottom: 10px;
+      text-align: center;
+    }
   }
 }
 
@@ -239,14 +247,12 @@
     font-size: 18px;
   }
   .th, .td {
-    padding: 10px 0px;
+    padding: 10px;
     margin: 4px 2px;
   }
   .th--highlight {
-    padding: 8px 0 4px;
-  }
-  .plan--enterprise-feature {
-    padding: 10px 5px;
+    padding-bottom: 12px;
+    padding-top: 15px;
   }
 
   /*
@@ -408,7 +414,6 @@
       }
     }
   }
-
 }
 
 @include breakpoint($bp-med-small) { //* Tweak point to leave more room for content
@@ -768,64 +773,14 @@
     margin: 30px auto;
   }
 
-  /* Responsive pricing table */
+  /* Stacked pricing table */
   .pricing-table {
     display: none;
   }
+
   .mobile-pricing-table {
     display: block;
-    .td {
-      padding: 10px 10px;
-      height: 45px;
-    }
-    .l-third:last-child .table {
-      margin-bottom: 0;
-    }
-    .plan--amount {
-      float: left;
-      width: 50%;
-    }
-    .plan--currency {
-      float: left;
-      width: 50%;
-      padding-left: 7px;
-    }
   }
-  .button--signup {
-    margin: 0 auto;
-    width: 274px;
-  }
-  .signup--extra-info {
-    display: none;
-  }
-  .plan--feature-title {
-    font-size: 16px;
-  }
-  .plan--feature-box {
-    display: none;
-  }
-  .plan--enterprise-feature {
-    display: block;
-    padding: 10px;
-  }
-  table, .mobile-pricing-table {
-    .plan--feature, .td {
-      position: relative;
-    }
-    .help-box {
-      position: absolute;
-      top: 60px;
-      left: 0px;
-      width: 100%;
-      font-size: 11px;
-      line-height: 1.45;
-      padding: 10px;
-    }
-  }
-  .mobile-pricing-table .help-box {
-    top: 50px;
-  }
-
 }
 
 @include breakpoint($bp-small-2) {
