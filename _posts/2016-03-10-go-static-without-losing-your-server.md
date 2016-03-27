@@ -10,7 +10,7 @@ date: 2016-03-10T00:00:00.000Z
 tags: null
 ---
 
-## how we made Giving What We Can’s switch to Netlify really easy.
+How we made Giving What We Can’s switch to Netlify really easy.
 
 [Giving What We Can](https://www.givingwhatwecan.org/) is a charity that encourages people to give more, and give more effectively to charity. We’re part of the [effective altruism](http://www.effectivealtruism.org/) movement, using reason and evidence to find the best opportunities for giving. Our website is critical to our success — it’s how people learn about our work, and where they go to take [our pledge to give 10%](https://www.givingwhatwecan.org/get-involved/join/) of their income to the best charities in the world.
 
@@ -22,7 +22,7 @@ Static sites are awesome. But there are some things where it’s unavoidable to 
 
 However, there’s an easy way to have the best of both worlds — have an awesome static setup for your frontend content (taking advantage of Netlify’s automated builds, rock-solid CDN, and now [free SSL](https://www.netlify.com/blog/2016/01/15/free-ssl-on-custom-domains)), but keep your existing server running to handle the dynamic stuff. Using Netlify’s proxying feature, we’re able to serve static pages to most visitors, but haven’t had to wait until we’d rebuilt a server from scratch to make the change to static.
 
-### Making the switch
+## Making the switch
 
 To give some context, we’d been running our site on a Drupal backend and a VPS for a few years. The setup worked OK, but had some problems. Firstly, it was slooooow — despite two caching layers, response times were pretty poor. The server also had a nasty habit of crashing under load (or sometimes just at random…) — not only did this bring down our CRM, but also the frontend pages, which had basically nothing to do with the CRM but were tightly coupled to it.
 
@@ -36,7 +36,7 @@ All the static content could easily be transferred over (if you’re interested,
 
 However, we still needed the dynamic functionality of the server. But how to keep them running side-by-side? First we thought of moving the server to a subdomain, then having a complicated system of redirects going back and forth. But what if our redirection missed a critical URL (there were lots of endpoints to take into account), and our payment processing or customer records were affected?
 
-### Using proxying to keep the server running without missing a beat (or any HTTP requests)
+## Using proxying to keep the server running without missing a beat (or any HTTP requests)
 
  It turns out that Netlify has a really simple solution.
 
@@ -52,7 +52,7 @@ This works because, by default, Netlify [doesn’t proxy requests for files that
 
 Now, all our old URLs just work, because they’re transparently proxied through. So, we don’t have to do a browser redirect anyone to the server to do things like payment processing, and we also don’t have to rebuild the server functionality straight away.
 
-### Bonus Feature: Redirection
+## Bonus Feature: Redirection
 
 Proxying all requests through is fine, but what if you actually want to redirect specific requests. This could be because your old site had its own redirection in place (say, from `/contact` to `/about/contact`) or because your new static site generator uses a different URL structure (say, moving from `/blog/YYYY-MM-DD/post-name` to `/post/YYYY/MM/post-name`)?
 
@@ -68,7 +68,7 @@ Now, if there isn’t a static page at that URL endpoint, Netlify will first che
 
 To make this easy, I just scraped our Drupal database for the URL aliases of each node, and then added them to a `redirects` key in each Page or Post’s metadata. At build time we just check whether the new URL will be  different to the old one, and if so, add the rule to our `_redirects` file on the fly.
 
-### Next step, get rid of Drupal!
+## Next step, get rid of Drupal!
 
 Obviously the ideal solution would be to not have to run the old server, and in particular, not use Drupal to handle things that ideally should be handled by a robust API. However, using proxying is a really good interim solution. It means we’ve been able to make the changeover in separate phases  without having to spread development time (which is basically me working on the project part-time) across a huge, sprawling project to redesign our server.
 
