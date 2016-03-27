@@ -103,7 +103,7 @@ html {
 }
 
 
-.site-nav {
+.side-nav {
   padding: 40px 0;
 
   .current::before {
@@ -115,10 +115,6 @@ html {
     margin: -2px 15px 0 -30px;
     vertical-align: middle;
     width: 15px;
-  }
-
-  .l-aside & {
-    margin-left: -3px;
   }
 }
 
