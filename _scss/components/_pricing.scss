@@ -19,7 +19,7 @@
   }
 }
 
-.plan--features-icon {
+.plan-features-icon {
     width: 96px;
     height: 96px;
     margin: 5px auto;
@@ -34,7 +34,7 @@
   width: 200px;
   height: 200px;
 }
-.plan--features-icon:after, .pricing-icon:after {
+.plan-features-icon:after, .pricing-icon:after {
     content: " ";
     position: absolute;
     top: 0;
@@ -46,7 +46,7 @@
     border-radius: 100%;
 }
 
-.plan--th {
+.plan-th {
   background-color: #e6efee;
   padding: 0;
   width: 190px;
@@ -56,21 +56,21 @@
     border-top: 5px solid $color-light;
   }
 }
-.plan--header {
+.plan-header {
   padding: 10px;
   width: 8em;
 }
-.plan--price {
+.plan-price {
   display: table;
-  padding: 30px 0 25px;
+  padding: 40px 0 38px;
   width: 100%;
 }
-.plan--amount,
-.plan--period {
+.plan-amount,
+.plan-period {
   display: table-cell;
   vertical-align: middle;
 }
-.plan--amount {
+.plan-amount {
   font-size: 50px;
   font-weight: bold;
   position: relative;
@@ -87,26 +87,26 @@
     top: -1em;
   }
 }
-.plan--period {
+.plan-period {
   font-size: 18px;
   font-weight: normal;
   line-height: 1;
   text-align: left;
 }
-.plan--title, .plan--note {
+.plan-title, .plan-note {
   padding: 10px;
   margin: 0;
 }
-.plan--title {
+.plan-title {
   color: $color-darker;
   font-weight: bold;
 }
-.plan--note {
+.plan-note {
   font-size: 12px;
   font-weight: normal;
   line-height: 1.3;
 }
-.plan--feature {
+.plan-feature {
   width: 180px;
   font-size: 13px;
   text-align: left;
@@ -115,16 +115,16 @@
   position: relative;
   padding-right: 35px;
 }
-.plan--features-th {
+.plan-features-th {
   width: 180px;
 }
-.plan--enterprise-feature {
+.plan-enterprise-feature {
   height: 40px;
 }
-.plan--enterprise-feature .help-box {
+.plan-enterprise-feature .help-box {
   line-height: 1.2;
 }
-.plan--feature-plan {
+.plan-feature-plan {
   display: none;
 }
 .icon.icon-plus {
@@ -160,10 +160,10 @@
 .open .css-plus-icon:before {
   transform: rotate(90deg);
 }
-.mobile-pricing-table .td, .plan--enterprise-feature {
+.mobile-pricing-table .td, .plan-enterprise-feature {
   position: relative;
 }
-.plan--feature .icon {
+.plan-feature .icon {
   position: absolute;
   display: block;
   top: 0;
@@ -175,7 +175,7 @@
     margin-top: -9px;
   }
 }
-.mobile-pricing-table .icon, .plan--enterprise-feature .icon {
+.mobile-pricing-table .icon, .plan-enterprise-feature .icon {
   position: absolute;
   display: block;
   top: 50%;
@@ -230,7 +230,7 @@
     }
   }
 }
-.plan--enterprise-help {
+.plan-enterprise-help {
   font-size: 13px;
   line-height: 1.2;
 }

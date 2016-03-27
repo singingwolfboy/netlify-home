@@ -21,8 +21,8 @@ content-width: default
     <table class="pricing-table">
       <thead>
         <tr>
-          <th class="td plan--features-th">
-            <div class="plan--features-icon">
+          <th class="td plan-features-th">
+            <div class="plan-features-icon">
               <svg width="96" height="96">
                 <use xlink:href="#icon-polyhedron" />
               </svg>
@@ -31,16 +31,16 @@ content-width: default
             <p class="x-small muted mt-5">All plans include free SSL</p>
           </th>
           {% for plan in site.data.plans.plans %}
-          <th class="plan--th">
-            <div class="plan--price th--highlight">
-              <span class="plan--amount">{{ plan.price}}</span>
-              <span class="plan--period">
+          <th class="plan-th">
+            <div class="plan-price th--highlight">
+              <span class="plan-amount">{{ plan.price}}</span>
+              <span class="plan-period">
                 month
                 <small class="x-small block">per site</small>
               </span>
             </div>
-            <div class="plan--title large {% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}">{{ plan.title }}</div>
-            <div class="td plan--note highlight">{{ plan.price_note | newline_to_br }}</div>
+            <div class="plan-title large {% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}">{{ plan.title }}</div>
+            <div class="td plan-note highlight">{{ plan.price_note | newline_to_br }}</div>
           </th>
           {% endfor %}
         </tr>
@@ -48,13 +48,13 @@ content-width: default
       <tbody>
         {% for attribute in site.data.plans.attributes %}
           <tr>
-            <td class="plan--feature">
-              <span class="plan--feature-title">{{ attribute.title }}</span>
+            <td class="plan-feature">
+              <span class="plan-feature-title">{{ attribute.title }}</span>
             </td>
             {% for detail in attribute.details %}
             <td>
-              <div class="plan--feature-plan">{{ site.data.plans.plans[forloop.index0].title }}: </div>
-              <div class="plan--feature-attr">
+              <div class="plan-feature-plan">{{ site.data.plans.plans[forloop.index0].title }}: </div>
+              <div class="plan-feature-attr">
                 {% if detail == "Yes" %}
                 <span class="icon icon-yes"></span>
                 {% elsif detail == "No" %}
@@ -76,7 +76,7 @@ content-width: default
         {% assign index = forloop.index0 %}
         {% capture color %}{% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}{% endcapture %}
           <div class="table">
-            <h3 class="plan--title {{color}}">{{plan.title}}</h3>
+            <h3 class="plan-title {{color}}">{{plan.title}}</h3>
             <ul class="tbody">
               {% for attribute in site.data.plans.attributes %}
                 {% assign detail = attribute.details[index] %}
@@ -88,9 +88,9 @@ content-width: default
                   </li>
                 {% endif %}
               {% endfor %}
-              <li class="plan--price th--highlight">
-                <span class="plan--amount l-half">{{ plan.price}}</span>
-                <span class="plan--period l-half">
+              <li class="plan-price th--highlight">
+                <span class="plan-amount l-half">{{ plan.price}}</span>
+                <span class="plan-period l-half">
                   month
                   <small class="x-small block">per site</small>
                 </span>
