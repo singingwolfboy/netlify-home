@@ -10,8 +10,8 @@ date: 2016-03-08T00:00:00.000Z
 tags: null
 ---
 
-### Welcome to netlify
-Up until recently I had never even heard of Nanoc, but I stumbled upon this gem of gems (pun intended), while searching for a well documented static site generator with on-going support and a live community.
+Up until recently I had never even heard of [Nanoc](http://nanoc.ws/), but I stumbled upon this gem of gems (pun intended), while searching for a well documented static site generator with on-going support and a live community.
+
 Nanoc has both in abundance and after checking out their up-to-date and aesthetically pleasing documentation, I quickly grew to like this extremely easy to use static site generator.
 
 In this little guide, we will setup Nanoc and check out its site generation abilities and once we're up and running locally, we will push the project to GitHub and deploy on netlify with continuous deployment.
