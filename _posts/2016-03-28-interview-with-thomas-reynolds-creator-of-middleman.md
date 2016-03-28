@@ -6,7 +6,7 @@ short_title: Interview with Thomas Reynolds from Middleman
 description: "Thomas Reynolds talks to netlify about Middleman, Git and developing with modern web tools."
 thumbnail: /uploads/thomasreynolds.jpeg
 cmsUserSlug: ""
-date: 2016-03-28 
+date: 2016-03-28T00:00:00.000Z
 tags: null
 ---
 
@@ -18,7 +18,12 @@ Aaron Autrand: **For lack of a better word, you and Middleman are kind of one of
 
 Thomas Reynolds: I started Middleman basically to make my life building email templates a little more simple and dry. And that is not what people are using it for now, to put it bluntly. In the last couple years as we have needed more programmers, everyone's moved to the front-end or has found the front-end a little easier to learn. Even back-end people are able to build complex front-end apps. You know, basically don't bet against Javascript, because Javascript is now winning and has won. I think that might be driving some of the static stuff, because if that's your environment, you don't necessarily want to go back to generating Java server pages or spinning up a rails instance just to have a back-end.
 
-Git as a means of running an entire project from a development side has also, over the last 5 or 6 years, become really important. Heroku kind of pioneered the whole “just commit it and you get your website out.” So having tools that allow you to do that means you don’t have to run database migrations or spin up a new server in the cloud just to get your little update back to the website when you do a git command. I think that’s also something that's super nice with static sites.
+Git as a means of running an entire project from a development side has become really important. Heroku kind of pioneered the whole “just commit it and you get your website out.” So having tools that allow you to do that means you don’t have to run database migrations or spin up a new server in the cloud just to get your little update back to the website when you do a git command. I think that’s also something that's super nice with static sites.
+
+---
+> Git as a means of running an entire project from a development side has become really important
+
+---
 
 And then, for me... It just feels safer. You can see what your site is doing by what's on the server. I still remember opening up Transmit and going on to the FTP and being like, "The site is broken. Hack Hack Hack. Save. The site is fixed now." Having an actual file that represents what people are seeing is nice and it's not just this, "Well if you did the form correctly with these inputs then maybe you got to this form that you can never get back to." And knowing what went wrong when you have to do bugs makes it easier as well.
 
