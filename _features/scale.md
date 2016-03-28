@@ -15,7 +15,7 @@ features:
   - title: Gradual Migration
     body: "We get it – moving is scary. Using the redirect rules, incrementally migrating to netlify is safe and simple. [See how to “Go Static Without Losing Your Server”](/blog/2016/03/09/go-static-without-losing-your-server.html)"
   - title: Atomic Deploys
-    body: "We view your site as a whole, not a bunch of pages. Deploying a new version is trivial and so is rolling back. Ya know in case you typo something."
+    body: "We view your site as a whole, not a bunch of pages. When pushing a new version of your site live ***without*** Atomic Deploy you’re pushing files live one-by-one, which means your site risks being in an inconsistent broken state during the update. Internal links can stop working and wrong content be shown, when only one affected file has been updated but the other is still in queue. \nAvoid periodically broken sites with netlify, where all deploys are atomic. \n\n"
   - title: Unlimited Snapshots
     body: We keep snapshots of any version of your site so you can track changes and revert back to any point in time with the click of a button.
 cmsUserSlug: scale
