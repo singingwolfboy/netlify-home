@@ -19,7 +19,7 @@ features:
   - title: Form Submission Hooks
     body: "Nunc in purus sem. In tempus, massa sit amet imperdiet vehicula, nunc metus sodales sapien, non lacinia arcu ex non dolor."
   - title: Password Protection
-    body: We provide simple password protection for a site out of the box. That means that you can launch a site and have coarse grained access with just a few keystrokes.
+    body: We provide simple password protection for a site out of the box. That means that you can launch a site and have coarse grained access with a click or a few keystrokes.
 cmsUserSlug: dev-tools
 date: now
 position: 50
