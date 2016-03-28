@@ -1,6 +1,6 @@
 ---
 title: Automation
-description: "The seperation of frontend and backend opens up a whole new world of possibilities. But it also means a lot of manual work, manually integrating and managing different tools and processes. Until netlify. "
+description: "Let netlify automise your workflow. The seperation of frontend and backend opens up a whole new world of possibilities. But it also means a lot of manual work, manually integrating and managing different tools and processes. Until now."
 features:
   - title: Git Integration
     body: "Netlify naturally pairs with Git. If you use GitHub, GitLab, BitBucket or just your own Private repo, we mirror that pull, change, push workflow into your site’s state."
