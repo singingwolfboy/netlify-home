@@ -102,6 +102,9 @@ html {
   }
 }
 
+.top-nav .button {
+  top: -2px;
+}
 
 .side-nav {
   padding: 40px 0;
@@ -216,4 +219,20 @@ html {
   > li:not(:first-child) {
     margin-left: 25px;
   }
+}
+
+.toc {
+  counter-reset: toc-counter;
+  list-style: none;
+}
+
+.toc h2:before {
+  content: counter(toc-counter, decimal)".";
+  counter-increment: toc-counter;
+  font-weight: bold;
+  display: inline-block;
+  width: 30px;
+  text-align: right;
+  margin-right: 20px;
+  margin-left: -50px;
 }

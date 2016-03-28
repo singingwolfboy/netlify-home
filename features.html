@@ -10,11 +10,11 @@ content-width: narrow
 
   <header class="inverse bg-dark-muted bb bb--large">
     <div class="content">
-
-      <nav>
-        <h1 class="text-center mt-40">Features Index</h1>
-        <hr class="bb mt-40 mb-40">
-        <div class="l-arrange mb-60">
+      <div class="hide-for-large">
+        <h1 class="alpha text-center mt-40">Features<h1>
+        <hr class="bb mt-40 mb-n40">
+      </div>
+      <nav class="mt-80 mb-80">
         <div class="l-arrange-fit v-middle optional">
           <div class="callout callout--large callout--outline mr-70">
             <svg width="276" height="276" class="callout--large">
@@ -29,7 +29,7 @@ content-width: narrow
               <h2 class="blurb-title medium highlight link inline-block">
                 {{ section.title }}
               </h2>
-              <p class="x-small loud">
+              <p class="small loud">
                 {{ section.description }}
               </p>
             </a>

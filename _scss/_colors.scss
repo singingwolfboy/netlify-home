@@ -18,10 +18,22 @@
   $color-tint2: rgb(154,207,201);
   $color-tint3: rgb(117,196,186);
 
+  $color-tint-100: rgb(199, 232, 227);
+  $color-tint-200: rgb(163, 225, 217);
+  $color-tint-300: rgb(105, 211, 201);
+  $color-tint-400: rgb(0,199,183);
+  $color-tint-500: rgb(19, 159, 148);
+
   //** Blue-greens
   $color-highlight: rgb(0,199,183);
   $color-highlight-lighter: rgb(202,224,222);
   $color-highlight-lightest: rgb(230,239,238);
+
+  $color-tint-100: rgb(199, 232, 227);
+  $color-tint-200: rgb(163, 225, 217);
+  $color-tint-300: rgb(105, 211, 201);
+  $color-tint-500: rgb(0,199,183);
+  $color-tint-600: rgb(19, 159, 148);
 
 
   //** Social networks (http://brandcolors.net/)
@@ -55,26 +67,32 @@ svg {
 
 .highlight {
   color: $color-highlight;
+  fill: $color-highlight;
 }
 
 .light {
   color: $color-light;
+  fill: $color-light;
 }
 
 .lightest {
   color: $color-lightest;
+  fill: $color-lightest;
 }
 
 .dark {
   color: $color-dark;
+  fill: $color-dark;
 }
 
 .darkest {
   color: $color-darkest;
+  fill: $color-darkest;
 }
 
 .muted {
   color: $color-muted;
+  fill: $color-muted;
 }
 
 .quiet {

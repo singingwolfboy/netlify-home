@@ -331,6 +331,18 @@ a.media {
 /* Flexbox
  */
 
+.flex {
+  display: flex;
+}
+
+.flex--space-between {
+  justify-content: space-between;
+}
+
+.flex--space-around {
+  justify-content: space-around;
+}
+
 @media (min-width: $bp-med) {
   .md-flex {
     display: flex;
@@ -419,7 +431,7 @@ a.media {
   }
 }
 
-@for $i from 1 through 2 { // margins for bleeds and adjustments
+@for $i from 1 through 5 { // margins for bleeds and adjustments
   .mt-n#{$i * 10} {
     margin-top: $i * -10px;
   }
