@@ -6,7 +6,7 @@ short_title: Interview with Thomas Reynolds from Middleman
 description: "Thomas Reynolds talks to netlify about Middleman, Git and developing with modern web tools."
 thumbnail: /uploads/thomasreynolds.jpeg
 cmsUserSlug: ""
-date: 2016-03-28T00:00:00.000Z
+date: 2016-03-28 
 tags: null
 ---
 
