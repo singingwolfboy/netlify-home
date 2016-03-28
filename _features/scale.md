@@ -13,7 +13,7 @@ features:
   - title: Geo IP/Language Redirection
     body: "Our global CDN supports complex internationalization rules. One DNS lookup will always yield site in the right language. So if you need visitors from let's say China to redirect to your Chinese version of the site, then netlify can do that for you at CDN level so you loose none of the performance you would normally do."
   - title: Gradual Migration
-    body: "We get it – moving is scary. Using the redirect rules, incrementally migrating to netlify is safe and simple. [See how to “Go Static Without Losing Your Server”](/blog/2016/03/09/go-static-without-losing-your-server.html)"
+    body: "Using netlify's advanced redirect rules, incrementally migrating to netlify is safe and simple and without costing performance. [See how to “Go Static Without Losing Your Server”](/blog/2016/03/09/go-static-without-losing-your-server.html)"
   - title: Atomic Deploys
     body: "We view your site as a whole, not a bunch of pages. When pushing a new version of your site live ***without*** Atomic Deploy you’re pushing files live one-by-one, which means your site risks being in an inconsistent broken state during the update. Internal links can stop working and wrong content be shown, when only one affected file has been updated but the other is still in queue. \nAvoid periodically broken sites with netlify, where all deploys are atomic. \n\n"
   - title: Unlimited Snapshots
