@@ -51,14 +51,14 @@
     $(".docs-aside .active").toggleClass('current', !location.hash).append($ul);
   }
 
-  $('.site-nav a[href^=#]').on('click', function(e) {
+  $('a:not(.icon)[href^=#]').on('click', function(e) {
     e.preventDefault();
     var
       $this = $(this),
       href = $this.attr('href');
 
     $this
-      .closest('.site-nav')
+      .closest('nav')
         .find('.current')
           .removeClass('current')
         .end()

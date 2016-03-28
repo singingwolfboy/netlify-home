@@ -1,5 +1,6 @@
 ---
 title: Single Page Apps
+description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
 features:
   - title: Prerendering
     body: "Vivamus eu dapibus libero, ut gravida odio. Vestibulum lacinia eu lacus eu efficitur. Praesent ac quam risus. Nullam et feugiat tortor."

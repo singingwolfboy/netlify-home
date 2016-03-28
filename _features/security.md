@@ -1,5 +1,6 @@
 ---
 title: Security
+description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
 features:
   - title: Free 1 Click SSL
     body: "We believe in security. We generate, deploy, and manage unique SSL certificates for each site with a literal one click. And it’s completely free."

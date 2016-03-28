@@ -1,5 +1,6 @@
 ---
 title: Scale
+description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
 features:
   - title: Infinite Scale
     body: "Seamlessly grow from a personal blog to an international phenomenon. Our global CDN ensures your site is always fast like greased lightning, regardless of load."

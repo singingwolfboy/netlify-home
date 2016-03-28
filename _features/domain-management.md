@@ -1,5 +1,6 @@
 ---
 title: Domain Management
+description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
 features:
   - title: Custom Domain
     body: "Launch with your own custom domain (and our little badge) or for a few bucks seamlessly take advantage of our platform."

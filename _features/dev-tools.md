@@ -1,5 +1,6 @@
 ---
 title: Dev Tools
+description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
 features:
   - title: Multiple Environment Support
     body: "Support multiple environments (e.g. dev, staging, prod) with a simple argument. Each environment tracks a git branch, providing an isolated environment for experimentation."

@@ -52,6 +52,7 @@ collections:
     sort: "position:asc"
     fields:
       - {label: "Heading", name: "title", widget: "string", tagname: "h2", class: "alpha highlight"}
+      - {description: "Description", name: "description", widget: "string", tagname: "p"}
       - name: features
         label: Features
         widget: list

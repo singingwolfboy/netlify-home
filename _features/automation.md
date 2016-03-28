@@ -1,5 +1,6 @@
 ---
 title: Automation
+description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
 features:
   - title: Git Integration
     body: "Netlify naturally pairs with Git. If you use GitHub, GitLab, BitBucket or just your own Private repo, we mirror that pull, change, push workflow into your site’s state."

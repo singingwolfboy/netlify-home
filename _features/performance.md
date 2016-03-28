@@ -1,5 +1,6 @@
 ---
 title: Performance
+description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
 features:
 - title: Global CDN
   body: "We have nodes all around the world to keep latency down. Utilizing our multilayered CDN we provide a scalable, globally consistent, fast version of any site."

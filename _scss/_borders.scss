@@ -35,6 +35,10 @@
   border-bottom: 1px dashed $color-highlight;
 }
 
+hr {
+  border-color: inherit;
+}
+
 hr.bb {
   border: 0;
 }

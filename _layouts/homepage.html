@@ -154,10 +154,9 @@ layout: default
 <section class="bg-dark-muted-cover inverse bb bb--large">
   <div class="content">
 
-    <!-- Blog -->
-    <section>
-      <header class="text-center mt-90 mb-50">
-        <h1 class="kilo mb-35"><a href="/blog">Visit our blog</a></h1>
+    <section class="mt-90 mb-30">
+      <header class="text-center mb-50">
+        <h1 class="kilo mb-35"><a href="/blog.html">Visit our blog</a></h1>
         <p class="zeta muted p--wide">See the blog for tons of articles, tips, tricks and opinions on all that is related to static web-tech.</p>
       </header>
       <div class="l-container">
@@ -169,20 +168,7 @@ layout: default
       </div>
     </section>
 
-    <!-- Social links -->
-    <section class="text-center mt-30 mb-80">
-      <h1 class="gamma inline-block v-middle mr-40"><a href="/social">Socialize @</a></h1>
-
-      <p class="inline-block v-middle">
-        {% for link in site.social-links %}
-        <a href="{{link[1]}}" class="icon-link--round icon-link--{{link[0]}}">
-          <svg width="36" height="36" class="icon-{{link[0]}}--round">
-            <use xlink:href="#icon-{{link[0]}}-round">
-          </svg>
-        </a>
-        {% endfor %}
-      </p>
-    </section>
+    {% include socialize.html %}
 
   </div><!-- end content-->
 </section>

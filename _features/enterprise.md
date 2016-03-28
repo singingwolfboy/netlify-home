@@ -1,5 +1,6 @@
 ---
 title: Enterprise
+description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
 features:
   - title: Private Build Environment
     body: "Integer nisi eros, dignissim ut sem sed, sagittis ornare dolor. Nullam turpis nisl, ultrices et tincidunt in, ornare quis enim."

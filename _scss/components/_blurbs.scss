@@ -98,11 +98,11 @@
   @extend .center;
 }
 
-.l-third:first-child .blurb {
+.l-third:nth-child(3n+1) .blurb {
   margin-left: 0;
 }
 
-.l-third:last-child .blurb {
+.l-third:nth-child(3n) .blurb {
   margin-right: 0;
 }
 

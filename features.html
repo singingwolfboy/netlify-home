@@ -3,40 +3,72 @@ layout: default
 title: Features
 content-width: narrow
 ---
-<article class="bg-light muted">
-  <div class="content content--{{page.content-width}}">
-    <h1 class="tera text-center mt-80 mb-30">{{page.title}}</h1>
 
-    <hr class="bb bb--muted mt-40 mb-40">
+{% assign sections = site.features | sort: 'position' %}
 
-    {% assign sections = site.features | sort: 'position' %}
+<article>
 
-    {% for section in sections %}
+  <nav class="inverse bg-dark-muted bb bb--large">
 
-      <section>
-        <header class="text-center mb-40">
-          <svg width="120" height="120" class="highlight">
-            <use xlink:href="#polyhedron" />
+    <div class="content content--wide">
+
+      <header class="text-center mt-80 mb-n20 bb hide-for-large">
+        <h1 class="mega mb-60">Features</h1>
+      </header>
+
+      <div class="l-arrange content content--wide mt-80 mb-60">
+        <div class="l-arrange-fit v-middle optional">
+          <svg width="300" height="300" class="block mr-80">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-polyhedron"></use>
           </svg>
-          <h2 class="gamma highlight mt-n10">{{ section.title }}</h2>
-        </header>
-        <div class="l-2-col-auto">
-          {% for feature in section.features %}
-          <div class="blurb break-inside-avoid">
-            <h3 class="blurb-title zeta">{{ feature.title }}</h3>
-            <div class="blurb-text">
-            {{ feature.body | markdownify }}
-            </div>
-          </div>
-          {% endfor %}
         </div>
-      </section>
+        <div class="l-arrange-fill">
+          <div class="l-2-col-auto">
+          {% for section in sections %}
+            <div class="blurb break-inside-avoid">
+              <h2 class="blurb-title medium">
+                <a href="#{{section.title | slugify}}">
+                  {{ section.title }}
+                </a>
+              </h2>
+              <p class="x-small">
+                {{ section.description }}
+              </p>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-      <hr class="bb bb--muted mt-40 mb-40">
+  <div class="bg-light-muted-2">
 
-    {% endfor %}
+    <div class="content content--{{page.content-width}}">
 
-    {% include pricing-footer.html %}
-  </div>
+      {% for section in sections %}
+        <section class="mt-40 mb-40 bb bb--muted" id="{{ section.title | slugify }}">
+          <header class="text-center mb-40">
+            <svg width="120" height="120" class="highlight">
+              <use xlink:href="#polyhedron" />
+            </svg>
+            <h2 class="gamma highlight mt-n10">{{ section.title }}</h2>
+          </header>
+          <div class="l-2-col-auto mb-40">
+            {% for feature in section.features %}
+            <div class="blurb break-inside-avoid">
+              <h3 class="blurb-title zeta">{{ feature.title }}</h3>
+              <div class="blurb-text">
+              {{ feature.body | markdownify }}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+
+      {% endfor %}
+
+      {% include pricing-footer.html %}
+    </div>
   </div>
 </article>

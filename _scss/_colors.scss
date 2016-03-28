@@ -55,29 +55,34 @@ svg {
 
 .highlight {
   color: $color-highlight;
-  fill: $color-highlight;
 }
+
+.light {
+  color: $color-light;
+}
+
 .lightest {
   color: $color-lightest;
-  fill: $color-lightest;
 }
+
 .muted {
   color: $color-muted;
 }
-.dark {
+
+.quiet {
   color: $color-dark;
 }
+
 .loud {
   color: $color-darker;
+
   .no-touch a:hover & {
     color: $color-highlight;
   }
 }
+
 .overloud {
   color: $color-darkest;
-}
-.light {
-  color: $color-light;
 }
 
 /* Dark background */
@@ -93,31 +98,19 @@ svg {
   .highlight {
     color: $color-highlight;
   }
-  .loud {
-    color: $color-lightest;
-  }
+
   .muted {
     color: $color-muted;
   }
-  .light {
-    color: rgba(255,255,255,0.7);
+
+  .quiet {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .loud {
+    color: $color-lightest;
   }
 }
-
-/* Icons */
-.icon {
-  color: $color-lightest;
-}
-.inverse .icon {
-  color: $color-darkest;
-}
-svg.muted {
-  color: rgb(195,195,195); /* Same color as icon-select-drop.png */
-  .inverse & {
-    color: $color-muted;
-  }
-}
-
 
 
 /* Backgrounds */

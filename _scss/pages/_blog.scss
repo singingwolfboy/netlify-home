@@ -1,30 +1,15 @@
 /*
  * Post
  */
-.post {
-  margin: 40px 0 20px;
-}
 
 .post-hd {
   text-align: center;
-  margin: 50px 0;
-}
-
-.post-title {
-  @extend .mega;
-  line-height: 70px;
-  color: $color-dark;
-  margin: 90px 40px 40px;
-}
-
-.post-meta {
-  @extend .zeta;
-  color: $color-highlight;
 }
 
 .post-img {
-  margin: 50px 0;
   border-bottom: 7px solid $color-highlight-lighter;
+  margin: 50px 0;
+
   img {
     display: block;
     width: 100%;
@@ -32,8 +17,18 @@
 }
 
 .post-bd {
+  font-size: 110%;
+  line-height: 1.618;
+  margin: 50px auto 80px;
   max-width: 40em;
-  margin: 50px auto 30px;
+
+  p, ol, ul, blockquote, img {
+    margin: 1.5em 0;
+  }
+
+  img {
+    margin: 3em 0;
+  }
 
   > p:first-child,
   > div > p:first-child {
@@ -50,23 +45,13 @@
 }
 
 .post-jumpline {
+  border-bottom: 1px dashed $color-highlight;
   font-size: 14px;
   margin: 30px auto;
-  max-width: 45.71em;
   padding: 0 0 40px;
-  border-bottom: 1px dashed $color-highlight;
 }
 
 
-/*
- * Aside
- */
-.blog-aside-title {
-  @extend .kilo;
-  line-height: 70px; // same line height as post title
-  margin-top: 170px;
-  margin-bottom: 95px;
-}
 
 
 /*
