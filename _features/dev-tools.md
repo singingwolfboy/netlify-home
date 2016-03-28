@@ -9,7 +9,7 @@ features:
   - title: Native Clients
     body: "Don’t feel like writing the HTTP calls? We have native clients in Go, Ruby, and Javascript. [link to client repos]"
   - title: JavaScript Injection
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo purus diam. Donec quis ligula in erat rhoncus egestas pretium sit amet ex. Fusce iaculis tincidunt nisl, vel venenatis enim sollicitudin ac."
+    body: "![gregg-coffee-intravenous_500.jpg](/uploads/gregg-coffee-intravenous_500.jpg)\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo purus diam. Donec quis ligula in erat rhoncus egestas pretium sit amet ex. Fusce iaculis tincidunt nisl, vel venenatis enim sollicitudin ac."
   - title: "Redirect, Rewrite & Proxy Rules"
     body: "Use different rules to control how requests are handled. Proxy part of your traffic to your own backend, redirect old pages, or rewrite a page entirely. Or do them all."
   - title: Custom HTTP Headers
