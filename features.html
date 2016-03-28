@@ -8,17 +8,15 @@ content-width: narrow
 
 <article>
 
-  <nav class="inverse bg-dark-muted bb bb--large">
-
+  <header class="inverse bg-dark-muted bb bb--large">
     <div class="content">
 
-      <header class="text-center mt-80 mb-n20 bb hide-for-large">
-        <h1 class="mega mb-60">Features</h1>
-      </header>
-
-      <div class="l-arrange mt-80 mb-60">
+      <nav>
+        <h1 class="text-center mt-40">Features Index</h1>
+        <hr class="bb mt-40 mb-40">
+        <div class="l-arrange mb-60">
         <div class="l-arrange-fit v-middle optional">
-          <div class="callout callout--large callout--outline mr-60 ml-n20">
+          <div class="callout callout--large callout--outline mr-70">
             <svg width="276" height="276" class="callout--large">
               <use xlink:href="#icon-polyhedron"></use>
             </svg>
@@ -28,7 +26,7 @@ content-width: narrow
           <div class="l-2-col-auto">
           {% for section in sections %}
             <a href="#{{section.title | slugify}}" class="blurb break-inside-avoid">
-              <h2 class="blurb-title medium highlight">
+              <h2 class="blurb-title medium highlight link inline-block">
                 {{ section.title }}
               </h2>
               <p class="x-small loud">
@@ -38,9 +36,10 @@ content-width: narrow
           {% endfor %}
           </div>
         </div>
-      </div>
+      </nav>
+
     </div>
-  </nav>
+  </header>
 
   <div class="bg-light-muted-2">
 
@@ -52,9 +51,10 @@ content-width: narrow
             <svg width="120" height="120" class="highlight">
               <use xlink:href="#polyhedron" />
             </svg>
-            <h2 class="gamma highlight mt-n10">{{ section.title }}</h2>
+            <h2 class="gamma highlight mt-n10 mb-0">{{ section.title }}</h2>
+            <p class="small muted">{{ section.description }}</p>
           </header>
-          <div class="l-2-col-auto mb-40">
+          <div class="l-2-col-auto mt-60 mb-40">
             {% for feature in section.features %}
             <div class="blurb break-inside-avoid">
               <h3 class="blurb-title zeta">{{ feature.title }}</h3>
