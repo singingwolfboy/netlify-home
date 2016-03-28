@@ -10,6 +10,10 @@ features:
     body: "Full support for the next generation web protocol, built for better performance and more efficient asset loading."
   - title: Secure Build Environment
     body: "Our build environments live only for the duration of the build. Combined with a build cache, we ensure that each build is fast and fully isolated."
+  - title: DDOS Protection
+    body: As part of custom plans netlify offers advanced DDOS protection and mitigation via several partnerships.
+  - title: "  API Origin Protection"
+    body: "  API Origin Protection"
 cmsUserSlug: security
 date: now
 position: 30
