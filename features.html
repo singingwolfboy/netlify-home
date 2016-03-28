@@ -19,22 +19,20 @@ content-width: narrow
       <div class="l-arrange content content--wide mt-80 mb-60">
         <div class="l-arrange-fit v-middle optional">
           <svg width="276" height="276" class="callout callout--large mr-80">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-polyhedron"></use>
+            <use xlink:href="#icon-polyhedron"></use>
           </svg>
         </div>
         <div class="l-arrange-fill">
           <div class="l-2-col-auto">
           {% for section in sections %}
-            <div class="blurb break-inside-avoid">
-              <h2 class="blurb-title medium">
-                <a href="#{{section.title | slugify}}">
-                  {{ section.title }}
-                </a>
+            <a href="#{{section.title | slugify}}" class="blurb break-inside-avoid">
+              <h2 class="blurb-title medium highlight">
+                {{ section.title }}
               </h2>
-              <p class="x-small">
+              <p class="x-small loud">
                 {{ section.description }}
               </p>
-            </div>
+            </a>
           {% endfor %}
           </div>
         </div>

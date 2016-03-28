@@ -65,6 +65,14 @@ svg {
   color: $color-lightest;
 }
 
+.dark {
+  color: $color-dark;
+}
+
+.darkest {
+  color: $color-darkest;
+}
+
 .muted {
   color: $color-muted;
 }
@@ -75,10 +83,6 @@ svg {
 
 .loud {
   color: $color-darker;
-
-  .no-touch a:hover & {
-    color: $color-highlight;
-  }
 }
 
 .overloud {
@@ -99,16 +103,16 @@ svg {
     color: $color-highlight;
   }
 
+  .loud {
+    color: $color-lightest;
+  }
+
   .muted {
     color: $color-muted;
   }
 
   .quiet {
     color: rgba(255, 255, 255, 0.7);
-  }
-
-  .loud {
-    color: $color-lightest;
   }
 }
 

@@ -8,7 +8,7 @@ title: The Netlify Blog. All about static web-tech and netlify.
     <section class="l-main l-main--left" role="main">
       {% for post in site.posts %}
       <article class="post">
-        <header class="post-hd mt-110">
+        <header class="post-hd mt-100">
           <a href="{{post.url}}">
             <h1 class="kilo">{{ post.title }}</h1>
             <p class="large">By {{post.author}}, {{post.date | date: "%B %-d %Y" }}</p>
@@ -32,7 +32,7 @@ title: The Netlify Blog. All about static web-tech and netlify.
     </section>
 
     <section class="l-aside l-aside--right inverse blog-aside" role="complementary">
-      <h1 class="kilo mt-110">More Articles</h1>
+      <h1 class="kilo mt-100">More Articles</h1>
       {% for post in site.posts %}
         {% include post-blurb.html %}
       {% endfor %}
