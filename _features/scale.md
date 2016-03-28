@@ -11,7 +11,7 @@ features:
   - title: Asset Fingerprinting
     body: "By fingerprinting assets, we ensure that the version of the site is globally consistent. Gone are the days of wondering what site people see."
   - title: Geo IP/Language Redirection
-    body: Our global CDN supports complex internationalization rules. One DNS lookup will always yield site in the right language.
+    body: "Our global CDN supports complex internationalization rules. One DNS lookup will always yield site in the right language. What it means? That if you need visitors from let's say China to redirect to your Chinese version of the site, then netlify can do that for you at CDN level so you loose none of the performance you would normally do."
   - title: Gradual Migration
     body: "We get it – moving is scary. Using the redirect rules, incrementally migrating to netlify is safe and simple. [See how to “Go Static Without Losing Your Server”](/blog/2016/03/09/go-static-without-losing-your-server.html)"
   - title: Atomic Deploys
