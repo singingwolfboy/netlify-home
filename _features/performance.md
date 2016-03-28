@@ -1,6 +1,6 @@
 ---
 title: Performance
-description: "Netlify is an ultra performant platform, with nodes all over the world, the worlds fastest DNS service, instant cache invalidation and much more. Put your site on netlify and watch your conversion rates skyrocket because of ultra fast loads."
+description: "Netlify is an ultra performant platform with nodes all over the world, the worlds fastest DNS service, instant cache invalidation and much more. Put your site on netlify and watch your conversion rates skyrocket because of instant loads."
 features:
   - title: Global CDN
     body: "We have nodes all around the world to keep latency down. Utilizing our multilayered CDN we provide a scalable, globally consistent, fast version of any site."
