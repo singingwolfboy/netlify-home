@@ -7,17 +7,19 @@ features:
   - title: Automated Builds
     body: Leave the build boxes to us. Continuous deployment is as simple as just telling us how and what to build. Then with standard git commands you can rapidly deploy your site.
   - title: Inbound Webhooks
-    body: "Duis sapien ante, hendrerit eget scelerisque id, consectetur eu tortor. Maecenas vulputate et odio ut varius. Duis vitae elit mauris."
+    body: "Support for both inbound and outbound webhooks. Trigger builds with a POST request or receive Slack notifications for new form submissions, deploys or build failures. — [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
   - title: "Outbound Webhooks & Integrations"
-    body: "Nunc in purus sem. In tempus, massa sit amet imperdiet vehicula, nunc metus sodales sapien, non lacinia arcu ex non dolor."
+    body: "Support for both inbound and outbound webhooks. Trigger builds with a POST request or receive Slack notifications for new form submissions, deploys or build failures. — [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
   - title: Secure Build Environment
     body: "Vivamus eu dapibus libero, ut gravida odio. Vestibulum lacinia eu lacus eu efficitur. Praesent ac quam risus. Nullam et feugiat tortor."
   - title: Cached Dependencies
-    body: Vivamus sed sodales urna. Donec commodo massa quis massa commodo condimentum. Phasellus auctor ultricies aliquet.
+    body: "Dependencies (rubygems, npm, etc.) are automatically installed and cached between builds to keep build time down. — [Read more about dependencies and run times](https://www.netlify.com/docs/continuous-deployment)"
   - title: Instant Cache Invalidation
     body: "One of the troubles with releasing a new site is that you never know if a user has a cached version. Netlify invalidates the cache instantly, only serving the intended version across the globe. Never wait to see a live version again."
   - title: "Versioning & Rollbacks"
     body: Each lightweight deploy is treated as an immutable snapshot of the site. Rolling back as far as you’d like is just a matter of clicking the right version you want.
 cmsUserSlug: automation
+date: now
 position: 40
 ---
+
