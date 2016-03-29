@@ -2,11 +2,11 @@
 title: "Interview with Thomas Reynolds, Creator of Middleman"
 author: Aaron Autrand
 image: null
-short_title: Interview with Thomas Reynolds from Middleman
+short_title: Interview with Thomas Reynolds
 description: "Thomas Reynolds talks to netlify about Middleman, Git and developing with modern web tools."
 thumbnail: /uploads/thomasreynolds.jpeg
 cmsUserSlug: ""
-date: 2016-03-28 
+date: 2016-03-28T00:00:00.000Z
 tags: null
 ---
 
