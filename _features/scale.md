@@ -19,5 +19,7 @@ features:
   - title: Unlimited Snapshots
     body: We keep snapshots of any version of your site so you can track changes and revert back to any point in time with the click of a button.
 cmsUserSlug: scale
+date: now
 position: 20
 ---
+
