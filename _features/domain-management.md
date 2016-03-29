@@ -11,7 +11,7 @@ features:
   - title: DNS Hosting (NS1)
     body: "Netlify includes high uptime ultra fast DNS hosting, with a simple but powerful DNS panel and full API access."
   - title: Domain Registration
-    body: "Vivamus eu dapibus libero, ut gravida odio. Vestibulum lacinia eu lacus eu efficitur. Praesent ac quam risus. Nullam et feugiat tortor."
+    body: Register and manage your domain from within netlify.
 cmsUserSlug: domain-management
 date: now
 position: 70
