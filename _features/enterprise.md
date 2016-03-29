@@ -3,7 +3,7 @@ title: Enterprise
 description: "From dedicated account manager and 24/7 support, to private build environments and advanced features, your enterprise needs are taken care of."
 features:
   - title: Private Build Environment
-    body: "Integer nisi eros, dignissim ut sem sed, sagittis ornare dolor. Nullam turpis nisl, ultrices et tincidunt in, ornare quis enim."
+    body: "Never have your build stuck in a queue and get even faster builds but selecting private build environments. "
   - title: Reseller API Access
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dui ut metus tempor faucibus. Mauris mi est, facilisis eu magna nec, fermentum blandit sem."
   - title: Superstar Support
