@@ -14,4 +14,5 @@ features:
     body: "Our custom control CDN allows us to set the state of the site in around 1 second. Releasing, or rolling back a site, no longer faces caching problems. Instant global consistency is in our DNA."
 cmsUserSlug: performance
 position: 10
+date: 2016-03-29
 ---

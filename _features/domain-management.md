@@ -13,7 +13,6 @@ features:
   - title: Domain Registration
     body: Register and manage your domain from within netlify.
 cmsUserSlug: domain-management
-date: now
+date: 2016-03-29
 position: 70
 ---
-

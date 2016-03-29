@@ -11,7 +11,6 @@ features:
   - title: Migration services
     body: "Need help migrating from your old site or app to  netlify? A team at Netlify can help you find a smooth path to 10x performance, security and scalability."
 cmsUserSlug: enterprise
-date: now
+date: 2016-03-29
 position: 80
 ---
-

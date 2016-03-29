@@ -11,7 +11,6 @@ features:
   - title: Authentication Providers
     body: "Use authentication providers like Stormpath to limit access to your site. Ideal for running private documentation for your global marketing, developer or sales teams integrated with 3rd party auth providers."
 cmsUserSlug: single-page-apps
-date: now
+date: 2016-03-29
 position: 60
 ---
-

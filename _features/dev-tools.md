@@ -21,7 +21,6 @@ features:
   - title: Password Protection
     body: We provide simple password protection for a site out of the box. That means that you can launch a site and have coarse grained access with a click or a few keystrokes.
 cmsUserSlug: dev-tools
-date: now
+date: 2016-03-29
 position: 50
 ---
-
