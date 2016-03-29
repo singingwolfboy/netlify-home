@@ -1,6 +1,6 @@
 ---
 title: Domain Management
-description: Manage your domains with netlify..............
+description: "Netlify provides you with complete domain management. Custom domains, subdomains, aliases, DNS hosting and Domain registration all editable from the UI."
 features:
   - title: Custom Domain
     body: Launch with your own custom domain (and our little badge) or for a few bucks seamlessly take advantage of our platform.
