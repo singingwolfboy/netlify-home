@@ -1,6 +1,6 @@
 ---
 title: Dev Tools
-description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
+description: "Netlify is the most full featured platform of it's kind, with tons of dev tools to make life easier for the professional coder."
 features:
   - title: Multiple Environment Support
     body: "Support multiple environments (e.g. dev, staging, prod) with a simple argument. Each environment tracks a git branch, providing an isolated environment for experimentation."
@@ -9,8 +9,8 @@ features:
   - title: Native Clients
     body: "Don’t feel like writing the HTTP calls? We have native clients in Go, Ruby, and Javascript. [link to client repos]"
   - title: JavaScript Injection
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo purus diam. Donec quis ligula in erat rhoncus egestas pretium sit amet ex. Fusce iaculis tincidunt nisl, vel venenatis enim sollicitudin ac."
-  - title: Redirect, Rewrite & Proxy Rules
+    body: "![gregg-coffee-intravenous_500.jpg](/uploads/gregg-coffee-intravenous_500.jpg)\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo purus diam. Donec quis ligula in erat rhoncus egestas pretium sit amet ex. Fusce iaculis tincidunt nisl, vel venenatis enim sollicitudin ac."
+  - title: "Redirect, Rewrite & Proxy Rules"
     body: "Use different rules to control how requests are handled. Proxy part of your traffic to your own backend, redirect old pages, or rewrite a page entirely. Or do them all."
   - title: Custom HTTP Headers
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo purus diam. Donec quis ligula in erat rhoncus egestas pretium sit amet ex."
@@ -19,6 +19,7 @@ features:
   - title: Form Submission Hooks
     body: "Nunc in purus sem. In tempus, massa sit amet imperdiet vehicula, nunc metus sodales sapien, non lacinia arcu ex non dolor."
   - title: Password Protection
-    body: "We provide simple password protection for a site out of the box. That means that you can launch a site and have coarse grained access with just a few keystrokes."
+    body: We provide simple password protection for a site out of the box. That means that you can launch a site and have coarse grained access with a click or a few keystrokes.
+cmsUserSlug: dev-tools
 position: 50
 ---

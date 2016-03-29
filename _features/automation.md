@@ -15,7 +15,7 @@ features:
   - title: Cached Dependencies
     body: Vivamus sed sodales urna. Donec commodo massa quis massa commodo condimentum. Phasellus auctor ultricies aliquet.
   - title: Instant Cache Invalidation
-    body: "One of the troubles with releasing a new site is that you never know if a user has a cached version. We can invalidate the cache in a second, only serving the intended version across the globe."
+    body: "One of the troubles with releasing a new site is that you never know if a user has a cached version. Netlify invalidates the cache instantly, only serving the intended version across the globe. Never wait to see a live version again."
   - title: "Versioning & Rollbacks"
     body: Each lightweight deploy is treated as an immutable snapshot of the site. Rolling back as far as you’d like is just a matter of clicking the right version you want.
 cmsUserSlug: automation
