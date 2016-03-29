@@ -7,11 +7,11 @@ features:
   - title: Automated Builds
     body: Leave the build boxes to us. Continuous deployment is as simple as just telling us how and what to build. Then with standard git commands you can rapidly deploy your site.
   - title: Inbound Webhooks
-    body: "Support for both inbound and outbound webhooks. Trigger builds with a POST request or receive Slack notifications for new form submissions, deploys or build failures. — [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
+    body: "Trigger builds with a POST request. [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
   - title: "Outbound Webhooks & Integrations"
-    body: "Support for both inbound and outbound webhooks. Trigger builds with a POST request or receive Slack notifications for new form submissions, deploys or build failures. — [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
+    body: "Set up any number of outbound webhooks. Receive Slack notifications for new form submissions, deploys or build failures. — [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
   - title: Secure Build Environment
-    body: "Vivamus eu dapibus libero, ut gravida odio. Vestibulum lacinia eu lacus eu efficitur. Praesent ac quam risus. Nullam et feugiat tortor."
+    body: "We never store any GitHub tokens on our servers and your builds are run in a completely locked down environment. — [Read more about GitHub tokens &amp; netlify](https://www.netlify.com/docs/github-permissions)"
   - title: Cached Dependencies
     body: "Dependencies (rubygems, npm, etc.) are automatically installed and cached between builds to keep build time down. — [Read more about dependencies and run times](https://www.netlify.com/docs/continuous-deployment)"
   - title: Instant Cache Invalidation
