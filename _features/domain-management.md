@@ -9,7 +9,7 @@ features:
   - title: Netlify Subdomain
     body: "If you either don't have a domain or just need to do a test site use yourdomain.netlify.com — [Example](http://speedtest.netlify.com/)"
   - title: DNS Hosting (NS1)
-    body: "Maecenas vulputate et odio ut varius. Duis vitae elit mauris. Nunc in purus sem. In tempus, massa sit amet imperdiet vehicula, nunc metus sodales sapien."
+    body: "Netlify includes high uptime ultra fast DNS hosting, with a simple but powerful DNS panel and full API access."
   - title: Domain Registration
     body: "Vivamus eu dapibus libero, ut gravida odio. Vestibulum lacinia eu lacus eu efficitur. Praesent ac quam risus. Nullam et feugiat tortor."
 cmsUserSlug: domain-management
