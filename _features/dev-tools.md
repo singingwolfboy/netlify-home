@@ -9,15 +9,15 @@ features:
   - title: Native Clients
     body: "Don’t feel like writing the HTTP calls? We have native clients in Go, Ruby, and Javascript. [link to client repos]"
   - title: JavaScript Injection
-    body: "![gregg-coffee-intravenous_500.jpg](/uploads/gregg-coffee-intravenous_500.jpg)\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo purus diam. Donec quis ligula in erat rhoncus egestas pretium sit amet ex. Fusce iaculis tincidunt nisl, vel venenatis enim sollicitudin ac."
+    body: "![gregg-coffee-intravenous_500.jpg](/uploads/gregg-coffee-intravenous_500.jpg)\n\nAdd Google Analytics, retargeting codes or any other script you want, straight from the web UI. [Read the docs on Easy Snippet Injection here](https://www.netlify.com/docs/inject-analytics-snippets)"
   - title: "Redirect, Rewrite & Proxy Rules"
     body: "Use different rules to control how requests are handled. Proxy part of your traffic to your own backend, redirect old pages, or rewrite a page entirely. Or do them all."
   - title: Custom HTTP Headers
-    body: "Take full control over any HTTP header sent by netlify. Easily add CORS or Content Security Headers to your site. — [What does this mean and why is this important?](https://www.netlify.com/docs/headers-and-basic-auth)"
+    body: "Take full control over any HTTP header sent by netlify. Easily add CORS or Content Security Headers to your site. [What does this mean and why is this important?](https://www.netlify.com/docs/headers-and-basic-auth)"
   - title: Full Featured CLI
     body: "Setup, query and deploy without taking your hands off the keyboard. The CLI is a very powerful way to do everything from launch a new site to rollback. [See CLI docs](/docs/cli.html)"
   - title: Form Submission Hooks
-    body: "Nunc in purus sem. In tempus, massa sit amet imperdiet vehicula, nunc metus sodales sapien, non lacinia arcu ex non dolor."
+    body: "Netlify supports form submissions for any HTML form on your site and trigger email, slack notifications or webhooks. [Read more here](https://www.netlify.com/docs/form-handling)"
   - title: Password Protection
     body: We provide simple password protection for a site out of the box. That means that you can launch a site and have coarse grained access with a click or a few keystrokes.
 cmsUserSlug: dev-tools
