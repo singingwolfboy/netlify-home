@@ -75,7 +75,7 @@ You can submit forms over Ajax as well, just use the `action` attribute of the f
 
 Note that we add a hidden field to the form called **form-name** with the **name** attribute of the form. Make sure to include this in your Ajax request.
 
-Here's a simply jQuery example:
+Here's a simple jQuery example:
 
 ```js
 $("#my-form").submit(function(e) {

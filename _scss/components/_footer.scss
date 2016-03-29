@@ -1,0 +1,10 @@
+.vcard {
+  br {
+    display: none;
+  }
+
+  .address::before,
+  .address::after {
+    content: ' – ';
+  }
+}

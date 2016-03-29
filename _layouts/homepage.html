@@ -12,11 +12,6 @@ layout: default
         <a href="#" class="button-video" data-video-id="G7pCcE3vm5k">
           <img src="/img/video.png">
           <div class="play-button"></div>
-          <div class="callout">
-            <p class="callout-text">
-              {{ page.callout }}
-            </p>
-          </div>
         </a>
       </div> <!-- end media-img -->
 
@@ -25,7 +20,7 @@ layout: default
         <div class="blurb center">
           <h1 class="alpha highlight mt-0">
             <span class="block">
-              <img src="/img/netlify-text.svg" />
+              <img src="/img/netlify-text.svg" alt="netlify" />
             </span>
             {% if page.deck %}
               {{ page.deck }}
@@ -80,8 +75,8 @@ layout: default
       <div class="l-third optional">
         <div class="callout callout--large mt-70 ml-n20">
           <p class="callout-text"><span class="beta">
-            Don't Settle<br>
-            For Anything<br>
+            Don’t Settle<br>
+            for Anything<br>
             Less
           </span></p>
         </div>
@@ -91,14 +86,10 @@ layout: default
       <div class="l-third l-half-med">
         <section class="blurb">
           <header class="blurb-hd">
-            <div class="media media--bleed">
-              <div class="media-bd">
-                <h1 class="beta bold w-0 mt-25 mb-20">Full hosting</h1>
-              </div>
-            </div>
+            <h1 class="beta bold mt-25 mb-20">Full Hosting</h1>
           </header>
           <div class="blurb-bd">
-            <p class="zeta">The market’s most fully-featured static site CDN hosting</p>
+            <p class="zeta">The market’s most fully-featured static site CDN hosting.</p>
             <p class="small">To really get the full potential of your static site it’s a must to place it on a CDN. One that does proper cache invalidation as well. Netlify provides the fastest, most full-featured CDN hosting solution on the market. Try us out. We guarantee you won’t be disappointed.</p>
           </div>
         </section>
@@ -108,14 +99,10 @@ layout: default
       <div class="l-third l-half-med">
         <section class="blurb">
           <header class="blurb-hd">
-            <div class="media media--bleed">
-              <div class="media-bd">
-                <h1 class="beta bold w-0 mt-25 mb-20">Full automation</h1>
-              </div>
-            </div>
+            <h1 class="beta bold mt-25 mb-20">Full Automation</h1>
           </header>
           <div class="blurb-bd">
-            <p class="zeta">Builds, deploys, configuration, hosting and maintenance rolled into one</p>
+            <p class="zeta">Builds, deploys, configuration, hosting and maintenance rolled into one.</p>
             <p class="small">Let netlify automate your whole static workflow. With our automation software, you simply login, choose your favourite static site generator and press Start. Your site is then automatically built &amp; deployed. When you push to  Github / Bitbucket, your site updates.</p>
 
           </div>
@@ -142,9 +129,9 @@ layout: default
   <div class="content">
     <!-- Section with video button for smaller devices -->
     <p class="pullquote delta thin p--wide mt-40 mb-40">
-      <strong>18,000+</strong> Developers •
-      <strong>45,000+</strong> Web Sites •
-      <strong>200,000+</strong> Deploys
+      <strong>{{site.data.stats.developers}}</strong> Developers •
+      <strong>{{site.data.stats.websites}}</strong> Web Sites •
+      <strong>{{site.data.stats.deploys}}</strong> Deploys
     </p>
   </div><!-- end content -->
 </section>
@@ -167,10 +154,9 @@ layout: default
 <section class="bg-dark-muted-cover inverse bb bb--large">
   <div class="content">
 
-    <!-- Blog -->
-    <section>
-      <header class="text-center mt-90 mb-50">
-        <h1 class="kilo mb-35"><a href="/blog">Visit our blog</a></h1>
+    <section class="mt-90 mb-30">
+      <header class="text-center mb-50">
+        <h1 class="kilo mb-35"><a href="/blog.html">Visit our blog</a></h1>
         <p class="zeta muted p--wide">See the blog for tons of articles, tips, tricks and opinions on all that is related to static web-tech.</p>
       </header>
       <div class="l-container">
@@ -182,20 +168,7 @@ layout: default
       </div>
     </section>
 
-    <!-- Social links -->
-    <section class="text-center mt-30 mb-80">
-      <h1 class="gamma inline-block v-middle mr-40"><a href="/social">Socialize @</a></h1>
-
-      <p class="inline-block v-middle">
-        {% for link in site.social-links %}
-        <a href="{{link[1]}}" class="icon-link--round icon-link--{{link[0]}}">
-          <svg width="36" height="36" class="icon-{{link[0]}}--round">
-            <use xlink:href="#icon-{{link[0]}}-round">
-          </svg>
-        </a>
-        {% endfor %}
-      </p>
-    </section>
+    {% include socialize.html %}
 
   </div><!-- end content-->
 </section>

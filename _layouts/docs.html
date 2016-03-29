@@ -1,26 +1,26 @@
 ---
 layout: default
 ---
-<div class="l-wrap bg-light-muted-2 l-mobile-menu">
-  <div class="l-wrap-inner">
-    <div class="l-aside l-aside--left inverse docs-aside js-pinning-container" role="complementary">
-      <nav class="site-nav inverse js-pinned" role="navigation">
-        <ul class="nav nav--primary nav--nested nav--flush-left">
-          <li>
-            <a href="/docs.html"{% if page.url == "/docs.html" %} class="active"{% endif %}>Welcome</a>
+<div class="l-wrap">
+  <div class="l-wrap-inner l-wrap-inner--main-right">
+    <div class="l-aside l-aside--left l-aside--wide inverse docs-aside" role="complementary">
+      <nav class="side-nav inverse" role="navigation">
+        <ul class="nav nav--primary nav--nested">
+          <li{% if page.url == "/docs.html" %} class="active"{% endif %}>
+            <a href="/docs.html">Welcome</a>
           </li>
           {% assign items = site.docs | sort: 'position' %}
           {% for doc_page in items %}
           {% unless doc_page.hidden %}
-          <li>
-            <a href="{{doc_page.url}}"{% if page.url == doc_page.url %} class="active"{% endif %}>{{doc_page.title}}</a>
+          <li{% if page.url == doc_page.url %} class="active"{% endif %}>
+            <a href="{{doc_page.url}}">{{doc_page.title}}</a>
           </li>
           {% endunless %}
           {% endfor %}
         </ul>
       </nav>
     </div>
-    <div class="docs-main l-main l-main--right mt-10 text" role="main">
+    <div class="docs-main l-main l-main--right mt-10 mb-100 text" role="main">
       {{content}}
     </div>
   </div>

@@ -1,5 +1,5 @@
 <footer class="site-footer bg-white" role="contentinfo">
-  <div class="content">
+  <div class="content content--{{page.content-width | default: 'full-width'}}">
     <div class="mt-20 mb-20 clearfix">
       <!-- Logo -->
       <svg class="brand-logo loud left" width="224" height="80">
@@ -13,7 +13,8 @@
           <span class="locality" itemprop="addressLocality">San Francisco</span>,
           <span class="region" itemprop="addressRegion">CA</span>
           <span class="postal-code" itemprop="postalCode">94107</span>
-        </span>
+        </span><br>
+        <a href="/tos.html">Terms &amp; Privacy</a>
       </div>
     </div>
   </div>

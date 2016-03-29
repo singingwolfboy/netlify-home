@@ -39,8 +39,8 @@ img {
 }
 
 
-/* 
- * Icons 
+/*
+ * Icons
  */
 svg.append {
   position: relative;
@@ -60,78 +60,23 @@ svg.prepend {
  */
 .content {
   @extend %cf;
-  position: relative;
-  max-width: $content-width + 4*$base-spacing;
-  padding: 0 2*$base-spacing;
   margin: 0 auto;
+  max-width: $content-width + 3 * $base-spacing;
+  padding: 0 (2 * $base-spacing);
+  position: relative;
 }
+
 .content--wide {
   max-width: $page-width;
-  padding: 0 2.5*$base-spacing 0 4*$base-spacing;
+  padding: 0 (2.5 * $base-spacing) 0 (4 * $base-spacing);
 }
+
 .content--narrow {
   max-width: $content-width;
 }
 
-
-/*
- * Utility classes for layout flow
- */
-
-.abs {
-  position: absolute;
-}
-
-.left {
-  float: left;
-}
-.right {
-  float: right;
-}
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-.l-third.center {
-  margin-left: 50%;
-}
-
-.block {
-  display: block;
-}
-.inline-block {
-  display: inline-block;
-}
-.v-top {
-  vertical-align: top;
-}
-.v-middle {
-  vertical-align: middle;
-}
-.v-bottom {
-  vertical-align: bottom;
-}
-.v-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.r-180 {
-  transform: rotate(180deg);
-}
-
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-.text-center {
-  text-align: center;
-}
-.nowrap {
-  white-space: nowrap;
+.content--full-width {
+  max-width: none;
 }
 
 
@@ -159,6 +104,9 @@ svg.prepend {
  */
 .media {
   @include clearfix-me(micro);
+}
+a.media {
+  display: block;
 }
 .media-img {
   float: left;
@@ -203,14 +151,49 @@ svg.prepend {
 .l-half {
   float: left;
   width: 50%;
+
+  &:nth-child(2n+1) {
+    clear: left;
+  }
 }
+
 .l-third {
   float: left;
   width: 33.3333333%;
+
+  &:nth-child(3n+1) {
+    clear: left;
+  }
 }
+
 .l-fourth {
   float: left;
   width: 25%;
+
+  &:nth-child(4n+1) {
+    clear: left;
+  }
+}
+
+/*
+/* Based on Walmarts styleguide
+/* http://walmartlabs.github.io/web-style-guide/
+/*/
+
+.l-arrange {
+  display: table;
+  table-layout: auto;
+  width: 100%;
+}
+
+.l-arrange-fill,
+.l-arrange-fit {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.l-arrange-fill {
+  width: 100%;
 }
 
 
@@ -234,8 +217,53 @@ svg.prepend {
 .l-2-col-auto {
   column-count: 2;
   column-gap: 50px;
+
   > p:first-child {
     margin-top: 0;
+  }
+}
+
+.break-inside-avoid {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+}
+
+/* Grid */
+.l-grid {
+  display: inline-block;
+  letter-spacing: -.31em;
+  list-style-type: none;
+  word-spacing: -.43em;
+
+  &:before,
+  &:after,
+  *,
+  *:before,
+  *:after {
+    letter-spacing: normal;
+    white-space: normal;
+    word-spacing: normal;
+  }
+
+  > * {
+    @extend .content;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -244,14 +272,12 @@ svg.prepend {
  */
 .l-wrap {
   position: relative;
-  overflow: hidden;
 }
 .l-wrap-inner {
   display: flex;
-  max-width: $page-width;
   margin: 0 auto;
   position: relative;
-  padding: 0 2.5*$base-spacing 0 4*$base-spacing;
+  padding: 0 2*$base-spacing;
   z-index: 1;
 }
 .l-wrap-inner--narrow {
@@ -263,18 +289,20 @@ svg.prepend {
 .l-main {
   float: left;
   width: 100%;
-  padding-bottom: 80px;
+  padding: 0 60px;
 }
 .l-main--left {
-  padding-right: 60px;
+  padding-right: 80px;
+  padding-left: 0;
 }
-.l-main--right {
-  padding-left: 60px;
+.l-main--narrow {
+  max-width: 55em;
 }
 .l-aside {
   float: right;
   position: relative;
   padding-bottom: 80px;
+  width: $aside-width;
 }
 .l-aside--right {
   width: $aside-width + 50px; // aside width + left padding
@@ -290,7 +318,6 @@ svg.prepend {
   }
 }
 .l-aside--left {
-  width: $aside-width-wide;
   &:before {
     content: '';
     position: absolute;
@@ -300,10 +327,28 @@ svg.prepend {
     right: 100%;
   }
 }
+.l-aside--wide {
+  width: $aside-width-wide;
+}
+.l-aside--narrow {
+  width: $aside-width - 50px;
+}
 
 
 /* Flexbox
  */
+
+.flex {
+  display: flex;
+}
+
+.flex--space-between {
+  justify-content: space-between;
+}
+
+.flex--space-around {
+  justify-content: space-around;
+}
 
 @media (min-width: $bp-med) {
   .md-flex {
@@ -393,15 +438,88 @@ svg.prepend {
   }
 }
 
+@for $i from 1 through 5 { // margins for bleeds and adjustments
+  .mt-n#{$i * 10} {
+    margin-top: $i * -10px;
+  }
+
+  .mb-n#{$i * 10} {
+    margin-bottom: $i * -10px;
+  }
+}
+
 @for $i from 1 through 5 { // Margins for pull-outs
   .ml-n#{$i*10} {
     margin-left: $i * -10px;
   }
 }
 
-// TODO: Need to fix svgs for continuous deployment and hosting so they don't have
-// so much space around them. Until then, add a negative margin top
-// for the text under it
-.mt-n10 {
-  margin-top: -10px;
+
+
+/*
+ * Utility classes for layout flow
+ */
+
+.abs {
+  position: absolute;
+}
+.top {
+  top: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.fixed {
+  position: fixed;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.l-third.center {
+  margin-left: 50%;
+}
+
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.v-top {
+  vertical-align: top;
+}
+.v-middle {
+  vertical-align: middle;
+}
+.v-bottom {
+  vertical-align: bottom;
+}
+.v-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.r-180 {
+  transform: rotate(180deg);
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.nowrap {
+  white-space: nowrap;
 }

@@ -2,17 +2,17 @@
 layout: default
 title: The Netlify Blog. All about static web-tech and netlify.
 ---
-<div class="l-wrap bg-light-muted-2">
+<div class="l-wrap">
   <div class="l-wrap-inner l-wrap-inner--main-left">
 
     <section class="l-main l-main--left" role="main">
       {% for post in site.posts %}
       <article class="post">
-        <header class="post-hd">
-          <h1 class="post-title">
-            <a href="{{post.url}}" class="dark">{{post.title}}</a>
-          </h1>
-          <p class="post-meta">By {{post.author}}, {{post.date | date: "%B %-d %Y" }}</p>
+        <header class="post-hd mt-100">
+          <a href="{{post.url}}">
+            <h1 class="kilo">{{ post.title }}</h1>
+            <p class="large">By {{post.author}}, {{post.date | date: "%B %-d %Y" }}</p>
+          </a>
         </header>
         <div class="post-img">
           {% if post.image %}
@@ -30,9 +30,9 @@ title: The Netlify Blog. All about static web-tech and netlify.
         <p>Made for web developers <a href="/"><strong>Netlify</strong></a> is the default entry point to the world of static</p>
       </aside>
     </section>
-    
+
     <section class="l-aside l-aside--right inverse blog-aside" role="complementary">
-      <h1 class="blog-aside-title">More Articles</h1>
+      <h1 class="kilo mt-100">More Articles</h1>
       {% for post in site.posts %}
         {% include post-blurb.html %}
       {% endfor %}

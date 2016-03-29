@@ -1,0 +1,13 @@
+<section class="text-center mb-80">
+  <h1 class="gamma inline-block v-middle mr-40"><a href="/contact.html">Socialize @</a></h1>
+
+  <p class="inline-block v-middle">
+    {% for link in site.social-links %}
+    <a href="{{link[1]}}" class="icon-link--round icon-link--{{link[0]}}">
+      <svg width="36" height="36" class="icon-{{link[0]}}--round">
+        <use xlink:href="#icon-{{link[0]}}-round">
+      </svg>
+    </a>
+    {% endfor %}
+  </p>
+</section>

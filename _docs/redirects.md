@@ -51,7 +51,7 @@ You can easily setup a custom 404 page for all paths that doesn't resolve to a s
 
 Our CDN edge nodes do URL normalization before the redirect rules kick in. This happens to make sure we can guarantee the highest possible cache hit rate and the absolute best performance for your site.
 
-When "Pretty URLs" is enabled under processing settings for your site, Netlify will enforce consistent URL patters.
+When "Pretty URLs" is enabled under processing settings for your site, Netlify will enforce consistent URL patterns.
 
 A link to /about.html will be rewritten to /about in your HTML files and Netlify will enforce a redirect from /about/ to /about
 

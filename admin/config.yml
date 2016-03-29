@@ -45,11 +45,37 @@ collections:
       - {label: "Menu Title", name: "title", widget: "string", optional: false}
       - {label: "Position", name: "position", widget: "number", optional: false}
 
+  - name: "features"
+    label: "Features"
+    folder: "_features"
+    create: true
+    sort: "position:asc"
+    fields:
+      - {label: "Heading", name: "title", widget: "string", tagname: "h2", class: "alpha highlight"}
+      - {description: "Description", name: "description", widget: "string", tagname: "p"}
+      - name: features
+        label: Features
+        widget: list
+        fields:
+          - {label: "Title", name: "title", widget: "string", class: "blurb-title large"}
+          - {label: "Body", name: "body", widget: "markdown", class: "blurb-text" }
+    meta:
+      - {label: "Position", name: "position", widget: "number", optional: false}
+
   - name: "data"
     label: "Misc"
     files:
+      - name: stats
+        label: Stats
+        description: Number of Developers, Web Sites and Deploys
+        file: _data/stats.yml
+        fields:
+          - {label: "Developers", name: "developers", widget: "string"}
+          - {label: "Web Sites", name: "websites", widget: "string"}
+          - {label: "Deploys", name: "deploys", widget: "string"}
       - name: testimonials
         label: Testimonials
+        description: Testimonials for the Home Page
         file: _data/testimonials.yml
         fields:
           - name: quotes

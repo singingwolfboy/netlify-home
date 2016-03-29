@@ -1,4 +1,21 @@
-(function() {
+(function($, document, location) {
+
+  $.fn.scrollIntoView = function(options) {
+    options = options || {};
+
+    var
+      $this = $(this),
+      top = $this.offset().top,
+      marginTop = parseInt($this.css('margin-top'), 10),
+      scrollTop = top - marginTop;
+
+    $('body, html').animate({
+      scrollTop: scrollTop
+    }, options);
+
+    return $this;
+  };
+
   $(".button").on('click', function(e) {
     $(this).addClass("js-clicked");
   });
@@ -6,7 +23,7 @@
   $(".js-swipe").swipe({
     swipe: function() {
       $(this).addClass("js-clicked");
-      document.location.href = $(this).attr("href");
+      location.href = $(this).attr("href");
     },
     threshold: 10,
     excludedElements: ""
@@ -24,15 +41,32 @@
 
   if ($('.docs-main').length) {
     var $ul = $("<ul class='nav'></ul>");
-    var $li, id;
+    var $li, href;
     $('.docs-main h2').each(function() {
-      id = "#" + this.id;
+      href = "#" + this.id;
       $li = $("<li><a></a></li>");
-      $li.find("a").attr("href", id).text(this.textContent).toggleClass("current", document.location.hash === id);
+      $li.toggleClass("active", location.hash === href).find("a").attr("href", href).text(this.textContent);
       $ul.append($li);
     });
-    $(".docs-aside .active").append($ul);
+    $(".docs-aside .active").toggleClass('active', !location.hash).append($ul);
   }
+
+  $('a:not(.icon)[href^=#]').on('click', function(e) {
+    e.preventDefault();
+    var
+      $this = $(this),
+      href = $this.attr('href');
+
+    $(href).scrollIntoView({complete: function() {
+      location.hash = href;
+      $this
+        .closest('nav')
+          .find('.active').removeClass('active').end()
+        .end()
+        .parent().addClass('active');
+    }});
+  });
+
 
   var player;
   var playerId = 0;
@@ -67,8 +101,6 @@
     $(this).addClass("playing");
   });
 
-  $(".js-pinned").pin({containerSelector: ".js-pinning-container", minWidth: 870, padding: {bottom: 80}});
-
   /* Responsive tables in documentation */
   $(".docs-main table").each(function() {
     var $td;
@@ -94,7 +126,7 @@
 
 
   $(".js--help-box-trigger").click(function(e) {
-    e.preventDefault()
+    e.preventDefault();
     $(".js-item .open").not(this).removeClass("open");
     $(this).toggleClass("open");
 
@@ -149,4 +181,4 @@
 
     $(this).closest(".js-item").toggleClass("open");
   });
-})();
+})(jQuery, document, window.location);

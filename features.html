@@ -1,0 +1,61 @@
+---
+layout: default
+title: Features
+---
+
+{% assign sections = site.features | sort: 'position' %}
+
+<article class="l-wrap bg-light-muted-2">
+
+  <h1 class="visuallyhidden" id="features">Features</h1>
+
+  <div class="content content--full-width">
+    <div class="l-arrange">
+      <nav class="l-arrange-fit hide-for-small">
+        <div id="toc" class="side-nav w-245">
+          <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
+            <a href="/features.html" class="block no-icon">
+              <div class="callout callout--small callout--outline ml-20 mb-25">
+                <svg width="160" height="160" class="callout--small"><use xlink:href="#icon-polyhedron"></use></svg>
+              </div>
+            </a>
+            <ul class="nav nav--primary">
+              {% assign section = sections.first %}
+              <li class="active"><a href="#{{section.title | slugify}}">{{section.title}}</a></li>
+              {% for section in sections | offset: 1 %}
+              <li><a href="#{{section.title | slugify}}">{{section.title}}</a></li>
+              {% endfor %}
+            <ul>
+          </div>
+        </div>
+      </nav>
+      <div class="l-arrange-fill">
+        <div class="l-main l-main--narrow">
+        {% for section in sections %}
+        <section class="mt-40 mb-40 bb" id="{{ section.title | slugify }}">
+          <header class="text-center mb-40 bb bb--muted bb--large">
+            <svg width="120" height="120" class="highlight">
+              <use xlink:href="#polyhedron" />
+            </svg>
+            <h2 class="kilo highlight mt-n10 mb-0">{{ section.title }}</h2>
+            <p class="p--wide muted mb-40">{{ section.description }}</p>
+          </header>
+          <div class="l-2-col-auto mb-40">
+            {% for feature in section.features %}
+            <div class="blurb break-inside-avoid">
+              <h3 class="blurb-title large loud">{{ feature.title }}</h3>
+              <div class="blurb-text">
+              {{ feature.body | markdownify }}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+        {% endfor %}
+
+        {% include pricing-footer.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

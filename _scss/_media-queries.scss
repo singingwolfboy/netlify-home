@@ -1,10 +1,19 @@
-.show-med {
+.show-med, .show-for-small, .hide-for-large {
   display: none;
 }
+
 
 @include breakpoint($bp-large) { //* Screen is smaller than comp – start making things responsive
   body {
     min-width: 0; // We're going responsive, baby
+  }
+
+  .show-for-large {
+    display: none;
+  }
+
+  .hide-for-large {
+    display: inherit;
   }
 
   /*
@@ -30,14 +39,14 @@
 
   /* Reduce paddings around main and aside */
   .l-wrap-inner--main-left {
-    padding: 0 ($aside-width + 50px) 0 80px;
+    padding: 0 ($aside-width + 45px) 0 50px;
     .l-aside {
       width: $aside-width + 40px;
       padding-left: 40px;
       margin-right: -($aside-width + 40px);
     }
     .l-main {
-      padding-right: 45px;
+      padding-right: 50px;
     }
     .post-title {
       font-size: 50px; /* Kilo */
@@ -55,10 +64,11 @@
 
 @include breakpoint($bp-med-large) { //* Tweak point to leave more room for hero and main
 
-  /* Reduce padding around the header and hero to
-   * leave more space for the content.
+  /* Reduce padding to leave more space for the content.
    */
-  .content--wide {
+  .content--full-width,
+  .content--wide,
+  .l-main--narrow {
     padding: 0 25px;
   }
 
@@ -75,43 +85,59 @@
   .callout--large {
     margin-left: 0;
   }
-
-
 }
 
-@include breakpoint($bp-med-large-2) { //* Tweak point to fix broken hero
+@include breakpoint($bp-med-large-2) { //* Tweak point to fix broken hero and pricing table
 
-  /* Reduce margins between video and blurb. Hide callout */
+  //*
+  //* Reduce margins between video and blurb. Hide callout
+  //*/
+
   .media--wide {
     margin-left: 0;
+
     .media-img {
-      width: 50%;
       margin-right: 5%;
+      width: 50%;
     }
+
     .callout {
       visibility: hidden;
     }
   }
 
-  /* Plans and pricing table */
-  .plan--price.th--highlight {
-    padding: 15px 0 10px;
+
+  //*
+  //* Stack plan amount and period in pricing table
+  //*/
+  .pricing-table {
+
+    .plan-price {
+      padding-bottom: 12px;
+      padding-top: 15px;
+    }
+
+    .plan-amount,
+    .plan-period {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    .plan-amount {
+      margin-left: -3px;
+    }
+
+    .plan-period {
+      padding-left: 3px;
+    }
   }
-  .plan--amount {
-    font-size: 45px;
-  }
-  .plan--currency {
-    font-size: 16px;
-    line-height: 1.1;
-  }
-  .plan--note, .plan--feature, .plan--enterprise-feature {
-    font-size: 11px;
-  }
-  .plan--icon-hint {
-    display: none;
-  }
-  .td.plan--note {
-    margin: 0;
+
+  /* 2 column layout in narrow content should be 1 column */
+  .l-main--narrow {
+    .l-2-col-auto {
+      columns: 1;
+    }
   }
 }
 
@@ -230,14 +256,12 @@
     font-size: 18px;
   }
   .th, .td {
-    padding: 10px 0px;
+    padding: 10px;
     margin: 4px 2px;
   }
   .th--highlight {
-    padding: 8px 0 4px;
-  }
-  .plan--enterprise-feature {
-    padding: 10px 5px;
+    padding-bottom: 12px;
+    padding-top: 15px;
   }
 
   /*
@@ -250,7 +274,7 @@
     }
   }
 
-  .l-wrap-inner {
+  .l-wrap-inner--main-left {
     max-width: 745px + 2*40px;
     padding: 0 40px;
     margin: 0 auto;
@@ -263,7 +287,7 @@
     margin: 0;
     padding: 0;
   }
-  .l-main {
+  .l-main--left {
     border-bottom: 3px solid $color-highlight;
   }
   .l-wrap-inner--main-left {
@@ -291,8 +315,6 @@
       display: none;
     }
   }
-  .l-wrap:before,
-  .l-wrap:after,
   .l-aside {
     background: transparent;
   }
@@ -333,28 +355,39 @@
     text-align: center;
   }
 
-  /* When we have a left menu, we make it a mobile top accordeon */
-  .l-mobile-menu {
-    .l-wrap-inner {
-      margin: 0;
-      padding: 0;
-      max-width: none;
-    }
+  .l-wrap-inner--main-right {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
+
+  .l-aside--left {
+    border: solid $color-highlight;
+    border-width: 3px 0;
+    order: 2;
+
     .nav--primary {
       margin: 0;
-      padding: 10px 0;
-      text-align: center;
-    }
-    .l-main {
-      margin: 0 auto;
-      padding: 0 40px 80px;
-      max-width: 745px + 2*40px;
+      padding: 10px 40px;
     }
   }
+
+  .l-main--right {
+    margin: 0 auto;
+    max-width: 745px + 2 * 40px;
+    padding: 0 40px 80px;
+  }
+
   .nav--inline.nav--wide {
     li {
       margin-right: 10px;
     }
+  }
+
+  .nav .nav {
+    display: none;
   }
 }
 
@@ -390,7 +423,6 @@
       }
     }
   }
-
 }
 
 @include breakpoint($bp-med-small) { //* Tweak point to leave more room for content
@@ -415,6 +447,14 @@
 
 
 @include breakpoint($bp-small) { //* Major breakpoint. Stack all the things (almost)
+  .show-for-small {
+    display: inherit;
+  }
+
+  .hide-for-small {
+    display: none;
+  }
+
   /*
    * Reduce content width to readable line length
    */
@@ -437,7 +477,8 @@
       br {
         display: block;
       }
-      .address:before {
+      .address:before,
+      .address:after {
         display: none;
       }
     }
@@ -670,7 +711,7 @@
   /*
    * Reduce l-wrap-inner width to adapt to stacked blurbs
    */
-  .l-wrap-inner {
+  .l-wrap-inner--main-left {
     max-width: 30em;
     padding: 0 20px;
   }
@@ -696,6 +737,7 @@
    */
   .legalese {
     padding: 0;
+    margin: 60px 0 0;
     h1 {
       padding-top: 0;
       border: none;
@@ -711,11 +753,15 @@
         padding: 0;
       }
     }
+    hr {
+      display: none;
+    }
   }
 
   .inline-block .icon-link--round {
     margin-right: 10px;
   }
+
   .nav--inline.nav--wide {
     li:last-child {
       margin-right: 0;
@@ -735,65 +781,6 @@
     display: block;
     margin: 30px auto;
   }
-
-  /* Responsive pricing table */
-  .pricing-table {
-    display: none;
-  }
-  .mobile-pricing-table {
-    display: block;
-    .td {
-      padding: 10px 10px;
-      height: 45px;
-    }
-    .l-third:last-child .table {
-      margin-bottom: 0;
-    }
-    .plan--amount {
-      float: left;
-      width: 50%;
-    }
-    .plan--currency {
-      float: left;
-      width: 50%;
-      padding-left: 7px;
-    }
-  }
-  .button--signup {
-    margin: 0 auto;
-    width: 274px;
-  }
-  .signup--extra-info {
-    display: none;
-  }
-  .plan--feature-title {
-    font-size: 16px;
-  }
-  .plan--feature-box {
-    display: none;
-  }
-  .plan--enterprise-feature {
-    display: block;
-    padding: 10px;
-  }
-  table, .mobile-pricing-table {
-    .plan--feature, .td {
-      position: relative;
-    }
-    .help-box {
-      position: absolute;
-      top: 60px;
-      left: 0px;
-      width: 100%;
-      font-size: 11px;
-      line-height: 1.45;
-      padding: 10px;
-    }
-  }
-  .mobile-pricing-table .help-box {
-    top: 50px;
-  }
-
 }
 
 @include breakpoint($bp-small-2) {
