@@ -9,7 +9,7 @@ features:
   - title: Worldclass Support
     body: 24/7/365 support is available with custom hotline and support mail.
   - title: Migration services
-    body: "Need help migrating from your old site or app to  netlify? We can help you find a smooth path to 10x performance, security and scalability."
+    body: "Need help migrating from your old site or app to  netlify? A team at Netlify can help you find a smooth path to 10x performance, security and scalability."
 cmsUserSlug: enterprise
 date: now
 position: 80
