@@ -13,7 +13,5 @@ features:
   - title: Instant Cache Invalidation
     body: "Our custom control CDN allows us to set the state of the site in around 1 second. Releasing, or rolling back a site, no longer faces caching problems. Instant global consistency is in our DNA."
 cmsUserSlug: performance
-date: now
 position: 10
 ---
-

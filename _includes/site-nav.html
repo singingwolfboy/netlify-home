@@ -1,5 +1,5 @@
 {% assign fragments = page.url | replace: '.html', '' | split: '/' %}
-{% assign current = fragments[1] %}
+{% assign active = fragments[1] %}
 
 <nav id="navigation" class="side-nav inverse off-canvas-menu" role="navigation">
 
@@ -9,18 +9,36 @@
 
   <div class="ml-40 mt-10">
     <ul class="nav nav--primary">
-      <li><a href="/"{% if current == '' %} class="current"{% endif %}>Home</a></li>
-      <li><a href="/features.html"{% if current == 'features' %} class="current"{% endif %}>Features</a></li>
-      <li><a href="/pricing.html"{% if current == 'pricing' %} class="current"{% endif %}>Pricing</a></li>
-      <li><a href="/docs.html"{% if current == 'docs' %} class="current"{% endif %}>Docs</a></li>
-      <li><a href="/blog.html"{% if current == 'blog' %} class="current"{% endif %}>Blog</a></li>
+      <li{% if active == '' %} class="active"{% endif %}>
+        <a href="/">Home</a>
+      </li>
+      <li{% if active == 'features' %} class="active"{% endif %}>
+        <a href="/features.html">Features</a>
+      </li>
+      <li{% if active == 'pricing' %} class="active"{% endif %}>
+        <a href="/pricing.html">Pricing</a>
+      </li>
+      <li{% if active == 'docs' %} class="active"{% endif %}>
+        <a href="/docs.html">Docs</a>
+      </li>
+      <li{% if active == 'blog' %} class="active"{% endif %}>
+        <a href="/blog.html">Blog</a>
+      </li>
     </ul>
 
     <ul class="nav nav--secondary">
-      <li><a href="/about.html"{% if current == 'about' %}class="current"{% endif %}>About</a></li>
-      <li><a href="/contact.html"{% if current == 'contact' %} class="current"{% endif %}>Contact</a></li>
-      <li><a href="/tos.html"{% if current == 'tos' %} class="current"{% endif %}>Terms &amp; Conditions</a></li>
-      <li><a href="/privacy.html"{% if current == 'privacy' %} class="current"{% endif %}>Privacy</a></li>
+      <li{% if active == 'about' %} class="active"{% endif %}>
+        <a href="/about.html">About</a>
+      </li>
+      <li{% if active == 'contact' %} class="active"{% endif %}>
+        <a href="/contact.html">Contact</a>
+      </li>
+      <li{% if active == 'tos' %} class="active"{% endif %}>
+        <a href="/tos.html">Terms &amp; Conditions</a>
+      </li>
+      <li{% if active == 'privacy' %} class="active"{% endif %}>
+        <a href="/privacy.html">Privacy</a>
+      </li>
     </ul>
 
     <ul class="nav nav--social nav--inline">

@@ -45,10 +45,10 @@
     $('.docs-main h2').each(function() {
       href = "#" + this.id;
       $li = $("<li><a></a></li>");
-      $li.find("a").attr("href", href).text(this.textContent).toggleClass("current", location.hash === href);
+      $li.toggleClass("active", location.hash === href).find("a").attr("href", href).text(this.textContent);
       $ul.append($li);
     });
-    $(".docs-aside .active").toggleClass('current', !location.hash).append($ul);
+    $(".docs-aside .active").toggleClass('active', !location.hash).append($ul);
   }
 
   $('a:not(.icon)[href^=#]').on('click', function(e) {
@@ -57,16 +57,13 @@
       $this = $(this),
       href = $this.attr('href');
 
-    $this
-      .closest('nav')
-        .find('.current')
-          .removeClass('current')
-        .end()
-      .end()
-      .addClass('current');
-
     $(href).scrollIntoView({complete: function() {
       location.hash = href;
+      $this
+        .closest('nav')
+          .find('.active').removeClass('active').end()
+        .end()
+        .parent().addClass('active');
     }});
   });
 

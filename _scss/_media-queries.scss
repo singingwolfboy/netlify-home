@@ -64,10 +64,11 @@
 
 @include breakpoint($bp-med-large) { //* Tweak point to leave more room for hero and main
 
-  /* Reduce padding around the header and hero to
-   * leave more space for the content.
+  /* Reduce padding to leave more space for the content.
    */
-  .content--wide {
+  .content--full-width,
+  .content--wide,
+  .l-main--narrow {
     padding: 0 25px;
   }
 
@@ -129,6 +130,13 @@
 
     .plan-period {
       padding-left: 3px;
+    }
+  }
+
+  /* 2 column layout in narrow content should be 1 column */
+  .l-main--narrow {
+    .l-2-col-auto {
+      columns: 1;
     }
   }
 }

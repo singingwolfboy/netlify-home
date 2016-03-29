@@ -19,7 +19,5 @@ features:
   - title: "Versioning & Rollbacks"
     body: Each lightweight deploy is treated as an immutable snapshot of the site. Rolling back as far as you’d like is just a matter of clicking the right version you want.
 cmsUserSlug: automation
-date: now
 position: 40
 ---
-

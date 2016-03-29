@@ -15,7 +15,5 @@ features:
   - title: "  API Origin Protection"
     body: "As a new service netlify is able to offer advanced Origin Protection. A site hosted on a CDN is protected from Malware. But it can still be vulnerable to both DDOS and attacks on any APIs used. This service uses a new way of whitelabeling benign traffic on CDN level. Keeping your API safe, while filtering out bot traffic, and never losing performance!"
 cmsUserSlug: security
-date: now
 position: 30
 ---
-

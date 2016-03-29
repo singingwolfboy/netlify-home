@@ -277,7 +277,7 @@ a.media {
   display: flex;
   margin: 0 auto;
   position: relative;
-  padding: 0 2.5*$base-spacing;
+  padding: 0 2*$base-spacing;
   z-index: 1;
 }
 .l-wrap-inner--narrow {
@@ -289,18 +289,20 @@ a.media {
 .l-main {
   float: left;
   width: 100%;
-  padding-bottom: 80px;
+  padding: 0 60px;
 }
 .l-main--left {
   padding-right: 80px;
+  padding-left: 0;
 }
-.l-main--right {
-  padding-left: 60px;
+.l-main--narrow {
+  max-width: 55em;
 }
 .l-aside {
   float: right;
   position: relative;
   padding-bottom: 80px;
+  width: $aside-width;
 }
 .l-aside--right {
   width: $aside-width + 50px; // aside width + left padding
@@ -316,7 +318,6 @@ a.media {
   }
 }
 .l-aside--left {
-  width: $aside-width-wide;
   &:before {
     content: '';
     position: absolute;
@@ -325,6 +326,12 @@ a.media {
     top: 0px;
     right: 100%;
   }
+}
+.l-aside--wide {
+  width: $aside-width-wide;
+}
+.l-aside--narrow {
+  width: $aside-width - 50px;
 }
 
 
@@ -456,7 +463,15 @@ a.media {
 .abs {
   position: absolute;
 }
-
+.top {
+  top: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.fixed {
+  position: fixed;
+}
 .left {
   float: left;
 }

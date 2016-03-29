@@ -1,5 +1,5 @@
 {% assign fragments = page.url | replace: '.html', '' | split: '/' %}
-{% assign current = fragments[1] %}
+{% assign active = fragments[1] %}
 {% assign page_names = 'features,pricing,docs,blog,about,contact' | split: ',' %}
 
 <!-- Site Header -->
@@ -19,7 +19,9 @@
 
       <ul class="nav nav--primary inline">
         {% for page_name in page_names %}
-        <li><a href="/{{page_name}}.html" class="{% if current == page_name %}current{% endif %}">{{page_name | capitalize}}</a></li>
+        <li{% if active == page_name %} class="active"{% endif %}>
+          <a href="/{{page_name}}.html">{{page_name | capitalize}}</a>
+        </li>
         {% endfor %}
         <li>
           <a href="https://app.netlify.com" class="button button--pill button--small button--inline">

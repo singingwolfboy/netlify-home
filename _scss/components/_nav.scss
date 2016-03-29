@@ -83,10 +83,6 @@ html {
     position: relative;
   }
 
-  .current {
-    color: $color-highlight;
-  }
-
   .active {
     color: $color-highlight;
   }
@@ -109,7 +105,7 @@ html {
 .side-nav {
   padding: 40px 0;
 
-  .current::before {
+  .active > a::before {
     background: url('/img/icon-arrow.svg') no-repeat center center;
     background-size: cover;
     content: ' ';
@@ -235,4 +231,9 @@ html {
   text-align: right;
   margin-right: 20px;
   margin-left: -50px;
+}
+
+.affix {
+  position: fixed;
+  top: 30px;
 }
