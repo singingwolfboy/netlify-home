@@ -1,9 +1,9 @@
 ---
 title: Domain Management
-description: Netlify is by far the most full-featured hosting service on the static site market, with 40+ distinct features rolled out.
+description: Manage your domains with netlify..............
 features:
   - title: Custom Domain
-    body: "Launch with your own custom domain (and our little badge) or for a few bucks seamlessly take advantage of our platform."
+    body: Launch with your own custom domain (and our little badge) or for a few bucks seamlessly take advantage of our platform.
   - title: Domain Aliases
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo purus diam. Donec quis ligula in erat rhoncus egestas pretium sit amet ex."
   - title: Netlify Subdomain
@@ -12,5 +12,8 @@ features:
     body: "Maecenas vulputate et odio ut varius. Duis vitae elit mauris. Nunc in purus sem. In tempus, massa sit amet imperdiet vehicula, nunc metus sodales sapien."
   - title: Domain Registration
     body: "Vivamus eu dapibus libero, ut gravida odio. Vestibulum lacinia eu lacus eu efficitur. Praesent ac quam risus. Nullam et feugiat tortor."
+cmsUserSlug: domain-management
+date: now
 position: 70
 ---
+
