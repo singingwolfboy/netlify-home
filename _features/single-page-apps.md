@@ -3,7 +3,7 @@ title: Single Page Apps
 description: Because single pages apps are hella cool
 features:
   - title: Prerendering
-    body: "Vivamus eu dapibus libero, ut gravida odio. Vestibulum lacinia eu lacus eu efficitur. Praesent ac quam risus. Nullam et feugiat tortor."
+    body: "Never worry about SEO for your Single Page App again by adding netlify's prerendering backend. [Read all about prerendering in our documentation](https://www.netlify.com/docs/prerendering)"
   - title: Client-side Routing Support
     body: "![drivethrough-pano_21156-web_21156.jpg](/uploads/drivethrough-pano_21156-web_21156.jpg)\nDuis sapien ante, hendrerit eget scelerisque id, consectetur eu tortor. Maecenas vulputate et odio ut varius. Duis vitae elit mauris."
   - title: API Proxying
