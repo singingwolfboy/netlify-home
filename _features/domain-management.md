@@ -5,9 +5,9 @@ features:
   - title: Custom Domain
     body: Use your custom domain with any netlify plan. (the free plan includes our callout in the bottom right corner).
   - title: Domain Aliases
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo purus diam. Donec quis ligula in erat rhoncus egestas pretium sit amet ex."
+    body: "Point more than one domain to the same website. [Read our blogpost on domain aliases](https://www.netlify.com/blog/2015/10/30/domain-aliases-as-many-as-you-like) "
   - title: Netlify Subdomain
-    body: "Fusce iaculis tincidunt nisl, vel venenatis enim sollicitudin ac. Duis sapien ante, hendrerit eget scelerisque id, consectetur eu tortor."
+    body: "If you either don't have a domain or just need to do a test site use yourdomain.netlify.com — [Example](http://speedtest.netlify.com/)"
   - title: DNS Hosting (NS1)
     body: "Maecenas vulputate et odio ut varius. Duis vitae elit mauris. Nunc in purus sem. In tempus, massa sit amet imperdiet vehicula, nunc metus sodales sapien."
   - title: Domain Registration
