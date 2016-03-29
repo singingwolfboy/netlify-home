@@ -5,7 +5,7 @@ features:
   - title: Private Build Environment
     body: "Never have your build stuck in a queue and get even faster builds but selecting private build environments. "
   - title: Reseller API Access
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula dui ut metus tempor faucibus. Mauris mi est, facilisis eu magna nec, fermentum blandit sem."
+    body: "As a reseller you can issue API tokens that provides access to publish to your own instance of netlify’s API, with very high API rate limits and a setup that doesn’t distinguish between free or paid sites."
   - title: Superstar Support
     body: Praesent vel odio sed libero hendrerit convallis. Maecenas malesuada odio ut quam sollicitudin imperdiet.
   - title: Migration services
