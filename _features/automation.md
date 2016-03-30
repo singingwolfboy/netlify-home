@@ -7,7 +7,7 @@ features:
   - title: Automated Builds
     body: Leave the build boxes to us. Continuous deployment is as simple as just telling us how and what to build. Then with standard git commands you can rapidly deploy your site.
   - title: Inbound Webhooks
-    body: "Trigger builds with a POST request. [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
+    body: "Trigger builds with a POST request to integrate with external APIs, schedule builds of your site or trigger rebuilds from a Google Spreadsheet. [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
   - title: "Outbound Webhooks & Integrations"
     body: "Set up any number of outbound webhooks. Receive Slack notifications for new form submissions, deploys or build failures. — [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
   - title: Secure Build Environment
