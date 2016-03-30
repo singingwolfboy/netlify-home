@@ -3,7 +3,7 @@ title: Dev Tools
 description: "Netlify is the most full featured platform of it's kind, with tons of dev tools to make life easier for the professional coder."
 features:
   - title: Multiple Environment Support
-    body: "Support multiple environments (e.g. dev, staging, prod) with a simple argument. Each environment tracks a git branch, providing an isolated environment for experimentation."
+    body: "Support multiple environments (e.g. dev, staging, prod) with a simple argument. Each environment can track a git branch, providing isolated environments for experimentation."
   - title: RESTful API
     body: "Netlify is completely designed around a RESTful API. Manage, query, and deploy a site all using simple HTTP calls. [See API docs](/docs/api.html)"
   - title: Native Clients
