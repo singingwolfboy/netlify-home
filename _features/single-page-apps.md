@@ -1,16 +1,17 @@
 ---
 title: Single Page Apps
-description: Because single pages apps are hella cool
+description: "Building a modern Single Page App? Netlify is the perfect deployment platform whether you're on React, Angular, Ember or your own homebrewed framework."
 features:
   - title: Prerendering
-    body: "Never worry about SEO for your Single Page App again by adding netlify's prerendering backend. [Read all about prerendering in our documentation](https://www.netlify.com/docs/prerendering)"
+    body: "Never worry about SEO for your Single Page App again by adding netlify's prerendering backend with a one-click setup. [Read all about prerendering in our documentation](https://www.netlify.com/docs/prerendering)"
   - title: Client-side Routing Support
-    body: "![drivethrough-pano_21156-web_21156.jpg](/uploads/drivethrough-pano_21156-web_21156.jpg)\nWe will support all clients on their side with support along their route... Never fear again (?)"
+    body: "Setup a simple rule to make your single page app handle routing. This way all requests that don't match a static file, will serve your index file so your router can handle them client site. [Read all about history pushstate support in our docs](https://www.netlify.com/docs/redirects#history-pushstate-and-single-page-apps)"
   - title: API Proxying
-    body: "Using the redirect rules it is trivial to host the site on Netlify, but route all the API calls to your own backend. [See Redirects docs](/docs/redirects.html)"
+    body: "Using the redirect rules it is trivial to host the site on Netlify, but route all the API calls to your own backend and stop worrying about CORS. [See Redirects docs](/docs/redirects.html)"
   - title: Authentication Providers
-    body: "Use authentication providers like Stormpath to limit access to your site. Ideal for running private documentation for your global marketing, developer or sales teams integrated with 3rd party auth providers."
+    body: "Let your users authenticate with GitHub or other OAuth2 providers, without any backend. [Read OAuth Provider docs](https://www.netlify.com/docs/authentication-providers)"
 cmsUserSlug: single-page-apps
-date: 2016-03-29
+date: 2016-03-29T00:00:00.000Z
 position: 60
 ---
+
