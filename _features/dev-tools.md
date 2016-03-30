@@ -5,9 +5,9 @@ features:
   - title: Multiple Environment Support
     body: "Support multiple environments (e.g. dev, staging, prod) with a simple argument. Each environment tracks a git branch, providing an isolated environment for experimentation."
   - title: RESTful API
-    body: "Netlify is completely designed around a RESTful API. Manage, query, and deploy a site all using simple REST calls. [See API docs](/docs/api.html)"
+    body: "Netlify is completely designed around a RESTful API. Manage, query, and deploy a site all using simple HTTP calls. [See API docs](/docs/api.html)"
   - title: Native Clients
-    body: "Don’t feel like writing the HTTP calls? We have native clients in Go, Ruby, and Javascript. [link to client repos]"
+    body: "Don’t feel like writing the HTTP calls? We have native clients in [Javascript](https://github.com/netlify/node-client), [Go](https://github.com/netlify/netlify-go) and [Ruby](https://github.com/netlify/ruby-client)."
   - title: JavaScript Injection
     body: "![gregg-coffee-intravenous_500.jpg](/uploads/gregg-coffee-intravenous_500.jpg)\n\nAdd Google Analytics, retargeting codes or any other script you want, straight from the web UI. [Read the docs on Easy Snippet Injection here](https://www.netlify.com/docs/inject-analytics-snippets)"
   - title: "Redirect, Rewrite & Proxy Rules"
@@ -21,6 +21,7 @@ features:
   - title: Password Protection
     body: We provide simple password protection for a site out of the box. That means that you can launch a site and have coarse grained access with a click or a few keystrokes.
 cmsUserSlug: dev-tools
-date: 2016-03-29
+date: 2016-03-29T00:00:00.000Z
 position: 50
 ---
+
