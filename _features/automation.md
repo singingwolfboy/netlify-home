@@ -3,7 +3,7 @@ title: Automation
 description: "Let netlify automise your workflow. The seperation of frontend and backend opens up a whole new world of possibilities. But it also means a lot of manual work, manually integrating and managing different tools and processes. Until now."
 features:
   - title: Git Integration
-    body: "Netlify naturally pairs with Git. If you use GitHub, GitLab, BitBucket or just your own Private repo, we mirror that pull, change, push workflow into your site’s state."
+    body: "Netlify naturally pairs with Git. If you use GitHub, GitLab, BitBucket or just your own Private repo, we let you pull, change and push to manage your site."
   - title: Automated Builds
     body: Leave the build boxes to us. Continuous deployment is as simple as just telling us how and what to build. Then with standard git commands you can rapidly deploy your site.
   - title: Inbound Webhooks
@@ -19,6 +19,7 @@ features:
   - title: "Versioning & Rollbacks"
     body: Each lightweight deploy is treated as an immutable snapshot of the site. Rolling back as far as you’d like is just a matter of clicking the right version you want.
 cmsUserSlug: automation
-date: 2016-03-29
+date: 2016-03-29T00:00:00.000Z
 position: 40
 ---
+
