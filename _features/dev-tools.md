@@ -15,7 +15,7 @@ features:
   - title: Custom HTTP Headers
     body: "Take full control over any HTTP header sent by netlify. Easily add CORS or Content Security Headers to your site. [What does this mean and why is this important?](https://www.netlify.com/docs/headers-and-basic-auth)"
   - title: Full Featured CLI
-    body: "Setup, query and deploy without taking your hands off the keyboard. The CLI is a very powerful way to do everything from launching a new site to rolling back a failed deploy. [See CLI docs](/docs/cli.html)"
+    body: "Setup, query and deploy without taking your hands off the keyboard. The CLI is a very powerful way to do everything from launching a new site to rolling back a deploy. [See CLI docs](/docs/cli.html)"
   - title: Form Submission Hooks
     body: "Netlify supports form submissions for any HTML form on your site and trigger email, slack notifications or webhooks. [Read more here](https://www.netlify.com/docs/form-handling)"
   - title: Password Protection
