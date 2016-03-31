@@ -31,3 +31,19 @@
   }
 }
 
+$feature-icon-size: 60px;
+
+.homepage-feature {
+  padding-left: $feature-icon-size + 20px;
+  text-align: left;
+  position: relative;
+
+  .icon {
+    height: $feature-icon-size;
+    width: $feature-icon-size;
+    background-color: #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

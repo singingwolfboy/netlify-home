@@ -87,3 +87,8 @@ collections:
               - {label: "Name and title", name: "cite", widget: "string"}
               - {label: "Link URL", name: "link", widget: "string"}
               - {label: "Photo", name: "photo", widget: "image", media_folder: "img/testimonials"}
+      - name: homepage_features
+        label: Features
+        description: Short descrptions of key features
+        file: _data/homepage_features.yml
+        

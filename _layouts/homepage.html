@@ -124,6 +124,33 @@ layout: default
   </div><!-- end content -->
 </section>
 
+<!-- Features -->
+<section class="bg-light-muted muted text-center bb bb--large">
+  <div class="content">
+    <section class="mt-85 mb-85">
+      <h1 class="alpha">Features</h1>
+
+      {% for feature in site.data.homepage_features %}
+
+          {% cycle 'add row' : '<div class="l-container">', nil, nil %}
+
+            <div class="l-third homepage-feature">
+              <div class="icon"></div>
+
+              <strong>{{feature.title}}</strong>
+
+              <p>{{feature.description}}</p>
+            </div>
+
+          {% cycle 'end row' : nil, nil, '</div>' %}
+
+      {% endfor %}
+      {% cycle 'end row' : nil, '</div>', '</div>' %}
+    </section>
+  </div>
+</section>
+<!-- end Features -->
+
 <!-- Pull Quote -->
 <section class="bg-white muted text-center">
   <div class="content">
