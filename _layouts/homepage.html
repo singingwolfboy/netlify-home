@@ -83,12 +83,18 @@ layout: default
       <div class="l-container">
       {% for feature in site.data.homepage_features %}
 
-        <div class="l-third homepage-feature">
-          <div class="icon"></div>
+        <div class="l-third">
+          <div class="homepage-feature">
+            <strong>
+              <div class="feature-icon">
+                <img src="/img/feature-icons/{{feature.icon_filename}}" alt="">
+              </div>
 
-          <strong>{{feature.title}}</strong>
+              {{feature.title}}
+            </strong>
 
-          <p>{{feature.description}}</p>
+            <p>{{feature.description}}</p>
+          </div>
         </div>
 
       {% endfor %}

@@ -31,21 +31,38 @@
   }
 }
 
-$feature-icon-size: 60px;
+$feature-icon: 3rem;
+$feature-icon-small: 1.5rem;
 
 .homepage-feature {
-  padding-left: $feature-icon-size + 20px;
+  padding-left: $feature-icon + 1rem;
   padding-right: 20px;
   text-align: left;
   position: relative;
 
-  .icon {
-    height: $feature-icon-size;
-    width: $feature-icon-size;
-    background-color: #eee;
+  .feature-icon {
+    height: $feature-icon;
+    width: $feature-icon;
     position: absolute;
     top: 0;
     left: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $bp-med) {
+    padding-left: $feature-icon-small + .5rem;
+    padding-right: 20px;
+
+    .feature-icon {
+      // position: relative;
+      // display: inline-block;
+      height: $feature-icon-small;
+      width: $feature-icon-small;
+    }
   }
 }
 
