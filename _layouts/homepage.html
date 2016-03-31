@@ -130,22 +130,27 @@ layout: default
     <section class="mt-85 mb-85">
       <h1 class="alpha">Features</h1>
 
+      <div class="l-container">
       {% for feature in site.data.homepage_features %}
 
-          {% cycle 'add row' : '<div class="l-container">', nil, nil %}
+        <div class="l-third homepage-feature">
+          <div class="icon"></div>
 
-            <div class="l-third homepage-feature">
-              <div class="icon"></div>
+          <strong>{{feature.title}}</strong>
 
-              <strong>{{feature.title}}</strong>
-
-              <p>{{feature.description}}</p>
-            </div>
-
-          {% cycle 'end row' : nil, nil, '</div>' %}
+          <p>{{feature.description}}</p>
+        </div>
 
       {% endfor %}
-      {% cycle 'end row' : nil, '</div>', '</div>' %}
+      </div>
+
+      <p class="zeta">
+        <a href="/features.html" class="button button--pill button--small button--inline">
+          <span class="button-container">
+            <span class="button-label">See more features</span>
+          </span>
+        </a>
+      </p>
     </section>
   </div>
 </section>
