@@ -91,4 +91,7 @@ collections:
         label: Features
         description: Short descrptions of key features
         file: _data/homepage_features.yml
-        
+      - name: homepage_integration_logos
+        label: Integration logos
+        description: Logos for technologies that work with Netlify
+        file: _data/homepage_integration_logos.yml

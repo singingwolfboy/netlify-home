@@ -56,12 +56,21 @@ layout: default
         </p>
       </div>
     </a>
-    <p class="pullquote delta thin p--wide mt-40 mb-40">
-      {{ page.pullquote }}
-    </p>
   </div><!-- end content -->
 </section>
 <!-- end Pull Quote-->
+
+<section class="homepage-integrations bg-white muted text-center bb bb--large">
+  <div class="content">
+    <section class="mt-30 mb-50">
+      <h1 class="epsilon">The tools you use are already supported</h1>
+
+      {% for logo in site.data.homepage_integration_logos %}
+        <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="">
+      {% endfor %}
+    </section>
+  </div>
+</section>
 
 {{ content }}
 
