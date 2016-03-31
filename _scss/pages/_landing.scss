@@ -79,12 +79,14 @@
   blockquote {
     float: right;
     max-width: 45%;
+    text-align: right;
 
     @media (max-width: $bp-med) {
       float: none;
       max-width: none;
       margin-top: 40px;
       margin-bottom: 0;
+      text-align: left;
     }
 
     p {
