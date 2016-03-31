@@ -66,6 +66,15 @@ $feature-icon-small: 1.5rem;
   }
 }
 
+.feature-button {
+  background-color: $color-highlight;
+  color: $color-lightest;
+  line-height: 1.5rem;
+  padding: .20rem 1rem;
+  display: inline-block;
+  border-radius: 40px;
+}
+
 .homepage-integrations {
   img {
     margin: 0 15px 30px 15px;
