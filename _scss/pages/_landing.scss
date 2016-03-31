@@ -1,8 +1,8 @@
 .section-hero {
-  
+
   .blurb {
     max-width: 355px;
-    
+
     .button--large {
       margin-left: -5px;
       margin-right: 3px;
@@ -12,9 +12,9 @@
 }
 
 .landing {
-  
+
   .section-hero {
-    
+
     .blurb {
       max-width: 25em;
     }
@@ -22,7 +22,7 @@
     .small-2 {
       font-size: 16.6px;
     }
-    
+
     @media (max-width: 1280px) {
       .media-img {
         width: 45%;
