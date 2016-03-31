@@ -13,6 +13,8 @@ Go to the settings screen for your site and click "Edit" next to the "Privacy" s
 
 If you need multiple passwords for a site, or need to protect just part of your site, you can setup Basic-Auth via netlify's [custom HTTP header](/docs/headers_and_basic_auth) support.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f7Ig5EKjzgw" frameborder="0" allowfullscreen></iframe>
+
 ## Authenticating with 3rd party providers
 
 If you're using netlify to host materials for your intranet, like sales manuals for your global sales team, private developer documentation, HR guides and similar sensitive material, you might want fine-grained access control based on 3rd party authentication providers like [Stormpath](https://stormpath.com) or your own authentication API.
