@@ -10,7 +10,9 @@ date: 2016-03-28T00:00:00.000Z
 tags: null
 ---
 
-Thomas Reynolds is the Technical Director at famed Portland digital agency Instrument. He’s also the creator of Middleman, one of the most widely used static site generators for large enterprise sites like MailChimp, Sequoia Capitol and Vox Media.
+Thomas Reynolds is the Technical Director at famed Portland digital agency Instrument. 
+
+He’s also the creator of Middleman, one of the most widely used static site generators for large enterprise sites like MailChimp, Sequoia Capitol and Vox Media.
 
 Reynolds recently did a massive overhaul for Middleman v4.0, and presented his changes and thoughts on the category at this month's SF Static Web Tech Meetup. Following the meetup, Reynolds took a few minutes to talk to netlify about Middleman's humble beginnings, the benefits of a git-centric workflow, and why he prefers developing with modern web technologies.
 
