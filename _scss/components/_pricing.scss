@@ -58,6 +58,7 @@
 .plan-amount,
 .plan-period {
   display: table-cell;
+  margin: 0;
   vertical-align: middle;
 }
 
@@ -70,7 +71,7 @@
     display: inline-block;
     font-size: $font-size;
     font-weight: normal;
-    margin: 0 6px 0 -6px;
+    margin: 0 3px 0 -3px;
     position: relative;
     top: -1em - $font-size;
   }

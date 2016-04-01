@@ -2,15 +2,14 @@
 layout: default
 title: The Netlify Blog. All about static web-tech and netlify.
 ---
-<div class="l-wrap">
-  <div class="l-wrap-inner l-wrap-inner--main-left">
-
-    <section class="l-main l-main--left" role="main">
-      {% for post in site.posts %}
+<div class="l-wrap bg-light-muted-3">
+  <div class="l-wrap-inner">
+    <div class="l-main l-main--left">
+    {% for post in site.posts %}
       <article class="post">
-        <header class="post-hd mt-100">
+        <header class="post-hd">
           <a href="{{post.url}}">
-            <h1 class="kilo">{{ post.title }}</h1>
+            <h1 class="post-title">{{ post.title }}</h1>
             <p class="large">By {{post.author}}, {{post.date | date: "%B %-d %Y" }}</p>
           </a>
         </header>
@@ -22,20 +21,21 @@ title: The Netlify Blog. All about static web-tech and netlify.
         <div class="post-bd text">
           {{post.excerpt}}
         </div>
-        <div class="post-jumpline"><a href="{{post.url}}" class="link-more">More</a></div>
+        <div class="post-jumpline content--xnarrow"><a href="{{post.url}}" class="link-more">More</a></div>
       </article>
-      {% endfor %}
+    {% endfor %}
 
-      <aside class="banner" role="complementary">
-        <p>Made for web developers <a href="/"><strong>Netlify</strong></a> is the default entry point to the world of static</p>
-      </aside>
-    </section>
+    {% include post-banner.html %}
 
-    <section class="l-aside l-aside--right inverse blog-aside" role="complementary">
-      <h1 class="kilo mt-100">More Articles</h1>
-      {% for post in site.posts %}
-        {% include post-blurb.html %}
-      {% endfor %}
-    </section>
+    </div>
+
+    <aside class="l-aside l-aside--right inverse blog-aside">
+      <h1 class="blog-aside-title">More Articles</h1>
+      <div class="l-container">
+        {% for post in site.posts %}
+          {% include post-blurb.html %}
+        {% endfor %}
+      </div>
+    </aside>
   </div>
 </div>

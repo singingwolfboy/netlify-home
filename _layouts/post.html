@@ -1,86 +1,47 @@
 ---
 layout: default
 ---
-<article>
 
-  <div class="bg-white">
-    <div class="content content--narrow">
+{% assign post = page %}
 
-      <div class="post mt-100">
+<article class="l-wrap bg-light-muted-3">
+  <div class="l-wrap-inner">
+    <div class="l-main l-main--left">
+
+      <div class="post">
         <header class="post-hd">
-          <h1 class="mega">
-            {{page.title}}
-          </h1>
-          <p class="large highlight">By {{page.author}}, {{page.date | date: "%B %-d %Y" }}</p>
+          <a href="{{post.url}}">
+            <h1 class="post-title">{{ post.title }}</h1>
+            <p class="large">By {{post.author}}, {{post.date | date: "%B %-d %Y" }}</p>
+          </a>
         </header>
-
         <div class="post-img">
-          {% if page.image %}
-          {% image_tag src=page.image width="730" %}
+          {% if post.image %}
+          {% image_tag src=post.image width="730" %}
           {% endif %}
         </div>
-
         <div class="post-bd text">
-          {{content}}
+          {{ content }}
         </div>
       </div>
 
+      {% include post-banner.html %}
+      {% include disqus.html %}
     </div>
+
+    <aside class="l-aside l-aside--right inverse blog-aside">
+      <h1 class="blog-aside-title">More Articles</h1>
+      <div class="l-container">
+      {% for post in site.related_posts %}
+        {% include post-blurb.html %}
+      {% endfor %}
+      </div>
+      <footer class="blog-aside-footer">
+        <p>
+          <a href="/blog.html" class="link-more">More</a>
+        </p>
+      </footer>
+    </aside>
+
   </div>
-
-  <aside class="bb bb--medium">
-    <div id="disqus_thread" class="content content--narrow disqus mt-50 mb-60">
-    </div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES * * */
-        var disqus_shortname = 'netlify';
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>
-      Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-    </noscript>
-  </aside>
-
-  <aside class="inverse bg-dark-muted bb bb--medium">
-    <div class="content">
-
-      <section class="mt-80 mb-90">
-        <h1 class="kilo text-center mb-50 highlight"><a href="/blog.html">More Articles</a></h1>
-        <div class="l-container">
-        {% for post in site.related_posts limit: 6 %}
-          <div class="l-third mb-20">
-            {% include post-blurb.html %}
-          </div>
-        {% endfor %}
-        </div>
-        <div class="text-center">
-          <a href="/blog" class="link-more delta thin ml-n20">More Articles</a>
-        </div>
-      </section>
-
-    </div>
-  </aside>
-
-  <aside class="bg-white muted">
-    <div class="content">
-      <p class="pullquote text-center delta thin p--wide mt-40 mb-40">
-        {{ site.data.stats.developers}} developers are already a part of the revolution.
-        <a href="https://app.netlify.com"><strong>Join them today<svg width="20" height="20" class="append"><use xlink:href="#icon-arrow" class="lightest" /></svg></strong></a>
-      </p>
-    </div>
-  </aside>
-
-  <aside class="bg-light muted">
-    <div class="content">
-      <section class="mt-80 mb-90">
-        {% include newsletter.html %}
-      </section>
-    </div>
-  </aside>
 </article>

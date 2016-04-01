@@ -7,13 +7,13 @@ content-width: default
 
 <!-- Pricing -->
 <section class="bg-light-muted-2 text-center">
-  <div class="content content--{{page.content-width}}">
+  <div class="content">
 
     <header class="mb-50">
-      <h1 class="tera text-center mt-80">Pricing</h1>
+      <h1 class="tera">Pricing</h1>
       <p class="epsilon">
         <a href="/features.html">
-          See Features for a full feature list<svg width="20" height="20" class="append"><use xlink:href="#icon-arrow" class="light" /></svg>
+          <strong>See Features for a full feature list<svg width="20" height="20" class="append"><use xlink:href="#icon-arrow" class="light" /></svg></strong>
         </a>
       </p>
     </header>
@@ -105,7 +105,8 @@ content-width: default
       {% endfor %}
     </div>
 
-    {% include pricing-footer.html %}
-
+    <footer class="mt-60 mb-110">
+      {% include pricing-footer.html %}
+    </footer>
   </div>
 </section>

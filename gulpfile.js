@@ -86,7 +86,7 @@ gulp.task('sass', function () {
       })
     ]))
     .pipe(prefix({
-      browsers: ['> 1%']
+      browsers: ['> 1%', 'last 15 versions']
     }))
     .pipe(gulp.dest('_site/css'))
     .pipe(gulp.dest('_status/css'))
@@ -116,7 +116,7 @@ gulp.task('watch', function () {
       '_posts/*',
       '_reseller_docs/*.md',
       'admin/*',
-      'img/*',
+      'img/**/*',
       'js/*.js'
     ], ['jekyll-rebuild']);
 });
