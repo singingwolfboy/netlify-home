@@ -121,7 +121,6 @@ svg {
 //* Dark background
 //*/
 .inverse {
-  @include font-weight(thin);
   background-color: $color-darkest;
   color: $color-light;
 
