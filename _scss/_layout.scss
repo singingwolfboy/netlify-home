@@ -67,7 +67,7 @@ svg.prepend {
 }
 
 .content--narrow {
-  max-width: $content-width;
+  max-width: $content-width + 40px;
 }
 
 /*
