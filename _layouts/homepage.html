@@ -55,12 +55,14 @@ layout: default
 
 <section class="homepage-integrations bg-white muted text-center bb bb--large">
   <div class="content">
-    <section class="mt-30 mb-20">
-      <h1 class="epsilon">The tools you use are already supported</h1>
+    <section class="mt-30 mb-40">
+      <h1 class="epsilon">Our agnostic platform means your favorite tools are already supported</h1>
 
       {% for logo in site.data.homepage_integration_logos %}
         <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="">
       {% endfor %}
+
+      <p class="zeta mt-0 mb-20">And thousands more! (Really, just about anything.)</p>
     </section>
   </div>
 </section>
