@@ -48,6 +48,10 @@ html {
     position: relative;
     text-transform: none;
   }
+
+  .inverse & {
+    @include font-weight(thin);
+  }
 }
 
 .active {
