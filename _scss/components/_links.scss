@@ -185,6 +185,27 @@ a, a * {
 
 
 /*
+ * Simple buttons
+ *
+ * Example: <a href="#" class="simple-button">Hello</a>
+ */
+
+.simple-button {
+  background-color: $color-highlight;
+  color: $color-lightest;
+  line-height: 1.5rem;
+  padding: .20rem 1rem;
+  display: inline-block;
+  border-radius: 4rem;
+
+  &.simple-button--large {
+    @include font-weight(bold);
+    padding: .5rem 1.2rem;
+  }
+}
+
+
+/*
  * Icon links (eg. social links)
  *
  * Hover effect: http://tympanus.net/Development/IconHoverEffects/#set-8

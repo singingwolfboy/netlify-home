@@ -3,41 +3,34 @@ layout: default
 ---
 
 <!-- Hero -->
-<section class="bg-light section-hero">
+<section class="bg-light">
   <div class="content content--wide">
     <div class="media media--wide">
+      <div class="media-bd hero">
+        <!-- Call to action -->
 
-      <!-- Video -->
-      <div class="media-img">
-        <a href="#" class="button-video" data-video-id="G7pCcE3vm5k">
-          <img src="/img/video.png">
-          <div class="play-button"></div>
-        </a>
-      </div> <!-- end media-img -->
-
-      <!-- Blurb -->
-      <div class="media-bd">
-        <div class="blurb center">
-          <h1 class="alpha highlight mt-0">
-            <span class="block">
-              <img src="/img/netlify-text.svg" alt="netlify" />
-            </span>
-            {% if page.deck %}
-              {{ page.deck }}
-            {% else %}
-              {{ page.title }}
-            {% endif %}
+        <div class="blurb">
+          <h1 class="mt-0">
+            <span class="one-thing">1 platform</span> <span class="one-thing two">1 click SSL</span> <span class="one-thing three">1 command deploy</span>
           </h1>
           <p>
-            <a href="https://app.netlify.com" class="button button--large js-swipe">
-              <svg class="button-icon" width="68" height="68">
-                <use xlink:href="#icon-arrow" />
-              </svg>
-              <span class="button-label">START HERE</span>
-            </a>
+            Deploy <strong>modern static websites</strong> with our automated platform and add best practices like SSL, CDN distribution, caching, and continuous deployment with a single-click.
           </p>
-          <p class="small-2 overloud text-center">Basic packages <strong class="highlight">free forever</strong> – no credit card required</p>
+          <p><a href="https://app.netlify.com" class="simple-button simple-button--large">See how easy it is</a></p>
         </div>
+
+        <blockquote class="muted">
+          <p class="mb-0">
+            “{{page.celebrity_quote}}”
+          </p>
+          <p class="byline">
+            <em>
+              —<strong>{{page.celebrity_name}}</strong>
+              {{page.celebrity_title}}
+            </em>
+          </p>
+        </blockquote>
+
       </div> <!-- end media-bd -->
     </div><!-- end media -->
   </div><!-- end content -->
@@ -56,73 +49,63 @@ layout: default
         </p>
       </div>
     </a>
-    <p class="pullquote delta thin p--wide mt-40 mb-40">
-      {{ page.pullquote }}
-    </p>
   </div><!-- end content -->
 </section>
 <!-- end Pull Quote-->
 
+<section class="homepage-integrations bg-white muted text-center bb bb--large">
+  <div class="content">
+    <section class="mt-30 mb-40">
+      <h1 class="epsilon">Our agnostic platform means your favorite tools are already supported</h1>
+
+      {% for logo in site.data.homepage_integration_logos %}
+        <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="">
+      {% endfor %}
+
+      <p class="zeta mt-0 mb-20">And thousands more! (Really, just about anything.)</p>
+    </section>
+  </div>
+</section>
+
 {{ content }}
 
-<!-- Products -->
-<section class="bg-dark-cover inverse bb bb--large">
+<!-- Features -->
+<section class="bg-light-muted muted text-center bb bb--large">
   <div class="content">
+    <section class="mt-85 mb-85">
+      <h1 class="alpha">Features</h1>
 
-    <div class="l-container mt-115 mb-0 ml-n10">
+      <div class="l-container">
+      {% for feature in site.data.homepage_features %}
 
-      <!-- Callout -->
-      <div class="l-third optional">
-        <div class="callout callout--large mt-70 ml-n20">
-          <p class="callout-text"><span class="beta">
-            Don’t Settle<br>
-            for Anything<br>
-            Less
-          </span></p>
+        <div class="l-third">
+          <div class="homepage-feature">
+            <strong>
+              <div class="feature-icon">
+                <svg width="60" height="60">
+                  <use xlink:href="#{{feature.icon_id}}" />
+                </svg>
+              </div>
+
+              {{feature.title}}
+            </strong>
+
+            <p>{{feature.description}}</p>
+          </div>
         </div>
-      </div><!-- end -third -->
 
-      <!-- Hosting only -->
-      <div class="l-third l-half-med">
-        <section class="blurb">
-          <header class="blurb-hd">
-            <h1 class="beta bold mt-25 mb-20">Full Hosting</h1>
-          </header>
-          <div class="blurb-bd">
-            <p class="zeta">The market’s most fully-featured static site CDN hosting.</p>
-            <p class="small">To really get the full potential of your static site it’s a must to place it on a CDN. One that does proper cache invalidation as well. Netlify provides the fastest, most full-featured CDN hosting solution on the market. Try us out. We guarantee you won’t be disappointed.</p>
-          </div>
-        </section>
-      </div><!-- end l-third -->
-
-      <!-- Full Monty -->
-      <div class="l-third l-half-med">
-        <section class="blurb">
-          <header class="blurb-hd">
-            <h1 class="beta bold mt-25 mb-20">Full Automation</h1>
-          </header>
-          <div class="blurb-bd">
-            <p class="zeta">Builds, deploys, configuration, hosting and maintenance rolled into one.</p>
-            <p class="small">Let netlify automate your whole static workflow. With our automation software, you simply login, choose your favourite static site generator and press Start. Your site is then automatically built &amp; deployed. When you push to  Github / Bitbucket, your site updates.</p>
-
-          </div>
-        </section>
-      </div><!-- end l-third -->
-    </div><!-- end l-container -->
-    <div class="l-container mt-0 mb-100 ml-n10">
-      <div class="l-third l-full-med center">
-        <p class="cta">
-          <a href="https://app.netlify.com" class="button js-swipe">
-            <svg class="button-icon" width="50" height="50">
-              <use xlink:href="#icon-arrow" />
-            </svg>
-            <span class="button-label">Get started now</span>
-          </a>
-        </p>
+      {% endfor %}
       </div>
-    </div>
-  </div><!-- end content -->
+
+      <p>
+        <a href="/features.html" class="simple-button">
+          See more features
+        </a>
+      </p>
+    </section>
+  </div>
 </section>
+<!-- end Features -->
 
 <!-- Pull Quote -->
 <section class="bg-white muted text-center">

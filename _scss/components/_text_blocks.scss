@@ -279,7 +279,7 @@
 .text--no-bullets {
   ul {
     list-style: none;
-    @media {
+    @media (min-width: $bp-small) {
       margin-left: 0;
     }
   }

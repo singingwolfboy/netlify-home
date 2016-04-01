@@ -1,0 +1,50 @@
+- icon_id: feature-netlify-cdn
+  title: Netlify CDN
+  description: "Make your site or web-app many times faster by bringing it closer to your users. Instead of a single server, push to a global network of intelligent CDN nodes that also handle asset fingerprinting, automatic caching headers, and smart redirect & rewrite rules."
+
+- icon_id: feature-one-click-encrypt
+  title: One-Click-Encrypt
+  description: "Secure your site or app with our true 1-click SSL setup. Netlify integrates with Let's Encrypt and automatically provisions, distributes and renews your certificate. HTTPS is free on all plans and HTTP2 enabled."
+
+- icon_id: feature-continuous-deployment
+  title: Continuous Deployment
+  description: "Integrate your site or web-app to GitHub, GitLab or BitBucket and run your build tool on our servers. Automatically rebuild your site every time your content changes: trigger builds by pushing to git or via webhooks."
+
+
+- icon_id: feature-gradual-migration
+  title: Gradual Migration
+  description: "Use our intelligent rewrite and proxy rules to transition gradually from a traditional dynamic site to a modern build tool. Let our advanced CDN logic proxy any request that's not in your build to your legacy site."
+
+- icon_id: feature-infinite-scale
+  title: Infinite Scale
+  description: "Whether you have a simple blog with 10 hits pr. day, or a multilingual global ecommerce site with 10,000+ pages, 3 million hits pr. hour, netlify automatically scales with ease to suit your exact needs."
+
+- icon_id: feature-prerendering
+  title: Prerendering
+  description: "Solve your SEO issues for a single page app, and automatically send the right social meta tags to Facebook. Activate pre-rendering with 1 click and any crawler request on our cluster of headless browser will be prerendered."
+
+
+- icon_id: feature-atomic-deploys
+  title: Atomic Deploys
+  description: "With atomic deploys, your site is always pushed to netlify CDN in its complete, updated state. No need to worry about missing assets or broken links and connections. Your newest version is immediately available everywhere."
+
+- icon_id: feature-instant-cache-invalidation
+  title: Instant Cache Invalidation
+  description: "When your changes go live, they go live. No waiting for cache purges, no cumbersome varnish setup, no API calls to clean your distribution. Netlify handles cache purges within an average of 250ms from your deploy!"
+
+- icon_id: feature-cli
+  title: CLI
+  description: "Netlify's command line tool might be your new best friend. Push any folder with a single command, set-up continuous deployment and access any netlify feature straight from your terminal."
+
+
+- icon_id: feature-instant-rollbacks
+  title: Instant Rollbacks
+  description: "View and download every deploy you’ve ever made and instantly roll back your site to an earlier version. Undo any mistake or change at the push of a button, no setup required."
+
+- icon_id: feature-programmable-api
+  title: Programmable API
+  description: "All of netlify's feature are available through our REST API. Create your own automated workflows, build tools on top of netlify or trigger actions via webhooks or integrate netlify into your publishing products. "
+
+- icon_id: feature-instant-passwords
+  title: Instant Passwords
+  description: "Set up password protection for your staging sites or share a quick prototype with your client with a 1-click password setup. Need more than just a password? Then set up HTTP basic auth for any path in your site."
