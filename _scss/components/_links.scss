@@ -5,10 +5,6 @@ a, a * {
   transition: color 300ms ease;
 }
 
-.inverse a:hover {
-  color: $color-lightest;
-}
-
 /*
  * Links with a small arrow button to the right
  */
@@ -59,7 +55,7 @@ a, a * {
 .button-label {
   display: block;
   overflow: hidden;
-  padding: 1px 20px 0 20px;
+  padding: 0 20px;
   color: $color-muted;
 }
 .button:hover {
@@ -130,7 +126,7 @@ a, a * {
     color: $color-lightest;
     line-height: 50px;
     margin: 0;
-    padding: 1px 10px 0 20px;
+    padding: 0 10px 0 20px;
     white-space: nowrap;
   }
 

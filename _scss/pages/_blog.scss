@@ -1,9 +1,20 @@
-/*
- * Post
- */
+.post {
+  margin: 40px 0 20px;
+}
 
 .post-hd {
+  margin: 50px 0;
   text-align: center;
+}
+
+.post-title {
+  @extend .mega;
+  color: $color-dark;
+}
+
+.post-meta {
+  @extend .zeta;
+  color: $color-highlight;
 }
 
 .post-img {
@@ -17,18 +28,7 @@
 }
 
 .post-bd {
-  font-size: 110%;
-  line-height: 1.618;
-  margin: 50px auto 80px;
-  max-width: 40em;
-
-  p, ol, ul, blockquote, img {
-    margin: 1.5em 0;
-  }
-
-  img {
-    margin: 3em 0;
-  }
+  margin: 50px auto 30px;
 
   > p:first-child,
   > div > p:first-child {
@@ -52,20 +52,32 @@
 }
 
 
+.blog-aside-title {
+  @extend .post-title;
+  margin-bottom: 110px;
+  margin-top: 160px;
+}
 
 
-/*
- * Ad-like banner
- */
-.banner {
+.post-banner {
   @extend %cf;
-  background: rgb(233, 233, 233);
-  padding: 20px;
-  margin: 60px 0;
-  text-align: center;
   @extend .zeta;
   @extend .thin;
+  background: rgb(233, 233, 233);
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+
   p {
     max-width: none;
   }
+}
+
+.post-bd,
+.post-jumpline,
+.post-banner,
+.disqus {
+  margin-left: auto;
+  margin-right: auto;
+//  max-width: 640px;
 }

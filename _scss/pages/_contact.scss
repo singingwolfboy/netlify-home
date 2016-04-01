@@ -1,129 +1,170 @@
-/* Layout */
+$card-spacing: 8px;
 
-// the big blocks in for contact options
-section.contact-blocks {
-  text-align: left;
-  margin: 50px auto;
+.card-grid {
+  @extend .l-container;
+  margin-bottom: - $card-spacing;
+  margin-left: - $card-spacing;
 
-  li {
-    width: 31%;
+  > li {
     float: left;
-    margin: 1%;
-    position: relative;
-  }
+    margin: auto;
+    padding-bottom: $card-spacing;
+    padding-left: $card-spacing;
+    width: 33.3333%;
 
-  .contact-block-light {
-    p, h5 {
-      color: #669891;
+    @media (max-width: $bp-med) {
+      width: 50%;
+
+      &:last-child {
+        float: none;
+      }
+    }
+
+    @media (max-width: $bp-small) {
+      float: none;
+      max-width: 350px;
+      width: 100%;
     }
   }
+}
 
-  a {
-    min-height: 180px;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
-    background-color: #82a8a3;
-    padding: 20px;
+.card {
+  @extend .block;
+  @include font-weight(light);
+  display: flex;
+  flex-direction: column;
+  padding: 25px 30px;
+}
 
-    &:hover {
-      box-shadow: 0 0 0 3px rgba(white, 0.9) inset;
-    }
+.card-title {
+  @extend .epsilon;
+  line-height: 1;
+  margin: 0;
+}
+
+.card-text {
+  margin: auto 0 3px;
+}
+
+.card--contact {
+  @extend .x-small;
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  min-height: 180px;
+  text-align: left;
+  transition: .3s ease;
+
+  .no-touch &:hover {
+    box-shadow: 0 0 0 3px transparentize($color-lightest, .13) inset;
   }
+}
 
-  h5 {
-    font-size: 22px;
-    color: white;
-    font-weight: 300;
-    margin: 0 0 35px 0;
+.card--color-100 {
+  background-color: $color-tint-100;
+  color: $color-tint-400;
+
+  .card-text {
+    color: $color-tint-600;
   }
+}
 
-  p {
-    margin: 0;
-    line-height: 1.4em;
-    font-size: 13px;
-    margin-bottom: 10px;
-    color: white;
-    display: flex;
-    min-height: 40px;
-    align-items: flex-end;
+.card--color-200 {
+  background-color: $color-tint-200;
+  color: $color-tint-500;
+
+  .card-text {
+    color: $color-tint-600;
   }
+}
 
-  a {
-    display: block;
-    position: relative;
+.card--color-300 {
+  background-color: $color-tint-300;
+  color: $color-lightest;
+
+  .card-text {
+    color: $color-tint-600;
   }
+}
 
-  // the arrow on the callout links
-  .callout-link {
-    padding-left: 30px;
-    color: #427870;
-    font-size: 13px;
+.card--color-400 {
+  background-color: $color-tint-400;
+  color: $color-lightest;
+
+  .card-text {
+    color: $color-tint-600;
+  }
+}
+
+.card--color-500 {
+  background-color: $color-tint-500;
+  color: $color-lightest;
+
+  .card-text {
+    color: $color-tint-700;
+  }
+}
+
+.card--email {
+  @extend .card--color-300;
+  background-image: url('/img/contact/email.svg');
+}
+
+.card--phone {
+  @extend .card--color-200;
+  background-image: url('/img/contact/phone.svg');
+}
+
+.card--office {
+  @extend .card--color-400;
+  background-image: url('/img/contact/office.svg');
+}
+
+.card--twitter {
+  @extend .card--color-500;
+  background-image: url('/img/contact/twitter.svg');
+}
+
+.card--github {
+  @extend .card--color-400;
+  background-image: url('/img/contact/github.svg');
+}
+
+.card--facebook {
+  @extend .card--color-100;
+  background-image: url('/img/contact/facebook.svg');
+}
+
+.card--gitter {
+  @extend .card--color-100;
+  background-image: url('/img/contact/gitter.svg');
+}
+
+.card--newsletter {
+  @extend .card--color-300;
+  background-image: url('/img/contact/newsletter.svg');
+}
+
+.card--linkedin {
+  @extend .card--color-400;
+  background-image: url('/img/contact/linkedin.svg');
+}
+
+// the arrow on the callout links
+.callout-link {
+  margin-top: 5px;
+  padding-left: 30px;
+  position: relative;
+
+  &:before {
+    content: " ";
+    background: url('/img/icon-arrow-white.svg') no-repeat left center;
+    height: 20px;
+    width: 20px;
     position: absolute;
-    line-height: 1.4em;
-
-    &:before {
-      content: " ";
-      background-image: url('/img/icon-arrow-white.svg');
-      background-repeat: no-repeat;
-      background-position: left center;
-      height: 18px;
-      width: 18px;
-      position: absolute;
-      left: 0;
-      top: 0px;
-    }
+    left: 0;
+    top: 0;
   }
-
-  // background fun
-  .email {
-    background-color: #9bcdc6;
-    background-image: url('/img/bg-contact-block/email.svg');
-  }
-
-  .phone {
-    background-color: #bcdcd7;
-    background-image: url('/img/bg-contact-block/phone.svg');
-    @extend .contact-block-light;
-  }
-
-  .office {
-    background-color: #79bfb4;
-    background-image: url('/img/bg-contact-block/office.svg');
-  }
-
-  .twitter {
-    background-color: #669891;
-    background-image: url('/img/bg-contact-block/twitter.svg');
-  }
-
-  .github {
-    background-color: #79bfb4;
-    background-image: url('/img/bg-contact-block/github.svg');
-  }
-
-  .facebook {
-    background-color: #d3e5e2;
-    background-image: url('/img/bg-contact-block/facebook.svg');
-    @extend .contact-block-light;
-  }
-
-  .gitter {
-    background-color: #d3e5e2;
-    background-image: url('/img/bg-contact-block/gitter.svg');
-    @extend .contact-block-light;
-  }
-
-  .newsletter {
-    background-color: #9bcdc6;
-    background-image: url('/img/bg-contact-block/newsletter.svg');
-  }
-
-  .linkedin {
-    background-color: #79bfb4;
-    background-image: url('/img/bg-contact-block/linkedin.svg');
-  }
-
-
-
 }

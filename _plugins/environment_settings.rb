@@ -3,6 +3,7 @@ require "jekyll-srcset"
 module Jekyll
   class EnvironmentVariablesGenerator < Generator
     def generate(site)
+      site.config['terminal'] = ENV['TERMINAL_ENV'] || 'development'
       site.config['cms'] = ENV['CMS_ENV'] || 'development'
       # Add other environment variables to `site.config` here...
       site.config['minify_html'] = site.config['cms'] == 'production'

@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<link href='https://fonts.googleapis.com/css?family=Inconsolata:400' rel='stylesheet' type='text/css'>
 
 <!-- Hero -->
 <section class="bg-light">
@@ -48,6 +49,13 @@ layout: default
 
       <p class="zeta mt-0 mb-20">And thousands more! (Really, just about anything.)</p>
     </section>
+  </div>
+</section>
+
+<section class="bg-terminal inverse bb bb--large">
+  <div class="content">
+    <div class="l-container mt-0 mb-0 js-terminal highlight">
+    </div>
   </div>
 </section>
 
@@ -139,3 +147,12 @@ layout: default
 
   </div><!-- end content-->
 </section>
+{% if site.terminal == 'production' %}
+<script>window.TUTORIAL_LOG_ENDPOINT = 'https://term.ops.netlify.com';</script>
+{% endif %}
+
+{% if site.terminal == 'local' %}
+<script async src="http://localhost:8080/app.bundle.js"></script>
+{% else %}
+<script async src="https://terminal-tutorial-experiments.netlify.com/app.bundle.js"></script>
+{% endif %}
