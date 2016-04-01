@@ -17,6 +17,18 @@ html {
   background: $nav-bg-color; //* so it looks like off-canvas navigation bar stretches all the way to the bottom
 }
 
+.site-header {
+  .content {
+    align-items: center;
+    display: flex;
+  }
+
+  .brand {
+    flex: 1;
+    margin: 20px 0;
+  }
+}
+
 .nav {
   margin: 5px 30px;
   text-transform: uppercase;
