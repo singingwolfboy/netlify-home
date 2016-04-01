@@ -10,7 +10,7 @@ features:
   - title: Native Clients
     body: "Don’t feel like writing the HTTP calls? We have native clients in [Javascript](https://github.com/netlify/node-client), [Go](https://github.com/netlify/netlify-go) and [Ruby](https://github.com/netlify/ruby-client)."
   - title: JavaScript Injection
-    body: "![gregg-coffee-intravenous_500.jpg](/uploads/gregg-coffee-intravenous_500.jpg)\n\nAdd Google Analytics, retargeting codes or any other script you want straight from the web UI. [Read the docs on Easy Snippet Injection here](https://www.netlify.com/docs/inject-analytics-snippets)"
+    body: "Add Google Analytics, retargeting codes or any other script you want straight from the web UI. [Read the docs on Easy Snippet Injection here](https://www.netlify.com/docs/inject-analytics-snippets)"
   - title: "Redirect, Rewrite & Proxy Rules"
     body: "Use different rules to control how requests are handled. Proxy part of your traffic to your own backend, redirect old pages, or rewrite a page entirely. Or do them all."
   - title: Custom HTTP Headers
