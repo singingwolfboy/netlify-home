@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<div class="l-wrap bg-light-muted-2 l-mobile-menu">
-  <div class="l-wrap-inner l-wrap-inner--main-right">
+<div class="l-wrap bg-light-muted-2">
+  <div class="l-wrap-inner">
     <div class="l-aside l-aside--left inverse" role="complementary">
-      <nav class="side-nav inverse" role="navigation">
+      <nav class="side-nav" role="navigation">
         <ul class="nav nav--primary">
           <li{% if page.url == "/tos.html" %} class="active"{% endif %}>
             <a href="/tos.html">Terms of Service</a>
@@ -16,11 +16,8 @@ layout: default
       </nav>
     </div>
     <div class="l-main l-main--right" role="main">
-      <div class="content">
-        <div class="legalese text">
-          <hr class="bb">
-          {{content}}
-        </div>
+      <div class="content text text--legalese">
+        {{content}}
       </div>
     </div>
   </div>

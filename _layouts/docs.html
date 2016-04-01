@@ -2,9 +2,9 @@
 layout: default
 ---
 <div class="l-wrap">
-  <div class="l-wrap-inner l-wrap-inner--main-right">
-    <div class="l-aside l-aside--left l-aside--wide inverse docs-aside" role="complementary">
-      <nav class="side-nav inverse" role="navigation">
+  <div class="l-wrap-inner">
+    <div class="l-aside l-aside--left inverse docs-aside" role="complementary">
+      <nav class="side-nav" role="navigation">
         <ul class="nav nav--primary nav--nested">
           <li{% if page.url == "/docs.html" %} class="active"{% endif %}>
             <a href="/docs.html">Welcome</a>
@@ -20,8 +20,10 @@ layout: default
         </ul>
       </nav>
     </div>
-    <div class="docs-main l-main l-main--right mt-10 mb-100 text" role="main">
-      {{content}}
+    <div class="docs-main l-main l-main--right" role="main">
+      <div class="text">
+        {{content}}
+      </div>
     </div>
   </div>
 </div>

@@ -1,9 +1,5 @@
 $page-width: 1280px;
 $content-width: 976px;
-$base-spacing: 20px;
-
-$aside-width: 280px;
-$aside-width-wide: 439px;
 
 $logo-width: 180px;
 
@@ -61,43 +57,18 @@ svg.prepend {
 .content {
   @extend %cf;
   margin: 0 auto;
-  max-width: $content-width + 3 * $base-spacing;
-  padding: 0 (2 * $base-spacing);
+  max-width: $content-width + 40px + 80px;
+  padding: 0 40px 0 80px;
   position: relative;
 }
 
 .content--wide {
   max-width: $page-width;
-  padding: 0 (2.5 * $base-spacing) 0 (4 * $base-spacing);
 }
 
 .content--narrow {
   max-width: $content-width;
 }
-
-.content--full-width {
-  max-width: none;
-}
-
-
-/*
-* Mixin for centering blocks vertically
-* http://css-tricks.com/centering-in-the-unknown/
-*/
-%middle-container { //* this should be applied to the parent of the element we want to center vertically
- &:before {
-   content: '';
-   display: inline-block;
-   height: 100%;
-   vertical-align: middle;
-   margin-right: -0.25em; /* Adjusts for spacing */
- }
-}
-%middle-element { //* this should be applied to the element we want to center vertically
- display: inline-block;
- vertical-align: middle;
-}
-
 
 /*
  * Media component
@@ -105,18 +76,22 @@ svg.prepend {
 .media {
   @include clearfix-me(micro);
 }
+
 a.media {
   display: block;
 }
+
 .media-img {
   float: left;
   margin-right: 15px;
 }
+
 .media-img-ext {
   float: right;
   margin-left: 15px;
   margin-right: 0;
 }
+
 .media-bd {
   @include clearfix-me(facebook);
 }
@@ -243,100 +218,67 @@ a.media {
   }
 }
 
-/* Grid */
-.l-grid {
-  display: inline-block;
-  letter-spacing: -.31em;
-  list-style-type: none;
-  word-spacing: -.43em;
+//*
+//* Layout with fluid main and fixed-width sidebar
+//*
 
-  &:before,
-  &:after,
-  *,
-  *:before,
-  *:after {
-    letter-spacing: normal;
-    white-space: normal;
-    word-spacing: normal;
-  }
-
-  > * {
-    @extend .content;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-/* Layout with fluid main and fixed-width sidebar
- * http://www.onderhond.com/blog/responsive-grid-old-trick/
- */
 .l-wrap {
+  overflow: hidden;
   position: relative;
 }
+
 .l-wrap-inner {
+  @extend .content;
+  @extend .content--wide;
   display: flex;
-  margin: 0 auto;
+  max-width: $page-width;
+}
+
+.l-aside {
   position: relative;
-  padding: 0 2*$base-spacing;
-  z-index: 1;
 }
-.l-wrap-inner--narrow {
-  max-width: $page-width - $logo-width;
+
+.l-aside--left {
+  &::before {
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 10000px;
+  }
 }
-.l-wrap-inner--main-left {
-  padding: 0 (50px + $aside-width + 80px) 0 80px;
+
+.l-aside--right {
+  padding-left: 50px;
+
+  &::after {
+    content: '';
+    height: 100%;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 10000px;
+  }
 }
+
 .l-main {
-  float: left;
-  width: 100%;
-  padding: 0 60px;
+  flex: 1;
+  padding: 0 80px 50px 50px;
 }
+
+.l-main--right {
+  max-width: 52em;
+}
+
 .l-main--left {
-  padding-right: 80px;
   padding-left: 0;
 }
-.l-main--narrow {
-  max-width: 55em;
-}
-.l-aside {
-  float: right;
-  position: relative;
-  padding-bottom: 80px;
-  width: $aside-width;
-}
-.l-aside--right {
-  width: $aside-width + 50px; // aside width + left padding
-  margin-right: -($aside-width + 50px);
-  padding-left: 50px;
-  &:after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 10000px;
-    top: 0px;
-    left: 100%;
-  }
-}
-.l-aside--left {
-  &:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 10000px;
-    top: 0px;
-    right: 100%;
-  }
-}
-.l-aside--wide {
-  width: $aside-width-wide;
-}
-.l-aside--narrow {
-  width: $aside-width - 50px;
-}
 
 
-/* Flexbox
- */
+
+//* Flexbox
+//*/
 
 .flex {
   display: flex;
@@ -372,14 +314,15 @@ a.media {
 }
 
 
-/*
- * Widths, heights and margins.
- *
- * ## TODO: Most of these need to be removed
- * ## when components are normalized
- */
+//*
+//* Widths, heights and margins.
+//*
+//* ## TODO: Most of these need to be removed
+//* ## when components are normalized
+//*/
 
-/* Widths */
+//* Widths */
+
 .w-0 {
   width: 0;
 }
@@ -387,31 +330,37 @@ a.media {
 .w-355 {
   width: 355px; // large blurb width (hero)
 }
+
 .w-245 {
   width: 245px;
 }
+
 .w-240 {
   width: 240px;
 }
+
 .w-215 {
   width: 215px;
 }
 
 
 
-/* Margins */
+//* Margins */
 
 @for $i from 0 through 25 { // top & bottom margins
-  .mt-#{$i*5} {
+  .mt-#{$i * 5} {
     margin-top: $i * 5px;
   }
-  .mb-#{$i*5} {
+
+  .mb-#{$i * 5} {
     margin-bottom: $i * 5px;
   }
-  .ml-#{$i*5} {
+
+  .ml-#{$i * 5} {
     margin-left: $i * 5px;
   }
-  .mr-#{$i*5} {
+
+  .mr-#{$i * 5} {
     margin-right: $i * 5px;
   }
 }
@@ -420,36 +369,39 @@ a.media {
   .mt-#{$i} {
     margin-top: $i * 1px;
   }
+
   .mb-#{$i} {
     margin-bottom: $i * 1px;
   }
+
   .ml-#{$i} {
     margin-left: $i * 1px;
   }
+
   .mr-#{$i} {
     margin-right: $i * 1px;
+  }
+
+  .mt-n#{$i} {
+    margin-top: $i * -1px;
+  }
+
+  .mb-n#{$i} {
+    margin-bottom: $i * -1px;
   }
 
   .ml-n#{$i} {
     margin-left: $i * -1px;
   }
+
   .mr-n#{$i} {
     margin-right: $i * -1px;
   }
 }
 
-@for $i from 1 through 5 { // margins for bleeds and adjustments
-  .mt-n#{$i * 10} {
-    margin-top: $i * -10px;
-  }
-
-  .mb-n#{$i * 10} {
-    margin-bottom: $i * -10px;
-  }
-}
 
 @for $i from 1 through 5 { // Margins for pull-outs
-  .ml-n#{$i*10} {
+  .ml-n#{$i * 10} {
     margin-left: $i * -10px;
   }
 }

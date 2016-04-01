@@ -14,10 +14,8 @@
 
 .intro {
   @extend .epsilon;
-  @include font-weight(normal);
+  @include font-weight(medium);
   color: $color-dark;
-  line-height: 1.5;
-  margin-bottom: 30px;
 }
 
 .sidenote {
@@ -40,8 +38,8 @@
  */
 
 @mixin text-headline {
-  @include font-weight(normal);
-  line-height: 25px;
+  @include font-weight(medium);
+  line-height: 30px;
   letter-spacing: normal;
   text-transform: uppercase;
   margin-top: 40px;
@@ -54,9 +52,11 @@
 
 .text-h1, .text h1 {
   @include text-headline;
-  @include font-weight(medium);
   font-size: 21px;
+  border-top: 2px solid $color-highlight;
+  margin-top: 110px;
   margin-bottom: 30px;
+  padding-top: 88px;
 }
 
 .text-h2, .text h2 {
@@ -93,33 +93,14 @@
 
 .text {
 
-  /*
-   * Emphasis
-   *
-   * When us­ing a sans serif font, skip italic and use bold for em­pha­sis
-   * http://practicaltypography.com/bold-or-italic.html
-   */
-
   em,
   strong {
-    @include font-weight(medium);
-    font-style: normal;
     color: $color-dark;
   }
 
-
-  /*
-   * Block Elements
-   */
-
-  p, ul, ol, pre, blockquote {
-    margin: 20px 0;
+  p {
+    max-width: none;
   }
-
-  p, li, pre, blockquote {
-    max-width: 40em;
-  }
-
 
   /*
    * Lists

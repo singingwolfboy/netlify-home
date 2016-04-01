@@ -1,56 +1,55 @@
 {% assign fragments = page.url | replace: '.html', '' | split: '/' %}
 {% assign active = fragments[1] %}
-
 <nav id="navigation" class="side-nav inverse off-canvas-menu" role="navigation">
 
   <a href="#page" class="icon exit-off-canvas">
-    <svg class="icon-close" width="10" height="10"><use xlink:href="#icon-close"></use></svg>
+    <svg class="icon-close" width="10" height="10">
+      <use xlink:href="#icon-close"></use>
+    </svg>
   </a>
 
-  <div class="ml-40 mt-10">
-    <ul class="nav nav--primary">
-      <li{% if active == '' %} class="active"{% endif %}>
-        <a href="/">Home</a>
-      </li>
-      <li{% if active == 'features' %} class="active"{% endif %}>
-        <a href="/features.html">Features</a>
-      </li>
-      <li{% if active == 'pricing' %} class="active"{% endif %}>
-        <a href="/pricing.html">Pricing</a>
-      </li>
-      <li{% if active == 'docs' %} class="active"{% endif %}>
-        <a href="/docs.html">Docs</a>
-      </li>
-      <li{% if active == 'blog' %} class="active"{% endif %}>
-        <a href="/blog.html">Blog</a>
-      </li>
-    </ul>
+  <ul class="nav nav--primary">
+    <li{% if page.url == '/' %} class="active"{% endif %}>
+      <a href="/">Home</a>
+    </li>
+    <li{% if active == 'features' %} class="active"{% endif %}>
+      <a href="/features.html">Features</a>
+    </li>
+    <li{% if active == 'pricing' %} class="active"{% endif %}>
+      <a href="/pricing.html">Pricing</a>
+    </li>
+    <li{% if active == 'docs' %} class="active"{% endif %}>
+      <a href="/docs.html">Docs</a>
+    </li>
+    <li{% if active == 'blog' %} class="active"{% endif %}>
+      <a href="/blog.html">Blog</a>
+    </li>
+  </ul>
 
-    <ul class="nav nav--secondary">
-      <li{% if active == 'about' %} class="active"{% endif %}>
-        <a href="/about.html">About</a>
-      </li>
-      <li{% if active == 'contact' %} class="active"{% endif %}>
-        <a href="/contact.html">Contact</a>
-      </li>
-      <li{% if active == 'tos' %} class="active"{% endif %}>
-        <a href="/tos.html">Terms &amp; Conditions</a>
-      </li>
-      <li{% if active == 'privacy' %} class="active"{% endif %}>
-        <a href="/privacy.html">Privacy</a>
-      </li>
-    </ul>
+  <ul class="nav nav--secondary">
+    <li{% if active == 'about' %} class="active"{% endif %}>
+      <a href="/about.html">About</a>
+    </li>
+    <li{% if active == 'contact' %} class="active"{% endif %}>
+      <a href="/contact.html">Contact</a>
+    </li>
+    <li{% if active == 'tos' %} class="active"{% endif %}>
+      <a href="/tos.html">Terms &amp; Conditions</a>
+    </li>
+    <li{% if active == 'privacy' %} class="active"{% endif %}>
+      <a href="/privacy.html">Privacy</a>
+    </li>
+  </ul>
 
-    <ul class="nav nav--social nav--inline">
-      {% for link in site.social-links %}
-      <li>
-        <a href="{{link[1]}}" class="icon-link--square icon-link--{{link[0]}}">
-          <svg width="16" height="16" class="icon-{{link[0]}}--square">
-            <use xlink:href="#icon-{{link[0]}}"/>
-          </svg>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <ul class="nav nav--social nav--inline">
+    {% for link in site.social-links %}
+    <li>
+      <a href="{{link[1]}}" class="icon-link--square icon-link--{{link[0]}}">
+        <svg width="16" height="16" class="icon-{{link[0]}}--square">
+          <use xlink:href="#icon-{{link[0]}}"/>
+        </svg>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </nav>
