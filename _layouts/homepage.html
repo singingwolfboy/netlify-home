@@ -147,5 +147,12 @@ layout: default
 
   </div><!-- end content-->
 </section>
+{% if site.terminal == 'production' %}
+<script>window.TUTORIAL_LOG_ENDPOINT = 'https://term.ops.netlify.com';</script>
+{% endif %}
 
+{% if site.terminal == 'local' %}
+<script async src="http://localhost:8080/app.bundle.js"></script>
+{% else %}
 <script async src="https://terminal-tutorial-experiments.netlify.com/app.bundle.js"></script>
+{% endif %}
