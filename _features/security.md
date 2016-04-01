@@ -1,5 +1,6 @@
 ---
 title: Security
+icon_id: feature-one-click-encrypt
 description: "Performance and scale means nothing without security, which is why netlify offers it all, from free automated SSL and HTTP2 as default, to instant password protection and secure build environments."
 features:
   - title: Free One-Click SSL

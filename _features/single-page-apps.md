@@ -1,5 +1,6 @@
 ---
 title: Single Page Apps
+icon_id: feature-cli
 description: "Building a modern Single Page App? Netlify is the perfect deployment platform whether you're on React, Angular, Ember or your own homebrewed framework."
 features:
   - title: Prerendering

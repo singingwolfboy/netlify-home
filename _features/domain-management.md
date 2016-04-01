@@ -1,5 +1,6 @@
 ---
 title: Domain Management
+icon_id: feature-netlify-cdn
 description: "Netlify provides you with complete domain management. Custom domains, subdomains, aliases, DNS hosting and Domain registration all editable from the UI."
 features:
   - title: Custom Domain

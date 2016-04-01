@@ -1,5 +1,6 @@
 ---
 title: Scale
+icon_id: feature-infinite-scale
 description: "Netlify scales with your site. Whether it's a personal blog or a huge multilingual site with 20,000 pages, dozens of adminstrators, and a whole array of buildtools and frameworks connecting to all kinds of APIs, netlify is your platform of choice. And best of all? You always only pay for what you use. No need to overprovision for hosting."
 features:
   - title: Infinite Scale
