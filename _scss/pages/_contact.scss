@@ -1,14 +1,15 @@
+$card-spacing: 8px;
+
 .card-grid {
-  $card-grid-spacing: 8px;
-  margin-bottom: - $card-grid-spacing;
-  margin-left: - $card-grid-spacing;
-  overflow: hidden;
+  @extend .l-container;
+  margin-bottom: - $card-spacing;
+  margin-left: - $card-spacing;
 
   > li {
     float: left;
     margin: auto;
-    padding-bottom: $card-grid-spacing;
-    padding-left: $card-grid-spacing;
+    padding-bottom: $card-spacing;
+    padding-left: $card-spacing;
     width: 33.3333%;
 
     @media (max-width: $bp-med) {
@@ -47,11 +48,18 @@
 
 .card--contact {
   @extend .x-small;
+  animation-duration: .3s;
+  animation-fill-mode: both;
   background-position: right center;
   background-repeat: no-repeat;
   background-size: auto 100%;
   min-height: 180px;
   text-align: left;
+  transition: .3s ease;
+
+  .no-touch &:hover {
+    box-shadow: 0 0 0 3px transparentize($color-lightest, .13) inset;
+  }
 }
 
 .card--color-100 {
