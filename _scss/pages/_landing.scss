@@ -154,9 +154,13 @@ $feature-icon-small: 1.5rem;
     top: 0;
     left: 0;
 
-    img {
+    svg {
       height: 100%;
       width: 100%;
+    }
+
+    use {
+      fill: $color-highlight;
     }
   }
 

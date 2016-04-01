@@ -80,7 +80,9 @@ layout: default
           <div class="homepage-feature">
             <strong>
               <div class="feature-icon">
-                <img src="/img/feature-icons/{{feature.icon_filename}}" alt="">
+                <svg width="60" height="60">
+                  <use xlink:href="#{{feature.icon_id}}" />
+                </svg>
               </div>
 
               {{feature.title}}
