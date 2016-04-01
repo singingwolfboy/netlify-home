@@ -18,6 +18,7 @@ HTTPS brings a lot of advantages:
 * **Security** If you have a login on a Single Page App or accept form submissions, HTTPS is essential for your users' security and privacy
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k-9T0FYd-QU" frameborder="0" allowfullscreen></iframe>
+
 ## Basic vs Full SSL
 
 Netlify offers two different SSL solutions: **Basic SSL** and **Full SSL**
