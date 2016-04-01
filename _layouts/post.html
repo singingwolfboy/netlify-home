@@ -32,7 +32,7 @@ layout: default
     <aside class="l-aside l-aside--right inverse blog-aside">
       <h1 class="blog-aside-title">More Articles</h1>
       <div class="l-container">
-      {% for post in site.related_posts %}
+      {% for post in site.related_posts | limit: 6 %}
         {% include post-blurb.html %}
       {% endfor %}
       </div>
