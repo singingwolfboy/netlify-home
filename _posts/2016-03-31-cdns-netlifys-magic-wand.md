@@ -6,7 +6,7 @@ short_title: "CDNs: netlify's magic wand"
 description: "Why netlify uses a dual-CDN setup, and why you should, too."
 thumbnail: /uploads/world.png
 cmsUserSlug: ""
-date: now
+date: 2016-03-31 
 tags: null
 ---
 
