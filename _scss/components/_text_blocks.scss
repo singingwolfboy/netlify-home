@@ -165,6 +165,16 @@
     code {
       color: inherit;
     }
+
+    //* Make sure pre tags don't break the layout */
+
+    @media (max-width: $bp-med-large) and (min-width: $bp-med) {
+      max-width: 38em;
+    }
+
+    @media (max-width: $bp-med-large-2) and (min-width: $bp-med) {
+      max-width: 33em;
+    }
   }
 
   /*
