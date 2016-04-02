@@ -324,7 +324,7 @@
 
 
 //* Hero looks really bare between small and medium. Increase the font size. */
-@media (min-width: $bp-small + 1px) and (max-width: $bp-med) {
+@media (min-width: $bp-small + .0625em) and (max-width: $bp-med) {
 
   .media--wide {
     .blurb {
