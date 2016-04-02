@@ -230,7 +230,27 @@ a.media {
 .l-wrap-inner {
   @extend .content;
   @extend .content--wide;
-  display: flex;
+  display: table;
+  width: 100%;
+}
+
+.l-aside,
+.l-main {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.l-main {
+  padding: 0 80px 50px 50px;
+  width: 100%;
+}
+
+.l-main--right {
+  max-width: 52em;
+}
+
+.l-main--left {
+  padding-left: 0;
 }
 
 .l-aside {
@@ -259,15 +279,6 @@ a.media {
     top: 0;
     width: 10000px;
   }
-}
-
-.l-main {
-  max-width: 52em;
-  padding: 0 80px 50px 50px;
-}
-
-.l-main--left {
-  padding-left: 0;
 }
 
 

@@ -170,17 +170,21 @@
 
   //* Stack main and aside */
   .l-wrap-inner {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 0;
   }
 
   .l-main {
+    display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 10px 80px 60px;
+    width: 100%; //* This will make sure the pre tags adapt to the maximum width
   }
 
   .l-aside {
+    display: block;
     order: 2;
     padding: 10px 40px;
 
