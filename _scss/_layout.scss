@@ -231,7 +231,6 @@ a.media {
   @extend .content;
   @extend .content--wide;
   display: flex;
-  max-width: $page-width;
 }
 
 .l-aside {
