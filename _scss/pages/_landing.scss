@@ -1,140 +1,182 @@
-@mixin transform($trans) {
-  -ms-transform: $trans;
-  -webkit-transform: $trans;
-  transform: $trans;
-}
+$hero-animation-delay: 2.5s;
 
 @keyframes hero-fade {
   0% {
-    @include transform(translate3d(0, 5px, 0));
     opacity: 0;
+    transform: translate3d(0, 5px, 0);
   }
 
   8% {
-    @include transform(translate3d(0, 0, 0));
     opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 
   31% {
-    @include transform(translate3d(0, 0, 0));
     opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 
   39% {
-    @include transform(translate3d(0, -5px, 0));
     opacity: 0;
+    transform: translate3d(0, -5px, 0);
   }
 
   100% {
-    @include transform(translate3d(0, 5px, 0));
     opacity: 0;
+    transform: translate3d(0, 5px, 0);
   }
 }
 
 .hero {
-  padding-bottom: 45px;
+  display: table;
+  width: 100%;
+}
 
-  @media (min-width: $bp-small) {
-    padding-right: 30px;
+.hero-blurb,
+.hero-blockquote {
+  display: table-cell;
+  margin: auto;
+  padding: 40px 0;
+  width: 50%;
+
+  @media (max-width: $bp-med) {
+    display: block;
+    margin: 60px auto;
+    padding: 0;
+    width: auto;
   }
+}
 
-  .blurb {
-    max-width: 45%;
-    float: left;
-
-    @media (max-width: $bp-med) {
-      float: none;
-      max-width: 30em;
-    }
-  }
+.hero-blurb {
 
   h1 {
-    @include font-weight(bold);
-    font-size: 2.5rem;
-    height: 3rem;
+    @extend .alpha;
+    @extend .bold;
+    height: 40px;
+    margin-bottom: 0;
     position: relative;
 
     span {
-      white-space: nowrap;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 3rem;
-      line-height: 3rem;
-      opacity: 0;
       animation-duration: 7.5s;
       animation-iteration-count: infinite;
       animation-name: hero-fade;
+      height: 3.5rem;
+      left: 0;
+      line-height: 3rem;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      white-space: nowrap;
+      width: 100%;
     }
+  }
+
+  p {
+    @extend .zeta;
+    margin-bottom: 30px;
   }
 
   .two {
-    animation-delay: 2.5s;
+    animation-delay: $hero-animation-delay;
   }
 
   .three {
-    animation-delay: 5s;
+    animation-delay: $hero-animation-delay * 2;
   }
 
-  blockquote {
-    float: right;
-    max-width: 45%;
-    text-align: right;
+  @media (max-width: $bp-med) {
+    text-align: center;
 
-    @media (max-width: $bp-med) {
-      float: none;
-      max-width: none;
-      margin-top: 40px;
-      margin-bottom: 0;
-      text-align: left;
-    }
-
-    p {
-      margin-left: 0;
-      margin-right: 0;
-      font-size: 1.6rem;
-      line-height: 2rem;
-      max-width: none;
-    }
-
-    .byline {
-      margin-top: 15px;
-      font-size: .8rem;
-      line-height: 1rem;
+    .cta {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
 
-.section-hero {
+//* "Fancy" blockquote based on:
+//* https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+//*
+.hero-blockquote {
+  box-sizing: content-box;
+  max-width: 30em;
+  padding-left: 20px;
+  quotes: '\201C''\201D''\2018''\2019';
+  text-align: right;
 
-  .blurb {
-    max-width: 355px;
+  p {
+    @extend .mega;
+    display: inline;
+    line-height: 1;
 
-    .button--large {
-      margin-left: -5px;
-      margin-right: 3px;
+    &::before,
+    &::after {
+      color: $color-highlight-lighter;
+      font-family: Georgia, serif;
+      font-size: 1.618em;
+      line-height: .1em;
+      position: relative;
+      top: -.1em;
+      vertical-align: -.4em;
+    }
+
+    &::before {
+      content: open-quote;
+      left: -.1em;
+    }
+
+    &::after {
+      content: close-quote;
+      left: .1em;
+      margin-right: -.4em;
     }
   }
 
+  cite {
+    @extend .x-small;
+    display: block;
+    margin: 30px 0;
+
+    &::before {
+      content: '—';
+      font-family: Georgia, serif;
+      font-weight: bold;
+    }
+  }
+
+  @media (max-width: $bp-large) {
+    cite {
+      margin: 20px 0;
+    }
+  }
+
+  @media (max-width: $bp-med-large) {
+    padding-right: 40px;
+  }
+
+  @media (max-width: $bp-med) {
+    padding: 0;
+    text-align: center;
+  }
 }
 
-.landing {
 
-  .section-hero {
+.integration-logos {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px -15px -20px;
 
-    .blurb {
-      max-width: 25em;
-    }
+  img {
+    margin: 10px 15px;
+    transform: scale(.9);
+  }
 
-    .small-2 {
-      font-size: 16.6px;
-    }
-
-    @media (max-width: 1280px) {
-      .media-img {
-        width: 45%;
-      }
-    }
+  @media (max-width: $bp-med-large) {
+    display: block;
+    max-width: 33em;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -144,24 +186,20 @@ $feature-icon-small: 1.5rem;
 .homepage-feature {
   padding-left: $feature-icon + 1rem;
   padding-right: 20px;
-  text-align: left;
   position: relative;
+  text-align: left;
 
   .feature-icon {
+    color: $color-highlight;
     height: $feature-icon;
-    width: $feature-icon;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
+    width: $feature-icon;
 
     svg {
       height: 100%;
       width: 100%;
-    }
-
-    use,
-    use path {
-      fill: $color-highlight;
     }
   }
 
@@ -170,16 +208,8 @@ $feature-icon-small: 1.5rem;
     padding-right: 20px;
 
     .feature-icon {
-      // position: relative;
-      // display: inline-block;
       height: $feature-icon-small;
       width: $feature-icon-small;
     }
-  }
-}
-
-.homepage-integrations {
-  img {
-    margin: 0 15px 20px;
   }
 }

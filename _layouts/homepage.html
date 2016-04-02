@@ -3,58 +3,53 @@ layout: default
 ---
 <link href='https://fonts.googleapis.com/css?family=Inconsolata:400' rel='stylesheet' type='text/css'>
 
-<!-- Hero -->
-<section class="bg-light">
-  <div class="content content--wide">
-    <div class="media media--wide">
-      <div class="media-bd hero">
-        <!-- Call to action -->
+<!-- Above the fold -->
+<div class="bg-light">
 
-        <div class="blurb">
-          <h1 class="mt-0">
-            <span class="one-thing">1 platform</span> <span class="one-thing two">1 click SSL</span> <span class="one-thing three">1 command deploy</span>
-          </h1>
-          <p>
-            Deploy <strong>modern static websites</strong> with our automated platform and add best practices like SSL, CDN distribution, caching, and continuous deployment with a single-click.
-          </p>
-          <p><a href="https://app.netlify.com" class="simple-button simple-button--large">See how easy it is</a></p>
-        </div>
+  <!-- Hero -->
+  <section class="hero content">
+    <div class="hero-blurb blurb">
+      <h1>
+        <span class="one-thing">One platform</span>
+        <span class="one-thing two">One click SSL</span>
+        <span class="one-thing three">One command deploy</span>
+      </h1>
+      <p>
+        Deploy <strong>modern static websites</strong> with our automated
+        platform and add best practices like SSL, CDN distribution, caching,
+        and continuous deployment with a single-click.
+      </p>
+      <p>
+        <a href="https://app.netlify.com" class="button button--pill cta">
+          <strong class="button-label epsilon">See how easy it is</strong>
+        </a>
+      </p>
+    </div>
 
-        <blockquote class="muted">
-          <p class="mb-0">
-            “{{page.celebrity_quote}}”
-          </p>
-          <p class="byline">
-            <em>
-              —<strong>{{page.celebrity_name}}</strong>
-              {{page.celebrity_title}}
-            </em>
-          </p>
-        </blockquote>
+    <blockquote class="hero-blockquote">
+      <p>{{page.celebrity_quote}}</p>
+      <cite>{{page.celebrity_name}}, {{page.celebrity_title}}</cite>
+    </blockquote>
+  </section>
 
-      </div> <!-- end media-bd -->
-    </div><!-- end media -->
-  </div><!-- end content -->
-</section>
-<!-- end Hero -->
-
-<section class="homepage-integrations bg-white muted text-center bb bb--large">
-  <div class="content">
-    <section class="mt-30 mb-40">
-      <h1 class="epsilon">Our agnostic platform means your favorite tools are already supported</h1>
-
+  <!-- Integrations -->
+  <section class="bg-white text-center bb bb--large editorial-text">
+    <div class="content">
+      <div class="integration-logos">
       {% for logo in site.data.homepage_integration_logos %}
         <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="">
       {% endfor %}
+      </div>
+      <p class="delta muted mb-0">Our agnostic platform means your favorite tools are already supported</p>
+      <p class="small semibold loud mt-10 mb-40">And thousands more! (Really, just about anything)</p>
+    </div>
+  </section>
+</div>
 
-      <p class="zeta mt-0 mb-20">And thousands more! (Really, just about anything.)</p>
-    </section>
-  </div>
-</section>
-
+<!-- Terminal -->
 <section class="bg-terminal inverse bb bb--large">
   <div class="content">
-    <div class="l-container mt-0 mb-0 js-terminal highlight">
+    <div class="l-container mt-0 mb-0 highlight js-terminal">
     </div>
   </div>
 </section>
@@ -62,39 +57,37 @@ layout: default
 {{ content }}
 
 <!-- Features -->
-<section class="bg-light-muted muted text-center bb bb--large">
+<section class="bg-light-muted-2 muted text-center bb bb--large">
   <div class="content">
-    <section class="mt-85 mb-85">
-      <h1 class="alpha">Features</h1>
+    <h1 class="kilo mb-50"><a href="/features.html">Features</a></h1>
 
-      <div class="l-container">
-      {% for feature in site.data.homepage_features %}
+    <div class="l-container">
+    {% for feature in site.data.homepage_features %}
 
-        <div class="l-third">
-          <div class="homepage-feature">
-            <strong>
-              <div class="feature-icon">
-                <svg width="60" height="60">
-                  <use xlink:href="#{{feature.icon_id}}" />
-                </svg>
-              </div>
+      <div class="l-third">
+        <div class="homepage-feature">
+          <strong>
+            <div class="feature-icon">
+              <svg width="60" height="60">
+                <use xlink:href="#{{feature.icon_id}}" />
+              </svg>
+            </div>
 
-              {{feature.title}}
-            </strong>
+            {{feature.title}}
+          </strong>
 
-            <p>{{feature.description}}</p>
-          </div>
+          <p>{{feature.description}}</p>
         </div>
-
-      {% endfor %}
       </div>
 
-      <p>
-        <a href="/features.html" class="simple-button">
-          See more features
-        </a>
-      </p>
-    </section>
+    {% endfor %}
+    </div>
+
+    <p class="cta mb-80">
+      <a href="/features.html" class="gamma">
+        <strong>See more features<svg width="20" height="20" class="append light"><use xlink:href="#icon-arrow" /></svg></strong>
+      </a>
+    </p>
   </div>
 </section>
 <!-- end Features -->

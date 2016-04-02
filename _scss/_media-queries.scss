@@ -20,8 +20,12 @@
     padding-right: 50px;
   }
 
+  .mega,
   .post-title {
     font-size: 50px; //* Kilo */
+  }
+
+  .post-title {
     line-height: 65px;
     margin-left: 0;
     margin-right: 0;
@@ -381,9 +385,6 @@
   //*
   //* Fix links
   //*/
-  .button-label {
-    padding-left: 0;
-  }
 
   .button--small {
     border-radius: 40px;
@@ -490,7 +491,7 @@
 
   .mega {
     font-size: 50px; //48px;
-    line-height: 65px;
+    line-height: 1;
   }
 
   .kilo {
@@ -578,10 +579,14 @@
 
 
   //*
-  //* Reduce post title font size
+  //* Reduce large titles
   //*/
+  .mega,
   .post-title {
     font-size: 37px;
+  }
+
+  .post-title {
     line-height: 50px;
     margin: 70px 0 20px;
   }

@@ -1,48 +1,60 @@
-/* Links
-------------------------------*/
-a, a * {
+//* Links
+//* ------------------------------*/
+a,
+a * {
   text-decoration: none;
   transition: color 300ms ease;
 }
 
-/*
- * Links with a small arrow button to the right
- */
+//*
+//* Links with a small arrow button to the right
+//*/
+
 .link {
+  background: url('/img/icon-arrow.svg') no-repeat right center;
   padding-right: 22px;
-  background: url(/img/icon-arrow.svg) no-repeat right center;
 }
 
-/*
- * Links with a small plus button to the left
- */
+
+//*
+//* Links with a small plus button to the left
+//*/
+
 .link-more {
+  background: url('/img/icon-plus.svg') no-repeat 2px 45%;
   display: inline-block;
   padding-left: 30px;
-  background: url(/img/icon-plus.svg) no-repeat 2px 45%;
 }
 
 
+//*
+//* Links that look like buttons
+//*
+//* TODO: Make the default button simpler and create a variation for the
+//* "swipe style" button
+//*/
 
-/*
- * Links that look like buttons
- */
 .button {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  box-shadow: inset 0 0 7px 0 rgba(0,0,0,0.24);
-  height: 60px;
-  line-height: 60px;
   border-radius: 60px 4px 4px 60px;
-  text-align: center;
-  text-indent: -10px;
+  box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, .24);
+  color: $color-lightest;
+  display: block;
   font-size: 21px;
   font-weight: 400;
+  height: 60px;
+  line-height: 60px;
   margin-left: -5px;
-  color: $color-lightest;
-  transition: box-shadow 0.2s ease-in;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-indent: -10px;
+  transition: box-shadow .2s ease-in;
+
+  &:hover {
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, .24);
+  }
 }
+
 .button-icon {
   float: left;
   height: 50px;
@@ -51,32 +63,30 @@ a, a * {
   position: relative;
   transition: left .2s ease-in;
   width: 50px;
-}
-.button-label {
-  display: block;
-  overflow: hidden;
-  padding: 0 20px;
-  color: $color-muted;
-}
-.button:hover {
-  box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.24);
 
-}
-.button.js-clicked {
-  .button-icon {
+  .js-clicked & {
     left: 20em;
   }
 }
 
+.button-label {
+  color: $color-muted;
+  display: block;
+  overflow: hidden;
+  padding: 0 20px;
+}
 
-/* Button colors on inverse background */
+
+//* Button colors on inverse background */
 .inverse {
   .button {
     color: $color-darkest;
   }
+
   .button-label {
     color: $color-lightest;
   }
+
   .button--muted,
   .button--muted .button-label {
     color: $color-dark;
@@ -84,54 +94,23 @@ a, a * {
 }
 
 
-/* Button size variations */
+//* Button size variations */
 .button--large {
-  height: 80px;
-  line-height: 80px;
   border-radius: 80px 4px 4px 80px;
   font-size: 27px;
+  height: 80px;
+  line-height: 80px;
   margin-left: 0;
+
   .button-icon {
     height: 68px;
     margin: 6px;
     width: 68px;
   }
+
   .button-label {
     padding-left: 0;
     padding-right: 30px;
-  }
-}
-
-.button--pill {
-  border-radius: 80px;
-  height: 62px;
-  line-height: 62px;
-  width: 292px;
-
-  .button-container {
-    background-color: $color-highlight;
-    border-radius: 80px;
-    display: block;
-    height: 50px;
-    margin: 6px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .button-icon {
-    margin: 0;
-  }
-
-  .button-label {
-    color: $color-lightest;
-    line-height: 50px;
-    margin: 0;
-    padding: 0 10px 0 20px;
-    white-space: nowrap;
-  }
-
-  .button-icon + .button-label {
-    float: left;
   }
 }
 
@@ -145,27 +124,10 @@ a, a * {
     height: 30px;
     width: 30px;
   }
-
-  &.button--pill {
-    $button-height: 42px;
-    border-radius: $button-height;
-    height: $button-height;
-    line-height: $button-height;
-
-    .button-container {
-      border-radius: $button-height;
-      height: $button-height - 10px;
-      margin: 5px;
-    }
-
-    .button-label {
-      line-height: $button-height - 10px;
-    }
-  }
 }
 
 
-/* Button layout variations */
+//* Button layout variations */
 .button--inline {
   display: inline-block;
   min-width: 120px;
@@ -173,26 +135,61 @@ a, a * {
   width: auto;
 }
 
-/* Center a button */
 .button--center {
   margin-left: auto;
   margin-right: auto;
 }
 
 
-/*
- * Simple buttons
- *
- * Example: <a href="#" class="simple-button">Hello</a>
- */
+//* Button appearance variations */
+
+@mixin pill-button-size($button-height, $button-margin) {
+  border-radius: $button-height;
+  height: $button-height;
+  line-height: $button-height;
+
+  .button-label {
+    border-radius: $button-height;
+    height: $button-height - ($button-margin * 2);
+    line-height: $button-height - ($button-margin * 2);
+    margin: $button-margin;
+  }
+}
+
+.button--pill {
+  @include pill-button-size(62px, 5px);
+
+  .button-label {
+    @include font-weight(medium);
+    background-color: $color-highlight;
+    color: $color-lightest;
+    display: block;
+    text-indent: 0;
+  }
+
+  &.button--small {
+    @include pill-button-size(42px, 5px);
+
+    .button-label {
+      font-weight: inherit;
+    }
+  }
+}
+
+
+//*
+//* Simple buttons
+//*
+//* Example: <a href="#" class="simple-button">Hello</a>
+//*/
 
 .simple-button {
   background-color: $color-highlight;
+  border-radius: 4rem;
   color: $color-lightest;
+  display: inline-block;
   line-height: 1.5rem;
   padding: .20rem 1rem;
-  display: inline-block;
-  border-radius: 4rem;
 
   &.simple-button--large {
     @include font-weight(bold);
@@ -201,24 +198,25 @@ a, a * {
 }
 
 
-/*
- * Icon links (eg. social links)
- *
- * Hover effect: http://tympanus.net/Development/IconHoverEffects/#set-8
- */
+//*
+//* Icon links (eg. social links)
+//*
+//* Hover effect: http://tympanus.net/Development/IconHoverEffects/#set-8
+//*/
 .icon-link--round {
   display: inline-block;
   margin-right: 25px;
   position: relative;
-  transition: transform ease-out 0.2s;
-  &:after {
+  transition: transform ease-out .2s;
+
+  &::after {
+    border-radius: 100%;
     content: '';
-    width: 36px;
     height: 36px;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    border-radius: 100%;
+    width: 36px;
   }
 
   @each $name, $color in $colors-social {
@@ -228,8 +226,9 @@ a, a * {
   }
 
   .no-touch &:hover {
-    transform: scale(0.95);
-    &:after {
+    transform: scale(.95);
+
+    &::after {
       animation: sonarEffect 1.3s ease-out 75ms;
     }
   }
@@ -238,88 +237,92 @@ a, a * {
 $color-sonar: $color-darker;
 
 @keyframes sonarEffect {
-    0% {
-        opacity: 0.3;
-    }
-    40% {
-        opacity: 0.5;
-        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255,255,255,0.5);
-    }
-    100% {
-        box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255,255,255,0.5);
-        transform: scale(1.5);
-        opacity: 0;
-    }
+  0% {
+    opacity: .3;
+  }
+
+  40% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255, 255, 255, .5);
+    opacity: .5;
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255, 255, 255, .5);
+    opacity: 0;
+    transform: scale(1.5);
+  }
 }
 
 
-/*
- * Button with image of video
- */
+//*
+//* Button with image of video
+//*/
 .button-video {
-  display: inline-block;
-  background: url(/img/video.png) no-repeat center center;
+  background: url('/img/video.png') no-repeat center center;
   background-size: cover;
+  display: inline-block;
   position: relative;
+
   .callout {
     @extend .callout--small;
     @extend .callout--stitch;
+    left: -35px;
+    margin-left: -20px;
+    margin-top: -10px; //* makes it easier to just 0 out the margins when going responsive than to change top and left
     position: absolute;
     top: -25px;
-    left: -35px;
-    margin-top: -10px; //* makes it easier to just 0 out the margins when going responsive than to change top and left
-    margin-left: -20px;
-    transition: opacity 0.2s;
+    transition: opacity .2s;
   }
+
   .play-button {
-    position: absolute;
     background: linear-gradient(to right, #f1f1f1, #ececec);
-    width: 102px;
-    height: 102px;
-    top: 50%;
-    left: 50%;
-    margin-top: -56px;
-    margin-left: -54px;
     border-radius: 100%;
-    transition: box-shadow 0.2s;
-    &:after {
-      content: "";
-      width: 0;
-      height: 0;
+    height: 102px;
+    left: 50%;
+    margin-left: -54px;
+    margin-top: -56px;
+    position: absolute;
+    top: 50%;
+    transition: box-shadow .2s;
+    width: 102px;
+
+    &::after {
+      border-color: transparent transparent transparent #4BC0B5;
       border-style: solid;
       border-width: 30px 0 34px 61px;
-      border-color: transparent transparent transparent #4BC0B5;
+      content: '';
+      height: 0;
+      left: 29px;
       position: absolute;
       top: 20px;
-      left: 29px;
+      width: 0;
     }
   }
+
   &:hover .play-button {
-    box-shadow: 2px 2px 25px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, .2);
   }
+
   &.playing {
     .callout {
       opacity: 0;
     }
+
     .play-button {
       display: none;
     }
   }
 }
+
 .button-video--compact {
   .callout {
     margin: 0;
   }
 }
 
-/*
- * Call to action
- */
+//*
+//* Call to action
+//*/
 .cta {
-  max-width: 355px;
-  margin: 45px auto;
-}
-
-.cta--large {
-  max-width: 465px;
+  max-width: 270px;
 }

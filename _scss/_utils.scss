@@ -1,7 +1,7 @@
 //*
 //* OOCSS different clearfix options
 //*
-@import "lib/clearfix";
+@import 'lib/clearfix';
 
 %cf {
   @include clearfix-me(micro);
