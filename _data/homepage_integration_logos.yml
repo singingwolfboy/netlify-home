@@ -30,12 +30,12 @@
   height: 80
 
 # Frameworks
-- filename: angular_simple.svg
-  width: 90
-  height: 80
-
 - filename: react.svg
   width: 80
+  height: 80
+
+- filename: angular_simple.svg
+  width: 90
   height: 80
 
 # Git hosting
