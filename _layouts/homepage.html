@@ -4,7 +4,7 @@ layout: default
 <link href='https://fonts.googleapis.com/css?family=Inconsolata:400' rel='stylesheet' type='text/css'>
 
 <!-- Above the fold -->
-<div class="bg-light">
+<div class="bg-light bb bb--large">
 
   <!-- Hero -->
   <section class="hero content">
@@ -33,16 +33,18 @@ layout: default
   </section>
 
   <!-- Integrations -->
-  <section class="bg-white text-center bb bb--large editorial-text">
-    <div class="content">
-      <div class="integration-logos">
-      {% for logo in site.data.homepage_integration_logos %}
-        <img src="/img/integration-logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="">
-      {% endfor %}
-      </div>
-      <p class="delta muted mb-0">Our <strong>agnostic platform</strong> means <strong>your favorite tools</strong> are already supported</p>
-      <p class="small semibold loud mb-50">And thousands more! (Really, just about anything)</p>
+  <section class="content text-center">
+    <div class="integration-logos">
+    {% for logo in site.data.homepage_integration_logos %}
+      <img src="/img/logos/devtools/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="">
+    {% endfor %}
     </div>
+    <p class="epsilon mt-20 mb-30">
+      Our agnostic platform means your favorite tools are already supported.
+      <span class="block small loud semibold mt-5">
+        And thousands more! (Really, just about anything)
+      </span>
+    </p>
   </section>
 </div>
 

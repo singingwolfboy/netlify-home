@@ -36,7 +36,7 @@ $hero-animation-delay: 2.5s;
 .hero-blockquote {
   display: table-cell;
   margin: auto;
-  padding: 40px 0;
+  padding: 20px 0 10px;
   width: 50%;
 
   @media (max-width: $bp-med) {
@@ -162,12 +162,11 @@ $hero-animation-delay: 2.5s;
 
 
 .integration-logos {
-  margin: 20px 0 0;
   opacity: .87;
 
   img {
     margin: 0 0 -20px;
-    transform: scale(.75);
+    transform: scale(.7);
     vertical-align: baseline;
   }
 
