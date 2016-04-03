@@ -1,48 +1,48 @@
 # Build tools
-- filename: home-grunt.jpg
-  width: 51
-  height: 60
+- filename: grunt.svg
+  width: 80
+  height: 70
 
-- filename: home-gulp.jpg
-  width: 27
-  height: 60
+- filename: gulp.svg
+  width: 80
+  height: 90
 
 # Generators
-- filename: home-jekyll.jpg
-  width: 129
-  height: 53
+- filename: jekyll_small.svg
+  width: 90
+  height: 90
 
-- filename: home-middleman.jpg
-  width: 49
-  height: 49
+# - filename: home-middleman.jpg
+#   width: 49
+#   height: 49
 
 # Web technologies
-- filename: home-html.jpg
-  width: 43
-  height: 60
+- filename: html5.svg
+  width: 75
+  height: 75
 
-- filename: home-css.jpg
-  width: 43
-  height: 60
+- filename: css3.svg
+  width: 75
+  height: 75
 
-- filename: home-js.jpg
-  width: 46
-  height: 46
+- filename: javascript_1.svg
+  width: 70
+  height: 80
 
 # Frameworks
-- filename: home-angular-2.jpg
-  width: 49
-  height: 51
+- filename: angular_simple.svg
+  width: 90
+  height: 80
 
-- filename: home-react.jpg
-  width: 53
-  height: 48
+- filename: react.svg
+  width: 80
+  height: 80
 
 # Git hosting
-- filename: home-github.jpg
-  width: 46
-  height: 44
+- filename: github_badge.svg
+  width: 80
+  height: 80
 
-- filename: home-bitbucket.jpg
-  width: 48
-  height: 45
+- filename: bitbucket.svg
+  width: 70
+  height: 80

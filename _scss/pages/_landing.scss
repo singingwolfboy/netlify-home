@@ -107,7 +107,7 @@ $hero-animation-delay: 2.5s;
   p {
     @extend .mega;
     display: inline;
-    line-height: 1;
+    line-height: 1.1;
 
     &::before,
     &::after {
@@ -133,9 +133,9 @@ $hero-animation-delay: 2.5s;
   }
 
   cite {
-    @extend .x-small;
+    @extend .small;
     display: block;
-    margin: 30px 0;
+    margin: 25px 0;
 
     &::before {
       content: '—';
@@ -162,21 +162,19 @@ $hero-animation-delay: 2.5s;
 
 
 .integration-logos {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 20px -15px -20px;
+  margin: 20px 0 0;
 
   img {
-    margin: 10px 15px;
-    transform: scale(.9);
+    margin: 0 0 -20px;
+    transform: scale(.75);
+    vertical-align: baseline;
   }
 
   @media (max-width: $bp-med-large) {
     display: block;
-    max-width: 33em;
     margin-left: auto;
     margin-right: auto;
+    max-width: 33em;
   }
 }
 
