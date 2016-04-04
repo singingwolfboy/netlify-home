@@ -28,29 +28,28 @@ $hero-animation-delay: 2.5s;
 }
 
 .hero {
-  display: table;
-  width: 100%;
+  @extend .l-arrange;
 }
 
 .hero-blurb,
 .hero-blockquote {
-  display: table-cell;
+  @extend .l-arrange-fit;
   margin: auto;
-  padding: 20px 0 0;
-  width: 50%;
+  max-width: 35em;
+  padding: 30px 0 0;
+  vertical-align: middle;
 
   @media (max-width: $bp-med) {
     display: block;
     margin: 60px auto;
     padding: 0;
-    width: auto;
   }
 }
 
 .hero-blurb {
+  padding-right: 40px;
 
   h1 {
-    @extend .bold;
     height: 40px;
     margin-bottom: 0;
     position: relative;
@@ -79,12 +78,8 @@ $hero-animation-delay: 2.5s;
   }
 
   @media (max-width: $bp-med) {
+    padding-right: 0;
     text-align: center;
-
-    .cta {
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
 }
 
@@ -93,7 +88,6 @@ $hero-animation-delay: 2.5s;
 //*
 .hero-blockquote {
   max-width: 30em;
-  padding-left: 20px;
   quotes: '\201C''\201D''\2018''\2019';
   text-align: right;
 
@@ -146,7 +140,6 @@ $hero-animation-delay: 2.5s;
   }
 
   @media (max-width: $bp-med) {
-    padding: 0;
     text-align: center;
   }
 }
@@ -161,15 +154,18 @@ $hero-animation-delay: 2.5s;
   opacity: .87;
 
   img {
-    margin: 0 0 -20px;
     transform: scale(.7);
-    vertical-align: baseline;
   }
 
-  @media (max-width: $bp-med-large) {
+  @media (max-width: $bp-small) {
     display: block;
-    margin: auto;
-    max-width: 33em;
+    max-width: 20em;
+
+    img {
+      margin: -15px;
+      transform: scale(.5);
+      vertical-align: baseline;
+    }
   }
 }
 
