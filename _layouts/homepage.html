@@ -37,7 +37,7 @@ layout: default
     <div class="content">
       <div class="integration-logos">
       {% for logo in site.data.homepage_integration_logos %}
-        <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="">
+        <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="{{logo.alt}}">
       {% endfor %}
       </div>
       <p class="delta muted mb-0">Our agnostic platform means your favorite tools are already supported</p>
