@@ -45,7 +45,7 @@ So we want people to either be front-end or full-stack, but it's harder to suppo
 
 **I like to give people a soapbox. When it comes to development with modern web build tools, if you could have things the Thomas Reynolds way, if you could sit there and make a decree, "this is how things work from now on," what would that be?**
 
-I've been slowly learning since I dropped out of college that a lot of things that they taught me about Java were actually pretty smart. So I would have decent type systems in everything, everywhere. We are using typescript of all Javascript. I've added contracts to ruby for all my Middleman. Swift and objective-c onto iOS side, of course those, Java on the Android side. I would just want nice stable systems that aren't like the wild wild west like Ruby and Javascripts can be.
+I've been slowly learning since I dropped out of college that a lot of things that they taught me about Java were actually pretty smart. So I would have decent type systems in everything, everywhere. We are using typescript of all Javascript. I've added contracts to ruby for all my Middleman. Swift and objective-c onto iOS side, of course those, Java on the Android side. I would just want nice stable systems that aren't like the wild wild west like Ruby and Javascript can be.
 
 --
 
