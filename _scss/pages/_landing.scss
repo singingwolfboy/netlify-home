@@ -134,6 +134,7 @@ $hero-animation-delay: 2.5s;
 
   cite {
     @extend .x-small;
+    @include font-weight('normal');
     display: block;
     margin: 30px 0;
 
