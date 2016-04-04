@@ -50,7 +50,6 @@ $hero-animation-delay: 2.5s;
 .hero-blurb {
 
   h1 {
-    @extend .alpha;
     @extend .bold;
     height: 40px;
     margin-bottom: 0;
@@ -69,11 +68,6 @@ $hero-animation-delay: 2.5s;
       white-space: nowrap;
       width: 100%;
     }
-  }
-
-  p {
-    @extend .zeta;
-    margin-bottom: 30px;
   }
 
   .two {
@@ -98,16 +92,14 @@ $hero-animation-delay: 2.5s;
 //* https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
 //*
 .hero-blockquote {
-  box-sizing: content-box;
   max-width: 30em;
   padding-left: 20px;
   quotes: '\201C''\201D''\2018''\2019';
   text-align: right;
 
   p {
-    @extend .mega;
     display: inline;
-    line-height: 1.1;
+    line-height: 1;
 
     &::before,
     &::after {
@@ -133,7 +125,6 @@ $hero-animation-delay: 2.5s;
   }
 
   cite {
-    @extend .small;
     display: block;
     margin: 25px 0;
 

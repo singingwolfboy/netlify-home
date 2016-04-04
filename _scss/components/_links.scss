@@ -157,13 +157,15 @@ a * {
 }
 
 .button--pill {
-  @include pill-button-size(62px, 5px);
+  @include pill-button-size(60px, 5px);
+  display: inline-block;
 
   .button-label {
     @include font-weight(medium);
     background-color: $color-highlight;
     color: $color-lightest;
     display: block;
+    padding: 0 2em;
     text-indent: 0;
   }
 
@@ -325,4 +327,9 @@ $color-sonar: $color-darker;
 //*/
 .cta {
   max-width: 270px;
+
+  .button,
+  &.button {
+    display: block;
+  }
 }
