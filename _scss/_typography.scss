@@ -158,31 +158,37 @@ h6 {
 }
 
 .large {
+  @include font-weight(light);
   font-size: 20px;
   line-height: 30px;
 }
 
 .medium {
+  @include font-weight(light);
   font-size: 16px;
   line-height: 25px;
  }
 
 .small {
+  @include font-weight(light);
   font-size: 14px;
   line-height: 20px;
 }
 
 .small-2 {
+  @include font-weight(light);
   font-size: 15px; //* One-off size to get small text in hero to justify */
   line-height: 20px;
 }
 
 .x-small {
+  @include font-weight(light);
   font-size: 13px;
   line-height: 20px;
 }
 
 .xx-small {
+  @include font-weight(light);
   font-size: 11px;
   line-height: 20px;
 }

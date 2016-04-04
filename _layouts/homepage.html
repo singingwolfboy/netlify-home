@@ -57,35 +57,35 @@ layout: default
 {{ content }}
 
 <!-- Features -->
-<section class="bg-dark-cover inverse text-center bb bb--large">
+<section class="bg-dark-muted-cover inverse bb bb--large">
   <div class="content">
-    <h1 class="kilo mb-50"><a href="/features.html">Features</a></h1>
+    <h1 class="kilo mb-50 text-center"><a href="/features.html">Features</a></h1>
 
     <div class="l-container">
     {% for feature in site.data.homepage_features %}
 
-      <div class="l-third">
-        <div class="homepage-feature">
-          <strong>
-            <div class="feature-icon">
+      <div class="l-third l-half-med">
+        <section class="homepage-feature mb-40">
+          <h3 class="blurb-title">
+            <span class="feature-icon">
               <svg width="60" height="60">
                 <use xlink:href="#{{feature.icon_id}}" />
               </svg>
-            </div>
-
+            </span>
             {{feature.title}}
-          </strong>
-
-          <p>{{feature.description}}</p>
-        </div>
+          </h3>
+          <div class="blurb-bd">
+            {{feature.description | markdownify}}
+          </div>
+        </section>
       </div>
 
     {% endfor %}
     </div>
 
     <p class="cta mb-80">
-      <a href="/features.html" class="gamma">
-        <strong>See more features<svg width="20" height="20" class="append light"><use xlink:href="#icon-arrow" /></svg></strong>
+      <a href="/features.html" class="delta">
+        <strong>See more features<svg width="20" height="20" class="append darkest"><use xlink:href="#icon-arrow" /></svg></strong>
       </a>
     </p>
   </div>
