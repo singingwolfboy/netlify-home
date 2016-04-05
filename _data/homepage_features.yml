@@ -2,8 +2,8 @@
   title: Netlify CDN
   description: "Make your site or web-app many times faster by bringing it closer to your users. Instead of a single server, push to a global network of intelligent CDN nodes that also handle asset fingerprinting, automatic caching headers, and smart redirect & rewrite rules."
 
-- icon_id: feature-one-click-encrypt
-  title: One-Click-Encrypt
+- icon_id: feature-one-click-ssl
+  title: One-Click SSL
   description: "Secure your site or app with our true 1-click SSL setup. Netlify integrates with Let's Encrypt and automatically provisions, distributes and renews your certificate. HTTPS is free on all plans and HTTP2 enabled."
 
 - icon_id: feature-continuous-deployment
@@ -32,14 +32,13 @@
   title: Instant Cache Invalidation
   description: "When your changes go live, they go live. No waiting for cache purges, no cumbersome varnish setup, no API calls to clean your distribution. Netlify handles cache purges within an average of 250ms from your deploy!"
 
-- icon_id: feature-cli
-  title: CLI
-  description: "Netlify's command line tool might be your new best friend. Push any folder with a single command, set-up continuous deployment and access any netlify feature straight from your terminal."
-
-
 - icon_id: feature-instant-rollbacks
   title: Instant Rollbacks
   description: "View and download every deploy you’ve ever made and instantly roll back your site to an earlier version. Undo any mistake or change at the push of a button, no setup required."
+
+- icon_id: feature-cli
+  title: CLI
+  description: "Netlify's command line tool might be your new best friend. Push any folder with a single command, set-up continuous deployment and access any netlify feature straight from your terminal."
 
 - icon_id: feature-programmable-api
   title: Programmable API
