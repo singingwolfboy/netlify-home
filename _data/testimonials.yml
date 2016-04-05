@@ -4,10 +4,10 @@ quotes:
     quote: "We've moved all of our static sites and apps to Netlify. It's an indispensable tool in our toolchain. Every time we are able to dream up a new feature we need from a static host, Netlify has it."
     photo: /img/testimonials/kyle.png
 
-  - cite: Mike Ruescher, Front-end lead, Blueshift
-    link: http://www.getblueshift.com/
-    quote: Netlify has been a huge timesaver and collaboration booster for our creative team. It creates a tight loop between front end development of our ad templates and rest of the team.
-    photo: /img/testimonials/mike.png
+  - cite: Tom Preston-Werner, founder of GitHub and creator of Jekyll
+    link: http://tom.preston-werner.com
+    quote: Netlify is an all-in-one platform. They simply have so many services rolled into one—everything you need to make a high performance site or web-app. You just push your code.
+    photo: /img/testimonials/tom.png
 
   - cite: Jaime Iniesta, CTO of Site Validator
     link: https://sitevalidator.com
