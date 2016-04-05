@@ -32,14 +32,13 @@
   title: Instant Cache Invalidation
   description: "When your changes go live, they go live. No waiting for cache purges, no cumbersome varnish setup, no API calls to clean your distribution. Netlify handles cache purges within an average of 250ms from your deploy!"
 
-- icon_id: feature-cli
-  title: CLI
-  description: "Netlify's command line tool might be your new best friend. Push any folder with a single command, set-up continuous deployment and access any netlify feature straight from your terminal."
-
-
 - icon_id: feature-instant-rollbacks
   title: Instant Rollbacks
   description: "View and download every deploy you’ve ever made and instantly roll back your site to an earlier version. Undo any mistake or change at the push of a button, no setup required."
+
+- icon_id: feature-cli
+  title: CLI
+  description: "Netlify's command line tool might be your new best friend. Push any folder with a single command, set-up continuous deployment and access any netlify feature straight from your terminal."
 
 - icon_id: feature-programmable-api
   title: Programmable API
