@@ -406,10 +406,23 @@ a.media {
 }
 
 
-@for $i from 1 through 5 { // Margins for pull-outs
+@for $i from 1 through 5 { // Margins for pull-outs and bigger adjustments
   .ml-n#{$i * 10} {
     margin-left: $i * -10px;
   }
+
+  .mr-n#{$i * 10} {
+    margin-right: $i * -10px;
+  }
+
+  .mt-n#{$i * 10} {
+    margin-top: $i * -10px;
+  }
+
+  .mb-n#{$i * 10} {
+    margin-bottom: $i * -10px;
+  }
+
 }
 
 

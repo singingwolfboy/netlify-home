@@ -33,7 +33,7 @@ title: Features
 
     <div class="l-main l-main--right">
       {% for section in sections %}
-      <section id="{{ section.title | slugify }}" class="mt-40">
+      <section id="{{ section.title | slugify }}" class="{% if forloop.first == true %}mt-50{% else %}mt-20{% endif %}">
 
         <header class="text-center">
           {% if section.icon_id %}
@@ -41,7 +41,7 @@ title: Features
             <use xlink:href="#{{section.icon_id}}" />
           </svg>
           {% else %}
-          <svg width="120" height="120" class="highlight">
+          <svg width="120" height="120" class="highlight mt-n20 mb-n10">
             <use xlink:href="#polyhedron" />
           </svg>
           {% endif %}
