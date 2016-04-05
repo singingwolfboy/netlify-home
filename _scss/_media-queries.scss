@@ -20,21 +20,38 @@
     padding-right: 50px;
   }
 
-  .mega,
-  .post-title {
-    font-size: 50px; //* Kilo */
+  .l-2-col-auto {
+    column-gap: 50px;
   }
 
-  .post-title {
-    line-height: 65px;
-    margin-left: 0;
-    margin-right: 0;
+  .mt-80,
+  .mt-90,
+  .mt-100,
+  .mt-110,
+  .mt-115,
+  .mt-120 {
+    margin-top: 70px; // Need to normalize these margins
+  }
+
+  .mb-50 {
+    margin-bottom: 40px;
+  }
+
+  .mt-50 {
+    margin-top: 40px;
+  }
+
+  .mb-80,
+  .mb-90,
+  .mb-100,
+  .mb-110,
+  .mb-115,
+  .mb-120 {
+    margin-bottom: 70px; // Need to normalize these margins
   }
 
   .blog-aside-title {
-    font-size: 46px;
-    line-height: 65px;
-    margin-top: 155px;
+    margin-top: 130px;
   }
 }
 
@@ -82,19 +99,6 @@
 
 
 @media (max-width: $bp-med) { //* Major breakpoint
-
-  //*
-  //* Show/hide alternatives for medium size
-  //*/
-  .optional,
-  .hide-for-medium {
-    display: none;
-  }
-
-  .show-for-medium {
-    display: inherit;
-  }
-
 
   //*
   //* Stack main and aside
@@ -238,6 +242,19 @@
     padding-bottom: 12px;
     padding-top: 15px;
   }
+
+  //*
+  //* Utils
+  //*/
+
+  .optional,
+  .hide-for-medium {
+    display: none;
+  }
+
+  .show-for-medium {
+    display: inherit;
+  }
 }
 
 
@@ -323,23 +340,17 @@
 
 
   //*
-  //* Reduce header
+  //* Reduce logo
   //*/
+
+  .brand-logo {
+    transform: scale(.7);
+  }
+
   .site-header {
 
     .brand {
-      margin: 0;
-    }
-
-    .brand-logo {
-      left: -30px;
-      position: relative;
-      top: 3px;
-      transform: scale(.7);
-    }
-
-    .top-nav {
-      margin: 15px 0;
+      margin: 0 0 0 -30px;
     }
   }
 
@@ -362,7 +373,7 @@
     width: auto;
 
     .blurb {
-      margin: 20px auto 40px;
+      margin: 0 auto 25px;
       position: static;
     }
   }
@@ -462,87 +473,10 @@
     display: table;
   }
 
-  .mt-80,
-  .mt-90,
-  .mt-100,
-  .mt-110,
-  .mt-115,
-  .mt-120 {
-    margin-top: 70px; // this is a hack – need to normalize these margins
-  }
-
-  .mb-80,
-  .mb-90,
-  .mb-100,
-  .mb-110,
-  .mb-115,
-  .mb-120 {
-    margin-bottom: 70px; // this is a hack – need to normalize these margins
-  }
-
 
   //*
   //* Reduce font sizes
   //*/
-  .huge {
-    font-size: 115px;
-    line-height: 1;
-  }
-
-  .tera {
-    font-size: 55px;
-    line-height: 1;
-  }
-
-  .mega {
-    font-size: 50px; //48px;
-    line-height: 1;
-  }
-
-  .kilo {
-    font-size: 37px; //36px;
-    line-height: 45px;
-  }
-
-  .alpha,
-  h1 {
-    font-size: 33px; //32px
-    line-height: 40px;
-  }
-
-  .beta,
-  h2 {
-    font-size: 28px;
-    line-height: 35px;
-  }
-
-  .gamma,
-  h3 {
-    font-size: 25px; //24px;
-    line-height: 30px;
-  }
-
-  .delta,
-  h4,
-  .epsilon,
-  h5 {
-    font-size: 22px;
-    line-height: 30px;
-  }
-
-  .zeta,
-  h6 {
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  .small {
-    font-size: 15px;
-  }
-
-  .small-2 {
-    font-size: 14px;
-  }
 
   .table {
     font-size: 16px;
@@ -550,14 +484,6 @@
 
   .th {
     font-size: 20px;
-  }
-
-
-  //*
-  //* Bold paragraphs look too bold
-  //*/
-  p.bold {
-    @include font-weight(medium);
   }
 
 
@@ -584,20 +510,21 @@
 
 
   //*
-  //* Reduce large titles
+  //* Blog
   //*/
-  .mega,
-  .post-title {
-    font-size: 37px;
+
+  .post-hd,
+  .post-img,
+  .post-bd {
+    margin: 30px auto;
   }
 
   .post-title {
     line-height: 50px;
-    margin: 70px 0 20px;
   }
 
   .post-meta {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .blog-aside-title {
@@ -644,7 +571,7 @@
   //* Reduce spacing around inlined lists of icons
   //*
   .inline-block .icon-link--round {
-    margin-right: 10px;
+    margin-right: 15px;
   }
 
   .nav--inline.nav--wide {
@@ -705,7 +632,8 @@
   //*
   //* More room for content
   //*/
-  .content {
+  .content,
+  .l-main {
     padding: 0 15px;
   }
 

@@ -31,18 +31,245 @@ $font-weights: ( //* keep getting them wrong, so mapping them to their names to 
 }
 
 body {
-  font: 300 normal 16px/25px Roboto, sans-serif;
+  font: 300 normal 16px/1.5625 Roboto, sans-serif;
 }
 
+
+//* Page headings */
+
+.tera {
+  @include font-weight(thin);
+  font-size: 60px;
+  letter-spacing: -.02em;
+  line-height: 1;
+  margin-bottom: 30px;
+  margin-top: 90px;
+}
+
+.mega {
+  @include font-weight(thin);
+  font-size: 55px;
+  letter-spacing: -.02em;
+  line-height: 70px;
+  margin-bottom: 30px;
+  margin-top: 90px;
+}
+
+
+//* Section headings */
+
+.kilo {
+  @include font-weight(thin);
+  font-size: 50px;
+  letter-spacing: -.02em;
+  line-height: 70px;
+  margin-bottom: 25px;
+  margin-top: 90px;
+}
+
+.alpha {
+  @include font-weight(thin);
+  font-size: 37px; //36px;
+  letter-spacing: -.02em;
+  line-height: 45px;
+  margin-bottom: 25px;
+  margin-top: 40px;
+}
+
+.beta {
+  @include font-weight(thin);
+  font-size: 33px; //32px
+  letter-spacing: -.02em;
+  line-height: 40px;
+  margin-bottom: 25px;
+  margin-top: 40px;
+}
+
+.gamma {
+  @include font-weight(thin);
+  font-size: 28px;
+  letter-spacing: normal;
+  line-height: 35px;
+  margin-bottom: 25px;
+  margin-top: 40px;
+}
+
+
+//* Subheadings, intros and/or marketing text */
+
+.delta {
+  @include font-weight(thin);
+  font-size: 25px; //24px;
+  letter-spacing: normal;
+  line-height: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.epsilon {
+  @include font-weight(thin);
+  font-size: 21px;
+  letter-spacing: normal;
+  line-height: 30px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+//* Paragraphs */
+
+.zeta {
+  @include font-weight(light);
+  font-size: 18px;
+  letter-spacing: normal;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.large {
+  @include font-weight(light);
+  font-size: 20px;
+}
+
+.medium {
+  @include font-weight(light);
+  font-size: 16px;
+ }
+
+.small {
+  @include font-weight(light);
+  font-size: 14px;
+}
+
+.small-2 {
+  @include font-weight(light);
+  font-size: 15px; //* One-off size to get small text in hero to justify */
+}
+
+.x-small {
+  @include font-weight(light);
+  font-size: 13px;
+}
+
+.xx-small {
+  @include font-weight(light);
+  font-size: 11px;
+}
+
+@media (max-width: $bp-large) {
+  .tera,
+  .mega,
+  .kilo {
+    margin-top: 60px;
+  }
+
+  .gamma,
+  .delta,
+  .epsilon {
+    @include font-weight(light);
+  }
+}
+
+@media (max-width: $bp-small) {
+  .tera {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .mega,
+  .kilo {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .alpha {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .beta {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .gamma {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .delta,
+  .epsilon {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .zeta {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .small,
+  .small-2 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .x-small {
+    font-size: 13px;
+  }
+
+  .xx-small {
+    font-size: 12px;
+  }
+}
+
+//* Weights
+
+.thin {
+  @include font-weight(thin);
+}
+
+.normal {
+  @include font-weight(light);
+}
+
+.semibold {
+  @include font-weight(medium);
+}
+
+.bold {
+  @include font-weight(bold);
+}
+
+
 //*
-//* Basic spacing
+//* Default styles
 //*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
+
+h1 {
+  @extend .alpha;
+}
+
+h2 {
+  @extend .beta;
+}
+
+h3 {
+  @extend .gamma;
+}
+
+h4 {
+  @extend .delta;
+}
+
+h5 {
+  @extend .epsilon;
+}
+
+h6 {
+  @extend .zeta;
+}
+
 p,
 ul,
 ol,
@@ -63,169 +290,21 @@ p {
   max-width: none;
 }
 
-//*
-//* Headings and paragraphs
-//*/
-
-.huge {
-  @include font-weight(bold);
-  font-size: 125px;
-  letter-spacing: -.01em;
-  line-height: 1;
+small,
+cite {
+  @extend .small;
 }
-
-.tera {
-  @include font-weight(thin);
-  font-size: 60px;
-  letter-spacing: -.02em;
-  line-height: 1;
-  margin-bottom: 30px;
-  margin-top: 90px;
-}
-
-.mega {
-  @include font-weight(thin);
-  font-size: 55px;
-  letter-spacing: -.02em;
-  line-height: 70px;
-  margin-bottom: 30px;
-  margin-top: 90px;
-}
-
-.kilo {
-  @include font-weight(thin);
-  font-size: 50px;
-  letter-spacing: -.02em;
-  line-height: 70px;
-  margin-bottom: 30px;
-  margin-top: 90px;
-}
-
-.alpha,
-h1 {
-  @include font-weight(thin);
-  font-size: 37px; //36px;
-  letter-spacing: -.02em;
-  line-height: 45px;
-  margin-top: 40px;
-}
-
-.beta,
-h2 {
-  @include font-weight(thin);
-  font-size: 33px; //32px
-  letter-spacing: -.02em;
-  line-height: 40px;
-  margin-top: 40px;
-}
-
-.gamma,
-h3 {
-  @include font-weight(thin);
-  font-size: 28px;
-  letter-spacing: normal;
-  line-height: 35px;
-  margin-bottom: 40px;
-  margin-top: 40px;
-}
-
-.delta,
-h4 {
-  @include font-weight(thin);
-  font-size: 25px; //24px;
-  letter-spacing: normal;
-  line-height: 30px;
-  margin-bottom: 40px;
-  margin-top: 40px;
-}
-
-.epsilon,
-h5 {
-  @include font-weight(thin);
-  font-size: 21px;
-  letter-spacing: normal;
-  line-height: 30px;
-  margin-bottom: 40px;
-  margin-top: 30px;
-}
-
-.zeta,
-h6 {
-  @include font-weight(light);
-  font-size: 18px;
-  letter-spacing: normal;
-  line-height: 25px;
-}
-
-.large {
-  @include font-weight(light);
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.medium {
-  @include font-weight(light);
-  font-size: 16px;
-  line-height: 25px;
- }
-
-.small {
-  @include font-weight(light);
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.small-2 {
-  @include font-weight(light);
-  font-size: 15px; //* One-off size to get small text in hero to justify */
-  line-height: 20px;
-}
-
-.x-small {
-  @include font-weight(light);
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.xx-small {
-  @include font-weight(light);
-  font-size: 11px;
-  line-height: 20px;
-}
-
-
-//*
-//* Weights
-//*/
-
-.thin {
-  @include font-weight(thin);
-}
-
-.normal {
-  @include font-weight(light);
-}
-
-strong,
-b,
-.semibold {
-  @include font-weight(medium);
-}
-
-.bold {
-  @include font-weight(bold);
-}
-
-
 
 //* Skip italics and use bold for emphasis instead
 //* http://practicaltypography.com/bold-or-italic.html
 //*/
 
+strong,
+b,
 em,
 i,
 cite {
-  @include font-weight(medium);
+  @extend .semibold;
   font-style: normal;
   letter-spacing: normal;
 }

@@ -13,7 +13,7 @@
 }
 
 .post-meta {
-  @extend .zeta;
+  @extend .large;
   color: $color-highlight;
 }
 
@@ -52,8 +52,8 @@
 }
 
 .blog-aside-title {
-  @extend .post-title;
-  margin-bottom: 45px;
+  @extend .kilo;
+  margin-bottom: 50px;
   margin-top: 160px;
   white-space: nowrap;
 }

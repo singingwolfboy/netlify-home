@@ -40,8 +40,10 @@ layout: default
         <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="{{logo.alt}}">
       {% endfor %}
       </div>
-      <p class="delta muted mb-0">Our agnostic platform means your favorite tools are already supported</p>
-      <p class="small semibold loud mt-10 mb-40">And thousands more! (Really, just about anything)</p>
+      <p class="delta">
+        <span class="muted">Our agnostic platform means your favorite tools are already supported</span>
+        <small class="x-small block semibold mt-10">And thousands more! (Really, just about anything)</small>
+      </p>
     </div>
   </section>
 </div>
@@ -49,7 +51,7 @@ layout: default
 <!-- Terminal -->
 <section class="bg-terminal inverse bb bb--large">
   <div class="content">
-    <div class="l-container mt-0 mb-0 highlight js-terminal">
+    <div class="l-container highlight js-terminal">
     </div>
   </div>
 </section>
@@ -59,13 +61,15 @@ layout: default
 <!-- Features -->
 <section class="bg-dark-muted-cover inverse bb bb--large">
   <div class="content">
-    <h1 class="kilo mb-50 text-center"><a href="/features.html">Features</a></h1>
+    <h1 class="kilo text-center mb-50">
+      <a href="/features.html">Features</a>
+    </h1>
 
     <div class="l-container">
     {% for feature in site.data.homepage_features %}
 
-      <div class="l-third l-half-med">
-        <section class="homepage-feature mb-40">
+      <div class="l-third l-half-med mb-40">
+        <section class="homepage-feature">
           <h3 class="blurb-title">
             <span class="feature-icon">
               <svg width="60" height="60">
@@ -83,8 +87,8 @@ layout: default
     {% endfor %}
     </div>
 
-    <p class="cta mb-80">
-      <a href="/features.html" class="delta">
+    <p class="text-center delta mt-0 mb-90">
+      <a href="/features.html">
         <strong>See more features<svg width="20" height="20" class="append darkest"><use xlink:href="#icon-arrow" /></svg></strong>
       </a>
     </p>
@@ -96,7 +100,7 @@ layout: default
 <section class="bg-white muted text-center">
   <div class="content">
     <!-- Section with video button for smaller devices -->
-    <p class="pullquote delta thin p--wide mt-40 mb-40">
+    <p class="pullquote delta p--wide">
       <strong>{{site.data.stats.developers}}</strong> Developers •
       <strong>{{site.data.stats.websites}}</strong> Web Sites •
       <strong>{{site.data.stats.deploys}}</strong> Deploys
@@ -110,7 +114,7 @@ layout: default
   <div class="content content--narrow">
 
     <!-- Newsletter -->
-    <section class="bb bb--muted mt-90">
+    <section class="bb bb--muted">
       {% include newsletter.html %}
     </section>
 
@@ -122,9 +126,9 @@ layout: default
 <section class="bg-dark-muted-cover inverse bb bb--large">
   <div class="content content--narrow">
 
-    <section class="mt-90 mb-30">
+    <section>
       <header class="text-center mb-50">
-        <h1 class="kilo mb-35"><a href="/blog.html">Visit our blog</a></h1>
+        <h1 class="kilo"><a href="/blog.html">Visit our blog</a></h1>
         <p class="zeta muted p--wide">See the blog for tons of articles, tips, tricks and opinions on all that is related to static web-tech.</p>
       </header>
       <div class="l-container">

@@ -33,7 +33,7 @@ title: Features
 
     <div class="l-main l-main--right">
       {% for section in sections %}
-      <section id="{{ section.title | slugify }}" class="{% if forloop.first == true %}mt-50{% else %}mt-20{% endif %}">
+      <section id="{{ section.title | slugify }}" class="mt-40">
 
         <header class="text-center">
           {% if section.icon_id %}
@@ -45,8 +45,8 @@ title: Features
             <use xlink:href="#polyhedron" />
           </svg>
           {% endif %}
-          <h2 class="beta semibold highlight mt-n5">{{ section.title }}</h2>
-          <p class="zeta">{{ section.description }}</p>
+          <h2 class="alpha semibold highlight mt-n5">{{ section.title }}</h2>
+          <p class="large p--wide">{{ section.description }}</p>
         </header>
 
         <hr class="bb mt-40 mb-40">
@@ -55,7 +55,7 @@ title: Features
           {% for feature in section.features %}
           <div class="blurb break-inside-avoid">
             <h3 class="blurb-title">{{ feature.title }}</h3>
-            <div class="blurb-text small">
+            <div class="blurb-text">
             {{ feature.body | markdownify }}
             </div>
           </div>

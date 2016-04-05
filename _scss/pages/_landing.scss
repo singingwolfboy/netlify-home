@@ -30,6 +30,10 @@ $hero-animation-delay: 2.5s;
 .hero {
   display: table;
   width: 100%;
+
+  @media (max-width: $bp-med) {
+    display: block;
+  }
 }
 
 .hero-blurb,
@@ -159,6 +163,12 @@ $hero-animation-delay: 2.5s;
     padding: 0;
     text-align: center;
   }
+
+  @media (max-width: $bp-small) {
+    p::after {
+      margin-right: 0;
+    }
+  }
 }
 
 
@@ -175,9 +185,16 @@ $hero-animation-delay: 2.5s;
 
   @media (max-width: $bp-med-large) {
     display: block;
-    max-width: 33em;
     margin-left: auto;
     margin-right: auto;
+    max-width: 33em;
+  }
+
+  @media (max-width: $bp-small-2) {
+    img {
+      margin: 5px;
+      transform: scale(.8);
+    }
   }
 }
 
