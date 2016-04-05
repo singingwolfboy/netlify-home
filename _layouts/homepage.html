@@ -40,12 +40,8 @@ layout: default
         <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="{{logo.alt}}">
       {% endfor %}
       </div>
-      <p class="delta muted">
-        Our agnostic platform means your favorite tools are already supported.
-        <small class="block small semibold loud mt-10">
-          And thousands more! (Really, just about anything)
-        </small>
-      </p>
+      <p class="delta muted mb-0">Our agnostic platform means your favorite tools are already supported</p>
+      <p class="small semibold loud mt-10 mb-40">And thousands more! (Really, just about anything)</p>
     </div>
   </section>
 </div>
@@ -62,28 +58,24 @@ layout: default
 
 <!-- Features -->
 <section class="bg-dark-muted-cover inverse bb bb--large">
-  <div class="content content--narrow">
+  <div class="content">
     <h1 class="kilo mb-50 text-center"><a href="/features.html">Features</a></h1>
 
     <div class="l-container">
     {% for feature in site.data.homepage_features %}
 
       <div class="l-third l-half-med">
-        <section class="blurb mb-50">
-          <header class="blurb-hd">
-            <div class="l-arrange">
-              <div class="l-arrange-fit v-bottom">
-                <svg width="50" height="75" class="highlight mr-15">
-                  <use xlink:href="#{{feature.icon_id}}" />
-                </svg>
-              </div>
-              <div class="l-arrange-fill v-middle">
-                <h3 class="blurb-title">{{feature.title}}</h3>
-              </div>
-            </div>
-          </header>
+        <section class="homepage-feature mb-40">
+          <h3 class="blurb-title">
+            <span class="feature-icon">
+              <svg width="60" height="60">
+                <use xlink:href="#{{feature.icon_id}}" />
+              </svg>
+            </span>
+            {{feature.title}}
+          </h3>
           <div class="blurb-bd small">
-            {{ feature.description | markdownify }}
+            {{feature.description | markdownify}}
           </div>
         </section>
       </div>
