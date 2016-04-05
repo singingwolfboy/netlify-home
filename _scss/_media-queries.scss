@@ -49,11 +49,6 @@
   .mt-50 {
     margin-top: 40px;
   }
-
-
-  .blog-aside-title {
-    margin-top: 130px;
-  }
 }
 
 @media (max-width: $bp-med-large) { //* Tweak point to leave more room for content
@@ -146,7 +141,7 @@
   //* Adjust spacing and alignment of aside title and footer
   //*/
   .blog-aside-title {
-    margin: 60px 0;
+    padding: 0;
     text-align: center;
   }
 
