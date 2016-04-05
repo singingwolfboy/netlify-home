@@ -1,0 +1,284 @@
+
+// Colors
+
+$color-danger: rgb(242, 222, 222);
+$color-danger-darker: rgb(242, 102, 22);
+$color-less-light: #E5E7E7;
+
+.speedy {
+
+  // UrlFormStep
+
+  .form--but-not-that-fancy {
+    max-width: 666px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-group--full {
+    float: left;
+    margin: 0;
+    width: 100%;
+    padding-right: 6px;
+  }
+
+  .form-input--invalid {
+    background-color: $color-danger;
+  }
+
+  // QuestionStep
+
+  .loader__title {
+    display: inline-block;
+  }
+
+  .question {
+    display: inline-block;
+  }
+
+  .radio-button {
+    text-align: left;
+  }
+
+  .radio-button__label {
+    margin-left: 10px;
+  }
+
+  // ResultsStep
+
+  .results-header {
+    margin-top: 60px;
+  }
+
+  .results-header__title {
+    @include font-weight(light);
+  }
+
+  .results-header__url {
+    @include font-weight(medium);
+  }
+
+  .spinner {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    vertical-align: text-bottom;
+    line-height: 45px;
+    margin-left: 10px;
+  }
+
+  .results-error {
+    @include font-weight(normal);
+    color: $color-danger-darker;
+  }
+
+  .results-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 60px;
+    background-color: $color-lightest;
+    border: 1px solid $color-less-light;
+  }
+
+  .results-table__col-header {
+    @include font-weight(medium);
+    background-color: $color-light;
+    color: $color-dark;
+    font-size: 16px;
+    border: 1px solid $color-less-light;
+  }
+
+  .results-table__row-header {
+    @include font-weight(light);
+    background-color: $color-lightest;
+    color: $color-dark;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 20px;
+    border: 1px solid $color-less-light;
+  }
+
+  .results-table__entry {
+    background-color: $color-lightest;
+    border: 1px solid $color-less-light;
+  }
+
+  .results-table__entry--theirs {
+    color: $color-danger-darker;
+  }
+
+  .results-table__entry--ours {
+    color: $color-highlight;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon--error {
+    fill: $color-danger-darker;
+  }
+
+  .icon--check {
+    fill: $color-highlight;
+  }
+
+  .icon--info {
+    fill: $color-highlight-lighter;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  .stats {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .stats-list {
+    @include clearfix-me(micro);
+  }
+
+  .stats-list:before, .stats-list:after {
+    content: " ";
+    position: relative;
+    width: 100%;
+    height: 2px;
+    margin-bottom: -2px;
+    background-color: $color-highlight;
+  }
+
+  .stat {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 33%;
+  }
+
+  .stat__name {
+    @include font-weight(normal);
+  }
+
+  .stat__value {
+    @include font-weight(medium);
+    color: $color-highlight;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .benefits, .problems {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .benefit, .problem {
+    color: $color-dark;
+    background: $color-lightest;
+    width: 100%;
+    border: 1px solid $color-less-light;
+    border-top-width: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  .problem--critical {
+    color: $color-danger-darker;
+  }
+
+  .benefit__link, .problem__link {
+    @include font-weight(medium);
+    padding-left: 0.5em;
+  }
+
+  .benefit:first-child, .problem:first-child {
+                          border-top-width: 1px;
+                        }
+
+  .simple-button {
+    // Button style from the netlify web app
+    @include font-weight(normal);
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    user-select: none;
+    color: $color-highlight;
+    border-color: $color-highlight;
+    background: $color-lightest;
+  }
+
+  .simple-button--inactive {
+    color: $color-highlight-lighter;
+    border-color: $color-highlight-lighter;
+    background: $color-lightest;
+  }
+
+  .pill-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 60px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $color-lightest;
+    background-color: $color-highlight;
+    transition: background-color 0.2s ease-in;
+  }
+
+  .pill-button:hover {
+    background-color: darken($color-highlight, 10%);
+  }
+}
+
+// Breakpoints
+
+$bp-med-small-2: 770px; //* Tweak point - 3 big stats look too squished
+
+@media (max-width: $bp-med-small-2) {
+  .speedy {
+    .stat {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ReactPopover styles
+
+.Popover {
+  max-width: 60%;
+}
+
+.Popover-body {
+  display: inline-block;
+  padding: 1em 1em;
+  background: $color-dark;
+  color: $color-lightest;
+  border-radius: 4px;
+}
+
+.Popover-tip {
+  color: $color-dark;
+}
