@@ -125,6 +125,11 @@ body {
   margin-top: 20px;
 }
 
+.intro {
+  @include font-weight(medium);
+  font-size: 21px;
+}
+
 .large {
   @include font-weight(light);
   font-size: 20px;
@@ -202,7 +207,8 @@ body {
     line-height: 25px;
   }
 
-  .zeta {
+  .zeta,
+  .intro {
     font-size: 18px;
     line-height: 25px;
   }

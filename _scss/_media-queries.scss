@@ -17,20 +17,29 @@
   }
 
   .l-main--left {
-    padding-right: 50px;
+    padding-right: 40px;
   }
 
   .l-2-col-auto {
-    column-gap: 50px;
+    column-gap: 40px;
   }
 
+  .mt-70,
   .mt-80,
   .mt-90,
   .mt-100,
   .mt-110,
   .mt-115,
   .mt-120 {
-    margin-top: 70px; // Need to normalize these margins
+    margin-top: 60px; // Need to normalize these margins
+  }
+
+  .mb-90,
+  .mb-100,
+  .mb-110,
+  .mb-115,
+  .mb-120 {
+    margin-bottom: 80px; // Need to normalize these margins
   }
 
   .mb-50 {
@@ -41,14 +50,6 @@
     margin-top: 40px;
   }
 
-  .mb-80,
-  .mb-90,
-  .mb-100,
-  .mb-110,
-  .mb-115,
-  .mb-120 {
-    margin-bottom: 70px; // Need to normalize these margins
-  }
 
   .blog-aside-title {
     margin-top: 130px;
@@ -473,6 +474,12 @@
     display: table;
   }
 
+  .mt-60,
+  .mt-50,
+  .mt-40 {
+    margin-top: 30px;
+  }
+
 
   //*
   //* Reduce font sizes
@@ -634,7 +641,12 @@
   //*/
   .content,
   .l-main {
-    padding: 0 15px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .l-wrap-inner {
+    padding: 0;
   }
 
   .l-third,
@@ -644,6 +656,9 @@
     }
   }
 
+  .l-aside .side-nav {
+    padding: 20px 0;
+  }
 
   //*
   //* Social icons can be closer together
