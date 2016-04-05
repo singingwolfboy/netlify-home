@@ -8,13 +8,17 @@ features:
   - title: Automated Builds
     body: "Leave the build boxes to us. Continuous deployment is as simple as telling us how and what to build. Then rapidly deploy your site with standard git commands."
   - title: Inbound Webhooks
-    body: "Trigger builds with a POST request to integrate with external APIs, schedule builds of your site or trigger rebuilds from a Google Spreadsheet. [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
+    body: "Trigger builds with a POST request to integrate with external APIs, schedule builds of your site or trigger rebuilds from a Google Spreadsheet."
+    footer: "[What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
   - title: "Outbound Webhooks & Integrations"
-    body: "Set up any number of outbound webhooks. Receive email or Slack notifications for new form submissions, deploys or build failures. — [What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
+    body: "Set up any number of outbound webhooks. Receive email or Slack notifications for new form submissions, deploys or build failures."
+    footer: "[What can you do with webhooks?](https://www.netlify.com/docs/webhooks)"
   - title: Secure Build Environment
-    body: "We never store any GitHub tokens on our servers, and your builds are run in a completely locked down environment. — [Read more about GitHub tokens &amp; netlify](https://www.netlify.com/docs/github-permissions)"
+    body: "We never store any GitHub tokens on our servers, and your builds are run in a completely locked down environment."
+    footer: "[Read more about GitHub tokens &amp; netlify](https://www.netlify.com/docs/github-permissions)"
   - title: Cached Dependencies
-    body: "Dependencies (rubygems, npm, etc.) are automatically installed and cached between builds to keep build time down. — [Read more about dependencies and run times](https://www.netlify.com/docs/continuous-deployment)"
+    body: "Dependencies (rubygems, npm, etc.) are automatically installed and cached between builds to keep build time down."
+    footer: "[Read more about dependencies and run times](https://www.netlify.com/docs/continuous-deployment)"
   - title: Instant Cache Invalidation
     body: "One of the problems with releasing a new site is that you never know if a user is viewing a cached version. Netlify invalidates the cache instantly, serving only the intended version across the globe. Never wait to see a live version again."
   - title: Versioning & Rollbacks

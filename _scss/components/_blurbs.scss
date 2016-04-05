@@ -10,6 +10,10 @@
     display: block;
     margin-top: -5px;
   }
+
+  &.break-inside-avoid {
+    padding-bottom: 25px;
+  }
 }
 
 .blurb-hd {
@@ -81,13 +85,18 @@
 }
 
 .blurb-text {
+  p {
+    margin: 0;
+  }
+}
+
+.blurb-footer {
+  @extend .small;
+  line-height: 25px;
+  margin-top: 2px;
+
   a {
     @extend .link;
-  }
-
-  p {
-    margin-top: 0;
-    margin-left: 0;
   }
 }
 

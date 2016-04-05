@@ -5,7 +5,7 @@ title: Features
 
 {% assign sections = site.features | sort: 'position' %}
 
-<article class="l-wrap bg-light muted">
+<article class="l-wrap bg-light">
   <div class="l-wrap-inner">
 
     <h1 class="visuallyhidden" id="features">Features</h1>
@@ -45,19 +45,24 @@ title: Features
             <use xlink:href="#polyhedron" />
           </svg>
           {% endif %}
-          <h2 class="alpha semibold highlight mt-n5">{{ section.title }}</h2>
-          <p class="large p--wide">{{ section.description }}</p>
+          <h2 class="kilo highlight mt-0">{{ section.title }}</h2>
+          <p class="zeta semibold p--wide">{{ section.description }}</p>
         </header>
 
         <hr class="bb mt-40 mb-40">
 
         <div class="l-2-col-auto">
           {% for feature in section.features %}
-          <div class="blurb break-inside-avoid">
-            <h3 class="blurb-title">{{ feature.title }}</h3>
+          <div class="blurb break-inside-avoid muted">
+            <h3 class="blurb-title zeta">{{ feature.title }}</h3>
             <div class="blurb-text">
             {{ feature.body | markdownify }}
             </div>
+            {% if feature.footer %}
+            <div class="blurb-footer blurb-text">
+              {{ feature.footer | markdownify }}
+            </div>
+            {% endif %}
           </div>
           {% endfor %}
         </div>

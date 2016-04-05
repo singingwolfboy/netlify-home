@@ -51,14 +51,15 @@ collections:
     create: true
     sort: "position:asc"
     fields:
-      - {label: "Heading", name: "title", widget: "string", tagname: "h2", class: "alpha highlight"}
-      - {description: "Description", name: "description", widget: "string", tagname: "p"}
+      - {label: "Heading", name: "title", widget: "string", tagname: "h2", class: "kilo highlight"}
+      - {description: "Description", name: "description", widget: "string", class: "zeta semibold"}
       - name: features
         label: Features
         widget: list
         fields:
-          - {label: "Title", name: "title", widget: "string", class: "blurb-title large"}
-          - {label: "Body", name: "body", widget: "markdown", class: "blurb-text" }
+          - {label: "Title", name: "title", widget: "string", class: "zeta semibold mt-25 mb-5"}
+          - {label: "Body", name: "body", widget: "markdown", class: "blurb-text"}
+          - {label: "Footer", name: "footer", widget: "markdown", class: "blurb-text blurb-footer", optional: true }
     meta:
       - {label: "Position", name: "position", widget: "number", optional: false}
 
