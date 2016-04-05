@@ -2,8 +2,8 @@
   title: Netlify CDN
   description: "Make your site or web-app many times faster by bringing it closer to your users. Instead of a single server, push to a global network of intelligent CDN nodes that also handle asset fingerprinting, automatic caching headers, and smart redirect & rewrite rules."
 
-- icon_id: feature-one-click-encrypt
-  title: One-Click-Encrypt
+- icon_id: feature-one-click-ssl
+  title: One-Click SSL
   description: "Secure your site or app with our true 1-click SSL setup. Netlify integrates with Let's Encrypt and automatically provisions, distributes and renews your certificate. HTTPS is free on all plans and HTTP2 enabled."
 
 - icon_id: feature-continuous-deployment
