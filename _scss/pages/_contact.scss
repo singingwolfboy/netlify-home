@@ -2,7 +2,6 @@ $card-spacing: 8px;
 
 .card-grid {
   @extend .l-container;
-  margin-bottom: - $card-spacing;
   margin-left: - $card-spacing;
 
   > li {
