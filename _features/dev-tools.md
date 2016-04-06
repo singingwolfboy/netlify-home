@@ -25,7 +25,7 @@ features:
     body: "Netlify supports form submissions for any HTML form on your site and triggers email, slack notifications or webhooks."
     footer: "[Read about form handling in our documentation](https://www.netlify.com/docs/form-handling)"
   - title: Password Protection
-    body: We provide simple password protection for a site out of the box. That means that you can launch a site and have coarse grained access with a click or a few keystrokes.
+    body: We provide simple password protection for a site out of the box. That means that you can launch a site and have coarse-grained access with a click or a few keystrokes.
 cmsUserSlug: dev-tools
 date: 2016-03-29T00:00:00.000Z
 position: 50
