@@ -8,6 +8,7 @@ thumbnail: /uploads/sculpin_logo.png
 cmsUserSlug: ""
 date: 2020-01-13T00:00:00.000Z
 tags: null
+published: false
 ---
 
 [Sculpin](https://sculpin.io/) is a fast static site generator, which uses Twig templates, is built on Symfony's HTTP Kernel and written in PHP. I

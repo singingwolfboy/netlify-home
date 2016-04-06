@@ -8,6 +8,7 @@ thumbnail: /uploads/inkpaperlogo.png
 cmsUserSlug: ""
 date: 2015-11-24T00:00:00.000Z
 tags: null
+published: false
 ---
 
 ### Welcome to netlify

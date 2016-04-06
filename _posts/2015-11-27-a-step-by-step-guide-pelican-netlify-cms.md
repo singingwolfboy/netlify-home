@@ -8,6 +8,7 @@ thumbnail: /uploads/pelicanthumb.png
 cmsUserSlug: ""
 date: 2015-11-27T00:00:00.000Z
 tags: null
+published: false
 ---
 
 ### Welcome to netlify CMS
