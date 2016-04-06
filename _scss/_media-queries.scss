@@ -23,6 +23,19 @@
   .l-2-col-auto {
     column-gap: 40px;
   }
+}
+
+@media (max-width: $bp-med-large) { //* Tweak point to leave more room for content
+
+  .content {
+    padding: 0 50px;
+  }
+
+
+  //* Callouts don't have room to bleed */
+  .callout--large {
+    margin-left: 0;
+  }
 
   .mt-70,
   .mt-80,
@@ -48,19 +61,6 @@
 
   .mt-50 {
     margin-top: 40px;
-  }
-}
-
-@media (max-width: $bp-med-large) { //* Tweak point to leave more room for content
-
-  .content {
-    padding: 0 50px;
-  }
-
-
-  //* Callouts don't have room to bleed */
-  .callout--large {
-    margin-left: 0;
   }
 }
 
