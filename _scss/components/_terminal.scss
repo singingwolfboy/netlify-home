@@ -12,6 +12,10 @@ $term-font-family: 'Inconsolata';
 }
 .bg-terminal {
   background: $color-term-background;
+
+  @media (max-width: $bp-small) {
+    display: none;
+  }
 }
 .term {
   width: 100%;
