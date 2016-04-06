@@ -1,6 +1,6 @@
 ---
 cmsUserSlug: versioning-rollbacks
-date: 2015-12-15
+date: 2015-12-15T00:00:00.000Z
 title: "Versioning & Rollbacks"
 position: 67
 ---
@@ -8,6 +8,8 @@ position: 67
 ## Versioning and Rollbacks
 
 Netlify versions all deploys. From the "Builds" tab for your site in the netlify UI, you can browse any deploy you've ever made and preview it from a unique URL.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DBCLLymG_KI" frameborder="0" allowfullscreen></iframe>
 
 ## Atomic Deploys
 

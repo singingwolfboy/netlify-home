@@ -1,6 +1,6 @@
 ---
 cmsUserSlug: command-line
-date: 2015-10-21
+date: 2015-10-21T00:00:00.000Z
 title: Command Line
 position: 10
 ---
@@ -19,6 +19,7 @@ You'll need `npm`, the node package manager, to install the Netlify cli:
 npm install netlify-cli -g
 ```
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t3kCm0kruDc" frameborder="0" allowfullscreen></iframe>
 
 ## Manual Deploy
 

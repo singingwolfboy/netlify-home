@@ -1,6 +1,6 @@
 ---
 cmsUserSlug: ssl-https
-date: 2015-12-15
+date: 2015-12-15T00:00:00.000Z
 title: SSL / HTTPS
 position: 35
 ---
@@ -16,6 +16,8 @@ HTTPS brings a lot of advantages:
 * **Analytics** If your visitors comes from HTTPS enabled sites, you only get referrers if you support HTTPS as well.
 * **Content Integrity** Without DNS free Wi-fi services can inject ads into your pages.
 * **Security** If you have a login on a Single Page App or accept form submissions, HTTPS is essential for your users' security and privacy
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k-9T0FYd-QU" frameborder="0" allowfullscreen></iframe>
 
 ## Basic vs Full SSL
 
