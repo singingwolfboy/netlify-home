@@ -8,6 +8,7 @@ thumbnail: /uploads/metalsmith_thumb2.png
 cmsUserSlug: ""
 date: 2015-12-08T00:00:00.000Z
 tags: null
+published: false
 ---
 
 Today I'm writing about Metalsmith.
