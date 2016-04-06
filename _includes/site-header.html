@@ -1,33 +1,49 @@
+{% assign fragments = page.url | replace: '.html', '' | split: '/' %}
+{% assign active = fragments[1] %}
+{% assign page_names = 'features,pricing,docs,blog,about,contact' | split: ',' %}
+
 <!-- Site Header -->
 <header class="site-header bb bb--medium inverse" role="banner">
   <div class="content content--wide">
 
     <!-- Branding: logo & claim -->
-    <section class="brand left mt-20 mb-20">
+    <section class="brand">
       <a href="/" class="loud">
         <svg class="brand-logo" width="180" height="70">
           <use xlink:href="#netlify-logo" />
         </svg>
       </a>
-      <p class="brand-claim x-small inline-block ml-25 optional">The premium hosting service for modern static websites</p>
     </section>
 
-    <!-- Quick links: login & menu icon -->
-    <nav class="top-nav right mt-35">
+    <nav class="top-nav">
 
-      <a href="https://app.netlify.com" class="button button--inline button--small button--muted mr-40">
-        <svg class="button-icon" width="30" height="30">
-          <use xlink:href="#icon-keyhole" />
-        </svg>
-        <span class="button-label">Log in</span>
-      </a>
+      <ul class="nav nav--primary inline hide-for-medium">
+        {% for page_name in page_names %}
+        <li{% if active == page_name %} class="active"{% endif %}>
+          <a href="/{{page_name}}.html">{{page_name | capitalize}}</a>
+        </li>
+        {% endfor %}
+        <li>
+          <a href="https://app.netlify.com" class="button button--pill button--small button--inline">
+            <span class="button-label">Log In</span>
+          </a>
+        </li>
+      </ul>
 
-      <!-- Menu icon -->
-      <a href="#navigation" class="button-nav off-canvas-toggle">
-        <svg class="button-nav-icon" width="37" height="26">
-          <use xlink:href="#icon-menu" />
-        </svg>
-      </a>
+      <div class="show-for-medium">
+        <!-- Login icon -->
+        <a href="https://app.netlify.com" class="button button--inline button--small button--muted mr-35">
+          <svg class="button-icon" width="30" height="30"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-keyhole"></use></svg>
+          <span class="button-label">Log In</span>
+        </a>
+
+        <!-- Menu icon -->
+        <a href="#navigation" class="icon button-nav off-canvas-toggle">
+          <svg class="button-nav-icon" width="37" height="26">
+            <use xlink:href="#icon-menu" />
+          </svg>
+        </a>
+      </div>
     </nav>
   </div>
 </header>

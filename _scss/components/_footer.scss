@@ -1,0 +1,15 @@
+.vcard {
+  br {
+    display: none;
+  }
+
+  .address::before,
+  .address::after {
+    content: ' – ';
+  }
+}
+
+.site-footer .brand-logo {
+  height: 90px;
+  width: 210px;
+}

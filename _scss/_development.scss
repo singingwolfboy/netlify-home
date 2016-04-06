@@ -23,42 +23,42 @@ body:before {
   background: yellow;
 }
 
-@include breakpoint($bp-large) {
+@media (max-width: $bp-large) {
   body:before {
     content: "bp-large #{$bp-large}";
   }
 }
-@include breakpoint($bp-med-large) {
+@media (max-width: $bp-med-large) {
   body:before {
     content: "bp-med-large #{$bp-med-large}";
   }
 }
-@include breakpoint($bp-med-large-2) {
+@media (max-width: $bp-med-large-2) {
   body:before {
     content: "bp-med-large-2 #{$bp-med-large-2}";
   }
 }
-@include breakpoint($bp-med) {
+@media (max-width: $bp-med) {
   body:before {
     content: "bp-med #{$bp-med}";
   }
 }
-@include breakpoint($bp-med-small) {
+@media (max-width: $bp-med-small) {
   body:before {
     content: "bp-med-small #{$bp-med-small}";
   }
 }
-@include breakpoint($bp-small) {
+@media (max-width: $bp-small) {
   body:before {
     content: "bp-small #{$bp-small}";
   }
 }
-@include breakpoint($bp-small-2) {
+@media (max-width: $bp-small-2) {
   body:before {
     content: "bp-small-2 #{$bp-small-2}";
   }
 }
-@include breakpoint($bp-small-3) {
+@media (max-width: $bp-small-3) {
   body:before {
     content: "bp-small-3 #{$bp-small-3}";
   }

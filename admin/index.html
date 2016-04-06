@@ -63,6 +63,14 @@ name: admin
     </section>
   </script>
 
+  <script type="text/x-handlebars" data-template-name='cms/preview/stats'>
+    <p class="pullquote delta mt-40 mb-40">
+      <strong>{{entry.developers}}</strong> Developers •
+      <strong>{{entry.websites}}</strong> Web Sites •
+      <strong>{{entry.deploys}}</strong> Deploys
+    </p>
+  </script>
+
   <script type="text/x-handlebars" data-template-name='cms/preview/post'>
     <article class="post">
       <header class="post-hd">
@@ -96,7 +104,7 @@ name: admin
               <div class="blurb-bd">
                 <p class="small muted">{{entry.description}}</p>
               </div>
-            </article> 
+            </article>
           </div>
         </div>
       </section>

@@ -34,3 +34,12 @@
   height: 1px;
   border-bottom: 1px dashed $color-highlight;
 }
+
+hr {
+  border-color: inherit;
+}
+
+hr.bb {
+  border: 0;
+  height: 0;
+}

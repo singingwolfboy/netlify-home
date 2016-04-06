@@ -7,3 +7,4 @@
 /docs/continuous_deployment /docs/continuous-deployment 301
 /generators/:generator  /index.html  200
 /frameworks/:framework  /index.html  200
+/blog/rss.xml /blog/atom.xml 301

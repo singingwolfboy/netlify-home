@@ -6,4 +6,5 @@ node_modules
 .bundle/
 .sass-cache/
 bin/
-./css/
+css/
+Icon

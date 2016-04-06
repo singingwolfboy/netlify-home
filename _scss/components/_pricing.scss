@@ -1,240 +1,175 @@
-.intro-item {
-  .icon { display: inline-block; width: 1em; height: 1em; margin-left: 5px; transition: transform 0.1s ease-in-out; }
-  .text  { display: none; }
-  &.open {
-    .teaser { display: none; }
-    .text { display: inline; }
-    .icon { transform: rotate(-180deg); }
-  }
-}
 .pricing-table {
   table-layout: fixed;
 }
 
-.mobile-pricing-table {
-  display: none;
-  .td {
-    text-align: left;
+.plan-features-icon {
+  height: 96px;
+  margin: 5px auto;
+  position: relative;
+  width: 96px;
+
+  svg {
+    height: 100%;
+    width: 100%;
   }
 }
-.plan--features-icon {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto;
-    position: relative;
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-}
+
 .pricing-icon {
+  height: 200px;
   position: relative;
   width: 200px;
-  height: 200px;
-}
-.plan--features-icon:after, .pricing-icon:after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%;
-    margin: 5%;
-    border: 1px solid #fff;
-    height: 90%;
-    border-radius: 100%;
 }
 
-.plan--th {
-  background-color: transparent;
-  padding: 0;
-  width: 190px;
-  vertical-align: top;
+.plan-features-icon::after,
+.pricing-icon::after {
+  border: 1px solid #fff;
+  border-radius: 100%;
+  content: ' ';
+  height: 90%;
+  left: 0;
+  margin: 5%;
+  position: absolute;
+  top: 0;
+  width: 90%;
 }
-.plan--header {
+
+.plan-th {
+  background-color: #e6efee;
+  padding: 0;
+  vertical-align: top;
+  width: 190px;
+
+  div:not(:first-child) {
+    border-top: 5px solid $color-light;
+  }
+}
+
+.plan-header {
   padding: 10px;
   width: 8em;
 }
-.plan--title {
-  font-size: 16px;
-  font-weight: 100;
+
+.plan-price {
+  display: table;
+  padding: 25px 0 22px;
+  width: 100%;
 }
-.plan--price {
-  padding: 40px 0 20px;
-  overflow: hidden;
+
+.plan-amount,
+.plan-period {
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
 }
-.plan--amount {
-  font-size: 54px;
-  letter-spacing: -2px;
-  font-weight: bold;
+
+.plan-amount {
   text-align: right;
-  position: relative;
-  top: 4px;
+
+  &::before {
+    $font-size: 20px / 60px * 1em;
+    content: '$';
+    display: inline-block;
+    font-size: $font-size;
+    font-weight: normal;
+    margin: 0 3px 0 -3px;
+    position: relative;
+    top: -1em - $font-size;
+  }
 }
-.plan--currency {
+
+.plan-amount--0 {
+  width: 50%;
+}
+
+.plan-amount--7-5 .decimal-point {
+  margin-left: -.19em;
+}
+
+.plan-period {
   font-size: 18px;
   font-weight: normal;
-  text-align: left;
   line-height: 1;
-  padding-left: 7px;
-}
-.plan--per-site {
   text-align: left;
-  padding-left: 7px;
-  font-weight: 100;
 }
-.plan--title, .plan--note {
-  padding: 10px;
+
+.plan-title,
+.plan-note {
   margin: 0;
+  padding: 10px;
 }
-.plan--title {
-  margin-bottom: 5px;
+
+.plan-title {
   color: $color-darker;
   font-weight: bold;
 }
-.plan--note {
+
+.plan-note {
   font-size: 12px;
   font-weight: normal;
   line-height: 1.3;
 }
-.plan--feature {
-  width: 180px;
+
+.plan-feature {
   font-size: 13px;
-  text-align: left;
   height: 54px;
   line-height: 1.45;
-  position: relative;
   padding-right: 35px;
+  position: relative;
+  text-align: left;
+  width: 180px;
+
+  .icon {
+    display: block;
+    height: 54px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+
+    svg {
+      margin-top: -9px;
+      position: absolute;
+      top: 50%;
+    }
+  }
 }
-.plan--features-th {
+
+.plan-features-th {
   width: 180px;
 }
-.plan--enterprise-feature {
-  height: 40px;
-}
-.plan--enterprise-feature .help-box {
-  line-height: 1.2;
-}
-.plan--feature-plan {
+
+.plan-feature-plan {
   display: none;
 }
-.icon.icon-plus {
-  display: inline-block;
-  height: 18px;
-  width: 18px;
-  line-height: 12px;
-}
-.css-plus-icon {
-  width: 17px;
-  height: 17px;
-  border: 1px solid $color-highlight;
-  border-radius: 100%;
-  &:before, &:after {
-    content: " ";
-    position: absolute;
-    background: $color-muted;
-  }
-  &:before {
-    width: 1px;
-    height: 7px;
-    top: 4px;
-    left: 7px;
-    transition: transform 0.2s ease-in-out;
-  }
-  &:after {
-    width: 7px;
-    height: 1px;
-    top: 7px;
-    left: 4px;
-  }
-}
-.open .css-plus-icon:before {
-  transform: rotate(90deg);
-}
-.mobile-pricing-table .td, .plan--enterprise-feature {
-  position: relative;
-}
-.plan--feature .icon {
-  position: absolute;
-  display: block;
-  top: 0;
-  right: 10px;
-  height: 54px;
-  svg, .css-plus-icon {
-    position: absolute;
-    top: 50%;
-    margin-top: -9px;
-  }
-}
-.mobile-pricing-table .icon, .plan--enterprise-feature .icon {
-  position: absolute;
-  display: block;
-  top: 50%;
-  right: 10px;
-  margin-top: -9px;
-  .css-plus-icon {
-    &:before {
-      top: 5px;
-      left: 8px;
-    }
-    &:after {
-      top:8px;
-      left: 5px;
-    }
-  }
-}
-.x-small .icon-plus {
-  position: relative;
-  top: -1px;
-}
+
 .icon.icon-no {
-  display: inline-block;
-  height: 13px;
-  width: 13px;
   border: 1px solid $color-muted;
   border-radius: 100%;
-}
-.icon.icon-yes {
   display: inline-block;
   height: 13px;
   width: 13px;
+}
+
+.icon.icon-yes {
+  background-color: $color-highlight;
   border: 1px solid $color-highlight;
   border-radius: 100%;
-  background-color: $color-highlight;
+  display: inline-block;
+  height: 13px;
+  width: 13px;
 }
 
-.help-box {
-  display: none;
-  position: absolute;
-  background: $color-highlight;
-  color: #fff;
-  padding: 5px 20px;
-  text-align: left;
-  z-index: 1000;
-  width: 400px;
-  .help-box-inner {
-    display: table-cell;
-    vertical-align: middle;
-    a, a:visited, a:link, a:active {
-      color: #fff;
-      text-decoration: underline;
-    }
+.mobile-pricing-table {
+  .td {
+    position: relative;
+    text-align: left;
   }
-}
-.plan--enterprise-help {
-  font-size: 13px;
-  line-height: 1.2;
-}
-.help-box-overlay {
-  display: none;
-  background: rgba(0,0,0,0.8);
-  z-index: 900;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-.signup--extra-info h3 {
-  line-height: 22px;
+  .plan-amount {
+    padding-right: 5px;
+    width: 58%;
+  }
+
+  .plan-amount--0 {
+    width: 52%;
+  }
 }

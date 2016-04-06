@@ -1,108 +1,100 @@
 ---
 layout: default
 title: Contact Us
+content-width: default
 ---
-<div class="inverse bg-dark-muted text-center">
-<section class="content">
-  <header>
-    <h1 class="mega highlight mt-80">Netlify Contact</h1>
-    <p class="large muted">Let’s contact. We’d like that. You can reach us any number of ways.</p>
-  </header>
-</section>
+<article class="inverse bg-dark-muted-cover">
+  <div class="content">
 
-<section class="content contact-blocks">
-  <ul>
-    <li>
-      <a href="mailto:hello@netlify.com" itemprop="email" class="contact-block email">
-        <h5>Email</h5>
-        <p>Mail us and we shall respond.</p>
-        <span class="callout-link">hello@netlify.com</span>
-      </a>
-    </li>
+    <header class="text-center mb-70">
+      <h1 class="mega highlight">Netlify Contact</h1>
+      <p class="epsilon">Let’s contact. We’d like that. You can reach us any number of ways.</p>
+    </header>
 
-    <li>
-      <a href="tel:+18448997312" itemprop="telephone" class="contact-block phone">
-        <h5>Phone</h5>
-        <p>Your pocket computer can also be used for voice communication. It’s true.</p>
-        <span class="callout-link">(844) 899 7312</span>
-      </a>
-    </li>
+    <ul class="card-grid mb-100">
+      <li>
+        <a href="mailto:hello@netlify.com" itemprop="email" class="card card--contact card--email">
+          <h5 class="card-title">Email</h5>
+          <p class="card-text">Mail us and we shall respond.</p>
+          <span class="callout-link">hello@netlify.com</span>
+        </a>
+      </li>
 
-    <li>
-      <a href="https://www.google.com/maps/place/610+22nd+St+%23315,+San+Francisco,+CA+94107/@37.7581312,-122.3876841,17z/data=!3m1!4b1!4m2!3m1!1s0x808f7fb98740ed0b:0xdfa9a1a340756c9c" class="contact-block office">
-        <h5>Office</h5>
-        <p>Where we do code and coffee.</p>
-        <span class="callout-link">
-          <span itemprop="name" class="hidden">Netlify</span>
-          <span itemscope itemtype="http://schema.org/Address">
-            <span itemprop="streetAddress">
-              610 22nd Street, Suite 315
-            </span>,
-            <br>
-            <span itemprop="addressLocality">San Francisco</span>,
-            <span itemprop="addressRegion">CA</span>
-            <span itemprop="postalCode">94107</span>
+      <li>
+        <a href="tel:+18448997312" itemprop="telephone" class="card card--contact card--phone">
+          <h5 class="card-title">Phone</h5>
+          <p class="card-text">Your pocket computer can also be used for voice communication. It’s true.</p>
+          <span class="callout-link">(844) 899 7312</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.google.com/maps/place/610+22nd+St+%23315,+San+Francisco,+CA+94107/@37.7581312,-122.3876841,17z/data=!3m1!4b1!4m2!3m1!1s0x808f7fb98740ed0b:0xdfa9a1a340756c9c" class="card card--contact card--office">
+          <h5 class="card-title">Office</h5>
+          <p class="card-text">Where we do code and coffee.</p>
+          <span class="callout-link">
+            <span itemprop="name" class="hidden">Netlify</span>
+            <span itemscope itemtype="http://schema.org/Address">
+              <span itemprop="streetAddress">
+                610 22nd Street, Suite 315
+              </span>,
+              <br>
+              <span itemprop="addressLocality">San Francisco</span>,
+              <span itemprop="addressRegion">CA</span>
+              <span itemprop="postalCode">94107</span>
+            </span>
           </span>
-        </span>
-      </a>
-    </li>
+        </a>
+      </li>
 
-    <li>
-      <a href="{{site.social-links.twitter}}" class="contact-block twitter">
-        <h5>Twitter</h5>
-        <p>Follow us for high fives.</p>
-        <span class="callout-link">{{site.social-links.twitter | remove_first: "https://"}}</span>
-      </a>
-    </li>
+      <li>
+        <a href="{{site.social-links.twitter}}" class="card card--contact card--twitter">
+          <h5 class="card-title">Twitter</h5>
+          <p class="card-text">Follow us for high fives.</p>
+          <span class="callout-link">{{site.social-links.twitter | remove_first: "https://"}}</span>
+        </a>
+      </li>
 
-    <li>
-      <a href="{{site.social-links.github}}" class="contact-block github">
-        <h5>Github</h5>
-        <p>Where we live and breathe.</p>
-        <span class="callout-link">{{site.social-links.github | remove_first: "https://"}}</span>
-      </a>
-    </li>
+      <li>
+        <a href="{{site.social-links.github}}" class="card card--contact card--github">
+          <h5 class="card-title">Github</h5>
+          <p class="card-text">Where we live and breathe.</p>
+          <span class="callout-link">{{site.social-links.github | remove_first: "https://"}}</span>
+        </a>
+      </li>
 
-    <li>
-      <a href="{{site.social-links.facebook}}" class="contact-block facebook">
-        <h5>Facebook</h5>
-        <p>Like us and we'll love you back.</p>
-        <span class="callout-link">{{site.social-links.facebook | remove_first: "https://www."}}</span>
-      </a>
-    </li>
+      <li>
+        <a href="{{site.social-links.facebook}}" class="card card--contact card--facebook">
+          <h5 class="card-title">Facebook</h5>
+          <p class="card-text">Like us and we'll love you back.</p>
+          <span class="callout-link">{{site.social-links.facebook | remove_first: "https://www."}}</span>
+        </a>
+      </li>
 
-    <li>
-      <a href="{{site.social-links.gitter}}" class="contact-block gitter">
-        <h5>Gitter</h5>
-        <p>Our community chat. Do join us.</p>
-        <span class="callout-link">{{site.social-links.gitter | remove_first: "https://"}}</span>
-      </a>
-    </li>
+      <li>
+        <a href="{{site.social-links.gitter}}" class="card card--contact card--gitter">
+          <h5 class="card-title">Gitter</h5>
+          <p class="card-text">Our community chat. Do join us.</p>
+          <span class="callout-link">{{site.social-links.gitter | remove_first: "https://"}}</span>
+        </a>
+      </li>
 
-    <li>
-      <a href="/newsletter-signup.html" class="contact-block newsletter">
-        <h5>Newsletter</h5>
-        <p>More of a us reaching you kind of thing. Which we’d love to. If you want.</p>
-        <span class="callout-link">Sign up for our newsletter</span>
-      </a>
-    </li>
+      <li>
+        <a href="/newsletter-signup.html" class="card card--contact card--newsletter">
+          <h5 class="card-title">Newsletter</h5>
+          <p class="card-text">More of a us reaching you kind of thing. Which we’d love to. If you want.</p>
+          <span class="callout-link">Sign up for our newsletter</span>
+        </a>
+      </li>
 
-    <li>
-      <a href="{{site.social-links.linkedin}}" class="contact-block linkedin">
-        <h5>LinkedIn</h5>
-        <p>Hi. I’d like to add you to my professional network on LinkedIn.</p>
-        <span class="callout-link">{{site.social-links.linkedin | remove_first: "https://www."}}</span>
-      </a>
-    </li>
+      <li>
+        <a href="{{site.social-links.linkedin}}" class="card card--contact card--linkedin">
+          <h5 class="card-title">LinkedIn</h5>
+          <p class="card-text">Hi. I’d like to add you to my professional network on LinkedIn.</p>
+          <span class="callout-link">{{site.social-links.linkedin | remove_first: "https://www."}}</span>
+        </a>
+      </li>
 
-  </ul>
-</section>
-
-<section class="content text-center">
-
-  <p class="large muted p--wide mb-110">
-    You can also check out the <a href="/faq.html">FAQ</a> section<br>
-    – perhaps it contains the answers you did or did not know you were looking for.
-  </p>
-</section>
-</div>
+    </ul>
+  </div>
+</article>

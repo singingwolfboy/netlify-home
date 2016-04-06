@@ -1,4 +1,4 @@
-require 'jekyll/post'
+require 'jekyll/document'
 
 # Modified version of
 #
@@ -21,22 +21,23 @@ module BetterRelatedPosts
   # Calculate related posts.
   #
   # Returns [<Post>]
-  def related_posts(posts)
+  def related_posts
+    posts = site.posts.docs
     return [] unless posts.size > 1
-    highest_freq = Jekyll::Post.tag_freq(posts).values.max
+    highest_freq = Jekyll::Document.tag_freq(posts).values.max
     related_scores = Hash.new(0)
     posts.each do |post|
-      post.tags.each do |tag|
-        if self.tags.include?(tag) && post != self
-          cat_freq = Jekyll::Post.tag_freq(posts)[tag]
+      post.data['tags'].each do |tag|
+        if self.data['tags'].include?(tag) && post != self
+          cat_freq = Jekyll::Document.tag_freq(posts)[tag]
           related_scores[post] += (1+highest_freq-cat_freq)
         end
       end
     end
-    if related_scores.empty? 
-      old_related_posts(posts)
+    if related_scores.empty?
+      old_related_posts
     else
-      Jekyll::Post.sort_related_posts(related_scores)
+      Jekyll::Document.sort_related_posts(related_scores)
     end
   end
 
@@ -48,7 +49,7 @@ module BetterRelatedPosts
       return @tag_freq if @tag_freq
       @tag_freq = Hash.new(0)
       posts.each do |post|
-        post.tags.each {|tag| @tag_freq[tag] += 1}
+        post.data['tags'].each {|tag| @tag_freq[tag] += 1}
       end
       @tag_freq
     end
@@ -71,7 +72,7 @@ module BetterRelatedPosts
 end
 
 module Jekyll
-  class Post
+  class Document
     include BetterRelatedPosts
     extend BetterRelatedPosts::ClassMethods
   end

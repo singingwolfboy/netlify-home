@@ -2,8 +2,13 @@ url: www.netlify.com
 
 future: false
 
-kramdown:
-  input: GFM
+markdown: redcarpet
+
+redcarpet:
+  extensions: ["smart", "tables", "no_intra_emphasis", "with_toc_data"]
+
+# kramdown:
+#   input: GFM
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock", "status.html", "status-cms", "admin-status"]
 include: ["_redirects"]
@@ -25,7 +30,8 @@ collections:
     permalink: /reseller/docs/:title.html
   incidents:
     output: false
-
+  features:
+    output: false
 
 defaults:
   - scope:
@@ -46,14 +52,17 @@ defaults:
       layout: "reseller_docs"
 
 # RSS
-rss:
-  name: The netlify blog. All about static web-tech and netlify
-  url: https://www.netlify.com
-  path: /blog
+feed:
+  path: /blog/atom.xml
+
+title: The netlify blog
+description: All about static web-tech and netlify
 
 gems:
   - jekyll-srcset
   - octopress-minify-html
+  - jekyll-feed
+
 minify_html: false
 
 srcset:

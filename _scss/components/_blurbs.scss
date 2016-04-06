@@ -1,12 +1,29 @@
+// scss-lint:disable PlaceholderInExtend
+
 .blurb {
   max-width: 30em;
+
+  cite {
+    @extend .xx-small;
+    @extend .bold;
+    @extend .loud;
+    display: block;
+    margin-top: -5px;
+  }
+
+  &.break-inside-avoid {
+    padding-bottom: 20px;
+  }
 }
 
 .blurb-hd {
   @extend .bb;
+  margin-bottom: 10px;
+
   .media-img {
     margin-top: 10px;
   }
+
   .media--bleed {
     .media-img {
       margin-top: 0;
@@ -18,8 +35,17 @@
   @extend .epsilon;
   @extend .semibold;
   margin: 5px 0;
+
   + p {
     margin-top: 0;
+  }
+
+  .inverse a:hover &.loud {
+    color: $color-highlight;
+  }
+
+  .inverse a:hover &.highlight {
+    color: $color-lightest;
   }
 }
 
@@ -27,62 +53,82 @@
   @extend .x-small;
   margin: 10px 0;
   max-width: none;
+
   .link {
     display: block;
     margin-right: 1px;
   }
+
   &.right {
     position: relative;
-    top: 3px;
+    top: 12px;
   }
 }
 
 .blurb-bd {
+
   p:first-child {
-    margin-top: 15px;
+    margin-top: 10px;
   }
+
   .media {
-    margin: 10px 0;
+    margin: 15px 0 5px;
   }
+
   .media-img {
-    margin: 20px 30px 0 0;
+    margin: 10px 30px 0 0;
   }
+
   .cta {
     margin-top: 25px;
   }
 }
 
-.blurb cite {
-  display: block;
-  @extend .xx-small;
-  @extend .bold;
-  @extend .loud;
-  margin-top: -5px;
+.blurb-text {
+  p {
+    margin: 0;
+  }
 }
 
+.blurb-footer {
+  @extend .small;
+  line-height: 25px;
+
+  a {
+    @extend .link;
+  }
+}
 
 .l-aside,
 .l-third {
+
   .blurb {
     width: 245px;
   }
+
   .blurb--wide {
     width: 278px;
   }
 }
+
 .l-third .blurb {
   @extend .center;
 }
-.l-third:first-child .blurb {
+
+.l-third:nth-child(3n+1) .blurb {
   margin-left: 0;
 }
-.l-third:last-child .blurb {
+
+.l-third:nth-child(3n) .blurb {
   margin-right: 0;
 }
 
-.l-aside .blurb {
-  margin: 50px 0;
-  .loud {
-    color: $color-light;
+.l-aside {
+  .blurb {
+    margin: 50px 0;
+  }
+
+  .blurb-title {
+    opacity: .9;
   }
 }

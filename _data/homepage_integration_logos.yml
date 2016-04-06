@@ -1,0 +1,59 @@
+# Build tools
+- filename: grunt.svg
+  width: 51
+  height: 60
+  alt: grunt
+
+- filename: gulp.svg
+  width: 27
+  height: 60
+  alt: gulp
+
+# Generators
+- filename: jekyll.svg
+  width: 129
+  height: 53
+  alt: jekyll
+
+- filename: middleman.svg
+  width: 49
+  height: 49
+  alt: middleman
+
+# Web technologies
+- filename: html5.svg
+  width: 43
+  height: 60
+  alt: html5
+
+- filename: css3.svg
+  width: 43
+  height: 60
+  alt: css3
+
+- filename: javascript.svg
+  width: 46
+  height: 46
+  alt: javascript
+
+# Frameworks
+- filename: angular-icon.svg
+  width: 49
+  height: 51
+  alt: angular
+
+- filename: react.svg
+  width: 53
+  height: 48
+  alt: react
+
+# Git hosting
+- filename: github-icon.svg
+  width: 46
+  height: 44
+  alt: github
+
+- filename: bitbucket.svg
+  width: 48
+  height: 45
+  alt: bitbucket

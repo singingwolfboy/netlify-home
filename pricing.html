@@ -1,65 +1,112 @@
 ---
 layout: default
 title: Plans & Pricing
+content-width: default
 ---
-<section class="bg-dark-muted inverse bb bb--large">
-  <div class="content">
-    <header class="bb">
-      <h1 class="alpha mt-80 mb-60 text-center">What sets netlify apart from the rest</h1>
-    </header>
 
-    <div class="mt-60 mb-60 text-center-med">
-      <div class="l-container mb-60">
-        <div class="l-third mb-30">
-          <div class="pricing-icon">
-            <svg width="200" height="200">
-              <use xlink:href="#icon-polyhedron" />
-            </svg>
-          </div>
-        </div>
-        {% for item in site.data.plans.intro %}
-        {% assign mod = forloop.index0 | modulo:3 %}
-        <!-- Mod {{mod}} -->
-        {% if mod == 0 %}
-        <!-- Starting -->
-        <div class="l-third">
-          <section class="blurb blurb--wide">
-            <div class="blurb-bd small">
-        {% endif %}
-              <h5 class="medium bold highlight mt-0 mb-0">{{item.title}}</h5>
-              <p class="mt-0 mb-40 intro-item js-item">
-                <span class="teaser">{{item.teaser}}</span>
-                <span class="text">{{item.text}}</span>
-                <a href="#" class="js-read-more">
-                  <svg width="14" height="14" class="icon">
-                    <use xlink:href="#icon-arrow-light" />
-                  </svg>
-                </a>
-              </p>
-        {% if mod == 2 %}
-        <!-- Ending -->
-            </div>
-          </section>
-        </div>
-        {% endif %}
-
-        {% endfor %}
-      </div>
-    </div>
-  </div><!-- end content -->
-</section>
 
 <!-- Pricing -->
-<section class="bg-light-muted-2 muted text-center">
+<section class="bg-light-muted-2 text-center">
   <div class="content">
-    <header>
-      <h1 class="tera mt-60 mb-40">Pricing</h1>
+
+    <header class="mb-50">
+      <h1 class="tera">Pricing</h1>
+      <p class="epsilon">
+        <a href="/features.html">
+          <strong>See Features for a full feature list<svg width="20" height="20" class="append"><use xlink:href="#icon-arrow" class="light" /></svg></strong>
+        </a>
+      </p>
     </header>
 
-    <div class="bb bb--muted">
-    {% include plans.html %}
+    <table class="pricing-table hide-for-small">
+      <thead>
+        <tr>
+          <th class="td plan-features-th">
+            <div class="plan-features-icon">
+              <svg width="96" height="96">
+                <use xlink:href="#icon-polyhedron" />
+              </svg>
+            </div>
+            <h3 class="large bold highlight mt-15 mb-0">Features</h3>
+            <p class="x-small muted mt-5">All plans include free SSL</p>
+          </th>
+          {% for plan in site.data.plans.plans %}
+          <th class="plan-th">
+            <div class="plan-price th--highlight">
+              {% assign parts = plan.price | downcase | split: '.' %}
+              {% capture price %}{% if parts.size > 1 %}{{parts[0]}}<span class="decimal-point">.</span>{{parts[1]}}{% else %}{{ plan.price }}{% endif %}{% endcapture %}
+              <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}} tera bold">{{price}}</span>
+              <span class="plan-period">
+                month
+                <small class="x-small block">per site</small>
+              </span>
+            </div>
+            <div class="plan-title large {% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}">{{ plan.title }}</div>
+            <div class="td plan-note highlight">{{ plan.price_note | newline_to_br }}</div>
+          </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for attribute in site.data.plans.attributes %}
+          <tr>
+            <td class="plan-feature">
+              <span class="plan-feature-title">{{ attribute.title }}</span>
+            </td>
+            {% for detail in attribute.details %}
+            <td>
+              <div class="plan-feature-plan">{{ site.data.plans.plans[forloop.index0].title }}: </div>
+              <div class="plan-feature-attr">
+                {% if detail == "Yes" %}
+                <span class="icon icon-yes"></span>
+                {% elsif detail == "No" %}
+                <span class="icon icon-no"></span>
+                {% else %}
+                {{ detail }}
+                {% endif %}
+              </div>
+            </td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="mobile-pricing-table show-for-small">
+      <p class="small loud">– All plans include free SSL –</p>
+      {% for plan in site.data.plans.plans %}
+        {% assign index = forloop.index0 %}
+        {% capture color %}{% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}{% endcapture %}
+          <div class="table">
+            <h3 class="plan-title {{color}}">{{plan.title}}</h3>
+            <ul class="tbody">
+              {% for attribute in site.data.plans.attributes %}
+                {% assign detail = attribute.details[index] %}
+                {% if detail != 'No' and detail != "0" %}
+                  <li class="td">
+                    {% if detail != "Yes" and detail != "Netlify Callout" %}{{detail}}{% endif %}
+                    {% if detail == "Netlify Callout" %}Custom Domain with Callout{% endif %}
+                    {% if attribute.postfix %}{{attribute.postfix}}{% else %}{{attribute.title}}{% endif %}
+                  </li>
+                {% endif %}
+              {% endfor %}
+              <li class="plan-price th--highlight">
+                {% assign parts = plan.price | downcase | split: '.' %}
+                {% capture price %}{% if parts.size > 1 %}{{parts[0]}}<span class="decimal-point">.</span>{{parts[1]}}{% else %}{{ plan.price }}{% endif %}{% endcapture %}
+                <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}} tera bold">{{price}}</span>
+                <span class="plan-period">
+                  month
+                  <small class="x-small block">per site</small>
+                </span>
+              </li>
+              <li class="x-small mt-10">{{ plan.price_note }}</li>
+            </ul>
+          </div>
+      {% endfor %}
     </div>
 
-    {% include testimonials.html %}
+    <footer class="mt-60 mb-110">
+      {% include pricing-footer.html %}
+    </footer>
   </div>
 </section>

@@ -1,22 +1,24 @@
 ---
 layout: default
 ---
-<div class="l-wrap bg-light-muted-2 l-mobile-menu">
+<div class="l-wrap bg-light-muted-2">
   <div class="l-wrap-inner">
-    <div class="l-aside l-aside--left inverse docs-aside" role="complementary">
-      <nav class="site-nav inverse" role="navigation">
-        <ul class="nav nav--primary nav--nested nav--flush-left">
-          <li>
-            <a href="/tos.html"{% if page.url == "/tos.html" %} class="current"{% endif %}>Terms of Service</a>
+    <div class="l-aside l-aside--left inverse" role="complementary">
+      <nav class="side-nav" role="navigation">
+        <ul class="nav nav--primary">
+          <li{% if page.url == "/tos.html" %} class="active"{% endif %}>
+            <a href="/tos.html">Terms of Service</a>
           </li>
-          <li>
-            <a href="/privacy.html"{% if page.url == "/privacy.html" %} class="current"{% endif %}>Privacy</a>
+          <li{% if page.url == "/privacy.html" %} class="active"{% endif %}>
+            <a href="/privacy.html">Privacy</a>
           </li>
         </ul>
       </nav>
     </div>
-    <div class="l-main l-main--right text" role="main">
-      {{content}}
+    <div class="l-main l-main--right" role="main">
+      <div class="content text text--legalese">
+        {{content}}
+      </div>
     </div>
   </div>
 </div>
