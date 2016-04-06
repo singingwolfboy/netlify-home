@@ -14,8 +14,8 @@ body {
 body:before {
   content: "comp size";
   display: inline-block;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 20px;
   left: 0;
   z-index: 1;
   padding: 5px;
@@ -28,39 +28,39 @@ body:before {
     content: "bp-large #{$bp-large}";
   }
 }
+
 @media (max-width: $bp-med-large) {
   body:before {
     content: "bp-med-large #{$bp-med-large}";
   }
 }
-@media (max-width: $bp-med-large-2) {
-  body:before {
-    content: "bp-med-large-2 #{$bp-med-large-2}";
-  }
-}
+
 @media (max-width: $bp-med) {
   body:before {
     content: "bp-med #{$bp-med}";
   }
 }
+
 @media (max-width: $bp-med-small) {
   body:before {
     content: "bp-med-small #{$bp-med-small}";
   }
 }
+
 @media (max-width: $bp-small) {
   body:before {
     content: "bp-small #{$bp-small}";
   }
 }
+
 @media (max-width: $bp-small-2) {
   body:before {
     content: "bp-small-2 #{$bp-small-2}";
   }
 }
+
 @media (max-width: $bp-small-3) {
   body:before {
     content: "bp-small-3 #{$bp-small-3}";
   }
 }
-

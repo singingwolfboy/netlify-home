@@ -34,7 +34,8 @@
 .blurb-title {
   @extend .epsilon;
   @extend .semibold;
-  margin: 5px 0;
+  margin: 0;
+  padding: 5px 0;
 
   + p {
     margin-top: 0;
@@ -58,17 +59,22 @@
     display: block;
     margin-right: 1px;
   }
-
-  &.right {
-    position: relative;
-    top: 12px;
-  }
 }
 
 .blurb-bd {
+  overflow: hidden;
 
   p:first-child {
     margin-top: 10px;
+  }
+
+  img.left {
+    margin: 15px 25px 15px 0;
+    max-width: 38.2%;
+
+    + p {
+      margin-top: 10px;
+    }
   }
 
   .media {

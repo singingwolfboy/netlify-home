@@ -45,7 +45,7 @@ $hero-animation-delay: 2.5s;
 
   @media (max-width: $bp-med) {
     display: block;
-    margin: 60px auto;
+    margin: 50px auto;
     padding: 0;
     width: auto;
   }
@@ -206,6 +206,7 @@ $feature-icon: 3rem;
 $feature-icon-small: 1.5rem;
 
 .homepage-feature {
+  margin-bottom: 20px;
   padding-left: $feature-icon + 1rem;
   padding-right: 20px;
   position: relative;
@@ -234,4 +235,14 @@ $feature-icon-small: 1.5rem;
       width: $feature-icon-small;
     }
   }
+
+  @media (max-width: $bp-small) {
+    margin-bottom: 40px;
+  }
+}
+
+//* TODO: Make terminal work on touch devices
+//* In the meantime, we hide it */
+.touch .js-terminal {
+  display: none;
 }

@@ -1,8 +1,8 @@
 $card-spacing: 8px;
 
 .card-grid {
-  @extend .l-container;
   margin-left: - $card-spacing;
+  overflow: hidden;
 
   > li {
     float: left;

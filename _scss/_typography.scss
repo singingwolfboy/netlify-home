@@ -42,7 +42,7 @@ body {
   font-size: 60px;
   letter-spacing: -.02em;
   line-height: 1;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   margin-top: 90px;
 }
 
@@ -72,7 +72,7 @@ body {
   font-size: 37px; //36px;
   letter-spacing: -.02em;
   line-height: 45px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   margin-top: 40px;
 }
 
@@ -111,8 +111,8 @@ body {
   font-size: 21px;
   letter-spacing: normal;
   line-height: 30px;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 //* Paragraphs */
@@ -162,23 +162,26 @@ body {
 }
 
 @media (max-width: $bp-med-large) {
+
+  .tera {
+    font-size: 55px; //* mega */
+  }
+
+  .mega {
+    font-size: 50px; //* kilo */
+  }
+}
+
+
+@media (max-width: $bp-small) {
   .tera,
   .mega,
   .kilo {
-
     &:not([class*=mt-]) {
       margin-top: 60px;
     }
   }
 
-  .gamma,
-  .delta,
-  .epsilon {
-    @include font-weight(light);
-  }
-}
-
-@media (max-width: $bp-small) {
   .tera {
     font-size: 48px;
     line-height: 1;
@@ -205,12 +208,12 @@ body {
     line-height: 30px;
   }
 
-  .delta,
-  .epsilon {
+  .delta {
     font-size: 21px;
     line-height: 25px;
   }
 
+  .epsilon,
   .zeta,
   .intro {
     font-size: 18px;
@@ -220,7 +223,6 @@ body {
   .small,
   .small-2 {
     font-size: 16px;
-    line-height: 25px;
   }
 
   .x-small {

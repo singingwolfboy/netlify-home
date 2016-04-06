@@ -5,7 +5,7 @@ layout: default
 {% assign post = page %}
 
 <article class="l-wrap bg-light-muted-3">
-  <div class="l-wrap-inner">
+  <div class="l-wrap-inner l-wrap-inner--main-left">
     <div class="l-main l-main--left">
 
       <div class="post">
@@ -30,7 +30,7 @@ layout: default
     </div>
 
     <aside class="l-aside l-aside--right inverse blog-aside">
-      <h1 class="blog-aside-title">More Articles</h1>
+      <h3 class="blog-aside-title">More Articles</h3>
       <div class="l-container">
       {% for post in site.related_posts | limit: 6 %}
         {% include post-blurb.html %}
