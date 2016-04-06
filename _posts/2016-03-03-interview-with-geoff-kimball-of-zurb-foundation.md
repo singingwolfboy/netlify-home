@@ -10,7 +10,9 @@ date: 2016-03-03T00:00:00.000Z
 tags: null
 ---
 
-Foundation hit the scene in 2011 when interaction design company ZURB decided to create a responsive front-end framework for development. Fast forward to today, and one open-source project is now three: Foundation for Sites, Foundation for Apps, and Foundation for Email. With the release of Foundation 6 and the static site generator Panini, ZURB designer Geoff Kimball presented the new iteration at the [Static Web Tech Meetup](http://www.meetup.com/sf-static-web-tech/), and took time to talk to netlify about his preference for streamlining the build process, Gulp vs. Grunt, and the problem with following the zeitgeist.
+Foundation hit the scene in 2011 when interaction design company ZURB decided to create a responsive front-end framework for development.
+
+Fast forward to today, and one open-source project is now three: Foundation for Sites, Foundation for Apps, and Foundation for Email. With the release of Foundation 6 and the static site generator Panini, ZURB designer Geoff Kimball presented the new iteration at the [Static Web Tech Meetup](http://www.meetup.com/sf-static-web-tech/), and took time to talk to netlify about his preference for streamlining the build process, Gulp vs. Grunt, and the problem with following the zeitgeist.
 
 <!-- excerpt -->
 

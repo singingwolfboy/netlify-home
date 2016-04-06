@@ -15,6 +15,8 @@ Even if you're new to the world of Static Site Generators, chances are you've he
 
 Hexo prides itself on being not only fast and simple, but also easy to write, while having plenty of extensibility. Hexo is powered by the node.js framework and in this guide we'll look at how to set up your very own *Hexo netlify CMS Template*, from getting a clone online, to connecting it to netlify and beyond.
 
+<!-- excerpt -->
+
 We previously presented similar articles with the Jekyll version of our template [here](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-jekyll-netlify-cms) and the Pelican version of our template [here](https://www.netlify.com/blog/2015/11/27/a-step-by-step-guide-pelican-netlify-cms)
 
 If you're not interested in the template, but soley in setting up Hexo with continous deployment on netlify, please see [this informative article](https://www.netlify.com/blog/2015/10/26/a-step-by-step-guide-hexo-on-netlify) by Mr. Aaron Autrand and otherwise continue reading.
@@ -28,13 +30,13 @@ We'll start by preparing the netlify-git-api CLI tool to enable us to deploy loc
 Browse to the [netlify-git-api page](https://github.com/netlify/netlify-git-api/releases) and download the relevant version of the tool.  
 As I'm demonstrating this on a Linux machine, I will download the `linux.zip` file, but if you're using OSX, the `osx.zip` file and if you're using a Microsoft OS, download the `windows.zip` file.
 
-Once the download is done, unpack the netlify-git-api executable from the zipped file and place it in your PATH. There are many methods for doing so and they differ somewhat depending on your operating system. 
+Once the download is done, unpack the netlify-git-api executable from the zipped file and place it in your PATH. There are many methods for doing so and they differ somewhat depending on your operating system.
 
 We will use the following commands in a terminal window:
 
 ```
 cd 'downloads'
-unzip linux.zip 
+unzip linux.zip
 cd linux
 sudo mv netlify-git-api '/usr/local/bin'
 ```
@@ -52,7 +54,7 @@ echo $PATH
 #### 2. Fork and Clone the Template
 We'll begin by forking our own copy of the [hexo-netlify-cms template](https://github.com/netlify-templates/hexo-cms-example) on GitHub and then we rename it - we simply named ours hexo-netlify-cms-demo.
 
-Before we can make a local clone, we need to get the remote GitHub URL from the repository we created. The button looks like this: 
+Before we can make a local clone, we need to get the remote GitHub URL from the repository we created. The button looks like this:
 
 ![netlify0x_remoteurl_but.png](/uploads/netlify0x_remoteurl_but.png)
 
@@ -65,7 +67,7 @@ git clone https://github.com/github_account/my-repo-name.git
 
 Substitute *my-site-folder* with your location and the address with the address of your repository and account. Please note that you need a repository that you own!
 
-Note that you don't need to create a folder for the project, as it comes inside a folder structure already. 
+Note that you don't need to create a folder for the project, as it comes inside a folder structure already.
 
 #### 3. Setup the netlify CMS server
 To start the netlify CMS server, we need to add users by running the following command for each user, we wish to add to the system (you will be asked for an email, a name and a password):
@@ -115,7 +117,7 @@ In a browser, open up [localhost:4000](https://localhost:4000) to browse the new
 
 Next, try out the netlify CMS system, by visiting [localhost:4000/admin](https://localhost:4000/admin) and while there, test your login and password and try to create and save an article.
 
-As is obvious (if everything is working as it should), this template comes with a bit of extra content, as it is based on Brian Rinaldi's great [Static Site Samples](https://github.com/remotesynth/Static-Site-Samples). This makes it easier to instantly get an idea of how it will look and feel, when it's up and running with actual content and a default theme. 
+As is obvious (if everything is working as it should), this template comes with a bit of extra content, as it is based on Brian Rinaldi's great [Static Site Samples](https://github.com/remotesynth/Static-Site-Samples). This makes it easier to instantly get an idea of how it will look and feel, when it's up and running with actual content and a default theme.
 
 ### Deploy to Production Environment
 Once you're happy with the site and ready to deploy for production, it's time to push our content back up to GitHub, before connecting to netlify and setting up your production environment.
@@ -123,9 +125,9 @@ Once you're happy with the site and ready to deploy for production, it's time to
 First things first.
 
 #### 1. Web Configuration
-To make sure that the site works properly in production environment, we need to first open up and correct some settings in the file here: 
+To make sure that the site works properly in production environment, we need to first open up and correct some settings in the file here:
 
-`/my-site-root/source/admin/index.ejs` 
+`/my-site-root/source/admin/index.ejs`
 
 Change the directory path according to your site location, open the file in a text editor and scroll down to line 35-40 or so, where you'll find the following:
 
@@ -139,7 +141,7 @@ production:
 GitHub-username/repository-name
 ```
 
-Simply exchange to your GitHub username and the name of your repository. 
+Simply exchange to your GitHub username and the name of your repository.
 
 #### 2. Add & Commit Files
 Optional: To check that our local environment is set up correctly and will push the files to the correct repository we can use this command:
@@ -170,12 +172,12 @@ git push -u origin master
 Once it's done uploading the files (pushing them to GitHub), take a look at the repository online to check if everything looks correct. If you're happy with the result, it's time to connect with netlify.
 
 ### Connect to netlify
-We're ready to start a new project at netlify's to host our Hexo netlify CMS template. 
+We're ready to start a new project at netlify's to host our Hexo netlify CMS template.
 
 If you haven't made one already, create an account and login at [netlify](https://www.netlify.com/).
 
 #### 1. Create Site
-Creating a new site on netlify is intuitive and quick. 
+Creating a new site on netlify is intuitive and quick.
 
 ![netlify New Site](/uploads/newsitebut.png)
 

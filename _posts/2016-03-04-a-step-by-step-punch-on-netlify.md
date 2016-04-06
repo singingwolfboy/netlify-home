@@ -10,15 +10,17 @@ date: 2016-03-04T00:00:00.000Z
 tags: null
 ---
 
-Today we’ll take a look at [Punch](http://laktek.github.io/punch/), a static site generator that bills itself as “a simple, intuitive web publishing framework that will delight both designers and developers.”
+Today we’ll take a look at [Punch](http://laktek.github.io/punch/).
+
+Punch is a static site generator that bills itself as “a simple, intuitive web publishing framework that will delight both designers and developers.”
+
+<!-- excerpt -->
 
 Punch is written in javascript with node.js and what immediately stands out, is its user friendliness and good basic documentation to get you started, while it takes only a few minutes to set up. It’s not much too different from other node.js based generators and uses Mustache as its template engine, with content in JSON format, though Markdown and other possibilities exist.
 
 The aim for Punch, as defined by Mr. Lakshan Perera, is to “help anyone to build (and maintain) modern websites using only HTML, CSS and JavaScript” and while it’s largely inspired by Jekyll it is **NOT** a blog engine.
 
 Even without a boilerplate, Punch comes with a basic setup, so it’s fast and easy to get started with and there are several good examples [here](https://github.com/laktek/punch/wiki/Sites-using-Punch).
-
-<!-- excerpt -->
 
 ## Today’s Guide
 
