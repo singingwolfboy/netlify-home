@@ -173,3 +173,31 @@
     width: 52%;
   }
 }
+
+@media (max-width: $bp-med-large) {
+  //*
+  //* Stack plan amount and period in pricing table
+  //*/
+  .pricing-table {
+
+    .plan-price {
+      padding-bottom: 12px;
+      padding-top: 15px;
+    }
+
+    .plan-amount,
+    .plan-period {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    .plan-amount {
+      margin-left: -3px;
+    }
+
+    .plan-period {
+      padding-left: 3px;
+    }
+  }
+}

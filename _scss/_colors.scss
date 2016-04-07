@@ -127,7 +127,10 @@ svg {
   color: $color-light;
 
   h1,
-  h2,
+  h2 {
+    color: $color-highlight;
+  }
+
   h3,
   h4,
   h5,

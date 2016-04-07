@@ -1,27 +1,37 @@
+//*
+//* Global layouts and
+//* utilities to control flow
+//*
+//------------------------------*/
+
 $page-width: 1280px;
 $content-width: 976px;
+$base-spacing: 40px;
+$header-padding-left: $base-spacing * 2;
+$header-padding-right: $base-spacing;
+$column-gap: 50px;
+$blurb-width: 245px;
 
-$logo-width: 180px;
 
-/*
- * Global layouts and
- * utilities to control flow
- *
-------------------------------*/
-
-/*
- * HTML Elements
- */
+//*
+//* HTML Elements
+//*/
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body {
   min-width: $page-width;
+
+  @media (max-width: $bp-large) { //* Screen is smaller than comp. Start adjusting
+    min-width: 0;
+  }
 }
 
 ul {
@@ -30,55 +40,55 @@ ul {
 }
 
 img {
-  max-width: 100%;
   -ms-interpolation-mode: bicubic;
+  max-width: 100%;
 }
 
 
-/*
- * Icons
- */
-svg.append {
+//*
+//* Icons
+//*/
+.append {
+  margin-left: .385em;
   position: relative;
   top: -1px;
-  margin-left: 0.385em;
 }
 
-svg.prepend {
+.prepend {
+  margin-right: .75em;
   position: relative;
   top: -1px;
-  margin-right: 0.75em;
 }
 
 
-/*
- * Content containers
- */
+//*
+//* Content containers
+//*/
 .content {
   @extend %cf;
   margin: 0 auto;
   max-width: $page-width;
-  padding: 0 165px;
+  padding: 0 165px; //* Left align with "netlify" and right align with login button in header */
   position: relative;
 }
 
 .content--wide {
-  padding: 0 40px 0 80px;
+  max-width: $page-width;
+  padding: 0 $header-padding-right 0 $header-padding-left;
 }
 
 .content--narrow {
-  max-width: $content-width + 40px;
-  padding: 0 40px 0 80px;
+  max-width: $content-width + $base-spacing;
+  padding: 0 $header-padding-right 0 $header-padding-left;
 }
 
-/*
- * Media component
- */
+
+//*
+//* OOCSS Media object
+//*/
+
 .media {
   @include clearfix-me(micro);
-}
-
-a.media {
   display: block;
 }
 
@@ -97,33 +107,27 @@ a.media {
   @include clearfix-me(facebook);
 }
 
+//* Variations for media object */
 .media--bleed {
   margin-left: -1px;
+
   .media-img {
     margin-left: -6px;
     margin-right: 20px;
   }
 }
 
-.media--wide {
-  margin: 60px 80px 30px 80px;
-  .media-img {
-    margin-top: 20px;
-    margin-right: 80px;
-  }
-}
 
-
-
-/*
- * Layouts
- */
+//*
+//* Layouts
+//*/
 
 .l-container {
   @extend %cf;
 }
 
-/* Layouts without gutters */
+//* Layouts without gutters */
+
 .l-half {
   float: left;
   width: 50%;
@@ -151,10 +155,11 @@ a.media {
   }
 }
 
-/*
-/* Based on Walmarts styleguide
-/* http://walmartlabs.github.io/web-style-guide/
-/*/
+
+//*
+//* Based on Walmarts styleguide
+//* http://walmartlabs.github.io/web-style-guide/
+//*/
 
 .l-arrange {
   display: table;
@@ -172,24 +177,39 @@ a.media {
   width: 100%;
 }
 
+.l-arrange--baseline {
+  .l-arrange-fill,
+  .l-arrange-fit {
+    vertical-align: baseline;
+  }
+}
 
-/* 2-column layout with gutter defining columns in the mark-up */
+
+
+//* 2-column layout with gutter defining columns in the mark-up */
+
 .l-2-col {
   @extend %cf;
+
   .l-col {
-    width: 50%;
-    padding: 0 30px;
     float: left;
+    padding: 0 30px;
+    width: 50%;
   }
-  .l-col:first-child {
+
+  .l-col:nth-child(odd) {
+    clear: left;
     padding-left: 0;
   }
-  .l-col:last-child {
+
+  .l-col:nth-child(even) {
     padding-right: 0;
   }
 }
 
-/* 2-column layout with gutter using CSS multiple columns */
+
+//* 2-column layout with gutter using CSS multiple columns */
+
 .l-2-col-auto {
   column-count: 2;
   column-gap: 50px;
@@ -215,9 +235,18 @@ a.media {
   }
 }
 
+
 //*
 //* Layout with fluid main and fixed-width sidebar
+//* http://alistapart.com/article/holygrail
 //*
+//* Note: using display flex or table without floating the main and aside
+// will cause an ugly page reflow -- main content will appear full-width for
+//* a second and then shrink to leave room for the sidebar
+//*
+
+$sidebar-padding: $column-gap;
+$sidebar-width: $blurb-width + $sidebar-padding * 2;
 
 .l-wrap {
   overflow: hidden;
@@ -225,33 +254,34 @@ a.media {
 }
 
 .l-wrap-inner {
-  @extend .content;
+  @extend %cf;
   @extend .content--wide;
-  display: table;
-  width: 100%;
+  display: flex; //* This is to get the main and aside to have the same height
+  margin: 0 auto;
+}
+
+.l-wrap-inner--main-left {
+  padding-right: $sidebar-width;
 }
 
 .l-aside,
 .l-main {
-  display: table-cell;
-  vertical-align: top;
+  float: left;
+  position: relative;
 }
 
 .l-main {
-  padding: 0 80px 50px 50px;
-  width: 100%;
+  padding: 0 $column-gap  $column-gap;
 }
 
 .l-main--right {
   max-width: 52em;
+  padding-right: 0;
 }
 
 .l-main--left {
   padding-left: 0;
-}
-
-.l-aside {
-  position: relative;
+  width: 100%;
 }
 
 .l-aside--left {
@@ -266,7 +296,9 @@ a.media {
 }
 
 .l-aside--right {
-  padding-left: 50px;
+  margin-right: -$sidebar-width;
+  padding-left: $sidebar-padding;
+  width: $sidebar-width;
 
   &::after {
     content: '';
@@ -280,6 +312,7 @@ a.media {
 
 
 
+//*
 //* Flexbox
 //*/
 
@@ -299,18 +332,23 @@ a.media {
   .md-flex {
     display: flex;
   }
+
   .md-flex--row-reverse {
     flex-direction: row-reverse;
   }
+
   .md-flex--space-between {
     justify-content: space-between;
   }
+
   .md-flex--space-around {
     justify-content: space-around;
   }
+
   .md-flex-basis--m {
     flex-basis: 30em;
   }
+
   .md-flex-basis--s {
     flex-basis: 15em;
   }
@@ -426,33 +464,39 @@ a.media {
 }
 
 
-
-/*
- * Utility classes for layout flow
- */
+//*
+//* Utility classes for layout flow
+//*/
 
 .abs {
   position: absolute;
 }
+
 .top {
   top: 0;
 }
+
 .bottom {
   bottom: 0;
 }
+
 .fixed {
   position: fixed;
 }
+
 .left {
   float: left;
 }
+
 .right {
   float: right;
 }
+
 .center {
   margin-left: auto;
   margin-right: auto;
 }
+
 .l-third.center {
   margin-left: 50%;
 }
@@ -460,18 +504,23 @@ a.media {
 .block {
   display: block;
 }
+
 .inline-block {
   display: inline-block;
 }
+
 .v-top {
   vertical-align: top;
 }
+
 .v-middle {
   vertical-align: middle;
 }
+
 .v-bottom {
   vertical-align: bottom;
 }
+
 .v-center {
   position: relative;
   top: 50%;
@@ -485,12 +534,15 @@ a.media {
 .text-left {
   text-align: left;
 }
+
 .text-right {
   text-align: right;
 }
+
 .text-center {
   text-align: center;
 }
+
 .nowrap {
   white-space: nowrap;
 }

@@ -36,7 +36,7 @@
   line-height: 30px;
   letter-spacing: normal;
   text-transform: uppercase;
-  margin-top: 40px;
+  margin-top: 50px;
   margin-bottom: 20px;
   color: $color-darker;
   li & {
@@ -45,12 +45,8 @@
 }
 
 .text-h1, .text h1 {
+  @extend .delta;
   @include text-headline;
-  font-size: 21px;
-  border-top: 2px solid $color-highlight;
-  margin-top: 110px;
-  margin-bottom: 30px;
-  padding-top: 88px;
 }
 
 .text-h2, .text h2 {
@@ -158,16 +154,6 @@
 
     code {
       color: inherit;
-    }
-
-    //* Make sure pre tags don't break the layout */
-
-    @media (max-width: $bp-med-large) and (min-width: $bp-med) {
-      max-width: 38em;
-    }
-
-    @media (max-width: $bp-med-large-2) and (min-width: $bp-med) {
-      max-width: 30em;
     }
   }
 

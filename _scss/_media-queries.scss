@@ -3,93 +3,20 @@
   display: none;
 }
 
-@media (max-width: $bp-large) { //* Screen is smaller than comp – start adjusting
-  body {
-    min-width: 0;
-  }
-
-  .l-aside--right {
-    padding-left: 30px;
-  }
-
-  .l-main--right {
-    padding-right: 20px;
-  }
-
-  .l-main--left {
-    padding-right: 40px;
-  }
-
-  .l-2-col-auto {
-    column-gap: 40px;
-  }
-}
-
 @media (max-width: $bp-med-large) { //* Tweak point to leave more room for content
 
   .content {
     padding: 0 50px;
   }
 
+  .l-wrap-inner {
+    padding-left: 50px;
+  }
+
 
   //* Callouts don't have room to bleed */
   .callout--large {
     margin-left: 0;
-  }
-
-  .mt-70,
-  .mt-80,
-  .mt-90,
-  .mt-100,
-  .mt-110,
-  .mt-115,
-  .mt-120 {
-    margin-top: 60px; // Need to normalize these margins
-  }
-
-  .mb-90,
-  .mb-100,
-  .mb-110,
-  .mb-115,
-  .mb-120 {
-    margin-bottom: 80px; // Need to normalize these margins
-  }
-
-  .mb-50 {
-    margin-bottom: 40px;
-  }
-
-  .mt-50 {
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: $bp-med-large-2) { //* Tweak point to fix pricing table
-
-  //*
-  //* Stack plan amount and period in pricing table
-  //*/
-  .pricing-table {
-
-    .plan-price {
-      padding-bottom: 12px;
-      padding-top: 15px;
-    }
-
-    .plan-amount,
-    .plan-period {
-      display: block;
-      text-align: center;
-      width: 100%;
-    }
-
-    .plan-amount {
-      margin-left: -3px;
-    }
-
-    .plan-period {
-      padding-left: 3px;
-    }
   }
 }
 
@@ -115,8 +42,10 @@
 
   .l-aside {
     display: block;
+    margin: 0;
     order: 2; //* Move navigation to the bottom */
     padding: 10px 40px;
+    width: 100%;
 
     //* Hide nested navs in Documentation */
     .nav .nav {
@@ -141,12 +70,12 @@
   //* Adjust spacing and alignment of aside title and footer
   //*/
   .blog-aside-title {
-    padding: 0;
+    margin: 60px 0 40px;
     text-align: center;
   }
 
   .blog-aside-footer {
-    margin: 30px 0 50px;
+    margin: 40px 0 50px;
     text-align: center;
   }
 
@@ -308,7 +237,7 @@
   }
 
   .l-main {
-    padding: 0 25px 40px;
+    padding: 0 25px;
   }
 
   .l-aside {
@@ -426,7 +355,7 @@
   //*/
   .form--fancy {
     border-radius: 10px;
-    margin: 40px 0 20px;
+    margin: 40px 0;
     padding: 6px;
 
     .form-group {
@@ -459,20 +388,31 @@
 
 
   //*
-  //* Reduce spacing between sections
+  //* Reduce spacing
   //*/
-  .cf::after {
-    display: block; // collapse margin bottom
+
+  .l-container::after { // Collapse margins (eg. Socialize section on homepage)
+    display: block;
   }
 
-  .site-footer .content::after { // don't collapse margin bottom in site footer
-    display: table;
+  .mt-70,
+  .mt-80,
+  .mt-90,
+  .mt-100,
+  .mt-110,
+  .mt-115,
+  .mt-120 {
+    margin-top: 60px;
   }
 
-  .mt-60,
-  .mt-50,
-  .mt-40 {
-    margin-top: 30px;
+  .mt-70,
+  .mt-80,
+  .mb-90,
+  .mb-100,
+  .mb-110,
+  .mb-115,
+  .mb-120 {
+    margin-bottom: 60px;
   }
 
 
@@ -486,17 +426,6 @@
 
   .th {
     font-size: 20px;
-  }
-
-
-  //* Extra small text in blurb body gets too
-  //* hard to read and looks uncompensated with
-  //* normal text (see About page, Mat & Chris descriptions)
-  //* Make it look like standard text
-  //*/
-  .blurb-bd .x-small {
-    font-size: 16px;
-    line-height: 25px;
   }
 
 
@@ -538,13 +467,14 @@
   //*
   //* Legalese. Get rid of bullets, numbered lists and indentation
   //*/
-  .legalese {
+  .text--legalese {
     margin: 60px 0 0;
     padding: 0;
 
     h1 {
       border: 0;
-      padding-top: 0;
+      padding: 0;
+      margin: 0;
     }
 
     ol h2::before {
@@ -620,7 +550,7 @@
     }
 
     .vcard {
-      margin: -35px 0 0 95px;
+      margin: -45px 0 0 92px;
 
       .org {
         display: none;
@@ -635,7 +565,8 @@
   //* More room for content
   //*/
   .content,
-  .l-main {
+  .l-main,
+  .l-aside {
     padding-left: 1em;
     padding-right: 1em;
   }

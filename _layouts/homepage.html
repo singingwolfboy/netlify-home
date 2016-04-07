@@ -26,6 +26,8 @@ layout: default
       </p>
     </div>
 
+    <hr class="bb bb--muted show-for-medium">
+
     <blockquote class="hero-blockquote">
       <p>{{page.celebrity_quote}}</p>
       <cite><strong>{{page.celebrity_name}}</strong>, {{page.celebrity_title}}</cite>
@@ -68,7 +70,7 @@ layout: default
     <div class="l-container">
     {% for feature in site.data.homepage_features %}
 
-      <div class="l-third l-half-med mb-20">
+      <div class="l-third l-half-med">
         <section class="homepage-feature">
           <h3 class="blurb-title">
             <span class="feature-icon">
@@ -87,7 +89,7 @@ layout: default
     {% endfor %}
     </div>
 
-    <p class="text-center delta mt-0 mb-90">
+    <p class="text-center delta mb-90">
       <a href="/features.html">
         <strong>See more features<svg width="20" height="20" class="append darkest"><use xlink:href="#icon-arrow" /></svg></strong>
       </a>
