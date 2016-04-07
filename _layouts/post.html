@@ -15,11 +15,16 @@ layout: default
             <p class="post-meta">By {{post.author}}, {{post.date | date: "%B %-d %Y" }}</p>
           </a>
         </header>
-        <div class="post-img">
-          {% if post.image %}
-          {% image_tag src=post.image width="730" %}
+        {% if post.image %}
+        <figure class="post-img">
+          {% image_tag src=post.image %}
+          {% if post.image_caption %}
+            <figcaption>{{ post.image_caption | markdownify}}</figcaption>
           {% endif %}
-        </div>
+        </figure>
+        {% else %}
+        <div class="post-img"></div>
+        {% endif %}
         <div class="post-bd text">
           {{ content }}
         </div>
