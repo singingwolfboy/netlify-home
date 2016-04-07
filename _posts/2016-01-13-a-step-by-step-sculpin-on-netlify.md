@@ -6,7 +6,7 @@ short_title: Sculpin on netlify
 description: "A guide to help you set up Sculpin on netlify in continuous deployment, with assets on GitHub."
 thumbnail: /uploads/sculpin_logo.png
 cmsUserSlug: ""
-date: 2020-01-13T00:00:00.000Z
+date: 2016-03-29 
 tags: null
 ---
 
