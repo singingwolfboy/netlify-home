@@ -6,7 +6,7 @@ short_title: Sculpin on netlify
 description: "A guide to help you set up Sculpin on netlify in continuous deployment, with assets on GitHub."
 thumbnail: /uploads/sculpin_logo.png
 cmsUserSlug: ""
-date: 2016-01-13T00:00:00.000Z
+date: 2020-01-13T00:00:00.000Z
 tags: null
 ---
 
@@ -31,14 +31,14 @@ sudo apt-get install php5-curl                      # cURL libraries
 
 ## Quick Start Guide
 
-Now let's quickly get you up and running with a template Sculpin site you can play around with. 
+Now let's quickly get you up and running with a template Sculpin site you can play around with.
 
 If you aren't familiar with the commands used and would like a more detailed introduction and guide, simply scroll down to [here](#sculpinsetup).
 
 The commands will help you download and install Sculpin with a blog skeleton, simply substitute my-sculpin-site with the name of your choice.
 
 ```
-curl -O https://download.sculpin.io/sculpin.phar 
+curl -O https://download.sculpin.io/sculpin.phar
 ```  
 ```  
 chmod +x sculpin.phar
@@ -59,7 +59,7 @@ sculpin install
 sculpin generate --watch --server
 ```
 
-The first three lines will download Sculpin, set its permissions to be able to execute it and move and rename it to a location that is in the path. Please note that this path may in some cases differ on your system! 
+The first three lines will download Sculpin, set its permissions to be able to execute it and move and rename it to a location that is in the path. Please note that this path may in some cases differ on your system!
 
 To see which locations are in the path, use this command in a terminal window: `echo "$PATH"`
 
@@ -103,7 +103,7 @@ cd my-sculpin-site
 ```
 
 ### 3. Install Dependencies
-Before we can view our Sculpin site, it will need to install various dependencies, using composer. 
+Before we can view our Sculpin site, it will need to install various dependencies, using composer.
 
 Since composer is built into sculpin, simply run this command from terminal in the root of your site:
 
@@ -125,7 +125,7 @@ The generate command will build our site and when using the `--watch` flag, Scul
 Check to see if everything is running like it should, before we start adding our own content.
 
 ### 5. Create Content
-Let's create our first piece of content, a markdown file following Jekyll's file name format *YYYY-MM-DD-Title.md* with a date that's newer than today, so we can make sure it pops up on top, like it would in an ordinary blog. 
+Let's create our first piece of content, a markdown file following Jekyll's file name format *YYYY-MM-DD-Title.md* with a date that's newer than today, so we can make sure it pops up on top, like it would in an ordinary blog.
 
 We created the `2016-03-02-Sculpin-on-netlify.md` file in the `/source/_posts` folder with the following content:
 
@@ -166,7 +166,7 @@ Assuming the server hasn't crashed yet (it probably will), simply refresh your b
 
 When working with Sculpin it's worth noting two things about running the server. The first is that it might crash, but the solution to this is simple, as all you have to do is re-run the generate command again like before: `sculpin generate --watch --server`
 
-Another tiny issue is when the content hasn't generated completely, for whatever reason. When this happens, simply stop and then restart the server, by first pressing `control + c` to stop (while you have your terminal window with the server running selected) and then re-running the generate command again like this: `sculpin generate --watch --server` 
+Another tiny issue is when the content hasn't generated completely, for whatever reason. When this happens, simply stop and then restart the server, by first pressing `control + c` to stop (while you have your terminal window with the server running selected) and then re-running the generate command again like this: `sculpin generate --watch --server`
 
 ### 6. Generate a Production-Ready Site
 Once you're happy with the result of your output, it's time to make a production ready version of the site and go live with it. The way Sculpin works, is is possible to have a production setup that is different from a development and a live setup and to do this, an output folder for each is created.
@@ -258,15 +258,15 @@ You will be asked to provide your GitHub login details:
 We need to let netlify and GitHub talk to each other, so review the permissions and then click authorize application.
 ![Authorize netlify](/uploads/authorization.png)
 
-Like it says in the image above on the right, netlify doesn’t store your GitHub access token on our servers! 
+Like it says in the image above on the right, netlify doesn’t store your GitHub access token on our servers!
 
-If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/). 
+If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 ![sculpin_chooserepo.png](/uploads/sculpin_chooserepo.png)
 
 Once you're connected to GitHub, netlify will show you a list of your GitHub repositories, as seen above.
-For the purpose of this tutorial we'll select the *“sculpin-blog-demo”* repo we just pushed to GitHub. 
+For the purpose of this tutorial we'll select the *“sculpin-blog-demo”* repo we just pushed to GitHub.
 
 ### Step 5: Configure Your Settings
 Fill in the configuration settings as seen in the screen shot below:
