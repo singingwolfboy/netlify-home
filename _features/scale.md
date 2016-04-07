@@ -15,7 +15,7 @@ features:
     body: "Our global CDN supports complex internationalization rules. One DNS lookup will always serve your site in the correct language. Redirects occur at CDN level so you take zero performance hit."
   - title: Gradual Migration
     body: "Using netlify's advanced redirect rules, incrementally migrating to netlify is safe and simple and without affecting performance."
-    footer: "[See how to “Go Static Without Losing Your Server”](/blog/2016/03/09/go-static-without-losing-your-server.html)"
+    footer: "[See how to “Go Static Without Losing Your Server”](/blog/2016/03/10/go-static-without-losing-your-server)"
   - title: Atomic Deploys
     body: "We view your site as a whole, not a bunch of pages. When pushing a change to your site live ***without*** Atomic Deploy you’re pushing files live one-by-one, which could lead to missing assets, broken links or dropped connections as your new version loads. Avoid periodically broken sites with netlify, where all deploys are atomic."
   - title: Unlimited Snapshots
