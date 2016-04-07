@@ -10,7 +10,7 @@ features:
     footer: "[Read our blogpost on domain aliases](https://www.netlify.com/blog/2015/10/30/domain-aliases-as-many-as-you-like) "
   - title: Netlify Subdomain
     body: "If you either don't have a domain or just need to do a test site, use yourdomain.netlify.com"
-    footer: "[Example](http://speedtest.netlify.com/)"
+    footer: "[Example](http://example.netlify.com/)"
   - title: DNS Hosting (NS1)
     body: "Netlify includes high uptime ultra-fast DNS hosting, with a simple but powerful DNS panel and full API access."
   - title: Domain Registration
