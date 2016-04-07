@@ -14,7 +14,7 @@ features:
   - title: DDOS Protection
     body: "As part of custom plans netlify offers advanced DDOS protection and mitigation via several partnerships."
   - title: API Origin Protection
-    body: "netlify offers advanced Origin Protection. A site hosted on a CDN is protected from malware, but it can still be vulnerable to both DDOS and attacks on any APIs used. This service uses a new way of whitelabeling benign traffic at CDN level. Keep your API safe while filtering out bot traffic and never lose performance!"
+    body: "Netlify offers advanced Origin Protection. A site hosted on a CDN is protected from malware, but it can still be vulnerable to both DDOS and attacks on any APIs used. This service uses a new way of whitelabeling benign traffic at CDN level. Keep your API safe while filtering out bot traffic and never lose performance!"
 cmsUserSlug: security
 date: 2016-03-29
 position: 30
