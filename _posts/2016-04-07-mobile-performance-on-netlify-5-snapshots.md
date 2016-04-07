@@ -6,7 +6,7 @@ short_title: 5 Mobile Snapshots
 description: Five top mobile sites get the netlify treatment. Will there be performance gains?
 thumbnail: /uploads/stopwatch.png
 cmsUserSlug: ""
-date: now
+date: 2016-04-07 
 tags: null
 ---
 
