@@ -5,19 +5,21 @@ title: 404 Page Not Found
 <section class="bg-dark-muted inverse">
   <div class="content text-center">
     <header>
-      <h1 class="alpha mt-80 mb-80">
+      <h1 class="kilo">
         Whoops!<br/>
         We couldn't find that page :(
       </h1>
     </header>
 
-    <p class="large muted mb-110">
-      If you think this is an error on our end <a href="/contact.html"><strong>get in touch</strong></a><br><br>
-
+    <p class="epsilon muted mt-60 mb-60">
+      If you think this is an error on our end
+      <a href="/contact.html">
+        <strong>get in touch<svg width="20" height="20" class="append"><use xlink:href="#icon-arrow" class="darkest" /></svg></strong>
+      </a>
     </p>
 
-    <div class="l-container mt-80 mb-80 text-center">
-        <ul class="nav nav--social nav--centered nav--wide">
+    <div class="l-container mb-120">
+        <ul class="nav nav--social nav--inline nav--centered nav--wide">
           {% for link in site.social-links %}
           <li>
             <a href="{{link[1]}}" class="icon-link--square icon-link--large icon-link--{{link[0]}}">
