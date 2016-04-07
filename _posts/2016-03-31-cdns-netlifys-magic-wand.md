@@ -1,5 +1,5 @@
 ---
-title: "CDNs: netlify's magic wand"
+title: "CDNs: netlify's Secret Sauce"
 author: Aaron Autrand
 image: null
 short_title: "CDNs: netlify's magic wand"
@@ -10,7 +10,7 @@ date: 2016-03-31T00:00:00.000Z
 tags: null
 ---
 
-The secret to netlify's sauce (or at least one of them) is our CDN--or to be more precise, our CDNs, plural.
+At netlify, we don't play fair. The ace up our sleeve (or at least one of them) is our CDN--or to be more precise, our CDNs, plural.
 
 Content Delivery Networks (CDNs) are pretty simple - they function as local asset dumps. You pay for some bandwidth, and your images, videos and downloadable content sit there, in multiple places around the globe, taking the load off the server that serves up your page. The CDN nodes are geographically aware, and make sure that if you are working from a coffee shop in Tokyo, that He-Man video (you know, the one set to Four-Non Blondes) your laptop is requesting is coming from the server just up the street, not being pushed from a server farm in San Francisco. The whole purpose of a CDN is to put that video as close to users as possible to avoid latency issues.
 
@@ -25,3 +25,7 @@ What sets netlify apart from other hosts is our dedicated, intelligent CDN. Here
 When you connect your git repository and trigger a deploy, we build your site just as you might on your local machine, and then push it to our CDN. Your HTML, JS, etc. lives on our CDN edge nodes, not just on one server, but all around the world.
 
 Here's where the intelligent part comes in. We add logic layers to a standard CDN setup. Those logic layers give us a significant amount of control, control that allows us to do things like instant cache invalidation, give you the ability to make rewrite/redirect and proxy rules, create and catalog build snapshots, allow rollbacks, and make sure all your site deploys are atomic. Without our dedicated CDN, the features that make netlify **netlify** just wouldn't be possible.
+
+What does that mean for you? It means that our CDN edge nodes can make decisions normally made on the origin server. Requests for passwords, redirects and proxies don't bounce through server relays, they happen as close to your users as possible. When studies show that page abandonment hits 25% after four seconds, those milliseconds matter.
+
+So why does netlify's intelligent CDN matter? Because the world is annoyingly large, and the speed of light is annoyingly small.
