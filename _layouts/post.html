@@ -17,7 +17,7 @@ layout: default
         </header>
         {% if post.image %}
         <figure class="post-img">
-          {% image_tag src=post.image width="960" %}
+          <img src="{{post.image}}">
           {% if post.image_caption %}
             <figcaption>{{ post.image_caption | markdownify}}</figcaption>
           {% endif %}

@@ -15,7 +15,7 @@ title: The Netlify Blog. All about static web-tech and netlify.
         </header>
         {% if post.image %}
         <figure class="post-img">
-          {% image_tag src=post.image width="960" %}
+          <img data-src="{{post.image}}" class="lazyload">
           {% if post.image_caption %}
             <figcaption>{{ post.image_caption | markdownify}}</figcaption>
           {% endif %}
