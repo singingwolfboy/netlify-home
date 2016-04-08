@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step guide: Punch on netlify"
 author: Jimmi Lee
-image: null
+image: /uploads/punch.png
 short_title: Punch on netlify
 description: "A short tutorial on how to set up Punch in continuous deployment on netlify, with assets on GitHub"
 thumbnail: /uploads/punch_logo_400p.png
