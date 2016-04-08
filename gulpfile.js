@@ -16,7 +16,7 @@ var messages = {
  */
 gulp.task('jekyll-build', function (done) {
     var cmd = ['exec', 'jekyll', 'build', '-t'];
-    if (process.env.CMS_ENV == 'staging') {
+    if (process.env.CMS_ENV !== 'production') {
       cmd.push("--future");
     }
     browserSync.notify(messages.jekyllBuild);
