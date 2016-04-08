@@ -7,13 +7,13 @@ short_title: Cactus CLI on netlify
 description: A guide to building and hosting a site created with Cactus on netlify.
 thumbnail: /uploads/cactusformac.png
 cmsUserSlug: ""
-date: now
+date: 2016-04-08T00:00:00.000Z
 tags: null
 ---
 
 Let's take a look at building a site with Cactus, including continuous deployment.
 
-Cactus is a modern build tool that runs on Python and uses Django's templating engine. Cactus has a lot of tricks up its sleeve, and even has a [Mac app](http://www.cactusformac.com/). 
+Cactus is a modern build tool that runs on Python and uses Django's templating engine. Cactus has a lot of tricks up its sleeve, and even has a [Mac app](http://www.cactusformac.com/).
 
 The app doesn't work out of the box with netlify, and creating a site with the app and hosting on netlify will be the subject of another tutorial.
 
