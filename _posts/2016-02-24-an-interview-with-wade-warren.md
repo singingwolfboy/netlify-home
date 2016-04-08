@@ -1,7 +1,8 @@
 ---
 title: An interview with Wade Warren
 author: Aaron Autrand
-image: null
+image: /uploads/wade.jpg
+image_caption: null
 short_title: Interviewing Wade Warren
 description: "An interview about the value of static sites and CDN hosting with VP of Platform Engineering @ Wikia that serves 36,000 http requests per second."
 thumbnail: /uploads/performance.jpg
