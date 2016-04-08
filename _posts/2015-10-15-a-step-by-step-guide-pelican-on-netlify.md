@@ -114,6 +114,7 @@ $ pip freeze > requirements.txt
 Okay, you're ready to go!
 
 Now it's time to push it to your repo of choice. Directions for GitHub follow here.
+<a id="gitstart"></a>
 
 ## **Creating your Git Repo**
 
