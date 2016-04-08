@@ -1,7 +1,8 @@
 ---
 title: Setting Up Your Custom Domain
 author: Aaron Autrand
-image: null
+image: /uploads/ds9-wormhole-by-ryan-somma.jpg
+image_caption: "Photo credit: [Ryan Somma](https://www.flickr.com/photos/ideonexus/6906054687)"
 short_title: Setting Up Your Domain
 description: A step-by-step walkthrough on how to point your custom domain to netlify.
 thumbnail: /uploads/lv55uzmx.png
