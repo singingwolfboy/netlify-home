@@ -2,6 +2,7 @@
 title: "A step-by-step guide: Metalsmith on netlify"
 author: Jimmi Lee
 image: null
+image_caption: null
 short_title: Metalsmith on netlify
 description: A short tutorial on the static site generator Metalsmith and how to host it on netlify (incl. continuous deployment).
 thumbnail: /uploads/metalsmith_thumb2.png
@@ -10,15 +11,15 @@ date: 2015-12-08T00:00:00.000Z
 tags: null
 ---
 
-{%raw %} 
-### Welcome to netlify
-Today I'm writing about Metalsmith.
+Today I'm writing about [Metalsmith](http://www.metalsmith.io/).
 
 Metalsmith is a fairly well known static site generator that bills itself as *An extremely simple, pluggable static site generator*. To me personally, that's indeed exactly how it felt, like working with a very customizable static site generator, for better or worse. It's in fact so customizable that it can imitate other static site generators and even has templates for this!
 
 But enough talk, let's get to the meat and bones.
 
 In this tutorial we will set up a basic Metalsmith demonstration site, with a build file, static assets and some plugins. The aim of this site is to show a simple Metalsmith setup with continuous deployment on netlify using GitHub. 
+
+<!-- excerpt -->
 
 If you already have a Metalsmith repository on GitHub and only wish to connect with netlify, you can skip the bulk of this guide and start [here](#netlifystart) instead.
 
@@ -30,11 +31,11 @@ Finally, if you're completely new to Metalsmith, simply continue this guide onwa
 
 For information about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
-### Setup Metalsmith
+## Setup Metalsmith
 Metalsmith is not only a static site generator, but can do a lot of other things equally well and in more general terms one might define it as a file manipulator with plugins.
 This means it's extremely versatile, while remaining simple, but it also means that there's a bit more to be done on the setup side, than what we're used to from other static site generators.  
 
-#### 1. Create Folder Structure
+### 1. Create Folder Structure
 We'll start out by creating a simple folder structure for our project as outlined in the picture below, with a number of files. 
 
 Alternatively you can fork a clone of the empty structure [here](https://github.com/JimmiLee/metalsmith-demo-empty), complete with empty files, ready to be filled in.
@@ -45,7 +46,7 @@ The folder structure for this project:
 
 ![metalsmith_folder.jpg](/uploads/metalsmith_folder.jpg)
 
-#### 2. Create .nvmrc file
+### 2. Create .nvmrc file
 Did you notice the *.nvmrc* file in the tree above?
 
 The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named *.nvmrc* with the version inside. While you may not be using nvm yourself (you should really consider it), netlify will use this information when building your site for you. 
@@ -63,7 +64,7 @@ stable
 Easy enough. To simply use the newest stable version available on netlify, we write `stable`. 
 You could also write `5.1.0`, as seen in the build image, but as any newer version should also work flawlessly, we stick with `stable`.
 
-#### 3. Setup the Node Package manager
+### 3. Setup the Node Package manager
 To handle the various packages you will need to have node.js and npm installed, which are bundled together. 
 
 Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a *package.json* file with user feedback. 
@@ -73,7 +74,7 @@ Alternatively `npm init -f` will intialize the current directory and create a `p
 
 *For convenience sake, keep the terminal window open throughout this guide.*
 
-#### 4. npm install
+### 4. npm install
 To actually install the various packages, we'll use the following command (substitute package-name with the various packages): `npm install package-name --save`  
 
 The `--save` flag tells npm to save the installations as dependencies in the *package.json* file. It is then possible to uninstall and remove the package again using `npm uninstall package-name --save`
@@ -85,7 +86,7 @@ The first package we need is Metalsmith itself, so go ahead and enter the follow
 npm install metalsmith --save
 ```
 
-#### 5. Create .gitignore file
+### 5. Create .gitignore file
 If you check your folder you'll notice that npm has created a `node_modules` folder and filled it up with packages.
 Since this is only needed locally and since the `build` folder is also only used locally, we want to avoid pushing them to GitHub, simply to save space and keep them out of where they don't belong.
 
@@ -114,7 +115,7 @@ As you can see, it's easy to install plugins and even Metalsmith itself is a plu
 
 Using the `npm ls` command it's possible to see the dependency tree.
 
-#### 7. Create build file
+### 7. Create build file
 To build our site with these plugins, we need to define an output folder and run a script. We're using a simple javascript for this and we've aptly named this script *build.js* (since every time we run it, it will build the site).
 
 Create the *build.js* file and fill it in as seen below:
@@ -149,7 +150,7 @@ node build
 
 If everything went according to plan, there should be a new file in the build directory, molded according to our plugins. It's very simple and not much is happening there yet of course, but we'll get to that. This is merely to see if your installation so far is working.
 
-#### 8. Add more Plugins
+### 8. Add more Plugins
 Well, what else do we need?  
 There's a whole list of plugins [here](http://www.metalsmith.io/#the-plugins) and it's even possible to write them yourself, should you feel inclined to do so, but for our basic tutorial we won't get into this.  
 
@@ -181,7 +182,7 @@ The above script follows the norm set before, except that we need to tell the te
 
 You might want to check the changes made to the dependency tree by running the `npm ls` command again.
 
-#### 9. Create a Simple Template
+### 9. Create a Simple Template
 The next thing we want to do is create one simple template in the templates directory.
 We create the *home.hbt* file with the following content in the templates folder:
 
@@ -218,7 +219,7 @@ To run the build script and check out the changes, first save and next run the b
 
 Check the output in the build directory and see if the template HTML created above was added properly.
 
-#### 10. Folder Structure
+### 10. Folder Structure
 To discern between the various content we're going to have, we will set up a folder for each type of content in the content folder. E.g. we want one type for displaying pages and one of these pages will be our about page, so we'll create a `src/content/pages` folder with a new file in it named *about.md* with the following content:
 
 ```
@@ -251,7 +252,7 @@ To add the partials we simply insert the line `{{> partial-name }}` as seen abov
 
 Let's move on to creating these partials.
 
-#### 11. Template Partials
+### 11. Template Partials
 Template partials are useful for the elements that are part of every page, such as a footer and a header for example or perhaps your logo. In Metalsmith how these are handled comes down to your templating engine and in our case for this tutorial that means it comes down to the handlebars templating engine. 
 
 First we create the partials files *header.hbt* and *footer.hbt* in the `templates/partials` directory.
@@ -311,12 +312,12 @@ Notice the stylesheet link in our header.
 
 To make the site we're working on a little less bleak, we're going to add a stylesheet.
 
-#### 12. Add a Stylesheet
+### 12. Add a Stylesheet
 We're going to simply add a stylesheet in the `src/styles` folder named *main.css* as referenced in our header. 
 
 You can use any old external css stylesheet or create a new one. Once you run build, Metalsmith will copy this file over, duplicating the file structure and any other static assets you may have added in this simple manner.
 
-#### 13. Collections and Link Plugins
+### 13. Collections and Link Plugins
 To illustrate the power and flexibility of Metalsmith, we'll use two additional plugins to set up some collections with [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) and create a collection for our pages and one for our articles. We'll also add the [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) plugin, to change our files so that they're nested properly.
 
 ```
@@ -376,7 +377,7 @@ permalink: false
 
 We'll go ahead and add this YAML line to each of our articles.
 
-#### 14. Creating Content
+### 14. Creating Content
 To see the difference between our two collections, the pages and the articles, we also need to create the article template, so go ahead and create the *article.hbt* file in the templates directory.
 
 The *article.hbt* template file:
@@ -442,18 +443,18 @@ Remember the collections we made, aptly named pages and articles?
 
 Well, as mentioned it's easy to access these in the template and we're doing this with the `{{#each collections.articles}}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the files in the articles collection.
 
-#### 16. Build It
+### 16. Build It
 If you made it this far, you should already have an idea of how Metalsmith works internally and where to start if you want to use Metalsmith with continuous deployment on netlify, with GitHub serving the files.
 
 Run the `node build` command again and see if the files generate properly.  If they do and you're happy with your tree (`npm ls`), it's time to check out GitHub.
 
-### Setup your GitHub Repository
+## Setup your GitHub Repository
 
 <a id="githubstart"></a>
 
 Let's set up a GitHub repository and push our Metalsmith site and generator to a repo of our own.
 
-#### 1. Create your Git Repo
+### 1. Create your Git Repo
 We start by creating a [GitHub](https://github.com/) repository for our metalsmith page and generator.
 
 We're naming ours metalsmith-demo and we'll skip adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
@@ -462,7 +463,7 @@ We're naming ours metalsmith-demo and we'll skip adding files to the repository 
 
 Once the repository has been named and created we need to setup our local environment with GitHub.
 
-#### 2. Initialize, Add & Commit
+### 2. Initialize, Add & Commit
 We'll initialize the local directory as a git repository with the following command:
 
 ```
@@ -481,7 +482,7 @@ Finally we'll commit the files we just staged in our local repository by enterin
 git commit -m 'First commit'
 ```
 
-#### 3. Get & Add Remote URL
+### 3. Get & Add Remote URL
 ![a1_remotegithuburl.png](/uploads/a1_remotegithuburl.png)
 
 It's now time to return to the GitHub repository created above and retrieve the URL for the remote repository, since this is where our local repository will be pushed.
@@ -498,7 +499,7 @@ Optional: To check that it's set up correctly, you can use the following command
 git remote -v
 ```
 
-#### 4. Push to GitHub.
+### 4. Push to GitHub.
 The final task before we're done setting up, is to use the push command with git, as in the following line in Terminal:
 
 ```
@@ -509,23 +510,23 @@ All your files will be copied to your online repository. Once it's done, take a 
 
 It's time to connect it with netlify.
 
-### Connecting to netlify
+## Connecting to netlify
 <a id="netlifystart"></a>
 
 Creating a new site on netlify is super easy and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
 
-#### Step 1: Add Your New Site
+### Step 1: Add Your New Site
 ![netlify New Site](/uploads/newsitebut.png)
 Click the *"New Site"* button (as seen above) to get started.
 
-#### Step 2: Link to Your GitHub
+### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
 When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
 
 Since we're hosting the site assets on GitHub, we’ll need to link netlify to GitHub. Click the button *“Link to GitHub”*.
 
-#### Step 3: Authorize netlify
+### Step 3: Authorize netlify
 You can skip this step, if you already have an account with netlify set up to automatically login!
 
 You will be asked to provide your GitHub login details:
@@ -538,22 +539,22 @@ Like it says in the image above on the right, netlify doesn’t store your GitHu
 
 If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubnetlify.com/github-permissions/). 
 
-#### Step 4: Choose Your Repo
+### Step 4: Choose Your Repo
 ![metalsmith_choose_repo.jpg](/uploads/metalsmith_choose_repo.jpg)
 Once you're connected to GitHub, netlify will show you a list of your GitHub repositories, as seen above.
 For the purpose of this tutorial we'll select the *“metalsmith-demo”* repo we just pushed to GitHub. 
 
-#### Step 5: Configure Your Settings
+### Step 5: Configure Your Settings
 Fill in the configuration settings as seen in the screen shot below:
 ![metalsmith_nodebuild.jpg](/uploads/metalsmith_nodebuild.jpg)
 
 Click the *'Save'* button and watch the magic unfold.
 
-#### Step 6: Build Your Site
+### Step 6: Build Your Site
 ![metalsmith_sitebuilding.jpg](/uploads/metalsmith_sitebuilding.jpg)
 Once you click save, netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and netlify will do the rest, while you watch the progress.
 
-#### Step 7: The End
+### Step 7: The End
 That's it.
 
 Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional customizing.
@@ -562,4 +563,3 @@ Once netlify has build your site, it will assign a random name to it and you'll 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.
 
 You can see our demo site [here](http://metalsmith-demo.netlify.com/) and the GitHub project [here](https://github.com/segmentio/metalsmith).
-{%endraw %}
