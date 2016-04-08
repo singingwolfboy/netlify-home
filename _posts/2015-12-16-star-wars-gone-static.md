@@ -1,12 +1,13 @@
 ---
 title: Star Wars gone static
 author: Chris Bach
-image: null
+image: /uploads/star_wars_web.jpg
+image_caption: null
 short_title: Star Wars gone static
 description: 3 Star Wars themed sites on netlify. Because of course.
 thumbnail: /uploads/screen-shot-2015-12-16-at-20.13.25.png
 cmsUserSlug: ""
-date: 2015-12-16
+date: 2015-12-16T00:00:00.000Z
 tags: null
 ---
 
