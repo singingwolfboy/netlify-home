@@ -1,12 +1,13 @@
 ---
 title: A World’s First. Free SSL with Let’s Encrypt
 author: Matt Biilmann
-image: null
+image: /uploads/system-lock-by-yuri-samoilov.jpg
+image_caption: "Photo credit: [Yuri Samoilov](https://www.flickr.com/photos/yusamoilov/13334048894)  \n"
 short_title: Announcing Free SSL
 description: A World’s First. Free SSL with Let’s Encrypt. From today HTTPS is a free one-click setup on all our plans
 thumbnail: /uploads/padlock.png
 cmsUserSlug: ""
-date: 2016-01-15
+date: 2016-01-15T00:00:00.000Z
 tags:
   - netlify
   - https
