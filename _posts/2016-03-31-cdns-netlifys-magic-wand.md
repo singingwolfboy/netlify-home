@@ -1,7 +1,8 @@
 ---
 title: "CDNs: netlify's Secret Sauce"
 author: Aaron Autrand
-image: null
+image: /uploads/world-communications-by-eric-fischer.jpg
+image_caption: "Photo credit: [Eric Fischer](https://www.flickr.com/photos/walkingsf/6635655755)"
 short_title: "CDNs: netlify's magic wand"
 description: "Why netlify uses a dual-CDN setup, and why you should, too."
 thumbnail: /uploads/world.png
