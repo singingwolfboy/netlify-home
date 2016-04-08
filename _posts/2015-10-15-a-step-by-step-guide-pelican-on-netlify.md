@@ -15,7 +15,7 @@ tags:
 
 Today, we're going to look at how to host a website built with [Pelican](http://getpelican.com) on netlify, including setting up continuous deployment.
 
-Let's start from scratch. If you already have a Pelican site set up, you can skip straight to the [Connecting to Git](#gitstart) or [Connecting to netlify](#netlifystart) sections.
+Let's start from scratch. If you already have a Pelican site set up, you can skip straight to the [Preparing for deployment]({{ page.url }}#gitstart) or [Connecting to netlify]({{ page.url }}#netlifystart) sections.
 
 <!-- excerpt -->
 
