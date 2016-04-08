@@ -1,7 +1,7 @@
 ---
 title: Interview with Geoff Kimball of ZURB Foundation
 author: Aaron Autrand
-image: /uploads/zurb-foundation.jpg
+image: /uploads/zurb-foundation.svg
 image_caption: null
 short_title: Interview with Geoff Kimball
 description: "ZURB's Geoff Kimball talks Foundation 6, Panini and Gulp"
