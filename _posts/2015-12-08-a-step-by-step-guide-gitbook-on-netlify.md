@@ -1,12 +1,13 @@
 ---
 title: "A step-by-step guide: GitBook on netlify"
 author: Aaron Autrand
-image: null
+image: /uploads/gitbook.jpg
+image_caption: null
 short_title: GitBook on netlify
 description: A step-by-step guide on how to host a website built with static site generator Gitbook.
 thumbnail: /uploads/gitbook.png
 cmsUserSlug: ""
-date: 2015-12-08
+date: 2015-12-08T00:00:00.000Z
 tags:
   - gitbook
   - nodejs
