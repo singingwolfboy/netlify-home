@@ -26,7 +26,8 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1", class: "post-title"}
       - {label: "Author", name: "author", widget: "string", preview: "author", tagname: "p", class: "post-meta"}
-      - {label: "Cover Image", name: "image", widget: "image", tagname: "div", class: "post-img", folder: "img/posts", optional: true}
+      - {label: "Cover Image", name: "image", widget: "image", folder: "img/posts", optional: true}
+      - {label: "Image Caption", name: "image_caption", widget: "markdown", tagname: "figcaption", class: "xx-small semibold", optional: true}
       - {label: "Post Body", name: "body", widget: "markdown", tagname: "div", class: "post-bd text"}
       - {label: "Short Title", name: "short_title", widget: "string", tagname: "h1", class: "blurb-title"}
       - {label: "Description", name: "description", widget: "string", tagname: "p", class: "small muted"}

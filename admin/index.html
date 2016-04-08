@@ -81,7 +81,15 @@ name: admin
           <p class="post-meta">By {{entry.author}}, {{time-format entry.date "LL"}}</p>
         {{/if}}
       </header>
-      {{cms-preview field='image'}}
+      {{#if entry.image}}
+        <figure class="post-img">
+          {{cms-preview field='image'}}
+          {{cms-preview field="image_caption"}}
+        </figure>
+      {{/if}}
+      {{#unless entry.image}}
+        <div class="post-img"></div>
+      {{/unless}}
       {{cms-preview field='body'}}
     </article>
 
