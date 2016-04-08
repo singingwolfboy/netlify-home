@@ -6,7 +6,7 @@ short_title: Pelican  on netlify
 description: A step-by-step guide on how to host Pelican sites on netlify
 thumbnail: /uploads/2043492.png
 cmsUserSlug: ""
-date: 2015-10-15
+date: 2015-10-15T00:00:00.000Z
 tags:
   - pelican
   - python
@@ -15,7 +15,7 @@ tags:
 
 Today, we're going to look at how to host a website built with [Pelican](http://getpelican.com) on netlify, including setting up continuous deployment.
 
-Let's start from scratch. If you already have a Pelican site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
+Let's start from scratch. If you already have a Pelican site set up, you can skip straight to the [Connecting to Git](#gitstart) or [Connecting to netlify](#netlifystart) sections.
 
 <!-- excerpt -->
 
