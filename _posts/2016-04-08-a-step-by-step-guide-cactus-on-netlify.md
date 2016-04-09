@@ -14,10 +14,11 @@ Let's take a look at building a site with Cactus, including continuous deploymen
 
 Cactus is a modern build tool that runs on Python and uses Django's templating engine. Cactus has a lot of tricks up its sleeve, and even has a [Mac app](http://www.cactusformac.com/).
 
+<!-- excerpt -->
+
 The app doesn't work out of the box with netlify, so there are a few quick changes you'll need to make before you can deploy. Jump to [Created with Cactus App](#cactusapp) to make those changes.
 
 If you've already built your Cactus site, you can jump down to [Connecting to netlify](#netlifystart).
-<!-- excerpt -->
 
 ## Installing Cactus
 
