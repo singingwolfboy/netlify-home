@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step guide: Nanoc on netlify"
 author: Jimmi Lee
-image: null
+image: /uploads/nanoc.jpg
 short_title: Nanoc on netlify
 description: A short tutorial on the static site generator Nanoc and how to host it on netlify (+continuous deployment).
 thumbnail: /uploads/nanoc_logo.png
@@ -14,7 +14,7 @@ Up until recently I had never even heard of [Nanoc](http://nanoc.ws/), but I stu
 
 Nanoc has both in abundance and after checking out their up-to-date and aesthetically pleasing documentation, I quickly grew to like this extremely easy to use static site generator.
 
-In this little guide, we will setup Nanoc and check out its site generation abilities and once we're up and running locally, we will push the project to GitHub and deploy on netlify with continuous deployment.
+In this little guide, we will set up Nanoc and check out its site generation abilities and once we're up and running locally, we will push the project to GitHub and deploy on netlify with continuous deployment.
 
 <!-- excerpt -->
 
@@ -28,10 +28,10 @@ Finally, if you want to try check out our small Nanoc tutorial before linking up
 
 For information about installing and handling Ruby with Bundler please see [this documentation](http://bundler.io/).
 
-### Setup Nanoc
-Instead of installing Nanoc gem by gem, we'll setup the site with Bundler and a gemfile from the beginning, to specify what gems we want to install, all in one file.
+## Set up Nanoc
+Instead of installing Nanoc gem by gem, we'll set up the site with Bundler and a gemfile from the beginning, to specify what gems we want to install, all in one file.
 
-#### 1. Install Nanoc and create site
+### 1. Install Nanoc and create site
 The first thing we'll do is install the Nanoc gem with the following command in a terminal window:
 
 ```
@@ -47,8 +47,8 @@ nanoc create-site my-site-name
 Simply substitute my-site-name with the name of your site. We used the name nanoc-demo for our demonstration.
 
 
-#### 2. Setup gemfile
-Before you compile the site or do anything, make sure you have Bundler installed! Using the command  `bundler -v` will let you know what version (if any) is installed.
+### 2. Set up gemfile
+Before you compile the site or do anything, make sure you have Bundler installed! Using the command `bundler -v` will let you know what version (if any) is installed.
 
 Let Bundler initialize the site with the following command in terminal, from the root of your Nanoc site folder (cd my-nanoc-site):
 
@@ -74,7 +74,7 @@ Once you've saved the gemfile, we need to run one more command to install the ge
 bundle install
 ```
 
-#### 3. Compile the Site
+### 3. Compile the Site
 It's quite possible to compile without Bundler, using e.g. the `nanoc compile` (or even the short hand notation, simply `nanoc`) and the site will be build. However, it is recommended that one uses Bundler and that is exactly what we intend to do, following up on the last step.
 
 From terminal and once again from your site root, use this command:
@@ -99,13 +99,13 @@ Optional: check if Nanoc is installed properly and the version by using the `--v
 nanoc --version
 ```
 
-#### 4. Check the nanoc.yaml file
+### 4. Check the nanoc.yaml file
 The `nanoc.yaml` file is a good place to see how powerful the Nanoc static site generator is. It's well documented with comments and full of various settings and other goodies. I recommend reading it through, though we won't change anything in it for this particular guide (the default settings will suffice).
 
-#### 5. Edit Rules file
+### 5. Edit Rules file
 For our kramdown gem to work properly, we need to let Nanoc know we changed the default language from HTML to markdown. To do this we need to open the `Rules` file found in the root of your Nanoc site and then we need to edit the compilation rules found herein, to take markdown files.
 
-Did that sound complicated?  Don't worry, because it really isn't!
+Did that sound complicated? Don't worry, because it really isn't!
 
 Editing compile and route rules in a `Rules` file is actually quite easy, but on top of this, the people behind Nanoc have anticipated our switch from HTML to Markdown and thus in our `Rules` file we find that the compile rule for Markdown using the kramdown filter, has already been written, it's just commented out.
 
@@ -142,7 +142,7 @@ layout '/**/*', :erb
 
 If you're using kramdown like us, simply use the above in your `Rules` file and if you're using HTML, there's nothing to edit (as that's the default). However, if you choose a third option, check out Nanoc's documentation on rules [here](http://nanoc.ws/doc/rules/).
 
-#### 6. Under the Hood
+### 6. Under the Hood
 Let's take a look at what's under the hood of this Nanoc site. First take a look at the folder structure, as depicted in the illustration below, the files and directories created are as follows:
 
 ![nanoc_tree.png](/uploads/nanoc_tree.png)
@@ -157,7 +157,7 @@ Then there's the **lib folder**, which contains custom Ruby code and the **outpu
 
 Of the files, its worth noting that **nanoc.yaml** contains site-wide configuration details and that the **Rules** file is used by Ruby to describe how pages and assets will be processed.
 
-#### 7. Edit Landing Page
+### 7. Edit Landing Page
 To distinguish our new basic Nanoc site, we'll start by editing the two files it comes with as default. We take the *index.html* file and change its extension to reflect that we're using markdown instead of HTML and it becomes *index.md*. In the content I remove any HTML tags and instead I insert some sample markdown text content and change its title. Take note that this file only contains the content of the page and none of the layout.
 
 I'll fill the *index.md* file in as seen below and I suggest you do something similar. The title in the YAML front matter is important, but the text outside the YAML front matter you can fill in as you want to.
@@ -183,16 +183,16 @@ We'll run some font and layout tests...
 ## Headline Title Two
 I wonder if the title above will render in the proper size and font.
 
-### Headline Title Three
+## Headline Title Three
 I wonder if the title above will render in the proper size and font.
 
-#### Headline Title Four
+### Headline Title Four
 I wonder if the title above will render in the proper size and font.
 ```
 
 As you can see we're simply adding sample text to check the format and layouts of the site, as the next stop is - you guessed it, we'll fiddle with the layout.
 
-#### 8. Edit Layout
+### 8. Edit Layout
 We'll follow the advice left for us in the original landing page and change the layout.
 
 The *default.html* file in the layouts folder is where you can set up the layout of your page, using HTML and eRuby instructions. Nanoc has build in support for Haml and Mustache as well and it's possible to add support for other layout engines rather easily using filters (as we did with markdown in the `Rules` file earlier).
@@ -241,7 +241,7 @@ We've just changed the sidebar links to link to netlify, Nanoc and GitHub, but f
 
 If you want more information about layouts in Nanoc, head over to Nanoc's excellent documentation on layouts and partials [here](http://nanoc.ws/doc/items-and-layouts/#layouts).
 
-#### 9. Final Build
+### 9. Final Build
 To test that our changes were made properly, we'll do a final build and a view, before setting up GitHub.
 
 To compile and then view the site, we'll use these two commands in terminal:
@@ -257,14 +257,14 @@ Take a look and see if the changes worked as expected.
 
 As is obvious, Nanoc is lightning fast and incredibly easy to get up and running with some basic content, as it comes with a file structure with some rudimentary content pre-installed.
 
-We're ready to setup the local site with an online GitHub repository.
+We're ready to set up the local site with an online GitHub repository.
 
-### Setup your GitHub Repository
+## Set up your GitHub Repository
 <a id="githubstart"></a>
 
-We'll setup a GitHub repository to hold our assets, before we connect and deploy on netlify.
+We'll set up a GitHub repository to hold our assets, before we connect and deploy on netlify.
 
-#### 1. Create your Git Repo
+### 1. Create your Git Repo
 Start by opening up [GitHub](https://github.com/) and create a new repository for your Nanoc site.
 
 We're naming our site nanoc-demo and we'll skip adding files to the repository until after its creation, as this can sometimes create problems (The README, license and gitignore files).
@@ -273,7 +273,7 @@ We're naming our site nanoc-demo and we'll skip adding files to the repository u
 
 As you'll see once you create the repository, GitHub provides very good documentation on what to do next.
 
-#### 2. Create .gitignore file
+### 2. Create .gitignore file
 In the root of your Nanoc site, create a .gitignore file and fill it in with the text below:
 
 ```
@@ -288,7 +288,7 @@ crash.log
 Basically there's no need for us to push the output content online and the same goes for the temporary file directory and the crash.log file.
 Adding them to the .gitignore file makes git ignore them and leave them behind on your local machine.
 
-#### 3. Initialize, Add & Commit
+### 3. Initialize, Add & Commit
 We'll initialize the local directory as a git repository with the following command:
 Before we push (copy the files to our new online repository) the files online, we need to prep our local site and you need to have git installed for this.
 
@@ -309,7 +309,7 @@ git commit -m 'First commit'
 ```
 
 
-#### 4. Get & Add Remote URL
+### 4. Get & Add Remote URL
 To let our local git repository know where to push these files to, we need to give it the remote URL of our remote repository on GitHub.
 This URL can be found under the settings and you need to use it with the following command in terminal (substitute My-Repository-URL with your actual URL):
 
@@ -323,7 +323,7 @@ Optional: To check which online repository you're working with, you can use the 
 git remote -v
 ```
 
-#### 5. Push to GitHub.
+### 5. Push to GitHub.
 To do the actual moving after staging and committing, we'll need the push command. From the root of your Nanoc site enter it like this in terminal:
 
 ```
@@ -334,25 +334,25 @@ All your files will be copied by git to your online repository. Once it's finish
 
 Now we're ready to connect your repository to netlify.
 
-### Connecting to netlify
+## Connecting to netlify
 <a id="netlifystart"></a>
 We want to connect our GitHub repository with netlify, so that netlify can build the site, whenever we push changes to our online repository - this is what's meant with continuous deployment - as soon as you've pushed changes to GitHub, netlify will rebuild your site, to reflect these changes.
 
 If you haven't got a [netlify account](https://www.netlify.com/) already, head over and make one - it's completely free of charge.
 
-#### Step 1: Add Your New Site
+### Step 1: Add Your New Site
 Click the **"New Site"** button to get started.
 
 ![netlify New Site](/uploads/newsitebut.png)
 
-#### Step 2: Link to Your GitHub
+### Step 2: Link to Your GitHub
 Next you'll be brought to this screen, where you can choose between manual deploy or linking to GitHub or Bitbucket - we'll link with GitHub for this demonstration:
 ![Link to GitHub](/uploads/createsite.png)
 When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
 
 To link netlify with GitHub click the button **“Link to GitHub”**.
 
-#### Step 3: Authorize netlify
+### Step 3: Authorize netlify
 You can skip this step or rather it will be skipped automatically, if you already have an account with netlify set up to automatically login!
 
 If not, you'll be asked to provide your GitHub login details:
@@ -365,25 +365,25 @@ Like stated in the image above on the right, netlify doesn’t store your GitHub
 
 If you’d like to know more about the permissions netlify requests and why, you can check out our [documentation on GitHub Permissions](https://docs.GitHubnetlify.com/github-permissions/).
 
-#### Step 4: Choose Your Repo
+### Step 4: Choose Your Repo
 Once you've connected netlify with GitHub, you will be shown a list of your GitHub repositories, as seen below.
 
 ![nanoc_chooserepo.png](/uploads/nanoc_chooserepo.png)
 
 For the purpose of this tutorial we'll select the *“nanoc-demo”* repo we just pushed to GitHub.
 
-#### Step 5: Configure Your Settings
+### Step 5: Configure Your Settings
 Verify the configuration settings as seen in the screen shot below:
 
 ![nanoc_config.png](/uploads/nanoc_config.png)
 
 You shouldn't have to do anything, netlify has actually done it for you. Click the *'Save'* button and watch the magic unfold.
 
-#### Step 6: Build Your Site
+### Step 6: Build Your Site
 ![nanoc_building.png](/uploads/nanoc_building.png)
 The first time, assuming you haven't added copious amounts of content, netlify will build your Nanoc site very quickly. A console will let you know what's happening along the way. If you don't want to wait, simply do something else and you can always return and check the log file later, since netlify will keep the log of each build.
 
-#### Step 7: The End
+### Step 7: The End
 That's all there is to it.
 
 Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional customizing.
