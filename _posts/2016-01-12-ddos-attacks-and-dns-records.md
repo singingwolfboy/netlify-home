@@ -1,7 +1,7 @@
 ---
 title: "This Weekend's DDoS attack and What's in a (C)Name?"
 author: Matt Biilmann
-image: null
+image: /uploads/norse.jpg
 short_title: DDoS and DNS Records
 description: Your DNS Setup can have a great effect on performance and DDoS resilience.
 thumbnail: /uploads/ddos-attack.png
