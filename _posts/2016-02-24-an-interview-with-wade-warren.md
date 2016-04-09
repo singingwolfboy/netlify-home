@@ -8,7 +8,12 @@ description: "An interview about the value of static sites and CDN hosting with 
 thumbnail: /uploads/performance.jpg
 cmsUserSlug: ""
 date: 2016-02-24T00:00:00.000Z
-tags: null
+tags:
+  - interview
+  - wikia
+  - wade warren
+  - swt
+
 ---
 
 Wade Warren is a central figure when it comes to…well, the internet.

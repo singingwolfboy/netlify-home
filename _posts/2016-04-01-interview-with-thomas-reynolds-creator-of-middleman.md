@@ -8,7 +8,11 @@ description: "Thomas Reynolds talks to netlify about Middleman, Git and developi
 thumbnail: /uploads/thomasreynolds.jpeg
 cmsUserSlug: ""
 date: 2016-04-01T00:00:00.000Z
-tags: null
+tags:
+  - interview
+  - swt
+  - middleman
+  - thomas reynolds
 ---
 
 Thomas Reynolds is the Technical Director at famed Portland digital agency Instrument.

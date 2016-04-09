@@ -1,7 +1,6 @@
 ---
 title: Control your Post Processing
 author: Matt Biilmann
-image: null
 short_title: Better Post Processing
 description: Now netlify gives you detailed control over the post processing we do to your sites.
 thumbnail: /uploads/screen-shot-2013-07-15-at-11.09.27-pm.png
@@ -9,6 +8,7 @@ cmsUserSlug: ""
 date: 2015-10-31
 tags:
   - netlify
+  - news
   - features
   - post-processing
 ---

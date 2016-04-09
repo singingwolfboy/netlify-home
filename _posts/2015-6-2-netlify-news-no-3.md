@@ -1,6 +1,7 @@
 ---
 title: Netlify news no. 3
 author: Christian Bach
+image: /uploads/summer-vintage.jpg
 short_title: Our third newsletter
 description: "Form handling, open-sourced build image and much more!"
 thumbnail: /img/posts/thumbnails/newsletter-3.jpg

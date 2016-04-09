@@ -8,7 +8,11 @@ description: "Parker Moore chats with netlify about Jekyll, development and the 
 thumbnail: /uploads/parker.jpg
 cmsUserSlug: ""
 date: 2016-03-11T00:00:00.000Z
-tags: null
+tags:
+  - interview
+  - swt
+  - parker moore
+  - jekyll
 ---
 
 While there is a constantly growing roster of static web tools available for developers of both the professional and amateur stripe, none swings as much weight or garners as much attention as [Jekyll](https://jekyllrb.com/).

@@ -8,7 +8,16 @@ description: "ZURB's Geoff Kimball talks Foundation 6, Panini and Gulp"
 thumbnail: /uploads/geoffzurb.jpg
 cmsUserSlug: foundation-6-geoff-kimball
 date: 2016-03-03T00:00:00.000Z
-tags: null
+tags:
+  - interview
+  - swt
+  - foundation
+  - zurb
+  - panini
+  - gulp
+  - grunt
+  - geoff kimball
+  - nodejs
 ---
 
 Foundation hit the scene in 2011 when interaction design company ZURB decided to create a responsive front-end framework for development. Fast forward to today, and one open-source project is now three: Foundation for Sites, Foundation for Apps, and Foundation for Email.

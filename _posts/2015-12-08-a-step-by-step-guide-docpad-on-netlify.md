@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step guide: Docpad on netlify"
 author: Aaaron Autrand
-image: /uploads/docpad.jpg
+image: /uploads/docpad-screenshot.png
 image_caption: null
 short_title: Docpad on netlify
 description: A step-by-step guide on how to host a website built with static site generator Docpad.

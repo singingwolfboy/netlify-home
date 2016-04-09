@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step guide: Metalsmith on netlify"
 author: Jimmi Lee
-image: null
+image: /uploads/metalsmith-banner.png
 image_caption: null
 short_title: Metalsmith on netlify
 description: A short tutorial on the static site generator Metalsmith and how to host it on netlify (incl. continuous deployment).
@@ -17,7 +17,7 @@ Metalsmith is a fairly well known static site generator that bills itself as *An
 
 But enough talk, let's get to the meat and bones.
 
-In this tutorial we will set up a basic Metalsmith demonstration site, with a build file, static assets and some plugins. The aim of this site is to show a simple Metalsmith setup with continuous deployment on netlify using GitHub. 
+In this tutorial we will set up a basic Metalsmith demonstration site, with a build file, static assets and some plugins. The aim of this site is to show a simple Metalsmith setup with continuous deployment on netlify using GitHub.
 
 <!-- excerpt -->
 
@@ -36,7 +36,7 @@ Metalsmith is not only a static site generator, but can do a lot of other things
 This means it's extremely versatile, while remaining simple, but it also means that there's a bit more to be done on the setup side, than what we're used to from other static site generators.  
 
 ### 1. Create Folder Structure
-We'll start out by creating a simple folder structure for our project as outlined in the picture below, with a number of files. 
+We'll start out by creating a simple folder structure for our project as outlined in the picture below, with a number of files.
 
 Alternatively you can fork a clone of the empty structure [here](https://github.com/JimmiLee/metalsmith-demo-empty), complete with empty files, ready to be filled in.
 
@@ -49,9 +49,9 @@ The folder structure for this project:
 ### 2. Create .nvmrc file
 Did you notice the *.nvmrc* file in the tree above?
 
-The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named *.nvmrc* with the version inside. While you may not be using nvm yourself (you should really consider it), netlify will use this information when building your site for you. 
+The helpful program nvm or node version manager, has a little known feature that'll help you define what version of node you're running with your project, by simply adding a file to the root of the project named *.nvmrc* with the version inside. While you may not be using nvm yourself (you should really consider it), netlify will use this information when building your site for you.
 
-Since Metalsmith is a little picky with regards to what version of node it works with (anything after 0.12.x should do), we'll add the newest version number we know is running on netlify to this file. 
+Since Metalsmith is a little picky with regards to what version of node it works with (anything after 0.12.x should do), we'll add the newest version number we know is running on netlify to this file.
 
 To figure out which options we have, we open netlify's build image [here](https://github.com/netlify/build-image/blob/master/Dockerfile#L95) and from line 95 and down we find the various versions of node available, with version 5.1.0 being the newest.
 
@@ -61,13 +61,13 @@ In the *.nvmrc* file I write the following and save:
 stable
 ```
 
-Easy enough. To simply use the newest stable version available on netlify, we write `stable`. 
+Easy enough. To simply use the newest stable version available on netlify, we write `stable`.
 You could also write `5.1.0`, as seen in the build image, but as any newer version should also work flawlessly, we stick with `stable`.
 
 ### 3. Setup the Node Package manager
-To handle the various packages you will need to have node.js and npm installed, which are bundled together. 
+To handle the various packages you will need to have node.js and npm installed, which are bundled together.
 
-Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a *package.json* file with user feedback. 
+Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a *package.json* file with user feedback.
 
 Note that apart from the file, npm also creates a node_modules folder, to hold the various packages.
 Alternatively `npm init -f` will intialize the current directory and create a `package.json` file with default settings.
@@ -132,7 +132,7 @@ Metalsmith(__dirname)
 
 Did you notice a pattern here?
 
-First - for each plugin you want to install, you need to run the following command in terminal: 
+First - for each plugin you want to install, you need to run the following command in terminal:
 
 ```
 npm install plugin-name --save
@@ -248,15 +248,15 @@ I present to you the *page.hbt* file (in the templates directory):
 {{> footer}}
 ```
 
-To add the partials we simply insert the line `{{> partial-name }}` as seen above. 
+To add the partials we simply insert the line `{{> partial-name }}` as seen above.
 
 Let's move on to creating these partials.
 
 ### 11. Template Partials
-Template partials are useful for the elements that are part of every page, such as a footer and a header for example or perhaps your logo. In Metalsmith how these are handled comes down to your templating engine and in our case for this tutorial that means it comes down to the handlebars templating engine. 
+Template partials are useful for the elements that are part of every page, such as a footer and a header for example or perhaps your logo. In Metalsmith how these are handled comes down to your templating engine and in our case for this tutorial that means it comes down to the handlebars templating engine.
 
 First we create the partials files *header.hbt* and *footer.hbt* in the `templates/partials` directory.
-For the partials to work in Metalsmith, we need to register them in our build file. 
+For the partials to work in Metalsmith, we need to register them in our build file.
 
 Since Consolidate.js supports partials for handlebars, we have a nice and easy way of registering them.
 In the build file change the line with `.use(templates('handlebars'))` to the code below:
@@ -313,7 +313,7 @@ Notice the stylesheet link in our header.
 To make the site we're working on a little less bleak, we're going to add a stylesheet.
 
 ### 12. Add a Stylesheet
-We're going to simply add a stylesheet in the `src/styles` folder named *main.css* as referenced in our header. 
+We're going to simply add a stylesheet in the `src/styles` folder named *main.css* as referenced in our header.
 
 You can use any old external css stylesheet or create a new one. Once you run build, Metalsmith will copy this file over, duplicating the file structure and any other static assets you may have added in this simple manner.
 
@@ -328,34 +328,34 @@ npm install metalsmith-permalinks --save
 Apart from simply adding these two plugins to the build file, we also have to define the two collections we want to use, by giving them a pattern as seen below in our full updated *build.js* file:
 
 ```
-var Metalsmith = require('metalsmith'), 
-    markdown = require('metalsmith-markdown'), 
-    templates = require('metalsmith-templates'), 
-    collections = require('metalsmith-collections'), 
+var Metalsmith = require('metalsmith'),
+    markdown = require('metalsmith-markdown'),
+    templates = require('metalsmith-templates'),
+    collections = require('metalsmith-collections'),
     permalinks = require('metalsmith-permalinks');
 
-Metalsmith(__dirname) 
-    .use(collections({ 
-        pages: { 
-            pattern: 'content/pages/*.md' 
-        }, 
-        articles: { 
-            pattern: 'content/articles/*.md', 
-            sortBy: 'date' 
-        } 
-    })) 
-    .use(markdown()) 
-    .use(permalinks({ 
-        pattern: ':collections/:title' 
+Metalsmith(__dirname)
+    .use(collections({
+        pages: {
+            pattern: 'content/pages/*.md'
+        },
+        articles: {
+            pattern: 'content/articles/*.md',
+            sortBy: 'date'
+        }
+    }))
+    .use(markdown())
+    .use(permalinks({
+        pattern: ':collections/:title'
     }))  
-    .use(templates({ 
-        engine: 'handlebars', 
-        partials: { 
-            header: 'partials/header', 
-            footer: 'partials/footer' 
-        } 
-    })) 
-    .destination('./build') 
+    .use(templates({
+        engine: 'handlebars',
+        partials: {
+            header: 'partials/header',
+            footer: 'partials/footer'
+        }
+    }))
+    .destination('./build')
     .build(function (err) { if(err) console.log(err) })
 ```
 
@@ -405,7 +405,7 @@ permalink: false
 ---
 ```
 
-It's pretty self explanatory, as we've defined ourselves what YAML frontmatter makes sense through our implementation of Metalsmith. It's pretty much the same as the YAML we put with our about page, except for the added date and the permalink setting to false. 
+It's pretty self explanatory, as we've defined ourselves what YAML frontmatter makes sense through our implementation of Metalsmith. It's pretty much the same as the YAML we put with our about page, except for the added date and the permalink setting to false.
 
 #### 15. Create Articles Content Page
 We also need a page which can show our articles sorted by date in reverse.
@@ -439,7 +439,7 @@ For our blog template, we create a *blog.hbt* file in the templates folder and p
 {{> footer}}
 ```
 
-Remember the collections we made, aptly named pages and articles? 
+Remember the collections we made, aptly named pages and articles?
 
 Well, as mentioned it's easy to access these in the template and we're doing this with the `{{#each collections.articles}}` line in the template above.  The subsequent calls to `this.title` and `this.contents` are easy to comprehend and will print out the title and content for each of the files in the articles collection.
 
@@ -535,14 +535,14 @@ You will be asked to provide your GitHub login details:
 We need to let netlify and GitHub talk to each other, so review the permissions and then click authorize application.
 ![Authorize netlify](/uploads/authorization.png)
 
-Like it says in the image above on the right, netlify doesn’t store your GitHub access token on our servers! 
+Like it says in the image above on the right, netlify doesn’t store your GitHub access token on our servers!
 
-If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubnetlify.com/github-permissions/). 
+If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubnetlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 ![metalsmith_choose_repo.jpg](/uploads/metalsmith_choose_repo.jpg)
 Once you're connected to GitHub, netlify will show you a list of your GitHub repositories, as seen above.
-For the purpose of this tutorial we'll select the *“metalsmith-demo”* repo we just pushed to GitHub. 
+For the purpose of this tutorial we'll select the *“metalsmith-demo”* repo we just pushed to GitHub.
 
 ### Step 5: Configure Your Settings
 Fill in the configuration settings as seen in the screen shot below:

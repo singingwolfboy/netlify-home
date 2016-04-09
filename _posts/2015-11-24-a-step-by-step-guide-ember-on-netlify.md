@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step guide: Ember on netlify"
 author: Aaron Autrand
-image: /uploads/ember-cover.svg
+image: /uploads/ember-screenshot.png
 image_caption: null
 short_title: Ember on netlify
 description: A step-by-step guide on how to host Ember on netlify.
@@ -15,7 +15,7 @@ tags:
 ---
 
 Today, we’re going to look at how to host a webapp built with [Ember](http://emberjs.com/) on netlify, including setting up continuous deployment.
- 
+
 Ember is a great framework for creating awesome applications. In fact, [netlify CMS](https://github.com/netlify/netlify-cms) is made with Ember. It has a huge ecosystem and a great asset pipeline out of the box as well, and we’re hosting tons of webapps using Ember on netlify.
 
 Let's start from scratch. If you already have an Ember site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.

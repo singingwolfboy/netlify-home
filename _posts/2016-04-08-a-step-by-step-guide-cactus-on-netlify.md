@@ -1,14 +1,18 @@
 ---
 title: "A step-by-step guide: Cactus on netlify"
 author: Aaron Autrand
-image: null
+image: /uploads/cactus-and-sofa.jpg
 image_caption: ""
 short_title: Cactus CLI on netlify
 description: A guide to building and hosting a site created with Cactus on netlify.
 thumbnail: /uploads/cactusformac.png
 cmsUserSlug: ""
 date: 2020-04-08
-tags: null
+tags:
+  - tutorial
+  - cactus
+  - python
+  - django
 ---
 
 Let's take a look at building a site with Cactus, including continuous deployment.

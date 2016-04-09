@@ -1,7 +1,7 @@
 ---
 title: Netlify - Newsletter no. 2
 author: Christian Bach
-image: null
+image: /uploads/vintage-dance-party.jpg
 short_title: Our Second Newsletter
 description: "Netlify is live, we made front page of Hacker News and welcome to the Static Web-Tech SF Meetup"
 thumbnail: /img/posts/thumbnails/newsletter.png
@@ -12,15 +12,7 @@ tags:
   - newsletter
 ---
 
-Welcome
-
-A lot of things have happened since our last newsletter.
-
-
-## Netlify
-
-**Woohoo!**
-We’ve launched [netlify.com](https://www.netlify.com) and are now live, both with hosting of static sites and apps (as you knew it from [bitballoon.com](https://www.bitballoon.com)) & our continuous deployment service.
+Woohoo! We’ve launched [netlify.com](https://www.netlify.com) and are now live, both with hosting of static sites and apps (as you knew it from [bitballoon.com](https://www.bitballoon.com)) and our continuous deployment service.
 
 We want to thank our beta-testers for all their help!
 

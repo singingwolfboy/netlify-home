@@ -1,5 +1,5 @@
 ---
-title: Domain Aliases - as many as you like
+title: Domain Aliases–as many as you like
 author: Matt Biilmann
 image: null
 short_title: Domain Aliases
@@ -9,6 +9,7 @@ cmsUserSlug: ""
 date: 2015-10-30
 tags:
   - netlify
+  - news
   - features
   - domains
 ---

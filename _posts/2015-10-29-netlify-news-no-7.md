@@ -1,7 +1,7 @@
 ---
 title: netlify news no. 7
 author: Chris Bach
-image: null
+image: /uploads/radio-club-1920.jpg
 short_title: Our seventh newsletter
 description: "Netlify now 1 stop for all your prerendering needs, multiple domain aliases supported & testing your build locally easier than ever!"
 thumbnail: /uploads/dog-riders-harness-halloween-costume-mailman-3664.jpg
@@ -9,6 +9,7 @@ cmsUserSlug: ""
 date: 2015-10-29
 tags:
   - netlify
+  - news
   - newsletter
   - prerendering
   - domains
