@@ -6,7 +6,7 @@ short_title: Hexo Netlify CMS Template
 description: "A short tutorial about setting up Netlify's hexo-netlify-cms template"
 thumbnail: /uploads/hexologo.jpg
 cmsUserSlug: ""
-date: 2015-12-02T00:00:00.000Z
+date: 2020-12-02T00:00:00.000Z
 tags: null
 ---
 
