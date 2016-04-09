@@ -7,7 +7,7 @@ short_title: Cactus CLI on netlify
 description: A guide to building and hosting a site created with Cactus on netlify.
 thumbnail: /uploads/cactusformac.png
 cmsUserSlug: ""
-date: 2020-04-08
+date: 2016-04-08
 tags:
   - tutorial
   - cactus
