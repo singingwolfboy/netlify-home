@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step guide: Hosting Angular apps on netlify"
 author: Aaron Autrand
-image: null
+image: /uploads/angularjs-banner.jpg
 short_title: Angular apps on netlify
 description: A step-by-step guide on how to host your angular.js apps on netlify.
 thumbnail: /uploads/angular-js-copy.png
