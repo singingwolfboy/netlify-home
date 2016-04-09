@@ -2,7 +2,6 @@
 title: "A step-by-step guide: Cactus on netlify"
 author: Aaron Autrand
 image: null
-image_caption: ""
 short_title: Cactus CLI on netlify
 description: A guide to building and hosting a site created with Cactus on netlify.
 thumbnail: /uploads/cactusformac.png
@@ -15,10 +14,9 @@ Let's take a look at building a site with Cactus, including continuous deploymen
 
 Cactus is a modern build tool that runs on Python and uses Django's templating engine. Cactus has a lot of tricks up its sleeve, and even has a [Mac app](http://www.cactusformac.com/).
 
-The app doesn't work out of the box with netlify, and creating a site with the app and hosting on netlify will be the subject of another tutorial.
+The app doesn't work out of the box with netlify, so there are a few quick changes you'll need to make before you can deploy. Jump to [Created with Cactus App](#cactusapp) to make those changes.
 
-If you've already built your Cactus site, you can jump down to [Connecting to netlify](#netlifystart) to connect your site to netlify.
-
+If you've already built your Cactus site, you can jump down to [Connecting to netlify](#netlifystart).
 <!-- excerpt -->
 
 ## Installing Cactus
@@ -93,20 +91,60 @@ $ pip freeze > requirements.txt
 
 Okay, you're ready to go!
 
-Now it's time to push it to your repo of choice. Directions for GitHub follow here.
+Now it's time to push it to your repo of choice. What follows are directions for users of the CactusforMac app. You don't need them, so you can jump down to [Creating Your Git Repo](#gitrepo).
 
+<a id="cactusapp"></a>
+
+## **Created with Cactus App**
+
+If you created your site with the CactusforMac app, you know that it's set up out of the box to build on your machine and deploy to Amazon's S3. With netlify, the site will actually be built on our server (so that we can optimize it, making it lighter, smaller and faster) so you'll need to make a few changes before you can launch the site.
+
+First, navigate to the folder where your site lives. If you used the app's normal naming structure, it will be named something like `My Blog Site`. Python doesn't like spaces, so rename that folder to something like `my-site`.
+
+Next, open that folder and create a new file, and name it `.gitignore`
+
+Open `.gitignore` in your text editor, and paste in the following
+
+```
+/.build
+
+**/*.pyc
+*-env/
+```
+
+Finally, netlify needs to know what tools to use to build your site. If you have Python installed on your machine, that's as easy as opening your terminal and changing to your project folder
+
+```
+$ cd ~/PATH/TO/my-site
+```
+
+And then running 
+
+```
+$ pip freeze > requirements.txt
+```
+
+This creates a text file called `requirements.txt` in your project folder. Open that text file, and if you see the following line, delete it.
+
+```
+vboxapi==1.0
+```
+
+If the line isn't in your text file to begin with, that's fine.
+
+That's all you have to do. Now it's time to push to GitHub.
+
+<a id="gitrepo"></a>
 ## **Creating your Git Repo**
 
 Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
 
-Open Terminal (for Mac users) or the command prompt (for Windows and Linux users).
-
-For our purposes, let's call your new repo "cactus".
+Open the terminal.
 
 Change the current working directory to your local project.
 
 ```
-$ cd ~/PATH/TO/cactus/my-site
+$ cd ~/PATH/TO/my-site
 ```
 
 Initialize the local directory as a Git repository.
@@ -126,7 +164,7 @@ At the top of your GitHub repository's Quick Setup page, click the clipboard ico
 
 In Terminal, add the URL for the remote repository where your local repository will be pushed.
 ```
-git remote add origin Git_Repository_URL
+git remote add origin GIT_REPOSITORY_URL
 ```
 Verify your URL
 ```
