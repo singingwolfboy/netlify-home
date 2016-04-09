@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step guide: Gatsby on netlify"
 author: Aaron Autrand
-image: null
+image: /uploads/gatsby-leonardo.jpg
 short_title: Gatsby on netlify
 description: A short guide to help you set up Gatsby on netlify with continuous deployment.
 thumbnail: /uploads/gatsbyjs.png
