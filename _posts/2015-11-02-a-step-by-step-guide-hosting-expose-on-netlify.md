@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step guide: Hosting Expose on netlify"
 author: Aaron Autrand
-image: null
+image: /uploads/jack-ventures.jpg
 short_title: Host Exposé on netlify
 description: A step-by-step guide on how to host a site built with Exposé - A simple static site generator for photoessays written in Bash.
 thumbnail: /uploads/expose.jpg
@@ -14,6 +14,8 @@ tags:
 ---
 
 Today, we're going to look at how to host a photo and video portfolio built with [Expose](https://github.com/Jack000/Expose) on netlify, including setting up continuous deployment.
+
+Expose is a Bash script that turns images and videos into a photoessay similar to [jack.ventures](http://jack.ventures/) or [jack.works](http://jack.works/)--the author's personal blogs.
 
 With a few simple tweaks, Expose can work with netlify to continually and consistently update your photo and video content.
 
