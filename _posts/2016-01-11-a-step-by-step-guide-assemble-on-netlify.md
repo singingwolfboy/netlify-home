@@ -1,7 +1,7 @@
 ---
 title: "A step-by-step guide: Assemble on netlify"
 author: Aaron Autrand
-image: null
+image: /uploads/assemble-banner.png
 short_title: Assemble on netlify
 description: A step-by-step guide on how to host a website built with static site generator Assemble.
 thumbnail: /uploads/4475-thumb.png
@@ -20,7 +20,7 @@ Let's start from scratch. If you already have an Assemble site set up, you can s
 <!-- excerpt -->
 
 ## Installing Assemble
- 
+
 This guide assumes you have [Node.js](https://nodejs.org) installed.
 
 Since Assemble is a Grunt plugin, `grunt` must be installed first:
