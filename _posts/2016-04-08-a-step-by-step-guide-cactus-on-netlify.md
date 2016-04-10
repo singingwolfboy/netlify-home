@@ -113,7 +113,7 @@ Open `.gitignore` in your text editor, and paste in the following
 *-env/
 ```
 
-Finally, netlify needs to know what tools to use to build your site. Create a file called `requirements.txt` and enter in the following line, then save:
+Finally, netlify needs to know what tools to use to build your site. Create a file called `requirements.txt` and paste in the following line
 
 ```
 Cactus==3.3.3
