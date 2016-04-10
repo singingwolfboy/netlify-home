@@ -1,7 +1,7 @@
 ---
 title: Continuous Deployment
 author: Chris Bach
-image: null
+image: /uploads/modern_times_gears.jpg
 short_title: Continuous Deployment
 description: Automatically build and deploy every time you push to git. All part of netlify.
 thumbnail: /uploads/softwareupdate-icon.png
