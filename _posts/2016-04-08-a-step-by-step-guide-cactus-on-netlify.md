@@ -113,25 +113,11 @@ Open `.gitignore` in your text editor, and paste in the following
 *-env/
 ```
 
-Finally, netlify needs to know what tools to use to build your site. If you have Python installed on your machine, that's as easy as opening your terminal and changing to your project folder
+Finally, netlify needs to know what tools to use to build your site. Create a file called `requirements.txt` and enter in the following line, then save:
 
 ```
-$ cd ~/PATH/TO/my-site
+Cactus==3.3.3
 ```
-
-And then running 
-
-```
-$ pip freeze > requirements.txt
-```
-
-This creates a text file called `requirements.txt` in your project folder. Open that text file, and if you see the following line, delete it.
-
-```
-vboxapi==1.0
-```
-
-If the line isn't in your text file to begin with, that's fine.
 
 That's all you have to do. Now it's time to push to GitHub.
 
