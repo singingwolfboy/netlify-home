@@ -21,7 +21,15 @@ Log in to [app.netlify.com](https://app.netlify.com) and choose your site.
 
 First, make sure that your custom domain has been set. The domain name of your site must match the domain name on the SSL certificate.
 
+![ssldomain.png](/uploads/ssldomain.png)
+
 Next click `SSL` at the top of your page. Then click the button labeled `Provide Your Own Certificate`.
+
+![sslprovidebutton.png](/uploads/sslprovidebutton.png)
+
+A window will pop up that looks like this:
+
+![sslmanual.png](/uploads/sslmanual.png)
 
 In the top box, you'll paste in the contents of your PEM formatted certificate. PEM format is the format most widely used by Certificate authorities, and will usually have extensions of `.pem`, `.crt`, `.cer` or `.key`. The file will look like something like this:
 
