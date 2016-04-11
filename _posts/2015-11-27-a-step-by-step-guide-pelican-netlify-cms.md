@@ -8,6 +8,7 @@ thumbnail: /uploads/pelicanthumb.png
 cmsUserSlug: ""
 date: 2020-11-27T00:00:00.000Z
 tags: null
+published: false
 ---
 
 While static site generators with CMS capability may be a brand new thing, we did cover netlify CMS previously, with the Jekyll version of our templates [here](https://www.netlify.com/blog/2015/11/6/a-step-by-step-guide-jekyll-netlify-cms). Today we'll take a look at how to set up our pelican-netlify-cms template in much the same manner.

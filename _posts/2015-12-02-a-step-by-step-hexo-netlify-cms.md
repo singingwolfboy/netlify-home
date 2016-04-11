@@ -124,6 +124,7 @@ Once you're happy with the site and ready to deploy for production, it's time to
 First things first.
 
 ### 1. Web Configuration
+
 To make sure that the site works properly in production environment, we need to first open up and correct some settings in the file here:
 
 `/my-site-root/source/admin/index.ejs`
@@ -171,11 +172,13 @@ git push -u origin master
 Once it's done uploading the files (pushing them to GitHub), take a look at the repository online to check if everything looks correct. If you're happy with the result, it's time to connect with netlify.
 
 ## Connect to netlify
+
 We're ready to start a new project at netlify's to host our Hexo netlify CMS template.
 
 If you haven't made one already, create an account and login at [netlify](https://www.netlify.com/).
 
 ### 1. Create Site
+
 Creating a new site on netlify is intuitive and quick.
 
 ![netlify New Site](/uploads/newsitebut.png)

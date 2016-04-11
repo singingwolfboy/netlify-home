@@ -9,11 +9,12 @@ thumbnail: /uploads/sculpin_logo.png
 cmsUserSlug: ""
 date: 2016-03-29T00:00:00.000Z
 tags: null
+published: false
 ---
 
 Today we'll take a look at how to install and setup a basic [Sculpin](https://sculpin.io/) blog site with assets on GitHub, in continuous deployment on netlify.
 
-Sculpin is a fast static site generator, which uses Twig templates, is built on Symfony's HTTP Kernel and written in PHP. It's arguably the most mature and well documented static site generator written in PHP.
+Sculpin is a fast static site generator, which uses Twig templates, built on Symfony's HTTP Kernel and written in PHP. It's arguably the most mature and well documented static site generator written in PHP.
 
 For those unaware, PHP is a serverside language based on C and has long been used to make dynamic homepages. This isn't as common as static site generators written in Javascript or Ruby and it will be interesting to see how it works compared with these.
 

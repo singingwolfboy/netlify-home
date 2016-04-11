@@ -9,6 +9,7 @@ thumbnail: /uploads/metalsmith_thumb2.png
 cmsUserSlug: ""
 date: 2015-12-08T00:00:00.000Z
 tags: null
+published: false
 ---
 
 Today I'm writing about [Metalsmith](http://www.metalsmith.io/).
@@ -36,6 +37,7 @@ Metalsmith is not only a static site generator, but can do a lot of other things
 This means it's extremely versatile, while remaining simple, but it also means that there's a bit more to be done on the setup side, than what we're used to from other static site generators.  
 
 ### 1. Create Folder Structure
+
 We'll start out by creating a simple folder structure for our project as outlined in the picture below, with a number of files.
 
 Alternatively you can fork a clone of the empty structure [here](https://github.com/JimmiLee/metalsmith-demo-empty), complete with empty files, ready to be filled in.
@@ -65,6 +67,7 @@ Easy enough. To simply use the newest stable version available on netlify, we wr
 You could also write `5.1.0`, as seen in the build image, but as any newer version should also work flawlessly, we stick with `stable`.
 
 ### 3. Setup the Node Package manager
+
 To handle the various packages you will need to have node.js and npm installed, which are bundled together.
 
 Open a terminal window and cd to the root of your Metalsmith site (cd my-metalsmith-site) and use the `npm init` command to intialize the directory and create a *package.json* file with user feedback.
@@ -253,6 +256,7 @@ To add the partials we simply insert the line `{{> partial-name }}` as seen abov
 Let's move on to creating these partials.
 
 ### 11. Template Partials
+
 Template partials are useful for the elements that are part of every page, such as a footer and a header for example or perhaps your logo. In Metalsmith how these are handled comes down to your templating engine and in our case for this tutorial that means it comes down to the handlebars templating engine.
 
 First we create the partials files *header.hbt* and *footer.hbt* in the `templates/partials` directory.
@@ -313,6 +317,7 @@ Notice the stylesheet link in our header.
 To make the site we're working on a little less bleak, we're going to add a stylesheet.
 
 ### 12. Add a Stylesheet
+
 We're going to simply add a stylesheet in the `src/styles` folder named *main.css* as referenced in our header.
 
 You can use any old external css stylesheet or create a new one. Once you run build, Metalsmith will copy this file over, duplicating the file structure and any other static assets you may have added in this simple manner.

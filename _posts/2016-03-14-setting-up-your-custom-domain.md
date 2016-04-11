@@ -10,11 +10,13 @@ date: 2016-03-14T00:00:00.000Z
 tags: null
 ---
 
-So you've splashed out on a personal domain, and want to connect it to your site hosted on netlify. Great! Here, we'll walk you through how to connect your site to your custom domain from most of the popular domain name registrars.
+So you've splashed out on a personal domain, and want to connect it to your site hosted on netlify. Great!
 
-First, you want to  tell netlify to use your custom domain. You can do this through the web UI by clicking "Edit domain" when viewing your site.
+Here, we'll walk you through how to connect your site to your custom domain from most of the popular domain name registrars.
 
 <!-- excerpt -->
+
+First, you want to  tell netlify to use your custom domain. You can do this through the web UI by clicking "Edit domain" when viewing your site.
 
 ![set-custom-domain.jpg](/uploads/set-custom-domain.jpg)
 

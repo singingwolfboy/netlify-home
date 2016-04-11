@@ -8,6 +8,7 @@ thumbnail: /uploads/inkpaperlogo.png
 cmsUserSlug: ""
 date: 2020-11-24T00:00:00.000Z
 tags: null
+published: false
 ---
 
 Welcome to netlify and today's article about a new and exciting Chinese technology--the InkPaper static site generator.

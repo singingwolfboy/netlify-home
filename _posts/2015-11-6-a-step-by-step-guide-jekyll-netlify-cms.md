@@ -8,6 +8,7 @@ thumbnail: /uploads/netlifylogo.png
 cmsUserSlug: ""
 date: 2020-11-06T00:00:00.000Z
 tags: null
+published: false
 ---
 
 Welcome to netlify or should I say welcome to netlify CMS, the first static site CMS system that can easily be integrated with almost any static site generator!
