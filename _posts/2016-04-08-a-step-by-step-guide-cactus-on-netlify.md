@@ -2,7 +2,7 @@
 title: "A step-by-step guide: Cactus on netlify"
 author: Aaron Autrand
 image: null
-short_title: Cactus CLI on netlify
+short_title: Cactus on netlify
 description: A guide to building and hosting a site created with Cactus on netlify.
 thumbnail: /uploads/cactusformac.png
 cmsUserSlug: ""
