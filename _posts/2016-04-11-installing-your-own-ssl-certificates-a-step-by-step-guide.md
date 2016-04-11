@@ -7,7 +7,7 @@ short_title: Install Custom SSL Certs
 description: A step-by-step guide to securing your site with a custom SSL certificate.
 thumbnail: /uploads/ssllock.png
 cmsUserSlug: ""
-date: now
+date: 2016-04-11 
 tags: null
 ---
 
