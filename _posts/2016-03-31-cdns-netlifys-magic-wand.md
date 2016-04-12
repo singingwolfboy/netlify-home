@@ -11,21 +11,21 @@ date: 2020-03-31T00:00:00.000Z
 tags: null
 ---
 
-At netlify, we don't play fair. The ace up our sleeve (or at least one of them) is our CDN--or to be more precise, our CDNs, plural.
+At netlify, we make a very big deal about speed. 
 
-Content Delivery Networks (CDNs) are pretty simple - they function as local asset dumps. You pay for some bandwidth, and your images, videos and downloadable content sit there, in multiple places around the globe, taking the load off the server that serves up your page. The CDN nodes are geographically aware, and make sure that if you are working from a coffee shop in Tokyo, that He-Man video (you know, the one set to Four-Non Blondes) your laptop is requesting is coming from the server just up the street, not being pushed from a server farm in San Francisco. The whole purpose of a CDN is to put that video as close to users as possible to avoid latency issues.
+Sites on netlify are extremely fast, no matter where you are. Part of that is the tools used to build those sites, but an even bigger part is our CDN--or to be more precise, our CDNs, plural.
 
-To put it bluntly, CDN = faster internet.
+<!--excerpt-->
+
+Content Delivery Networks (CDNs) are pretty simple - they function as local asset dumps. You pay for some bandwidth, and your images, videos and downloadable content sit there, in multiple places around the globe, taking the load off the server that serves up your page. The CDN nodes are geographically aware, and make sure that if you are working from a coffee shop in Tokyo, that [He-Man video](https://www.youtube.com/watch?v=ZZ5LpwO-An4) your laptop is requesting is coming from the server just up the street, not being pushed from a server farm in San Francisco. The whole purpose of a CDN is to put that video as close to users as possible to avoid latency issues.
 
 A CDN also allows for much higher uptime. If one CDN server goes down, traffic just gets rerouted to the next closest server. Things like DDoS attacks are much less effective against a CDN than they are against a single server.
 
-Netlify has taken that to the next level. We use a dual-CDN setup to further optimize the serving of sites and assets. Large assets like video and images are on large-scale CDNs like Akamai. Their reach and size, with a huge number of nodes and massive amounts of storage, allow us to ensure that your assets are served at top speed for bottom dollar, thanks to Akamai's (and others') sheer scale.
+To put it bluntly, CDN = faster internet.
 
-What sets netlify apart from other hosts is our dedicated, intelligent CDN. Here's how it works:
+Netlify takes that to the next level, putting your entire site on CDN. We use a special dual-CDN setup to further optimize the serving of sites and assets. Your assets that would normally live on a huge, standard CDN do just that. But your site--the HTML, CSS, JS, etc--lives on our intelligent CDN, spread across the globe, just like your visitors.
 
-When you connect your git repository and trigger a deploy, we build your site just as you might on your local machine, and then push it to our CDN. Your HTML, JS, etc. lives on our CDN edge nodes, not just on one server, but all around the world.
-
-Here's where the intelligent part comes in. We add logic layers to a standard CDN setup. Those logic layers give us a significant amount of control, control that allows us to do things like instant cache invalidation, give you the ability to make rewrite/redirect and proxy rules, create and catalog build snapshots, allow rollbacks, and make sure all your site deploys are atomic. Without our dedicated CDN, the features that make netlify **netlify** just wouldn't be possible.
+We call it intelligent because we add logic layers to a standard CDN setup. Those logic layers give us a significant amount of control. That control allows us to do things like instant cache invalidation, give you the ability to make rewrite/redirect and proxy rules, create and catalog build snapshots, allow rollbacks, and make sure all your site deploys are atomic. Without our dedicated CDN, the features that make netlify **netlify** just wouldn't be possible.
 
 What does that mean for you? It means that our CDN edge nodes can make decisions normally made on the origin server. Requests for passwords, redirects and proxies don't bounce through server relays, they happen as close to your users as possible. When studies show that page abandonment hits 25% after four seconds, those milliseconds matter.
 
