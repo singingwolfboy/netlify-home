@@ -1,7 +1,7 @@
 ---
 title: "Installing Your Own SSL Certificates: A step-by-step guide"
 author: Aaron Autrand
-image: null
+image: /uploads/ssl-certificate.jpg
 image_caption: null
 short_title: Install Custom SSL Certs
 description: A step-by-step guide to securing your site with a custom SSL certificate.
