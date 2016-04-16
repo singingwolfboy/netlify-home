@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step guide: Punch on netlify"
+title: "A Step-by-Step Guide: Punch on Netlify"
 author: Jimmi Lee
 image: /uploads/punch.png
 short_title: Punch on netlify
@@ -7,7 +7,10 @@ description: "A short tutorial on how to set up Punch in continuous deployment o
 thumbnail: /uploads/punch_logo_400p.png
 cmsUserSlug: ""
 date: 2016-03-04T00:00:00.000Z
-tags: null
+tags:
+  - punch
+  - nodejs
+  - tutorial
 ---
 
 Today we’ll take a look at [Punch](http://laktek.github.io/punch/).

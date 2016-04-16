@@ -1,14 +1,15 @@
 ---
-title: Star Wars gone static
+title: Star Wars Gone Static
 author: Chris Bach
 image: /uploads/star_wars_web.jpg
 image_caption: null
-short_title: Star Wars gone static
+short_title: Star Wars Gone Static
 description: 3 Star Wars themed sites on netlify. Because of course.
 thumbnail: /uploads/screen-shot-2015-12-16-at-20.13.25.png
 cmsUserSlug: ""
 date: 2015-12-16T00:00:00.000Z
-tags: null
+tags:
+  - news
 ---
 
 ** No spoilers contained. Really. We haven’t even seen it yet **

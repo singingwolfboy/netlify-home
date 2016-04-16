@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step guide: Jekyll netlify CMS"
+title: "A Step-by-Step Guide: Jekyll Netlify CMS"
 author: Jimmi Lee
 image: null
 short_title: Setting up Jekyll with Netlify CMS

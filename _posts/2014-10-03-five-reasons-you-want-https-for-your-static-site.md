@@ -1,5 +1,5 @@
 ---
-title: Five Reasons you want HTTPS for your Static site
+title: Five Reasons You Want HTTPS for Your Static Site
 author: Mathias Biilmann
 image: /img/posts/lock.jpg
 short_title: Five Reasons for HTTPS
@@ -12,6 +12,8 @@ tags:
   - ssl
   - security
   - features
+  - seo
+  - analytics  
 ---
 
 *For information on how to setup SSL / HTTPS on netlify, please click [here](https://www.netlify.com/docs/ssl)*

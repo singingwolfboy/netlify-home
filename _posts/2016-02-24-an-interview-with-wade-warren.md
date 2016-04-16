@@ -1,5 +1,5 @@
 ---
-title: An interview with Wade Warren
+title: An Interview with Wade Warren
 author: Aaron Autrand
 image: /uploads/wade.jpg
 image_caption: null

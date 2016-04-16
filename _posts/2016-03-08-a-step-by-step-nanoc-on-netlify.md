@@ -1,13 +1,16 @@
 ---
-title: "A step-by-step guide: Nanoc on netlify"
+title: "A Step-by-Step Guide: Nanoc on Netlify"
 author: Jimmi Lee
 image: /uploads/nanoc.jpg
-short_title: Nanoc on netlify
+short_title: Nanoc on Netlify
 description: A short tutorial on the static site generator Nanoc and how to host it on netlify (+continuous deployment).
 thumbnail: /uploads/nanoc_logo.png
 cmsUserSlug: ""
 date: 2016-03-08T00:00:00.000Z
-tags: null
+tags:
+  - nanoc
+  - ruby
+  - tutorial
 ---
 
 Up until recently I had never even heard of [Nanoc](http://nanoc.ws/).

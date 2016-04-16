@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: InkPaper on netlify"
+title: "A Step-by-Step Guide: InkPaper on Netlify"
 author: Jimmi Lee
 image: null
-short_title: InkPaper on netlify
+short_title: InkPaper on Netlify
 description: A step-by-step guide on hosting sites made with static site generator InkPaper on netlify
 thumbnail: /uploads/inkpaperlogo.png
 cmsUserSlug: ""

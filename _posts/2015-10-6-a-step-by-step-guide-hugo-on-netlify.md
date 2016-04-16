@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Hugo on netlify"
+title: "A Step-by-Step Guide: Hugo on Netlify"
 author: Aaron Autrand
 image: /uploads/hugo.jpg
-short_title: Hosting Hugo  on netlify
+short_title: Hosting Hugo on Netlify
 description: A step-by-step guide on how to host a website made with static site generator Hugo.
 thumbnail: /uploads/hugo-logo-small.png
 cmsUserSlug: ""

@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Hexo on netlify"
+title: "A Step-by-Step Guide: Hexo on Netlify"
 author: Aaron Autrand
 image: /uploads/hexo-screenshot.png
-short_title: Hosting Hexo on netlify
+short_title: Hosting Hexo on Netlify
 description: A step-by-step guide on how to host a website built with static site generator Hexo.
 thumbnail: /uploads/6375567nnnnn.png
 cmsUserSlug: a-step-by-step-guide-hexo-on-netlify

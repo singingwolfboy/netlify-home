@@ -1,5 +1,5 @@
 ---
-title: Control your Post Processing
+title: Control Your Post Processing
 author: Matt Biilmann
 image: /uploads/magnum-dean.jpg
 short_title: Better Post Processing

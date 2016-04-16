@@ -1,8 +1,8 @@
 ---
-title: "A Great, Fast Static E-Commerce Experience With 6 Easy Tools"
+title: "A Great, Fast Static E-Commerce Experience with 6 Easy Tools"
 author: "Charles Ouellet "
 image: /uploads/snipcart.jpeg
-short_title: E-Commerce With Snipcart
+short_title: E-Commerce with Snipcart
 description: "Creating a Great, Fast Static E-Commerce Experience With 6 Easy Tools"
 thumbnail: /uploads/logo-snipcart.png
 cmsUserSlug: ""

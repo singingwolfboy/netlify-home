@@ -1,8 +1,8 @@
 ---
-title: netlify news no. 8
+title: Netlify News No. 8
 author: Chris Bach
 image: /uploads/new-york-times-newsroom.jpg
-short_title: Our eighth newsletter
+short_title: Our Eighth Newsletter
 description: "Netlify is now on Zapier, please check out the beta app. We're also introducing smarter redirects + more control over your postprocessing."
 thumbnail: /uploads/165674556.jpg
 cmsUserSlug: ""
@@ -10,7 +10,6 @@ date: 2015-12-02
 tags:
   - netlify
   - news
-  - newsletter
 ---
 
 Hi there.

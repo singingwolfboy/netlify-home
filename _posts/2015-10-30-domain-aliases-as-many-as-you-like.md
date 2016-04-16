@@ -1,5 +1,5 @@
 ---
-title: Domain Aliases–as many as you like
+title: Domain Aliases–as Many as You Like
 author: Matt Biilmann
 image: null
 short_title: Domain Aliases

@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Roots on netlify"
+title: "A Step-by-Step Guide: Roots on Netlify"
 author: Aaron Autrand
 image: /uploads/roots-screenshot.png
-short_title: Roots hosted on netlify
+short_title: Roots Hosted on Netlify
 description: A step-by-step guide on how to host a website built with static site generator Roots.
 thumbnail: /uploads/screen-shot-2015-10-22-at-18.01.40.png
 cmsUserSlug: ""

@@ -1,5 +1,5 @@
 ---
-title: "A step-by-step guide: Sculpin on netlify"
+title: "A Step-by-Step Guide: Sculpin on Netlify"
 author: Jimmi Lee
 image: /uploads/sculpin.png
 image_caption: null
@@ -8,8 +8,10 @@ description: "A guide to help you set up Sculpin on netlify in continuous deploy
 thumbnail: /uploads/sculpin_logo.png
 cmsUserSlug: ""
 date: 2016-03-29T00:00:00.000Z
-tags: null
-published: false
+tags:
+  - sculpin
+  - php
+  - tutorial
 ---
 
 Today we'll take a look at how to install and setup a basic [Sculpin](https://sculpin.io/) blog site with assets on GitHub, in continuous deployment on netlify.

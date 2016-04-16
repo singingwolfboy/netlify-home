@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Hosting Expose on netlify"
+title: "A Step-by-Step Guide: Hosting Exposé on Netlify"
 author: Aaron Autrand
 image: /uploads/jack-ventures.jpg
-short_title: Host Exposé on netlify
+short_title: Host Exposé on Netlify
 description: A step-by-step guide on how to host a site built with Exposé - A simple static site generator for photoessays written in Bash.
 thumbnail: /uploads/expose.jpg
 cmsUserSlug: ""
@@ -13,15 +13,15 @@ tags:
   - tutorial
 ---
 
-Today, we're going to look at how to host a photo and video portfolio built with [Expose](https://github.com/Jack000/Expose) on netlify, including setting up continuous deployment.
+Today, we're going to look at how to host a photo and video portfolio built with [Exposé](https://github.com/Jack000/Expose) on netlify, including setting up continuous deployment.
 
-Expose is a Bash script that turns images and videos into a photoessay similar to [jack.ventures](http://jack.ventures/) or [jack.works](http://jack.works/)--the author's personal blogs.
+Exposé is a Bash script that turns images and videos into a photoessay similar to [jack.ventures](http://jack.ventures/) or [jack.works](http://jack.works/)--the author's personal blogs.
 
-With a few simple tweaks, Expose can work with netlify to continually and consistently update your photo and video content.
+With a few simple tweaks, Exposé can work with netlify to continually and consistently update your photo and video content.
 
 <!-- excerpt -->
 
-## Installing Expose
+## Installing Exposé
 
 Let's begin by creating your project directory. For the purposes of this tutorial, let's call it `exposenetlify`:
 
@@ -35,7 +35,7 @@ Navigate to your newly created directory:
 $ cd PATH/TO/exposenetlify
 ```
 
-Now let's put Expose in that directory. The easiest way to do it is by adding Expose as a git submodule. This way, if the maintainer of Expose updates it, netlify will automatically use the updated version of Expose:
+Now let's put Exposé in that directory. The easiest way to do it is by adding Exposé as a git submodule. This way, if the maintainer of Exposé updates it, netlify will automatically use the updated version of Exposé:
 
 ```
 $ git init
@@ -66,7 +66,7 @@ images $ ../expose/expose.sh
 
 Sit back and relax. This will probably take a while, depending on the number of photos you have.
 
-Expose will compile your site into the `images/_site` folder. Inside it, you'll find each of your images in its own separate folder, containing each image in multiple sizes. In the folder containing the image subfolders, you'll also find a file called `index.html`. Double click `index.html` to get a preview of your new site.
+Exposé will compile your site into the `images/_site` folder. Inside it, you'll find each of your images in its own separate folder, containing each image in multiple sizes. In the folder containing the image subfolders, you'll also find a file called `index.html`. Double click `index.html` to get a preview of your new site.
 
 Like what you see? Great. Let's move on!
 

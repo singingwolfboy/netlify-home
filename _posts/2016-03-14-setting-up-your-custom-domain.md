@@ -1,13 +1,16 @@
 ---
-title: Setting Up Your Custom Domain
+title: Setting up Your Custom Domain
 author: Aaron Autrand
 image: /uploads/domains.jpg
-short_title: Setting Up Your Domain
+short_title: Setting up Your Domain
 description: A step-by-step walkthrough on how to point your custom domain to netlify.
 thumbnail: /uploads/lv55uzmx.png
 cmsUserSlug: ""
 date: 2016-03-14T00:00:00.000Z
-tags: null
+tags:
+  - tutorial
+  - domains
+  - dns
 ---
 
 So you've splashed out on a personal domain, and want to connect it to your site hosted on netlify. Great!

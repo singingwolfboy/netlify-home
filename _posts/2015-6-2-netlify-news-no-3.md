@@ -1,14 +1,14 @@
 ---
-title: Netlify news no. 3
+title: Netlify News No. 3
 author: Christian Bach
 image: /uploads/summer-vintage.jpg
-short_title: Our third newsletter
+short_title: Our Third Newsletter
 description: "Form handling, open-sourced build image and much more!"
 thumbnail: /img/posts/thumbnails/newsletter-3.jpg
 date: 2015-06-02
 tags:
   - netlify
-  - newsletter
+  - news
   - builds
   - forms
   - static web tech
