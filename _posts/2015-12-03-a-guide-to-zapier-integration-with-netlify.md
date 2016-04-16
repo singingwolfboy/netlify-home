@@ -1,8 +1,8 @@
 ---
-title: "A guide to Zapier integration with netlify "
+title: "A Guide to Zapier Integration with Netlify "
 author: Chris Bach
 image: null
-short_title: netlify Zapier app –a guide
+short_title: Netlify Zapier App Guide
 description: "Matt Highland made a video showing how to use netlify's form processing and Zapier to automate all formsubmissions into google docs."
 thumbnail: /uploads/144918195465336.png
 cmsUserSlug: ""

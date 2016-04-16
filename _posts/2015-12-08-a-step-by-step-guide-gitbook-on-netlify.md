@@ -1,9 +1,9 @@
 ---
-title: "A step-by-step guide: GitBook on netlify"
+title: "A Step-by-Step Guide: GitBook on Netlify"
 author: Aaron Autrand
 image: /uploads/gitbook.jpg
 image_caption: null
-short_title: GitBook on netlify
+short_title: GitBook on Netlify
 description: A step-by-step guide on how to host a website built with static site generator Gitbook.
 thumbnail: /uploads/gitbook.png
 cmsUserSlug: ""

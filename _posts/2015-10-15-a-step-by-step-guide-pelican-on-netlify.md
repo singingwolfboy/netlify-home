@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Pelican on netlify"
+title: "A Step-by-Step Guide: Pelican on Netlify"
 author: Aaron Autrand
 image: /uploads/pelican-screenshot.png
-short_title: Pelican on netlify
+short_title: Pelican on Netlify
 description: A step-by-step guide on how to host Pelican sites on netlify
 thumbnail: /uploads/2043492.png
 cmsUserSlug: ""

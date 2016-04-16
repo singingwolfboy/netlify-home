@@ -3,12 +3,15 @@ title: "CDNs: Netlify's Secret Sauce"
 author: Aaron Autrand
 image: /uploads/world-communications-by-eric-fischer.jpg
 image_caption: "Photo credit: [Eric Fischer](https://www.flickr.com/photos/walkingsf/6635655755)"
-short_title: "CDNs: netlify's magic wand"
+short_title: "CDNs: Netlify's Magic Wand"
 description: "Why netlify uses a dual-CDN setup, and why you should, too."
 thumbnail: /uploads/world.png
 cmsUserSlug: ""
 date: 2016-04-15T00:00:00.000Z
-tags: null
+tags:
+  - netlify
+  - features
+  - cdn
 ---
 
 At Netlify, we make a very big deal about speed.

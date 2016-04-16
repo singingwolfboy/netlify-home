@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Assemble on netlify"
+title: "A Step-by-Step Guide: Assemble on Netlify"
 author: Aaron Autrand
 image: /uploads/assemble-screenshot.png
-short_title: Assemble on netlify
+short_title: Assemble on Netlify
 description: A step-by-step guide on how to host a website built with static site generator Assemble.
 thumbnail: /uploads/4475-thumb.png
 cmsUserSlug: ""

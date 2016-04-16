@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Wintersmith on netlify"
+title: "A Step-by-Step Guide: Wintersmith on Netlify"
 author: Aaron Autrand
 image: /uploads/wintersmith-screenshot.png
-short_title: Wintersmith on netlify
+short_title: Wintersmith on Netlify
 description: A step-by-step guide on how to host a website built with static site generator Wintersmith.
 thumbnail: /uploads/wintersmith-og.png
 cmsUserSlug: ""

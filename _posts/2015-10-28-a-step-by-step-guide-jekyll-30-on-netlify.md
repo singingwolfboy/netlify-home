@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Jekyll (3.0) on netlify"
+title: "A Step-by-Step Guide: Jekyll (3.0) on Netlify"
 author: Aaron Autrand
 image: /uploads/jekyll-screenshot.png
-short_title: Host Jekyll with netlify
+short_title: Host Jekyll with Netlify
 description: A step-by-step guide on how to host a website built with static site generator Jekyll (3.0).
 thumbnail: /uploads/screen-shot-2015-10-28-at-09.png
 cmsUserSlug: ""

@@ -1,15 +1,17 @@
 ---
-title: "A step-by-step guide: Metalsmith on netlify"
+title: "A Step-by-Step Guide: Metalsmith on Netlify"
 author: Jimmi Lee
 image: /uploads/metalsmith-banner.png
 image_caption: null
-short_title: Metalsmith on netlify
+short_title: Metalsmith on Netlify
 description: A short tutorial on the static site generator Metalsmith and how to host it on netlify (incl. continuous deployment).
 thumbnail: /uploads/metalsmith_thumb2.png
 cmsUserSlug: ""
 date: 2015-12-08T00:00:00.000Z
-tags: null
-published: false
+tags:
+  - metalsmith
+  - nodejs
+  - tutorial
 ---
 
 Today I'm writing about [Metalsmith](http://www.metalsmith.io/).

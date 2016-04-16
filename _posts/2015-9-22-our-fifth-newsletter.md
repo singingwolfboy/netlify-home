@@ -2,14 +2,16 @@
 title: Our Fifth Newsletter
 author: Chris Bach
 image: /uploads/women-reading-newspaper.jpg
-short_title: "Our Fifth Newsletter "
+short_title: "Our Fifth Newsletter"
 description: "Plans and prices made much easier, with continuous deployment and support integrated in hosting plans."
 thumbnail: /uploads/tpirwordmark.png
 cmsUserSlug: ""
 date: 2015-09-22
 tags:
   - netlify
-  - newsletter
+  - news
+  - plans
+  - pricing
 ---
 
 Hi Everyone!

@@ -1,5 +1,5 @@
 ---
-title: Netlify - Newsletter no. 2
+title: Netlify News No. 2
 author: Christian Bach
 image: /uploads/vintage-dance-party.jpg
 short_title: Our Second Newsletter
@@ -9,7 +9,7 @@ cmsUserSlug: netlify-newsletter-no-2
 date: 2015-04-07
 tags:
   - netlify
-  - newsletter
+  - news
 ---
 
 Woohoo! We’ve launched [netlify.com](https://www.netlify.com) and are now live, both with hosting of static sites and apps (as you knew it from [bitballoon.com](https://www.bitballoon.com)) and our continuous deployment service.

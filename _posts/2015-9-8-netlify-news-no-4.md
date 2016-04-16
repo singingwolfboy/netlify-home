@@ -1,5 +1,5 @@
 ---
-"title": "Netlify news no. 4"
+"title": "Netlify News No. 4"
 "author": "Christian Bach"
 "image": "/uploads/overwhelmed-postman.jpg"
 "short_title": "Our Fourth Newsletter"
@@ -9,7 +9,7 @@
 "date": 2015-09-08
 "tags":
   - netlify
-  - newsletter
+  - news
   - clojure
   - leiningen
   - gitlab

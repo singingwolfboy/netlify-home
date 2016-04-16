@@ -1,9 +1,9 @@
 ---
-title: "A step-by-step guide: Ember on netlify"
+title: "A Step-by-Step Guide: Ember on Netlify"
 author: Aaron Autrand
 image: /uploads/ember-screenshot.png
 image_caption: null
-short_title: Ember on netlify
+short_title: Ember on Netlify
 description: A step-by-step guide on how to host Ember on netlify.
 thumbnail: /uploads/emberjs-logo.png
 cmsUserSlug: ""

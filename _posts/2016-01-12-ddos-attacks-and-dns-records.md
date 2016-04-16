@@ -1,5 +1,5 @@
 ---
-title: "This Weekend's DDoS attack and What's in a (C)Name?"
+title: "This Weekend's DDoS Attack and What's in a (C)Name?"
 author: Matt Biilmann
 image: /uploads/norse.jpg
 short_title: DDoS and DNS Records

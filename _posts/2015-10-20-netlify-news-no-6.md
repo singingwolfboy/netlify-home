@@ -1,5 +1,5 @@
 ---
-title: Netlify news no. 6
+title: Netlify News No. 6
 author: Chris Bach
 image: /uploads/michael-caine-newspaper.jpg
 short_title: Our Sixth Newsletter
@@ -10,7 +10,6 @@ date: 2015-10-20
 tags:
   - netlify
   - news
-  - newsletter
   - https
   - ssl
   - cdn

@@ -1,8 +1,8 @@
 ---
-title: Hosting Hugo on netlify — Insanely Fast Deploys
+title: Hosting Hugo on Netlify–Insanely Fast Deploys
 author: Mathias Biilmann
 image: /uploads/hugo-speed.jpg
-short_title: Hugo available on netlify
+short_title: Hugo Available on Netlify
 description: "From push to GitHub, until a new deploy is live on our CDN in 6 seconds for our test project!"
 thumbnail: /uploads/hugo-logo-small.png
 cmsUserSlug: hugo-on-netlify-insanely-fast-deploys

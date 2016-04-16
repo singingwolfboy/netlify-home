@@ -1,5 +1,5 @@
 ---
-title: "Installing Your Own SSL Certificates: A step-by-step guide"
+title: "Installing Your Own SSL Certificates: A Step-by-Step Guide"
 author: Aaron Autrand
 image: /uploads/ssl-certificate.jpg
 image_caption: null
@@ -8,7 +8,9 @@ description: A step-by-step guide to securing your site with a custom SSL certif
 thumbnail: /uploads/ssllock.png
 cmsUserSlug: ""
 date: 2016-04-11T00:00:00.000Z
-tags: null
+tags:
+  - tutorial
+  - ssl
 ---
 
 Netlify offers [free 1-click SSL](https://www.youtube.com/watch?v=k-9T0FYd-QU) with LetsEncrypt. It's the very definition of easy.

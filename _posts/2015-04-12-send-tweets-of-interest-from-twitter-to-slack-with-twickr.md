@@ -1,12 +1,12 @@
 ---
-title: Twickr — send tweets of interest from Twitter to Slack
+title: Twickr—Send Tweets of Interest from Twitter to Slack
 author: Mathias Biilmann
 image: /img/posts/twickr.png
-short_title: Send tweets to Slack
+short_title: Send Tweets to Slack
 description: Twickr is a small open-source tool for automatically sending tweets of interest to Slack
 thumbnail: /img/posts/thumbnails/twickr.png
 cmsUserSlug: twickr-send-tweets-of-interest-from-twitter-to-slack
-date: 2015-04-12 
+date: 2015-04-12
 tags:
   - open-source
   - twitter
