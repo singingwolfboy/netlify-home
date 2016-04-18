@@ -7,7 +7,7 @@ short_title: "React & Gatsby: Kyle Mathews"
 description: GatsbyJS creator Kyle Mathews talks about his love for developing with ReactJS
 thumbnail: /uploads/kyle.jpg
 cmsUserSlug: ""
-date: 2020-04-14T00:00:00.000Z
+date: 2020-04-18T00:00:00.000Z
 tags:
   - interview
   - swt
@@ -27,7 +27,7 @@ Kyle Mathews: I used Backbone.js to build JavaScript web apps for several years,
 ---
 > I think in JavaScript, you have to have a willingness to adapt to new stuff. There's a huge advantage to that, because new stuff is often significantly better than what you're doing now.
 
---- 
+---
 
 I'm a huge fan of React's component model because it allows you to encapsulate really neatly some pretty complex functionality and reuse that in multiple places. You can have a button component which does all sorts of sophisticated stuff and it wraps it all up in this neat little button component that you can import it and use it all across your site. Anyway, that's a very neat model that's proved very scalable and very powerful in a lot of stuff I've done.
 
