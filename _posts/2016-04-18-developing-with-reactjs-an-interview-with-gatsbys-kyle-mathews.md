@@ -20,6 +20,8 @@ With the backing of Facebook, the React programming language has made a huge spl
 
 React is used by Netflix, Imgur, Feedly, AirBnB and more. It exploded in popularity when Facebook open-sourced its Android- and iOS-focused kin React Native in March of 2015. One developer who has taken advantage of the toolkit on offer is Kyle Mathews, the creator of GatsbyJS. Mathews spoke to Netlify after the most recent Static Web Tech Meetup about the benefits of Gatsby, his love for development with React and the idea of JavaScript fatigue.
 
+<!-- excerpt -->
+
 Aaron Autrand: **What made you decide to go with the React toolkit?**
 
 Kyle Mathews: I used Backbone.js to build JavaScript web apps for several years, starting around 2011. Backbone's great, but it uses jQuery for doing all the DOM manipulation. The more complex your site got, the more tricky that got. One of ReactJS's biggest innovations is that they have a declarative model for generating DOM where you just say this is what I want my DOM to be and then ReactJS reconciles that declaration with the existing state of your DOM and then just changes it automatically. And that immediately got my attention because with Backbone, there's a lot of tedious moving. Manipulating the DOM and all that just immediately went away once I switched to React, so that was a huge win.
