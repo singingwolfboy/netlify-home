@@ -7,7 +7,7 @@ short_title: "React & Gatsby: Kyle Mathews"
 description: GatsbyJS creator Kyle Mathews talks about his love for developing with ReactJS
 thumbnail: /uploads/kyle.jpg
 cmsUserSlug: ""
-date: 2020-04-18T00:00:00.000Z
+date: 2016-04-18 
 tags:
   - interview
   - swt
