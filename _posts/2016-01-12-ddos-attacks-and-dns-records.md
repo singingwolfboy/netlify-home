@@ -20,15 +20,15 @@ Early Saturday morning we got alerted by Rackspace that a major DDoS attack was 
 
 The DDoS attack was a large, mostly UDP based, volumetric attack sending more than 40GB/s of sustained traffic and overwhelming the network switch in front of the balancer.
 
-Fortunately, the large majority of netlify sites kept working without any interruption of service as our system automatically detected the attack and started routing traffic away from Rackspace's Chicago data center.
+Fortunately, the large majority of Netlify sites kept working without any interruption of service as our system automatically detected the attack and started routing traffic away from Rackspace's Chicago data center.
 
 However, a small number of sites were affected and down from this. They differed from the rest by how their DNS was setup and they were primarily sites that were using the root domain as their canonical domain, rather than prefixing their site with www.
 
-As soon as we detected the problem, we tried to identify all sites affected by the DDoS attack and sent out instructions on how to mitigate this by changing a DNS record and directed them to the netlify docs that recommends a C-name setup as this prevents downtime from exactly this type of attack.
+As soon as we detected the problem, we tried to identify all sites affected by the DDoS attack and sent out instructions on how to mitigate this by changing a DNS record and directed them to the Netlify docs that recommends a C-name setup as this prevents downtime from exactly this type of attack.
 
 ## To WWW or not to WWW
 
-Our site for netlify is hosted on www.netlify.com, rather than netlify.com
+Our site for Netlify is hosted on www.netlify.com, rather than netlify.com
 
 We call `netlify.com` the `apex` domain or `root` domain.
 
@@ -54,7 +54,7 @@ For websites, there are 3 kinds of relevant records today:
 
   Returns another domain name that the browser should lookup instead
 
-When you configure a custom domain to point to a netlify site, we always recommend that you use a CNAME record pointing at `<yoursite>.netlify.com` (where `<yoursite>` depends on the name of your netlify site).
+When you configure a custom domain to point to a Netlify site, we always recommend that you use a CNAME record pointing at `<yoursite>.netlify.com` (where `<yoursite>` depends on the name of your Netlify site).
 
 Lets say you've configured `www.example.com` to return a CNAME pointing at `example.netlify.com`.
 
@@ -88,7 +88,7 @@ The problem is that an A record doesn't let us insert any traffic direction betw
 
 Because of this we **strongly recommend** that you always host your main site or app on `www` or any other subdomain (`app.example.com` is perfectly fine as well). This way you can use a CNAME record for the canonical site URL. You'll take full advantage of our globally distributed infrastructure and we can automatically route around any localized outage.
 
-The root domain at `example.com` will still work, but will simply redirect to `www.example.com`. With netlify this redirect happens straight on the CDN edge nodes and is extremely fast.
+The root domain at `example.com` will still work, but will simply redirect to `www.example.com`. With Netlify this redirect happens straight on the CDN edge nodes and is extremely fast.
 
 ## CNAME Flattening, ANAME or ALIAS Records
 
@@ -116,7 +116,7 @@ There are two benefits:
 
 However, there's also an important drawback:
 
-1. **The precision of the geographic lookups that netlify does might suffer**
+1. **The precision of the geographic lookups that Netlify does might suffer**
 
    We now do our lookup based on the IP of the DNS server rather than the IP of the end user, and for performance reason the DNS host will do some caching of IP lookups that can lower the precision.
 

@@ -3,7 +3,7 @@ title: "A Step-by-Step Guide: Gatsby on Netlify"
 author: Aaron Autrand
 image: /uploads/gatsby-leonardo.jpg
 short_title: Gatsby on Netlify
-description: A short guide to help you set up Gatsby on netlify with continuous deployment.
+description: A short guide to help you set up Gatsby on Netlify with continuous deployment.
 thumbnail: /uploads/gatsbyjs.png
 cmsUserSlug: ""
 date: 2016-02-24T00:00:00.000Z
@@ -14,7 +14,7 @@ tags:
   - tutorial
 ---
 
-Today, we’re going to look at how to host a website built with [Gatsby](https://github.com/gatsbyjs/gatsby) on netlify, including setting up continuous deployment.
+Today, we’re going to look at how to host a website built with [Gatsby](https://github.com/gatsbyjs/gatsby) on Netlify, including setting up continuous deployment.
 
 Gatsby is a new static site generator, but it’s gaining traction fast! It’s made in what’s probably the only thing as hot as Google’s ‘go’ right now, React.js. React is a hugely popular javascript framework out of Facebook.
 
@@ -54,20 +54,20 @@ $ cd ./gatsbynetlify
 $ npm install gatsby --save
 ```
 
-The above command inserts `gatsby` into the dependencies of your `package.json` file, which tells netlify what tools it needs to build your site. If you named your project `gatsby`, npm will refuse to add `gatsby` as a dependency of itself.
+The above command inserts `gatsby` into the dependencies of your `package.json` file, which tells Netlify what tools it needs to build your site. If you named your project `gatsby`, npm will refuse to add `gatsby` as a dependency of itself.
 
 Open the `pages` directory. In Gatsby, each article has its own directory, and inside that directory is the actual written content contained in a file called `index.md`. Create a folder called `netlify`, and then create a new text document inside that folder. Now you can add some content to that file.
 
 ```
 ---
-title: Gatsby on netlify
+title: Gatsby on Netlify
 date: "2015-12-14T22:12:03.284Z"
 layout: post
 readNext: "/hi-folks/"
 path: "/netlify/"
 ---
 
-This is how easy it is to start a new blog built with Gatsby and host it on netlify.
+This is how easy it is to start a new blog built with Gatsby and host it on Netlify.
 ```
 
 Once you are satisfied with your content, save the text file as `index.md`
@@ -84,15 +84,15 @@ Like what you see? Great. Let’s move on!
 
 ## Prepping for Build
 
-Netlify can use any number of versions of tools to build your site. But we need to tell netlify which versions to use. Since Gastby uses Node.js and NPM, we need to see which version you are running on your production machine. In the terminal enter the following:
+Netlify can use any number of versions of tools to build your site. But we need to tell Netlify which versions to use. Since Gastby uses Node.js and NPM, we need to see which version you are running on your production machine. In the terminal enter the following:
 
 ```
 $ node -v
 ```
 
-Now check to see if netlify supports your version of Node: [https://github.com/netlify/build-image/blob/master/Dockerfile#L93](https://github.com/netlify/build-image/blob/master/Dockerfile#L93). Look for a version close to yours (look for code along the lines of `nvm install v4.2.2` if your version is 4.2.x).
+Now check to see if Netlify supports your version of Node: [https://github.com/netlify/build-image/blob/master/Dockerfile#L93](https://github.com/netlify/build-image/blob/master/Dockerfile#L93). Look for a version close to yours (look for code along the lines of `nvm install v4.2.2` if your version is 4.2.x).
 
-To create a file to tell netlify which version of Node.js to use, enter the following command in the terminal:
+To create a file to tell Netlify which version of Node.js to use, enter the following command in the terminal:
 
 ```
 $ echo your.version.number > .nvmrc
@@ -154,17 +154,17 @@ Now, it’s time to push the changes in your local repository to GitHub.
 git push -u origin master
 ```
 
-Now that your assets are up and running on GitHub, let’s connect them to netlify.
+Now that your assets are up and running on GitHub, let’s connect them to Netlify.
 
 <a id="netlifystart"></a>
 
-## Connecting to netlify
+## Connecting to Netlify
 
 ### Step 1: Add Your New Site
 
 ![step 1 - add](https://cloud.githubusercontent.com/assets/6520639/9803638/717820a6-57d9-11e5-838f-d2a732eb0a41.png)
 
-Creating a new site on netlify is simple. Once you’ve logged in, you'll be taken to https://app.netlify.com/sites. If you’re just starting out, there’s only one option.
+Creating a new site on Netlify is simple. Once you’ve logged in, you'll be taken to https://app.netlify.com/sites. If you’re just starting out, there’s only one option.
 
 ### Step 2: Link to Your GitHub
 
@@ -172,21 +172,21 @@ Clicking “New Site” brings you to this screen:
 
 ![step 2 - link](https://cloud.githubusercontent.com/assets/6520639/9803637/7176ac8a-57d9-11e5-9b09-f43dc772a4f9.png)
 
-When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
+When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we’ll need to link netlify to GitHub. Click “Link to GitHub”.
+Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click “Link to GitHub”.
 
-### Step 3: Authorize netlify
+### Step 3: Authorize Netlify
 
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
-It’s time to allow netlify and GitHub to talk to each other. Clicking the “Authorize Application” button will do just that. Like it says in the image below, netlify doesn’t store your GitHub access token on our servers. If you’d like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It’s time to allow Netlify and GitHub to talk to each other. Clicking the “Authorize Application” button will do just that. Like it says in the image below, Netlify doesn’t store your GitHub access token on our servers. If you’d like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 
 ![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4Gatsby.png)
 
-Now that you’ve connected netlify and GitHub, you can see a list of your Git repos. There’s the **gatsby** repo we just pushed to GitHub. Let's select it.
+Now that you’ve connected Netlify and GitHub, you can see a list of your Git repos. There’s the **gatsby** repo we just pushed to GitHub. Let's select it.
 
 ### Step 5: Configure Your Settings
 
@@ -204,4 +204,4 @@ Now it’s time to sit back and relax. Go grab something cold to drink, scratch 
 
 ![step 7 - done](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step7Gatsby.png)
 
-Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
+Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!

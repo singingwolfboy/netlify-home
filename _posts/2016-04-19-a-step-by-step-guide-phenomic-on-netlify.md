@@ -11,7 +11,7 @@ date: 2016-04-19
 tags: null
 ---
 
-Today, we’re going to look at how to host a website built with [Phenomic](https://phenomic.io) on netlify, including setting up continuous deployment.
+Today, we’re going to look at how to host a website built with [Phenomic](https://phenomic.io) on Netlify, including setting up continuous deployment.
 
 Phenomic is a new static site generator built with ReactJS. React is a hugely popular javascript framework created in-house at Facebook.
 
@@ -161,15 +161,15 @@ Now, it’s time to push the changes in your local repository to GitHub.
 git push -u origin master
 ```
 
-Now that your assets are up and running on GitHub, let’s connect them to netlify.
+Now that your assets are up and running on GitHub, let’s connect them to Netlify.
 
-## Connecting to netlify
+## Connecting to Netlify
 
 ### Step 1: Add Your New Site
 
 ![step 1 - add](uploads/step1newsite.png)
 
-Creating a new site on netlify is simple. Once you’ve logged in, you'll be taken to https://app.netlify.com/sites. If you’re just starting out, there’s only one option.
+Creating a new site on Netlify is simple. Once you’ve logged in, you'll be taken to https://app.netlify.com/sites. If you’re just starting out, there’s only one option.
 
 ### Step 2: Link to Your GitHub
 
@@ -177,21 +177,21 @@ Clicking “New Site” brings you to this screen:
 
 ![step 2 - link](uploads/step2link.png)
 
-When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
+When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we’ll need to link netlify to GitHub. Click “Link to GitHub”.
+Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click “Link to GitHub”.
 
-### Step 3: Authorize netlify
+### Step 3: Authorize Netlify
 
 ![step 3 - authorize](uploads/step3authorize.png)
 
-It’s time to allow netlify and GitHub to talk to each other. Clicking the “Authorize Application” button will do just that. Like it says in the image below, netlify doesn’t store your GitHub access token on our servers. If you’d like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It’s time to allow Netlify and GitHub to talk to each other. Clicking the “Authorize Application” button will do just that. Like it says in the image below, Netlify doesn’t store your GitHub access token on our servers. If you’d like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 
 ![step 4 - repo](uploads/Step4phenomic.png)
 
-Now that you’ve connected netlify and GitHub, you can see a list of your Git repos. There’s the **gatsby** repo we just pushed to GitHub. Let's select it.
+Now that you’ve connected Netlify and GitHub, you can see a list of your Git repos. There’s the **phenomic** repo we just pushed to GitHub. Let's select it.
 
 ### Step 5: Configure Your Settings
 
@@ -209,4 +209,4 @@ Now it’s time to sit back and relax. The first build will take some time, as N
 
 ![step 7 - done](uploads/Step7phenomic.png)
 
-And...you're done! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
+And...you're done! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!
