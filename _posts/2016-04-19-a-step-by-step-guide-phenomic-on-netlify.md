@@ -7,7 +7,7 @@ short_title: Phenomic on Netlify
 description: A step-by-step guide on how to host Phenomic sites on Netlify
 thumbnail: /uploads/phenomic.jpg
 cmsUserSlug: ""
-date: now
+date: 2016-04-19
 tags: null
 ---
 
@@ -19,43 +19,54 @@ Phenomic is a new static site generator built with ReactJS. React is a hugely po
 
 Let’s start from scratch (if you already have a Phenomic site set up, you can skip down to [here](#netlifystart)).
 
-Before you get started, know that Phenomic uses Node.js v4.2. If you have a different version of node, we suggest installing `nvm` (the Node Version Manager) to allow you to change versions of node depending on the project. Learn about installing `nvm` [here](https://www.npmjs.com/package/nvm).
+Before you get started, know that Phenomic uses requires at least npm v3. If you have a different version of npm (which is installed along with node), we suggest installing `nvm` (the Node Version Manager) to allow you to change versions of node depending on the project. Different versions of node come with different versions of npm. Make sure your version of `node` is greater than `4.2.0`, and your version of `npm` is greater than `3.0.0`. Learn about installing `nvm` [here](https://www.npmjs.com/package/nvm).
 
 Open your terminal, and enter the following command
 
 ```
-$ nvm install 4.2
+$ nvm install 5.*
 ```
 
-This will install nodejs v4.2. Next, specify that you want to use this version with this command
+This will install the latest version of node (at the time of this writing, it's version 5.10.0). Next, specify that you want to use this version with this command
 
 ```
-$ nvm use 4.2
+$ nvm use VERSION_NUMBER
 ```
 
 With that out of the way, you can get started with Phenomic.
 
-First, create a directory for your new sites
+First, create a directory for your new sites.
 
 ```
 $ mkdir PATH/TO/phenomic-site
 ```
 
-Then change to that directory
+Then change to that directory.
 ```
 $ cd PATH/TO/phenomic-site
 ```
 
-Now you can install Phenomic
+Now you can install Phenomic.
 
 ```
-$ npm init --force
 $ npm install phenomic
+```
+
+In your terminal, you may see a few error messages that look something like this:
+
+```
+npm WARN phenomic@0.11.0 requires a peer of redux@^3.0.0 but none was installed.
+```
+Go ahead and ignore them for now, they'll be taken care of in the next two steps.
+
+Now that Phenomic is installed, you can set it up with this:
+
+```
 $ ./node_modules/.bin/phenomic setup
 ```
 Phenomic will ask you a few questions. Answer them as you see fit, and say no to the CNAME file. You can set that with your DNS provider once you've got your site up and running and want to connect a [custom domain](https://www.netlify.com/blog/2016/03/14/setting-up-your-custom-domain).
 
-You run `npm init` with the `--force` flag so that a `package.json` file will automatically be created, without having to answer any questions. If you want to edit your `package.json` and customize it, just open it in a text editor.
+
 
 Next, install the dependencies
 
@@ -77,15 +88,26 @@ Like what you see? Great. Let’s move on!
 
 ## Prepping for Build
 
-Netlify can use any number of versions of tools to build your site. Since Phenomic uses Node.js v4.2, you need to tell Netlify to use that version.
-
-To create a file to tell netlify which version of Node.js to use, enter the following command in the terminal:
+Netlify can use any number of versions of tools to build your site. But we need to tell Netlify which versions to use. Since Phenomic uses Node.js and NPM, we need to see which version you are running on your production machine. In the terminal enter the following:
 
 ```
-$ echo 4.2 > .nvmrc
+$ node -v
 ```
+
+The version (if you followed the `nvm` directions above) should be `5.10.0`
+
+Now check to see if Netlify supports your version of Node: https://github.com/netlify/build-image/blob/master/Dockerfile#L93. Look for a version close to yours (look for code along the lines of nvm install v5.1.0 if your version is 5.1.x).
+
+To create a file to tell Netlify which version of Node.js to use, enter the following command in the terminal:
+
+```
+$ echo your.version.number > .nvmrc
+```
+
+On the computer used to create this tutorial, the node version is v5.10.0, so version 5.5.0 works. Therefore, the command used was `echo 5.* > .nvmrc.` Your version number may be different.
 
 Now it’s time to push it to your repo of choice. Directions for GitHub follow here.
+
 
 ## Creating your Git Repo
 
