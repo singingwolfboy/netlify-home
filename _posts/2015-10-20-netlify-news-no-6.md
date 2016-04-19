@@ -23,11 +23,11 @@ Hope you’re having a great week.
 We'll get right to it.
 
 ## HTTP2.0
-As one of the very first CDNs to roll this out to all clients netlify CDN now supports HTTP 2.0 out of the box!! HTTP2 is enabled for all sites using HTTPS.
+As one of the very first CDNs to roll this out to all clients Netlify CDN now supports HTTP 2.0 out of the box!! HTTP2 is enabled for all sites using HTTPS.
 
 ## New CDN Points of Presence
 
-At netlify we have a multi layered CDN strategy: all assets, JavaScript, images, CSS, font files, etc., we serve out of Akamais CDN.
+At Netlify we have a multi layered CDN strategy: all assets, JavaScript, images, CSS, font files, etc., we serve out of Akamais CDN.
 
 <!-- excerpt -->
 
@@ -37,7 +37,7 @@ They have by far the most widespread infrastructure with PoPs (Points of Presenc
 
  Last week we rolled out new PoPs in South America, Australia and Asia, giving you much better time-to-first-byte in those regions!
 
- Here's a small speedtest that shows just how fast this makes a netlify site:
+ Here's a small speedtest that shows just how fast this makes a Netlify site:
 
  [https://performance.sucuri.net/domain/speedtest.netlify.com](https://performance.sucuri.net/domain/speedtest.netlify.com)
 
@@ -45,7 +45,7 @@ They have by far the most widespread infrastructure with PoPs (Points of Presenc
 
 Netlify now automatically sets up redirects to handle pretty, canonical URLs.
 
- If your source file is called /about.html, netlify will rewrite internal links in your HTML files to /about and automatically redirect /about/ to /about
+ If your source file is called /about.html, Netlify will rewrite internal links in your HTML files to /about and automatically redirect /about/ to /about
 
  If your source file is /about/index.html, then we’ll rewrite internal links to /about/ and automatically redirect /about to /about/
 

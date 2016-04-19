@@ -3,7 +3,7 @@ title: Introducing Smarter Redirects
 author: Matt Biilmann
 image: /uploads/signs.jpg
 short_title: Smarter Redirects
-description: "We just made netlify’s redirect engine smarter, to avoid chained redirects."
+description: "We just made Netlify’s redirect engine smarter, to avoid chained redirects."
 thumbnail: /uploads/301-redirect-sign.png
 cmsUserSlug: ""
 date: 2015-10-26
@@ -13,7 +13,7 @@ tags:
   - features
 ---
 
-We just made netlify’s redirect engine smarter.
+We just made Netlify’s redirect engine smarter.
 
 Now redirect rules that would lead to a chain of subsequent redirects will always be flattened into one efficient redirect rule.
 

@@ -19,7 +19,7 @@ tags:
 
 Hi everyone
 
-Summer is here (or should be) and we’re celebrating that with a quick recap of what’s new at netlify, the premium hosting service for modern static websites.
+Summer is here (or should be) and we’re celebrating that with a quick recap of what’s new at Netlify, the premium hosting service for modern static websites.
 
  **Form handling**
 
@@ -35,9 +35,9 @@ Read all about it [here](http://netlify.us2.list-manage1.com/track/click?u=3ca88
 
 Next up. While Google has gotten better at crawling JavaScript, you'll still need a prerender service if you're running a large content driven single page app that needs to be indexed.
 
- Which is why we are excited to announce that netlify now integrates with various prerender services for single page apps!
+ Which is why we are excited to announce that Netlify now integrates with various prerender services for single page apps!
 
- With netlify's prerender service, requests from crawlers get sent straight from our CDN nodes to your prerender backend of choice. In our initial tests we've seen very fast response time to search engines from the combination of netlify and prerender.io, which is really important since slow response times will hurt your ranking in Google.
+ With Netlify's prerender service, requests from crawlers get sent straight from our CDN nodes to your prerender backend of choice. In our initial tests we've seen very fast response time to search engines from the combination of Netlify and prerender.io, which is really important since slow response times will hurt your ranking in Google.
 
  **Open-Source Build Image**
 
@@ -47,7 +47,7 @@ Netlify uses a Docker container to isolate your builds and guarantee a clean bui
 
  **Specify your ruby / node version**
 
-Locking down the exact version of all your dependencies is really important if you want to guarantee reliable builds. Now netlify enables you to lock down the exact version of the programming language used to build your site!
+Locking down the exact version of all your dependencies is really important if you want to guarantee reliable builds. Now Netlify enables you to lock down the exact version of the programming language used to build your site!
 
  If you're using Ruby, just add a .ruby-version file to the root of your repository with the version of Ruby you're using. We currently only support version 2.1.2 and 2.2.1, but we'll add more versions to our [build image](http://netlify.us2.list-manage.com/track/click?u=3ca88a0cd26d026e590224d67&amp;id=87b38a4e88&amp;e=c456464faf) on request.
 
@@ -61,4 +61,4 @@ May all your websites enjoy ultra performance.
 
  Best regards
 
- Matt &amp; Chris from netlify
+ Matt &amp; Chris from Netlify

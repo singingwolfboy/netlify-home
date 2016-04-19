@@ -23,7 +23,7 @@ We've got lot's of big news, so we will get right to it!
 
 
 ## Prerendering
-If you’re using a single page app for a site that’s not behind a login, SEO is an important concern. Pre-rendering is the answer, and netlify has supported external prerendering services like prerender.io for a while.
+If you’re using a single page app for a site that’s not behind a login, SEO is an important concern. Pre-rendering is the answer, and Netlify has supported external prerendering services like prerender.io for a while.
 
 Now we’re proud to announce that Netlify has this feature built-in!
 
@@ -41,7 +41,7 @@ Our [open source build image](https://github.com/netlify/build-image) now comes 
 
 
 ## Domain Aliases
-Sometimes you have more than one domain that needs to resolve to the same website. Most other static hosts can only handle 1 domain per website, but with netlify’s new domain alias feature, you can easily point several domains or subdomains to the same site. Our flexible rewrite rules also makes it so you can handle different subdomains as folders within the same site!
+Sometimes you have more than one domain that needs to resolve to the same website. Most other static hosts can only handle 1 domain per website, but with Netlify’s new domain alias feature, you can easily point several domains or subdomains to the same site. Our flexible rewrite rules also makes it so you can handle different subdomains as folders within the same site!
 
  All for now. Have a great day, and come and hang out in our [gitter channel](http://gitter.im/netlify/community) if you wanna talk shop, or need help with anything!  
 
@@ -51,6 +51,6 @@ All the best,
 
 Matt &amp; Chris
 
-co-founders of netlify
+co-founders of Netlify
 
 @biilmann &amp; @chr_bach

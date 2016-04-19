@@ -13,9 +13,9 @@ tags:
   - tutorial
 ---
 
-Today, we're going to look at how to host a project built with [Jekyll](https://jekyllrb.com/) on netlify, including setting up continuous deployment.
+Today, we're going to look at how to host a project built with [Jekyll](https://jekyllrb.com/) on Netlify, including setting up continuous deployment.
 
-Let's start from scratch. If you already have a Jekyll site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
+Let's start from scratch. If you already have a Jekyll site set up, you can skip straight to the [Connecting to Netlify]({{ page.url }}#netlifystart) section.
 
 <!-- excerpt -->
 
@@ -52,7 +52,7 @@ Like what you see? Great, let's move on.
 
 ## **Preparing your project for GitHub**
 
-There's a few things you need to do before pushing your project to GitHub to make sure that your new site will play nicely with netlify.
+There's a few things you need to do before pushing your project to GitHub to make sure that your new site will play nicely with Netlify.
 
 In the terminal, run the following command:
 
@@ -77,7 +77,7 @@ Now run this command:
 ```
 $ bundle install
 ```
-This will install the `jekyll` gem and create a file called `Gemfile.lock.` This file will ensure that netlify always uses the same version of Jekyll that you used to build your site, thus avoiding any nasty surprises.
+This will install the `jekyll` gem and create a file called `Gemfile.lock.` This file will ensure that Netlify always uses the same version of Jekyll that you used to build your site, thus avoiding any nasty surprises.
 
 Finally, open `.gitignore` in your favorite text editor, and make sure that it includes `_site` on one of the lines. With that done, you are ready to push to GitHub.
 
@@ -117,11 +117,11 @@ Now, it's time to push the changes in your local repository to GitHub.
 git push -u origin master
 ```
 
-Now that your assets are up and running on GitHub, let's connect them to netlify.
+Now that your assets are up and running on GitHub, let's connect them to Netlify.
 
 <a id="netlifystart"></a>
 
-## **Connecting to netlify**
+## **Connecting to Netlify**
 
 ### Step 1: Add Your New Site
 
@@ -133,19 +133,19 @@ Clicking "New Site" brings you to this screen:
 
 ![step 2 - link](https://cloud.githubusercontent.com/assets/6520639/9803637/7176ac8a-57d9-11e5-9b09-f43dc772a4f9.png)
 
-When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
+When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, you'll need to link netlify to GitHub. Click "Link to GitHub".
+Since your assets are hosted on GitHub, you'll need to link Netlify to GitHub. Click "Link to GitHub".
 
-### Step 3: Authorize netlify
+### Step 3: Authorize Netlify
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
-It's time to allow netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It's time to allow Netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, Netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 ![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4Jekyll.png)
 
-Now that you've connected netlify and GitHub, you can see a list of your Git repos. There's the "jekyll" repo you just pushed to GitHub. Let's select it.
+Now that you've connected Netlify and GitHub, you can see a list of your Git repos. There's the "jekyll" repo you just pushed to GitHub. Let's select it.
 
 ### Step 5: Configure Your Settings
 ![step 5 - configure](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step5Jekyll.png)
@@ -162,4 +162,4 @@ Now it's time to sit back and relax. Go grab something cold to drink, scratch th
 
 ![step 7 - done](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step7Jekyll.png)
 
-Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
+Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!
