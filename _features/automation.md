@@ -1,7 +1,7 @@
 ---
 title: Automation
 icon_id: feature-prerendering
-description: "Let netlify automate your workflow. The separation of frontend and backend opens up a whole new world of possibilities. But it also means a lot of manual work, manually integrating and managing different tools and processes. Until now."
+description: "Let Netlify automate your workflow. The separation of frontend and backend opens up a whole new world of possibilities. But it also means a lot of manual work, manually integrating and managing different tools and processes. Until now."
 features:
   - title: Git Integration
     body: "Netlify pairs naturally with Git. If you use GitHub, GitLab, BitBucket or just your own private repo, we let you pull, change and push to manage your site."

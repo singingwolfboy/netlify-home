@@ -1,7 +1,7 @@
 ---
 title: Performance
 icon_id: feature-instant-cache-invalidation
-description: "Netlify is an ultra performant platform with nodes all over the world, the world's fastest DNS service, instant cache invalidation and much more. Put your site on netlify and watch your conversion rates skyrocket because of instant loads."
+description: "Netlify is an ultra performant platform with nodes all over the world, the world's fastest DNS service, instant cache invalidation and much more. Put your site on Netlify and watch your conversion rates skyrocket because of instant loads."
 features:
   - title: Global CDN
     body: "We have nodes across the globe to keep latency down. Utilizing our multilayered CDN we provide a scalable, globally consistent, fast version of any site."
