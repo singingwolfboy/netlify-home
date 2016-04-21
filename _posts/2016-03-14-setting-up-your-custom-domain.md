@@ -1,22 +1,25 @@
 ---
-title: Setting Up Your Custom Domain
+title: Setting up Your Custom Domain
 author: Aaron Autrand
 image: /uploads/domains.jpg
-short_title: Setting Up Your Domain
-description: A step-by-step walkthrough on how to point your custom domain to netlify.
+short_title: Setting up Your Domain
+description: A step-by-step walkthrough on how to point your custom domain to Netlify.
 thumbnail: /uploads/lv55uzmx.png
 cmsUserSlug: ""
 date: 2016-03-14T00:00:00.000Z
-tags: null
+tags:
+  - tutorial
+  - domains
+  - dns
 ---
 
-So you've splashed out on a personal domain, and want to connect it to your site hosted on netlify. Great!
+So you've splashed out on a personal domain, and want to connect it to your site hosted on Netlify. Great!
 
 Here, we'll walk you through how to connect your site to your custom domain from most of the popular domain name registrars.
 
 <!-- excerpt -->
 
-First, you want to  tell netlify to use your custom domain. You can do this through the web UI by clicking "Edit domain" when viewing your site.
+First, you want to  tell Netlify to use your custom domain. You can do this through the web UI by clicking "Edit domain" when viewing your site.
 
 ![set-custom-domain.jpg](/uploads/set-custom-domain.jpg)
 
@@ -44,7 +47,7 @@ Is it your first time setting up a custom domain? No worries, we can help with t
 
 ## Godaddy <a id="godaddy"></a>
 
-If you've purchased your domain on GoDaddy, follow these simple instructions to point it at your netlify site:
+If you've purchased your domain on GoDaddy, follow these simple instructions to point it at your Netlify site:
 
 Step 1: Log in to your GoDaddy account
 ![godaddy1.png](/uploads/godaddy1.png)
@@ -74,7 +77,7 @@ It could take up to 48 hours (but most likely won't) for the changes to go into 
 
 ## NameCheap<a id="namecheap"></a>
 
-If you've purchased your domain on NameCheap, follow these simple instructions to point it at your netlify site:
+If you've purchased your domain on NameCheap, follow these simple instructions to point it at your Netlify site:
 
 Step 1: In your dashboard, click  `Manage`
 ![namecheap1.png](/uploads/namecheap1.png)
@@ -88,11 +91,11 @@ Step 3: Under  `Type` select  `CNAME Record`. Make sure the  `Host` is set to  `
 Step 4: Under  `Type` select  `A Record`. Set the value to  `198.61.251.14` and click the green check mark
 ![namecheap4.png](/uploads/namecheap4.png)
 
-Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+Your custom domain is now pointing at your Netlify site. Remember, it may take up to a few hours for everything to work correctly.
 
 ## Google Domains <a id="googledomains"></a>
 
-If you've purchased your domain on Google Domains, follow these simple instructions to point it at your netlify site:
+If you've purchased your domain on Google Domains, follow these simple instructions to point it at your Netlify site:
 
 Step 1: Click the server icon under  `DNS`
 ![goog1.png](/uploads/goog1.png)
@@ -106,11 +109,11 @@ Step 3: Choose  `A` from the dropdown menu, and set the IPv4 address to  `198.61
 Step 4: Choose  `CNAME` from the dropdown, then set the first box to  `www` and enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites) in the  `Domain` box, then click  `Add`
 ![goog4.png](/uploads/goog4.png)
 
-Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+Your custom domain is now pointing at your Netlify site. Remember, it may take up to a few hours for everything to work correctly.
 
 ## DNSimple <a id="dnsimple"></a>
 
-If you've purchased your domain on DNSimple, follow these simple instructions to point it at your netlify site:
+If you've purchased your domain on DNSimple, follow these simple instructions to point it at your Netlify site:
 
 Step 1: From your dashboard, click the name of your domain
 ![dnsimple1.png](/uploads/dnsimple1.png)
@@ -121,17 +124,17 @@ Step 2: Click  `Services`
 Step 3: Click  `Add or edit services`
 ![dnsimple3.png](/uploads/dnsimple3.png)
 
-Step 4: Scroll down to netlify, then click  `Add service`
+Step 4: Scroll down to Netlify, then click  `Add service`
 ![dnsimple4.png](/uploads/dnsimple4.png)
 
 Step 5: Enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites) and then click  `Complete Netlify Setup`
 ![dnsimple5.png](/uploads/dnsimple5.png)
 
-Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+Your custom domain is now pointing at your Netlify site. Remember, it may take up to a few hours for everything to work correctly.
 
 ## DNS Made Easy <a id="madeeasy"></a>
 
-If you've purchased your domain on DNSimple, follow these simple instructions to point it at your netlify site:
+If you've purchased your domain on DNSimple, follow these simple instructions to point it at your Netlify site:
 
 Step 1: Click  `Domains`
 ![madeeasy1.png](/uploads/madeeasy1.png)
@@ -151,11 +154,11 @@ Step 5: Under  `CNAME Records` click the  `+` sign
 Step 6: In the  `Name` field enter  `www`, and in the  `Alias to` field enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites). Then click  `Submit`
 ![madeeasy6.png](/uploads/madeeasy6.png)
 
-Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+Your custom domain is now pointing at your Netlify site. Remember, it may take up to a few hours for everything to work correctly.
 
 ## 1and1 <a id="1and1"></a>
 
-If you've purchased your domain on 1and1, follow these simple instructions to point it at your netlify site:
+If you've purchased your domain on 1and1, follow these simple instructions to point it at your Netlify site:
 
 Step 1: After logging in to 1and1, click  `Domains` in the left sidebar  
 ![1and11.png](/uploads/1and11.png)
@@ -184,4 +187,4 @@ Step 8: Click the down arrow to expand your options, then click  `Edit DNS Setti
 Step 9: Scroll down to  `A/AAAA and CNAME Records`. Select  `CNAME`. In the  `Alias` field enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites). Then click  `Save`  
 ![1and19.png](/uploads/1and19.png)
 
-Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+Your custom domain is now pointing at your Netlify site. Remember, it may take up to a few hours for everything to work correctly.

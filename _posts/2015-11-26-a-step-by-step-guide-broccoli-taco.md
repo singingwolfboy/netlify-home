@@ -1,9 +1,9 @@
 ---
-title: "A step-by-step guide: Broccoli Taco"
+title: "A Step-by-Step Guide: Broccoli Taco"
 author: Jimmi Lee
 image: /uploads/broccoli-taco.jpg
-short_title: Broccoli Taco on netlify
-description: A step-by-step guide on how to get a site made with Broccoli Taco hosted on netlify.
+short_title: Broccoli Taco on Netlify
+description: A step-by-step guide on how to get a site made with Broccoli Taco hosted on Netlify.
 thumbnail: /uploads/broccoli-taco-logo.png
 cmsUserSlug: ""
 date: 2020-11-26T00:00:00.000Z
@@ -30,7 +30,7 @@ If you want to find out more about Broccoli Taco, head over to [Broccoli Taco's 
 
 <!-- excerpt -->
 
-Reportedly broccoli-taco is having issues with newer versions of node, so we switched to 0.12.7, after checking that it's available on [netlify's build image](https://github.com/netlify/build-image/blob/master/Dockerfile#L95). This image file is invaluable in determining how you build in a given project, as it defines what versions of the various package managers are available.
+Reportedly broccoli-taco is having issues with newer versions of node, so we switched to 0.12.7, after checking that it's available on [Netlify's build image](https://github.com/netlify/build-image/blob/master/Dockerfile#L95). This image file is invaluable in determining how you build in a given project, as it defines what versions of the various package managers are available.
 
 For information about installing and handling node.js using nvm please see [this guide](http://www.nearform.com/nodecrunch/nodejs-sudo-free/).
 
@@ -96,7 +96,7 @@ broccoli-taco build dist
 ## Setup your GitHub Repository
 <a id="githubstart"></a>
 
-We want to set up an online GitHub repository with our local environment and push our local files to this repository. Next, we'll connect netlify to the repository for our automatic build (i.e. whenever you push to GitHub, netlify will rebuild your site).
+We want to set up an online GitHub repository with our local environment and push our local files to this repository. Next, we'll connect Netlify to the repository for our automatic build (i.e. whenever you push to GitHub, Netlify will rebuild your site).
 
 ### 1. Create your Git Repo
 We start by creating a [GitHub](https://github.com/) repository for our broccoli-taco site and generator.
@@ -149,12 +149,12 @@ git push -u origin master
 
 All your files will be copied to your online repository. Once it's done, take a look at the repository online to check if everything looks correct.
 
-It's time to connect it with netlify.
+It's time to connect it with Netlify.
 
-## Connecting to netlify
+## Connecting to Netlify
 <a id="netlifystart"></a>
 
-Creating a new site on netlify is intuitive and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
+Creating a new site on Netlify is intuitive and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
 
 ### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
@@ -163,26 +163,26 @@ Click the *"New Site"* button (as seen above) to get started.
 ### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
-When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
+When you push to GitHub, Netlify does all the work. No more wasting time on manual deploying of updates or changes!
 
-Since we're hosting the site assets on GitHub, we’ll need to link netlify with GitHub. Click the button *“Link to GitHub”*.
+Since we're hosting the site assets on GitHub, we’ll need to link Netlify with GitHub. Click the button *“Link to GitHub”*.
 
-### Step 3: Authorize netlify
-You can skip this step, if you already have an account with netlify set up to automatically login!
+### Step 3: Authorize Netlify
+You can skip this step, if you already have an account with Netlify set up to automatically login!
 
 You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
 
-We need to let netlify and GitHub talk to each other, so review the permissions and then click authorize application.
+We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
 ![Authorize netlify](/uploads/authorization.png)
 
-Like it says in the image above on the right, netlify doesn’t store your GitHub access token on our servers!
+Like it says in the image above on the right, Netlify doesn’t store your GitHub access token on our servers!
 
-If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/).
+If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 <PICTURE - ADD choose repo broccoli-taco-demo PIC>
-Once you're connected to GitHub, netlify will show you a list of your GitHub repositories, as seen above.
+Once you're connected to GitHub, Netlify will show you a list of your GitHub repositories, as seen above.
 For the purpose of this tutorial we'll select the *“broccoli-taco-demo”* repo we just pushed to GitHub.
 
 ### Step 5: Configure Your Settings
@@ -193,12 +193,12 @@ Click the *'Save'* button and watch the magic unfold.
 
 ### Step 6: Build Your Site
 <PICTURE - ADD site building PIC>
-Once you click save, netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and netlify will do the rest, while you watch the progress.
+Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
 ### Step 7: The End
 That's it.
 
-Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
+Once Netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
 <PICTURE - ADD DONE PIC>
 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.

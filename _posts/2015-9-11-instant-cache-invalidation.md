@@ -3,7 +3,7 @@ title: Instant Cache Invalidation
 author: Chris Bach
 image: null
 short_title: Instant Cache Invalidation
-description: "Instant Cache Invalidation is definitively part of netlify's rocketjuice. Learn all about it here."
+description: "Instant Cache Invalidation is definitively part of Netlify's rocketjuice. Learn all about it here."
 thumbnail: /uploads/instant-cache-thumb.jpg
 cmsUserSlug: ""
 date: 2015-09-11
@@ -14,10 +14,10 @@ tags:
   - cache invalidation
 ---
 
-> "There are only two hard problems in Computer Science: Cache Invalidation and naming things." 
+> "There are only two hard problems in Computer Science: Cache Invalidation and naming things."
 > _– Phil Karlton_
 
-While we’d rate our ability to name things to be fairly average, Instant Cache Invalidation is definitely part of netlify’s rocketjuice.
+While we’d rate our ability to name things to be fairly average, Instant Cache Invalidation is definitely part of Netlify’s rocketjuice.
 
 Here is a bit about what it actually means, and why it’s important.
 
@@ -42,7 +42,7 @@ This is what is called Cache Invalidation: Clearing a cache, replacing the old f
 
 ## The problem
 
-Except for netlify, all CDN hosting services for static sites (that actually cache sites) make you wait anywhere from 10 minutes to several hours for your changes to be invalidated. So in other words, once you publish a change in your site, you have to wait to see it live.
+Except for Netlify, all CDN hosting services for static sites (that actually cache sites) make you wait anywhere from 10 minutes to several hours for your changes to be invalidated. So in other words, once you publish a change in your site, you have to wait to see it live.
 
 Many find this to be a dealbreaker. They need to make sure that the changes they’ve made look like they’re supposed to right away. Which is fair enough. A marketing employee doesn’t really want to wait an hour to find out they have a logo (in the wrong color) covering half of the dropdown menu when the site is viewed in Chrome…
 
@@ -62,7 +62,7 @@ Most CDN services will have you choose between caching aggressively and having t
 
 ## The solution
 
-With netlify you get the best of both Worlds.
+With Netlify you get the best of both Worlds.
 
 Netlify is the only CDN hosting service that provides INSTANT cache invalidation
 
@@ -80,7 +80,7 @@ So, you get a highly cached site which makes it load ultra fast. But at the same
 
 ## The tech part
 
-When you deploy a site, **netlify** fingerprints all links to assets like CSS files, images, font files or your JavaScript, and serve them straight out of Akamai with caching headers that tells both browsers and Akamai to cache them forever. Akamai have the largest CDN infrastructure in the world, and can serve these kind of assets with incredible performance, from servers as close as possible to the end-users.
+When you deploy a site, **Netlify** fingerprints all links to assets like CSS files, images, font files or your JavaScript, and serve them straight out of Akamai with caching headers that tells both browsers and Akamai to cache them forever. Akamai have the largest CDN infrastructure in the world, and can serve these kind of assets with incredible performance, from servers as close as possible to the end-users.
 
 The actual HTML files however are hosted on our own special-purpose CDN. It's highly optimised for a super high cache-hit rate, and for getting the best possible time to first byte, while being able to instantly invalidate all HTML files that changed after an update to a site.
 

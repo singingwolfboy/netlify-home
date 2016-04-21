@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Hosting Expose on netlify"
+title: "A Step-by-Step Guide: Hosting Exposé on Netlify"
 author: Aaron Autrand
 image: /uploads/jack-ventures.jpg
-short_title: Host Exposé on netlify
+short_title: Host Exposé on Netlify
 description: A step-by-step guide on how to host a site built with Exposé - A simple static site generator for photoessays written in Bash.
 thumbnail: /uploads/expose.jpg
 cmsUserSlug: ""
@@ -13,15 +13,15 @@ tags:
   - tutorial
 ---
 
-Today, we're going to look at how to host a photo and video portfolio built with [Expose](https://github.com/Jack000/Expose) on netlify, including setting up continuous deployment.
+Today, we're going to look at how to host a photo and video portfolio built with [Exposé](https://github.com/Jack000/Expose) on Netlify, including setting up continuous deployment.
 
-Expose is a Bash script that turns images and videos into a photoessay similar to [jack.ventures](http://jack.ventures/) or [jack.works](http://jack.works/)--the author's personal blogs.
+Exposé is a Bash script that turns images and videos into a photoessay similar to [jack.ventures](http://jack.ventures/) or [jack.works](http://jack.works/)--the author's personal blogs.
 
-With a few simple tweaks, Expose can work with netlify to continually and consistently update your photo and video content.
+With a few simple tweaks, Exposé can work with Netlify to continually and consistently update your photo and video content.
 
 <!-- excerpt -->
 
-## Installing Expose
+## Installing Exposé
 
 Let's begin by creating your project directory. For the purposes of this tutorial, let's call it `exposenetlify`:
 
@@ -35,7 +35,7 @@ Navigate to your newly created directory:
 $ cd PATH/TO/exposenetlify
 ```
 
-Now let's put Expose in that directory. The easiest way to do it is by adding Expose as a git submodule. This way, if the maintainer of Expose updates it, netlify will automatically use the updated version of Expose:
+Now let's put Exposé in that directory. The easiest way to do it is by adding Exposé as a git submodule. This way, if the maintainer of Exposé updates it, Netlify will automatically use the updated version of Exposé:
 
 ```
 $ git init
@@ -66,7 +66,7 @@ images $ ../expose/expose.sh
 
 Sit back and relax. This will probably take a while, depending on the number of photos you have.
 
-Expose will compile your site into the `images/_site` folder. Inside it, you'll find each of your images in its own separate folder, containing each image in multiple sizes. In the folder containing the image subfolders, you'll also find a file called `index.html`. Double click `index.html` to get a preview of your new site.
+Exposé will compile your site into the `images/_site` folder. Inside it, you'll find each of your images in its own separate folder, containing each image in multiple sizes. In the folder containing the image subfolders, you'll also find a file called `index.html`. Double click `index.html` to get a preview of your new site.
 
 Like what you see? Great. Let's move on!
 
@@ -123,35 +123,35 @@ Now, it's time to push the changes in your local repository to GitHub.
 git push -u origin master
 ```
 
-Now that your assets are up and running on GitHub, let's connect them to netlify.
+Now that your assets are up and running on GitHub, let's connect them to Netlify.
 
 <a id="netlifystart"></a>
 
-## Connecting to netlify
+## Connecting to Netlify
 
 ### Step 1: Add Your New Site
 
 ![step 1 - add](https://cloud.githubusercontent.com/assets/6520639/9803638/717820a6-57d9-11e5-838f-d2a732eb0a41.png)
-Creating a new site on netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
+Creating a new site on Netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
 
 ### Step 2: Link to Your GitHub
 Clicking "New Site" brings you to this screen:
 
 ![step 2 - link](https://cloud.githubusercontent.com/assets/6520639/9803637/7176ac8a-57d9-11e5-9b09-f43dc772a4f9.png)
 
-When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
+When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we'll need to link netlify to GitHub. Click "Link to GitHub".
+Since your assets are hosted on GitHub, we'll need to link Netlify to GitHub. Click "Link to GitHub".
 
-### Step 3: Authorize netlify
+### Step 3: Authorize Netlify
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
-It's time to allow netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It's time to allow Netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, Netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 ![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4Expose.png)
 
-Now that you've connected netlify and GitHub, you can see a list of your Git repos. There's the "expose" repo we just pushed to GitHub. Let's select it.
+Now that you've connected Netlify and GitHub, you can see a list of your Git repos. There's the "expose" repo we just pushed to GitHub. Let's select it.
 
 ### Step 5: Configure Your Settings
 ![step 5 - configure](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step5Expose.png)
@@ -168,4 +168,4 @@ Now it's time to sit back and relax. Go grab something cold to drink, scratch th
 
 ![step 7 - done](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step7Expose.png)
 
-Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
+Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!

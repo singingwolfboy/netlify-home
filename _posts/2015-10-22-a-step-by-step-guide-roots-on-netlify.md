@@ -1,8 +1,8 @@
 ---
-title: "A step-by-step guide: Roots on netlify"
+title: "A Step-by-Step Guide: Roots on Netlify"
 author: Aaron Autrand
 image: /uploads/roots-screenshot.png
-short_title: Roots hosted on netlify
+short_title: Roots Hosted on Netlify
 description: A step-by-step guide on how to host a website built with static site generator Roots.
 thumbnail: /uploads/screen-shot-2015-10-22-at-18.01.40.png
 cmsUserSlug: ""
@@ -13,9 +13,9 @@ tags:
   - tutorial
 ---
 
-Today, we're going to look at how to host a website built with [Roots](http://roots.cx/) on netlify, including setting up continuous deployment.
+Today, we're going to look at how to host a website built with [Roots](http://roots.cx/) on Netlify, including setting up continuous deployment.
 
-Let's start from scratch. If you already have a Roots site set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
+Let's start from scratch. If you already have a Roots site set up, you can skip straight to the [Connecting to Netlify]({{ page.url }}#netlifystart) section.
 
 <!-- excerpt -->
 
@@ -47,7 +47,7 @@ $ cd ./rootsnetlify
 ```
 $ npm install roots --save
 ```
-The above command inserts `roots` into the dependencies of your `package.json` file, which tells netlify what tools it needs to build your site. If you named your project `roots`, npm will refuse to add `roots` as a dependency of itself.
+The above command inserts `roots` into the dependencies of your `package.json` file, which tells Netlify what tools it needs to build your site. If you named your project `roots`, npm will refuse to add `roots` as a dependency of itself.
 
 In the `views` folder, you'll find a file called index.jade. Open it in your favorite text editor, and add some content in markdown below the `:marked` line:
 
@@ -55,9 +55,9 @@ In the `views` folder, you'll find a file called index.jade. Open it in your fav
 extends layout
 
 block content
-  h3 Roots on netlify!
+  h3 Roots on Netlify!
   :marked
-    It's easy to build a site with Roots and deploy it on netlify
+    It's easy to build a site with Roots and deploy it on Netlify
 ```
 It's time to display your content. Use this command to generate your site:
 
@@ -113,7 +113,7 @@ Now, it's time to push the changes in your local repository to GitHub.
 git push origin master
 ```
 
-Now that your assets are up and running on GitHub, let's connect them to netlify.
+Now that your assets are up and running on GitHub, let's connect them to Netlify.
 
 <a id="netlifystart"></a>
 
@@ -122,26 +122,26 @@ Now that your assets are up and running on GitHub, let's connect them to netlify
 ### Step 1: Add Your New Site
 
 ![step 1 - add](https://cloud.githubusercontent.com/assets/6520639/9803638/717820a6-57d9-11e5-838f-d2a732eb0a41.png)
-Creating a new site on netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
+Creating a new site on Netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
 
 ### Step 2: Link to Your GitHub
 Clicking "New Site" brings you to this screen:
 
 ![step 2 - link](https://cloud.githubusercontent.com/assets/6520639/9803637/7176ac8a-57d9-11e5-9b09-f43dc772a4f9.png)
 
-When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
+When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we'll need to link netlify to GitHub. Click "Link to Github".
+Since your assets are hosted on GitHub, we'll need to link Netlify to GitHub. Click "Link to Github".
 
-### Step 3: Authorize netlify
+### Step 3: Authorize Netlify
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
-It's time to allow netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It's time to allow Netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, Netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 ![step 4 - repo](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step4Roots.png)
 
-Now that you've connected netlify and GitHub, you can see a list of your Git repos. There's the "roots" repo we just pushed to GitHub. Let's select it.
+Now that you've connected Netlify and GitHub, you can see a list of your Git repos. There's the "roots" repo we just pushed to GitHub. Let's select it.
 
 ### Step 5: Configure Your Settings
 ![step 5 - configure](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step5Roots.png)
@@ -158,4 +158,4 @@ Now it's time to sit back and relax. Go grab something cold to drink, scratch th
 
 ![step 7 - done](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step7Roots.png)
 
-Wait, you thought there was going to be more? Nope! netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
+Wait, you thought there was going to be more? Nope! Netlify has done it all for you, including giving your site a temporary name. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!

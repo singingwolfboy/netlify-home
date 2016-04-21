@@ -1,9 +1,9 @@
 ---
-title: "A step-by-step guide: GitBook on netlify"
+title: "A Step-by-Step Guide: GitBook on Netlify"
 author: Aaron Autrand
 image: /uploads/gitbook.jpg
 image_caption: null
-short_title: GitBook on netlify
+short_title: GitBook on Netlify
 description: A step-by-step guide on how to host a website built with static site generator Gitbook.
 thumbnail: /uploads/gitbook.png
 cmsUserSlug: ""
@@ -14,9 +14,9 @@ tags:
   - tutorial
 ---
 
-Today, we're going to look at how to host a book built with [Gitbook](https://www.gitbook.com/) on netlify, including setting up continuous deployment.
+Today, we're going to look at how to host a book built with [Gitbook](https://www.gitbook.com/) on Netlify, including setting up continuous deployment.
 
-Let's start from scratch. If you already have GitBook set up, you can skip straight to the [Connecting to netlify]({{ page.url }}#netlifystart) section.
+Let's start from scratch. If you already have GitBook set up, you can skip straight to the [Connecting to Netlify]({{ page.url }}#netlifystart) section.
 
 <!-- excerpt -->
 
@@ -33,7 +33,7 @@ $ mkdir /PATH/TO/gitbook
 $ cd /PATH/TO/gitbook
 ```
 
-Now we need to create the `package.json` file, which will tell netlify how to handle your content
+Now we need to create the `package.json` file, which will tell Netlify how to handle your content
 
 ```
 $ npm init
@@ -58,7 +58,7 @@ In your `gitbook` directory you'll now see `README.md` and `SUMMARY.md`. Open `R
 ```
 # Introduction
 
-This is a book written in GitBook and hosted with netlify.
+This is a book written in GitBook and hosted with Netlify.
 ```
 
 Let's make a few chapters for your book. Create a file called `chapter1.md` and put some content in it:
@@ -183,16 +183,16 @@ Now, it's time to push the changes in your local repository to GitHub.
 git push origin master
 ```
 
-Now that your assets are up and running on GitHub, let's connect them to netlify.
+Now that your assets are up and running on GitHub, let's connect them to Netlify.
 
 <a id="netlifystart"></a>
 
-## **Connecting to netlify**
+## **Connecting to Netlify**
 
 ### Step 1: Add Your New Site
 
 ![step 1 - add](https://cloud.githubusercontent.com/assets/6520639/9803638/717820a6-57d9-11e5-838f-d2a732eb0a41.png)
-Creating a new site on netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
+Creating a new site on Netlify is simple. Once you've logged in, you'll be taken to https://app.netlify.com/sites. If you're just starting out, there's only one option.
 
 ### Step 2: Link to Your GitHub
 
@@ -200,15 +200,15 @@ Clicking "New Site" brings you to this screen:
 
 ![step 2 - link](https://cloud.githubusercontent.com/assets/6520639/9803637/7176ac8a-57d9-11e5-9b09-f43dc772a4f9.png)
 
-When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
+When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we'll need to link  netlify to GitHub. Click "Link to Github".
+Since your assets are hosted on GitHub, we'll need to link  Netlify to GitHub. Click "Link to Github".
 
-### Step 3: Authorize netlify
+### Step 3: Authorize Netlify
 
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
 
-It's time to allow netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
+It's time to allow Netlify and GitHub to talk to each other. Clicking the "Authorize Application" button will do just that. Like it says in the image below, Netlify doesn't store your GitHub access token on our servers. If you'd like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 
@@ -236,4 +236,4 @@ Wait, you thought there was going to be more? Nope! Netlify has done it all for 
 
 ![step 8 - pretty](https://raw.githubusercontent.com/munkymack/netlify-assets/master/Step8Gitbook.png)
 
-There, that's better. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using netlify!
+There, that's better. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!

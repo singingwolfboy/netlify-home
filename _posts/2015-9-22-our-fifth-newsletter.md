@@ -2,14 +2,16 @@
 title: Our Fifth Newsletter
 author: Chris Bach
 image: /uploads/women-reading-newspaper.jpg
-short_title: "Our Fifth Newsletter "
+short_title: "Our Fifth Newsletter"
 description: "Plans and prices made much easier, with continuous deployment and support integrated in hosting plans."
 thumbnail: /uploads/tpirwordmark.png
 cmsUserSlug: ""
 date: 2015-09-22
 tags:
   - netlify
-  - newsletter
+  - news
+  - plans
+  - pricing
 ---
 
 Hi Everyone!
@@ -20,7 +22,7 @@ We’re super stoked to present brand new plans and prices!
 
 Up until now our continuous deployment services have been available as a separate service.
 
-But CD is an integral part of what netlify is. Just as much as our speed, multilayered CDN and instant cache invalidation is. As such it doesn’t make a lot of sense to separate it into it’s own service.
+But CD is an integral part of what Netlify is. Just as much as our speed, multilayered CDN and instant cache invalidation is. As such it doesn’t make a lot of sense to separate it into it’s own service.
 
 So with the free plan you now get 50 builds / site, and of course many more with paid plans.
 

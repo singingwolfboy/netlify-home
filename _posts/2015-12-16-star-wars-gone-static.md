@@ -1,23 +1,24 @@
 ---
-title: Star Wars gone static
+title: Star Wars Gone Static
 author: Chris Bach
 image: /uploads/star_wars_web.jpg
 image_caption: null
-short_title: Star Wars gone static
-description: 3 Star Wars themed sites on netlify. Because of course.
+short_title: Star Wars Gone Static
+description: 3 Star Wars themed sites on Netlify. Because of course.
 thumbnail: /uploads/screen-shot-2015-12-16-at-20.13.25.png
 cmsUserSlug: ""
 date: 2015-12-16T00:00:00.000Z
-tags: null
+tags:
+  - news
 ---
 
 ** No spoilers contained. Really. We haven’t even seen it yet **
 
 Sooo 4 billion (with a b) dollars seems like a steal these days. At least judging from the hype this first Disney instalment is getting.
 
-The netlify servers are seeing plenty of disturbance in the force too!
+The Netlify servers are seeing plenty of disturbance in the force too!
 
-We thought we’d celebrate this 7th coming with a quick look at what’s happening on netlify in terms of STAR WARS.
+We thought we’d celebrate this 7th coming with a quick look at what’s happening on Netlify in terms of STAR WARS.
 
 We picked out 3 sites that are all made with modern static build tools and all hosted with yours truly. And of course, most importantly, are part of a Universe where they have lightsabers which really are reason enough to forcefully try and daydream ourselves up and and away from this World in to a galaxy far far away.
 

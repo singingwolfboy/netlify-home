@@ -1,5 +1,5 @@
 ---
-title: Netlify - Newsletter no. 2
+title: Netlify News No. 2
 author: Christian Bach
 image: /uploads/vintage-dance-party.jpg
 short_title: Our Second Newsletter
@@ -9,10 +9,10 @@ cmsUserSlug: netlify-newsletter-no-2
 date: 2015-04-07
 tags:
   - netlify
-  - newsletter
+  - news
 ---
 
-Woohoo! We’ve launched [netlify.com](https://www.netlify.com) and are now live, both with hosting of static sites and apps (as you knew it from [bitballoon.com](https://www.bitballoon.com)) and our continuous deployment service.
+Woohoo! We’ve launched [Netlify.com](https://www.netlify.com) and are now live, both with hosting of static sites and apps (as you knew it from [bitballoon.com](https://www.bitballoon.com)) and our continuous deployment service.
 
 We want to thank our beta-testers for all their help!
 
@@ -23,8 +23,8 @@ And thanks so much to everyone who has already signed on. We are getting raving 
 **Hacker News**
 We were really stoked a couple of days ago, when our launch spent the [entire day on the front page of Hacker News](http://netlify.us2.list-manage.com/track/click?u=3ca88a0cd26d026e590224d67&id=3f546fb6c3&e=8a3a3955ba) with more than 100 upvotes and lots of great comments.
 
-**100% netlify**
-On a more personal note Chris (co-founder) is now no longer with his Danish agency, and is super excited to move permanently to San Francisco so he can focus 100% on netlify.
+**100% Netlify**
+On a more personal note Chris (co-founder) is now no longer with his Danish agency, and is super excited to move permanently to San Francisco so he can focus 100% on Netlify.
 
 **Future**
 We are currently working on some things at that we are really excited about introducing to everyone. Please let us know of any features you would like. We can be contacted in any number of ways.

@@ -16,7 +16,7 @@ features:
   - title: "Redirect, Rewrite & Proxy Rules"
     body: "Use different rules to control how requests are handled. Proxy part of your traffic to your own backend, redirect old pages, or rewrite a page entirely. Or do them all."
   - title: Custom HTTP Headers
-    body: "Take full control over any HTTP header sent by netlify. Easily add CORS or Content Security Headers to your site."
+    body: "Take full control over any HTTP header sent by Netlify. Easily add CORS or Content Security Headers to your site."
     footer: "[What does this mean and why is this important?](https://www.netlify.com/docs/headers-and-basic-auth)"
   - title: Full Featured CLI
     body: "Setup, query and deploy without taking your hands off the keyboard. The CLI is a very powerful way to do everything from launching a new site to rolling back a deploy."

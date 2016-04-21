@@ -1,8 +1,8 @@
 ---
-title: netlify news no. 8
+title: Netlify News No. 8
 author: Chris Bach
 image: /uploads/new-york-times-newsroom.jpg
-short_title: Our eighth newsletter
+short_title: Our Eighth Newsletter
 description: "Netlify is now on Zapier, please check out the beta app. We're also introducing smarter redirects + more control over your postprocessing."
 thumbnail: /uploads/165674556.jpg
 cmsUserSlug: ""
@@ -10,7 +10,6 @@ date: 2015-12-02
 tags:
   - netlify
   - news
-  - newsletter
 ---
 
 Hi there.
@@ -21,9 +20,9 @@ We've got lot's of news, so we will get right to it!
 
 ## Zapier
 
-We just added netlify to Zapier and would love for you to [help test the beta](https://zapier.com/developer/invite/27442/6c1b6a3bbcf86c07c0a0f7dfe2d0327c/).
+We just added Netlify to Zapier and would love for you to [help test the beta](https://zapier.com/developer/invite/27442/6c1b6a3bbcf86c07c0a0f7dfe2d0327c/).
 
-Zapier lets you integrate form submissions or deploy notifications from netlify to hundreds of external services like MailChimp, Hipchat, Google Docs, etc,.
+Zapier lets you integrate form submissions or deploy notifications from Netlify to hundreds of external services like MailChimp, Hipchat, Google Docs, etc,.
 
 <!-- excerpt -->
 
@@ -34,7 +33,7 @@ If we get enough users of the service we can go from beta to global app, so hope
 
 ## Smarter Redirects
 
-We just made netlify’s redirect engine smarter, to avoid chained redirects.
+We just made Netlify’s redirect engine smarter, to avoid chained redirects.
 
 Before if you had a site on [www.example.com](http://www.example.com/) with a redirect from /blog to /news, with https enabled, then going to [http://example.com/blog](http://example.com/blog) would trigger a chain of redirects:
 
@@ -44,7 +43,7 @@ Now our redirect engine is smart enough to detect that chain and redirect straig
 
 ## Post processing settings
 
-Now netlify gives you detailed control over the post processing we do to your sites.
+Now Netlify gives you detailed control over the post processing we do to your sites.
 
 You can completely disable post processing for sites where you mainly want to share HTML/CSS and don’t care about performance, pretty URLs, form processing or snippet injection.
 
@@ -58,6 +57,6 @@ All the best,
 
 Matt &amp; Chris
 
-co-founders of netlify
+co-founders of Netlify
 
 twt. @biilmann &amp; @chr_bach

@@ -1,21 +1,23 @@
 ---
-title: "Installing Your Own SSL Certificates: A step-by-step guide"
+title: "Installing Your Own SSL Certificates: A Step-by-Step Guide"
 author: Aaron Autrand
-image: null
+image: /uploads/ssl-certificate.jpg
 image_caption: null
 short_title: Install Custom SSL Certs
 description: A step-by-step guide to securing your site with a custom SSL certificate.
 thumbnail: /uploads/ssllock.png
 cmsUserSlug: ""
-date: 2016-04-11 
-tags: null
+date: 2016-04-11T00:00:00.000Z
+tags:
+  - tutorial
+  - ssl
 ---
 
 Netlify offers [free 1-click SSL](https://www.youtube.com/watch?v=k-9T0FYd-QU) with LetsEncrypt. It's the very definition of easy.
 
 But some of our customers have reasons for using their own certificates procured from an SSL Certificate Authority. If you are one of those customers, we'll show you how to install your own certificate here.
 
-<!--excerpt-->
+<!-- excerpt -->
 
 Log in to [app.netlify.com](https://app.netlify.com) and choose your site.
 
