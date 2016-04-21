@@ -46,6 +46,8 @@ $colors-social: (
 );
 
 
+$color-purple-rain: rgb(107, 40, 158);
+
 
 
 //*
@@ -178,6 +180,10 @@ svg {
 
 .bg-light-muted-3 {
   background: $color-light url('/img/bg-light-3.svg') no-repeat top right;
+}
+
+.bg-purple-rain {
+  background: $color-purple-rain url('/img/bg-formerly-known-as-prince.svg') no-repeat -10px -250px;
 }
 
 .bg-highlight {
