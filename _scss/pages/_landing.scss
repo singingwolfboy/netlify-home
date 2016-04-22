@@ -1,6 +1,6 @@
-$hero-animation-delay: 2.5s;
+$switch-fade-delay: 2.5s;
 
-@keyframes hero-fade {
+@keyframes switch-fade {
   0% {
     opacity: 0;
     transform: translate3d(0, 5px, 0);
@@ -27,92 +27,40 @@ $hero-animation-delay: 2.5s;
   }
 }
 
-.hero {
-  display: table;
-  width: 100%;
+.switch {
+  height: 1em;
+  position: relative;
 
-  @media (max-width: $bp-med) {
+  > span {
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+    animation-name: switch-fade;
     display: block;
-  }
-}
-
-.hero-blurb,
-.hero-blockquote {
-  display: table-cell;
-  margin: auto;
-  padding: 40px 0 60px;
-  width: 50%;
-
-  @media (max-width: $bp-med) {
-    display: block;
-    margin: 50px auto;
-    padding: 0;
-    width: auto;
-  }
-}
-
-.hero-blurb {
-
-  h1 {
-    @extend .alpha;
-    @extend .bold;
-    height: 40px;
-    margin-bottom: 0;
-    position: relative;
-
-    span {
-      animation-duration: 7.5s;
-      animation-iteration-count: infinite;
-      animation-name: hero-fade;
-      height: 3.5rem;
-      left: 0;
-      line-height: 3rem;
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      white-space: nowrap;
-      width: 100%;
-    }
-  }
-
-  p {
-    @extend .zeta;
-    margin-bottom: 30px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 100%;
   }
 
   .two {
-    animation-delay: $hero-animation-delay;
+    animation-delay: $switch-fade-delay;
   }
 
   .three {
-    animation-delay: $hero-animation-delay * 2;
-  }
-
-  @media (max-width: $bp-med) {
-    text-align: center;
-
-    .cta {
-      margin-left: auto;
-      margin-right: auto;
-    }
+    animation-delay: $switch-fade-delay * 2;
   }
 }
 
 //* "Fancy" blockquote based on:
 //* https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
 //*
-.hero-blockquote {
-  box-sizing: content-box;
-  max-width: 30em;
-  padding-left: 20px;
-  quotes: '\201C''\201D''\2018''\2019';
-  text-align: right;
 
-  p {
-    @extend .mega;
-    font-size: 1.8rem;
+.fancy-quote {
+
+  p:first-child {
     display: inline;
-    line-height: 1;
+    quotes: '\201C''\201D''\2018''\2019';
 
     &::before,
     &::after {
@@ -134,41 +82,74 @@ $hero-animation-delay: 2.5s;
       content: close-quote;
       left: .1em;
       margin-right: -.4em;
+
+      @media (max-width: $bp-small) {
+        margin-right: 0;
+      }
     }
+  }
+
+  cite::before {
+    content: '—';
+    font-family: Georgia, serif;
+  }
+}
+
+
+.hero {
+  display: table;
+  width: 100%;
+
+  @media (max-width: $bp-med) {
+    display: block;
+  }
+}
+
+.hero-blurb,
+.hero-blockquote {
+  display: table-cell;
+  margin: auto;
+  width: 50%;
+
+  @media (max-width: $bp-med) {
+    display: block;
+    margin: 50px auto;
+    width: auto;
+  }
+}
+
+.hero-blurb {
+
+  @media (max-width: $bp-med) {
+    text-align: center;
+
+    .cta {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+
+.hero-blockquote {
+  @extend .fancy-quote;
+  box-sizing: content-box;
+  max-width: 30em;
+  padding-left: 40px;
+  text-align: right;
+
+  p:first-child {
+    @extend .gamma;
   }
 
   cite {
     @extend .x-small;
     @include font-weight('normal');
-    display: block;
-    margin: 30px 0;
-
-    &::before {
-      content: '—';
-      font-family: Georgia, serif;
-      font-weight: bold;
-    }
-  }
-
-  @media (max-width: $bp-large) {
-    cite {
-      margin: 20px 0;
-    }
-  }
-
-  @media (max-width: $bp-med-large) {
-    padding-right: 40px;
   }
 
   @media (max-width: $bp-med) {
     padding: 0;
     text-align: center;
-  }
-
-  @media (max-width: $bp-small) {
-    p::after {
-      margin-right: 0;
-    }
   }
 }
 
@@ -177,7 +158,7 @@ $hero-animation-delay: 2.5s;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 30px 0 -20px;
+  max-width: none;
 
   img {
     transform: scale(.9);
