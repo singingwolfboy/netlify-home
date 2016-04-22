@@ -1,13 +1,13 @@
 ---
 title: "A Step-by-Step Guide: Phenomic on Netlify"
 author: Aaron Autrand
-image: null
+image: /uploads/phenomic.png
 image_caption: null
 short_title: Phenomic on Netlify
 description: A step-by-step guide on how to host Phenomic sites on Netlify
 thumbnail: /uploads/phenomic.jpg
 cmsUserSlug: ""
-date: 2016-04-19
+date: 2016-04-19T00:00:00.000Z
 tags: null
 ---
 
