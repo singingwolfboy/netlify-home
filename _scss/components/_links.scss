@@ -77,7 +77,8 @@ a * {
 }
 
 
-//* Button colors on inverse background */
+//* Button color variations */
+
 .inverse {
   .button {
     color: $color-darkest;
@@ -87,9 +88,18 @@ a * {
     color: $color-lightest;
   }
 
-  .button--muted,
-  .button--muted .button-label {
+  .button--muted {
     color: $color-dark;
+
+    .button-label {
+      color: inherit;
+    }
+  }
+}
+
+[class*='bg'] {
+  .button--muted {
+    color: inherit;
   }
 }
 

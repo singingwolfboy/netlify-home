@@ -182,6 +182,10 @@ svg {
   background: $color-light url('/img/bg-light-3.svg') no-repeat top right;
 }
 
+.bg-purple {
+  background: $color-purple-rain;
+}
+
 .bg-purple-rain {
   background: $color-purple-rain url('/img/bg-formerly-known-as-prince.svg') no-repeat -10px -250px;
 }
@@ -218,6 +222,10 @@ svg {
 
 .bg-tint3 {
   background: $color-tint3;
+}
+
+.bg-transparent {
+  background: transparent;
 }
 
 

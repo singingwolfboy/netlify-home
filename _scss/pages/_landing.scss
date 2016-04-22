@@ -40,7 +40,7 @@ $hero-animation-delay: 2.5s;
 .hero-blockquote {
   display: table-cell;
   margin: auto;
-  padding: 50px 0;
+  padding: 40px 0 60px;
   width: 50%;
 
   @media (max-width: $bp-med) {
@@ -177,7 +177,7 @@ $hero-animation-delay: 2.5s;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 30px 0 -15px;
+  margin: 30px 0 -20px;
 
   img {
     transform: scale(.9);
@@ -206,7 +206,7 @@ $feature-icon: 3rem;
 $feature-icon-small: 1.5rem;
 
 .homepage-feature {
-  margin-bottom: 20px;
+  margin: 20px 0;
   padding-left: $feature-icon + 1rem;
   padding-right: 20px;
   position: relative;
@@ -227,6 +227,7 @@ $feature-icon-small: 1.5rem;
   }
 
   @media (max-width: $bp-med) {
+    margin-top: 0;
     padding-left: $feature-icon-small + .5rem;
     padding-right: 20px;
 
