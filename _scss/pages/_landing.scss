@@ -1,6 +1,6 @@
-$switch-fade-delay: 2.5s;
+$animated-text-delay: 2.5s;
 
-@keyframes switch-fade {
+@keyframes fade-text {
   0% {
     opacity: 0;
     transform: translate3d(0, 5px, 0);
@@ -27,28 +27,79 @@ $switch-fade-delay: 2.5s;
   }
 }
 
-.switch {
+@keyframes type-text {
+  0% {
+    width: 0;
+  }
+
+  25% {
+    width: 100%;
+  }
+
+  33% {
+    width: 100%;
+  }
+
+  34% {
+    width: 0;
+  }
+}
+
+.animated-text {
   height: 1em;
   position: relative;
 
   > span {
     animation-duration: 7.5s;
     animation-iteration-count: infinite;
-    animation-name: switch-fade;
     display: block;
-    opacity: 0;
     position: absolute;
     top: 0;
     white-space: nowrap;
     width: 100%;
+
+    &:nth-child(2) {
+      animation-delay: $animated-text-delay;
+    }
+
+    &:nth-child(3) {
+      animation-delay: $animated-text-delay * 2;
+    }
+
+    &:nth-child(4) {
+      animation-delay: $animated-text-delay * 3;
+    }
   }
 
-  .two {
-    animation-delay: $switch-fade-delay;
+  .once {
+    animation-iteration-count: 1;
   }
+}
 
-  .three {
-    animation-delay: $switch-fade-delay * 2;
+.animated-text--fade {
+  > span {
+    animation-name: fade-text;
+    opacity: 0;
+  }
+}
+
+.animated-text--typewriter {
+  > span {
+    animation-name: type-text;
+    animation-timing-function: steps(60, end);
+    overflow: hidden;
+    width: 0;
+  }
+}
+
+.animated-text--stop {
+  > span {
+    animation-name: none;
+
+    &:first-child {
+      opacity: 1;
+      width: auto;
+    }
   }
 }
 
@@ -183,45 +234,33 @@ $switch-fade-delay: 2.5s;
   }
 }
 
-$feature-icon: 3rem;
-$feature-icon-small: 1.5rem;
 
-.homepage-feature {
-  margin: 20px 0;
-  padding-left: $feature-icon + 1rem;
-  padding-right: 20px;
-  position: relative;
-  text-align: left;
+$feature-spacing: $base-spacing;
+$feature-icon: $base-spacing;
+$feature-icon-margin: $media-spacing;
 
-  .feature-icon {
-    color: $color-highlight;
+.homepage-features {
+  margin: $base-spacing (($feature-icon + $feature-icon-margin) * -1);
+
+  @media (max-width: $bp-med-large) {
+    margin: $base-spacing (-$base-spacing) $base-spacing 0;
+  }
+
+  svg {
+    fill: $color-highlight;
     height: $feature-icon;
     left: 0;
     position: absolute;
-    top: 0;
     width: $feature-icon;
-
-    svg {
-      height: 100%;
-      width: 100%;
-    }
   }
 
-  @media (max-width: $bp-med) {
-    margin-top: 0;
-    padding-left: $feature-icon-small + .5rem;
-    padding-right: 20px;
-
-    .feature-icon {
-      height: $feature-icon-small;
-      width: $feature-icon-small;
-    }
-  }
-
-  @media (max-width: $bp-small) {
-    margin-bottom: 40px;
+  .blurb {
+    padding-left: $feature-icon + $feature-icon-margin;
+    padding-right: $feature-spacing;
+    width: auto;
   }
 }
+
 
 //* TODO: Make terminal work on touch devices
 //* In the meantime, we hide it */

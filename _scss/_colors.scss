@@ -4,7 +4,7 @@
 
 //** Grays
 $color-muted: rgb(126, 131, 131);
-$color-dark: rgb(89, 98, 98);
+$color-dark: rgb(89, 99, 98);
 $color-darker: rgb(51, 61, 61);
 $color-darkest: rgb(49, 61, 62);
 
@@ -119,6 +119,11 @@ svg {
   color: $color-darkest;
 }
 
+.color-bg {
+  color: $color-light;
+  fill: $color-light;
+}
+
 
 //*
 //* Dark background
@@ -153,7 +158,12 @@ svg {
   }
 
   .quiet {
-    color: transparentize($color-lightest, .13);
+    color: $color-light;
+  }
+
+  .color-bg {
+    color: $color-darkest;
+    fill: $color-darkest;
   }
 }
 

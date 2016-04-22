@@ -5,7 +5,7 @@
 $bp-large:       calc-em(1280px);  //* Major breakpoint – Comp width
 $bp-med-large:   calc-em(1120px);      //* Tweak point – (ipad landscape is in this range)
 $bp-med:         calc-em(960px);   //* Major breakpoint – Layout changes (ipad portrait is in this range)
-$bp-med-small:   calc-em(740px);      //* Tweak point – Things start looking too squished
+$bp-med-small:   calc-em(800px);      //* Tweak point – Things start looking too squished
 $bp-small:       calc-em(680px);   //* Major breakpoint – Every thing gets linearized
 $bp-small-2:     calc-em(460px);      //* Tweak point – Footer wraps
 $bp-small-3:     calc-em(360px);      //* Tweak point – try to reduce things further (header, hero, large buttons)

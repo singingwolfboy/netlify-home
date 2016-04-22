@@ -10,10 +10,10 @@ content-width: default
   <div class="content">
 
     <header class="mb-50">
-      <h1 class="tera">Pricing</h1>
-      <p class="epsilon">
+      <h1 class="giga">Pricing</h1>
+      <p class="intro">
         <a href="/features.html">
-          <strong>See Features for a full feature list<svg width="20" height="20" class="append"><use xlink:href="#icon-arrow" class="light" /></svg></strong>
+          See Features for a full feature list<svg width="20" height="20" class="append color-bg"><use xlink:href="#icon-arrow" /></svg>
         </a>
       </p>
     </header>
@@ -22,20 +22,22 @@ content-width: default
       <thead>
         <tr>
           <th class="td plan-features-th">
-            <div class="plan-features-icon">
-              <svg width="96" height="96">
-                <use xlink:href="#icon-polyhedron" />
-              </svg>
-            </div>
-            <h3 class="large bold highlight mt-15 mb-0">Features</h3>
-            <p class="x-small muted mt-5">All plans include free SSL</p>
+            <a href="/features.html">
+              <div class="callout callout--small callout--outline center mt-10">
+                <svg width="100" height="100">
+                  <use xlink:href="#icon-polyhedron" />
+                </svg>
+              </div>
+              <h3 class="highlight large bold mt-10 mb-0">Features</h3>
+              <p class="plan-note muted">All plans include free SSL</p>
+            </a>
           </th>
           {% for plan in site.data.plans.plans %}
           <th class="plan-th">
             <div class="plan-price th--highlight">
               {% assign parts = plan.price | downcase | split: '.' %}
               {% capture price %}{% if parts.size > 1 %}{{parts[0]}}<span class="decimal-point">.</span>{{parts[1]}}{% else %}{{ plan.price }}{% endif %}{% endcapture %}
-              <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}} tera bold">{{price}}</span>
+              <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}} giga bold">{{price}}</span>
               <span class="plan-period">
                 month
                 <small class="x-small block">per site</small>
@@ -93,7 +95,7 @@ content-width: default
               <li class="plan-price th--highlight">
                 {% assign parts = plan.price | downcase | split: '.' %}
                 {% capture price %}{% if parts.size > 1 %}{{parts[0]}}<span class="decimal-point">.</span>{{parts[1]}}{% else %}{{ plan.price }}{% endif %}{% endcapture %}
-                <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}} tera bold">{{price}}</span>
+                <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}} giga bold">{{price}}</span>
                 <span class="plan-period">
                   month
                   <small class="x-small block">per site</small>

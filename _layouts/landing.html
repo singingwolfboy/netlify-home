@@ -7,21 +7,19 @@ layout: default
 <!-- Features -->
 <section class="bg-dark-muted-cover inverse bb bb--large">
   <div class="content">
-    <h1 class="kilo text-center mb-50">
+    <h1 class="mega text-center mb-60">
       <a href="/features.html">Features</a>
     </h1>
 
-    <div class="l-container">
+    <div class="l-container homepage-features">
     {% for feature in site.data.homepage_features %}
 
       <div class="l-third l-half-med">
-        <section class="homepage-feature">
+        <section class="blurb">
           <h3 class="blurb-title">
-            <span class="feature-icon">
-              <svg width="60" height="60">
-                <use xlink:href="#{{feature.icon_id}}" />
-              </svg>
-            </span>
+            <svg width="40" height="40">
+              <use xlink:href="#{{feature.icon_id}}" />
+            </svg>
             {{feature.title}}
           </h3>
           <div class="blurb-bd small">
@@ -33,9 +31,9 @@ layout: default
     {% endfor %}
     </div>
 
-    <p class="text-center delta mb-90">
+    <p class="text-center gamma mb-80">
       <a href="/features.html">
-        <strong>See more features<svg width="20" height="20" class="append darkest"><use xlink:href="#icon-arrow" /></svg></strong>
+        See more features<svg width="20" height="20" class="append color-bg"><use xlink:href="#icon-arrow" /></svg>
       </a>
     </p>
   </div>
@@ -86,7 +84,22 @@ layout: default
       </div>
     </section>
 
-    {% include socialize.html %}
+    <section class="text-center mb-60">
+      <h1 class="beta inline-block v-bottom mt-40 mb-40 mr-40">
+        <a href="/contact.html">Socialize @</a>
+      </h1>
+
+      <p class="inline-block v-bottom mt-40 mb-40">
+        {% for link in site.social-links %}
+        <a href="{{link[1]}}" class="icon-link--round icon-link--{{link[0]}}">
+          <svg width="36" height="36" class="icon-{{link[0]}}--round">
+            <use xlink:href="#icon-{{link[0]}}-round">
+          </svg>
+        </a>
+        {% endfor %}
+      </p>
+    </section>
+
 
   </div><!-- end content-->
 </section>

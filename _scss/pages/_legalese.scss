@@ -1,10 +1,13 @@
 .text--legalese {
-
   h1 {
     border-top: 2px solid $color-highlight;
     font-size: 21px;
     margin-top: 100px;
     padding-top: 88px;
+
+    &::after {
+      display: none;
+    }
   }
 
   li {
