@@ -2,37 +2,6 @@
   table-layout: fixed;
 }
 
-.plan-features-icon {
-  height: 96px;
-  margin: 5px auto;
-  position: relative;
-  width: 96px;
-
-  svg {
-    height: 100%;
-    width: 100%;
-  }
-}
-
-.pricing-icon {
-  height: 200px;
-  position: relative;
-  width: 200px;
-}
-
-.plan-features-icon::after,
-.pricing-icon::after {
-  border: 1px solid #fff;
-  border-radius: 100%;
-  content: ' ';
-  height: 90%;
-  left: 0;
-  margin: 5%;
-  position: absolute;
-  top: 0;
-  width: 90%;
-}
-
 .plan-th {
   background-color: #e6efee;
   padding: 0;

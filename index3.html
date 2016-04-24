@@ -1,0 +1,58 @@
+---
+layout: landing
+content-width: narrow
+---
+
+<link href='https://fonts.googleapis.com/css?family=Inconsolata:400' rel='stylesheet' type='text/css'>
+
+<section class="bg-light bb bb--large">
+  <div class="hero content">
+    <div class="l-2-col mt-20 bb bb--muted">
+
+      <div class="l-col mb-40">
+        <h1 class="alpha bold animated-text animated-text--fade">
+          <span>One Platform</span>
+          <span>One-Click SSL</span>
+          <span>One-Step Deploy</span>
+        </h1>
+        <p class="zeta editorial-text">
+          Deploy <strong>modern static websites</strong> with our automated
+          platform. Add best practices like SSL, CDN distribution, caching,
+          and continuous deployment with a single click.
+        </p>
+        <p>
+          <a href="https://app.netlify.com" class="button button--pill cta">
+            <strong class="button-label epsilon">Get Started</strong>
+          </a>
+        </p>
+      </div>
+
+      <div class="l-col mb-40 mt-90">
+        <blockquote class="fancy-blockquote">
+          <p class="gamma highlight">
+            Netlify has everything you need to make a high performance site or <nobr>web-app</nobr>.
+            You just push your code.
+          </p>
+          <p>
+            <cite>
+              <strong>Tom Preston-Werner</strong>,
+              founder&nbsp;of&nbsp;GitHub and&nbsp;creator&nbsp;of&nbsp;Jekyll
+            </cite>
+          </p>
+        </blockquote>
+      </div>
+    </div>
+
+    <p class="integration-logos zeta grayscale">
+    {% for logo in site.data.homepage_integration_logos %}
+      <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="{{logo.alt}}">
+    {% endfor %}
+    </p>
+
+  </div>
+</section>
+
+<section class="terminal bb bb--large">
+  <div class="content js-terminal">
+  </div>
+</section>

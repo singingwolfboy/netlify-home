@@ -3,21 +3,17 @@
 {% assign page_names = 'features,pricing,docs,blog,about,contact' | split: ',' %}
 
 <!-- Site Header -->
-<header class="site-header {{page.header_class | default: 'inverse bb bb--medium'}}" role="banner">
+<header class="site-header bb bb--medium {{page.header_class | default: 'inverse'}}" role="banner">
   <div class="content content--wide">
 
     <!-- Branding: logo & claim -->
     <section class="brand">
-      <a href="/" class="loud">
-        <svg class="brand-logo" width="180" height="70">
-          <use xlink:href="#netlify-logo" />
-        </svg>
-      </a>
+      <a href="/" class="loud"><svg class="brand-logo" width="180" height="70"><use xlink:href="#netlify-logo" /></svg></a>
     </section>
 
     <nav class="top-nav">
 
-      <ul class="nav nav--primary inline hide-for-medium">
+      <ul class="nav nav--inline nav--primary hide-for-medium">
         {% for page_name in page_names %}
         <li{% if active == page_name %} class="active"{% endif %}>
           <a href="/{{page_name}}.html">{{page_name | capitalize}}</a>

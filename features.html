@@ -14,8 +14,8 @@ title: Features
       <nav class="side-nav" id="toc">
         <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
           <a href="/features.html" class="block">
-            <div class="callout callout--outline ml-20 mb-20">
-              <svg width="127" height="127">
+            <div class="callout callout--outline ml-25 mb-25">
+              <svg width="100" height="100">
                 <use xlink:href="#icon-polyhedron"></use>
               </svg>
             </div>
@@ -33,25 +33,27 @@ title: Features
 
     <div class="l-main l-main--right">
       {% for section in sections %}
-      <section id="{{ section.title | slugify }}" class="{% if forloop.first == true %}mt-50{% else %}mt-20{% endif %}">
+      <section id="{{ section.title | slugify }}" class="mt-40 mb-n10 bb bb--dashed">
 
-        <header class="text-center">
+        <header class="text-center bb mb-30">
           {% if section.icon_id %}
-          <svg width="60" height="60" class="highlight mb-20">
+          <svg width="60" height="60" class="highlight mt-20 mb-20">
             <use xlink:href="#{{section.icon_id}}" />
           </svg>
           {% else %}
-          <svg width="120" height="120" class="highlight mt-n20 mb-n10">
+          <svg width="120" height="120" class="highlight">
             <use xlink:href="#polyhedron" />
           </svg>
           {% endif %}
-          <h2 class="kilo highlight mt-0">{{ section.title }}</h2>
-          <p class="zeta semibold p--wide">{{ section.description }}</p>
+          <h2 class="kilo highlight mt-0">
+            {{ section.title }}
+          </h2>
+          <p class="zeta semibold p--wide mb-30">
+            {{ section.description }}
+          </p>
         </header>
 
-        <hr class="bb mt-30 mb-30">
-
-        <div class="l-2-col-auto">
+        <div class="l-2-col-auto mb-25">
           {% for feature in section.features %}
           <div class="blurb break-inside-avoid muted">
             <h3 class="zeta semibold m-0">{{ feature.title }}</h3>
@@ -68,10 +70,9 @@ title: Features
         </div>
       </section>
 
-      <hr class="bb bb--dashed mb-50">
       {% endfor %}
 
-      <footer class="mt-70">
+      <footer class="mt-60">
         {% include pricing-footer.html %}
       </footer>
     </div>

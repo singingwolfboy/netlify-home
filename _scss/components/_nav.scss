@@ -5,33 +5,19 @@ $nav-primary-link-color:   rgb(255, 255, 255);
 $nav-secondary-link-color: rgb(126, 131, 131);
 $nav-nested-link-color:    rgb(191, 207, 205);
 $nav-icon-color:           rgb(101, 118, 118);
+
+// scss-lint:disable ColorVariable
 $nav-icon-bg-colors: (
-  twitter:    rgb(79, 92, 93),
-  facebook:   rgb(62, 74, 74),
-  github:     rgb(57, 67, 67),
-  linkedin:   rgb(52, 62, 63),
-  gitter: rgb(42, 50, 51)
+  twitter:  rgb(79, 92, 93),
+  facebook: rgb(62, 74, 74),
+  github:   rgb(57, 67, 67),
+  linkedin: rgb(52, 62, 63),
+  gitter:   rgb(42, 50, 51)
 );
+
 
 html {
   background: $nav-bg-color; //* so it looks like off-canvas navigation bar stretches all the way to the bottom
-}
-
-.site-header {
-  .content {
-    align-items: center;
-    display: flex;
-  }
-
-  .brand {
-    flex: 1;
-    margin: 20px 0;
-  }
-
-  .brand-logo {
-    height: 70px;
-    width: 180px;
-  }
 }
 
 .nav {
@@ -67,19 +53,24 @@ html {
   }
 }
 
-.side-nav {
-  min-width: 15em;
-  padding: 40px 0;
 
-  .active > a::before {
-    background: url('/img/icon-arrow.svg') no-repeat left top;
-    background-size: 14px;
-    content: ' ';
+.nav--inline {
+  display: inline-block;
+  font-size: 0;
+  margin: 0;
+
+  > li {
     display: inline-block;
-    height: 15px;
-    margin: -2px 15px 0 -30px;
+    font-size: 16px;
     vertical-align: middle;
-    width: 15px;
+  }
+
+  > li:not(:first-child) {
+    margin-left: 20px;
+
+    .side-nav & {
+      margin-left: 5px;
+    }
   }
 }
 
@@ -110,24 +101,21 @@ html {
 }
 
 .nav--nested {
-  line-height: 40px;
+  a {
+    line-height: 24px;
+    padding-bottom: 6px;
+    padding-top: 10px;
+  }
+
+  .nav a {
+    line-height: 25px;
+    padding-bottom: 6px;
+    padding-top: 4px;
+  }
 }
 
 .nav--flush-left {
   margin-left: 0;
-}
-
-.nav--inline {
-  li {
-    float: left;
-    margin-right: 6px;
-  }
-
-  &.nav--wide {
-    li {
-      margin-right: 35px;
-    }
-  }
 }
 
 .nav--social {
@@ -169,23 +157,49 @@ html {
   margin-right: 0;
 }
 
-.inline {
-  display: inline-block;
-  margin: 0;
-
-  > li {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  > li:not(:first-child) {
-    margin-left: 25px;
-  }
-}
 
 .affix {
   position: fixed;
   top: 30px;
+}
+
+
+.site-header {
+  .content {
+    align-items: center;
+    display: flex;
+  }
+
+  .brand {
+    flex: 1;
+    margin: 20px 0;
+  }
+
+  .brand-logo {
+    height: 70px;
+    width: 180px;
+  }
+}
+
+.top-nav {
+  margin-right: -$base-spacing; //* Align with right margin in blog sidebar */
+  margin-top: 2px; //* Align with netlify baseline */
+}
+
+.side-nav {
+  min-width: 15em;
+  padding: 40px 0;
+
+  .active > a::before {
+    background: url('/img/icon-arrow.svg') no-repeat left top;
+    background-size: 14px;
+    content: ' ';
+    display: inline-block;
+    height: 15px;
+    margin: -2px 15px 0 -30px;
+    vertical-align: middle;
+    width: 15px;
+  }
 }
 
 //*

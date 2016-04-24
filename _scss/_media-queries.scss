@@ -6,13 +6,16 @@
 @media (max-width: $bp-med-large) { //* Tweak point to leave more room for content
 
   .content {
-    padding: 0 50px;
+    padding: 0 $column-gap;
   }
 
   .l-wrap-inner {
-    padding-left: 50px;
+    padding-left: $column-gap;
   }
 
+  .top-nav {
+    margin-right: $base-spacing - $column-gap;
+  }
 
   //* Callouts don't have room to bleed */
   .callout--large {
@@ -51,18 +54,6 @@
     .nav .nav {
       display: none;
     }
-
-    //* Blurbs go in 2 columns */
-    .blurb {
-      float: left;
-      margin: 0 0 10px;
-      padding: 0 30px;
-      width: 50%;
-
-      &:nth-child(odd) {
-        clear: left;
-      }
-    }
   }
 
 
@@ -79,43 +70,6 @@
     text-align: center;
   }
 
-
-  //*
-  //* BLURBS: fluid width and some padding instead for separation
-  //*/
-  .l-third {
-
-    .blurb {
-      padding: 0 15px;
-      position: relative;
-      width: auto;
-    }
-
-    &:first-child .blurb {
-      left: -15px;
-    }
-
-    &:last-child .blurb {
-      right: -15px;
-    }
-  }
-
-  .l-half-med {
-    width: 50%;
-
-    .blurb {
-      padding-right: 25px;
-    }
-
-    &:nth-child(odd) {
-      clear: left;
-    }
-
-    &:nth-child(even) {
-      clear: right;
-      right: -25px;
-    }
-  }
 
   .l-full-med,
   .l-full-med.center {
@@ -186,7 +140,11 @@
 @media (max-width: $bp-med-small) { //* Tweak point to leave more room for content
 
   .content {
-    padding: 0 20px;
+    padding: 0 25px;
+  }
+
+  .top-nav {
+    margin-right: 15px;
   }
 
   //* Reduce bleed so it doesn't touch edge of screen */
@@ -194,13 +152,27 @@
     margin-left: 0;
   }
 
-  .l-half-med:last-child .blurb {
-    right: -15px;
-  }
-
   .media--bleed {
     .media-img {
       margin-left: -4px;
+    }
+  }
+
+  //*
+  //* Stack address in footer
+  //*/
+  .site-footer {
+    .vcard {
+      margin: 10px;
+
+      br {
+        display: block;
+      }
+
+      .address::before,
+      .address::after {
+        display: none;
+      }
     }
   }
 }
@@ -232,6 +204,10 @@
     max-width: none;
   }
 
+  .top-nav {
+    margin: 0;
+  }
+
   .l-wrap-inner {
     padding: 0;
   }
@@ -242,25 +218,6 @@
 
   .l-aside {
     padding: 0 25px;
-  }
-
-
-  //*
-  //* Stack address in footer
-  //*/
-  .site-footer {
-    .vcard {
-      margin: 10px;
-
-      br {
-        display: block;
-      }
-
-      .address::before,
-      .address::after {
-        display: none;
-      }
-    }
   }
 
 
@@ -287,6 +244,7 @@
   .l-container .l-third,
   .l-container .l-fourth,
   .l-container .l-half,
+  .l-container .l-half-med,
   .l-2-col .l-col,
   .l-3-col .l-col {
     float: none;
@@ -296,20 +254,11 @@
     padding-left: 0;
     padding-right: 0;
     width: auto;
-
-    .blurb {
-      margin: 0 auto 25px;
-      position: static;
-    }
   }
 
   .l-2-col-auto {
     column-gap: 0;
     columns: 1;
-
-    .blurb {
-      margin: 0 auto;
-    }
   }
 
 
@@ -405,8 +354,8 @@
     margin-top: 60px;
   }
 
-  .mt-70,
-  .mt-80,
+  .mb-70,
+  .mb-80,
   .mb-90,
   .mb-100,
   .mb-110,
@@ -427,18 +376,6 @@
   .th {
     font-size: 20px;
   }
-
-
-  //*
-  //* Blurbs in aside get stacked
-  //*/
-  .l-aside .blurb:nth-child(n) {
-    float: none;
-    max-width: none;
-    padding: 0;
-    width: auto;
-  }
-
 
   //*
   //* Blog
@@ -526,9 +463,17 @@
   //*
   //* Stack lists of images
   //*/
-  .mobile-stack-images img {
-    display: block;
-    margin: 30px auto;
+
+  .mobile-stack-images {
+
+    img {
+      display: block;
+      margin: 30px auto;
+    }
+
+    &:last-child {
+      @extend %cf;
+    }
   }
 }
 
@@ -573,13 +518,6 @@
 
   .l-wrap-inner {
     padding: 0;
-  }
-
-  .l-third,
-  .l-half {
-    .blurb {
-      padding: 0;
-    }
   }
 
   .l-aside .side-nav {

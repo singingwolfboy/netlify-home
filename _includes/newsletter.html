@@ -1,5 +1,17 @@
-<header class="text-center mt-90">
+<header class="text-center mt-80">
   <h1 class="alpha">
+    {% comment %}
+    ============================================================================
+
+      In the comp, the content width is based on the length of this line
+      because it's the longest heading on the homepage.
+
+      If the text changes, you may want to update the $content-width variable
+      in _layout.scss
+
+    ============================================================================
+    {% endcomment %}
+
     Sign up for our newsletter and stay tuned on the new stack
   </h1>
   <p class="muted p--wide">
@@ -8,7 +20,7 @@
     We promise we won’t give away your address or anything, and only send stuff written by humans.
   </p>
 </header>
-<form name="newsletter" action="thank-you.html" class="form form--fancy mt-40 mb-60" netlify>
+<form name="newsletter" action="thank-you.html" class="form form--fancy mt-40 mb-45" netlify>
   <p class="form-group">
       <label class="visuallyhidden" for="input-email">Email</label>
       <input type="email" name="email" id="input-email" placeholder="your@email.com">

@@ -213,25 +213,37 @@ a * {
 //*
 //* Hover effect: http://tympanus.net/Development/IconHoverEffects/#set-8
 //*/
+
+$round-icon-size: 35px;
+
 .icon-link--round {
   display: inline-block;
   margin-right: 25px;
   position: relative;
   transition: transform ease-out .2s;
 
+  svg {
+    height: $round-icon-size;
+    width: $round-icon-size;
+  }
+
   &::after {
     border-radius: 100%;
     content: '';
-    height: 36px;
+    height: $round-icon-size;
     left: 0;
     position: absolute;
     top: 0;
-    width: 36px;
+    width: $round-icon-size;
   }
 
   @each $name, $color in $colors-social {
-    &.icon-link--#{$name} svg {
-      fill: darken(grayscale($color), 5%);
+    &.icon-link--#{$name} {
+      color: darken(grayscale($color), 5%);
+
+      .no-touch &:hover {
+        color: $color;
+      }
     }
   }
 
