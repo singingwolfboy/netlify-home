@@ -1,27 +1,26 @@
 ---
 layout: landing
 content-width: narrow
-page_class: bg-purple-rain
 header_class: bg-purple inverse
 ---
 
 <link href='https://fonts.googleapis.com/css?family=Inconsolata:400' rel='stylesheet' type='text/css'>
 
 <!-- Above the fold -->
-<div class="bg-transparent inverse">
+<div class="bg-purple-rain inverse">
   <section class="hero content">
     <div class="hero-blurb blurb">
-      <h1 class="kilo bold animated-text animated-text--fade mt-100 mb-0">
+      <h1 class="kilo bold animated-text animated-text--fade mt-110 mb-0">
         <span>One Platform</span>
         <span>One-Click SSL</span>
         <span>One-Step Deploy</span>
       </h1>
-      <p class="zeta mt-35 mb-35">
+      <p class="zeta mt-30 mb-30">
         Deploy <strong>modern static websites</strong> with our automated
         platform and add best practices like SSL, CDN distribution, caching,
         and continuous deployment with a single-click.
       </p>
-      <p class="mb-100">
+      <p class="mb-110">
         <a href="https://app.netlify.com" class="button button--pill cta">
           <strong class="button-label epsilon">Get Started</strong>
         </a>
@@ -40,12 +39,12 @@ header_class: bg-purple inverse
 <!-- Integrations -->
 <section class="bg-white muted text-center bb bb--large">
   <div class="content">
-    <p class="integration-logos mt-40">
+    <p class="integration-logos mt-30">
     {% for logo in site.data.homepage_integration_logos %}
       <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="{{logo.alt}}">
     {% endfor %}
     </p>
-    <p class="delta mt-20">
+    <p class="delta mt-20 mb-30">
       Our agnostic platform means your favorite tools are already supported
       <small class="xx-small block semibold loud">And thousands more! (Really, just about anything)</small>
     </p>
