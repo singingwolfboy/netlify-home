@@ -289,7 +289,7 @@ $sidebar-width: $blurb-width + $sidebar-padding * 2;
 }
 
 .l-main {
-  padding: 0 $column-gap  120px;
+  padding: 0 $column-gap  $column-gap;
 }
 
 .l-main--left {
