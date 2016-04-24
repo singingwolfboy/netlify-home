@@ -1,3 +1,7 @@
+//*
+//* Animated text
+//*
+
 $animated-text-delay: 2.5s;
 
 @keyframes fade-text {
@@ -103,49 +107,170 @@ $animated-text-delay: 2.5s;
   }
 }
 
+
 //* "Fancy" blockquote based on:
 //* https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
 //*
 
 .fancy-quote {
+  display: inline;
+  quotes: '\201C''\201D''\2018''\2019';
 
-  p:first-child {
-    display: inline;
-    quotes: '\201C''\201D''\2018''\2019';
-
-    &::before,
-    &::after {
-      color: $color-highlight-lighter;
-      font-family: Georgia, serif;
-      font-size: 1.618em;
-      line-height: .1em;
-      position: relative;
-      top: -.1em;
-      vertical-align: -.4em;
-    }
-
-    &::before {
-      content: open-quote;
-      left: -.1em;
-    }
-
-    &::after {
-      content: close-quote;
-      left: .1em;
-      margin-right: -.4em;
-
-      @media (max-width: $bp-small) {
-        margin-right: 0;
-      }
-    }
+  &::before,
+  &::after {
+    color: $color-highlight-lighter;
+    font-family: Georgia, serif;
+    font-size: 1.618em;
+    line-height: .1em;
+    position: relative;
+    top: -.1em;
+    vertical-align: -.4em;
   }
 
-  cite::before {
+  &::before {
+    content: open-quote;
+    left: -.1em;
+  }
+
+  &::after {
+    content: close-quote;
+    left: .1em;
+    margin-right: -.4em;
+
+    @media (max-width: $bp-small) {
+      margin-right: 0;
+    }
+  }
+}
+
+.fancy-cite {
+  &::before {
     content: '—';
     font-family: Georgia, serif;
   }
 }
 
+.fancy-blockquote {
+
+  p:first-child {
+    @extend .fancy-quote;
+  }
+
+  cite {
+    @extend .fancy-cite;
+  }
+}
+
+
+.hero {
+
+  blockquote {
+    text-align: right;
+  }
+
+  @media (max-width: $bp-small) {
+    &,
+    blockquote {
+      text-align: center;
+    }
+
+    .button {
+      margin: auto;
+    }
+  }
+}
+
+
+//*
+//* Block of logos
+//*
+//* TODO: Refactor into a pattern
+//*
+
+.integration-logos {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: none;
+  opacity: .87;
+
+  img {
+    transform: scale(.9);
+  }
+
+  @media (max-width: $bp-med) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 33em;
+
+    img {
+      margin: 10px;
+    }
+  }
+
+  @media (max-width: $bp-small-2) {
+    img {
+      margin: 5px;
+      transform: scale(.8);
+    }
+  }
+}
+
+
+//* List of features
+//*
+//* TODO: Refactor into a pattern
+//*
+
+$feature-spacing: $base-spacing;
+$feature-icon: $base-spacing;
+$feature-icon-margin: $media-spacing;
+
+.homepage-features {
+  margin: $base-spacing (($feature-icon + $feature-icon-margin) * -1);
+
+  @media (max-width: $bp-med-large) {
+    margin: $base-spacing (-$base-spacing) $base-spacing 0;
+  }
+
+  svg {
+    fill: $color-highlight;
+    height: $feature-icon;
+    left: 0;
+    position: absolute;
+    width: $feature-icon;
+  }
+
+  .blurb {
+    padding-left: $feature-icon + $feature-icon-margin;
+    padding-right: $feature-spacing;
+    width: auto;
+  }
+}
+
+
+//*
+//* Javascript terminal
+//*
+
+.terminal {
+  @extend .bg-terminal;
+
+  //* TODO: Make terminal work on touch devices
+  //* In the meantime, we hide it */
+  .touch .terminal {
+    display: none;
+  }
+}
+
+
+//====================================
+//
+// DEPRECATED
+//
+// TODO: Remove after Prince homage
+//=====================================
 
 .hero {
   display: table;
@@ -182,7 +307,7 @@ $animated-text-delay: 2.5s;
 
 
 .hero-blockquote {
-  @extend .fancy-quote;
+  @extend .fancy-blockquote;
   box-sizing: content-box;
   max-width: 30em;
   padding-left: 40px;
@@ -205,67 +330,4 @@ $animated-text-delay: 2.5s;
     top: 0;
   }
 }
-
-
-.integration-logos {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  max-width: none;
-
-  img {
-    transform: scale(.9);
-  }
-
-  @media (max-width: $bp-med) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 33em;
-
-    img {
-      margin: 10px;
-    }
-  }
-
-  @media (max-width: $bp-small-2) {
-    img {
-      margin: 5px;
-      transform: scale(.8);
-    }
-  }
-}
-
-
-$feature-spacing: $base-spacing;
-$feature-icon: $base-spacing;
-$feature-icon-margin: $media-spacing;
-
-.homepage-features {
-  margin: $base-spacing (($feature-icon + $feature-icon-margin) * -1);
-
-  @media (max-width: $bp-med-large) {
-    margin: $base-spacing (-$base-spacing) $base-spacing 0;
-  }
-
-  svg {
-    fill: $color-highlight;
-    height: $feature-icon;
-    left: 0;
-    position: absolute;
-    width: $feature-icon;
-  }
-
-  .blurb {
-    padding-left: $feature-icon + $feature-icon-margin;
-    padding-right: $feature-spacing;
-    width: auto;
-  }
-}
-
-
-//* TODO: Make terminal work on touch devices
-//* In the meantime, we hide it */
-.touch .js-terminal {
-  display: none;
-}
+//** end deprecated **//
