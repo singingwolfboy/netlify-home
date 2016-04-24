@@ -170,7 +170,6 @@ $animated-text-delay: 2.5s;
 }
 
 .hero-blurb {
-
   @media (max-width: $bp-med) {
     text-align: center;
 
@@ -187,7 +186,9 @@ $animated-text-delay: 2.5s;
   box-sizing: content-box;
   max-width: 30em;
   padding-left: 40px;
+  position: relative;
   text-align: right;
+  top: -7px;
 
   p:first-child {
     @extend .gamma;
@@ -201,6 +202,7 @@ $animated-text-delay: 2.5s;
   @media (max-width: $bp-med) {
     padding: 0;
     text-align: center;
+    top: 0;
   }
 }
 
