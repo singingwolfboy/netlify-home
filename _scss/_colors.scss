@@ -171,7 +171,8 @@ svg {
 }
 
 .bg-light {
-  background: $color-light url('/img/bg-light-1.svg') no-repeat -345px -250px;
+  background: $color-light url('/img/bg-light-1.svg') no-repeat left bottom;
+  background-size: cover;
 }
 
 .bg-light-muted {
