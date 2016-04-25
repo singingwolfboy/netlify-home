@@ -127,7 +127,7 @@ Now that your assets are up and running on GitHub, let’s connect them to Netli
 
 ### Step 1: Add Your New Site
 
-![step 1 - add](uploads/step1newsite.png)
+![step 1 - add](/uploads/step1newsite.png)
 
 Creating a new site on Netlify is simple. Once you’ve logged in, you'll be taken to https://app.netlify.com/sites. If you’re just starting out, there’s only one option.
 
@@ -135,7 +135,7 @@ Creating a new site on Netlify is simple. Once you’ve logged in, you'll be tak
 
 Clicking “New Site” brings you to this screen:
 
-![step 2 - link](uploads/step2link.png)
+![step 2 - link](/uploads/step2link.png)
 
 When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
@@ -143,31 +143,31 @@ Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. 
 
 ### Step 3: Authorize Netlify
 
-![step 3 - authorize](uploads/step3authorize.png)
+![step 3 - authorize](/uploads/step3authorize.png)
 
 It’s time to allow Netlify and GitHub to talk to each other. Clicking the “Authorize Application” button will do just that. Like it says in the image below, Netlify doesn’t store your GitHub access token on our servers. If you’d like to know more about the permissions Netlify requests and why we need them, you can visit [https://docs.netlify.com/github-permissions/](https://docs.netlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 
-![step 4 - repo](uploads/Step4phenomic.png)
+![step4flatmarket.png](/uploads/step4flatmarket.png)
 
 Now that you’ve connected Netlify and GitHub, you can see a list of your Git repos. There’s the **flatmarket-example** repo we just pushed to GitHub. Let's select it.
 
 ### Step 5: Configure Your Settings
 
-![step 5 - configure](uploads/Step5phenomic.png)
+![step5flatmarket.png](/uploads/step5flatmarket.png)
 
 Here you can configure your options. Make sure that `/build` is the directory you want to deploy, and enter `flatmarket --component ./node_modules/flatmarket-theme-bananas/index.jsx` as your build command.
 
 ### Step 6: Build Your Site
 
-![step 6 - build](uploads/step6build.png)
+![step 6 - build](/uploads/step6build.png)
 
 Now it’s time to sit back and relax. The first build will take some time, as Netlify gathers all the dependencies needed to build your site.
 
 ### Step 7: Site Is Live
 
-![step 7 - done](uploads/Step7phenomic.png)
+![step7flatmarket.png](/uploads/step7flatmarket.png)
 
 Netlify has given your site a temporary name. We're going to change it for ease of use in the rest of this tutorial.
 
