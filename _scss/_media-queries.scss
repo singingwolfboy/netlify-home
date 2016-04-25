@@ -47,12 +47,15 @@
     display: block;
     margin: 0;
     order: 2; //* Move navigation to the bottom */
-    padding: 10px 40px;
+    padding: 0 80px;
     width: 100%;
 
-    //* Hide nested navs in Documentation */
-    .nav .nav {
-      display: none;
+    .nav {
+      margin-left: 0;
+
+      .nav {
+        display: none;
+      }
     }
   }
 
@@ -195,7 +198,10 @@
   //*
   //* Reduce content width to readable line length
   //*/
-  .content {
+  .content,
+  .l-main,
+  .l-aside .l-container,
+  .l-aside .side-nav {
     max-width: 35em;
     padding: 0 25px;
   }
@@ -212,12 +218,13 @@
     padding: 0;
   }
 
-  .l-main {
-    padding: 0 25px;
-  }
-
   .l-aside {
-    padding: 0 25px;
+    padding: 0;
+
+    .side-nav {
+      margin: 25px auto;
+      padding-left: 25px + 30px;
+    }
   }
 
 
@@ -245,12 +252,12 @@
   .l-container .l-fourth,
   .l-container .l-half,
   .l-container .l-half-med,
-  .l-2-col .l-col,
-  .l-3-col .l-col {
+  .l-2-col,
+  .l-2-col .l-col:nth-child(n) {
+    display: block;
     float: none;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 0;
     padding-right: 0;
     width: auto;
@@ -511,17 +518,13 @@
   //*/
   .content,
   .l-main,
-  .l-aside {
+  .l-aside .l-container {
     padding-left: 1em;
     padding-right: 1em;
   }
 
   .l-wrap-inner {
     padding: 0;
-  }
-
-  .l-aside .side-nav {
-    padding: 20px 0;
   }
 
   //*

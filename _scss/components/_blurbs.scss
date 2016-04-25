@@ -17,6 +17,10 @@ $blurb-spacing: $media-spacing;
   &.break-inside-avoid {
     padding-bottom: 20px;
   }
+
+  @media (max-width: $bp-small) {
+    max-width: none;
+  }
 }
 
 .blurb-title {
@@ -64,6 +68,15 @@ $blurb-spacing: $media-spacing;
   .media-img {
     margin-bottom: 15px;
     margin-top: 10px;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: auto;
+      max-width: none;
+    }
   }
 
   .media--bleed {
@@ -180,6 +193,7 @@ $blurb-spacing: $media-spacing;
     }
   }
 }
+
 
 .l-container {
 

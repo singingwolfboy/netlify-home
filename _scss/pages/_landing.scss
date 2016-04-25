@@ -164,14 +164,35 @@ $animated-text-delay: 2.5s;
 
 .hero {
 
-  blockquote {
-    text-align: right;
-  }
+  @media (max-width: $bp-med) {
 
-  @media (max-width: $bp-small) {
-    &,
-    blockquote {
+    blockquote,
+    .blurb {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 40em;
+    }
+
+    .l-2-col {
+      display: block;
+    }
+
+    .l-col:nth-child(n) {
+      float: none;
+      margin: 0 auto $base-spacing;
+      padding: 0;
       text-align: center;
+      width: auto;
+    }
+
+    .l-col:first-child {
+      @include bb;
+      @include bb--muted;
+
+      &::after {
+        display: block;
+        margin-top: $base-spacing;
+      }
     }
 
     .button {
@@ -203,6 +224,7 @@ $animated-text-delay: 2.5s;
     margin-left: auto;
     margin-right: auto;
     max-width: 33em;
+    text-align: center;
 
     img {
       margin: 10px;
@@ -263,71 +285,3 @@ $feature-icon-margin: $media-spacing;
     display: none;
   }
 }
-
-
-//====================================
-//
-// DEPRECATED
-//
-// TODO: Remove after Prince homage
-//=====================================
-
-.hero {
-  display: table;
-  width: 100%;
-
-  @media (max-width: $bp-med) {
-    display: block;
-  }
-}
-
-.hero-blurb,
-.hero-blockquote {
-  display: table-cell;
-  margin: auto;
-  width: 50%;
-
-  @media (max-width: $bp-med) {
-    display: block;
-    margin: 50px auto;
-    width: auto;
-  }
-}
-
-.hero-blurb {
-  @media (max-width: $bp-med) {
-    text-align: center;
-
-    .cta {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-
-
-.hero-blockquote {
-  @extend .fancy-blockquote;
-  box-sizing: content-box;
-  max-width: 30em;
-  padding-left: 40px;
-  position: relative;
-  text-align: right;
-  top: -7px;
-
-  p:first-child {
-    @extend .gamma;
-  }
-
-  cite {
-    @extend .x-small;
-    @include font-weight('normal');
-  }
-
-  @media (max-width: $bp-med) {
-    padding: 0;
-    text-align: center;
-    top: 0;
-  }
-}
-//** end deprecated **//

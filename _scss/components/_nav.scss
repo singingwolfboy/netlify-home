@@ -20,6 +20,11 @@ html {
   background: $nav-bg-color; //* so it looks like off-canvas navigation bar stretches all the way to the bottom
 }
 
+
+//*
+//* Navigation List
+//*
+
 .nav {
   margin: 5px 30px;
   text-transform: uppercase;
@@ -45,6 +50,10 @@ html {
   }
 }
 
+
+//*
+//* Active element
+//*
 .active {
   color: $color-highlight;
 
@@ -53,6 +62,10 @@ html {
   }
 }
 
+
+//*
+//* Nav variants
+//*
 
 .nav--inline {
   display: inline-block;
@@ -101,6 +114,8 @@ html {
 }
 
 .nav--nested {
+  min-width: 15em;
+
   a {
     line-height: 24px;
     padding-bottom: 6px;
@@ -112,10 +127,6 @@ html {
     padding-bottom: 6px;
     padding-top: 4px;
   }
-}
-
-.nav--flush-left {
-  margin-left: 0;
 }
 
 .nav--social {
@@ -157,12 +168,15 @@ html {
   margin-right: 0;
 }
 
-
-.affix {
+.affix { //* Added by bootstrap affix.js */
   position: fixed;
   top: 30px;
 }
 
+
+//*
+//* Navigation styles based on where it's placed on the page layout
+//*
 
 .site-header {
   .content {
@@ -201,6 +215,8 @@ html {
     width: 15px;
   }
 }
+
+
 
 //*
 //* Based on Foundation Off-Canvas

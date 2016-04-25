@@ -5,6 +5,7 @@
 //------------------------------*/
 
 //* Spacing */
+$baseline: 25px;
 $base-spacing: 40px;
 $media-spacing: 15px;
 $column-gap: 50px;
@@ -13,7 +14,7 @@ $header-padding: $base-spacing * 2;
 //* Widths */
 $page-width: 1280px; //* Comp width */
 $content-width: 960px + $base-spacing * 3; //* Add base_spacing until longest heading on homepage fits *//
-$blurb-width: 245px;
+$blurb-width: 250px;
 
 
 //*
@@ -127,12 +128,24 @@ img {
 
 .l-container {
   @extend %cf;
+
+  .l-half,
+  .l-third,
+  .l-fourth {
+    float: left;
+  }
+
+  @media (max-width: $bp-med) {
+    .l-half-med {
+      float: left;
+    }
+  }
 }
+
 
 //* Layouts without gutters */
 
 .l-half {
-  float: left;
   width: 50%;
 
   &:nth-child(2n+1) {
@@ -141,7 +154,6 @@ img {
 }
 
 .l-third {
-  float: left;
   width: 33.3333333%;
 
   &:nth-child(3n+1) {
@@ -150,7 +162,6 @@ img {
 }
 
 .l-fourth {
-  float: left;
   width: 25%;
 
   &:nth-child(4n+1) {
@@ -160,7 +171,6 @@ img {
 
 .l-half-med {
   @media(max-width: $bp-med) {
-    float: left;
     width: 50%;
 
     &:nth-child(odd) {
@@ -211,17 +221,37 @@ img {
 
   .l-col {
     float: left;
-    padding: 0 30px;
     width: 50%;
   }
 
   .l-col:nth-child(odd) {
     clear: left;
-    padding-left: 0;
+    padding-right: $column-gap / 2;
   }
 
   .l-col:nth-child(even) {
-    padding-right: 0;
+    clear: right;
+    padding-left: $column-gap / 2;
+  }
+
+  @media (max-width: $bp-med-large) {
+    .l-col:nth-child(odd) {
+      padding-right: $base-spacing / 2;
+    }
+
+    .l-col:nth-child(even) {
+      padding-left: $base-spacing / 2;
+    }
+  }
+
+  @media (max-width: $bp-med) {
+    .l-col:nth-child(odd) {
+      padding-right: $baseline / 2;
+    }
+
+    .l-col:nth-child(even) {
+      padding-left: $baseline / 2;
+    }
   }
 }
 
@@ -230,10 +260,18 @@ img {
 
 .l-2-col-auto {
   column-count: 2;
-  column-gap: 50px;
+  column-gap: $column-gap;
 
   > p:first-child {
     margin-top: 0;
+  }
+
+  @media (max-width: $bp-med-large) {
+    column-gap: $base-spacing;
+  }
+
+  @media (max-width: $bp-med) {
+    column-gap: $baseline;
   }
 }
 
