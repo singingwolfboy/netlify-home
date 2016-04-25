@@ -17,15 +17,19 @@ tags:
   - Flatmarket
 ---
 
-Flatmarket is a free, open source e-commerce platform for static websites. It is reliable, secure, and inexpensive to operate.
+As a growing number of talented developers are flocking to static web tools, the possibilities of what can be created are expanding. 
 
-The platform uses Stripe for payment processing and is built on the latest web technologies like hapi, React, and Webpack.
+Even things like eCommerce sites, which were once absolutely dependent on heavy back-end databases, can now be fast, secure and reliable static sites. Today, we'll take a look at one such static eCommerce platform, Flatmarket.
 
-We'll be using the [Flatmarket example](https://github.com/christophercliff/flatmarket-example) to show you how to get it up and running on Netlify. You can then set up your own Flatmarket server, and run the configuration the same way. Let's get started.
+<!-- excerpt -->
+
+Flatmarket uses Stripe for payment processing, a Heroku app to ... and is built on the latest web technologies like hapi, React and Webpack.
+
+We'll be using the [Flatmarket Example](https://github.com/christophercliff/flatmarket-example) to show you how to get it up and running on Netlify. You can then set up your own Flatmarket server, and run the configuration the same way. Let's get started.
 
 Go to the [Flatmarket Example](https://github.com/christophercliff/flatmarket-example) repo and download it as a .zip file.
 
-Unzip the file to where you plan on storing your project.
+Unzip the file to where you plan on storing your project, and then change the directory name to `flatmarket-example`.
 
 Open a terminal and change to that new directory
 
@@ -171,7 +175,7 @@ Now it’s time to sit back and relax. The first build will take some time, as N
 
 Netlify has given your site a temporary name. We're going to change it for ease of use in the rest of this tutorial.
 
-### Step 8: Name change
+### Step 8: Name Change
 
 ![step 8 - change name](uploads/flatmarket_assigned_name.png)
 
@@ -257,7 +261,7 @@ Back in the `Stripe` browser tab, copy the value of `Test Secret Key` and paste 
 
  This is perfectly fine, and you can ignore it. To really see if your Flatmarket install is working, you'll need to check two places.
 
- Open your [Heroku Dashboard] and click on your app.
+ Open your [Heroku Dashboard](https://dashboard.heroku.com) and click on your app.
 
 ![heroku_logs](/uploads/heroku_logs.png)
 
