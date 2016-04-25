@@ -7,8 +7,14 @@ short_title: Flatmarket Tutorial
 description: Hosting a static eCommerce site built with Flatmarket on Netlify
 thumbnail: /uploads/shopping-cart-of-checkered-design_318-50865.png
 cmsUserSlug: ""
-date: now
-tags: null
+date: 2016-04-25
+tags:
+  - eCommerce
+  - shopping
+  - Tutorial
+  - heroku
+  - Stripe
+  - Flatmarket
 ---
 
 Flatmarket is a free, open source e-commerce platform for static websites. It is reliable, secure, and inexpensive to operate.
