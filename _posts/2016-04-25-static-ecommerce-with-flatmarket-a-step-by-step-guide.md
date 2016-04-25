@@ -177,7 +177,7 @@ Netlify has given your site a temporary name. We're going to change it for ease 
 
 ### Step 8: Name Change
 
-![step 8 - change name](uploads/flatmarket_assigned_name.png)
+![step 8 - change name](/uploads/flatmarket_assigned_name.png)
 
 Click `Edit` next to the `Name` field.
 
@@ -235,7 +235,7 @@ Back in the `Stripe` browser tab, copy the value of `Test Secret Key` and paste 
 
  When you are done, the variables should look like this:
 
-![heroku_config_variables](/uploads/heroku_config_variables.png).
+![heroku_config_variables](/uploads/heroku_config_variables.png)
 
  Click `Deploy for Free`, and Heroku will build your app. Once it is finished, click `View`.
 
