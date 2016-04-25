@@ -7,7 +7,7 @@ short_title: Flatmarket Tutorial
 description: Hosting a static eCommerce site built with Flatmarket on Netlify
 thumbnail: /uploads/shopping-cart-of-checkered-design_318-50865.png
 cmsUserSlug: ""
-date: 2016-04-25
+date: 2016-04-25T00:00:00.000Z
 tags:
   - eCommerce
   - shopping
@@ -179,11 +179,11 @@ Click `Edit` next to the `Name` field.
 
 In the resulting popup, we'll change the site name (and therefore the subdomain for the page)
 
-![update name](uploads/flatmarket_name_change.png)
+![update name](/uploads/flatmarket_name_change.png)
 
 Once you've clicked save, the site has a new name.
 
-![flatmarket new name](uploads/flatmarketname.png)
+![flatmarket new name](/uploads/flatmarketname.png)
 
 Now you can visit the site at [https://flatmarket-example.netlify.com](https://flatmarket-example.netlify.com). Note the `https`. Any Netlify site without a custom domain can use Netlify's SSL, just by specifying `https` in the URL.
 
@@ -193,7 +193,7 @@ Since the site is up and running, now you can connect it to your Stripe account,
 
 Log in to [Stripe](https://stripe.com) and select `Account Settings` from the `Your Account` dropdown
 
-![stripe_account](uploads/stripe_account.png)
+![stripe_account](/uploads/stripe_account.png)
 
 Select `API Keys`. You'll need to keep this window open for a while, so open a new browser tab.
 
@@ -211,7 +211,7 @@ You can connect your site to a Heroku app in a few simple steps.
 
 Visit [https://github.com/christophercliff/flatmarket-server-heroku](https://github.com/christophercliff/flatmarket-server-heroku) and click the `Deploy to Heroku` button.
 
-![new_heroku_app](new_heroku_app.png)
+![new_heroku_app](/uploads/new_heroku_app.png)
 
 A new browser tab will open, and you'll be presented with a page to configure your new Heroku app.
 
@@ -231,7 +231,7 @@ Back in the `Stripe` browser tab, copy the value of `Test Secret Key` and paste 
 
  When you are done, the variables should look like this:
 
- ![heroku_config_variables](uploads/heroku_config_variables.png).
+![heroku_config_variables](/uploads/heroku_config_variables.png).
 
  Click `Deploy for Free`, and Heroku will build your app. Once it is finished, click `View`.
 
@@ -253,13 +253,13 @@ Back in the `Stripe` browser tab, copy the value of `Test Secret Key` and paste 
 
  The `Buy Now` button should turn green with a check mark, and then you'll see a message:
 
- ![flatmarket_error](flatmarket_error.png)
+![flatmarket_error.png](/uploads/flatmarket_error.png)
 
  This is perfectly fine, and you can ignore it. To really see if your Flatmarket install is working, you'll need to check two places.
 
  Open your [Heroku Dashboard] and click on your app.
 
- ![heroku_logs](heroku_logs.png)
+![heroku_logs](/uploads/heroku_logs.png)
 
 Click the three purple dots in the upper right hand corner, then select `View Logs`.
 
