@@ -5,104 +5,156 @@ layout: default
 {{ content }}
 
 <!-- Features -->
-<section class="bg-dark-muted-cover inverse bb bb--large">
+<section class="section inverse bg-dark-muted-cover">
+
   <div class="content">
-    <h1 class="mega text-center mb-60">
-      <a href="/features.html">Features</a>
-    </h1>
 
-    <div class="l-container homepage-features">
+    <h1 class="giga semibold">
+      <span class="icon icon--l prepend offset">
+        <svg><use xlink:href="#icon-features"></use></svg>
+      </span>
+      Features
+    </header>
+
+    <hr class="highlight">
+
+    <ul class="grid grid--spacing">
     {% for feature in site.data.homepage_features %}
-
-      <div class="l-third l-half-med">
-        <section class="blurb">
-          <h3 class="blurb-title">
-            <svg width="40" height="40">
-              <use xlink:href="#{{feature.icon_id}}" />
-            </svg>
-            {{feature.title}}
+      <li class="col size-1-3">
+        <section class="blurb blurb--offset">
+          <svg class="blurb-icon"><use xlink:href="#{{feature.icon_id}}" /></svg>
+          <h3 class="blurb-title zeta highlight">
+            {{ feature.title }}
           </h3>
-          <div class="blurb-bd small">
+          <div class="blurb-text small">
             {{feature.description | markdownify}}
           </div>
         </section>
-      </div>
-
+      </li>
     {% endfor %}
-    </div>
+    </ul>
 
-    <p class="text-center gamma mb-80">
-      <a href="/features.html">
-        See more features<svg width="20" height="20" class="append color-bg"><use xlink:href="#icon-arrow" /></svg>
+    <footer>
+      <a class="epsilon link-more" href="/features.html">
+        <strong>See More Features</strong>
       </a>
-    </p>
+    </footer>
   </div>
 </section>
-<!-- end Features -->
 
 <!-- Pull Quote -->
 <section class="bg-white muted text-center">
-  <div class="content">
-    <!-- Section with video button for smaller devices -->
-    <p class="pullquote delta p--wide">
-      <strong>{{site.data.stats.developers}}</strong> Developers •
-      <strong>{{site.data.stats.websites}}</strong> Web Sites •
-      <strong>{{site.data.stats.deploys}}</strong> Deploys
+  <div class="content content--wide">
+    <p class="delta pullquote">
+      <nobr><strong>{{site.data.stats.developers}}</strong> Developers</nobr> •
+      <nobr><strong>{{site.data.stats.websites}}</strong> Web Sites</nobr> •
+      <nobr><strong>{{site.data.stats.deploys}}</strong> Deploys</nobr>
     </p>
-  </div><!-- end content -->
+  </div>
 </section>
-<!-- end Pull Quote-->
 
 <!-- Newsletter, Testimonials and Client Logos -->
-<section class="bg-light-muted muted text-center bb bb--large">
+<section class="section bg-light-muted muted">
   <div class="content content--narrow">
 
     <!-- Newsletter -->
-    <section class="bb bb--muted">
-      {% include newsletter.html %}
+    {% include newsletter.html %}
+
+    <hr>
+
+    <!-- Testimonials -->
+    <section>
+      <h1 class="alpha">What our clients say</h1>
+      <ul class="grid grid--spacing">
+        {% for testimonial in site.data.testimonials.quotes %}
+        <li class="col size-1-3 size-1-2-m {% if forloop.last == true %}hide-m{% endif %}">
+          <section class="blurb text-center">
+            <header class="blurb-hd">
+              <img src="{{testimonial.photo}}" alt="Photo of {{testimonial.cite}}" height="90">
+            </header>
+            <div class="blurb-bd">
+              <blockquote>
+                <p>“{{testimonial.quote}}”</p>
+                <cite><a class="xx-small bold loud" href="{{testimonial.link}}" target="_blank">{{testimonial.cite}}</a></cite>
+              </blockquote>
+            </div>
+          </section>
+        </li>
+        {% endfor %}
+      </ul>
     </section>
 
-    {% include testimonials.html %}
-  </div><!-- end content -->
-</section>
+    <hr>
 
-<!-- Blog and Social Links -->
-<section class="bg-dark-muted-cover inverse bb bb--large">
-  <div class="content content--narrow">
-
+    <!-- Client logos -->
     <section>
-      <header class="text-center mb-50">
-        <h1 class="kilo"><a href="/blog.html">Visit our blog</a></h1>
-        <p class="zeta muted p--wide">See the blog for tons of articles, tips, tricks and opinions on all that is related to static web-tech.</p>
-      </header>
-      <div class="l-container">
-        {% for post in site.posts | limit:3 %}
-        <div class="l-third">
-          {% include post-blurb.html %}
-        </div>
-        {% endfor %}
+      <h1 class="alpha">A selection of our clients</h1>
+      <div class="grid grid--img">
+        {% image_tag src="/img/logos/sequoia.png" width="100" %}
+        {% image_tag src="/img/logos/we-work.png" width="119" %}
+        {% image_tag src="/img/logos/instrument.png" width="70" %}
+        {% image_tag src="/img/logos/carrott.png" width="110" %}
+        {% image_tag src="/img/logos/scripted.png" width="100" %}
+        {% image_tag src="/img/logos/malala-fund.png" width="50" %}
+        <br class="hide-m">
+        {% image_tag src="/img/logos/vice.png" width="82" %}
+        {% image_tag src="/img/logos/app-io.png" width="119" %}
+        {% image_tag src="/img/logos/nbc.png" width="66" %}
+        {% image_tag src="/img/logos/openstack.png" width="120" %}
+        {% image_tag src="/img/logos/baccardi.png" width="120" %}
       </div>
     </section>
 
-    <section class="text-center mb-60">
-      <h1 class="beta inline-block v-bottom mt-40 mb-40 mr-40">
+  </div>
+</section>
+
+
+<!-- Blog and Social Links -->
+<section class="section inverse muted bg-dark-muted-cover">
+  <div class="content content--narrow">
+
+    <section>
+      <header>
+        <h1 class="kilo"><a href="/blog.html">Visit our blog</a></h1>
+        <p class="zeta">See the blog for tons of articles, tips, tricks and opinions on all that is related to static web-tech.</p>
+      </header>
+
+      <ul class="grid grid--spacing">
+        {% for post in site.posts | limit:3 %}
+        <li class="col size-1-3 size-1-2-m {% if forloop.last == true %}hide-m{% endif %}">
+          {% include post-blurb.html %}
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="show-m">
+        <ul class="grid grid--spacing">
+          {% for post in site.posts | limit:2 | offset: 2 %}
+          <li class="col size-1-2-m">
+            {% include post-blurb.html %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h1 class="gamma inline-block">
         <a href="/contact.html">Socialize @</a>
       </h1>
 
-      <p class="inline-block v-bottom mt-40 mb-40">
+      <p class="gamma inline-block">
         {% for link in site.social-links %}
-        <a href="{{link[1]}}" class="icon-link--round icon-link--{{link[0]}}">
-          <svg width="36" height="36" class="icon-{{link[0]}}--round">
-            <use xlink:href="#icon-{{link[0]}}-round">
-          </svg>
+        <a href="{{link[1]}}" class="append icon icon--round icon--{{link[0]}}">
+          <svg><use xlink:href="#icon-{{link[0]}}-round"></svg>
         </a>
-        {% endfor %}
+      {% endfor %}
       </p>
     </section>
 
-
-  </div><!-- end content-->
+  </div>
 </section>
+
 {% if site.terminal == 'production' %}
 <script>window.TUTORIAL_LOG_ENDPOINT = 'https://term.ops.netlify.com';</script>
 {% endif %}

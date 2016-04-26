@@ -48,10 +48,10 @@
       $li.toggleClass("active", location.hash === href).find("a").attr("href", href).text(this.textContent);
       $ul.append($li);
     });
-    $(".docs-aside .active").toggleClass('active', !location.hash).append($ul);
+    $(".docs-sidebar .active").toggleClass('active', !location.hash).append($ul);
   }
 
-  $('a:not(.icon)[href^=#]').on('click', function(e) {
+  $('a:not(.toggle)[href^=#]').on('click', function(e) {
     e.preventDefault();
     var
       $this = $(this),

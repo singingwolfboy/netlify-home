@@ -4,9 +4,9 @@ layout: default
 
 {% assign post = page %}
 
-<article class="l-wrap bg-light-muted-3">
-  <div class="l-wrap-inner l-wrap-inner--main-left">
-    <div class="l-main l-main--left">
+<article class="wrap bg-light-muted-3">
+  <div class="wrap-inner wrap-inner--main-left">
+    <div class="main main--left">
 
       <div class="post">
         <header class="post-hd">
@@ -32,16 +32,16 @@ layout: default
       {% include disqus.html %}
     </div>
 
-    <aside class="l-aside l-aside--right inverse blog-aside">
-      <h3 class="blog-aside-title">More Articles</h3>
-      <ul class="l-container">
+    <aside class="sidebar sidebar--right inverse">
+      <h1 class="sidebar-title">More Articles</h3>
+      <ul class="grid grid--spacing">
       {% for post in site.related_posts | limit: 6 %}
-        <li class="l-half-med">
+        <li class="col">
         {% include post-blurb.html %}
         </li>
       {% endfor %}
       </ul>
-      <footer class="blog-aside-footer">
+      <footer class="sidebar-footer">
         <a href="/blog.html" class="link-more">More</a>
       </footer>
     </aside>

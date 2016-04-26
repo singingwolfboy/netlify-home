@@ -1,16 +1,15 @@
 ---
 layout: landing
 content-width: narrow
-header_class: bg-purple inverse
 ---
 
 <link href='https://fonts.googleapis.com/css?family=Inconsolata:400' rel='stylesheet' type='text/css'>
 
 <!-- Above the fold -->
-<div class="bg-purple-rain inverse">
+<div class="bg-hero">
   <section class="hero content">
     <div class="l-2-col mb-10">
-      <div class="l-col mt-50 mb-50">
+      <div class="l-col mt-50 mb-50 bb--muted">
         <div class="blurb">
           <h1 class="alpha bold animated-text animated-text--fade">
             <span>One Platform</span>
@@ -22,7 +21,7 @@ header_class: bg-purple inverse
             platform. Add best practices like SSL, CDN distribution, caching,
             and continuous deployment with a single click.
           </p>
-          <p>
+          <p class="zeta">
             <a href="https://app.netlify.com" class="button button--pill cta">
               <strong class="button-label epsilon">Get Started</strong>
             </a>
@@ -31,7 +30,7 @@ header_class: bg-purple inverse
       </div>
 
       <div class="l-col mt-100 text-right">
-        <blockquote class="fancy-blockquote mt-40">
+        <blockquote class="blurb fancy-blockquote mt-40">
           <p class="gamma">Netlify has everything you need to make a high performance site or <nobr>web-app</nobr>. You just push your code.</p>
           <p>
             <cite class="x-small semibold"><strong>Tom Preston-Werner</strong>, founder&nbsp;of&nbsp;GitHub and&nbsp;creator&nbsp;of&nbsp;Jekyll</cite>
@@ -42,23 +41,21 @@ header_class: bg-purple inverse
   </section>
 </div>
 
-<!-- Integrations -->
-<section class="bg-white muted text-center bb bb--large">
-  <div class="content">
-    <p class="integration-logos mt-30">
-    {% for logo in site.data.homepage_integration_logos %}
-      <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="{{logo.alt}}">
-    {% endfor %}
-    </p>
-    <p class="delta mt-20 mb-30">
-      Our agnostic platform means your favorite tools are already supported
-      <small class="xx-small block semibold loud">And thousands more! (Really, just about anything)</small>
-    </p>
-  </div>
-</section>
-
 <!-- Terminal -->
 <section class="terminal bb bb--large">
   <div class="content js-terminal">
+  </div>
+</section>
+
+<!-- Integrations -->
+<section class="section bg-light-muted muted">
+  <div class="content">
+    <h1 class="beta">Our agnostic platform means your favorite tools are already supported</h1>
+    <p class="grid grid--img integration-logos">
+    {% for logo in site.data.homepage_integration_logos %}
+      <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="{{logo.alt}}">
+    {% endfor %}
+    <p class='x-small loud semibold'>And thousands more! (Really, just about anything)</p>
+    </p>
   </div>
 </section>

@@ -15,7 +15,7 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    var cmd = ['exec', 'jekyll', 'build', '-t'];
+    var cmd = ['exec', 'jekyll', 'build', '-t' , '--incremental'];
     if (process.env.CMS_ENV !== 'production') {
       cmd.push("--future");
     }

@@ -1,7 +1,7 @@
-<article class="blurb">
-  <header class="blurb-hd">
-    <a class="media" href="{{post.url}}">
-      <div class="media-img optional grayscale">
+<a href="{{post.url}}">
+  <article class="blurb">
+    <header class="blurb-hd media">
+      <div class="media-img grayscale thumbnail">
         {% image_tag src=post.thumbnail height="80" %}
       </div>
       <div class="media-bd">
@@ -10,9 +10,9 @@
         </h1>
         <p class="blurb-meta link">by {{post.author}}</p>
       </div>
-    </a>
-  </header>
-  <div class="blurb-bd">
-    <p class="small muted">{{post.description}}</p>
-  </div>
-</article>
+    </header>
+    <div class="blurb-bd small">
+      <p class="muted">{{post.description}}</p>
+    </div>
+  </article>
+</a>

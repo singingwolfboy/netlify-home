@@ -1,125 +1,84 @@
 $blurb-spacing: $media-spacing;
+$blurb-title-spacing: 6px;
+$blurb-hd-spacing: $blurb-spacing - $blurb-title-spacing;
+$blurb-icon-size: $base-font-size * 2;
+
+
+//* Blurb Thumbnails */
+
+.thumbnail {
+  height: 80px;
+  max-width: 33%;
+  overflow: hidden;
+  width: 80px;
+
+  img {
+    height: 100%;
+    max-width: none;
+    width: auto;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.thumbnail--large {
+  height: 120px;
+  width: 120px;
+
+  &.media-img {
+    margin-right: $column-gap / 2;
+
+    @media (max-width: $bp-xs) {
+      display: none;
+    }
+  }
+}
+
 
 //* Blurb component */
 
 .blurb {
-  max-width: 30em;
+  @extend .center;
+  max-width: 40em;
   position: relative;
 
   cite {
-    @extend .xx-small;
-    @extend .bold;
-    @extend .loud;
-    display: block;
     margin-top: -5px;
-  }
-
-  &.break-inside-avoid {
-    padding-bottom: 20px;
-  }
-
-  @media (max-width: $bp-small) {
-    max-width: none;
   }
 }
 
 .blurb-title {
   @extend .epsilon;
   @extend .semibold;
-  @extend .quiet;
-  margin: 5px 0;
+  margin: 0;
+  padding-bottom: .6em;
+  vertical-align: baseline;
 
-  + p {
-    margin-top: 0;
+  a & {
+    @extend .quiet;
   }
-
 
   a:hover & {
     color: $color-highlight;
   }
 
-  .l-arrange > & {
-    @extend .l-arrange-fill;
-    padding: 5px 0;
-    vertical-align: baseline;
+  + p {
+    margin-top: .5em;
   }
 }
 
 .blurb-meta {
   @extend .x-small;
-  margin: 10px 0;
-  max-width: none;
+  vertical-align: baseline;
 
   .link {
     display: block;
-    margin-right: 1px;
-  }
-
-  .l-arrange > & {
-    @extend .l-arrange-fit;
-    vertical-align: baseline;
   }
 }
 
-.blurb-hd {
-  border-bottom: 2px solid $color-highlight;
-  margin-bottom: 10px;
-
-  .media-img {
-    margin-bottom: 15px;
-    margin-top: 10px;
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-
-    img {
-      height: 100%;
-      width: auto;
-      max-width: none;
-    }
-  }
-
-  .media--bleed {
-    .media-img {
-      margin-top: 0;
-    }
-  }
-}
-
-
-.blurb-bd {
-
-  &::after { // clearfix
-    clear: both;
-    content: ' ';
-    display: table;
-  }
-
-  p:first-child {
-    margin-top: 10px;
-  }
-
-  img.left {
-    margin: 0 $blurb-spacing $blurb-spacing 0;
-    max-width: 38.2%;
-
-    + p {
-      margin-top: $blurb-spacing;
-    }
-  }
-
-  .media {
-    margin: 15px 0 5px;
-  }
-
-  .media-img {
-    margin: 10px 30px 0 0;
-  }
-
-  .cta {
-    margin-top: 25px;
-  }
-}
 
 .blurb-text {
   p {
@@ -127,26 +86,102 @@ $blurb-spacing: $media-spacing;
   }
 }
 
-.blurb-footer {
-  @extend .small;
-  line-height: 25px;
+.blurb-hd {
+  border-bottom: 2px solid $color-highlight;
+  margin-bottom: $blurb-hd-spacing;
 
-  a {
-    @extend .link;
+  .media-img {
+    margin: $blurb-title-spacing $blurb-spacing $blurb-spacing 0;
+  }
+
+  .blurb-title,
+  .blurb-meta {
+    margin: 0;
+    padding-bottom: $blurb-title-spacing;
+  }
+}
+
+.blurb-bd {
+
+  p {
+    margin-top: .5em;
+  }
+
+  .media,
+  &.media {
+    margin: ($column-gap / 2) 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .media-img {
+    margin-right: ($column-gap / 2);
+  }
+}
+
+.blurb-ft {
+  @extend .small;
+}
+
+
+//#
+//# # BLURB VARIANTS
+//#
+
+
+//* Blurb with offset icon to the left */
+.blurb--offset {
+  box-sizing: content-box;
+  padding-left: $blurb-icon-size + $blurb-spacing;
+}
+
+.blurb-icon {
+  height: $blurb-icon-size;
+  left: 0;
+  position: absolute;
+  top: $blurb-title-spacing;
+  width: $blurb-icon-size;
+}
+
+
+//* Blurb with title and body inlined */
+.blurb--inlined {
+
+  padding-bottom: $base-spacing;
+
+  p,
+  .blurb-title,
+  .blurb-bd {
+    display: inline;
+  }
+
+  .blurb-title {
+    font-size: 1em;
+  }
+
+  .blurb-ft {
+    padding: $blurb-title-spacing 0;
+
+    a {
+      @extend .link;
+    }
   }
 }
 
 
 //* Blurb in a layout */
 
-.l-container {
-  .blurb {
-    margin: 0 auto $blurb-spacing;
-    width: $blurb-width;
-  }
+.grid .blurb {
+  max-width: $blurb-width;
 }
 
-.l-third {
+.half .blurb {
+  max-width: none;
+}
+
+.third {
 
   &:nth-child(3n+1) .blurb {
     margin-left: 0;
@@ -156,54 +191,10 @@ $blurb-spacing: $media-spacing;
     margin-right: 0;
   }
 
-  @media (max-width: $bp-med) {
-    .blurb {
-      margin-left: $blurb-spacing;
-      margin-right: $blurb-spacing;
-      width: auto;
-    }
-
-    &:nth-child(3n+1) .blurb {
-      left: -$blurb-spacing;
-      margin-left: $blurb-spacing;
-    }
-
-    &:nth-child(3n) .blurb {
-      margin-right: $blurb-spacing;
-      right: -$blurb-spacing;
-    }
-  }
-}
-
-.l-half-med {
-  @media (max-width: $bp-med) {
-    .blurb {
-      margin: 0 $blurb-spacing $blurb-spacing;
-      width: auto;
-    }
-
-    &:nth-child(odd) .blurb {
-      left: -$blurb-spacing;
-      right: 0;
-    }
-
-    &:nth-child(even) .blurb {
-      left: 0;
-      right: -$blurb-spacing;
-    }
-  }
-}
-
-
-.l-container {
-
-  @media (max-width: $bp-small) {
-    .blurb:nth-child(n),
+  @media (max-width: $bp-m) {
     &:nth-child(n) .blurb {
-      float: none;
-      left: 0;
-      margin: 0 auto $blurb-spacing;
-      right: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

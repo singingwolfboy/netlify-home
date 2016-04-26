@@ -1,0 +1,13 @@
+title: About Netlify
+intro: Netlify is based in Dog Patch, San Francisco, and runs on laptops, a multitude of programming languages and good times.
+text: "Our mission is simple. We want to take modern static websites and apps mainstream.\n\nBecause the current web is a mess. Seriously though. Every week we go to Hackernews and follow a broken link. 79% of all Wordpress sites are vulnerable to known exploits, which alone represents 20% of all website.\n\nThe emergence of mobile means a lot of slow loading sites with towering bounce rates and loss of business to follow. We should do better. We must actually. Because we can. Static websites have always been faster, safer, simpler and cheaper. It’s just that browsers and shared hosting services weren’t good enough, so there were too many compromises.\n\nMaking the slow, vulnerable and expensive legacy sites the best alternative.\n\nBut no more. The browser is all grown-up, and CDNs have really seen the light of day.\n\n
+Netlify is a unified platform that automises all the work you need to do around your code to create high performant, easily maintainable site or web-app. Simply push to Netlify and watch your site fly."
+founders:
+  - name: Matt
+    email: matt@netlify.com
+    text: "Developer by trade, Matt likes code. A lot. And music, beer, and lot’s of other stuff really. A former CTO in a 150 people web-tech company, and creator of the dynamic CMS WebPop, he moved to SF 4 years ago with no intention of leaving again."
+    photo: /img/about/matt.png
+  - name: Chris
+    email: chris@netlify.com
+    text: Digital Marketeer who spent the last 14 years in ad-agencies, founding 1 of them, functioning mostly as Chief Digital Officer. He enjoys innovative digital advertisement, building things, peanutbutter, champagne and movies. And writing web site copy including blurbs about himself on about pages.
+    photo: /img/about/chris.png

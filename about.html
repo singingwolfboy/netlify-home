@@ -1,79 +1,60 @@
 ---
 layout: default
-title: About Us
+title: About
 content-width: narrow
 ---
-<div class="bg-light-muted-2 muted">
-<div class="content content--narrow">
-  <section>
-    <header class="text-center">
-      <h1 class="mega">About Netlify</h1>
-      <p class="intro highlight mb-50">
-        <strong>Netlify is based in Dog Patch, San Francisco, and runs on laptops, a multitude of programming languages and good times.</strong>
-      </p>
-    </header>
-    <div class="l-2-col-auto">
-      <p>
-      Our mission is simple. We want to take modern static websites and apps mainstream.
-      </p>
-      <p>
-      Because the current web is a mess. Seriously though. Every week we go to Hackernews and follow a broken link. 79% of all Wordpress sites are vulnerable to known exploits, which alone represents 20% of all website.
-      </p>
-      <p>
-      The emergence of mobile means a lot of slow loading sites with towering bounce rates and loss of business to follow. We should do better. We must actually. Because we can. Static websites have always been faster, safer, simpler and cheaper. It’s just that browsers and shared hosting services weren’t good enough, so there were too many compromises.
-      </p>
-      <p>
-      Making the slow, vulnerable and expensive legacy sites the best alternative.
-      </p>
-      <p>
-      But no more. The browser is all grown-up, and CDNs have really seen the light of day.
-      </p>
-      <p>
-      Netlify is a unified platform that automises all the work you need to do around your code to create high performant, easily maintainable site or web-app. Simply push to Netlify and watch your site fly.
-      </p>
-    </div>
-  </section>
+<section class="page bg-light-muted-2 muted">
+  <div class="content content--narrow">
 
-  <hr class="bb mt-70 mb-60">
-
-  <section>
-    <h1 class="alpha text-center mb-40">Netlify was co-founded in 2015 by</h1>
-    <div class="l-2-col bb">
-      <div class="l-col">
-        <section class="blurb">
-          <header class="blurb-hd l-arrange">
-            <h1 class="blurb-title">Matt</h1>
-            <p class="blurb-meta">
-              <a href="mailto:matt@netlify.com" class="link">matt@netlify.com</a>
-            </p>
-          </header>
-          <div class="blurb-bd">
-            <img src="/img/about/matt.png" class="left">
-            <p class="x-small">
-              Developer by trade, Matt likes code. A lot. And music, beer, and lot’s of other stuff really. A former CTO in a 150 people web-tech company, and creator of the dynamic CMS WebPop, he moved to SF 4 years ago with no intention of leaving again.
-            </p>
-          </div>
-        </section>
+    <section>
+      <header>
+        <h1 class="mega">{{site.data.about.title}}</h1>
+        <p class="intro highlight">
+          <strong>{{site.data.about.intro}}</strong>
+        </p>
+      </header>
+      <div class="css-columns">
+        {{site.data.about.text | markdownify}}
       </div>
-      <div class="l-col">
-        <section class="blurb">
-          <header class="blurb-hd l-arrange">
-            <h1 class="blurb-title">Chris</h1>
-            <p class="blurb-meta">
-              <a href="mailto:chris@netlify.com" class="link">chris@netlify.com</a>
-            </p>
-          </header>
-          <div class="blurb-bd">
-            <img src="/img/about/chris.png" class="left">
-            <p class="x-small">
-              Digital Marketeer who spent the last 14 years in ad-agencies, founding 1 of them, functioning mostly as Chief Digital Officer. He enjoys innovative digital advertisement, building things, peanutbutter, champagne and movies. And writing web site copy including blurbs about himself on about pages.
-            </p>
-          </div>
-        </section>
-      </div>
-    </div>
+    </section>
 
-    <p class="epsilon highlight text-center mt-70 mb-80"><strong>We look forward to serving you :)</strong></p>
+    <hr class="highlight">
+
+    <section>
+      <h1 class="alpha">Netlify was co-founded in 2015 by</h1>
+
+      <ul class="l-grid l-grid--gutters">
+        {% for person in site.data.about.founders %}
+        <li class="l-col half">
+          <section class="blurb">
+            <header class="blurb-hd l-arrange">
+              <h2 class="blurb-title l-arrange-fill">{{ person.name }}</h1>
+              <p class="blurb-meta l-arrange-fit">
+                <a href="mailto:{{ person.email }}" class="link">{{ person.email }}</a>
+              </p>
+            </header>
+            <div class="blurb-bd media">
+              <div class="media-img thumbnail thumbnail--large">
+                <img src="{{ person.photo }}">
+              </div>
+              <div class="media-bd x-small">
+                {{person.text | markdownify}}
+              </div>
+            </div>
+          </section>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <hr class="highlight mt-0 mb-60">
+
+    <footer>
+      <p class="epsilon highlight">
+        <strong>We look forward to serving you :)</strong>
+      </p>
+    </footer>
+
   </section>
 </div>
 </div>

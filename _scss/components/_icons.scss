@@ -1,0 +1,186 @@
+//* Default size for icons */
+
+$icon-size: ($base-spacing / $base-font-size) * 1em;
+$icon-spacing: $media-spacing - 3px; // to compensate for the darn inblock extra spacing
+
+//* Make sure icons scale with text */
+
+[width='35'] {
+  width: 2.25rem;
+}
+
+[height='35'] {
+  height: 2.25rem;
+}
+
+[width='30'] {
+  width: 2rem;
+}
+
+[height='30'] {
+  height: 2rem;
+}
+
+[width='25'] {
+  width: 1.5rem;
+}
+
+[height='25'] {
+  height: 1.5rem;
+}
+
+[width='20'] {
+  width: 1.25rem;
+}
+
+[height='20'] {
+  height: 1.25rem;
+}
+
+[width='15'] {
+  width: 1rem;
+}
+
+[height='15'] {
+  height: 1rem;
+}
+
+[width='10'] {
+  width: .625rem;
+}
+
+[height='10'] {
+  height: .625rem;
+}
+
+//* Spacing for inline icons, like the plus or arrow icons  */
+
+svg {
+
+  position: relative;
+
+  &.append {
+    margin-left: $icon-spacing;
+    top: -.0625em;
+  }
+
+  &.prepend {
+    margin-right: $icon-spacing;
+    top: -.15em;
+  }
+}
+
+
+//* The tag that wraps the svg icon */
+
+.icon {
+  display: inline-block;
+  height: $icon-size;
+  line-height: 1;
+  position: relative;
+  vertical-align: middle;
+  width: $icon-size;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  &.append {
+    margin-left: $icon-spacing;
+  }
+
+  &.prepend {
+    margin-right: $icon-spacing;
+  }
+
+  &.offset {
+    margin-left: -$icon-size;
+  }
+}
+
+.icon--l { //* Larger icon
+  height: $icon-size * 1.5;
+  top: -.1em;
+  vertical-align: middle;
+  width: $icon-size * 1.5;
+
+  &.offset {
+    //scss-lint:disable DuplicateProperty
+    margin-left: -$icon-size * 1.5;
+    margin-left: calc(-#{$icon-size * 1.5} - #{$icon-spacing});
+  }
+}
+
+//*
+//* Round Icons (eg. social links)
+//*
+//* Hover effect: http://tympanus.net/Development/IconHoverEffects/#set-8
+//*/
+
+$color-sonar: $color-darker;
+
+// scss-lint:disable ColorVariable
+@keyframes sonarEffect {
+  0% {
+    opacity: .3;
+  }
+
+  40% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255, 255, 255, .5);
+    opacity: .5;
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255, 255, 255, .5);
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.icon--round {
+  transition: transform ease-out .2s;
+
+  &::after {
+    border-radius: 100%;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &.append {
+    margin-left: ($column-gap / 2);
+  }
+
+  &.prepend {
+    margin-right: ($column-gap / 2);
+  }
+}
+
+.no-touch a:hover {
+  &.icon--round {
+    transform: scale(.95);
+
+    &::after {
+      animation: sonarEffect 1.3s ease-out 75ms;
+    }
+  }
+}
+
+
+//*
+//*  Icons for Social Networks
+//*
+
+@each $name, $color in $colors-social {
+  &.icon--#{$name} {
+    color: darken(grayscale($color), 5%);
+
+    .no-touch &:hover {
+      color: $color;
+    }
+  }
+}

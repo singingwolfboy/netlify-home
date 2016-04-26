@@ -1,5 +1,5 @@
 //*
-//* Animated text
+//* Animated text for the hero
 //*
 
 $animated-text-delay: 2.5s;
@@ -125,6 +125,10 @@ $animated-text-delay: 2.5s;
     position: relative;
     top: -.1em;
     vertical-align: -.4em;
+
+    .inverse & {
+      color: $color-highlight;
+    }
   }
 
   &::before {
@@ -137,7 +141,7 @@ $animated-text-delay: 2.5s;
     left: .1em;
     margin-right: -.4em;
 
-    @media (max-width: $bp-small) {
+    @media (max-width: $bp-s) {
       margin-right: 0;
     }
   }
@@ -164,112 +168,34 @@ $animated-text-delay: 2.5s;
 
 .hero {
 
-  @media (max-width: $bp-med) {
-
-    blockquote,
-    .blurb {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 40em;
-    }
-
-    .l-2-col {
-      display: block;
-    }
-
-    .l-col:nth-child(n) {
-      float: none;
-      margin: 0 auto $base-spacing;
-      padding: 0;
-      text-align: center;
-      width: auto;
-    }
-
-    .l-col:first-child {
-      @include bb;
-      @include bb--muted;
-
-      &::after {
-        display: block;
-        margin-top: $base-spacing;
-      }
-    }
-
-    .button {
-      margin: auto;
-    }
-  }
 }
 
 
-//*
-//* Block of logos
-//*
-//* TODO: Refactor into a pattern
-//*
-
 .integration-logos {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  max-width: none;
-  opacity: .87;
 
   img {
+    margin: 0 -6px;
     transform: scale(.9);
   }
 
-  @media (max-width: $bp-med) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 33em;
-    text-align: center;
-
-    img {
-      margin: 10px;
-    }
-  }
-
-  @media (max-width: $bp-small-2) {
-    img {
-      margin: 5px;
-      transform: scale(.8);
-    }
-  }
+  // @media (max-width: $bp-med) {
+  //   display: block;
+  //   max-width: 33em;
+  //   text-align: center;
+  //
+  //   img {
+  //     margin: 15px;
+  //   }
+  // }
+  //
+  // @media (max-width: $bp-small-2) {
+  //   img {
+  //     margin: 0;
+  //     transform: scale(.7);
+  //   }
+  // }
 }
 
-
-//* List of features
-//*
-//* TODO: Refactor into a pattern
-//*
-
-$feature-spacing: $base-spacing;
-$feature-icon: $base-spacing;
-$feature-icon-margin: $media-spacing;
-
-.homepage-features {
-  margin: $base-spacing (($feature-icon + $feature-icon-margin) * -1);
-
-  @media (max-width: $bp-med-large) {
-    margin: $base-spacing (-$base-spacing) $base-spacing 0;
-  }
-
-  svg {
-    fill: $color-highlight;
-    height: $feature-icon;
-    left: 0;
-    position: absolute;
-    width: $feature-icon;
-  }
-
-  .blurb {
-    padding-left: $feature-icon + $feature-icon-margin;
-    padding-right: $feature-spacing;
-    width: auto;
-  }
-}
 
 
 //*
@@ -281,7 +207,7 @@ $feature-icon-margin: $media-spacing;
 
   //* TODO: Make terminal work on touch devices
   //* In the meantime, we hide it */
-  .touch .terminal {
+  .touch & {
     display: none;
   }
 }

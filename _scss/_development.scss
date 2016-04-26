@@ -5,62 +5,49 @@
 // **************************
 
 
-
 body {
   //width: 1280px;
   margin: 0 auto;
 }
 
-body:before {
-  content: "comp size";
+body::before {
+  background: yellow;
+  content: 'comp size';
   display: inline-block;
+  font: bold normal 12px/1 monospace;
+  left: 0;
+  padding: 5px;
   position: fixed;
   top: 20px;
-  left: 0;
   z-index: 1;
-  padding: 5px;
-  font: bold normal 12px/1 monospace;
-  background: yellow;
 }
 
-@media (max-width: $bp-large) {
-  body:before {
-    content: "bp-large #{$bp-large}";
+@media (max-width: calc-em($page-width - 1px)) {
+  body::before {
+    content: '< comp';
   }
 }
 
-@media (max-width: $bp-med-large) {
-  body:before {
-    content: "bp-med-large #{$bp-med-large}";
+@media (max-width: $bp-l) {
+  body::before {
+    content: "bp-l #{$bp-l}";
   }
 }
 
-@media (max-width: $bp-med) {
-  body:before {
-    content: "bp-med #{$bp-med}";
+@media (max-width: $bp-m) {
+  body::before {
+    content: "bp-m #{$bp-m}";
   }
 }
 
-@media (max-width: $bp-med-small) {
-  body:before {
-    content: "bp-med-small #{$bp-med-small}";
+@media (max-width: $bp-s) {
+  body::before {
+    content: "bp-s #{$bp-s}";
   }
 }
 
-@media (max-width: $bp-small) {
-  body:before {
-    content: "bp-small #{$bp-small}";
-  }
-}
-
-@media (max-width: $bp-small-2) {
-  body:before {
-    content: "bp-small-2 #{$bp-small-2}";
-  }
-}
-
-@media (max-width: $bp-small-3) {
-  body:before {
-    content: "bp-small-3 #{$bp-small-3}";
+@media (max-width: $bp-xs) {
+  body::before {
+    content: "bp-xs #{$bp-xs}";
   }
 }

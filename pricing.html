@@ -13,38 +13,51 @@ content-width: default
       <h1 class="giga">Pricing</h1>
       <p class="intro">
         <a href="/features.html">
-          See Features for a full feature list<svg width="20" height="20" class="append color-bg"><use xlink:href="#icon-arrow" /></svg>
+          See Features for a <nobr>full feature list<svg width="20" height="20" class="append color-bg"><use xlink:href="#icon-arrow" /></svg></nobr>
         </a>
       </p>
     </header>
 
-    <table class="pricing-table hide-for-small">
+    <table class="pricing-table hide-m text-center">
       <thead>
         <tr>
-          <th class="td plan-features-th">
+          <th class="td plan-features-th" rowspan="3">
             <a href="/features.html">
-              <div class="callout callout--small callout--outline center mt-10">
-                <svg width="100" height="100">
-                  <use xlink:href="#icon-polyhedron" />
-                </svg>
-              </div>
-              <h3 class="highlight large bold mt-10 mb-0">Features</h3>
-              <p class="plan-note muted">All plans include free SSL</p>
+              <svg width="120" height="120" class="mt-n10 mb-10">
+                <use xlink:href="#icon-features" />
+              </svg>
+              <div class="highlight large">Features</div>
+              <div class="xx-small muted">All plans include free SSL</div>
             </a>
           </th>
           {% for plan in site.data.plans.plans %}
-          <th class="plan-th">
-            <div class="plan-price th--highlight">
+          <th class="plan-th x-large">
+            <div class="plan-price">
+              {% comment %}
+                This ugly thing coming up is to be able to tweak the kerning on the 7.5 plan.
+              {% endcomment %}
               {% assign parts = plan.price | downcase | split: '.' %}
               {% capture price %}{% if parts.size > 1 %}{{parts[0]}}<span class="decimal-point">.</span>{{parts[1]}}{% else %}{{ plan.price }}{% endif %}{% endcapture %}
-              <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}} giga bold">{{price}}</span>
-              <span class="plan-period">
+              <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}}">{{price}}</span>
+              <span class="plan-period medium">
                 month
                 <small class="x-small block">per site</small>
               </span>
             </div>
-            <div class="plan-title large {% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}">{{ plan.title }}</div>
-            <div class="td plan-note highlight">{{ plan.price_note | newline_to_br }}</div>
+          </th>
+          {% endfor %}
+        </tr>
+        <tr class="compact">
+          {% for plan in site.data.plans.plans %}
+          <th class="loud {% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}">
+            {{ plan.title }}
+          </th>
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for plan in site.data.plans.plans %}
+          <th class="td xx-small highlight">
+            {{ plan.price_note | newline_to_br }}
           </th>
           {% endfor %}
         </tr>
@@ -52,21 +65,18 @@ content-width: default
       <tbody>
         {% for attribute in site.data.plans.attributes %}
           <tr>
-            <td class="plan-feature">
-              <span class="plan-feature-title">{{ attribute.title }}</span>
-            </td>
+            <th class="td x-small text-left">
+              {{ attribute.title }}
+            </th>
             {% for detail in attribute.details %}
             <td>
-              <div class="plan-feature-plan">{{ site.data.plans.plans[forloop.index0].title }}: </div>
-              <div class="plan-feature-attr">
-                {% if detail == "Yes" %}
+              {% if detail == "Yes" %}
                 <span class="icon icon-yes"></span>
-                {% elsif detail == "No" %}
+              {% elsif detail == "No" %}
                 <span class="icon icon-no"></span>
-                {% else %}
+              {% else %}
                 {{ detail }}
-                {% endif %}
-              </div>
+              {% endif %}
             </td>
             {% endfor %}
           </tr>
@@ -74,13 +84,13 @@ content-width: default
       </tbody>
     </table>
 
-    <div class="mobile-pricing-table show-for-small">
+    <div class="show-m">
       <p class="small loud">– All plans include free SSL –</p>
       {% for plan in site.data.plans.plans %}
         {% assign index = forloop.index0 %}
-        {% capture color %}{% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}{% endcapture %}
-          <div class="table">
-            <h3 class="plan-title {{color}}">{{plan.title}}</h3>
+        {% capture bg %}{% cycle 'bg-tint1', 'bg-tint2', 'bg-tint3', 'bg-highlight' %}{% endcapture %}
+          <div class="table stacked-pricing-table">
+            <h3 class="cell large {{bg}} loud">{{plan.title}}</h3>
             <ul class="tbody">
               {% for attribute in site.data.plans.attributes %}
                 {% assign detail = attribute.details[index] %}
@@ -92,10 +102,10 @@ content-width: default
                   </li>
                 {% endif %}
               {% endfor %}
-              <li class="plan-price th--highlight">
+              <li class="plan-price th th--highlight">
                 {% assign parts = plan.price | downcase | split: '.' %}
                 {% capture price %}{% if parts.size > 1 %}{{parts[0]}}<span class="decimal-point">.</span>{{parts[1]}}{% else %}{{ plan.price }}{% endif %}{% endcapture %}
-                <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}} giga bold">{{price}}</span>
+                <span class="plan-amount plan-amount--{{plan.price | downcase | slugify}} x-large">{{price}}</span>
                 <span class="plan-period">
                   month
                   <small class="x-small block">per site</small>

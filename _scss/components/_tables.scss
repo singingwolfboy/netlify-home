@@ -1,53 +1,114 @@
-/* Tables
-------------------------------*/
-table {
-  border-collapse: separate;
-  border-spacing: 6px;
-  margin-left: -6px;
-}
+//* Tables
+//------------------------------*/
 
-table.full-width {
-  width: 100%;
-  margin-left: 0;
-}
+$cell-margin: 6px;
+$cell-margin-s: 4px;
+$cell-padding: 12px;
+$cell-height: ($baseline * 16px) + $cell-padding - ($cell-margin / 2);
+
+//* Utility classes */
 
 .table {
-  margin: 15px 0px 45px;
+  @extend %cf;
+  margin: $cell-height (- $cell-margin / 2);
+
+  .grid & {
+    margin: ($cell-height - $base-spacing) (- $cell-margin / 2);
+  }
+
+  &.compact {
+    margin: ($cell-height + ($cell-margin / 2)) (- $cell-margin / 2);
+  }
 }
 
-.hidden-cell {
-  visibility: hidden;
-}
-
-th, .th,
-td, .td {
-  margin: 6px 3px;
-  padding: 10px;
-}
-
-th, .th {
-  background-color: $color-highlight-lighter;
-  color: $color-darker;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-td, .td {
-  background-color: $color-highlight-lightest;
-}
-
-tbody, .tbody {
+.thead,
+.tbody {
   margin: 0;
 }
 
-thead th, .th--highlight {
-  background-color: $color-highlight;
-  color: $color-lightest;
-  padding-bottom: 5px;
+.cell {
+  margin: $cell-margin;
+  padding: $cell-padding;
+
+  .compact & {
+    margin: $cell-margin / 2;
+    padding: ($cell-padding / $baseline) $cell-padding;
+  }
+
+  &.compact {
+    padding: ($cell-padding / $baseline) $cell-padding;
+  }
+
+  &.x-large {
+    @extend .x-large;
+    margin: $cell-margin;
+    padding: $base-spacing $cell-padding;
+  }
 }
 
-.th--medium {
-  font-size: 16px;
-  font-weight: 300;
-  color: $color-dark;
+.cell--color {
+  @extend .quiet;
+  background-color: $color-highlight-lightest;
+}
+
+.cell--highlight {
+  background-color: $color-highlight;
+  color: $color-lightest;
+}
+
+//* Classes named after table tags for convenience */
+
+.td {
+  @extend .medium;
+  @extend .cell;
+  @extend .cell--color;
+}
+
+.th {
+  @extend .large;
+  @extend .cell;
+  @extend .cell--highlight;
+}
+
+
+
+//* Actual table */
+
+table {
+  @extend .table;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: $cell-margin;
+  text-align: left;
+  width: 100%;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  &.compact {
+    border-spacing: $cell-margin / 2;
+  }
+}
+
+th {
+  @extend .th;
+}
+
+td {
+  @extend .td;
+}
+
+
+@media (max-width: $bp-s) {
+
+  .cell,
+  .cell.x-large {
+    margin: $cell-margin-s ($cell-margin-s / 2);
+  }
+
+  table {
+    border-spacing: $cell-margin-s;
+  }
 }

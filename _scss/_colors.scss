@@ -1,6 +1,9 @@
 //== Colors
 //
 
+// This file contains utility classes so are allowed to use !important
+// scss-lint:disable ImportantRule
+
 //** Dark Grays
 $color-muted: rgb(126, 131, 131);
 $color-dark: rgb(89, 99, 98);
@@ -38,27 +41,11 @@ $colors-social: (
   gitter:     #dd4b39
 );
 
-//** Homage to Prince :_(
-$color-purple-rain: rgb(107, 40, 158);
 
-
-
-//*
-//* Default: dark text on light background
-//*/
+//## Default: dark text on light background
 
 body {
   background-color: $color-lighter;
-  color: $color-dark;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.intro {
   color: $color-dark;
 }
 
@@ -70,89 +57,55 @@ svg {
   fill: currentColor;
 }
 
-.highlight {
-  color: $color-highlight;
-  fill: $color-highlight;
-}
-
-.light {
-  color: $color-light;
-  fill: $color-light;
-}
-
-.lightest {
-  color: $color-lightest;
-  fill: $color-lightest;
-}
-
-.dark {
+.quiet { //* default */
   color: $color-dark;
-  fill: $color-dark;
 }
 
-.darkest {
-  color: $color-darkest;
-  fill: $color-darkest;
-}
-
-.muted {
+.muted { //* secondary text */
   color: $color-muted;
   fill: $color-muted;
 }
 
-.quiet {
-  color: $color-dark;
-}
-
-.loud {
+.loud { //* emphasis */
   color: $color-darker;
 }
 
-.overloud {
-  color: $color-darkest;
+.highlight { //* accent color */
+  color: $color-highlight;
+  fill: $color-highlight;
 }
 
-.color-bg {
-  color: $color-light;
-  fill: $color-light;
+.color-bg { //* for icons like the arrow, where the color of the icon should match the background */
+  color: $color-lighter;
+  fill: $color-lighter;
 }
 
 
-//*
-//* Inverse: light text on dark background
-//*/
+
+//## Inverse: light text on dark background
 
 .inverse {
-  @include font-weight(thin);
   background-color: $color-darkest;
   color: $color-light;
 
-  h1,
-  h2 {
-    color: $color-highlight;
+  &.quiet,
+  .quiet {
+    color: $color-light;
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: inherit;
-  }
-
-  .highlight {
-    color: $color-highlight;
-  }
-
-  .loud {
-    color: $color-lightest;
-  }
-
+  &.muted,
   .muted {
     color: $color-muted;
   }
 
-  .quiet {
-    color: $color-light;
+  &.loud,
+  .loud {
+    color: $color-lightest;
+  }
+
+  &.highlight,
+  .highlight {
+    color: $color-highlight;
   }
 
   .color-bg {
@@ -162,21 +115,11 @@ svg {
 }
 
 
-//*
-//* Backgrounds
-//*/
+//## Backgrounds
 
-.bg-white {
-  background-color: $color-lightest;
-}
-
+//** Backgrounds for sections */
 .bg-light {
   background: $color-light url('/img/bg-light-1.svg') no-repeat left bottom;
-}
-
-.bg-light-2 {
-  background: $color-light url('/img/bg-light-1-mirror.svg') no-repeat 0 90%;
-  background-size: cover;
 }
 
 .bg-light-muted {
@@ -189,19 +132,6 @@ svg {
 
 .bg-light-muted-3 {
   background: $color-light url('/img/bg-light-3.svg') no-repeat top right;
-}
-
-.bg-purple {
-  background: $color-purple-rain;
-}
-
-.bg-purple-rain {
-  background: $color-purple-rain url('/img/bg-formerly-known-as-prince.svg') no-repeat left bottom;
-  background-size: cover;
-}
-
-.bg-highlight {
-  background-color: $color-highlight;
 }
 
 .bg-dark {
@@ -222,37 +152,42 @@ svg {
   background-size: cover;
 }
 
+
+//** Backgrounds for components */
+.bg-white {
+  background-color: $color-lightest;
+}
+
+.bg-neutral {
+  background-color: $color-neutral;
+}
+
+.bg-highlight {
+  background-color: $color-highlight;
+}
+
+.bg-tint0 {
+  background-color: $color-highlight-lightest;
+}
+
 .bg-tint1 {
-  background: $color-tint-100;
+  background-color: $color-tint-100;
 }
 
 .bg-tint2 {
-  background: $color-tint-200;
+  background-color: $color-tint-200;
 }
 
 .bg-tint3 {
-  background: $color-tint-300;
+  background-color: $color-tint-300;
 }
 
 .bg-transparent {
-  background: transparent;
+  background-color: transparent;
 }
 
 
-//*
-//* Main and sidebar
-//*/
-
-.l-aside--left::before,
-.l-aside--right::after {
-  background: inherit;
-  color: inherit;
-}
-
-
-//*
-//* Filters
-//*/
+//## Images
 
 .grayscale {
   filter: grayscale(100%);
@@ -272,4 +207,34 @@ svg {
     filter: sepia(0%);
     opacity: 1;
   }
+}
+
+.grid--img {
+
+  .muted & {
+    opacity: .87;
+  }
+
+  .grayscale & {
+    opacity: 1;
+  }
+}
+
+
+//## Shadows:
+//   Box shadows are in lib/material-design/_mixins.scss
+//   Below are the inset shadows
+//
+// scss-lint:disable ColorVariable
+
+.inset-3 {
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, .24);
+}
+
+.inset-5 {
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .3);
+}
+
+.inset-7 {
+  box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, .24);
 }

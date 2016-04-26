@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<div class="l-wrap">
-  <div class="l-wrap-inner">
-    <div class="l-aside l-aside--left inverse docs-aside" role="complementary">
+<div class="wrap">
+  <div class="wrap-inner">
+    <div class="sidebar sidebar--left sidebar--wide inverse docs-sidebar" role="complementary">
       <nav class="side-nav" role="navigation">
         <ul class="nav nav--primary nav--nested">
           <li{% if page.url == "/docs.html" %} class="active"{% endif %}>
@@ -20,7 +20,7 @@ layout: default
         </ul>
       </nav>
     </div>
-    <div class="docs-main l-main l-main--right" role="main">
+    <div class="main main--right docs-main" role="main">
       <div class="text mb-60">
         <h1>{{page.title}}</h1>
         {{content}}

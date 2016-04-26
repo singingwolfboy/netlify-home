@@ -1,23 +1,29 @@
-/* Call outs
-------------------------------*/
-/* To center the text vertically in the callout:
- * http://css-tricks.com/centering-in-the-unknown/
- */
+//* Call outs
+//------------------------------*/
+
+$callout-size: 8em;
+
 .callout {
   align-items: center;
   background: $color-highlight;
   border-radius: 100%;
+  box-sizing: content-box;
   color: $color-lightest;
   display: flex;
-  height: 127px;
+  flex-shrink: 0;
+  height: $callout-size;
   justify-content: center;
   position: relative;
   text-align: center;
-  width: 127px;
+  width: $callout-size;
 
   svg {
     height: 100%;
     width: 100%;
+  }
+
+  &.abs {
+    position: absolute;
   }
 }
 
@@ -27,22 +33,24 @@
 }
 
 .callout--large {
-  height: 276px;
-  width: 276px;
+  height: $callout-size * 2;
+  width: $callout-size * 2;
 }
 
 .callout--small {
-  height: 96px;
-  width: 96px;
+  height: $callout-size * .75;
+  width: $callout-size * .75;
 }
 
 .callout--outline::after {
-  border: 1px solid white;
+  border: 1px solid $color-lightest;
   border-radius: 100%;
   content: ' ';
   display: block;
   height: 90%;
   left: 5%;
+  margin-left: -1px;
+  margin-top: -1px;
   position: absolute;
   top: 5%;
   width: 90%;

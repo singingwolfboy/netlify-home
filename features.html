@@ -5,74 +5,65 @@ title: Features
 
 {% assign sections = site.features | sort: 'position' %}
 
-<article class="l-wrap bg-light-muted-2">
-  <div class="l-wrap-inner">
-
-    <h1 class="visuallyhidden" id="features">Features</h1>
-
-    <div class="l-aside l-aside--left optional">
-      <nav class="side-nav" id="toc">
-        <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
-          <a href="/features.html" class="block">
-            <div class="callout callout--outline ml-25 mb-25">
-              <svg width="100" height="100">
-                <use xlink:href="#icon-polyhedron"></use>
-              </svg>
-            </div>
-          </a>
-          <ul class="nav nav--primary">
-            {% assign section = sections.first %}
-            <li class="active"><a href="#{{section.title | slugify}}">{{section.title}}</a></li>
-            {% for section in sections | offset: 1 %}
-            <li><a href="#{{section.title | slugify}}">{{section.title}}</a></li>
-            {% endfor %}
-          <ul>
-        </div>
-      </nav>
+<article>
+  <header class="section inverse bg-dark">
+    <div class="content">
+      <span class="callout callout--outline callout--large abs top left">
+        <svg width="190" height="190">
+          <use xlink:href="#icon-polyhedron"></use>
+        </svg>
+      </span>
+      <h1 class="giga">Netlify Features</h1>
     </div>
+  </header>
 
-    <div class="l-main l-main--right">
-      {% for section in sections %}
-      <section id="{{ section.title | slugify }}" class="mt-40 mb-n10 bb bb--dashed">
+  <div class="section bg-light-muted-3 muted">
+    <div class="content content--narrow">
+      <!-- <div class="sidebar sidebar--left hide-m">
+        <nav class="side-nav" id="toc">
+          <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
+            <ul class="nav nav--primary">
+              {% assign section = sections.first %}
+              <li class="active"><a href="#{{section.title | slugify}}">{{section.title}}</a></li>
+              {% for section in sections | offset: 1 %}
+              <li><a href="#{{section.title | slugify}}">{{section.title}}</a></li>
+              {% endfor %}
+            <ul>
+          </div>
+        </nav>
+      </div> -->
 
-        <header class="text-center bb mb-30">
-          {% if section.icon_id %}
-          <svg width="60" height="60" class="highlight mt-20 mb-20">
-            <use xlink:href="#{{section.icon_id}}" />
-          </svg>
-          {% else %}
-          <svg width="120" height="120" class="highlight">
-            <use xlink:href="#polyhedron" />
-          </svg>
-          {% endif %}
-          <h2 class="kilo highlight mt-0">
+    {% for section in sections %}
+      <section id="{{ section.title | slugify }}" class="section">
+
+        <header>
+          <h2 class="kilo bold highlight">
             {{ section.title }}
           </h2>
-          <p class="zeta semibold p--wide mb-30">
+          <p class="zeta">
             {{ section.description }}
           </p>
         </header>
 
-        <div class="l-2-col-auto mb-25">
+        <div class="css-columns">
           {% for feature in section.features %}
-          <div class="blurb break-inside-avoid muted">
-            <h3 class="zeta semibold m-0">{{ feature.title }}</h3>
-            <div class="blurb-text">
-            {{ feature.body | markdownify }}
-            </div>
+            <div class="blurb blurb--inlined break-inside-avoid">
+              <h3 class="blurb-title highlight">{{ forloop.index}}. {{ feature.title }}.</h3>
+              <div class="blurb-bd">
+                {{ feature.body | markdownify }}
+              </div>
             {% if feature.footer %}
-            <div class="blurb-footer blurb-text">
-              {{ feature.footer | markdownify }}
-            </div>
+              <div class="blurb-ft">
+                {{ feature.footer | markdownify }}
+              </div>
             {% endif %}
-          </div>
+            </div>
           {% endfor %}
         </div>
       </section>
+    {% endfor %}
 
-      {% endfor %}
-
-      <footer class="mt-60">
+      <footer>
         {% include pricing-footer.html %}
       </footer>
     </div>

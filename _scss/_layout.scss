@@ -4,19 +4,6 @@
 //*
 //------------------------------*/
 
-//* Spacing */
-$baseline: 25px;
-$base-spacing: 40px;
-$media-spacing: 15px;
-$column-gap: 50px;
-$header-padding: $base-spacing * 2;
-
-//* Widths */
-$page-width: 1280px; //* Comp width */
-$content-width: 960px + $base-spacing * 3; //* Add base_spacing until longest heading on homepage fits *//
-$blurb-width: 250px;
-
-
 //*
 //* HTML Elements
 //*/
@@ -28,14 +15,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-body {
-  min-width: $page-width;
-
-  @media (max-width: $bp-large) { //* Screen is smaller than comp. Start adjusting
-    min-width: 0;
-  }
 }
 
 ul {
@@ -50,29 +29,13 @@ img {
 
 
 //*
-//* Icons
-//*/
-.append {
-  margin-left: .385em;
-  position: relative;
-  top: -1px;
-}
-
-.prepend {
-  margin-right: .75em;
-  position: relative;
-  top: -1px;
-}
-
-
-//*
 //* Content containers
 //*/
 .content {
   @extend %cf;
   margin: 0 auto;
   max-width: $page-width;
-  padding: 0 165px; //* Left align with "netlify" and right align with login button in header */
+  padding: 0 ($header-padding + 85px); //* Left align with "netlify" and right align with login button in header */
   position: relative;
 }
 
@@ -84,6 +47,16 @@ img {
 .content--narrow {
   max-width: $content-width;
   padding: 0 $header-padding;
+}
+
+@media(max-width: $bp-l) {
+  .content {
+    padding: 0 $column-gap;
+  }
+
+  .content--narrow {
+    padding: 0 $header-padding;
+  }
 }
 
 
@@ -111,167 +84,108 @@ img {
   @include clearfix-me(facebook);
 }
 
-//* Variations for media object */
-.media--bleed {
-  margin-left: -1px;
-
-  .media-img {
-    margin-left: -6px;
-    margin-right: 20px;
-  }
-}
-
-
-//*
-//* Layouts
-//*/
-
-.l-container {
-  @extend %cf;
-
-  .l-half,
-  .l-third,
-  .l-fourth {
-    float: left;
-  }
-
-  @media (max-width: $bp-med) {
-    .l-half-med {
-      float: left;
-    }
-  }
-}
-
-
-//* Layouts without gutters */
-
-.l-half {
-  width: 50%;
-
-  &:nth-child(2n+1) {
-    clear: left;
-  }
-}
-
-.l-third {
-  width: 33.3333333%;
-
-  &:nth-child(3n+1) {
-    clear: left;
-  }
-}
-
-.l-fourth {
-  width: 25%;
-
-  &:nth-child(4n+1) {
-    clear: left;
-  }
-}
-
-.l-half-med {
-  @media(max-width: $bp-med) {
-    width: 50%;
-
-    &:nth-child(odd) {
-      clear: left;
-    }
-
-    &:nth-child(even) {
-      clear: right;
-    }
-  }
-}
-
 
 //*
 //* Based on Walmarts styleguide
 //* http://walmartlabs.github.io/web-style-guide/
 //*/
 
-.l-arrange {
+.arrange {
   display: table;
   table-layout: auto;
   width: 100%;
 }
 
-.l-arrange-fill,
-.l-arrange-fit {
+.arrange-fill,
+.arrange-fit {
   display: table-cell;
   vertical-align: top;
 }
 
-.l-arrange-fill {
+.arrange-fill {
   width: 100%;
 }
 
-.l-arrange--baseline {
-  .l-arrange-fill,
-  .l-arrange-fit {
-    vertical-align: baseline;
+.grid {
+  display: block;
+  font-size: 0; //* to collapse space between inline blocks */
+  margin: 0;
+  text-align: center;
+}
+
+.col {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+
+//* Spacing in grid */
+
+$spacing-v: $base-spacing / 2;
+$spacing-h: $column-gap / 2;
+
+
+@mixin grid--gutters {
+  margin: 0 (-$spacing-h);
+
+  > .col,
+  > img {
+    padding: 0 $spacing-h;
+  }
+}
+
+@mixin grid--spacing {
+  margin: 0 (-$spacing-h) (-$spacing-v);
+
+  > .col,
+  > img {
+    padding: $spacing-v $spacing-h;
+  }
+}
+
+.grid--gutters {
+  @include grid--gutters;
+}
+
+.grid--spacing {
+  @include grid--spacing;
+}
+
+
+//* Image grids */
+
+.grid--img {
+  @include grid--spacing;
+  margin: (-$spacing-v / 2) (-$spacing-h) 0;
+
+  > img {
+    box-sizing: content-box;
   }
 }
 
 
+//*
+//* 2-column layout with gutter using CSS columns
+//*/
 
-//* 2-column layout with gutter defining columns in the mark-up */
-
-.l-2-col {
-  @extend %cf;
-
-  .l-col {
-    float: left;
-    width: 50%;
-  }
-
-  .l-col:nth-child(odd) {
-    clear: left;
-    padding-right: $column-gap / 2;
-  }
-
-  .l-col:nth-child(even) {
-    clear: right;
-    padding-left: $column-gap / 2;
-  }
-
-  @media (max-width: $bp-med-large) {
-    .l-col:nth-child(odd) {
-      padding-right: $base-spacing / 2;
-    }
-
-    .l-col:nth-child(even) {
-      padding-left: $base-spacing / 2;
-    }
-  }
-
-  @media (max-width: $bp-med) {
-    .l-col:nth-child(odd) {
-      padding-right: $baseline / 2;
-    }
-
-    .l-col:nth-child(even) {
-      padding-left: $baseline / 2;
-    }
-  }
-}
-
-
-//* 2-column layout with gutter using CSS multiple columns */
-
-.l-2-col-auto {
+.css-columns {
   column-count: 2;
   column-gap: $column-gap;
+  text-align: left;
 
-  > p:first-child {
+  > p {
     margin-top: 0;
   }
 
-  @media (max-width: $bp-med-large) {
-    column-gap: $base-spacing;
+  @media (max-width: $bp-l) {
+    column-gap: $media-spacing * 2;
   }
 
-  @media (max-width: $bp-med) {
-    column-gap: $baseline;
+  @media (max-width: $bp-m) {
+    column-count: 1;
   }
 }
 
@@ -304,61 +218,80 @@ img {
 $sidebar-padding: $column-gap;
 $sidebar-width: $blurb-width + $sidebar-padding * 2;
 
-.l-wrap {
+.wrap {
   overflow: hidden;
   position: relative;
 }
 
-.l-wrap-inner {
+.wrap-inner {
   @extend %cf;
   @extend .content--wide;
   display: flex; //* This is to get the main and aside to have the same height
   margin: 0 auto;
+
+  @media (max-width: $bp-l) {
+    padding-left: $column-gap;
+  }
 }
 
-.l-wrap-inner--main-left {
+.wrap-inner--main-left {
   padding-right: $sidebar-width;
 }
 
-.l-aside,
-.l-main {
-  float: left;
+.sidebar,
+.main {
   position: relative;
 }
 
-.l-main {
-  padding: 0 $column-gap  $column-gap;
+.sidebar {
+  width: $sidebar-width;
+
+  &::before,
+  &::after { //* sidebar background stretches beyond the bounds of the page
+    background: inherit;
+    content: '';
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 10000px;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 100%;
+  }
 }
 
-.l-main--left {
-  padding-left: 0;
+.main {
+  padding: 0 $column-gap  $column-gap;
   width: 100%;
 }
 
-.l-aside--left {
+.main--left {
+  padding-left: 0;
+}
+
+.sidebar--left {
   &::before {
-    content: '';
-    height: 100%;
-    position: absolute;
-    right: 100%;
-    top: 0;
-    width: 10000px;
+    display: block;
   }
 }
 
-.l-aside--right {
+.sidebar--right {
   margin-right: -$sidebar-width;
   padding: $sidebar-padding;
-  width: $sidebar-width;
 
   &::after {
-    content: '';
-    height: 100%;
-    left: 100%;
-    position: absolute;
-    top: 0;
-    width: 10000px;
+    display: block;
   }
+}
+
+.sidebar--wide {
+  width: 400px;
 }
 
 
@@ -379,65 +312,25 @@ $sidebar-width: $blurb-width + $sidebar-padding * 2;
   justify-content: space-around;
 }
 
-@media (min-width: $bp-med) {
-  .md-flex {
-    display: flex;
-  }
 
-  .md-flex--row-reverse {
-    flex-direction: row-reverse;
-  }
 
-  .md-flex--space-between {
-    justify-content: space-between;
-  }
 
-  .md-flex--space-around {
-    justify-content: space-around;
-  }
-
-  .md-flex-basis--m {
-    flex-basis: 30em;
-  }
-
-  .md-flex-basis--s {
-    flex-basis: 15em;
-  }
-}
+//=============================================================================
+//
+//  UTILITY CLASSES
+//
+// For experimenting, until a pattern can be observed and extracted
+// into a reusable component.
+//
+//=============================================================================
 
 
 //*
-//* Widths, heights and margins.
+//* Margins.
 //*
-//* ## TODO: Most of these need to be removed
-//* ## when components are normalized
+//* ## TODO: Most of these should be removed when components are normalized
 //*/
 
-//* Widths */
-
-.w-0 {
-  width: 0;
-}
-
-.w-355 {
-  width: 355px; // large blurb width (hero)
-}
-
-.w-245 {
-  width: 245px;
-}
-
-.w-240 {
-  width: 240px;
-}
-
-.w-215 {
-  width: 215px;
-}
-
-
-
-//* Margins */
 .m-0 {
   margin: 0;
 }
@@ -514,9 +407,31 @@ $sidebar-width: $blurb-width + $sidebar-padding * 2;
 
 }
 
+@media(max-width: $bp-m) {
+  .mt-70,
+  .mt-80,
+  .mt-90,
+  .mt-100,
+  .mt-110,
+  .mt-115,
+  .mt-120 {
+    margin-top: 60px;
+  }
+
+  .mb-70,
+  .mb-80,
+  .mb-90,
+  .mb-100,
+  .mb-110,
+  .mb-115,
+  .mb-120 {
+    margin-bottom: 60px;
+  }
+}
+
 
 //*
-//* Utility classes for layout flow
+//* Positioning
 //*/
 
 .abs {
@@ -548,12 +463,12 @@ $sidebar-width: $blurb-width + $sidebar-padding * 2;
   margin-right: auto;
 }
 
-.l-third.center {
-  margin-left: 50%;
-}
-
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .inline-block {
@@ -596,4 +511,78 @@ $sidebar-width: $blurb-width + $sidebar-padding * 2;
 
 .nowrap {
   white-space: nowrap;
+}
+
+
+
+//*
+//* Widths
+//* Desktop first
+// scss-lint:disable ImportantRule
+
+.size-1-2 {
+  width: 50%;
+
+  @media (max-width: $bp-m) {
+    width: 100%;
+  }
+}
+
+.size-1-3 {
+  width: 33.3333333%;
+
+  @media (max-width: $bp-m) {
+    width: 100%;
+  }
+}
+
+.size-1-2-m {
+  @media (max-width: $bp-m) {
+    width: 50%;
+  }
+
+  @media (max-width: $bp-s) {
+    width: auto;
+  }
+}
+
+//*
+//* Visibility
+//* Desktop first
+// scss-lint:disable ImportantRule
+
+.show-m {
+  display: none !important;
+
+  @media (max-width: $bp-m) {
+    display: inherit !important;
+  }
+}
+
+.show-s {
+  display: none !important;
+
+  @media (max-width: $bp-s) {
+    display: inherit !important;
+  }
+}
+
+.hide-m {
+  @media (max-width: $bp-m) {
+    display: none !important;
+  }
+}
+
+.hide-s {
+  @media (max-width: $bp-s) {
+    display: none !important;
+  }
+}
+
+.show {
+  display: inherit !important;
+}
+
+.hide {
+  display: none !important;
 }

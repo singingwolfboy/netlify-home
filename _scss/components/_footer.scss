@@ -15,4 +15,44 @@
     height: 90px;
     width: 210px;
   }
+
+  @media (max-width: $bp-m) {
+    //*
+    //* Stack address
+    //*/
+    .vcard {
+      margin: 10px;
+
+      br {
+        display: block;
+      }
+
+      .address::before,
+      .address::after {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: $bp-xs) {
+    //*
+    //* Align address under logo
+    //*/
+    .left,
+    .right {
+      float: none;
+    }
+
+    .brand-logo {
+      margin-left: -10px;
+    }
+
+    .vcard {
+      margin: -45px 0 0 92px;
+
+      .org {
+        display: none;
+      }
+    }
+  }
 }

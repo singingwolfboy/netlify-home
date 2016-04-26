@@ -1,217 +1,699 @@
 ---
 layout: default
+title: Style Guide
 ---
 <style>
-  p[class] {
+
+  .heading {
+    color: #999;
+    font-size: 0.75em;
+    font-weight: 300;
+    letter-spacing: .1em;
+    line-height: 2;
+    text-transform: uppercase;
+    border-bottom: 1px dotted;
+  }
+
+  .box {
+    border: 1px dotted #bbb;
+    padding: 20px;
+    margin: 50px 0;
+  }
+
+  .example {
+    margin: 50px 0;
+  }
+
+  [data-annotate] [class]{
     position: relative;
   }
-  p[class]:after {
+
+  [data-annotate] [class]:not(code)::after {
     content: "."attr(class);
     font: normal bold 12px/1.5 monospace;
+    color: #777;
+    letter-spacing: normal;
     position: absolute;
-    width: 7em;
+    width: 10em;
+    text-transform: none;
     top: 0;
-    right: -7em;
-  }
-  .weights {
-    font-size: 36px;
+    right: -10.5em;
     white-space: nowrap;
-    overflow: hidden;
   }
-  .w-thin {
-    font-weight: 100;
+
+  .example.weights {
+    font-size: 28px;
+    margin: 80px 0;
+    white-space: nowrap;
   }
-  .w-light {
-    font-weight: 300;
+
+  .example.colors span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-right: 120px;
+    margin-bottom: 40px;
   }
-  .w-normal {
-    font-weight: 400;
+
+  .example.colors .color-bg {
+    border: 1px dotted #bbb;
   }
-  .w-medium {
-    font-weight: 500;
+
+  .example.cards div {
+    font-size: 21px;
+    padding: 20px;
+    margin-bottom: 20px;
   }
-  .w-bold {
-    font-weight: 700;
+
+  .example.cards p {
+    margin: 0;
   }
-  .w-ultra {
-    font-weight: 900;
+
+  .example.inverse {
+    padding: 1px 80px 80px;
+    margin: 50px -80px;
   }
+
+  .example.text {
+    max-width: 40em;
+    margin: 50px auto;
+  }
+
+  .nav-examples .example {
+    margin: 20px 0;
+    border: 1px dotted rgba(0,0,0,0.1);
+  }
+
+  .nav-examples.inverse .example {
+    border-color: rgba(255,2555,255,0.1);
+  }
+
+  .nav-examples h2.heading {
+    margin-bottom: 0;
+  }
+
 </style>
 
-<div class="content content--narrow">
-  <section>
-    <h1 class="tera">Heading Tera</h1>
-    <h1 class="mega">Heading Mega</h1>
-    <h1 class="kilo">Heading Kilo</h1>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
-    <p class="alpha">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-    <p class="beta">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-    <p class="gamma">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+<header class="section inverse bg-dark">
+  <div class="content">
+    <h1 class="mega">Style Guide</h1>
+    <p class="epsilon">A work in progress. At the moment it's sort of an Inventory / Non-Automated CSS Test Suite</p>
+  </div>
+</header>
+
+<section class="content">
+
+  <h1 class="heading">Typography</h1>
+
+  <div class="example" data-annotate>
+    <h1><code>h1</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+    <h2><code>h2</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h2>
+    <h3><code>h3</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h3>
+    <h4><code>h4</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h4>
+    <h5><code>h5</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h5>
+    <h6><code>h6</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h6>
+    <p><code>p</code> One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+    <p><small><code>small</code> One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</small></p>
+    <div><strong><code>strong</code> Grumpy wizards make toxic brew for the evil Queen and Jack.</strong></div>
+    <div><em><code>em</code> Grumpy wizards make toxic brew for the evil Queen and Jack.</em></div>
+    <ul>
+      <li><code>ul li</code> Item 1</li>
+      <li><code>ul li</code> Item 2</li>
+      <li><code>ul li</code> Item 3</li>
+    </ul>
+    <ol>
+      <li><code>ol li</code> Item 1</li>
+      <li><code>ol li</code> Item 2</li>
+      <li><code>ol li</code> Item 3</li>
+    </ol>
+    <blockquote>
+      <p>
+        The <code>blockquote</code> element represents content that
+        is quoted from another source, optionally
+        with a citation which must be within a
+        <code/>footer</code> or <code>cite</code> element,
+        and optionally with in-line changes such as
+        annotations and abbreviations.
+        <cite><a href="https://w3c.github.io/html/grouping-content.html#the-blockquote-element">4.4.4 the Blockquote element</a> , Faulkner et al. 2016 </cite>
+      </p>
+    </blockquote>
+  </div>
+
+  <div class="example" data-annotate>
+    <h1 class="tera">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+    <h1 class="giga">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+    <h1 class="mega">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+    <h1 class="kilo">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+    <h1 class="alpha">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+    <h1 class="beta">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+    <h1 class="gamma">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
     <p class="delta">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
     <p class="epsilon">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
     <p class="zeta">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+    <p class="medium">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
     <p class="small">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
     <p class="x-small">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-    <div class="weights">
-      <div class="w-thin">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-light">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-normal">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-medium">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-bold">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-ultra">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+    <p class="xx-small">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+    <p class="intro">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+
+    <p class="x-large">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+    <p class="large">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+  </div>
+
+  <div class="example weights" data-annotate>
+    <div class="thin">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+    <div class="normal">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+    <div class="book">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+    <div class="semibold">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+    <div class="bold">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+  </div>
+
+</section>
+
+<section class="content">
+  <h1 class="heading">Colors</h1>
+
+  <div class="example colors" data-annotate>
+    <span class="inverse"></span>
+    <span class="bg-neutral"></span>
+    <span class="bg-white"></span>
+    <span class="bg-highlight"></span>
+    <br>
+    <span class="bg-tint0"></span>
+    <span class="bg-tint1"></span>
+    <span class="bg-tint2"></span>
+    <span class="bg-tint3"></span>
+
+
+    <div class="muted">
+      <h1>Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
     </div>
-  </section>
-
-  <section class="inverse">
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
-    <p class="alpha">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-    <p class="beta">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-    <p class="gamma">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-    <p class="delta">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-    <p class="epsilon">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-    <p class="zeta">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-    <p class="small">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-    <p class="x-small">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-    <div class="weights">
-      <div class="w-thin">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-light">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-normal">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-medium">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-bold">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-      <div class="w-ultra">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+    <div class="quiet">
+      <h1>Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
     </div>
-  </section>
+    <div class="loud">
+      <h1>Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+    </div>
+    <div class="highlight">
+      <h1>Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+    </div>
 
+  </div>
 
-  <section>
-    <h1>Tables<h1>
+  <div class="example cards" data-annotate>
+    <div class="card--color-100">
+      <p>Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+      <p class="card-text">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+    </div>
+    <div class="card--color-200">
+      <p>Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+      <p class="card-text">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+    </div>
+    <div class="card--color-300">
+      <p>Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+      <p class="card-text">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+    </div>
+    <div class="card--color-400">
+      <p>Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+      <p class="card-text">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+    </div>
+    <div class="card--color-500">
+      <p>Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+      <p class="card-text">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+    </div>
+  </div>
+</section>
 
-    <h3>Not a real table</h3>
-    <div class="table">
-      <h3 class="th th--highlight">Free</h3>
-      <ul class="tbody">
-        <li class="td">Custom Domain</li>
-        <li class="td">Netlify Badge</li>
-        <li class="td">100 MB Storage</li>
-        <li class="td">1 GB Bandwidth</li>
-        <li class="th">Free</li>
+<section class="inverse">
+  <div class="content">
+    <h1 class="heading">Inverse</h1>
+
+    <div class="example" data-annotate>
+      <h1><code>h1</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <h2><code>h2</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h2>
+      <h3><code>h3</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h3>
+      <h4><code>h4</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h4>
+      <h5><code>h5</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h5>
+      <h6><code>h6</code> Grumpy wizards make toxic brew for the evil Queen and Jack</h6>
+      <p><code>p</code> One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      <p><small><code>small</code> One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</small></p>
+      <div><strong><code>strong</code> Grumpy wizards make toxic brew for the evil Queen and Jack.</strong></div>
+      <div><em><code>em</code> Grumpy wizards make toxic brew for the evil Queen and Jack.</em></div>
+      <ul>
+        <li><code>ul li</code> Item 1</li>
+        <li><code>ul li</code> Item 2</li>
+        <li><code>ul li</code> Item 3</li>
+      </ul>
+      <ol>
+        <li><code>ol li</code> Item 1</li>
+        <li><code>ol li</code> Item 2</li>
+        <li><code>ol li</code> Item 3</li>
+      </ol>
+      <blockquote>
+        <p>
+          The <code>blockquote</code> element represents content that
+          is quoted from another source, optionally
+          with a citation which must be within a
+          <code/>footer</code> or <code>cite</code> element,
+          and optionally with in-line changes such as
+          annotations and abbreviations.
+          <cite><a href="https://w3c.github.io/html/grouping-content.html#the-blockquote-element">4.4.4 the Blockquote element</a> , Faulkner et al. 2016 </cite>
+        </p>
+      </blockquote>
+    </div>
+
+    <div class="example" data-annotate>
+      <h1 class="tera">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <h1 class="giga">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <h1 class="mega">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <h1 class="kilo">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <h1 class="alpha">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <h1 class="beta">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <h1 class="gamma">Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+      <p class="delta">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      <p class="epsilon">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      <p class="zeta">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      <p class="medium">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      <p class="small">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      <p class="x-small">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      <p class="xx-small">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      <p class="intro">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+
+      <p class="x-large">Grumpy wizards make toxic brew for the evil Queen and Jack</p>
+      <p class="large">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+    </div>
+
+    <div class="example weights" data-annotate>
+      <div class="thin">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+      <div class="normal">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+      <div class="book">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+      <div class="semibold">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+      <div class="bold">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+    </div>
+
+    <div class="example colors" data-annotate>
+      <div class="muted">
+        <h1>Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      </div>
+      <div class="quiet">
+        <h1>Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      </div>
+      <div class="loud">
+        <h1>Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      </div>
+      <div class="highlight">
+        <h1>Grumpy wizards make toxic brew for the evil Queen and Jack</h1>
+        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <h1 class="heading">SVG defs</h1>
+  {% assign svg_defs = "netlify-img netlify-text netlify-logo icon-menu polyhedron cube icon-cube icon-polyhedron icon-features icon-arrow icon-arrow-light icon-link icon-keyhole icon-plus icon-close icon-ok icon-fatal icon-warning icon-more icon-less icon-github icon-github-round icon-linkedin icon-linkedin-round icon-gitter icon-gitter-round icon-facebook icon-facebook-round icon-twitter icon-twitter-round feature-netlify-cdn feature-one-click-ssl feature-continuous-deployment feature-gradual-migration feature-infinite-scale feature-prerendering feature-atomic-deploys feature-instant-cache-invalidation feature-cli feature-instant-rollbacks feature-programmable-api feature-instant-passwords" | split: " " %}
+
+  <div class="example">
+    <ul class="grid grid--spacing">
+      {% for svg_id in svg_defs %}
+      <li class="col size-1-3">
+        <svg><use xlink:href="#{{svg_id}}" /></svg>
+        <small class="block text-center">{{svg_id}}</small>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="content">
+    <h1 class="heading">Links</h1>
+
+    <div class="example" data-annotate>
+      <ul>
+        <li><a href="#">A plain link</a></li>
+        <li><a href="#" class="link">A link with a callout</a></li>
+        <li><a href="#" class="link-more">More</a></li>
       </ul>
     </div>
 
-    <h3>A real table</h3>
-    <table width="100%">
-      <thead>
-        <tr>
-          <th>Free</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Custom Domain</td></tr>
-        <tr><td>Netlify Badge</td></tr>
-        <tr><td>100 MB Storage</td></tr>
-        <tr><td>1 GB Bandwidth</td></tr>
-        <tr><th>Free</th></tr>
-      </tbody>
-    </table>
-  </section>
+</section>
 
-  <section class="text">
-      <p class="kicker">Sample Text<p>
-    			<h1>Type-a-file Gives Your Web Typography a Head Start</h1>
-    			<p class="intro">Below you’ll find some text marked up with the core elements of Type-a-file. View the source code to find out how to use them on your own site. This element, for example is called "intro” It’s paragraph text that introduces the rest of the text. It’s useful for outlining your topic &amp; looks killer</p>
+<section class="nav-examples content">
+  <h1 class="heading">Nav</h1>
 
-    			<h2>The Typographic Basics</h2>
+  <div class="example" data-annotate>
+    <ul class="nav">
+      <li><a>Item 1</a></li>
+      <li><a>Item 2</a></li>
+      <li class="active"><a>Active Item 3</a></li>
+    </ul>
+    <ul class="nav nav--secondary">
+      <li><a>Secondary Item 1</a></li>
+      <li><a>Secondary Item 2</a></li>
+      <li class="active"><a>Active Secondary Item 3</a></li>
+    </ul>
+  </div>
 
-    	    <div class="img">
-    			  <img class="image" src="http://type-a-file.com/image.jpg">
-    			</div>
-    			<div class="caption">You’ll often want to caption photos. This is a .caption class</div>
+  <div class="example">
+    <p class="sidenote"><code>.nav--inline</code></p>
+    <ul class="nav nav--inline">
+      <li><a>Item 1</a></li>
+      <li><a>Item 2</a></li>
+      <li class="active"><a>Active Item 3</a></li>
+    </ul>
+    <ul class="nav nav--inline nav--secondary">
+      <li><a>Secondary Item 1</a></li>
+      <li><a>Secondary Item 2</a></li>
+      <li class="active"><a>Active Secondary Item 3</a></li>
+    </ul>
+  </div>
 
-    			<p><span class="drop-cap">P</span>aragraphs are the core building block of typography online. You want to make sure you’ve got a good line-height and horizontal width—aka measure—for good readability. If you stack your lines too close together, or too far apart, lines become harder to read. Like a staircase where the steps are too shallow or too steep. The standard line-height online is something between 1.5 and 2.0 ems.<a href="#ems" class="superscript">1</a> If your lines stretch too far across the page reading can feel like a tedious marathon. The standard single-column width online is about 70-90 characters.</p>
+  <h2 class="heading">Nav Sidebar</h2>
 
-    			<div class="sidenote">
-    				<h1 class="h6">This is a “sidenote”</h1>
-    				<p class="milli">It’s different than a sidebar because its content are directly related to the main content at left. When <abbr>html5</abbr> is more prevalent, you’ll be able to start using <code>&lt;aside&gt;</code> instead of a div with a class of .sidenote.</p>
-    				<p class="milli">I’ve set it up here as a div which contains h1s for titles, as well as paragraphs.</p>
-    			</div>
+  <div class="example" data-annotate>
+    <nav class="side-nav">
+      <ul class="nav">
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+        <li class="active"><a>Active Item 3</a></li>
+      </ul>
+      <ul class="nav nav--secondary">
+        <li><a>Secondary Item 1</a></li>
+        <li><a>Secondary Item 2</a></li>
+        <li class="active"><a>Active Secondary Item 3</a></li>
+      </ul>
+      <ul class="nav nav--inline nav--secondary">
+        <li><a>Secondary Item 1</a></li>
+        <li><a>Secondary Item 2</a></li>
+        <li><a>Secondary Item 3</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
 
-    			<p>If you look at the source code you’ll notice how the .sidenote to the right was written before this paragraph, which it is supposed to directly relate to. You’ll probably want to set up your asides in the same manner.</p>
-    			<p>These are the simple beginnings of Type-a-file. We’ve put in a lot of work to make good typography easier for you. Colors &amp; structure we leave to you, but typographically, we got you covered. Download the file and follow the instructions for installing and setting it up. Now we’ll get into some of the <em>fancier</em> elements we’ve built into Type-a-file.</p>
+<section class="nav-examples inverse">
+  <div class="content">
 
-    			<h2>Puttin’ on the Ritz</h2>
+    <h1 class="heading">Nav Inverse</h1>
 
-    			<p><span class="run-in">Sometimes you want an opening phrase to pop.</span> You could just put it in bold tags, but wouldn’t you rather use semantic markup?<a href="#semantics" class="superscript">2</a> We’ve created a class called .run-in so that you can! Best practices claim you’ll usually want to keep those run-ins to one line.</p>
+    <div class="example" data-annotate>
+      <ul class="nav">
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+        <li class="active"><a>Active Item</a></li>
+      </ul>
+      <ul class="nav nav--primary">
+        <li><a>Primary Item 1</a></li>
+        <li><a>Primary Item 2</a></li>
+        <li class="active"><a>Active Item</a></li>
+      </ul>
+      <ul class="nav nav--secondary">
+        <li><a>Secondary Item 1</a></li>
+        <li><a>Secondary Item 2</a></li>
+        <li class="active"><a>Active Item</a></li>
+      </ul>
+    </div>
 
-    			<div class="sidenote">
-    				<h1 class="h6">Another sidenote.</h1>
-    				<div class="milli">
-      				<p>I thought it might be interesting to show you that you can put lists into sidenotes:</p>
-      				<ul>
-      					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      					<li>Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam</li>
-      				</ul>
-    				</div>
-    			</div>
+    <div class="example">
+      <p class="sidenote"><code>.nav--inline</code></p>
+      <ul class="nav nav--inline">
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+        <li class="active"><a>Active</a></li>
+      </ul>
+      <ul class="nav nav--inline nav--primary">
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+        <li class="active"><a>Active</a></li>
+      </ul>
+      <ul class="nav nav--inline nav--secondary">
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+        <li class="active"><a>Active</a></li>
+      </ul>
+    </div>
 
-    			<p>Typically you want a nice, steady vertical rhythm to your page. Of course, some folks don’t <span class="quote">Speaking of intelligently deviating…</span>think that it’s actually necessary on the web to stick to a baseline grid, but it can be a great guide from which you can intelligently deviate. Speaking of intelligently deviating, there are some key elements that make great deviations from the monotony of paragraphs: the “quotes.” These include blockquotes and a special Type-a-file class named “pullquote.” The latter is above, the former below:</p>
+    <h2 class="heading">Nav Sidebar</h2>
 
-    			<blockquote class="pullquote"><p>Headings, subheads, block quotations, footnotes, illustrations, captions and other intrusions into the text create syncopations and variations against the base rhythm of regularly leaded lines. These variations can and should add life to the page, but the main text should also return after each variation precisely on beat and in phase.</p></blockquote>
-    			<cite>Robert Bringhurst</cite>
+    <div class="example" data-annotate>
+      <nav class="side-nav">
+        <ul class="nav">
+          <li><a>Item 1</a></li>
+          <li class="active"><a>Active Item</a></li>
+          <li><a>Item 3</a></li>
+        </ul>
+        <ul class="nav nav--primary">
+          <li><a>Primary Item 1</a></li>
+          <li class="active"><a>Active Item</a></li>
+          <li><a>Primary Item 3</a></li>
+        </ul>
+        <ul class="nav nav--secondary">
+          <li><a>Secondary Item 1</a></li>
+          <li class="active"><a>Active Item</a></li>
+          <li><a>Secondary Item 3</a></li>
+        </ul>
+      </nav>
+    </div>
 
-    			<h2>Delineate, Demonstrate, Define</h2>
+    <h2 class="heading">Nested Side Nav</h2>
 
-    			<p>This Type-a-file would of course be incomplete without specifications for lists, codes &amp; definitions. It’s fairly common to indent both blockquotes and list elements, but seriously consider left aligning your text for these items and outdenting their bullets &amp; other visual demarcations. It can present a cleaner appearance while also drawing focused attention to information points.</p>
+    <div class="example" data-annotate>
+      <nav class="side-nav">
+        <ul class="nav nav--nested">
+          <li><a>Primary Item 1</a></li>
+          <li class="active">
+            <a>Active Primary Item</a>
+            <ul class="nav">
+              <li><a>Secondary Item 1</a></li>
+              <li class="active"><a>Active Item</a></li>
+              <li><a>Secondary Item 2</a></li>
+            </ul>
+          </li>
+          <li><a>Primary Item 3</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
 
-    			<ol>
-    	   			<li>This is a list that is well ordered.</li>
-    				<li>It starts with one and goes to two.</li>
-    				<li>Then it has a third item.</li>
-    	   			<li>Followed by the fourth, and—in this case—last item.</li>
-    			</ol>
+<section class="content">
 
-    			<ul>
-    	   			<li>Un-ordered lists are just as simple.</li>
-    	   			<li>The only difference being that the items are marks by bullets instead of numbers.</li>
-    				<li>Don’t forget that lists can have list titles.</li>
-    	   			<li>Finally we’ve reached the last un-ordered item.</li>
-    			</ul>
+  <h1 class="heading">Tables</h1>
 
-    			<p>If you’re a blogger geek, sooner or later you’ll want to tell everybody about some ripping <abbr>css</abbr> coding you concocted by posting it on your blog-o-tubes. So we’ve got you covered.</p>
+  <p class="box sidenote">
+    In the following examples, <code>table</code> and
+   <code>.table</code> should look the same (on desktop). If they don't, something is wrong.
+ </p>
 
-    <pre><code>#header h1 a {
-    display: block;
-    width: 300px;
-    height: 80px;
-    }</code></pre>
+  <p>This is a <code>table</code></p>
 
-    			<p>Then, since you’re an uber-geek-dufus-man-child who’s fascinated by proving to the world you have sooooo much knowledge to share, you’ll probably want to post some definitions or definition-like information where a title element is closely linked with a description of some kind. We got ya.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Free</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Custom Domain</td></tr>
+      <tr><td>Netlify Badge</td></tr>
+      <tr><td>100 MB Storage</td></tr>
+      <tr><td>1 GB Bandwidth</td></tr>
+      <tr><th>Free</th></tr>
+    </tbody>
+  </table>
 
-    			<dl>
-       				<dt>Type-a-file</dt>
-       				<dd>A really awesome way to get your site up to typographic snuff. It uses traditional semantic HTML tags along with some additional semantic classes named after commonly occurring elements in print design to create a solid typographic toolkit for your website, whoever you are.</dd>
-       				<dt>CSS</dt>
-       				<dd>CSS stands for Cascading Style Sheet. This is a document format which provides a set of style rules which can then be incorporated in an XHTML or HTML document. It is a means to separate web content from formatting and presentation information. CSS is also a Brazilian rock band from São Paulo. The band was labeled as part of the explosion of the New Rave scene. Their songs are in both English and Portuguese. CSS is an abbreviation for Cansei de Ser Sexy , literally “tired of being sexy” in Portuguese.</dd>
-    			</dl>
+  <p>This is a <code>.table</code> (looks like a table, but is not a <code>table</code>)</p>
 
-    			<p>You see how that works? You need something done typographically, Type-a-file does it. That simple. Now what are you waiting for? Find a flavor that suits your mood and go to town. Download the zip file. All the directions and files you’ll need will be squished inside. Oh, and when you’ve become a master <abbr>css</abbr>er and start making your own flavors of Type-a-file, come back and share them with the Type-a-file community!</p>
+  <div class="table">
+    <h3 class="th">Free</h3>
+    <ul class="tbody">
+      <li class="td">Custom Domain</li>
+      <li class="td">Netlify Badge</li>
+      <li class="td">100 MB Storage</li>
+      <li class="td">1 GB Bandwidth</li>
+      <li class="th">Free</li>
+    </ul>
+  </div>
 
-    			<small>This is just a <code>small</code> element. It’s really useful when you want to add a small note or bit of text to something that’s perhaps less important or a clarification of something. Another option in an arsenal of options.</small>
+  <p>This is a <code>table</code> with multiple columns</p>
 
-    		<ol class="footnote">
-    			<li id="ems"><span class="run-in">All about ems:</span> An em is a unit of measurement in the field of typography. This unit defines the proportion of the letter width and height with respect to the point size of the current font. Originally the unit was derived from the width of the capital “M” in the currently used typeface. This unit is not defined in terms of any specific typeface, and thus is the same for all fonts at a given point size. So, 1 em in a 16 point typeface is 16 points</li>
-    			<li id="semantics"><span class="run-in">Semantic Web:</span>  A group of methods and technologies to allow machines to understand the meaning—or “semantics”—of information on the World Wide Web. The term was coined by World Wide Web Consortium (W3C) director Tim Berners-Lee. According to the original vision, the availability of machine-readable metadata would enable automated agents and other software to access the Web more intelligently. The agents would be able to perform tasks automatically and locate related information on behalf of the user.</li>
-    		</ol>
-  </section>
-</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Free</th>
+        <th>Free</th>
+        <th>Free</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Custom Domain</td><td>Custom Domain</td><td>Custom Domain</td></tr>
+      <tr><td>Netlify Badge</td><td>Netlify Badge</td><td>Netlify Badge</td></tr>
+      <tr><td>100 MB Storage</td><td>100 MB Storage</td><td>100 MB Storage</td></tr>
+      <tr><td>1 GB Bandwidth</td><td>1 GB Bandwidth</td><td>1 GB Bandwidth</td></tr>
+      <tr><th>Free</th><th>Free</th><th>Free</th></tr>
+    </tbody>
+  </table>
+
+  <p>This is a <code>.table</code> in a <code>.grid</code></p>
+
+  <div class="grid">
+    <div class="col size-1-3">
+      <div class="table">
+        <h3 class="th">Free</h3>
+        <ul class="tbody">
+          <li class="td">Custom Domain</li>
+          <li class="td">Netlify Badge</li>
+          <li class="td">100 MB Storage</li>
+          <li class="td">1 GB Bandwidth</li>
+          <li class="th">Free</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col size-1-3">
+      <div class="table">
+        <h3 class="th">Free</h3>
+        <ul class="tbody">
+          <li class="td">Custom Domain</li>
+          <li class="td">Netlify Badge</li>
+          <li class="td">100 MB Storage</li>
+          <li class="td">1 GB Bandwidth</li>
+          <li class="th">Free</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col size-1-3">
+      <div class="table">
+        <h3 class="th">Free</h3>
+        <ul class="tbody">
+          <li class="td">Custom Domain</li>
+          <li class="td">Netlify Badge</li>
+          <li class="td">100 MB Storage</li>
+          <li class="td">1 GB Bandwidth</li>
+          <li class="th">Free</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p>This is a compact <code>table</code></p>
+
+  <table class="compact">
+    <thead>
+      <tr>
+        <th>Free</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Custom Domain</td></tr>
+      <tr><td>Netlify Badge</td></tr>
+      <tr><td>100 MB Storage</td></tr>
+      <tr><td>1 GB Bandwidth</td></tr>
+      <tr><th>Free</th></tr>
+    </tbody>
+  </table>
+
+  <p>This is a compact <code>.table</code></p>
+
+  <div class="table compact">
+    <h3 class="th">Free</h3>
+    <ul class="tbody">
+      <li class="td">Custom Domain</li>
+      <li class="td">Netlify Badge</li>
+      <li class="td">100 MB Storage</li>
+      <li class="td">1 GB Bandwidth</li>
+      <li class="th">Free</li>
+    </ul>
+  </div>
+
+  <p>This is a customized <code>table</code> using utility classes</p>
+
+  <table class="text-center">
+    <thead>
+      <tr>
+        <th class="x-large">Free</th>
+        <th class="x-large">Free</th>
+        <th class="x-large">Free</th>
+      </tr>
+      <tr>
+        <th class="bg-tint1 loud">Free</th>
+        <th class="bg-tint2 loud">Free</th>
+        <th class="bg-tint3 loud">Free</th>
+      </tr>
+      <tr class="compact">
+        <th class="td xx-small highlight">Free forever<br>No credit card needed</th>
+        <th class="td xx-small highlight">Free forever<br>No credit card needed</th>
+        <th class="td xx-small highlight">Free forever<br>No credit card needed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Custom Domain</td><td>Custom Domain</td><td>Custom Domain</td></tr>
+      <tr><td>Netlify Badge</td><td>Netlify Badge</td><td>Netlify Badge</td></tr>
+      <tr><td>100 MB Storage</td><td>100 MB Storage</td><td>100 MB Storage</td></tr>
+      <tr><td>1 GB Bandwidth</td><td>1 GB Bandwidth</td><td>1 GB Bandwidth</td></tr>
+      <tr><th class="td highlight semibold">Free</th><th class="td highlight semibold">Free</th><th class="td highlight semibold">Free</th></tr>
+    </tbody>
+  </table>
+
+  <p>This is a customized <code>.table</code> using utility classes</p>
+
+  <div class="grid">
+    <div class="col size-1-3">
+      <div class="table text-center">
+        <h2 class="th x-large">Free</h3>
+        <h3 class="cell large bg-tint1 loud">Free</h3>
+        <p class="td highlight xx-small compact">Free forever<br>No credit card needed</p>
+        <ul class="tbody">
+          <li class="td">Custom Domain</li>
+          <li class="td">Netlify Badge</li>
+          <li class="td">100 MB Storage</li>
+          <li class="td">1 GB Bandwidth</li>
+          <li class="td highlight semibold">Free</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col size-1-3">
+      <div class="table text-center">
+        <h2 class="th x-large">Free</h3>
+        <h3 class="cell large bg-tint2 loud">Free</h3>
+        <p class="td highlight xx-small compact">Free forever<br>No credit card needed</p>
+        <ul class="tbody">
+          <li class="td">Custom Domain</li>
+          <li class="td">Netlify Badge</li>
+          <li class="td">100 MB Storage</li>
+          <li class="td">1 GB Bandwidth</li>
+          <li class="td highlight semibold">Free</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col size-1-3">
+      <div class="table text-center">
+        <h2 class="th x-large">Free</h3>
+        <h3 class="cell large bg-tint3 loud">Free</h3>
+        <p class="td highlight xx-small compact">Free forever<br>No credit card needed</p>
+        <ul class="tbody">
+          <li class="td">Custom Domain</li>
+          <li class="td">Netlify Badge</li>
+          <li class="td">100 MB Storage</li>
+          <li class="td">1 GB Bandwidth</li>
+          <li class="td highlight semibold">Free</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <h1 class="heading">Text</h1>
+  <div class="example text">
+    {% capture example %}{% include example-text.md %}{% endcapture %}
+    {{ example | markdownify }}
+  </div>
+</section>

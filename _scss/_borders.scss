@@ -21,7 +21,6 @@
 }
 
 
-
 //*
 //* Border size variants
 //*
@@ -40,7 +39,7 @@
 @mixin bb--large {
   &::after {
     height: 4px;
-    margin-top: -4px;
+    margin-top: 0;
   }
 }
 
@@ -57,6 +56,10 @@
 @mixin bb--muted {
   &::after {
     background-color: $color-highlight-lighter;
+
+    .inverse & {
+      background-color: $color-highlight;
+    }
   }
 }
 
@@ -83,16 +86,47 @@
 }
 
 
+//*
+//* Special cases
+//*
+.l-arrange,
+.l-flex {
+
+  &.bb {
+    border-bottom: 2px solid $color-highlight;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &.bb--large {
+    border-bottom-width: 4px;
+  }
+}
+
 
 //*
 //* Horizontal rules
 //*
 
 hr {
-  border-color: inherit;
+  border-top: 2px solid $color-highlight-lighter;
+  margin: 30px auto;
 
-  &.bb {
-    border: 0;
-    height: 0;
+  &.m-0 {
+    margin: 0 auto;
+  }
+
+  &.highlight {
+    border-color: $color-highlight;
+  }
+
+  &.dashed {
+    border-top: 1px dashed $color-highlight;
+  }
+
+  .clear {
+    border-color: transparent;
   }
 }

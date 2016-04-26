@@ -1,232 +1,70 @@
-.show-for-medium,
-.show-for-small {
-  display: none;
-}
-
-@media (max-width: $bp-med-large) { //* Tweak point to leave more room for content
-
-  .content {
-    padding: 0 $column-gap;
-  }
-
-  .l-wrap-inner {
-    padding-left: $column-gap;
-  }
-
-  .top-nav {
-    margin-right: $base-spacing - $column-gap;
-  }
-
-  //* Callouts don't have room to bleed */
-  .callout--large {
-    margin-left: 0;
-  }
-}
-
-
-@media (max-width: $bp-med) { //* Major breakpoint
+@media (max-width: $bp-m) { //* Major breakpoint. Stack all the things (almost)
 
   //*
   //* Stack main and aside
   //*/
-  .l-wrap-inner {
-    display: flex; //* So we can move navigation sidebar to the bottom
+
+  .wrap-inner {
     flex-direction: column;
     padding: 0;
   }
 
-  .l-main {
+  .main {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 80px 60px;
     width: 100%; //* This will make sure pre tags adapt to main width
   }
 
-  .l-aside {
+  .sidebar {
     display: block;
     margin: 0;
     order: 2; //* Move navigation to the bottom */
-    padding: 0 80px;
     width: 100%;
-
-    .nav {
-      margin-left: 0;
-
-      .nav {
-        display: none;
-      }
-    }
-  }
-
-
-  //*
-  //* Adjust spacing and alignment of aside title and footer
-  //*/
-  .blog-aside-title {
-    margin: 60px 0 40px;
-    text-align: center;
-  }
-
-  .blog-aside-footer {
-    margin: 40px 0 50px;
-    text-align: center;
-  }
-
-
-  .l-full-med,
-  .l-full-med.center {
-    left: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    right: 0;
-    width: 100%;
-  }
-
-
-  //*
-  //* Video buttons appear full width
-  //*/
-  .button-video {
-    margin-left: 10px;
-    margin-right: 10px;
-
-    img {
-      width: 100%;
-    }
-
-    .callout {
-      display: none;
-    }
-  }
-
-
-  //*
-  //* TABLES: reduce font size, paddings and margins so lines don't wrap
-  //*/
-  .table {
-    font-size: 14px;
-  }
-
-  .th {
-    font-size: 18px;
-  }
-
-  .th,
-  .td {
-    margin: 4px 2px;
-    padding: 10px;
-  }
-
-  .th--highlight {
-    padding-bottom: 12px;
-    padding-top: 15px;
-  }
-
-  //*
-  //* Utils
-  //*/
-
-  .optional,
-  .hide-for-medium {
-    display: none;
-  }
-
-  .show-for-medium {
-    display: inherit;
-  }
-}
-
-
-@media (max-width: $bp-med-small) { //* Tweak point to leave more room for content
-
-  .content {
-    padding: 0 25px;
-  }
-
-  .top-nav {
-    margin-right: 15px;
-  }
-
-  //* Reduce bleed so it doesn't touch edge of screen */
-  .l-container {
-    margin-left: 0;
-  }
-
-  .media--bleed {
-    .media-img {
-      margin-left: -4px;
-    }
-  }
-
-  //*
-  //* Stack address in footer
-  //*/
-  .site-footer {
-    .vcard {
-      margin: 10px;
-
-      br {
-        display: block;
-      }
-
-      .address::before,
-      .address::after {
-        display: none;
-      }
-    }
-  }
-}
-
-
-@media (max-width: $bp-small) { //* Major breakpoint. Stack all the things (almost)
-
-  //*
-  //* Show/hide alternatives for small size
-  //*/
-  .hide-for-small {
-    display: none;
-  }
-
-  .show-for-small {
-    display: inherit;
   }
 
 
   //*
   //* Reduce content width to readable line length
   //*/
+
   .content,
-  .l-main,
-  .l-aside .l-container,
-  .l-aside .side-nav {
-    max-width: 35em;
-    padding: 0 25px;
+  .main {
+    box-sizing: content-box;
+    max-width: $readable-width;
+    padding: 0 $column-gap;
   }
+
 
   .content--wide {
     max-width: none;
   }
 
+
+  //*
+  //* Top navigation bar
+  //*
   .top-nav {
-    margin: 0;
+    margin-right: 0;
+  }
+}
+
+
+
+@media (max-width: $bp-s) {
+
+  //*
+  //* More room for content
+  //*/
+  .content,
+  .main {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
-  .l-wrap-inner {
+  .wrap-inner {
     padding: 0;
   }
-
-  .l-aside {
-    padding: 0;
-
-    .side-nav {
-      margin: 25px auto;
-      padding-left: 25px + 30px;
-    }
-  }
-
 
   //*
   //* Reduce logo
@@ -241,31 +79,6 @@
     .brand {
       margin: 0 0 0 -30px;
     }
-  }
-
-
-  //*
-  //* Stack layouts
-  //*/
-  .l-container,
-  .l-container .l-third,
-  .l-container .l-fourth,
-  .l-container .l-half,
-  .l-container .l-half-med,
-  .l-2-col,
-  .l-2-col .l-col:nth-child(n) {
-    display: block;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-    width: auto;
-  }
-
-  .l-2-col-auto {
-    column-gap: 0;
-    columns: 1;
   }
 
 
@@ -296,93 +109,6 @@
     margin-right: 20px;
   }
 
-  .button-video {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .social-icon--round {
-    margin: 0 10px;
-  }
-
-
-  //*
-  //* Stack Forms
-  //*/
-  .form--fancy {
-    border-radius: 10px;
-    margin: 40px 0;
-    padding: 6px;
-
-    .form-group {
-      float: none;
-      padding: 3px;
-      width: 100%;
-    }
-
-    .form-button {
-      border-radius: 0 0 5px 5px;
-      font-size: 16px;
-      margin-top: 3px;
-      position: static;
-      width: 100%;
-    }
-  }
-
-  ::placeholder {
-    font-size: 16px;
-  }
-
-
-  //*
-  //* Adjust table margins to align with left and right margins
-  //*/
-  .table {
-    margin-left: -4px;
-    margin-right: -4px;
-  }
-
-
-  //*
-  //* Reduce spacing
-  //*/
-
-  .l-container::after { // Collapse margins (eg. Socialize section on homepage)
-    display: block;
-  }
-
-  .mt-70,
-  .mt-80,
-  .mt-90,
-  .mt-100,
-  .mt-110,
-  .mt-115,
-  .mt-120 {
-    margin-top: 60px;
-  }
-
-  .mb-70,
-  .mb-80,
-  .mb-90,
-  .mb-100,
-  .mb-110,
-  .mb-115,
-  .mb-120 {
-    margin-bottom: 60px;
-  }
-
-
-  //*
-  //* Reduce font sizes
-  //*/
-
-  .table {
-    font-size: 16px;
-  }
-
-  .th {
-    font-size: 20px;
-  }
 
   //*
   //* Blog
@@ -402,12 +128,6 @@
     font-size: 16px;
   }
 
-  .blog-aside-title {
-    font-size: 33px;
-    line-height: 35px;
-  }
-
-
   //*
   //* Legalese. Get rid of bullets, numbered lists and indentation
   //*/
@@ -417,8 +137,8 @@
 
     h1 {
       border: 0;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
 
     ol h2::before {
@@ -440,120 +160,5 @@
     hr {
       display: none;
     }
-  }
-
-
-  //*
-  //* Reduce spacing around inlined lists of icons
-  //*
-  .inline-block .icon-link--round {
-    margin-right: 15px;
-  }
-
-  .nav--inline.nav--wide {
-    li:last-child {
-      margin-right: 0;
-    }
-
-    .icon-link--large {
-      height: 40px;
-      line-height: 40px;
-      width: 40px;
-
-      svg {
-        height: 35px;
-        width: 35px;
-      }
-    }
-  }
-
-  //*
-  //* Stack lists of images
-  //*/
-
-  .mobile-stack-images {
-
-    img {
-      display: block;
-      margin: 30px auto;
-    }
-
-    &:last-child {
-      @extend %cf;
-    }
-  }
-}
-
-
-@media (max-width: $bp-small-2) { //* Tweak point to fix footer */
-
-  //*
-  //* Align address under logo
-  //*/
-  .site-footer {
-
-    .left,
-    .right {
-      float: none;
-    }
-
-    .brand-logo {
-      margin-left: -10px;
-    }
-
-    .vcard {
-      margin: -45px 0 0 92px;
-
-      .org {
-        display: none;
-      }
-    }
-  }
-}
-
-@media (max-width: $bp-small-3) { //* Tweak point tighten things some more
-
-  //*
-  //* More room for content
-  //*/
-  .content,
-  .l-main,
-  .l-aside .l-container {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  .l-wrap-inner {
-    padding: 0;
-  }
-
-  //*
-  //* Social icons can be closer together
-  //*/
-  .social-icon--round {
-    margin: 0 5px;
-  }
-
-
-  //*
-  //* Make large buttons smaller
-  //*/
-  .button--large {
-    font-size: 21px;
-    height: 60px;
-    line-height: 60px;
-
-    .button-icon {
-      margin: -4px;
-      transform: scale(.7);
-    }
-  }
-
-  //*
-  //* Post title can be tighter
-  //*/
-  .post-title {
-    line-height: 45px;
-    margin-bottom: 30px;
   }
 }

@@ -1,0 +1,43 @@
+//* Spacing */
+$base-font-size: 16px;
+$baseline: 1.5;                               // Base line height
+$base-spacing: $base-font-size * 1.25;        // Base margin for paragraphs
+$media-spacing: $base-font-size;              // Space between icons and text
+$column-gap: $base-font-size * $baseline * 2; // Space between columns (gutter)
+
+$header-padding: $base-spacing * 4;
+
+//* Widths */
+
+//* Comp width
+$page-width: 1280px;
+
+//* Width of content--narrow. Can be tweaked to make the longest heading on
+//* the homepage fit
+$content-width: 960px + $header-padding;
+
+//* Width for small blurbs of text. The sidebar is also based on this width.
+//* Don't be tempted to change this! The blog blurbs will start getting messed up :(
+//*/
+$blurb-width: 245px;
+
+//* According to the Goldilocks approach, 30em is the optimum readable line length */
+$optimum-width: 30 * 16px;
+
+//* Our box-sizing is box-content, so this width accomodates for left and right padding */
+$readable-width: 40 * 16px;
+
+ //* Width for text that's not for long reading, like section intros, or code */
+$readable-width--wide: 50 * 16px;
+
+
+//* Breakpoints */
+//*
+//* Design is desktop first, so these breakpoints are to be used with max-width
+//* eg. @media (max-width: $bp-med) {...}
+//*
+
+$bp-l:       calc-em(1120px);  //* Tweak point – (ipad landscape is in this range)
+$bp-m:       calc-em(960px);   //* Major breakpoint – Almost every thing gets linearized
+$bp-s:       calc-em(680px);   //* Major breakpoint – Every thing gets linearized
+$bp-xs:      calc-em(460px);      //* Tweak point – Footer wraps, thumbnails don't fit anymore

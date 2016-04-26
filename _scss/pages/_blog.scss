@@ -1,25 +1,24 @@
 .post {
-  margin: 40px 0 20px;
+  margin: ($base-spacing * 2) 0 $base-spacing;
 }
 
 .post-hd {
-  margin: 50px 0;
+  margin: ($baseline * 2em) 0;
   text-align: center;
 }
 
 .post-title {
-  @extend .mega;
+  @extend .giga;
   color: $color-dark;
 }
 
 .post-meta {
   @extend .zeta;
   color: $color-highlight;
-  line-height: 30px;
 }
 
 .post-img {
-  margin: 50px 0;
+  margin: ($base-spacing + $media-spacing) 0;
 
   figure {
     margin: 0;
@@ -28,7 +27,7 @@
   figcaption {
     @extend .xx-small;
     @extend .semibold;
-    margin: 10px 0;
+    margin: 1em 0;
 
     p {
       margin: 0;
@@ -43,16 +42,18 @@
   &:empty,
   img {
     border-bottom: 7px solid $color-highlight-lighter;
-    margin-bottom: -3.5px;
-    margin-top: -3.5px;
+    margin-bottom: -7px;
+    margin-top: -5px;
   }
 }
 
 .post-bd {
-  margin: 50px auto 30px;
+  margin: ($baseline * 2em) auto;
 
   p:first-child {
     @extend .intro;
+    color: $color-darker;
+    margin: ($base-spacing * $baseline) 0;
   }
 
   em {

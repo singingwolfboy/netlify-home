@@ -1,3 +1,6 @@
+@import 'lib/material-design/variables';
+@import 'lib/material-design/mixins';
+
 //*
 //* OOCSS different clearfix options
 //*
@@ -6,6 +9,14 @@
 %cf {
   @include clearfix-me(micro);
 }
+
+//*
+//* Convert pixels to ems
+//*
+@function calc-em($px) {
+  @return $px / 16px * 1em;
+}
+
 
 //*
 //* Responsive typography

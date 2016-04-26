@@ -11,7 +11,7 @@ $card-spacing: 8px;
     padding-left: $card-spacing;
     width: 33.3333%;
 
-    @media (max-width: $bp-med) {
+    @media (max-width: $bp-m) {
       width: 50%;
 
       &:last-child {
@@ -19,7 +19,7 @@ $card-spacing: 8px;
       }
     }
 
-    @media (max-width: $bp-small) {
+    @media (max-width: $bp-s) {
       float: none;
       max-width: 350px;
       width: 100%;

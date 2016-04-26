@@ -35,8 +35,8 @@ a * {
 //*/
 
 .button {
+  @extend .inset-7;
   border-radius: 60px 4px 4px 60px;
-  box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, .24);
   color: $color-lightest;
   display: block;
   font-size: 21px;
@@ -51,7 +51,7 @@ a * {
   transition: box-shadow .2s ease-in;
 
   &:hover {
-    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, .24);
+    @extend .inset-3;
   }
 }
 
@@ -97,7 +97,7 @@ a * {
   }
 }
 
-[class*='bg-'] {
+[class*='bg-color-'] {
   .button--muted {
     color: inherit;
   }
@@ -105,6 +105,7 @@ a * {
 
 
 //* Button size variations */
+
 .button--large {
   border-radius: 80px 4px 4px 80px;
   font-size: 27px;
@@ -186,161 +187,6 @@ a * {
   }
 }
 
-
-//*
-//* Simple buttons
-//*
-//* Example: <a href="#" class="simple-button">Hello</a>
-//*/
-
-.simple-button {
-  background-color: $color-highlight;
-  border-radius: 4rem;
-  color: $color-lightest;
-  display: inline-block;
-  line-height: 1.5rem;
-  padding: .20rem 1rem;
-
-  &.simple-button--large {
-    @include font-weight(bold);
-    padding: .5rem 1.2rem;
-  }
-}
-
-
-//*
-//* Icon links (eg. social links)
-//*
-//* Hover effect: http://tympanus.net/Development/IconHoverEffects/#set-8
-//*/
-
-$round-icon-size: 35px;
-
-.icon-link--round {
-  display: inline-block;
-  margin-right: 25px;
-  position: relative;
-  transition: transform ease-out .2s;
-
-  svg {
-    height: $round-icon-size;
-    width: $round-icon-size;
-  }
-
-  &::after {
-    border-radius: 100%;
-    content: '';
-    height: $round-icon-size;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: $round-icon-size;
-  }
-
-  @each $name, $color in $colors-social {
-    &.icon-link--#{$name} {
-      color: darken(grayscale($color), 5%);
-
-      .no-touch &:hover {
-        color: $color;
-      }
-    }
-  }
-
-  .no-touch &:hover {
-    transform: scale(.95);
-
-    &::after {
-      animation: sonarEffect 1.3s ease-out 75ms;
-    }
-  }
-}
-
-$color-sonar: $color-darker;
-
-@keyframes sonarEffect {
-  0% {
-    opacity: .3;
-  }
-
-  40% {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255, 255, 255, .5);
-    opacity: .5;
-  }
-
-  100% {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px $color-sonar, 0 0 0 10px rgba(255, 255, 255, .5);
-    opacity: 0;
-    transform: scale(1.5);
-  }
-}
-
-
-//*
-//* Button with image of video
-//*/
-.button-video {
-  background: url('/img/video.png') no-repeat center center;
-  background-size: cover;
-  display: inline-block;
-  position: relative;
-
-  .callout {
-    @extend .callout--small;
-    @extend .callout--stitch;
-    left: -35px;
-    margin-left: -20px;
-    margin-top: -10px; //* makes it easier to just 0 out the margins when going responsive than to change top and left
-    position: absolute;
-    top: -25px;
-    transition: opacity .2s;
-  }
-
-  .play-button {
-    background: linear-gradient(to right, #f1f1f1, #ececec);
-    border-radius: 100%;
-    height: 102px;
-    left: 50%;
-    margin-left: -54px;
-    margin-top: -56px;
-    position: absolute;
-    top: 50%;
-    transition: box-shadow .2s;
-    width: 102px;
-
-    &::after {
-      border-color: transparent transparent transparent #4BC0B5;
-      border-style: solid;
-      border-width: 30px 0 34px 61px;
-      content: '';
-      height: 0;
-      left: 29px;
-      position: absolute;
-      top: 20px;
-      width: 0;
-    }
-  }
-
-  &:hover .play-button {
-    box-shadow: 2px 2px 25px rgba(0, 0, 0, .2);
-  }
-
-  &.playing {
-    .callout {
-      opacity: 0;
-    }
-
-    .play-button {
-      display: none;
-    }
-  }
-}
-
-.button-video--compact {
-  .callout {
-    margin: 0;
-  }
-}
 
 //*
 //* Call to action

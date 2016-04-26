@@ -1,9 +1,14 @@
 .text--legalese {
   h1 {
-    border-top: 2px solid $color-highlight;
+
     font-size: 21px;
-    margin-top: 100px;
-    padding-top: 88px;
+
+    &::before {
+      border: 1px solid $color-highlight;
+      content: '';
+      display: block;
+      margin: ($base-spacing * 5) 0 ($base-spacing * 5 - $media-spacing);
+    }
 
     &::after {
       display: none;
@@ -11,13 +16,12 @@
   }
 
   li {
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: $base-spacing;
+    margin-top: $base-spacing;
   }
 
   h2 {
     @extend .text-h3;
-    @include font-weight(medium);
   }
 
   > ol {
@@ -28,10 +32,10 @@
       content: counter(h2-counter, decimal)'.';
       counter-increment: h2-counter;
       display: inline-block;
-      margin-left: -50px;
-      margin-right: 20px;
+      margin-left: -$column-gap;
+      margin-right: $base-spacing;
       text-align: right;
-      width: 30px;
+      width: $column-gap - $base-spacing;
     }
   }
 }

@@ -1,33 +1,35 @@
-<header class="text-center mt-80">
-  <h1 class="alpha">
-    {% comment %}
-    ============================================================================
+<section>
+  <header class="text-center">
+    <h1 class="alpha">
+      {% comment %}
+      ============================================================================
 
-      In the comp, the content width is based on the length of this line
-      because it's the longest heading on the homepage.
+        In the comp, the content width is based on the length of this line
+        because it's the longest heading on the homepage.
 
-      If the text changes, you may want to update the $content-width variable
-      in _layout.scss
+        If the text changes, you may want to update the $content-width variable
+        in _settings.scss
 
-    ============================================================================
-    {% endcomment %}
+      ============================================================================
+      {% endcomment %}
 
-    Sign up for our newsletter and stay tuned on the new stack
-  </h1>
-  <p class="muted p--wide">
-    We send out ultra short blog mails 2x per week
-    (links to tutorials, articles, videos, etc.) and a newsletter monthly.
-    We promise we won’t give away your address or anything, and only send stuff written by humans.
-  </p>
-</header>
-<form name="newsletter" action="thank-you.html" class="form form--fancy mt-40 mb-45" netlify>
-  <p class="form-group">
-      <label class="visuallyhidden" for="input-email">Email</label>
-      <input type="email" name="email" id="input-email" placeholder="your@email.com">
-  </p>
-  <p class="form-group">
-    <label class="visuallyhidden" for="input-name">Name</label>
-    <input type="text" name="name" placeholder="Name">
-  </p>
-  <button type="submit" class="form-button">Sign up</button>
-</form>
+      Sign up for our newsletter and stay tuned on the new stack
+    </h1>
+    <p>
+      We send out ultra short blog mails 2x per week
+      (links to tutorials, articles, videos, etc.) and a newsletter monthly.
+      We promise we won’t give away your address or anything, and only send stuff written by humans.
+    </p>
+  </header>
+  <form name="newsletter" action="thank-you.html" class="form form--fancy" netlify>
+    <p class="form-group">
+        <label class="visuallyhidden" for="input-email">Email</label>
+        <input type="email" name="email" id="input-email" placeholder="your@email.com">
+    </p>
+    <p class="form-group">
+      <label class="visuallyhidden" for="input-name">Name</label>
+      <input type="text" name="name" placeholder="Name">
+    </p>
+    <button type="submit" class="form-button">Sign up</button>
+  </form>
+</section>

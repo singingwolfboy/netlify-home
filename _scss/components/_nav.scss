@@ -1,7 +1,24 @@
+//*
+//* == Navigation components, including the site header
+//*
+//* They have the form:
+//*
+//* <nav>
+//*   <ul class="nav">
+//*     <li class="active">
+//*       <a>[...]</a>
+//*     </li>
+//*     <li>
+//*       <a>[...]</a>
+//*       <ul class="nav">
+//*         [...]
+//*       </ul>
+//*     </li>
+//*
+
 $nav-width: 280px;
 
 $nav-bg-color:             rgb(64, 75, 76);
-$nav-primary-link-color:   rgb(255, 255, 255);
 $nav-secondary-link-color: rgb(126, 131, 131);
 $nav-nested-link-color:    rgb(191, 207, 205);
 $nav-icon-color:           rgb(101, 118, 118);
@@ -22,12 +39,18 @@ html {
 
 
 //*
-//* Navigation List
+//* Navigation ul
 //*
 
 .nav {
-  margin: 5px 30px;
+  font-size: 0; // collapse space around items
+  margin: 0;
   text-transform: uppercase;
+
+  > li {
+    font-size: $base-font-size;
+    padding: .25em 0;
+  }
 
   a {
     color: inherit;
@@ -35,14 +58,8 @@ html {
     position: relative;
   }
 
-  .nav {
-    background: $nav-bg-color;
-    line-height: 35px;
-    margin-left: -10000px;
-    margin-right: -30px;
-    padding: 15px 15px 15px 10030px;
-    position: relative;
-    text-transform: none;
+  .no-touch & a:hover {
+    color: $color-highlight;
   }
 
   .inverse & {
@@ -52,133 +69,113 @@ html {
 
 
 //*
-//* Active element
+//* Active li
 //*
 .active {
-  color: $color-highlight;
 
   > a {
     @include font-weight(light);
+    color: $color-highlight;
   }
 }
 
 
 //*
-//* Nav variants
+//* Navigation Variants
 //*
+
+//** Fixed navigation sidebar
+
+.affix { //* Added by bootstrap affix.js */
+  position: fixed;
+}
+
+
+//** Horizontal
 
 .nav--inline {
   display: inline-block;
-  font-size: 0;
-  margin: 0;
 
   > li {
     display: inline-block;
-    font-size: 16px;
+    margin-left: $base-spacing;
     vertical-align: middle;
   }
-
-  > li:not(:first-child) {
-    margin-left: 20px;
-
-    .side-nav & {
-      margin-left: 5px;
-    }
-  }
 }
+
+
+//** Primary navigation links
 
 .nav--primary {
-  font-size: 16px;
-  line-height: 32px;
-
-  .inverse & {
-    color: $nav-primary-link-color;
-  }
-
-  .no-touch & a:hover {
-    color: $color-highlight;
-  }
-
-  .nav {
-    color: $nav-nested-link-color;
+  > li {
+    font-size: $base-font-size * 1.125;
   }
 }
 
+//** Secondary navigation links
+
 .nav--secondary {
-  font-size: 14px;
-  line-height: 30px;
+  > li {
+    font-size: $base-font-size * .875;
+  }
 
   .inverse & {
     color: $nav-secondary-link-color;
   }
 }
 
-.nav--nested {
-  min-width: 15em;
 
-  a {
-    line-height: 24px;
-    padding-bottom: 6px;
-    padding-top: 10px;
-  }
+// //** Social links in the sidebar
+//
+// .nav--social {
+//   margin-top: $base-spacing * $baseline;
+//
+//   .icon-link--square {
+//     color: $nav-icon-color;
+//     height: $base-spacing * $baseline;
+//     line-height: 1;
+//     padding: 0 4px;
+//     width: $base-spacing * $baseline;
+//   }
+//
+//   .icon-link--large {
+//     height: 55px;
+//     line-height: 55px;
+//     width: 55px;
+//   }
+//
+//   @each $name, $color in ($nav-icon-bg-colors) {
+//     .icon-link--#{$name} {
+//       background: $color;
+//     }
+//   }
+//
+//   .icon-link--inverse {
+//     color: $color-lightest;
+//     @each $name, $color in ($nav-icon-bg-colors) {
+//       &.icon-link--#{$name} {
+//         background: lighten($color, 50%);
+//       }
+//     }
+//   }
+// }
 
-  .nav a {
-    line-height: 25px;
-    padding-bottom: 6px;
-    padding-top: 4px;
-  }
-}
 
-.nav--social {
-  margin-top: 25px;
 
-  .icon-link--square {
-    color: $nav-icon-color;
-    height: 25px;
-    line-height: 25px;
-    padding: 0 4px;
-    width: 25px;
-  }
-
-  .icon-link--large {
-    height: 55px;
-    line-height: 55px;
-    width: 55px;
-  }
-
-  @each $name, $color in ($nav-icon-bg-colors) {
-    .icon-link--#{$name} {
-      background: $color;
-    }
-  }
-
-  .icon-link--inverse {
-    color: $color-lightest;
-    @each $name, $color in ($nav-icon-bg-colors) {
-      &.icon-link--#{$name} {
-        background: lighten($color, 50%);
-      }
-    }
-  }
-}
-
-.nav--centered {
-  display: inline-block;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.affix { //* Added by bootstrap affix.js */
-  position: fixed;
-  top: 30px;
-}
 
 
 //*
-//* Navigation styles based on where it's placed on the page layout
+//* Navigation styles based on where the nav is placed on the page layout
 //*
 
 .site-header {
+
+  .bb::after {
+    bottom: 0;
+    height: 3px;
+    position: absolute;
+  }
+
   .content {
     align-items: center;
     display: flex;
@@ -196,33 +193,67 @@ html {
 }
 
 .top-nav {
-  margin-right: -$base-spacing; //* Align with right margin in blog sidebar */
+  margin-right: $column-gap - $header-padding; //* Align with right margin sidebar (see Blog) */
   margin-top: 2px; //* Align with netlify baseline */
+
+  .button--pill {
+    margin-right: -5px; //* Align right with the button label
+  }
+
+  @media(max-width: $bp-l) {
+    margin-right: 0;
+  }
 }
 
 .side-nav {
-  min-width: 15em;
-  padding: 40px 0;
+  min-width: $base-font-size * 15;
 
   .active > a::before {
     background: url('/img/icon-arrow.svg') no-repeat left top;
-    background-size: 14px;
+    background-size: $base-font-size * .875;
     content: ' ';
     display: inline-block;
-    height: 15px;
-    margin: -2px 15px 0 -30px;
+    height: $base-font-size;
+    margin: 0 ($base-font-size * .5) 0 ($base-font-size * -1.5);
     vertical-align: middle;
-    width: 15px;
+    width: $base-font-size;
+  }
+
+  .nav--inline {
+    margin-left: 0;
+  }
+}
+
+//** Nested navigation (like in the documentation section)
+
+.nav--nested {
+  @extend .nav--primary;
+
+  > .active > a::before {
+    display: none;
+  }
+
+  .nav {
+    > li {
+      font-size: $base-font-size;
+    }
+    //background: $nav-bg-color;
+    margin-left: -10000px;
+    margin-right: -($base-font-size * 1.5);
+    //padding: 6px 0 10px;
+    padding-left: 10000px + ($base-font-size * 1.5);
+    position: relative;
+    text-transform: none;
   }
 }
 
 
-
 //*
-//* Based on Foundation Off-Canvas
+//* Off-Canvas navigation: Based on Foundation Off-Canvas
 //*
 //* http://foundation.zurb.com/docs/components/offcanvas.html
 //*/
+
 .off-canvas-menu {
   background: $nav-bg-color;
   bottom: 0;
@@ -264,12 +295,12 @@ html {
   top: 5px;
 }
 
-
-//* Fallback in case javascript is not enabled
-//* (won't get smooth sliding effect but
-//* at least it will be usable)
+//*
+//* Fallback for off-canvas navigation in case javascript is not enabled
+//* (won't get the smooth sliding effect but at least it will be usable)
 //*/
-.off-canvas-menu:target {
+
+.no-js .off-canvas-menu:target {
   right: 0;
   z-index: 100;
 

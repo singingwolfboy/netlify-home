@@ -1,0 +1,50 @@
+//
+// ## SECTIONS
+//
+// Sections span the full width of the page, wrapping the content tag.
+// They normally have a specific background, large padding top and bottom,
+// centered text and large border bottom.
+//
+// Typical example:
+//
+// <div class="section inverse bg-dark">
+//   <div class="content">
+//
+//   </div>
+// </div>
+//
+
+.section {
+  @extend %cf;
+  @extend .bb;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    bottom: 0;
+    height: 4px;
+    position: absolute;
+  }
+
+  header + .grid {
+    margin-top: 30px;
+  }
+
+  .grid + footer {
+    margin-top: 20px;
+  }
+
+  .main & {
+    padding-bottom: 0;
+  }
+
+  h1:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+.section--fullpage {
+  padding-top: 0;
+}

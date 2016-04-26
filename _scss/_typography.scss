@@ -1,11 +1,9 @@
-//*---------------------------------------------------------
 //*
-//* Typography loosely based on classic typographic scale,
-//* tweaked to try to match font sizes in comp
+//* The typography is based on the pentatonic scale -- the formula to calculate the
+//* classic typographic scale. See:
 //*
 //* http://spencermortensen.com/articles/typographic-scale/
 //*
-//*---------------------------------------------------------
 
 $font-weights: ( //* keep getting them wrong, so mapping them to their names to see if it helps
   thin: 100,
@@ -19,14 +17,12 @@ $font-weights: ( //* keep getting them wrong, so mapping them to their names to 
   font-weight: if(map-has-key($font-weights, $name), map-get($font-weights, $name), $name);
 }
 
-
-//*---------------------------------------------
-// *
-// * TYPOGRAPHY
-// *
-// *--------------------------------------------*/
-
 :root {
+  @include fluid-typography($bp-s, $bp-m, 1em, 1.125em);
+  @media (min-width: $bp-m + .01em) {
+    font-size: 1em;
+  }
+
   @include fluid-typography(80em, 90em, 1em, 1.125em);
 }
 
@@ -35,204 +31,214 @@ body {
 }
 
 
-//* Page headings */
-
-.giga {
+@mixin type-display {
   @include font-weight(thin);
-  font-size: 60px;
   letter-spacing: -.02em;
-  line-height: 1;
-  margin-bottom: 40px;
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+@mixin type-text {
+  @include font-weight(light);
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+// Sizes -- this could be extracted to a sass map
+@mixin tera {
+  font-size: 63px;
   margin-top: 80px;
 }
 
-.mega {
-  @include font-weight(thin);
+@mixin giga {
   font-size: 55px;
-  letter-spacing: -.02em;
-  line-height: 70px;
-  margin-bottom: 30px;
   margin-top: 80px;
 }
 
-
-//* Section headings */
-
-.kilo {
-  @include font-weight(thin);
-  font-size: 50px;
-  letter-spacing: -.02em;
-  line-height: 60px;
-  margin-bottom: 30px;
-  margin-top: 80px;
+@mixin mega {
+  font-size: 48px;
+  margin-top: 60px;
 }
 
-.alpha {
-  @include font-weight(thin);
-  font-size: 38px;
-  letter-spacing: -.02em;
-  line-height: 45px;
-  margin-bottom: 25px;
-  margin-top: 50px;
+@mixin kilo {
+  font-size: 42px;
+  margin-top: 60px;
 }
 
-.beta {
-  @include font-weight(thin);
+@mixin alpha {
+  font-size: 36px;
+  margin-top: 40px;
+}
+
+@mixin beta {
   font-size: 32px;
-  letter-spacing: -.02em;
-  line-height: 40px;
-  margin-bottom: 25px;
   margin-top: 40px;
 }
 
-.gamma {
-  @include font-weight(thin);
+@mixin gamma {
   font-size: 28px;
-  letter-spacing: normal;
-  line-height: 35px;
-  margin-bottom: 25px;
-  margin-top: 40px;
-}
-
-
-//* Subheadings, intros and/or marketing text */
-
-.delta {
-  @include font-weight(thin);
-  font-size: 24px;
-  letter-spacing: normal;
-  line-height: 30px;
   margin-bottom: 40px;
   margin-top: 40px;
 }
 
-.epsilon {
-  @include font-weight(thin);
+@mixin delta {
+  font-size: 24px;
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+
+@mixin epsilon {
   font-size: 21px;
-  letter-spacing: normal;
-  line-height: 30px;
   margin-bottom: 30px;
   margin-top: 30px;
 }
 
-.zeta {
-  @include font-weight(light);
+@mixin zeta {
   font-size: 18px;
-  letter-spacing: normal;
   margin-bottom: 25px;
   margin-top: 25px;
 }
 
 
-//* Paragraphs */
+//* Page headings:
+
+.tera {
+  @include type-display;
+  @include tera;
+
+  @media (max-width: $bp-m) {
+    @include tera;
+    margin-top: 60px;
+  }
+}
+
+.giga {
+  @include type-display;
+  @include giga;
+
+  @media (max-width: $bp-m) {
+    @include mega;
+    margin-top: 60px;
+  }
+}
+
+.mega {
+  @include type-display;
+  @include mega;
+
+  @media (max-width: $bp-m) {
+    @include kilo;
+  }
+}
+
+
+//* Section heading */
+
+.kilo {
+  @include type-display;
+  @include kilo;
+
+  @media (max-width: $bp-m) {
+    font-size: 42px; // (3 -- Going all the way to alpha is too big a difference)
+    line-height: 50px;
+  }
+}
+
+//* Subsection heading */
+
+.alpha {
+  @include type-display;
+  @include alpha;
+}
+
+.beta {
+  @include type-display;
+  @include beta;
+}
+
+
+//* gamma is used rarely, basically only next to the social icons since it fits their height */
+.gamma {
+  @include type-display;
+  @include gamma;
+}
+
+
+//* Banners, intros and/or marketing text */
+
+.delta {
+  @include type-text;
+  @include font-weight(thin);
+  @include delta;
+}
+
+.epsilon {
+  @include type-text;
+  @include font-weight(thin);
+  @include epsilon;
+}
+
+.zeta {
+  @include type-text;
+  @include zeta;
+}
 
 .intro {
+  @include epsilon;
   @include font-weight(medium);
-  font-size: 21px;
+  margin-bottom: 50px;
+}
+
+
+//* Tabular data: we use 'rounded' values for large text in tables
+// so the font size and line heights match the 5 px grid.
+//* because the font size and line-height will better fit the 5px grid
+//*
+
+.x-large {
+  @include type-display;
+  @include font-weight(bold);
+  font-size: 60px; // giga rounded
+  line-height: 1.1;
 }
 
 .large {
-  @include font-weight(light);
-  font-size: 20px;
+  @include type-text;
+  @include font-weight(bold);
+  font-size: 20px; // epsilon rounded
 }
 
-.medium {
-  @include font-weight(light);
+
+//* Long text */
+
+.medium { // Default size
+  @include type-text;
   font-size: 16px;
 }
 
+
+//* Small blurbs */
+
 .small {
-  @include font-weight(light);
+  @include type-text;
   font-size: 14px;
 }
 
-.small-2 {
-  @include font-weight(light);
-  font-size: 15px; //* One-off size to get small text in hero to justify */
-}
-
+// This size is used for blurbs with longuish text, where .small
+// would make the text overflow the container (see Chris & Matt blurbs on About page)
+// 12px is a bit too small to read on screen, so we use 13px instead.
 .x-small {
-  @include font-weight(light);
+  @include type-text;
   font-size: 13px;
 }
 
 .xx-small {
-  @include font-weight(light);
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.333;
 }
 
-@media (max-width: $bp-med-large) {
-
-  .giga {
-    font-size: 55px; //* mega */
-  }
-
-  .mega {
-    font-size: 50px; //* kilo */
-  }
-}
-
-
-@media (max-width: $bp-small) {
-  .giga,
-  .mega,
-  .kilo {
-    &:not([class*=mt-]) {
-      margin-top: 60px;
-    }
-  }
-
-  .giga {
-    font-size: 48px;
-    line-height: 1;
-  }
-
-  .mega,
-  .kilo {
-    font-size: 36px;
-    line-height: 40px;
-  }
-
-  .alpha {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .beta {
-    font-size: 28px;
-    line-height: 35px;
-  }
-
-  .gamma {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  .delta {
-    font-size: 21px;
-    line-height: 25px;
-  }
-
-  .epsilon,
-  .zeta,
-  .intro {
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  .small,
-  .small-2 {
-    font-size: 16px;
-  }
-
-  .x-small {
-    font-size: 13px;
-  }
-
-  .xx-small {
-    font-size: 12px;
-  }
-}
 
 //* Weights
 
@@ -242,6 +248,10 @@ body {
 
 .normal {
   @include font-weight(light);
+}
+
+.book {
+  @include font-weight(normal);
 }
 
 .semibold {
@@ -256,7 +266,6 @@ body {
 //*
 //* Default styles
 //*/
-
 
 h1 {
   @extend .alpha;
@@ -287,26 +296,23 @@ ul,
 ol,
 dl,
 blockquote {
-  margin: 20px auto;
+  margin: calc-em($base-spacing) auto;
 }
 
 p {
-  max-width: 40em;
   orphans: 2;
   widows: 2;
 }
 
-.p--wide {
-  max-width: 50em;
-}
-
-.p--full-width {
-  max-width: none;
-}
-
-small,
-cite {
+cite,
+small {
   @extend .small;
+}
+
+cite {
+  display: block;
+  line-height: $media-spacing;
+  margin: $media-spacing 0;
 }
 
 //* Skip italics and use bold for emphasis instead
