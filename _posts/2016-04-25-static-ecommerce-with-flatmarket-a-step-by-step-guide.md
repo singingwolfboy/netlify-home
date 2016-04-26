@@ -1,10 +1,10 @@
 ---
-title: "Static eCommerce with Flatmarket: A Step-by-Step Guide"
+title: "Open-Source eCommerce for Static Sites: Setting Up Flatmarket"
 author: Aaron Autrand
 image: null
 image_caption: null
-short_title: Flatmarket Tutorial
-description: Hosting a static eCommerce site built with Flatmarket on Netlify
+short_title: "Flatmarket: eCommerce for Static Sites"
+description: Hosting a Static eCommerce Site built with Flatmarket on Netlify
 thumbnail: /uploads/shopping-cart-of-checkered-design_318-50865.png
 cmsUserSlug: static-ecommerce-flatmarket-guide
 date: 2016-04-25T00:00:00.000Z
@@ -23,7 +23,9 @@ Even things like eCommerce sites, which were once absolutely dependent on heavy 
 
 <!-- excerpt -->
 
-Flatmarket uses Stripe for payment processing, a Heroku app to validate purchases and interact with the Stripe API, and is built on the latest web technologies like hapi, React and Webpack.
+Flatmarket is a free, open source eCommerce platform for static sites. It features responsive design, the speed of static, and the security of Stripe to process payments.
+
+With a Heroku app to validate purchases and interact with the Stripe API and is built on the latest web technologies like hapi, React and Webpack.
 
 We'll be using the [Flatmarket Example](https://github.com/christophercliff/flatmarket-example) to show you how to get it up and running on Netlify. You can then set up your own Flatmarket server, and run the configuration the same way. Let's get started.
 
