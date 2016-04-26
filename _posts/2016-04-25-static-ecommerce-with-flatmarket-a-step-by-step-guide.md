@@ -23,7 +23,7 @@ Even things like eCommerce sites, which were once absolutely dependent on heavy 
 
 <!-- excerpt -->
 
-Flatmarket uses Stripe for payment processing, a Heroku app to ... and is built on the latest web technologies like hapi, React and Webpack.
+Flatmarket uses Stripe for payment processing, a Heroku app to validate purchases and interact with the Stripe API, and is built on the latest web technologies like hapi, React and Webpack.
 
 We'll be using the [Flatmarket Example](https://github.com/christophercliff/flatmarket-example) to show you how to get it up and running on Netlify. You can then set up your own Flatmarket server, and run the configuration the same way. Let's get started.
 
@@ -209,7 +209,7 @@ It should look something like `pk_test_THISisYOURpublishableKEY` with a string o
 
 ## Connecting to Heroku
 
-Flatmarket uses a Heroku server to
+Flatmarket uses a Heroku app as a middleman between your site and your Stripe account. Products and prices are checked against your `flatmarket.json` file, and then the app completes the handshake between your site and Stripe by comparing your account's secret key to the publishable key in `flatmarket.json`.
 
 You can connect your site to a Heroku app in a few simple steps.
 
