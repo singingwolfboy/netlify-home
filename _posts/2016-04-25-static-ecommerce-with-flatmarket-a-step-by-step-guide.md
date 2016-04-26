@@ -6,7 +6,7 @@ image_caption: null
 short_title: Flatmarket Tutorial
 description: Hosting a static eCommerce site built with Flatmarket on Netlify
 thumbnail: /uploads/shopping-cart-of-checkered-design_318-50865.png
-cmsUserSlug: ""
+cmsUserSlug: static-ecommerce-flatmarket-guide
 date: 2016-04-25T00:00:00.000Z
 tags:
   - eCommerce
