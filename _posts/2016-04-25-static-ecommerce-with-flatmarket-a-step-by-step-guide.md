@@ -1,5 +1,5 @@
 ---
-title: "Open-Source eCommerce for Static Sites: Setting Up Flatmarket"
+title: "How to Shop With Static: Open Source eCommerce with Flatmarket"
 author: Aaron Autrand
 image: null
 image_caption: null
