@@ -64,7 +64,7 @@ Netlify can use any number of versions of tools to build your site. But we need 
 $ node -v
 ```
 
-Now check to see if Netlify supports your version of Node: https://github.com/netlify/build-image/blob/master/Dockerfile#L93. Look for a version close to yours (look for code along the lines of nvm install v5.1.0 if your version is 5.1.x).
+Now check to see if Netlify supports your version of Node: [https://github.com/netlify/build-image/blob/master/Dockerfile#L93](https://github.com/netlify/build-image/blob/master/Dockerfile#L93). Look for a version close to yours (look for code along the lines of nvm install v5.1.0 if your version is 5.1.x).
 
 To create a file to tell Netlify which version of Node.js to use, enter the following command in the terminal:
 
