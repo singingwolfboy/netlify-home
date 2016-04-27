@@ -17,15 +17,17 @@ tags:
   - Flatmarket
 ---
 
-As a growing number of talented developers are flocking to static web tools, the possibilities of what can be created are expanding. 
+Your website's store is painfully slow, and it's costing you money. 
 
-Even things like eCommerce sites, which were once absolutely dependent on heavy back-end databases, can now be fast, secure and reliable static sites. Today, we'll take a look at one such static eCommerce platform, Flatmarket.
+According to a [KISSMetrics study](https://blog.kissmetrics.com/loading-time/?wide=1), 40% of shoppers will abandon a website that takes longer than 3 seconds to load, and 47% expect a site to load in less than two.
+
+That's a problem for most eCommerce sites, which are almost always absolutely dependent on heavy back-end databases.
+
+But now, you can harness the speed, security and reliability of a static site to run your online store. Today, we'll take a look at one such static eCommerce platform, Flatmarket.
 
 <!-- excerpt -->
 
-Flatmarket is a free, open source eCommerce platform for static sites. It features responsive design, the speed of static, and the security of Stripe to process payments.
-
-With a Heroku app to validate purchases and interact with the Stripe API and is built on the latest web technologies like hapi, React and Webpack.
+Flatmarket is free, open source, and built on the latest web technologies like hapi, React and Webpack. It features responsive design, the speed of static, and the security of Stripe to process payments, with an easily-deployed Heroku app to validate purchases and interact with the Stripe API.
 
 We'll be using the [Flatmarket Example](https://github.com/christophercliff/flatmarket-example) to show you how to get it up and running on Netlify. You can then set up your own Flatmarket server, and run the configuration the same way. Let's get started.
 
