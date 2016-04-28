@@ -1,5 +1,5 @@
 ---
-title: "CDNs: Netlify's Secret Sauce"
+title: "Make Your Site Faster with Netlify's Intelligent CDN"
 author: Aaron Autrand
 image: /uploads/world-communications-by-eric-fischer.jpg
 image_caption: "Photo credit: [Eric Fischer](https://www.flickr.com/photos/walkingsf/6635655755)"
