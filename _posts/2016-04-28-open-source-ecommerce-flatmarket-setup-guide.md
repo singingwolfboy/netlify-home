@@ -1,7 +1,7 @@
 ---
 title: "How to Shop With Static: Open Source eCommerce with Flatmarket"
 author: Aaron Autrand
-image: null
+image: /uploads/colourful_shopping_carts.jpg
 image_caption: null
 short_title: "Flatmarket: eCommerce for Static Sites"
 description: Hosting a Static eCommerce Site built with Flatmarket on Netlify
