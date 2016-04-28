@@ -7,7 +7,7 @@ short_title: "Flatmarket: eCommerce for Static Sites"
 description: Hosting a Static eCommerce Site built with Flatmarket on Netlify
 thumbnail: /uploads/shopping-cart-of-checkered-design_318-50865.png
 cmsUserSlug: static-ecommerce-flatmarket-guide
-date: 2016-04-25T00:00:00.000Z
+date: 2016-04-28T00:00:00.000Z
 tags:
   - eCommerce
   - shopping
@@ -17,7 +17,7 @@ tags:
   - Flatmarket
 ---
 
-Your website's store is painfully slow, and it's costing you money. 
+Your website's store is painfully slow, and it's costing you money.
 
 According to a [KISSMetrics study](https://blog.kissmetrics.com/loading-time/?wide=1), 40% of shoppers will abandon a website that takes longer than 3 seconds to load, and 47% expect a site to load in less than two.
 
