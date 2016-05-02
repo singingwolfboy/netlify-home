@@ -7,7 +7,7 @@ short_title: Top Ten Static Generators
 description: A list of the top ten static generators for building your next website
 thumbnail: /uploads/staticwebsite.png
 cmsUserSlug: ""
-date: 2016-05-02 
+date: 2016-05-02T00:00:00.000Z
 tags: null
 ---
 
@@ -43,7 +43,7 @@ Before we start, you'll probably notice that ReactJS isn't on this list. You can
 
   [hexo.io](https://hexo.io)
 
-![hugo.png](/uploads/hugo.png)
+![hugologo.png](/uploads/hugologo.png)
 
 **3. Hugo**
 
