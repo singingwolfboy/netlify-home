@@ -43,7 +43,7 @@ Before we start, you'll probably notice that ReactJS isn't on this list. You can
 
   [hexo.io](https://hexo.io)
 
-![hugo.png](/uploads/hugo.png)
+![hugologo.png](/uploads/hugologo.png)
 
 **3. Hugo**
 
