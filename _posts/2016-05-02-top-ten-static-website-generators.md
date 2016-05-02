@@ -7,7 +7,7 @@ short_title: Top Ten Static Generators
 description: A list of the top ten static generators for building your next website
 thumbnail: /uploads/staticwebsite.png
 cmsUserSlug: ""
-date: now
+date: 2016-05-02 
 tags: null
 ---
 
