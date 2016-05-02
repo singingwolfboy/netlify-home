@@ -117,7 +117,7 @@ Before we start, you'll probably notice that ReactJS isn't on this list. You can
 
 **10. Exposé**
 
-  Exposé is quite a bit different than the other offerings on this list. It's actually just a Bash script that turns images and videos into beautiful photoessays. It's best experienced, rather than explained, so do yourself a favor and look at the personal blogs of Expose's creator, located at [jack.ventures](jack.ventures) and [jack.works](jack.works).
+  Exposé is quite a bit different than the other offerings on this list. It's actually just a Bash script that turns images and videos into beautiful photoessays. It's best experienced, rather than explained, so do yourself a favor and look at the personal blogs of Expose's creator, located at [jack.ventures](http://jack.ventures) and [jack.works](http://jack.works).
 
   [github.com/Jack000/Expose](https://github.com/Jack000/Expose)  
 
