@@ -1,7 +1,7 @@
 ---
 title: Top Ten Static Website Generators
 author: Aaron Autrand
-image: null
+image: /uploads/04-static-site-generator-trends-opt.png
 image_caption: ""
 short_title: Top Ten Static Generators
 description: A list of the top ten static generators for building your next website
