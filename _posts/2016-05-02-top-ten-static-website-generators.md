@@ -31,7 +31,7 @@ Before we start, you'll probably notice that ReactJS isn't on this list. You can
 
   Jekyll is far and away the most popular static site generator. That's no surprise, considering it underpins GitHub Pages and was created by GitHub co-founder Tom Preston-Werner.
 
-  Jekyll is built with Ruby, and is most often used for blogs and personal projects, due to its close integration with GitHub. Jekyll takes a directory filled with text files, renders that content with Markdown and Liquid templates, and generates a publish-ready static website.Its large community and wide array of plugins makes it a great jumping off place for bloggers coming from the world of WordPress and Drupal, making it easy to import content from those formats and more.
+  Jekyll is built with Ruby, and is most often used for blogs and personal projects, due to its close integration with GitHub. Jekyll takes a directory filled with text files, renders that content with Markdown and Liquid templates, and generates a publish-ready static website. Its large community and wide array of plugins makes it a great jumping off place for bloggers coming from the world of WordPress and Drupal, making it easy to import content from those formats and more.
 
   [jekyllrb.com](http://jekyllrb.com)
 
@@ -67,7 +67,7 @@ Before we start, you'll probably notice that ReactJS isn't on this list. You can
 
 **5. Pelican**
 
-  Pelican is a static site generator, written in Python. Content can be written in Markdown or reStructuredText formats, and can be published in multiple languages.
+  Pelican is a static site generator written in Python. Content can be written in Markdown or reStructuredText formats, and can be published in multiple languages.
 
   Jinja2 templates allow users to customize the them, and Pelican supports code syntax highlighting. Pelican can also support Atom and RSS feeds, integrates social media accounts, external commenting tools like Disqus and Google Analytics. Content that lives elsewhere can be imported from Wordpress, Dotclear or RSS feeds.
 
