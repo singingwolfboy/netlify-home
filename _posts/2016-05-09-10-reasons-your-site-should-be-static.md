@@ -15,6 +15,8 @@ Very often, websites are overkill.
 
 There's no reason to have a massive, unwieldy thing with a thing when you could have a fast, secure and beautiful static site. But how do you know that you can use a static site?
 
+<!-- excerpt -->
+
 ### 1. You Value Security
 
 When was the last time you updated your CMS? By conservative estimate, 70% of all WordPress installs are vulnerable to known security exploits. In 2014, millions of Drupal sites were vulnerable due to a bug in the code, and Drupal told users that if they hadn't updated within 7 hours, they should assume that they were hacked. That's a really small window.
