@@ -52,8 +52,7 @@ A static site, when generated, is capable of being hosted on any web server that
 
 ### 5. Reliability
 
-![databaseerrorimage](databaseerrorimage)
-
+![databaseerror.jpg](/uploads/databaseerror.jpg)
 Does that look familiar (and painful)? If you've managed to avoid it with your own site thus far...congratulations, you are in rare company. Obviously, working without a database you won't see that, but static site reliability goes beyond database errors. The beauty of serving up flat HTML files is that they can be hosted anywhere and everywhere, like on a CDN. Let's say there's a DDoS attack on the server where your legacy site is hosted. Sorry, but you might just be screwed for a few hours (or days). That same attack hits a node where your static site is hosted? Your site just gets served up from the next closest node. Your visitors never even notice that there's a problem.
 
 ### 6. Version Control
@@ -78,4 +77,10 @@ With static, scalability is barely an issue. Of course it scales! Increased requ
 
 If all the heavy lifting of building a static site is done on your production machine, then what exactly is it that you are paying for with hosting? Asset storage, basically. Your static HTML files take up next to no space, and so your service is usually priced accordingly. Instead, you can spend your money where it really matters, on the features that make your site faster and your life easier, features like atomic deploys and asset fingerprinting to make sure your site is always globally consistent, or git integration and automated builds, so your site is always up to date with your latest changes, and snapshot versioning and instant rollbacks (in case your latest changes break something).
 
-So what's keeping you from moving to the world of static web development? Does the migration process seem too daunting? Many tools like Jekyll have the ability to import your old WordPress posts. Can't walk away from your backend database just yet? With Netlify, you can use proxying and redirects to point to your server when necessary, just like Sam Deere of Giving What We Can outlined in [this post](https://www.netlify.com/blog/2016/03/10/go-static-without-losing-your-server). No matter what tools you prefer to develop in, whether it be Node, Ruby, Python or something else, there's a static tool for you. We've taken a look [before](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators), or you can learn more yourself by visiting [staticgen.com](https://www.staticgen.com), the best source for information on static website generators on the internet.  
+---
+
+So what's keeping you from moving to the world of static web development? Does the migration process seem too daunting? Many tools like Jekyll have the ability to import your old WordPress posts. Can't walk away from your backend database just yet? With Netlify, you can use proxying and redirects to point to your server when necessary, just like Sam Deere of Giving What We Can outlined in [this post](https://www.netlify.com/blog/2016/03/10/go-static-without-losing-your-server).
+
+No matter what tools you prefer to develop in, whether it be Node, Ruby, Python or something else, there's a static tool for you. We've taken a look [before](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators), or you can learn more yourself by visiting [staticgen.com](https://www.staticgen.com), the best source for information on static website generators on the internet. 
+
+There's never been a better time to take advantage of the speed, security and reliability of static web generators and the development environment around them. So what are you waiting for?
