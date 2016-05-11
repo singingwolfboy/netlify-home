@@ -44,6 +44,7 @@ Walkthroughs for a number of popular domain providers are below. Use the links t
 [DNSimple](#dnsimple)  
 [DNS Made Easy](#madeeasy)  
 [1and1](#1and1)  
+[Gandi](#gandi)  
 
 ### Godaddy <a id="godaddy"></a>
 
@@ -186,6 +187,60 @@ Step 8: Click the down arrow to expand your options, then click  `Edit DNS Setti
 
 Step 9: Scroll down to  `A/AAAA and CNAME Records`. Select  `CNAME`. In the  `Alias` field enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites). Then click  `Save`  
 ![1and19.png](uploads/1and19.png)
+
+Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
+
+### Gandi <a id="gandi"></a>
+
+If you've purchased your domain on Gandi, follow these simple instructions to point it at your netlify site:
+
+Step 1: After logging in to Gandi, click your domain name
+![gandi1.png](uploads/gandi1.png)
+
+Step 2: Scroll down and click  `View the zone's contents`  
+![gandi2.png](uploads/gandi2.png)
+
+Step 3: Gandi won't let you edit your default zone file directly, so you must make a copy.
+![gandi3.png](uploads/gandi3.png)
+
+Step 4: Name your zone `Netlify zone file` and click `Submit`
+![gandi4.png](uploads/gandi4.png)
+
+Step 5: Now that you've created a new zone, you still can't use it. You'll have to create a new version of that zone.
+![gandi5.png](uploads/gandi5.png)
+
+Step 6: Click the pencil icon next to the A record
+![gandi6.png](uploads/gandi6.png)
+
+Step 7: In the  `Value` box, enter `198.61.251.14`, then click `Submit`
+![gandi7.png](uploads/gandi7.png)
+
+Step 8: Now click the pencil icon in the `WWW` row. In the  `Value` field enter the name of your site as shown on [app.netlify.com/sites](https://app.netlify.com/sites). Then click `Submit`
+![gandi8.png](uploads/gandi8.png)
+
+Step 9: Now you want to specify that this is the version of the zone file that you want to use
+![gandi9.png](uploads/gandi9.png)
+
+Step 10: Yes, you are sure
+![gandi10.png](uploads/gandi10.png)
+
+Step 11: Click the button next to `Number of domains using this zone`
+![gandi11.png](uploads/gandi11.png)
+
+Step 12: Click `Domain names`
+![gandi12.png](uploads/gandi12.png)
+
+Step 13: Select your domain
+![gandi13.png](uploads/gandi13.png)
+
+Step 14: Scroll down to Zone files and click `Change`
+![gandi14.png](uploads/gandi14.png)
+
+Step 15: Click `Choose` in the `Netlify zone file` row
+![gandi15.png](uploads/gandi15.png)
+
+Step 16: Yes, you are sure
+![gandi16.png](uploads/gandi16.png)
 
 Your custom domain is now pointing at your netlify site. Remember, it may take up to a few hours for everything to work correctly.
 
