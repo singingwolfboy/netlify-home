@@ -36,6 +36,15 @@ Depending on your DNS provider changes to DNS records can take several hours to 
 
 ## Domain Provider-specific Walkthroughs
 
+Walkthroughs for a number of popular domain providers are below. Use the links to jump to your provider:
+
+[GoDaddy](#godaddy)  
+[NameCheap](#namecheap)  
+[Google Domains](#googledomains)  
+[DNSimple](#dnsimple)  
+[DNS Made Easy](#madeeasy)  
+[1and1](#1and1)  
+
 ### Godaddy <a id="godaddy"></a>
 
 If you've purchased your domain on GoDaddy, follow these simple instructions to point it at your netlify site:
