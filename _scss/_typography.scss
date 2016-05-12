@@ -31,19 +31,19 @@ $font-weights: ( //* keep getting them wrong, so mapping them to their names to 
 }
 
 body {
-  font: 300 normal 16px/1.5625 Roboto, sans-serif;
+  font: 300 normal 16px/1.5 Roboto, sans-serif;
 }
 
 
 //* Page headings */
 
-.tera {
+.giga {
   @include font-weight(thin);
   font-size: 60px;
   letter-spacing: -.02em;
   line-height: 1;
   margin-bottom: 40px;
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
 .mega {
@@ -52,7 +52,7 @@ body {
   letter-spacing: -.02em;
   line-height: 70px;
   margin-bottom: 30px;
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
 
@@ -62,23 +62,23 @@ body {
   @include font-weight(thin);
   font-size: 50px;
   letter-spacing: -.02em;
-  line-height: 70px;
-  margin-bottom: 25px;
-  margin-top: 90px;
+  line-height: 60px;
+  margin-bottom: 30px;
+  margin-top: 80px;
 }
 
 .alpha {
   @include font-weight(thin);
-  font-size: 37px; //36px;
+  font-size: 38px;
   letter-spacing: -.02em;
   line-height: 45px;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  margin-bottom: 25px;
+  margin-top: 50px;
 }
 
 .beta {
   @include font-weight(thin);
-  font-size: 33px; //32px
+  font-size: 32px;
   letter-spacing: -.02em;
   line-height: 40px;
   margin-bottom: 25px;
@@ -99,7 +99,7 @@ body {
 
 .delta {
   @include font-weight(thin);
-  font-size: 25px; //24px;
+  font-size: 24px;
   letter-spacing: normal;
   line-height: 30px;
   margin-bottom: 40px;
@@ -115,20 +115,20 @@ body {
   margin-top: 30px;
 }
 
-//* Paragraphs */
-
 .zeta {
   @include font-weight(light);
   font-size: 18px;
   letter-spacing: normal;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
+
+
+//* Paragraphs */
 
 .intro {
   @include font-weight(medium);
   font-size: 21px;
-  line-height: 30px;
 }
 
 .large {
@@ -163,7 +163,7 @@ body {
 
 @media (max-width: $bp-med-large) {
 
-  .tera {
+  .giga {
     font-size: 55px; //* mega */
   }
 
@@ -174,7 +174,7 @@ body {
 
 
 @media (max-width: $bp-small) {
-  .tera,
+  .giga,
   .mega,
   .kilo {
     &:not([class*=mt-]) {
@@ -182,7 +182,7 @@ body {
     }
   }
 
-  .tera {
+  .giga {
     font-size: 48px;
     line-height: 1;
   }
@@ -320,5 +320,4 @@ i,
 cite {
   @extend .semibold;
   font-style: normal;
-  letter-spacing: normal;
 }

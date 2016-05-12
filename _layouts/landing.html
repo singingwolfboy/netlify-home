@@ -1,83 +1,25 @@
 ---
 layout: default
 ---
-<link href='https://fonts.googleapis.com/css?family=Inconsolata:400' rel='stylesheet' type='text/css'>
-
-<!-- Above the fold -->
-<div class="bg-light">
-
-  <!-- Hero -->
-  <section class="hero content">
-    <div class="hero-blurb blurb">
-      <h1>
-        <span class="one-thing">One platform</span>
-        <span class="one-thing two">One click SSL</span>
-        <span class="one-thing three">One step deploy</span>
-      </h1>
-      <p>
-        Deploy <strong>modern static websites</strong> with our automated
-        platform and add best practices like SSL, CDN distribution, caching,
-        and continuous deployment with a single-click.
-      </p>
-      <p>
-        <a href="https://app.netlify.com" class="button button--pill cta">
-          <strong class="button-label epsilon">Get started</strong>
-        </a>
-      </p>
-    </div>
-
-    <hr class="bb bb--muted show-for-medium">
-
-    <blockquote class="hero-blockquote">
-      <p>{{page.celebrity_quote}}</p>
-      <cite><strong>{{page.celebrity_name}}</strong>, {{page.celebrity_title}}</cite>
-    </blockquote>
-  </section>
-
-  <!-- Integrations -->
-  <section class="bg-white text-center bb bb--large editorial-text">
-    <div class="content">
-      <div class="integration-logos">
-      {% for logo in site.data.homepage_integration_logos %}
-        <img src="/img/logos/{{logo.filename}}" width="{{logo.width}}" height="{{logo.height}}" alt="{{logo.alt}}">
-      {% endfor %}
-      </div>
-      <p class="delta">
-        <span class="muted">Our agnostic platform means your favorite tools are already supported</span>
-        <small class="x-small block semibold mt-10">And thousands more! (Really, just about anything)</small>
-      </p>
-    </div>
-  </section>
-</div>
-
-<!-- Terminal -->
-<section class="bg-terminal inverse bb bb--large">
-  <div class="content">
-    <div class="l-container highlight js-terminal">
-    </div>
-  </div>
-</section>
 
 {{ content }}
 
 <!-- Features -->
 <section class="bg-dark-muted-cover inverse bb bb--large">
   <div class="content">
-    <h1 class="kilo text-center mb-50">
+    <h1 class="mega text-center mb-60">
       <a href="/features.html">Features</a>
     </h1>
 
-    <div class="l-container">
+    <div class="l-container homepage-features">
     {% for feature in site.data.homepage_features %}
 
       <div class="l-third l-half-med">
-        <section class="homepage-feature">
+        <section class="blurb">
           <h3 class="blurb-title">
-            <span class="feature-icon">
-              <svg width="60" height="60">
-                <use xlink:href="#{{feature.icon_id}}" />
-              </svg>
-            </span>
+            <svg width="40" height="40">
+              <use xlink:href="#{{feature.icon_id}}" />
+            </svg>
             {{feature.title}}
           </h3>
           <div class="blurb-bd small">
@@ -89,9 +31,9 @@ layout: default
     {% endfor %}
     </div>
 
-    <p class="text-center delta mb-90">
+    <p class="text-center gamma mb-80">
       <a href="/features.html">
-        <strong>See more features<svg width="20" height="20" class="append darkest"><use xlink:href="#icon-arrow" /></svg></strong>
+        See more features<svg width="20" height="20" class="append color-bg"><use xlink:href="#icon-arrow" /></svg>
       </a>
     </p>
   </div>
@@ -142,7 +84,22 @@ layout: default
       </div>
     </section>
 
-    {% include socialize.html %}
+    <section class="text-center mb-60">
+      <h1 class="beta inline-block v-bottom mt-40 mb-40 mr-40">
+        <a href="/contact.html">Socialize @</a>
+      </h1>
+
+      <p class="inline-block v-bottom mt-40 mb-40">
+        {% for link in site.social-links %}
+        <a href="{{link[1]}}" class="icon-link--round icon-link--{{link[0]}}">
+          <svg width="36" height="36" class="icon-{{link[0]}}--round">
+            <use xlink:href="#icon-{{link[0]}}-round">
+          </svg>
+        </a>
+        {% endfor %}
+      </p>
+    </section>
+
 
   </div><!-- end content-->
 </section>

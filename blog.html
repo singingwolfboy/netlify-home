@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Netlify Blog. All about static web-tech and netlify.
+title: The Netlify Blog. All about static web-tech and Netlify.
 ---
 <div class="l-wrap bg-light-muted-3">
   <div class="l-wrap-inner l-wrap-inner--main-left">
@@ -36,11 +36,13 @@ title: The Netlify Blog. All about static web-tech and netlify.
 
     <aside class="l-aside l-aside--right inverse blog-aside">
       <h3 class="blog-aside-title">More Articles</h3>
-      <div class="l-container">
+      <ul class="l-container">
         {% for post in site.posts %}
+        <li class="l-half-med">
           {% include post-blurb.html %}
+        </li>
         {% endfor %}
-      </div>
+      </ul>
     </aside>
   </div>
 </div>

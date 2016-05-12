@@ -5,9 +5,9 @@ layout: reseller_docs
 
 ## Reseller Documentation
 
-Welcome to netlify's reseller platform!
+Welcome to Netlify's reseller platform!
 
-As a reseller you can issued API tokens that provides access to publish to your own instance of netlify's API, with very high API rate limits and a setup that doesn't distinguish between free or paid sites (ie, no callouts when adding custom domains).
+As a reseller you can issued API tokens that provides access to publish to your own instance of Netlify's API, with very high API rate limits and a setup that doesn't distinguish between free or paid sites (ie, no callouts when adding custom domains).
 
 As a reseller you have access to all of the normal API documented at [in the API docs](/docs/api).
 
@@ -29,7 +29,7 @@ To create a new access token for a user simply:
 
 This will create a new user (only if none exists, otherwise register a login of an existing user) with the email “name@mail.com" and "uid" (your internal identifier for this user) ‘12345’, and return an OAuth access token valid for this user.
 
-This makes it easy to generate unique access tokens that can be sent to your client side JS and used to interact with the netlify API directly from there. An example of that, is that all of app.netlify.com is a single page Angular app that talks directly to api.netlify.com. Everything we do at our netlify web UI, you'll also be able to do in your own UI as a reseller.
+This makes it easy to generate unique access tokens that can be sent to your client side JS and used to interact with the Netlify API directly from there. An example of that, is that all of app.netlify.com is a single page Angular app that talks directly to api.netlify.com. Everything we do at our Netlify web UI, you'll also be able to do in your own UI as a reseller.
 
 When accessing the API with an access token generated from your reseller credentials, you'll access the API on behalf of the reseller rather than on behalf of a single user.
 
@@ -53,11 +53,11 @@ To access your reseller panel, configure reseller settings and issue reseller AP
 
 [Netlify's Reseller Panel](https://app.netlify.com/resellers)
 
-You'll need to let us know which email address you're using to access netlify, so we can give you admin access to your reseller account.
+You'll need to let us know which email address you're using to access Netlify, so we can give you admin access to your reseller account.
 
 ## Preview Domain
 
-By default when a new reseller account is set up, it'll share the same preview domain as netlify (`yoursite.netlify.com`), but normally you'll probably want a unique preview domain for development sites.
+By default when a new reseller account is set up, it'll share the same preview domain as Netlify (`yoursite.netlify.com`), but normally you'll probably want a unique preview domain for development sites.
 
 To do that you will have to set up a domain with a CNAME wildcard record, like \*.sites.example.com and point the CNAME to <reseller-name>.r.netlify.com and then tell us the domain to configure for this.
 

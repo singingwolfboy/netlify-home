@@ -1,5 +1,5 @@
 ---
-title: Redirects and Rewrite Rules
+title: Redirects & Rewrites
 position: 40
 ---
 

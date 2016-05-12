@@ -11,25 +11,25 @@ tags: null
 published: false
 ---
 
-Welcome to netlify or should I say welcome to netlify CMS, the first static site CMS system that can easily be integrated with almost any static site generator!
+Welcome to Netlify or should I say welcome to Netlify CMS, the first static site CMS system that can easily be integrated with almost any static site generator!
 
 I know--it sounds too good to be true, but the age where static sites were defined by a lack of dynamic content, a lack of user interactivity and a lack of a CMS system is finally over!
 
 In this little guide, we'll do a step by step, which will show you how to install and configure your own copy of our *jekyll-netlify-cms* template.
 
-This is only the beginning however and we'll follow up with guides to our other netlify CMS templates as well.
+This is only the beginning however and we'll follow up with guides to our other Netlify CMS templates as well.
 
 *This guide assumes that you have Ruby and bundler installed*
 
 <!-- excerpt -->
 
 ## Netlify CMS Environments
-Before we start, I'd like to talk a little about netlify CMS and environments, as it is possible to run a *netlify-git-api server* for when you're working locally, as opposed to setting the environment variable to production and using *GitHub's API* when your site goes live.
+Before we start, I'd like to talk a little about Netlify CMS and environments, as it is possible to run a *netlify-git-api server* for when you're working locally, as opposed to setting the environment variable to production and using *GitHub's API* when your site goes live.
 
-We will describe both methods in this guide, by first setting up locally and second, by deploying to netlify and using GitHub's API online.
+We will describe both methods in this guide, by first setting up locally and second, by deploying to Netlify and using GitHub's API online.
 
 ## Setup your GitHub Repository
-We'll start by getting our own copy of the template and then we'll set up a local version and configure it, before letting netlify build it, but one thing at the time.
+We'll start by getting our own copy of the template and then we'll set up a local version and configure it, before letting Netlify build it, but one thing at the time.
 
 ### 1. Get your own copy
 First you need to fork your own copy of the [jekyll-netlify-cms template](https://github.com/netlify-templates/jekyll-netlify-cms) and give it a new name.
@@ -54,7 +54,7 @@ git clone my-repo-url
 ```
 
 ## Netlify CMS: Local Environment
-To setup the netlify CMS, first we need to set up the web configuration of the CMS system in the `config.yml` of the admin folder of the site:
+To setup the Netlify CMS, first we need to set up the web configuration of the CMS system in the `config.yml` of the admin folder of the site:
 
 `/my-site-location/admin/config.yml`
 
@@ -74,9 +74,9 @@ production:
     branch: master # Branch to update (master by default)
 ```
 
-It's pretty straight forward, but also very important to change the repo and branch, before you go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with netlify, this has to be set correctly to a repo and branch you have created and now *own*!
+It's pretty straight forward, but also very important to change the repo and branch, before you go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to a repo and branch you have created and now *own*!
 
-### 1. The netlify Git API
+### 1. The Netlify Git API
 We will show how to set this up on your local computer as well as online, but first we'll try locally, so start by downloading the netlify-git-api that corresponds to your OS [here](https://github.com/netlify/netlify-git-api/releases).
 
 If you are not interested in having a local environment, you may skip to [the online environment here](#online-environment).
@@ -112,9 +112,9 @@ The following command will install the jekyll gem specified in the Gemfile, alon
 bundle install
 ```
 
-Once you've used the command above, to install the listed gems, a Gemfile.lock file will be created in your directory. This makes sure that netlify uses the same version of Jekyll, with  the same versions of gems/plugins that you used to build your site.
+Once you've used the command above, to install the listed gems, a Gemfile.lock file will be created in your directory. This makes sure that Netlify uses the same version of Jekyll, with  the same versions of gems/plugins that you used to build your site.
 
-### 4. Create netlify CMS Users
+### 4. Create Netlify CMS Users
 
 From the terminal window, from your local repo directory, we need to run the following command for each user you wish to add (you will be asked for an email, a name and a password):
 
@@ -130,19 +130,19 @@ netlify-git-api users add --name='User Name' --email=my@email.com --password=myp
 
 You need to create at least one user, to properly test the system.
 
-### 5. Start netlify CMS Server
-Next we need to start the netlify CMS server locally with the following command:
+### 5. Start Netlify CMS Server
+Next we need to start the Netlify CMS server locally with the following command:
 
 ```
 netlify-git-api serve
 ```
 
-This will start the netlify CMS Server.
+This will start the Netlify CMS Server.
 
 ***Keep the Terminal Window open to keep the server running!***
 
 ### 6. Build and Watch
-Since we need the netlify CMS Server to keep running, we need to open a second terminal window for the following.
+Since we need the Netlify CMS Server to keep running, we need to open a second terminal window for the following.
 
 From the new terminal window, from the root of your site (cd my-local-site), run the following command to build your site using bundle:
 
@@ -157,11 +157,11 @@ Open up a browser to the address below, log in and create a new post:
 Let's take a look at your new site and the post you just created through this link:
 [https://localhost:4000](https://localhost:4000)
 
-That's pretty much all there is to setting netlify CMS up in a local environment.
+That's pretty much all there is to setting Netlify CMS up in a local environment.
 
 ## Online Environment
 <a id="online-environment"></a>
-Once you're done fiddling with the local version and maybe adding some posts, we should try out netlify CMS with Jekyll in an online environment.
+Once you're done fiddling with the local version and maybe adding some posts, we should try out Netlify CMS with Jekyll in an online environment.
 
 In the terminal window, CD to the root folder of your site and start by entering this command, to check where the project is pushed to:
 
@@ -189,9 +189,9 @@ git push -u origin master
 
 You'll be asked for login details for your account at GitHub and once they've been provided, the local project is pushed to GitHub.
 
-We're done setting up the Jekyll with netlify CMS template page, so let's connect it with netlify and build this thing.
+We're done setting up the Jekyll with Netlify CMS template page, so let's connect it with Netlify and build this thing.
 
-## Connect to netlify and Deploy to Production Environment
+## Connect to Netlify and Deploy to Production Environment
 
 <a id="netlifystart"></a>
 
@@ -200,30 +200,30 @@ These final steps we need to go through are important ones and require that you 
 ### Step 1: Add Your New Site
 ![netlify New Site](/uploads/newsitebut.png)
 
-Creating a new site on netlify is simple. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started.
+Creating a new site on Netlify is simple. Once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites. Click the *"New Site"* button to get started.
 
 ### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
-When you push to GitHub, netlify does all the work. No more manual deploying of updates or changes!
-Since your assets are hosted on GitHub, we’ll need to link netlify to GitHub. Click *“Link to GitHub”*.
+When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
+Since your assets are hosted on GitHub, we’ll need to link Netlify to GitHub. Click *“Link to GitHub”*.
 
-### Step 3: Authorize netlify
+### Step 3: Authorize Netlify
 You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
 
-It’s time to allow netlify and GitHub to talk to each other, so review the permissions and click authorize application.
-![Authorize netlify](/uploads/authorization.png)
+It’s time to allow Netlify and GitHub to talk to each other, so review the permissions and click authorize application.
+![Authorize Netlify](/uploads/authorization.png)
 
-Like it says in the image above, netlify doesn’t store your GitHub access token on our servers!
+Like it says in the image above, Netlify doesn’t store your GitHub access token on our servers!
 
-If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
+If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.netlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 
 ![netlify0x_chooserepo2.png](/uploads/netlify0x_chooserepo2.png)
 
-Once you're connected to GitHub, netlify will show you a list of your Git repos, as seen above.
+Once you're connected to GitHub, Netlify will show you a list of your Git repos, as seen above.
 For the purpose of this tutorial we'll select the *“jekyll-netlify-cms-demo”* repo we just pushed to GitHub.
 
 ### Step 5: Configure Your Settings
@@ -240,10 +240,10 @@ JEKYLL_ENV = production
 ```
 
 ### Step 6: Build Your Site
-Once you click save, netlify will step in and take over, though it will let you know what's happening on the way, as seen in this screen shot:
+Once you click save, Netlify will step in and take over, though it will let you know what's happening on the way, as seen in this screen shot:
 ![siteisbuilding.png](/uploads/siteisbuilding.png)
 
-Now it’s time to sit back and relax, as the next step may take a few minutes. Take a break and netlify will do the rest, while you watch the progress.
+Now it’s time to sit back and relax, as the next step may take a few minutes. Take a break and Netlify will do the rest, while you watch the progress.
 
 ### 7. Register new Application.
 Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.  
@@ -254,12 +254,12 @@ Next fill out the application information as seen in the screen shot below - you
 You can disregard choosing an image, though we did, to help distinguish the application.
 Once you're done filling out, simply click the green **Register application** button and you will get to the following screen shot (well, it will be similar at least):
 
-![netlify0x_registerapp2.png](/uploads/netlify0x_registerapp2.png)
+![Netlify0x_registerapp2.png](/uploads/netlify0x_registerapp2.png)
 
 What you need to take note of here, is the **Client ID** and the **Client Secret** in the upper right corner. You will need to provide both in the next step!
 
 ### 8. Setup GitHub API Access
-Return to netlify and the site you just build and in the control panel select the **Access panel**.
+Return to Netlify and the site you just build and in the control panel select the **Access panel**.
 
 This is where we give the GitHub Api access to our site with the application we just registered and you need to enter the **Client ID** and the **Client Secret** from above, as seen in the screen shot below:
 
@@ -267,7 +267,7 @@ This is where we give the GitHub Api access to our site with the application we 
 
 Simply paste them into the windows where it says *enter Client ID here* and below where it says *enter Client Secret here* and you're good to go.
 
-### Step 9: Trying Out netlify CMS
+### Step 9: Trying Out Netlify CMS
 We tried testing the CMS system locally earlier in this guide and it's virtually the same using it online, you just have to change the address to **https://mysite.netlify.com/admin** to access the CMS system and then log in with GitHub, since we're using GitHub auth when working online.
 
 ![jekyll-netlify-cms-act.png](/uploads/jekyll-netlify-cms-act.png)

@@ -4,13 +4,17 @@
 //*
 //------------------------------*/
 
-$page-width: 1280px;
-$content-width: 976px;
+//* Spacing */
+$baseline: 25px;
 $base-spacing: 40px;
-$header-padding-left: $base-spacing * 2;
-$header-padding-right: $base-spacing;
+$media-spacing: 15px;
 $column-gap: 50px;
-$blurb-width: 245px;
+$header-padding: $base-spacing * 2;
+
+//* Widths */
+$page-width: 1280px; //* Comp width */
+$content-width: 960px + $base-spacing * 3; //* Add base_spacing until longest heading on homepage fits *//
+$blurb-width: 250px;
 
 
 //*
@@ -74,12 +78,12 @@ img {
 
 .content--wide {
   max-width: $page-width;
-  padding: 0 $header-padding-right 0 $header-padding-left;
+  padding: 0 $header-padding;
 }
 
 .content--narrow {
-  max-width: $content-width + $base-spacing;
-  padding: 0 $header-padding-right 0 $header-padding-left;
+  max-width: $content-width;
+  padding: 0 $header-padding;
 }
 
 
@@ -94,12 +98,12 @@ img {
 
 .media-img {
   float: left;
-  margin-right: 15px;
+  margin-right: $media-spacing;
 }
 
 .media-img-ext {
   float: right;
-  margin-left: 15px;
+  margin-left: $media-spacing;
   margin-right: 0;
 }
 
@@ -124,12 +128,24 @@ img {
 
 .l-container {
   @extend %cf;
+
+  .l-half,
+  .l-third,
+  .l-fourth {
+    float: left;
+  }
+
+  @media (max-width: $bp-med) {
+    .l-half-med {
+      float: left;
+    }
+  }
 }
+
 
 //* Layouts without gutters */
 
 .l-half {
-  float: left;
   width: 50%;
 
   &:nth-child(2n+1) {
@@ -138,7 +154,6 @@ img {
 }
 
 .l-third {
-  float: left;
   width: 33.3333333%;
 
   &:nth-child(3n+1) {
@@ -147,11 +162,24 @@ img {
 }
 
 .l-fourth {
-  float: left;
   width: 25%;
 
   &:nth-child(4n+1) {
     clear: left;
+  }
+}
+
+.l-half-med {
+  @media(max-width: $bp-med) {
+    width: 50%;
+
+    &:nth-child(odd) {
+      clear: left;
+    }
+
+    &:nth-child(even) {
+      clear: right;
+    }
   }
 }
 
@@ -193,17 +221,37 @@ img {
 
   .l-col {
     float: left;
-    padding: 0 30px;
     width: 50%;
   }
 
   .l-col:nth-child(odd) {
     clear: left;
-    padding-left: 0;
+    padding-right: $column-gap / 2;
   }
 
   .l-col:nth-child(even) {
-    padding-right: 0;
+    clear: right;
+    padding-left: $column-gap / 2;
+  }
+
+  @media (max-width: $bp-med-large) {
+    .l-col:nth-child(odd) {
+      padding-right: $base-spacing / 2;
+    }
+
+    .l-col:nth-child(even) {
+      padding-left: $base-spacing / 2;
+    }
+  }
+
+  @media (max-width: $bp-med) {
+    .l-col:nth-child(odd) {
+      padding-right: $baseline / 2;
+    }
+
+    .l-col:nth-child(even) {
+      padding-left: $baseline / 2;
+    }
   }
 }
 
@@ -212,10 +260,18 @@ img {
 
 .l-2-col-auto {
   column-count: 2;
-  column-gap: 50px;
+  column-gap: $column-gap;
 
   > p:first-child {
     margin-top: 0;
+  }
+
+  @media (max-width: $bp-med-large) {
+    column-gap: $base-spacing;
+  }
+
+  @media (max-width: $bp-med) {
+    column-gap: $baseline;
   }
 }
 
@@ -274,11 +330,6 @@ $sidebar-width: $blurb-width + $sidebar-padding * 2;
   padding: 0 $column-gap  $column-gap;
 }
 
-.l-main--right {
-  max-width: 52em;
-  padding-right: 0;
-}
-
 .l-main--left {
   padding-left: 0;
   width: 100%;
@@ -297,7 +348,7 @@ $sidebar-width: $blurb-width + $sidebar-padding * 2;
 
 .l-aside--right {
   margin-right: -$sidebar-width;
-  padding-left: $sidebar-padding;
+  padding: $sidebar-padding;
   width: $sidebar-width;
 
   &::after {
@@ -391,7 +442,7 @@ $sidebar-width: $blurb-width + $sidebar-padding * 2;
   margin: 0;
 }
 
-@for $i from 0 through 25 { // top & bottom margins
+@for $i from 0 through 30 { // top & bottom margins
   .mt-#{$i * 5} {
     margin-top: $i * 5px;
   }
@@ -444,7 +495,7 @@ $sidebar-width: $blurb-width + $sidebar-padding * 2;
 }
 
 
-@for $i from 1 through 5 { // Margins for pull-outs and bigger adjustments
+@for $i from 1 through 10 { // Margins for pull-outs and bigger adjustments
   .ml-n#{$i * 10} {
     margin-left: $i * -10px;
   }

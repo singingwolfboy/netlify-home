@@ -1,7 +1,10 @@
-// scss-lint:disable PlaceholderInExtend
+$blurb-spacing: $media-spacing;
+
+//* Blurb component */
 
 .blurb {
   max-width: 30em;
+  position: relative;
 
   cite {
     @extend .xx-small;
@@ -14,39 +17,31 @@
   &.break-inside-avoid {
     padding-bottom: 20px;
   }
-}
 
-.blurb-hd {
-  @extend .bb;
-  margin-bottom: 10px;
-
-  .media-img {
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-
-  .media--bleed {
-    .media-img {
-      margin-top: 0;
-    }
+  @media (max-width: $bp-small) {
+    max-width: none;
   }
 }
 
 .blurb-title {
   @extend .epsilon;
   @extend .semibold;
+  @extend .quiet;
   margin: 5px 0;
 
   + p {
     margin-top: 0;
   }
 
-  .inverse a:hover &.loud {
+
+  a:hover & {
     color: $color-highlight;
   }
 
-  .inverse a:hover &.highlight {
-    color: $color-lightest;
+  .l-arrange > & {
+    @extend .l-arrange-fill;
+    padding: 5px 0;
+    vertical-align: baseline;
   }
 }
 
@@ -59,20 +54,57 @@
     display: block;
     margin-right: 1px;
   }
+
+  .l-arrange > & {
+    @extend .l-arrange-fit;
+    vertical-align: baseline;
+  }
 }
 
+.blurb-hd {
+  border-bottom: 2px solid $color-highlight;
+  margin-bottom: 10px;
+
+  .media-img {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: auto;
+      max-width: none;
+    }
+  }
+
+  .media--bleed {
+    .media-img {
+      margin-top: 0;
+    }
+  }
+}
+
+
 .blurb-bd {
+
+  &::after { // clearfix
+    clear: both;
+    content: ' ';
+    display: table;
+  }
 
   p:first-child {
     margin-top: 10px;
   }
 
   img.left {
-    margin: 15px 25px 15px 0;
+    margin: 0 $blurb-spacing $blurb-spacing 0;
     max-width: 38.2%;
 
     + p {
-      margin-top: 10px;
+      margin-top: $blurb-spacing;
     }
   }
 
@@ -104,36 +136,74 @@
   }
 }
 
-.l-aside,
+
+//* Blurb in a layout */
+
+.l-container {
+  .blurb {
+    margin: 0 auto $blurb-spacing;
+    width: $blurb-width;
+  }
+}
+
 .l-third {
 
-  .blurb {
-    width: 245px;
+  &:nth-child(3n+1) .blurb {
+    margin-left: 0;
   }
 
-  .blurb--wide {
-    width: 278px;
+  &:nth-child(3n) .blurb {
+    margin-right: 0;
+  }
+
+  @media (max-width: $bp-med) {
+    .blurb {
+      margin-left: $blurb-spacing;
+      margin-right: $blurb-spacing;
+      width: auto;
+    }
+
+    &:nth-child(3n+1) .blurb {
+      left: -$blurb-spacing;
+      margin-left: $blurb-spacing;
+    }
+
+    &:nth-child(3n) .blurb {
+      margin-right: $blurb-spacing;
+      right: -$blurb-spacing;
+    }
   }
 }
 
-.l-third .blurb {
-  @extend .center;
-}
+.l-half-med {
+  @media (max-width: $bp-med) {
+    .blurb {
+      margin: 0 $blurb-spacing $blurb-spacing;
+      width: auto;
+    }
 
-.l-third:nth-child(3n+1) .blurb {
-  margin-left: 0;
-}
+    &:nth-child(odd) .blurb {
+      left: -$blurb-spacing;
+      right: 0;
+    }
 
-.l-third:nth-child(3n) .blurb {
-  margin-right: 0;
-}
-
-.l-aside {
-  .blurb {
-    margin: 40px 0;
+    &:nth-child(even) .blurb {
+      left: 0;
+      right: -$blurb-spacing;
+    }
   }
+}
 
-  .blurb-title {
-    opacity: .9;
+
+.l-container {
+
+  @media (max-width: $bp-small) {
+    .blurb:nth-child(n),
+    &:nth-child(n) .blurb {
+      float: none;
+      left: 0;
+      margin: 0 auto $blurb-spacing;
+      right: 0;
+    }
   }
 }

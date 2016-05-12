@@ -3,8 +3,8 @@ title: "A Step-by-Step Guide: Sculpin on Netlify"
 author: Jimmi Lee
 image: /uploads/sculpin.png
 image_caption: null
-short_title: Sculpin on netlify
-description: "A guide to help you set up Sculpin on netlify in continuous deployment, with assets on GitHub."
+short_title: Sculpin on Netlify
+description: "A guide to help you set up Sculpin on Netlify in continuous deployment, with assets on GitHub."
 thumbnail: /uploads/sculpin_logo.png
 cmsUserSlug: ""
 date: 2016-03-29T00:00:00.000Z
@@ -14,7 +14,7 @@ tags:
   - tutorial
 ---
 
-Today we'll take a look at how to install and setup a basic [Sculpin](https://sculpin.io/) blog site with assets on GitHub, in continuous deployment on netlify.
+Today we'll take a look at how to install and setup a basic [Sculpin](https://sculpin.io/) blog site with assets on GitHub, in continuous deployment on Netlify.
 
 Sculpin is a fast static site generator, which uses Twig templates, built on Symfony's HTTP Kernel and written in PHP. It's arguably the most mature and well documented static site generator written in PHP.
 
@@ -137,7 +137,7 @@ We created the `2016-03-02-Sculpin-on-netlify.md` file in the `/source/_posts` f
 
 ```
 ---
-title: Sculpin on netlify with GitHub
+title: Sculpin on Netlify with GitHub
 tags:
     - Sculpin
     - blog
@@ -145,8 +145,8 @@ tags:
 categories:
     - time
 ---
-# Sculpin on netlify
-This page is mainly created to demonstrate a basic Sculpin Blog site, with assets hosted on GitHub using netlify to deploy in continuous deployment.
+# Sculpin on Netlify
+This page is mainly created to demonstrate a basic Sculpin Blog site, with assets hosted on GitHub using Netlify to deploy in continuous deployment.
 
 Sculpin uses Markdown and twig and twig knows this page's name is: {{ page.title }}
 
@@ -191,7 +191,7 @@ With this command, Sculpin will create a standalone *output_prod* directory for 
 
 ## Pushing Sculpin to GitHub
 
-We want to set up an online GitHub repository with our local environment and push our local files to this repository. Next, we'll connect netlify to the repository for our automatic build (i.e. whenever you push to GitHub, netlify will rebuild your site).
+We want to set up an online GitHub repository with our local environment and push our local files to this repository. Next, we'll connect Netlify to the repository for our automatic build (i.e. whenever you push to GitHub, Netlify will rebuild your site).
 
 ### 1. Create your Git Repo
 We start by creating a [GitHub](https://github.com/) repository for our Sculpin site and generator.
@@ -235,13 +235,13 @@ git push -u origin master
 
 All your files will be copied to your online repository. Once it's done, take a look at the repository online to check if everything looks correct.
 
-It's time to connect it with netlify.
+It's time to connect it with Netlify.
 
 <a id="netlifystart"></a>
 
-## Connect with netlify
+## Connect with Netlify
 
-Creating a new site on netlify is intuitive and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
+Creating a new site on Netlify is intuitive and once you’ve created an account and logged in, you’ll be taken to https://app.netlify.com/sites.
 
 ### Step 1: Add Your New Site
 ![Netlify New Site](/uploads/newsitebut.png)
@@ -251,27 +251,27 @@ Click the *"New Site"* button (as seen above) to get started.
 ### Step 2: Link to Your GitHub
 Clicking *“New Site”* brings you to this screen:
 ![Link to GitHub](/uploads/createsite.png)
-When you push to GitHub, netlify does all the work. No more wasting time on manual deploying of updates or changes!
+When you push to GitHub, Netlify does all the work. No more wasting time on manual deploying of updates or changes!
 
-Since we're hosting the site assets on GitHub, we’ll need to link netlify with GitHub. Click the button *“Link to GitHub”*.
+Since we're hosting the site assets on GitHub, we’ll need to link Netlify with GitHub. Click the button *“Link to GitHub”*.
 
-### Step 3: Authorize netlify
-If you already have an account with netlify (awesome!) you can skip down to Step 4. If you are new to netlify, read on.
+### Step 3: Authorize Netlify
+If you already have an account with Netlify (awesome!) you can skip down to Step 4. If you are new to Netlify, read on.
 
 You will be asked to provide your GitHub login details:
 ![GitHub Login](/uploads/githublogin.png)
 
-We need to let netlify and GitHub talk to each other, so review the permissions and then click authorize application.
+We need to let Netlify and GitHub talk to each other, so review the permissions and then click authorize application.
 ![Authorize netlify](/uploads/authorization.png)
 
-Like it says in the image above on the right, netlify doesn’t store your GitHub access token on our servers!
+Like it says in the image above on the right, Netlify doesn’t store your GitHub access token on our servers!
 
-If you’d like to know more about the permissions netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/).
+If you’d like to know more about the permissions Netlify requests and why we need them, you can check out our [documentation on GitHub Permissions](https://docs.GitHubNetlify.com/github-permissions/).
 
 ### Step 4: Choose Your Repo
 ![sculpin_chooserepo.png](/uploads/sculpin_chooserepo.png)
 
-Once you're connected to GitHub, netlify will show you a list of your GitHub repositories, as seen above.
+Once you're connected to GitHub, Netlify will show you a list of your GitHub repositories, as seen above.
 For the purpose of this tutorial we'll select the *“sculpin-blog-demo”* repo we just pushed to GitHub.
 
 ### Step 5: Configure Your Settings
@@ -282,12 +282,12 @@ Click the *'Save'* button and watch the magic unfold.
 
 ### Step 6: Build Your Site
 <PICTURE - ADD site building PIC>
-Once you click save, netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and netlify will do the rest, while you watch the progress.
+Once you click save, Netlify will step in and take over, though it will let you know what's happening along the way. This may take a few minutes, so take a break and Netlify will do the rest, while you watch the progress.
 
 ### Step 7: The End
 That's it.
 
-Once netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
+Once Netlify has build your site, it will assign a random name to it and you'll be presented with the site and the control panel for the site, ready for additional cusomizing.
 <PICTURE - ADD DONE PIC>
 
 You can change the site to be private and password protected, which is great for work in progress. You can also assign a custom domain name and it's easy to change settings for your site in general and gives you a good quick overview.

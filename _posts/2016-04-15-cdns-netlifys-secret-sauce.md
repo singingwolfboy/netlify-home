@@ -1,10 +1,10 @@
 ---
-title: "CDNs: Netlify's Secret Sauce"
+title: "Make Your Site Faster with Netlify's Intelligent CDN"
 author: Aaron Autrand
 image: /uploads/world-communications-by-eric-fischer.jpg
 image_caption: "Photo credit: [Eric Fischer](https://www.flickr.com/photos/walkingsf/6635655755)"
-short_title: "CDNs: Netlify's Magic Wand"
-description: "Why netlify uses a dual-CDN setup, and why you should, too."
+short_title: "CDNs: Netlify's Secret Sauce"
+description: "Why Netlify uses a dual-CDN setup, and why you should, too."
 thumbnail: /uploads/world.png
 cmsUserSlug: ""
 date: 2016-04-15T00:00:00.000Z
@@ -18,7 +18,7 @@ At Netlify, we make a very big deal about speed.
 
 Sites on Netlify are extremely fast, no matter where you are. Part of that is the tools used to build those sites, but an even bigger part is our CDN--or to be more precise, our CDNs, plural.
 
-<!--excerpt-->
+<!-- excerpt -->
 
 Content Delivery Networks (CDNs) are pretty simple - they function as local asset dumps. You pay for some bandwidth, and your images, videos and downloadable content sit there, in multiple places around the globe, taking the load off the server that serves up your page. The CDN nodes are geographically aware, and make sure that if you are working from a coffee shop in Tokyo, that [He-Man video](https://www.youtube.com/watch?v=ZZ5LpwO-An4) your laptop is requesting is coming from the server just up the street, not being pushed from a server farm in San Francisco. The whole purpose of a CDN is to put that video as close to users as possible to avoid latency issues.
 

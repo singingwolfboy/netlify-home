@@ -7,7 +7,7 @@ short_title: "React & Gatsby: Kyle Mathews"
 description: GatsbyJS creator Kyle Mathews talks about his love for developing with ReactJS
 thumbnail: /uploads/kyle.jpg
 cmsUserSlug: ""
-date: 2020-04-18T00:00:00.000Z
+date: 2016-04-18 
 tags:
   - interview
   - swt
@@ -19,6 +19,8 @@ tags:
 With the backing of Facebook, the React programming language has made a huge splash in the last few years.
 
 React is used by Netflix, Imgur, Feedly, AirBnB and more. It exploded in popularity when Facebook open-sourced its Android- and iOS-focused kin React Native in March of 2015. One developer who has taken advantage of the toolkit on offer is Kyle Mathews, the creator of GatsbyJS. Mathews spoke to Netlify after the most recent Static Web Tech Meetup about the benefits of Gatsby, his love for development with React and the idea of JavaScript fatigue.
+
+<!-- excerpt -->
 
 Aaron Autrand: **What made you decide to go with the React toolkit?**
 

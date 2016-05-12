@@ -4,7 +4,7 @@ author: Aaron Autrand
 image: /uploads/parker-moore-jekyll.jpg
 image_caption: null
 short_title: Interview with Parker Moore
-description: "Parker Moore chats with netlify about Jekyll, development and the future of static web tech."
+description: "Parker Moore chats with Netlify about Jekyll, development and the future of static web tech."
 thumbnail: /uploads/parker.jpg
 cmsUserSlug: ""
 date: 2016-03-11T00:00:00.000Z
@@ -19,7 +19,7 @@ While there is a constantly growing roster of static web tools available for dev
 
 Its popularity is no surprise, considering Jekyll was created by one of the cofounders of GitHub and is the engine that powers GitHub pages.
 
-Recently we witnessed the launch of Jekyll 3.0, with the final commit being pushed live during a talk by current Jekyll lead Parker Moore at the October edition of the Static Web MeetUp in Wikia's San Francisco office. After his talk, Moore took some time to chat with Aaron from netlify about Jekyll, development and the future of static web tech.
+Recently we witnessed the launch of Jekyll 3.0, with the final commit being pushed live during a talk by current Jekyll lead Parker Moore at the October edition of the Static Web MeetUp in Wikia's San Francisco office. After his talk, Moore took some time to chat with Aaron from Netlify about Jekyll, development and the future of static web tech.
 
 <!-- excerpt -->
 
@@ -61,7 +61,7 @@ It needs to be better understood. I understand it and you understand it, but I w
 
 _So how do people go about doing that?_
 
-One thing I've talked with [netlify founders - ed.] Christian and Matt about is the idea that static website, static website generator, static generator, static site sounds so boring, it's very technical sounding...
+One thing I've talked with [Netlify founders - ed.] Christian and Matt about is the idea that static website, static website generator, static generator, static site sounds so boring, it's very technical sounding...
 
 _Dynamic sounds so much interesting!_
 

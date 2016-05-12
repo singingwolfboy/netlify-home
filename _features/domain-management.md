@@ -4,7 +4,7 @@ icon_id: feature-netlify-cdn
 description: "Netlify provides you with complete domain management. Custom domains, subdomains, aliases, DNS hosting and Domain registration all editable from the UI."
 features:
   - title: Custom Domain
-    body: Use your custom domain with any netlify plan. (The free plan includes our callout in the bottom right corner).
+    body: Use your custom domain with any Netlify plan. (The free plan includes our callout in the bottom right corner).
   - title: Domain Aliases
     body: "Point more than one domain to the same website."
     footer: "[Read our blogpost on domain aliases](https://www.netlify.com/blog/2015/10/30/domain-aliases-as-many-as-you-like) "
@@ -14,7 +14,7 @@ features:
   - title: DNS Hosting (NS1)
     body: "Netlify includes high uptime ultra-fast DNS hosting, with a simple but powerful DNS panel and full API access."
   - title: Domain Registration
-    body: "Register and manage your domain from within netlify."
+    body: "Register and manage your domain from within Netlify."
 cmsUserSlug: domain-management
 date: 2016-03-29
 position: 70

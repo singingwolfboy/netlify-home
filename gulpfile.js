@@ -14,14 +14,10 @@ var messages = {
 /**
  * Build the Jekyll Site
  */
-gulp.task('jekyll-build', function (done) {
-    var cmd = ['exec', 'jekyll', 'build', '-t'];
-    if (process.env.CMS_ENV !== 'production') {
-      cmd.push("--future");
-    }
-    browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('bundle', cmd, {stdio: 'inherit'})
-        .on('close', done);
+ gulp.task('jekyll-build', function(cb) {
+  var cmd = ['exec', 'jekyll', 'build', '-t', '--incremental'];
+  return cp.spawn('bundle', cmd, {stdio: 'inherit'})
+    .on('close', function() { cb(); })
 });
 
 /**

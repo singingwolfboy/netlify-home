@@ -1,6 +1,10 @@
-$hero-animation-delay: 2.5s;
+//*
+//* Animated text
+//*
 
-@keyframes hero-fade {
+$animated-text-delay: 2.5s;
+
+@keyframes fade-text {
   0% {
     opacity: 0;
     transform: translate3d(0, 5px, 0);
@@ -27,157 +31,189 @@ $hero-animation-delay: 2.5s;
   }
 }
 
-.hero {
-  display: table;
-  width: 100%;
+@keyframes type-text {
+  0% {
+    width: 0;
+  }
 
-  @media (max-width: $bp-med) {
-    display: block;
+  25% {
+    width: 100%;
+  }
+
+  33% {
+    width: 100%;
+  }
+
+  34% {
+    width: 0;
   }
 }
 
-.hero-blurb,
-.hero-blockquote {
-  display: table-cell;
-  margin: auto;
-  padding: 40px 0;
-  width: 50%;
+.animated-text {
+  height: 1em;
+  position: relative;
 
-  @media (max-width: $bp-med) {
+  > span {
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
     display: block;
-    margin: 50px auto;
-    padding: 0;
-    width: auto;
-  }
-}
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 100%;
 
-.hero-blurb {
+    &:nth-child(2) {
+      animation-delay: $animated-text-delay;
+    }
 
-  h1 {
-    @extend .alpha;
-    @extend .bold;
-    height: 40px;
-    margin-bottom: 0;
-    position: relative;
+    &:nth-child(3) {
+      animation-delay: $animated-text-delay * 2;
+    }
 
-    span {
-      animation-duration: 7.5s;
-      animation-iteration-count: infinite;
-      animation-name: hero-fade;
-      height: 3.5rem;
-      left: 0;
-      line-height: 3rem;
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      white-space: nowrap;
-      width: 100%;
+    &:nth-child(4) {
+      animation-delay: $animated-text-delay * 3;
     }
   }
 
-  p {
-    @extend .zeta;
-    margin-bottom: 30px;
+  .once {
+    animation-iteration-count: 1;
   }
+}
 
-  .two {
-    animation-delay: $hero-animation-delay;
+.animated-text--fade {
+  > span {
+    animation-name: fade-text;
+    opacity: 0;
   }
+}
 
-  .three {
-    animation-delay: $hero-animation-delay * 2;
+.animated-text--typewriter {
+  > span {
+    animation-name: type-text;
+    animation-timing-function: steps(60, end);
+    overflow: hidden;
+    width: 0;
   }
+}
 
-  @media (max-width: $bp-med) {
-    text-align: center;
+.animated-text--stop {
+  > span {
+    animation-name: none;
 
-    .cta {
-      margin-left: auto;
-      margin-right: auto;
+    &:first-child {
+      opacity: 1;
+      width: auto;
     }
   }
 }
+
 
 //* "Fancy" blockquote based on:
 //* https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
 //*
-.hero-blockquote {
-  box-sizing: content-box;
-  max-width: 30em;
-  padding-left: 20px;
+
+.fancy-quote {
+  display: inline;
   quotes: '\201C''\201D''\2018''\2019';
-  text-align: right;
 
-  p {
-    @extend .mega;
-    font-size: 1.8rem;
-    display: inline;
-    line-height: 1;
-
-    &::before,
-    &::after {
-      color: $color-highlight-lighter;
-      font-family: Georgia, serif;
-      font-size: 1.618em;
-      line-height: .1em;
-      position: relative;
-      top: -.1em;
-      vertical-align: -.4em;
-    }
-
-    &::before {
-      content: open-quote;
-      left: -.1em;
-    }
-
-    &::after {
-      content: close-quote;
-      left: .1em;
-      margin-right: -.4em;
-    }
+  &::before,
+  &::after {
+    color: $color-highlight-lighter;
+    font-family: Georgia, serif;
+    font-size: 1.618em;
+    line-height: .1em;
+    position: relative;
+    top: -.1em;
+    vertical-align: -.4em;
   }
 
-  cite {
-    @extend .x-small;
-    @include font-weight('normal');
-    display: block;
-    margin: 30px 0;
-
-    &::before {
-      content: '—';
-      font-family: Georgia, serif;
-      font-weight: bold;
-    }
+  &::before {
+    content: open-quote;
+    left: -.1em;
   }
 
-  @media (max-width: $bp-large) {
-    cite {
-      margin: 20px 0;
-    }
-  }
+  &::after {
+    content: close-quote;
+    left: .1em;
+    margin-right: -.4em;
 
-  @media (max-width: $bp-med-large) {
-    padding-right: 40px;
-  }
-
-  @media (max-width: $bp-med) {
-    padding: 0;
-    text-align: center;
-  }
-
-  @media (max-width: $bp-small) {
-    p::after {
+    @media (max-width: $bp-small) {
       margin-right: 0;
     }
   }
 }
 
+.fancy-cite {
+  &::before {
+    content: '—';
+    font-family: Georgia, serif;
+  }
+}
+
+.fancy-blockquote {
+
+  p:first-child {
+    @extend .fancy-quote;
+  }
+
+  cite {
+    @extend .fancy-cite;
+  }
+}
+
+
+.hero {
+
+  @media (max-width: $bp-med) {
+
+    blockquote,
+    .blurb {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 40em;
+    }
+
+    .l-2-col {
+      display: block;
+    }
+
+    .l-col:nth-child(n) {
+      float: none;
+      margin: 0 auto $base-spacing;
+      padding: 0;
+      text-align: center;
+      width: auto;
+    }
+
+    .l-col:first-child {
+      @include bb;
+      @include bb--muted;
+
+      &::after {
+        display: block;
+        margin-top: $base-spacing;
+      }
+    }
+
+    .button {
+      margin: auto;
+    }
+  }
+}
+
+
+//*
+//* Block of logos
+//*
+//* TODO: Refactor into a pattern
+//*
 
 .integration-logos {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 20px -15px -20px;
+  max-width: none;
+  opacity: .87;
 
   img {
     transform: scale(.9);
@@ -188,6 +224,7 @@ $hero-animation-delay: 2.5s;
     margin-left: auto;
     margin-right: auto;
     max-width: 33em;
+    text-align: center;
 
     img {
       margin: 10px;
@@ -202,47 +239,49 @@ $hero-animation-delay: 2.5s;
   }
 }
 
-$feature-icon: 3rem;
-$feature-icon-small: 1.5rem;
 
-.homepage-feature {
-  margin-bottom: 20px;
-  padding-left: $feature-icon + 1rem;
-  padding-right: 20px;
-  position: relative;
-  text-align: left;
+//* List of features
+//*
+//* TODO: Refactor into a pattern
+//*
 
-  .feature-icon {
-    color: $color-highlight;
+$feature-spacing: $base-spacing;
+$feature-icon: $base-spacing;
+$feature-icon-margin: $media-spacing;
+
+.homepage-features {
+  margin: $base-spacing (($feature-icon + $feature-icon-margin) * -1);
+
+  @media (max-width: $bp-med-large) {
+    margin: $base-spacing (-$base-spacing) $base-spacing 0;
+  }
+
+  svg {
+    fill: $color-highlight;
     height: $feature-icon;
     left: 0;
     position: absolute;
-    top: 0;
     width: $feature-icon;
-
-    svg {
-      height: 100%;
-      width: 100%;
-    }
   }
 
-  @media (max-width: $bp-med) {
-    padding-left: $feature-icon-small + .5rem;
-    padding-right: 20px;
-
-    .feature-icon {
-      height: $feature-icon-small;
-      width: $feature-icon-small;
-    }
-  }
-
-  @media (max-width: $bp-small) {
-    margin-bottom: 40px;
+  .blurb {
+    padding-left: $feature-icon + $feature-icon-margin;
+    padding-right: $feature-spacing;
+    width: auto;
   }
 }
 
-//* TODO: Make terminal work on touch devices
-//* In the meantime, we hide it */
-.touch .js-terminal {
-  display: none;
+
+//*
+//* Javascript terminal
+//*
+
+.terminal {
+  @extend .bg-terminal;
+
+  //* TODO: Make terminal work on touch devices
+  //* In the meantime, we hide it */
+  .touch .terminal {
+    display: none;
+  }
 }

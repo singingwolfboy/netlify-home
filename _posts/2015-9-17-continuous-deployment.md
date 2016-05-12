@@ -3,7 +3,7 @@ title: Continuous Deployment
 author: Chris Bach
 image: /uploads/modern_times_gears.jpg
 short_title: Continuous Deployment
-description: Automatically build and deploy every time you push to git. All part of netlify.
+description: Automatically build and deploy every time you push to git. All part of Netlify.
 thumbnail: /uploads/softwareupdate-icon.png
 cmsUserSlug: ""
 date: 2015-09-17
@@ -13,7 +13,7 @@ tags:
   - builds
 ---
 
-Continuous Deployment is one of the key features that sets netlify apart.
+Continuous Deployment is one of the key features that sets Netlify apart.
 
 With all other hosting services you need to build this yourself or pay for and install 3rd party software.
 
@@ -28,14 +28,14 @@ Many people confuse Continuous Deployment with Continuous Integration. So just t
 
 **So how does it work?**
 
-You can setup continuous deployment in just a few seconds via netlify's web UI or CLI tool. Pick the repository you want netlify to deploy and just set your build command and the directory you want to deploy after the build is done. In most cases though, netlify will simply guess your configuration once you select the repository.
+You can setup continuous deployment in just a few seconds via Netlify's web UI or CLI tool. Pick the repository you want Netlify to deploy and just set your build command and the directory you want to deploy after the build is done. In most cases though, Netlify will simply guess your configuration once you select the repository.
 
- Netlify will then install all your dependencies, run your build command of choice and deploy the result. And from then on, netlify builds and deploys your site every time you push to git.
+ Netlify will then install all your dependencies, run your build command of choice and deploy the result. And from then on, Netlify builds and deploys your site every time you push to git.
 
 **What else can we tell you?**
 
 * Webhooks &amp; notifications
-Whether you need to trigger a build &amp; deploy through a webhook or receive notifications on new deploys, netlify got you covered.
+Whether you need to trigger a build &amp; deploy through a webhook or receive notifications on new deploys, Netlify has got you covered.
 
 * Cached Dependencies  
   Dependencies (rubygems, npm, etc) are automatically installed and cached between builds to keep build time down.

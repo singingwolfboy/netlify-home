@@ -13,7 +13,7 @@
 }
 
 .post-meta {
-  @extend .large;
+  @extend .zeta;
   color: $color-highlight;
   line-height: 30px;
 }
@@ -43,23 +43,24 @@
   &:empty,
   img {
     border-bottom: 7px solid $color-highlight-lighter;
+    margin-bottom: -3.5px;
+    margin-top: -3.5px;
   }
 }
 
 .post-bd {
   margin: 50px auto 30px;
 
-  > p:first-child,
-  > div > p:first-child {
+  p:first-child {
     @extend .intro;
+  }
 
-    em {
-      @extend .sidenote;
-    }
+  em {
+    @extend .sidenote;
+  }
 
-    br {
-      display: none;
-    }
+  br {
+    display: none;
   }
 }
 
@@ -72,10 +73,10 @@
 
 .blog-aside-title {
   @include font-weight(thin);
-  font-size: 45px;
-  line-height: 65px;
-  margin-bottom: 60px;
-  margin-top: 165px;
+  font-size: 44px;
+  line-height: 55px;
+  margin-bottom: 100px;
+  margin-top: 110px;
   white-space: nowrap;
 }
 
@@ -87,7 +88,7 @@
   @extend %cf;
   @extend .zeta;
   @extend .thin;
-  background: rgb(233, 233, 233);
+  background: $color-neutral;
   margin: 60px auto;
   padding: 20px;
   text-align: center;

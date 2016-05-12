@@ -2,13 +2,13 @@
   <header class="blurb-hd">
     <a class="media" href="{{post.url}}">
       <div class="media-img optional grayscale">
-        {% image_tag src=post.thumbnail width="83" %}
+        {% image_tag src=post.thumbnail height="80" %}
       </div>
       <div class="media-bd">
-        <h1 class="blurb-title loud">
+        <h1 class="blurb-title">
           {% if post.short_title %}{{post.short_title}}{% else %}{{post.title}}{% endif %}
         </h1>
-        <p class="blurb-meta link quiet">by {{post.author}}</p>
+        <p class="blurb-meta link">by {{post.author}}</p>
       </div>
     </a>
   </header>

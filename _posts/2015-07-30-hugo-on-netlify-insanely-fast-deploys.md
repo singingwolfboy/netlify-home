@@ -13,9 +13,9 @@ tags:
   - go
 ---
 
-There are those who describe netlify as “Github Pages on Steroids”. If that’s the case then Hugo on netlify must be digging into Lance Armstrong's stash.
+There are those who describe Netlify as “Github Pages on Steroids”. If that’s the case then Hugo on Netlify must be digging into Lance Armstrong's stash.
 
-Starting today you can easily run [Hugo](https://gohugo.io/) based builds with netlify. Use `hugo` as your build command to run the latest version of Hugo, or use `hugo_0.14` to run your build with a specific version of Hugo.
+Starting today you can easily run [Hugo](https://gohugo.io/) based builds with Netlify. Use `hugo` as your build command to run the latest version of Hugo, or use `hugo_0.14` to run your build with a specific version of Hugo.
 
 <!-- excerpt -->
 
@@ -33,10 +33,10 @@ The average time from push to eg. GitHub, until a new deploy is live on our CDN 
 
 Setting up continuous deployment for a Hugo project is straight forward, here's the settings for our test site:
 
-![Hugo netlify Configuration](/uploads/hugo-configuration.png)
+![Hugo Netlify Configuration](/uploads/hugo-configuration.png)
 
 We've simply set the build command to `hugo` to track the latest `hugo` release, but if you want to make sure future `hugo` releases won't cause problems for your build, just choose `hugo_0.14` as your build command.
 
 That's it — now you're ready to go from Push to Deploy in 6 seconds!
 
-So if you dig modern static websites, but want to cut time of your build process, make sure to check out Hugo. On netlify :)
+So if you dig modern static websites, but want to cut time of your build process, make sure to check out Hugo. On Netlify :)
