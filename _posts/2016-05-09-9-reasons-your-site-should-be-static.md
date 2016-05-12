@@ -3,7 +3,7 @@ title: 9 Reasons Your Site Should Be Static
 author: Aaron Autrand
 image: null
 image_caption: ""
-short_title: 10 Reasons For Static Sites
+short_title: 9 Reasons For Static Sites
 description: Is a static site right for you?
 thumbnail: /uploads/swirling-globe_66243268.jpg
 cmsUserSlug: ""
