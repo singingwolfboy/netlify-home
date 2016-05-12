@@ -1,7 +1,7 @@
 ---
 title: 9 Reasons Your Site Should Be Static
 author: Aaron Autrand
-image: null
+image: /uploads/website-image.jpg
 image_caption: ""
 short_title: 9 Reasons For Static Sites
 description: Is a static site right for you?
@@ -27,13 +27,13 @@ What does a browser do? It renders HTML, CSS and JavaScript into a human-viewabl
 
 Additionally, by hosting your static site on a CDN, you can serve it from whichever node is closest to your users. Someone viewing your site in a coffee shop in Vienna pulls from a European server, not a server farm in the Silicon Valley. The same goes for your Japanese visitors, or a user just down the street.
 
-### 3. Flexibility
+### 3. You Want Flexibility
 
 Your basic site built with WordPress or Drupal starts out as a one-size-fits-all solution that is then customized by bolting on plugins. A lot of plugins. Seriously, so many plugins. A quick Google search for "must have WordPress plugins" yields a front page where nine of the ten posts list 20 plugins or more as "must have".
 
 With a static site, you can get lean and mean, with a tool that does exactly what you need it to. Like to blog? Try out [Jekyll](http://jekyllrb.com) or [Hugo](http://gohugo.io). Want a high performance marketing site? Make like the pros and use [Middleman](http://www.middlemanapp.com) or [Roots](http://www.roots.cx). Trying to showcase your visual portfolio? Maybe [Cactus](https://github.com/koenbok/cactus) is right for you. And if you want something so finely tuned and streamlined to your complete specifications, [Metalsmith](http://metalsmith.io) is definitely the way to go.
 
-### 4. Smaller Footprint
+### 4. You Want a Smaller Footprint
 
 Your WordPress install (especially if you are hosting it yourself) is a Frankenstein's monster of cobbled together software and hardware, and probably looks something like this:
 
@@ -50,21 +50,21 @@ If you don't want to host your own, then you just have to hope that your host ke
 A static site, when generated, is capable of being hosted on any web server that can return HTML files (which gives you a whole bunch of options). Of course, you'll want to take advantage of the possibilities afforded to you with a static site by finding a host that allows for things like continuous deployment, instant cache invalidation, automated deploys and more. But you can leave that to somebody else, and instead of installing, managing and updating your CMS, you can focus on developing your site.
 
 
-### 5. Reliability
+### 5. You Value Reliability
 
 ![databaseerrorimage](databaseerrorimage)
 
 Does that look familiar (and painful)? If you've managed to avoid it with your own site thus far...congratulations, you are in rare company. Obviously, working without a database you won't see that, but static site reliability goes beyond database errors. The beauty of serving up flat HTML files is that they can be hosted anywhere and everywhere, like on a CDN. Let's say there's a DDoS attack on the server where your legacy site is hosted. Sorry, but you might just be screwed for a few hours (or days). That same attack hits a node where your static site is hosted? Your site just gets served up from the next closest node. Your visitors never even notice that there's a problem.
 
-### 6. Version Control
+### 6. Version Control is Your Life
 
 It's completely possible to design a site on your production machine and then upload it to a host (whether via a command line tool or a drag-and-drop interface), but the majority of developers will end up using some sort of version control system like Git. As a developer, you probably already know how much of a lifesaver this can be on projects, but it's just as big a deal when it comes to developing websites as well. Screw-ups can be rolled back to earlier commits, meaning that short of deleting your online repository, you can always go back to a previous version of your site with a few keystrokes. And if you are a Netlify customer, you can roll back to a previous deploy with just two clicks.
 
-### 7. Developer Experience
+### 7. The Developer Experience
 
 The beauty of using a static website generator is in the developer experience. Build tools will output your HTML to a particular directory on your build machine, and nearly all tools include a local web server, which allows you to check and double check your progress as you go. You have the security of knowing that your site will look exactly the same to your visitors as it does to you as a developer.
 
-### 8. Scalability
+### 8. You Need Scalability
 
 You've hit it big! Your site has gone viral, and you are seeing absolutely massive response and increased visits thanks to getting namechecked across the social media spectrum. Did you anticipate that this might happen? Did you overprovision massively, just in case this happened? Are you paying for huge chunks of bandwidth monthly, hoping for (and fearing) an explosion of traffic.
 
