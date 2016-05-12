@@ -7,7 +7,7 @@ short_title: 9 Reasons For Static Sites
 description: Is a static site right for you?
 thumbnail: /uploads/swirling-globe_66243268.jpg
 cmsUserSlug: ""
-date: 2016-05-09T00:00:00.000Z
+date: 2016-05-12T00:00:00.000Z
 tags: null
 ---
 
