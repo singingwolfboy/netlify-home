@@ -7,7 +7,7 @@ short_title: Hosting Lektor on Netlify
 description: Build sites with Lektor and host on Netlify with continuous deployment
 thumbnail: /uploads/lektorlogo.png
 cmsUserSlug: ""
-date: 2016-05-13 
+date: 2016-05-13
 tags: null
 ---
 
@@ -101,14 +101,19 @@ $ cd ~/PATH/TO/Netlify-Lektor
 ```
 
 Initialize the directory as a Git repository.
+
 ```
 $ git init
 ```
+
 Add the files in your new local repository. This stages them for the first commit.
+
 ```
 $ git add .
 ```
+
 Commit the files that you've staged in your local repository.
+
 ```
 $ git commit -m 'First commit'
 ```
@@ -116,14 +121,19 @@ $ git commit -m 'First commit'
 At the top of your GitHub repository's Quick Setup page, click the clipboard icon to copy the remote repository URL.
 
 In Terminal, add the URL for the remote repository where your local repository will be pushed.
+
 ```
 git remote add origin Git_Repository_URL
 ```
+
 Verify your URL
+
 ```
 git remote -v
 ```
+
 Now, it's time to push the changes in your local repository to GitHub.
+
 ```
 git push origin master
 ```
