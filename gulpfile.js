@@ -103,6 +103,7 @@ gulp.task('watch', function () {
     gulp.watch([
       '*.html',
       '*.md',
+      'careers/*.html',
       '_data/*.yml',
       '_docs/*.md',
       '_features/*.md',
