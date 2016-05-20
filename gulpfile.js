@@ -103,6 +103,8 @@ gulp.task('watch', function () {
     gulp.watch([
       '*.html',
       '*.md',
+      'dmca/*.html',
+      'dmca/*.md',
       'careers/*.html',
       '_data/*.yml',
       '_docs/*.md',

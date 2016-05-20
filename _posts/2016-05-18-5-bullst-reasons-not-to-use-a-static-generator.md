@@ -7,13 +7,13 @@ short_title: Bullshit Reasoning
 description: Calling out arguments against static sites
 thumbnail: /uploads/poopemoji.jpg
 cmsUserSlug: ""
-date: now
+date: 2016-05-23
 tags: null
 ---
 
 Often, when you read lists about [reasons to use a static website generator](https://www.netlify.com/blog/2016/05/18/9-reasons-your-site-should-be-static), they are followed by a list of reasons why you shouldn't.
 
-Other times, when you are researching static vs. dynamic, you'll stumble across a grammatically challenged site where some WordPress developer is trying to convince you that using cutting-edge, modern build tools will somehow be the death knell of your site. 
+Other times, when you are researching static vs. dynamic, you'll stumble across a grammatically challenged site where some WordPress developer is trying to convince you that using cutting-edge, modern build tools will somehow be the death knell of your site.
 
 <!-- excerpt -->
 

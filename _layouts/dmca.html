@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="l-wrap bg-light-muted-2">
+  <div class="l-wrap-inner">
+    <div class="l-aside l-aside--left inverse" role="complementary">
+      <nav class="side-nav" role="navigation">
+        <ul class="nav nav--primary">
+          <li{% if page.url == "/dmca/index.html" %} class="active"{% endif %}>
+            <a href="/dmca/index.html">Our Policy</a>
+          </li>
+          <li{% if page.url == "/dmca/dmca-submit.html" %} class="active"{% endif %}>
+            <a href="/dmca/dmca-submit.html">Takedown Guide</a>
+          </li>
+          <li{% if page.url == "/dmca/dmca-counter.html" %} class="active"{% endif %}>
+            <a href="/dmca/dmca-counter.html">Counter Guide</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="l-main l-main--right" role="main">
+      <div class="content content--wide text text--legalese mb-60">
+        {{content}}
+      </div>
+    </div>
+  </div>
+</div>
