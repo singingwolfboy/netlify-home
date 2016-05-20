@@ -1,6 +1,5 @@
 ---
 cmsUserSlug: site-policy
-date: now
 title: Site Policy
 position: 110
 ---
