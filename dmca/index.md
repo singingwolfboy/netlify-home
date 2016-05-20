@@ -66,7 +66,7 @@ It is the policy of Netlify, in appropriate circumstances and in its sole discre
 
 If you are ready to submit a notice or a counter notice:
 
-[How to Submit a DMCA Notice](https://www.netlify.com/dmca/submitting-a-dmca-takedown-notice)  
-[How to Submit a DMCA Counter Notice](https://www.netlify.com/dmca/submitting-a-dmca-counter-notice)  
+[How to Submit a DMCA Notice](/dmca/dmca-submit.html)  
+[How to Submit a DMCA Counter Notice](/dmca/dmca-counter.html)  
 
 *Note: Netlify’s DMCA policies have been influenced by those at [GitHub](https://help.github.com/articles/dmca-takedown-policy/).
