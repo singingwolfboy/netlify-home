@@ -17,7 +17,7 @@ Other times, when you are researching static vs. dynamic, you'll stumble across 
 
 <!-- excerpt -->
 
-For obvious reasons, we don't agree. But rather than stick our fingers in our ears and pretend we can't hear, let's face these arguments head on. It quickly becomes clear that these arguments just plain stink.
+For obvious reasons, we don't agree. But rather than stick our fingers in our ears and pretend we can't hear, let's take a look at the points most often raised against static web technology. It quickly becomes clear that these arguments just plain stink.
 
 **1. But I want good SEO!**
 
