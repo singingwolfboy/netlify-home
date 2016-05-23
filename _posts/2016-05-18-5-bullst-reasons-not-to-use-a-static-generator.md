@@ -1,13 +1,13 @@
 ---
 title: "5 Bulls**t Reasons Not to Use a Static Generator"
 author: Aaron Autrand
-image: null
-image_caption: null
+image: /uploads/bull.jpg
+image_caption: "Image courtesy: [Colin Brough](http://www.rgbstock.com/user/ColinBrough)"
 short_title: Bullshit Reasoning
 description: Calling out arguments against static sites
 thumbnail: /uploads/poopemoji.jpg
 cmsUserSlug: ""
-date: 2016-05-23
+date: 2016-05-23T00:00:00.000Z
 tags: null
 ---
 
