@@ -23,7 +23,7 @@ For obvious reasons, we don't agree. But rather than stick our fingers in our ea
 
 There's a rumor going around that dynamic sites are better for SEO. They've got plugins! They've got updated content! Spiders!
 
-To me, spiders sound creepy. As for the rest, let's break it down.
+If you've built a single page app with static technology, most of your site will be a bunch of javascript tags, something that doesn't do you much good when the webcrawlers come looking for content. That's why there are services that offer prerendering. Prerendering allows you to show the crawlers the content that users will actually see by rendering it in a browser, saving that static HTML, and then returning it to the crawler as HTML. Now your content will get indexed like a normal page. Check out prerendering services like [Prerender.io](https://prerender.io/), [Brombone](http://www.brombone.com/), [SEO.js](http://getseojs.com/) or [SEO4Ajax](http://www.seo4ajax.com/) to start.  
 
 Wordpress fanboys will often run in screaming at the top of their lungs "Updated Content! Updated Content!". Don't be fooled, they haven't cornered the market. Updated content can be added really easily on static websites: write your content, push it to your git repository, and boom: your content is updated. It's the power of continuous integration. Now all you have to do is actually create the content.
 
