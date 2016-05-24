@@ -40,7 +40,7 @@
     display: inline-block;
     font-size: $font-size;
     font-weight: normal;
-    margin: 0 3px 0 -3px;
+    margin: 0 5px 0 -5px;
     position: relative;
     top: -1em - $font-size;
   }
@@ -51,13 +51,13 @@
 }
 
 .plan-amount--7-5 .decimal-point {
-  margin-left: -.19em;
+  margin-left: -.175em;
 }
 
 .plan-period {
   font-size: 18px;
   font-weight: normal;
-  line-height: 1;
+  line-height: 20px;
   text-align: left;
 }
 
