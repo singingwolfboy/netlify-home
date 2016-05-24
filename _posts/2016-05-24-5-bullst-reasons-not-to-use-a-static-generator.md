@@ -7,7 +7,7 @@ short_title: Bullshit Reasoning
 description: Calling out arguments against static sites
 thumbnail: /uploads/poopemoji.jpg
 cmsUserSlug: ""
-date: 2016-05-23T00:00:00.000Z
+date: 2016-05-24T00:00:00.000Z
 tags: null
 ---
 
