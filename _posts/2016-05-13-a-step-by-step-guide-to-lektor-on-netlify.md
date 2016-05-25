@@ -7,8 +7,12 @@ short_title: Hosting Lektor on Netlify
 description: Build sites with Lektor and host on Netlify with continuous deployment
 thumbnail: /uploads/lektorlogo.png
 cmsUserSlug: ""
-date: 2016-05-13
-tags: null
+date: 2016-05-25
+tags:
+ - lektor
+ - Python
+ - tutorial
+ - app
 ---
 
 Today, we're going to look at how to host a website built with [Lektor](http://getlektor.com) on Netlify, including setting up continuous deployment.
