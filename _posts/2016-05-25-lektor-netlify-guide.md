@@ -1,5 +1,5 @@
 ---
-title: Lektor on Netlify: A Step-By-Step Guide
+title: Lektor on Netlify - A Step-By-Step Guide
 author: Aaron Autrand
 image: /uploads/lektoregg.jpg
 image_caption: null
