@@ -41,6 +41,80 @@ cd ~/my-static-website
 netlify deploy
 ```
 
+## Helpful Hints
+
+If you are creating a new site on Netlify, or just moving a pre-existing site onto the platform, it's good to keep the following things in mind:
+
+### NodeJS (including React)
+
+If the static site generator you are using is built with NodeJS:
+
+Make sure your `project.json` contains the name of your tool. Do so by running the following command in your terminal:
+
+```
+$ npm install TOOLNAME --save
+```
+
+If your project directory has the same name as your tool, the above command will fail. So make sure your project name is something different.
+
+You also need a `.nvmrc` file at the root of your project to tell Netlify which version of NodeJS to use. In the terminal, enter this command:
+
+```
+$ node -v
+```
+
+Now check to see if Netlify supports your version of Node: [https://github.com/netlify/build-image/blob/master/Dockerfile#L93](https://github.com/netlify/build-image/blob/master/Dockerfile#L93). Look for a version close to yours (look for code along the lines of nvm install v5.1.0 if your version is 5.1.x).
+
+To create a file to tell Netlify which version of Node.js to use, enter the following command in the terminal:
+
+```
+$ echo your.version.number > .nvmrc
+```
+
+### Ruby
+
+If you are using a static site generator built with Ruby:
+
+You need a Gemfile and a Gemfile.lock to tell Netlify which versions of your preferred tool to use. If there isn't one, run the following command in the terminal:
+
+```
+$ bundle init
+```
+
+This will create a Gemfile in your project's root directory. Open the Gemfile in your favorite text editor. Replace the following line:
+
+```
+# gem "ruby"
+```
+
+with this line:
+
+```
+gem "TOOLNAME"
+```
+
+Make sure you delete the #, then save.
+
+Now run this command:
+
+```
+$ bundle install
+```
+
+This will install the jekyll gem and create a file called Gemfile.lock. This file will ensure that Netlify always uses the same version of of your tool that you used to build your site, thus avoiding any nasty surprises.
+
+### Python
+
+If your static site generator is built with Python:
+
+It's usually a good idea (but not necessary) to set up a virtual environment for Python projects. If you don't know how to do so, follow [these directions](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
+
+You want to make sure that Netlify knows exactly which versions of various Python plugins you are using. Do this by creating a file called `requirements.txt` in your project's root directory:
+
+```
+$ pip freeze > requirements.txt
+```
+
 ## Netlify's Docs
 
 This site is a great example of a project built on Netlify.
