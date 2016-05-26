@@ -1,30 +1,30 @@
 ---
-title: "A Step-by-Step Guide: Jekyll Netlify CMS"
+title: Jekyll and Netlify CMS - A Step-by-Step Guide
 author: Jimmi Lee
 image: null
 short_title: Setting up Jekyll with Netlify CMS
 description: A step-by-step guide on how to set up Jekyll with Netlify CMS.
 thumbnail: /uploads/netlifylogo.png
 cmsUserSlug: ""
-date: 2020-11-06T00:00:00.000Z
-tags: null
-published: false
+date: 2016-05-25T00:00:00.000Z
+tags:
+ - CMS
+ - tutorial
+ - jekyll
 ---
 
-Welcome to Netlify or should I say welcome to Netlify CMS, the first static site CMS system that can easily be integrated with almost any static site generator!
+Welcome to Netlify CMS, the first static site CMS system that can easily be integrated with almost any static site generator!
 
-I know--it sounds too good to be true, but the age where static sites were defined by a lack of dynamic content, a lack of user interactivity and a lack of a CMS system is finally over!
+It sounds too good to be true, but the age where static sites were defined by a lack of dynamic content, a lack of user interactivity and a lack of a CMS system is finally over!
 
-In this little guide, we'll do a step by step, which will show you how to install and configure your own copy of our *jekyll-netlify-cms* template.
-
-This is only the beginning however and we'll follow up with guides to our other Netlify CMS templates as well.
+In this guide, we'll show you how to install and configure your own copy of our *jekyll-netlify-cms* template.
 
 *This guide assumes that you have Ruby and bundler installed*
 
 <!-- excerpt -->
 
 ## Netlify CMS Environments
-Before we start, I'd like to talk a little about Netlify CMS and environments, as it is possible to run a *netlify-git-api server* for when you're working locally, as opposed to setting the environment variable to production and using *GitHub's API* when your site goes live.
+Before we start, I'd like to talk a little about Netlify CMS and environments, as it is possible to run a *netlify-git-api server* for when you're working locally to test the CMS. When your site goes live, you'll use GitHub's API by setting the environment variable to production in your Netlify admin panel.
 
 We will describe both methods in this guide, by first setting up locally and second, by deploying to Netlify and using GitHub's API online.
 
@@ -74,7 +74,7 @@ production:
     branch: master # Branch to update (master by default)
 ```
 
-It's pretty straight forward, but also very important to change the repo and branch, before you go live!  Again, when working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to a repo and branch you have created and now *own*!
+Change the `repo` line to `USERNAME/REPONAME`, substituting your GitHub username and the name of your repo (if you changed it). When working locally, you can use the default url, but once you start pushing to GitHub and deploying with Netlify, this has to be set correctly to the repo that you created.
 
 ### 1. The Netlify Git API
 We will show how to set this up on your local computer as well as online, but first we'll try locally, so start by downloading the netlify-git-api that corresponds to your OS [here](https://github.com/netlify/netlify-git-api/releases).
@@ -83,16 +83,19 @@ If you are not interested in having a local environment, you may skip to [the on
 
 Decompress the netlify-cms-api file and add it to your path. These actions differ somewhat, depending on your operating system.
 
-We will use the following commands in a terminal window to achieve these steps on Linux:
-
-```
-cd 'downloads'
-unzip linux.zip
-cd linux
-sudo mv netlify-git-api '/usr/local/bin'
-```
-
 We enter the downloads folder and unzip the file. Then we enter the newly created directory created by unpacking and finally we move the netlify-git-api file to a directory that is in the PATH, making it easy to invoke from the terminal.
+
+You can find your PATH with the following command:
+
+```
+$ echo $PATH
+```
+
+and then move `netlify-git-api` with
+
+```
+$ sudo mv LOCATION/OF/netlify-git-api /LOCATION/IN/PATH
+```
 
 ### 2. Setup your Gemfile
 We want to use Jekyll 3.0.0 in our example, along with the jekyll-sitemap plugin.
@@ -128,7 +131,7 @@ Alternatively you can create a user, including the information necessary in a on
 netlify-git-api users add --name='User Name' --email=my@email.com --password=mypassword
 ```
 
-You need to create at least one user, to properly test the system.
+You need to create at least one user to properly test the system.
 
 ### 5. Start Netlify CMS Server
 Next we need to start the Netlify CMS server locally with the following command:
@@ -151,8 +154,10 @@ bundle exec jekyll server --watch
 ```
 
 ### 7. Test the System
-Open up a browser to the address below, log in and create a new post:
+Open up a browser to the address below, log in with the credentials you just created and create a new post:
 [https://localhost:4000/admin](https://localhost:4000/admin)
+
+`Categories` will prepend your post date and title, so if you categorize it as `blog`, your URL will be `www.example.com/blog/2016/05/25/test-blog`.
 
 Let's take a look at your new site and the post you just created through this link:
 [https://localhost:4000](https://localhost:4000)
