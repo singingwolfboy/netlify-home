@@ -13,7 +13,7 @@ tags:
   - go
 ---
 
-There are those who describe Netlify as “Github Pages on Steroids”. If that’s the case then Hugo on Netlify must be digging into Lance Armstrong's stash.
+There are those who describe Netlify as “GitHub Pages on Steroids”. If that’s the case then Hugo on Netlify must be digging into Lance Armstrong's stash.
 
 Starting today you can easily run [Hugo](https://gohugo.io/) based builds with Netlify. Use `hugo` as your build command to run the latest version of Hugo, or use `hugo_0.14` to run your build with a specific version of Hugo.
 

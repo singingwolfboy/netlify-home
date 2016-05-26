@@ -1,6 +1,6 @@
 ---
 cmsUserSlug: oauth-providers
-date: 2015-10-21 
+date: 2015-10-21
 title: OAuth Providers
 position: 80
 ---
@@ -9,9 +9,9 @@ position: 80
 
 One thing that can hold back single page apps with no backend is authentication.
 
-Let's say you want to build a small single page app that acts as a simpler UI for your Github issues.
+Let's say you want to build a small single page app that acts as a simpler UI for your GitHub issues.
 
-Github's API is pretty awesome and it supports CORS so you can access the API directly from your browser once you have an OAuth2 access token.
+GitHub's API is pretty awesome and it supports CORS so you can access the API directly from your browser once you have an OAuth2 access token.
 
 The problem for a pure single page app is getting an OAuth token. The OAuth authentication process requires a server to send a signed request to the OAuth server, signed with a secret that you can never expose to the client-side of your app.
 
@@ -21,23 +21,23 @@ Netlify solves this problem by giving you a service that will sign the OAuth req
 
 Before you can use an authentication provider, you'll need to register an API application with the provider and configure the credentials through the Netlify UI.
 
-For Github, go to the [Applications](https://github.com/settings/applications) tab in the settings and create a new Developer Application.
+For GitHub, go to the [Applications](https://github.com/settings/applications) tab in the settings and create a new Developer Application.
 
-Github will ask for an **Authorization callback URL**. Make sure to enter `https://api.netlify.com/auth/done`
+GitHub will ask for an **Authorization callback URL**. Make sure to enter `https://api.netlify.com/auth/done`
 
-![Github OAuth Configuration](/img/docs/github-oauth-config.png)
+![GitHub OAuth Configuration](/img/docs/github-oauth-config.png)
 
-Then go to the **Access** tab for your Netlify site and configure the Github provider with your new **Client ID** and **Client Secret**.
+Then go to the **Access** tab for your Netlify site and configure the GitHub provider with your new **Client ID** and **Client Secret**.
 
 Once you've configured an authentication provider you can use it to obtain an access token in your single page app.
 
-Here's a complete example of how to ask the user to authenticate with Github and then display the resulting access token:
+Here's a complete example of how to ask the user to authenticate with GitHub and then display the resulting access token:
 
 ```html
 <!doctype html>
 <html>
 <head>
-  <title>Github Authentication Example</title>
+  <title>GitHub Authentication Example</title>
   <!--- This example uses jQuery: -->
   <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
 
@@ -50,16 +50,16 @@ Here's a complete example of how to ask the user to authenticate with Github and
         e.preventDefault();
         netlify.authenticate({provider:"github", scope: "user"}, function(err, data) {
           if (err) {
-            return $("#output").text("Error Authenticating with Github: " + err);
+            return $("#output").text("Error Authenticating with GitHub: " + err);
           }
-          $("#output").text("Authenticated with Github. Access Token: " + data.token);
+          $("#output").text("Authenticated with GitHub. Access Token: " + data.token);
         });
       });
     });
   </script>
 </head>
 <body>
-  <h1>Github Auth Demo:</h1>
+  <h1>GitHub Auth Demo:</h1>
   <p><a href="#" id="login">Authenticate</a></p>
   <p id="output"></p>
 </body>
@@ -97,6 +97,6 @@ The token variables here are the token and secret you get back from the call to 
 
 ## Supported Providers
 
-Right now Netlify only supports Github and BitBucket as authentication providers, but we're working on adding more.
+Right now Netlify only supports GitHub and BitBucket as authentication providers, but we're working on adding more.
 
 If you're building a single page app and need to speak with a specific API, let us know and we'll help you out.

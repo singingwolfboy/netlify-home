@@ -39,7 +39,7 @@ Clojure is a really exciting functional programming language running on Java's v
 
 ## Gitlab and self-hosted Git repositories
 
-As you may know we support continuous deployment straight to both Github and Bitbucket: Simply push to Git, and we make sure that your site is automatically updated, code and headers optimised and all.
+As you may know we support continuous deployment straight to both GitHub and Bitbucket: Simply push to Git, and we make sure that your site is automatically updated, code and headers optimised and all.
 
 Now some of you have been asking for GitLab and self-hosted repositories as well. Well you got it!
 

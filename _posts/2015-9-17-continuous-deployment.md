@@ -37,11 +37,11 @@ You can setup continuous deployment in just a few seconds via Netlify's web UI o
 * Webhooks &amp; notifications
 Whether you need to trigger a build &amp; deploy through a webhook or receive notifications on new deploys, Netlify has got you covered.
 
-* Cached Dependencies  
+* Cached Dependencies
   Dependencies (rubygems, npm, etc) are automatically installed and cached between builds to keep build time down.
 
-* Secure Environment  
-   We never store any Github tokens on our servers and your builds are run in a completely locked down environment.
+* Secure Environment
+   We never store any GitHub tokens on our servers and your builds are run in a completely locked down environment.
 
 
 **Is everyone else using it?**

@@ -26,7 +26,7 @@ If you're not interested in the template, but soley in setting up Hexo with cont
 We'll start by preparing the netlify-git-api CLI tool to enable us to deploy locally and then we'll clone the hexo-netlify-cms repository to our local environment and set it up.
 
 ### 1. The netlify-git-api CLI tool
-Browse to the [netlify-git-api page](https://github.com/netlify/netlify-git-api/releases) and download the relevant version of the tool.  
+Browse to the [netlify-git-api page](https://github.com/netlify/netlify-git-api/releases) and download the relevant version of the tool.
 As I'm demonstrating this on a Linux machine, I will download the `linux.zip` file, but if you're using OSX, the `osx.zip` file and if you're using a Microsoft OS, download the `windows.zip` file.
 
 Once the download is done, unpack the netlify-git-api executable from the zipped file and place it in your PATH. There are many methods for doing so and they differ somewhat depending on your operating system.
@@ -208,14 +208,14 @@ Once you click save, Netlify will step in and take over, though it will let you 
 Taking a short break now might make sense, as the next step may take as much as a few minutes (depending on how much content you've added). Don't worry - Netlify will do the work while your attention is elsewhere and if there are errors or warnings, it's easy to look in the log file, as Netlify saves your previous builds, along with their log files.
 
 ### 4. Register new Application
-Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.  
+Open up the [GitHub developer application screen](https://github.com/settings/developers) and select **register a new application**.
 Next fill out the application information as seen in the screen shot below - you can name and describe it however you want, but it is important that you use the exact URL for the Authorization callback like this: `https://api.netlify.com/auth/done`
 Use the screen shot below as an example:
 
 ![registernewapplication.png](/uploads/registernewapplication.png)
 
 You can disregard choosing an image, though we did, to help distinguish the application.
-Just remember to tick `enable Github`.
+Just remember to tick `enable GitHub`.
 
 Once you're done filling out, simply click the green **Register application** button and you will get to the following screen shot (well, it will be similar at least):
 

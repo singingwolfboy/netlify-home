@@ -151,7 +151,7 @@ Clicking "New Site" brings you to this screen:
 
 When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we'll need to link  Netlify to GitHub. Click "Link to Github".
+Since your assets are hosted on GitHub, we'll need to link  Netlify to GitHub. Click "Link to GitHub".
 
 ### Step 3: Authorize Netlify
 

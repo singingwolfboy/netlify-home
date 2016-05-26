@@ -68,7 +68,7 @@ When using S3 for static sites, you’ll have to decide whether to serve gzipped
 
 ## Build Automation
 
-Netlify comes with integrated build automation. With just a click you can configure Netlify to listen to your Github or BitBucket repository and do a build and deploy each time you push to git. It works with all common build tools like Grunt, Gulp, Jekyll, Middleman, Roots, etc...
+Netlify comes with integrated build automation. With just a click you can configure Netlify to listen to your GitHub or BitBucket repository and do a build and deploy each time you push to git. It works with all common build tools like Grunt, Gulp, Jekyll, Middleman, Roots, etc...
 
 Netlify will also process all your assets during each deploy and create unique urls for each piece of content, set far future caching headers and update the HTML to refer to the CDN URLs of the new bundled, minified and cache-optimized assets. We also run all images through lossless image optimization.
 

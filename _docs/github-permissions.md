@@ -1,7 +1,7 @@
 ---
 cmsUserSlug: github-permissions
 date: 2015-12-15
-title: Github Permissions
+title: GitHub Permissions
 position: 90
 ---
 

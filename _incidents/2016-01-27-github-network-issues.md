@@ -1,6 +1,6 @@
 ---
 title: GitHub Network Issues
-description: GitHub is back to normal. Github network issues were causing builds to fail.
+description: GitHub is back to normal. GitHub network issues were causing builds to fail.
 details: ""
 resolved: true
 cmsUserSlug: ""

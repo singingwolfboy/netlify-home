@@ -93,7 +93,7 @@ Clicking "New Site" brings you to this screen:
 
 When you push to GitHub, Netlify does all the work. No more manual deploying of updates or changes!
 
-Since your assets are hosted on GitHub, we'll need to link  Netlify to GitHub. Click "Link to Github".
+Since your assets are hosted on GitHub, we'll need to link  Netlify to GitHub. Click "Link to GitHub".
 
 ### Step 3: Authorize Netlify
 ![step 3 - authorize](https://cloud.githubusercontent.com/assets/6520639/9803635/71760370-57d9-11e5-8bdb-850aa176a22c.png)
@@ -126,9 +126,9 @@ Wait, you thought there was going to be more? Nope! Netlify has done it all for 
 
 There, that's better. Now you can add your custom domain, and your site will be live for your adoring public to view. Congratulations, and thanks for using Netlify!
 
-...  
-...  
-...  
+...
+...
+...
 
 
 no post credits sequence. No Easter Egg. It's finito.

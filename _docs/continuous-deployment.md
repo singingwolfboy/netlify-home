@@ -7,29 +7,29 @@ position: 20
 
 ## Continuous Deployment
 
-Continuous deployment works by connecting a Github repository to a Netlify site and keeping the two in sync.
+Continuous deployment works by connecting a GitHub repository to a Netlify site and keeping the two in sync.
 
 It works for plain static sites, but it's even more powerful when you're using a [static site generator](https://www.staticgen.com) or a front end build tool like [Grunt](http://gruntjs.com/), [Gulp](http://gulpjs.com/) or [Broccoli](https://github.com/broccolijs/broccoli).
 
-Netlify will run your build command and deploy the result whenever you push to Github.
+Netlify will run your build command and deploy the result whenever you push to GitHub.
 
 * No deploying without committing and pushing first
 * Easy collaboration through pull requests
-* Fix a typo through Github's web UI from your mobile
+* Fix a typo through GitHub's web UI from your mobile
 * Let non-technical users contribute by using [prose.io](http://prose.io/)
 
 ## Build Environments
 
 Netlify allows you to add build environment variables to your build so you can define the way your site is built. In addition to the variables you choose to define, Netlify has a number of pre-defined variables built in. Those variables are:
 
-*URL*   
-*REPOSITORY_URL*   
-*BRANCH*   
-*PULL_REQUEST*  
+*URL*
+*REPOSITORY_URL*
+*BRANCH*
+*PULL_REQUEST*
 
 If your build is triggered from one of your inbound webhooks, Netlify also has two webhook-specific variables:
 
-*WEBHOOK_URL*   
+*WEBHOOK_URL*
 *WEBHOOK_BODY*
 
 ## Dependencies

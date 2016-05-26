@@ -25,7 +25,7 @@ For anything larger than a one page landing, you really should be using a static
 
 If you're using any of those, Netlify can make the process of collaborating and deploying much smoother.
 
-Netlify lets you link a Github repository to a site. Each time you push to Github, Netlify runs a build with your tool of choice and deploys the result to our powerful CDN.
+Netlify lets you link a GitHub repository to a site. Each time you push to GitHub, Netlify runs a build with your tool of choice and deploys the result to our powerful CDN.
 
 ## Getting Started
 
@@ -119,6 +119,6 @@ $ pip freeze > requirements.txt
 
 This site is a great example of a project built on Netlify.
 
-All of our documentation (this whole site in fact) is in a [Github repository](https://github.com/netlify/netlify-home).
+All of our documentation (this whole site in fact) is in a [GitHub repository](https://github.com/netlify/netlify-home).
 
-Whenever we push to Github or accept a pull request, Netlify will do a clean build of the site with [Jekyll](http://jekyllrb.com/) and deploy the result.
+Whenever we push to GitHub or accept a pull request, Netlify will do a clean build of the site with [Jekyll](http://jekyllrb.com/) and deploy the result.

@@ -11,5 +11,5 @@ quotes:
 
   - cite: Jaime Iniesta, CTO of Site Validator
     link: https://sitevalidator.com
-    quote: Netlify provides the simplest way to deploy the fastest static sites. We love its integration with Github, and the post-deploy hooks allows for an easy integration with other services
+    quote: Netlify provides the simplest way to deploy the fastest static sites. We love its integration with GitHub, and the post-deploy hooks allows for an easy integration with other services
     photo: /img/testimonials/jaime.png
